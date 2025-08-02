@@ -246,7 +246,7 @@
     </footer>
 
     <!-- Toast Notification HTML -->
-    <div id="toast-notification" class="fixed bottom-5 right-5 bg-green-color text-white py-3 px-6 rounded-lg shadow-lg opacity-0 transform translate-y-5 z-50 font-fira">
+    <div id="toast-notification" class="fixed bottom-5 right-5 bg-green-color text-white py-3 px-6 rounded-lg shadow-lg opacity-0 transform translate-y-5 z-50 font-fira" style="background-color: var(--green-color);">
         <i data-feather="check-circle" class="inline-block mr-2"></i>Message sent successfully!
     </div>
 
@@ -362,9 +362,8 @@
 
         // --- Custom Toast for Pageclip ---
         window.addEventListener('pageclip:success', function (event) {
-            // NOTE: The 'pageclip-form--no-redirect' class on the form
-            // is what prevents the default gray-out behavior.
-            // This script just handles the toast and form reset.
+            // This prevents the default Pageclip behavior (like the gray overlay)
+            event.preventDefault(); 
 
             const toast = document.getElementById('toast-notification');
             
