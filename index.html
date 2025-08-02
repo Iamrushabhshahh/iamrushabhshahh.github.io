@@ -221,7 +221,7 @@
             <h2 class="text-3xl font-bold text-center mb-4 font-fira"><span class="text-primary-color">04.</span> Get In Touch</h2>
             <p class="text-center text-gray-400 mb-12 max-w-xl mx-auto">My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
             <div class="max-w-xl mx-auto">
-                <form action="https://send.pageclip.co/ICvb34nUy3cZG613HmR5rbjZD16394SD" class="pageclip-form space-y-4 font-fira" method="post">
+                <form action="https://send.pageclip.co/ICvb34nUy3cZG613HmR5rbjZD16394SD" class="pageclip-form pageclip-form--no-redirect space-y-4 font-fira" method="post">
                     <input type="text" name="contact_name" placeholder="user@host:~$ enter name" class="form-input w-full px-4 py-3 rounded-md" required>
                     <input type="email" name="contact_email" placeholder="user@host:~$ enter email" class="form-input w-full px-4 py-3 rounded-md" required>
                     <textarea name="contact_message" placeholder="user@host:~$ enter message" rows="5" class="form-input w-full px-4 py-3 rounded-md" required></textarea>
@@ -246,7 +246,7 @@
     </footer>
 
     <!-- Toast Notification HTML -->
-    <div id="toast-notification" class="fixed bottom-5 right-5 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg opacity-0 transform translate-y-5 z-50 font-fira">
+    <div id="toast-notification" class="fixed bottom-5 right-5 bg-green-color text-white py-3 px-6 rounded-lg shadow-lg opacity-0 transform translate-y-5 z-50 font-fira">
         <i data-feather="check-circle" class="inline-block mr-2"></i>Message sent successfully!
     </div>
 
@@ -362,8 +362,9 @@
 
         // --- Custom Toast for Pageclip ---
         window.addEventListener('pageclip:success', function (event) {
-            // Prevent the default Pageclip success message
-            event.preventDefault(); 
+            // NOTE: The 'pageclip-form--no-redirect' class on the form
+            // is what prevents the default gray-out behavior.
+            // This script just handles the toast and form reset.
 
             const toast = document.getElementById('toast-notification');
             
