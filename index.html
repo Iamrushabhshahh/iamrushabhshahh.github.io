@@ -111,6 +111,15 @@
             color: var(--green-color);
             margin-right: 0.75rem;
         }
+        
+        /* Toast Notification */
+        #toast-notification {
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        #toast-notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -236,6 +245,11 @@
         </div>
     </footer>
 
+    <!-- Toast Notification HTML -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg opacity-0 transform translate-y-5 z-50 font-fira">
+        <i data-feather="check-circle" class="inline-block mr-2"></i>Message sent successfully!
+    </div>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
     <script>
@@ -345,6 +359,27 @@
             projectContainer.appendChild(projCard);
         });
         feather.replace(); // Re-run feather to render new icons
+
+        // --- Custom Toast for Pageclip ---
+        window.addEventListener('pageclip:success', function (event) {
+            // Prevent the default Pageclip success message
+            event.preventDefault(); 
+
+            const toast = document.getElementById('toast-notification');
+            
+            // Show the toast
+            toast.classList.add('show');
+            feather.replace(); // Re-render icons in the toast
+            
+            // Reset the form
+            const form = event.detail.form;
+            form.reset();
+
+            // Hide the toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        });
     </script>
 </body>
 </html>
