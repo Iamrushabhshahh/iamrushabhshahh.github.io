@@ -830,7 +830,7 @@ nav a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .section-reveal, .section-reveal .stagger > * { opacity: 1; transform: none; transition: none; }
-    .typing-cursor, .status-pill .dot, .timeline-dot-current { animation: none; }
+    .status-pill .dot, .timeline-dot-current { animation: none; }
     .tech-card, .btn { transition: none; }
     .tech-card:hover, .btn:hover, .btn:active { transform: none; }
 }

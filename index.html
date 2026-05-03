@@ -531,28 +531,24 @@
             // --- Typing Animation ---
             const typingTextElement = document.getElementById('typing-text');
             const roles = ["DevOps Engineer", "Docker Captain", "Grafana Champion", "SRE Enthusiast", "Community Organizer"];
-            if (prefersReducedMotion) {
-                typingTextElement.textContent = roles[roles.length - 1];
-            } else {
-                let roleIndex = 0;
-                let charIndex = 0;
-                let isDeleting = false;
-                const type = () => {
-                    const currentRole = roles[roleIndex];
-                    typingTextElement.textContent = currentRole.substring(0, isDeleting ? --charIndex : ++charIndex);
-                    if (!isDeleting && charIndex === currentRole.length) {
-                        isDeleting = true;
-                        setTimeout(type, 2000);
-                    } else if (isDeleting && charIndex === 0) {
-                        isDeleting = false;
-                        roleIndex = (roleIndex + 1) % roles.length;
-                        setTimeout(type, 500);
-                    } else {
-                        setTimeout(type, isDeleting ? 50 : 150);
-                    }
-                };
-                type();
-            }
+            let roleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const type = () => {
+                const currentRole = roles[roleIndex];
+                typingTextElement.textContent = currentRole.substring(0, isDeleting ? --charIndex : ++charIndex);
+                if (!isDeleting && charIndex === currentRole.length) {
+                    isDeleting = true;
+                    setTimeout(type, 2000);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    setTimeout(type, 500);
+                } else {
+                    setTimeout(type, isDeleting ? 50 : 150);
+                }
+            };
+            type();
 
             // --- Scroll Animations ---
             const revealElements = document.querySelectorAll('.section-reveal');
