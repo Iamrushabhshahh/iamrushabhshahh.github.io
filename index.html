@@ -392,12 +392,20 @@
             <p class="section-subtitle">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you.</p>
             <div class="max-w-xl mx-auto">
                 <form id="contact-form" action="https://send.pageclip.co/ICvb34nUy3cZG613HmR5rbjZD16394SD" class="space-y-4 font-fira" method="post" novalidate>
-                    <!-- Honeypot: bots fill this; humans never see it. Server-side filtering still recommended. -->
+                    <!-- Multiple honeypot fields. Bot form-fillers target attractive field names
+                         (website, url, phone, company). Hidden visually + tabindex=-1 + autocomplete=off
+                         keeps real users and password managers from touching them. -->
                     <div class="honeypot" aria-hidden="true">
-                        <label for="hp_website">Leave this field empty</label>
+                        <label for="hp_website">Website</label>
                         <input id="hp_website" type="text" name="website" tabindex="-1" autocomplete="off">
+                        <label for="hp_url">URL</label>
+                        <input id="hp_url" type="text" name="url" tabindex="-1" autocomplete="off">
+                        <label for="hp_phone">Phone</label>
+                        <input id="hp_phone" type="text" name="phone" tabindex="-1" autocomplete="off">
+                        <label for="hp_company">Company</label>
+                        <input id="hp_company" type="text" name="company" tabindex="-1" autocomplete="off">
                     </div>
-                    <!-- Hidden timestamp; submissions faster than 2s are almost certainly bots -->
+                    <!-- Hidden timestamp; submissions faster than 3s are almost certainly bots -->
                     <input type="hidden" name="form_loaded_at" id="form_loaded_at">
                     <div>
                         <label for="contact_name" class="sr-only">Your name</label>
@@ -412,7 +420,7 @@
                         <textarea id="contact_message" name="contact_message" placeholder="user@host:~$ enter message" rows="5" class="form-input w-full px-4 py-3 rounded-md" required></textarea>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-4">
-                        <button type="button" id="copy-email-btn" class="btn btn-ghost text-sm" data-email="rushabh.s@orocorp.in" aria-label="Copy email address to clipboard">
+                        <button type="button" id="copy-email-btn" class="btn btn-ghost text-sm" data-email="rushabhshah842@gmail.com" aria-label="Copy email address to clipboard">
                             <i data-feather="copy" class="w-4 h-4"></i>
                             <span>Or copy email</span>
                         </button>
@@ -750,7 +758,7 @@
             })
             .catch(renderFallback);
 
-            // --- Contact form: manual fetch + honeypot + min-fill timer ---
+            // --- Contact form: manual fetch + layered spam protection ---
             const contactForm = document.getElementById('contact-form');
             const formLoadedAtEl = document.getElementById('form_loaded_at');
             if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
@@ -766,17 +774,77 @@
                 setTimeout(() => toast.classList.remove('show'), 3500);
             };
 
+            // Track which fields the user actually *focused*. Most bots populate values
+            // programmatically without firing focus events.
+            const focused = new Set();
+            ['contact_name', 'contact_email', 'contact_message'].forEach(id => {
+                const el = document.getElementById(id);
+                el?.addEventListener('focus', () => focused.add(id));
+            });
+
+            // Spam classifier — runs client-side; layered checks. Returns reason string or null.
+            const detectSpam = (formData) => {
+                // 1. Any honeypot filled?
+                for (const hp of ['website', 'url', 'phone', 'company']) {
+                    if ((formData.get(hp) || '').toString().trim()) return 'honeypot:' + hp;
+                }
+                // 2. Form open <3s?
+                const elapsed = Date.now() - parseInt(formLoadedAtEl?.value || '0', 10);
+                if (elapsed < 3000) return 'too-fast:' + elapsed;
+                // 3. User didn't focus enough fields (bots don't focus)
+                if (focused.size < 2) return 'no-focus';
+
+                const name = (formData.get('contact_name') || '').toString();
+                const email = (formData.get('contact_email') || '').toString();
+                const msg = (formData.get('contact_message') || '').toString();
+
+                // 4. Minimum content length
+                if (msg.trim().length < 10) return 'too-short';
+                // 5. Name shouldn't contain URLs
+                if (/https?:\/\/|www\./i.test(name)) return 'url-in-name';
+                // 6. URL flood in message (≥2 links is almost always promo)
+                const urlCount = (msg.match(/https?:\/\/|www\.[a-z0-9-]+\.[a-z]+/gi) || []).length;
+                if (urlCount >= 2) return 'too-many-urls';
+                // 7. Promo / SEO / crypto keyword patterns (case-insensitive)
+                const promoPatterns = [
+                    /\b(seo|backlinks?|link\s*building)\b.{0,30}\b(service|offer|provider|expert)\b/i,
+                    /\b(rank|ranking)\b.{0,20}\b(higher|first|google|search)\b/i,
+                    /\b(traffic|leads?|sales|revenue)\b.{0,30}\b(increase|boost|grow|generation|machine)\b/i,
+                    /\bguaranteed\b.{0,40}\b(rank|traffic|leads?|results?|first\s*page)\b/i,
+                    /\bcrypto(currency)?\b.{0,30}\b(investment|opportunity|trader|advisor)\b/i,
+                    /\b(loan|funding)\s+(offer|approval|provider)\b/i,
+                    /\b(escrow|inheritance|next of kin)\b/i,
+                    /\bb2b\s+(database|list|leads?|emails?)\b/i,
+                    /\b(promotional|marketing|advertising)\s+(service|email|campaign)/i,
+                    /\b(buy|cheap|discount)\s+(viagra|cialis|pills|meds)\b/i,
+                    /\b(write|guest)\s+post\s+(opportunit|service|offer)/i,
+                    /\bdofollow\s+(link|backlink)/i,
+                    /\b(my|our)\s+(team|company)\s+can\s+help\s+you/i,
+                    /\bI\s+(came across|saw|found|visited)\s+your\s+(website|site|blog)/i,
+                ];
+                for (const re of promoPatterns) {
+                    if (re.test(msg)) return 'promo-pattern:' + re.source.slice(0, 30);
+                }
+                // 8. Cyrillic / Devanagari-heavy bodies are almost always foreign-language spam
+                const nonLatin = (msg.match(/[Ѐ-ӿऀ-ॿ一-鿿]/g) || []).length;
+                if (nonLatin > 30) return 'non-latin-heavy';
+
+                return null;
+            };
+
             if (contactForm) {
                 contactForm.addEventListener('submit', async (e) => {
                     e.preventDefault();
 
-                    // Spam guards: honeypot field filled OR submitted in <2 seconds
-                    const honeypot = document.getElementById('hp_website');
-                    const elapsed = Date.now() - parseInt(formLoadedAtEl?.value || '0', 10);
-                    if ((honeypot && honeypot.value) || elapsed < 2000) {
-                        // Pretend success so bots don't retry; do NOT actually submit.
+                    const formData = new FormData(contactForm);
+                    const spamReason = detectSpam(formData);
+                    if (spamReason) {
+                        // Silently drop. Pretend success so bots don't retry.
+                        // (Reason logged for the user's debugging.)
+                        try { console.log('[contact] dropped:', spamReason); } catch (_) {}
                         showToast('Message sent successfully!');
                         contactForm.reset();
+                        focused.clear();
                         if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
                         return;
                     }
@@ -788,21 +856,20 @@
                     if (labelEl) labelEl.textContent = 'Sending…';
 
                     try {
-                        const formData = new FormData(contactForm);
-                        const res = await fetch(contactForm.action, {
+                        // Pageclip doesn't return CORS headers, so we fire-and-forget in no-cors mode.
+                        // The opaque response means we can't read status, but Pageclip still receives the submission.
+                        // Real network failures (offline, DNS) will still throw.
+                        await fetch(contactForm.action, {
                             method: 'POST',
                             body: formData,
-                            headers: { 'Accept': 'application/json' }
+                            mode: 'no-cors'
                         });
-                        if (res.ok) {
-                            showToast('Message sent successfully!');
-                            contactForm.reset();
-                            if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
-                        } else {
-                            showToast('Could not send message. Please try again or email me directly.', 'error');
-                        }
+                        showToast('Message sent successfully!');
+                        contactForm.reset();
+                        focused.clear();
+                        if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
                     } catch (_err) {
-                        showToast('Network error. Please try again or email me directly.', 'error');
+                        showToast('Network error. Please try again or email me at rushabhshah842@gmail.com', 'error');
                     } finally {
                         if (submitBtn) submitBtn.disabled = false;
                         if (labelEl) labelEl.textContent = originalLabel || "Execute 'send-message'";
