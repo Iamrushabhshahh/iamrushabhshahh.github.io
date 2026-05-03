@@ -44,7 +44,6 @@
     <link rel="stylesheet" href="/style.css">
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="print" onload="this.media='all'">
 
     <!-- Analytics: GoatCounter (free, privacy-friendly, ~3KB).
          To enable: sign up at https://www.goatcounter.com (free), then replace YOURSITE below with your account slug. -->
@@ -392,7 +391,7 @@
             </div>
             <p class="section-subtitle">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you.</p>
             <div class="max-w-xl mx-auto">
-                <form id="contact-form" action="https://send.pageclip.co/ICvb34nUy3cZG613HmR5rbjZD16394SD" class="pageclip-form pageclip-form--no-redirect space-y-4 font-fira" method="post" novalidate>
+                <form id="contact-form" action="https://send.pageclip.co/ICvb34nUy3cZG613HmR5rbjZD16394SD" class="space-y-4 font-fira" method="post" novalidate>
                     <!-- Honeypot: bots fill this; humans never see it. Server-side filtering still recommended. -->
                     <div class="honeypot" aria-hidden="true">
                         <label for="hp_website">Leave this field empty</label>
@@ -417,7 +416,7 @@
                             <i data-feather="copy" class="w-4 h-4"></i>
                             <span>Or copy email</span>
                         </button>
-                        <button type="submit" class="pageclip-form__submit btn btn-primary">
+                        <button type="submit" class="btn btn-primary">
                             <i data-feather="send" class="w-4 h-4"></i>
                             <span>Execute 'send-message'</span>
                         </button>
@@ -496,7 +495,6 @@
         <i data-feather="arrow-up" class="w-5 h-5"></i>
     </button>
 
-    <script defer src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
     <script>
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -752,25 +750,62 @@
             })
             .catch(renderFallback);
 
-            // --- Honeypot + minimum-fill-time spam protection ---
+            // --- Contact form: manual fetch + honeypot + min-fill timer ---
             const contactForm = document.getElementById('contact-form');
             const formLoadedAtEl = document.getElementById('form_loaded_at');
             if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
+
+            const showToast = (message, type) => {
+                const toast = document.getElementById('toast-notification');
+                const msg = document.getElementById('toast-message');
+                if (!toast || !msg) return;
+                msg.textContent = message;
+                toast.classList.toggle('error', type === 'error');
+                toast.classList.add('show');
+                if (window.feather) feather.replace();
+                setTimeout(() => toast.classList.remove('show'), 3500);
+            };
+
             if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    // Spam guards: honeypot field filled OR submitted in <2 seconds
                     const honeypot = document.getElementById('hp_website');
                     const elapsed = Date.now() - parseInt(formLoadedAtEl?.value || '0', 10);
-                    // If bot filled the honeypot OR submitted in <2s, silently drop.
                     if ((honeypot && honeypot.value) || elapsed < 2000) {
-                        e.preventDefault();
-                        e.stopImmediatePropagation();
-                        // Pretend success so bots don't retry.
-                        const toast = document.getElementById('toast-notification');
-                        toast.classList.add('show');
+                        // Pretend success so bots don't retry; do NOT actually submit.
+                        showToast('Message sent successfully!');
                         contactForm.reset();
                         if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
-                        setTimeout(() => toast.classList.remove('show'), 2500);
-                        return false;
+                        return;
+                    }
+
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const labelEl = submitBtn?.querySelector('span');
+                    const originalLabel = labelEl?.textContent;
+                    if (submitBtn) submitBtn.disabled = true;
+                    if (labelEl) labelEl.textContent = 'Sending…';
+
+                    try {
+                        const formData = new FormData(contactForm);
+                        const res = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (res.ok) {
+                            showToast('Message sent successfully!');
+                            contactForm.reset();
+                            if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
+                        } else {
+                            showToast('Could not send message. Please try again or email me directly.', 'error');
+                        }
+                    } catch (_err) {
+                        showToast('Network error. Please try again or email me directly.', 'error');
+                    } finally {
+                        if (submitBtn) submitBtn.disabled = false;
+                        if (labelEl) labelEl.textContent = originalLabel || "Execute 'send-message'";
                     }
                 });
             }
@@ -881,15 +916,6 @@
                 console.log('%csource → https://github.com/iamrushabhshahh/iamrushabhshahh.github.io', 'color:#3fb950;font:12px Fira Code,monospace');
             } catch (_) {}
 
-            // --- Custom Toast for Pageclip ---
-            window.addEventListener('pageclip:success', function (event) {
-                event.preventDefault();
-                const toast = document.getElementById('toast-notification');
-                toast.classList.add('show');
-                if (window.feather) feather.replace();
-                event.detail.form.reset();
-                setTimeout(() => toast.classList.remove('show'), 3000);
-            });
         });
     </script>
 </body>

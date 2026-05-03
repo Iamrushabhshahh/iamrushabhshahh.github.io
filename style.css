@@ -634,8 +634,11 @@ section[id] { scroll-margin-top: 5rem; }
 }
 
 /* Toast */
-#toast-notification { transition: opacity 0.3s, transform 0.3s; }
+#toast-notification {
+    transition: opacity 0.3s, transform 0.3s, background-color 0.2s;
+}
 #toast-notification.show { opacity: 1; transform: translateY(0); }
+#toast-notification.error { background-color: #ef4444 !important; }
 
 /* Sr only */
 .sr-only {
