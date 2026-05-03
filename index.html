@@ -3,193 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rushabh Shah | DevOps Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-    <style>
-        :root {
-            --bg-color: #010409;
-            --terminal-header: #161b22;
-            --text-color: #c9d1d9;
-            --primary-color: #58a6ff;
-            --green-color: #3fb950;
-            --border-color: #30363d;
-        }
+    <meta name="theme-color" content="#010409">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
+    <title>Rushabh Shah | Docker Captain · Grafana Champion · DevOps Engineer</title>
+    <meta name="description" content="Rushabh Shah is a Docker Captain, Grafana Champion, and DevOps Engineer based in India. I build and automate cloud infrastructure on AWS, Azure and GCP, mentor future tech talent, and write about cloud, Linux, and observability.">
+    <meta name="author" content="Rushabh Shah">
+    <link rel="canonical" href="https://rushabhshah.dev/">
 
-        .font-fira {
-            font-family: 'Fira Code', monospace;
-        }
+    <!-- Favicon (inline SVG so no extra request) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
 
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rushabhshah.dev/">
+    <meta property="og:title" content="Rushabh Shah | Docker Captain · Grafana Champion · DevOps Engineer">
+    <meta property="og:description" content="Docker Captain, Grafana Champion, and DevOps Engineer building & automating cloud infrastructure on AWS, Azure and GCP.">
+    <meta property="og:image" content="https://rushabhshah.dev/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-        .terminal-window {
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            background-color: rgba(1, 4, 9, 0.8);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@iamrushabhshahh">
+    <meta name="twitter:title" content="Rushabh Shah | Docker Captain · Grafana Champion · DevOps Engineer">
+    <meta name="twitter:description" content="Docker Captain, Grafana Champion, and DevOps Engineer building & automating cloud infrastructure on AWS, Azure and GCP.">
+    <meta name="twitter:image" content="https://rushabhshah.dev/assets/og-image.jpg">
 
-        .terminal-header {
-            background-color: var(--terminal-header);
-            padding: 0.75rem;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid var(--border-color);
-        }
+    <!-- Preconnect / DNS-prefetch for faster paint -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.simpleicons.org" crossorigin>
+    <link rel="preconnect" href="https://api.iconify.design" crossorigin>
+    <link rel="dns-prefetch" href="https://gql.hashnode.com">
+    <link rel="dns-prefetch" href="https://send.pageclip.co">
 
-        .terminal-button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-        .typing-cursor {
-            display: inline-block;
-            width: 9px;
-            height: 1.75rem;
-            background-color: var(--primary-color);
-            animation: blink 1s infinite;
-            margin-left: 4px;
-            vertical-align: middle;
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
+    <link rel="stylesheet" href="/style.css">
 
-        .section-reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="print" onload="this.media='all'">
+
+    <!-- Analytics: GoatCounter (free, privacy-friendly, ~3KB).
+         To enable: sign up at https://www.goatcounter.com (free), then replace YOURSITE below with your account slug. -->
+    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+    <!-- JSON-LD: Person schema for richer search results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rushabh Shah",
+      "url": "https://rushabhshah.dev",
+      "jobTitle": "DevOps Engineer",
+      "image": "https://avatars.githubusercontent.com/u/96313281?v=4",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
+      "worksFor": { "@type": "Organization", "name": "Oro" },
+      "sameAs": [
+        "https://github.com/iamrushabhshahh",
+        "https://in.linkedin.com/in/iamrushabhshahh",
+        "https://twitter.com/iamrushabhshahh",
+        "https://iamrushabhshahh.hashnode.dev/"
+      ],
+      "award": ["Docker Captain (2026)", "Grafana Champion (2026)"],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Microsoft Certified: Azure Administrator Associate (AZ-104)",
+          "credentialCategory": "certification",
+          "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+          "credentialCategory": "certification",
+          "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
         }
-        .section-reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .tech-card {
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-        .tech-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-color);
-            box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
-        }
-        
-        .form-input {
-            background-color: #0d1117;
-            border: 1px solid var(--border-color);
-            caret-color: var(--primary-color);
-        }
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
-        }
-        
-        .prompt::before {
-            content: 'rushabh@shah:~$';
-            color: var(--green-color);
-            margin-right: 0.75rem;
-        }
-        
-        /* Toast Notification */
-        #toast-notification {
-            transition: opacity 0.3s, transform 0.3s;
-        }
-        #toast-notification.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+      ],
+      "knowsAbout": ["DevOps", "Site Reliability Engineering", "Kubernetes", "Docker", "Helm", "Argo CD", "Terraform", "GitHub Actions", "AWS", "Azure", "GCP", "Oracle Cloud Infrastructure", "Linux", "Prometheus", "Grafana", "Loki", "Tempo", "Mimir", "OpenTelemetry", "eBPF", "CI/CD", "Cloud Cost Optimization"]
+    }
+    </script>
+
 </head>
 <body>
-    <div id="particles-js"></div>
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!-- Header -->
-    <header class="sticky top-0 z-40 bg-opacity-80 backdrop-blur-md border-b border-border-color">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira">
+    <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
             <a href="#" class="text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
             <div class="hidden md:flex space-x-6 text-sm">
-                <a href="#about" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
-                <a href="#experience" class="text-gray-400 hover:text-primary-color transition-colors">./experience</a>
-                <a href="#projects" class="text-gray-400 hover:text-primary-color transition-colors">./projects</a>
-                <a href="#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
+                <a href="#about" data-key="ga" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
+                <a href="#honors" data-key="gh" class="text-gray-400 hover:text-primary-color transition-colors">./honors</a>
+                <a href="#skills" data-key="gs" class="text-gray-400 hover:text-primary-color transition-colors">./skills</a>
+                <a href="#experience" data-key="ge" class="text-gray-400 hover:text-primary-color transition-colors">./experience</a>
+                <a href="#projects" data-key="gp" class="text-gray-400 hover:text-primary-color transition-colors">./projects</a>
+                <a href="#writing" data-key="gw" class="text-gray-400 hover:text-primary-color transition-colors">./writing</a>
+                <a href="#contact" data-key="gc" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden">
+            <button id="mobile-menu-button" class="md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
                 <i data-feather="menu" class="w-6 h-6 text-white"></i>
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-terminal-header/90 font-fira">
             <a href="#about" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./about</a>
+            <a href="#honors" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./honors</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./skills</a>
             <a href="#experience" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./experience</a>
             <a href="#projects" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./projects</a>
+            <a href="#writing" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./writing</a>
             <a href="#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <main class="container mx-auto px-6 py-20 md:py-32">
-        <div class="max-w-3xl mx-auto terminal-window">
-            <div class="terminal-header">
-                <div class="terminal-button bg-red-500"></div>
-                <div class="terminal-button bg-yellow-500"></div>
-                <div class="terminal-button bg-green-500"></div>
-            </div>
-            <div class="p-8 font-fira">
-                <div class="min-h-[100px] md:min-h-[120px]">
-                    <p class="prompt text-lg md:text-xl"></p>
-                    <h1 class="text-3xl md:text-4xl font-bold text-white mt-2">
-                        <span id="typing-text"></span><span class="typing-cursor"></span>
-                    </h1>
+    <main id="main" class="relative container mx-auto px-6 py-20 md:py-32 overflow-hidden">
+        <!-- Decorative orbs -->
+        <div class="orb orb-blue w-72 h-72 -top-16 -left-16 opacity-70" aria-hidden="true"></div>
+        <div class="orb orb-purple w-72 h-72 top-40 right-0 opacity-60" aria-hidden="true"></div>
+
+        <div class="grid lg:grid-cols-12 gap-10 items-center relative z-10">
+            <div class="lg:col-span-7">
+                <div class="status-pill mb-6">
+                    <span class="dot"></span>
+                    Currently DevOps Engineer @ Oro · Ahmedabad, India
                 </div>
-                <p class="text-gray-400 mt-4">
-                    Welcome to my digital space. I build & automate cloud infrastructure, mentor future tech talent, and simplify complex cloud concepts.
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white">
+                    Hi, I'm <span class="gradient-text">Rushabh Shah</span>.
+                </h1>
+                <p class="font-fira text-lg md:text-xl text-gray-300 mt-6 min-h-[2.5rem]">
+                    <span class="text-green-color">$</span>
+                    <span id="typing-text" aria-live="polite"></span><span class="typing-cursor" aria-hidden="true"></span>
                 </p>
-                <div class="mt-8">
-                    <a href="#contact" class="inline-block bg-primary-color text-bg-color font-bold py-2 px-4 rounded-md hover:bg-opacity-90 transition-all">
-                        [ Connect with me ]
+                <p class="text-base md:text-lg text-gray-400 mt-6 max-w-2xl leading-relaxed">
+                    <span class="text-primary-color font-semibold">Docker Captain</span> &amp; <span class="text-accent-orange font-semibold">Grafana Champion</span>. I build and automate cloud-native infrastructure on Kubernetes, ship reliable observability, and simplify complex cloud concepts for the community.
+                </p>
+                <div class="mt-10 flex flex-wrap items-center gap-3">
+                    <a href="#contact" class="btn btn-primary">
+                        <i data-feather="send" class="w-4 h-4"></i> Get in touch
                     </a>
+                    <a href="/assets/rushabh-shah-resume.pdf" download class="btn btn-ghost">
+                        <i data-feather="download" class="w-4 h-4"></i> Download résumé
+                    </a>
+                    <a href="#writing" class="btn btn-ghost">
+                        <i data-feather="book-open" class="w-4 h-4"></i> Read my writing
+                    </a>
+                    <a href="https://github.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                        <i data-feather="github" class="w-4 h-4"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5">
+                <div class="terminal-window">
+                    <div class="terminal-header" aria-hidden="true">
+                        <div class="terminal-button bg-red-500"></div>
+                        <div class="terminal-button bg-yellow-500"></div>
+                        <div class="terminal-button bg-green-500"></div>
+                        <span class="ml-3 font-fira text-xs text-gray-500">~/whoami.sh</span>
+                    </div>
+                    <pre class="p-6 font-fira text-[13px] leading-relaxed overflow-x-auto"><code><span class="text-green-color">$</span> <span class="text-white">cat</span> whoami.json
+<span class="text-gray-500">{</span>
+  <span class="text-primary-color">"role"</span>: <span class="text-accent-orange">"DevOps Engineer"</span>,
+  <span class="text-primary-color">"company"</span>: <span class="text-accent-orange">"Oro"</span>,
+  <span class="text-primary-color">"location"</span>: <span class="text-accent-orange">"Ahmedabad, IN"</span>,
+  <span class="text-primary-color">"honors"</span>: [
+    <span class="text-accent-orange">"Docker Captain"</span>,
+    <span class="text-accent-orange">"Grafana Champion"</span>
+  ],
+  <span class="text-primary-color">"focus"</span>: [
+    <span class="text-accent-orange">"Kubernetes"</span>,
+    <span class="text-accent-orange">"Observability"</span>,
+    <span class="text-accent-orange">"Cloud Cost"</span>
+  ]
+<span class="text-gray-500">}</span>
+<span class="text-green-color">$</span> <span class="typing-cursor" style="height: 1rem"></span></code></pre>
                 </div>
             </div>
         </div>
     </main>
-    
+
+    <!-- Stats / By the Numbers strip -->
+    <section id="stats" aria-label="Key impact metrics" class="container mx-auto px-6 -mt-6 mb-12">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <p class="stat-value gradient-text">~220</p>
+                <p class="stat-label"># Docker Captains worldwide</p>
+                <p class="stat-sub">Selected 2026</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-value gradient-text">~110</p>
+                <p class="stat-label"># Grafana Champions worldwide</p>
+                <p class="stat-sub">Inaugural cohort, 2026</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-value gradient-text">59%</p>
+                <p class="stat-label">AWS spend reduction</p>
+                <p class="stat-sub">Delivered at Genuin</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-value gradient-text">0</p>
+                <p class="stat-label">Downtime · AWS → OCI migration</p>
+                <p class="stat-sub">Hard-deadline cutover</p>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="py-20">
         <div class="container mx-auto px-6 section-reveal">
-            <h2 class="text-3xl font-bold text-center mb-12 font-fira"><span class="text-primary-color">01.</span> About Me</h2>
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/3 text-center flex-shrink-0">
-                    <img src="https://avatars.githubusercontent.com/u/96313281?v=4" alt="Rushabh Shah" class="rounded-md mx-auto w-48 h-48 md:w-60 md:h-60 object-cover border-2 border-border-color p-1">
+            <div class="section-heading mb-12">
+                <h2 class="font-fira"><span class="num">01.</span><span class="gradient-text">About Me</span></h2>
+            </div>
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3 text-center flex-shrink-0 relative">
+                    <div class="absolute inset-0 -z-10 blur-3xl opacity-60" aria-hidden="true">
+                        <div class="w-full h-full rounded-full" style="background: radial-gradient(circle, rgba(88,166,255,0.45), transparent 65%);"></div>
+                    </div>
+                    <div class="relative inline-block rounded-2xl p-[2px]" style="background: linear-gradient(135deg, #58a6ff, #a371f7, #f47b20);">
+                        <img src="https://avatars.githubusercontent.com/u/96313281?v=4" alt="Portrait of Rushabh Shah" loading="lazy" decoding="async" width="240" height="240" class="rounded-2xl w-48 h-48 md:w-60 md:h-60 object-cover bg-bg-color block">
+                    </div>
                 </div>
                 <div class="md:w-2/3">
                     <p class="text-lg text-gray-300 mb-4">
-                        Hello! I'm Rushabh, a passionate and driven DevOps Engineer based in India. My journey in tech began as a Laravel Developer, which gave me a solid foundation in software development. This experience sparked my curiosity about the entire development lifecycle, leading me to transition into the world of DevOps.
+                        Hi, I'm Rushabh, a DevOps Engineer based in <span class="text-white font-semibold">Ahmedabad, India</span>, currently at <span class="text-primary-color font-semibold">Oro</span>, building reliable cloud infrastructure on Kubernetes with Helm, Argo CD, Terraform, and GitHub Actions. I'm a <span class="text-primary-color font-semibold">Docker Captain</span> (selected 2026, ~220 members worldwide) and a <span class="text-primary-color font-semibold">Grafana Champion</span> (inaugural 2025 cohort, ~110 worldwide).
                     </p>
-                    <p class="text-lg text-gray-300">
-                        I thrive on bridging the gap in the DevOps lifecycle, leveraging my skills in cloud computing, automation, and containerization. I'm an Azure Certified Cloud enthusiast and I'm proficient with AWS and GCP as well. I love learning new technologies and sharing my knowledge with others.
+                    <p class="text-lg text-gray-300 mb-6">
+                        My focus areas are Kubernetes, CI/CD, IaC, observability with the Grafana LGTM stack (Loki, Grafana, Tempo, Mimir) and OpenTelemetry, and cloud cost optimization. Before Oro, I drove a 59% AWS spend reduction at Genuin, led a zero-downtime AWS→OCI migration under a hard deadline, and built ISO / SOC Type 1 readiness controls. I started out as a Laravel/PHP developer, then moved into DevOps via Tridhya Tech and KodeKloud, where I represented the team at KubeCon India 2024. I organize <span class="text-white">Grafana &amp; Friends Ahmedabad</span>, run workshops on Prometheus and the LGTM stack, write a bi-weekly newsletter, and contribute to open source, including translating eBPF.io into Hindi.
                     </p>
+                    <div class="now-line font-fira text-gray-300">
+                        <span class="now-prefix">$ now &gt;</span> deep in eBPF, OpenTelemetry, and tuning Grafana LGTM stacks for production reliability.
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honors / Community / Certifications Section -->
+    <section id="honors" class="py-20">
+        <div class="container mx-auto px-6 section-reveal">
+            <div class="section-heading">
+                <h2 class="font-fira"><span class="num">02.</span><span class="gradient-text">Honors &amp; Certifications</span></h2>
+            </div>
+            <p class="section-subtitle">Recognised programs I'm part of and certifications I hold.</p>
+
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 stagger" style="--i: 0">
+                <a href="https://www.docker.com/captains/" target="_blank" rel="noopener noreferrer" class="tech-card tech-card-docker p-7 rounded-xl flex flex-col group" style="--i: 0">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="chip" style="border-color: rgba(29,99,237,0.45); color: #79a8ff;">
+                            <img src="https://cdn.simpleicons.org/docker/1d63ed" alt="" loading="lazy">
+                            Docker, Inc · Selected 2026
+                        </span>
+                        <i data-feather="external-link" class="text-gray-500 group-hover:text-white w-4 h-4 transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-3">
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg" style="background-color: rgba(29,99,237,0.15);">
+                            <img src="https://cdn.simpleicons.org/docker/1d63ed" alt="" class="w-6 h-6" loading="lazy">
+                        </span>
+                        Docker Captain
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Recognised by Docker, Inc. for technical expertise in containers and Kubernetes, real-world production experience, and consistent contribution to the global container community. The program includes ~220 members worldwide.</p>
+                </a>
+                <a href="https://grafana.com/community/champions/" target="_blank" rel="noopener noreferrer" class="tech-card tech-card-grafana p-7 rounded-xl flex flex-col group" style="--i: 1">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="chip" style="border-color: rgba(244,123,32,0.45); color: #ffa56a;">
+                            <img src="https://cdn.simpleicons.org/grafana/f47b20" alt="" loading="lazy">
+                            Grafana Labs · Selected 2026
+                        </span>
+                        <i data-feather="external-link" class="text-gray-500 group-hover:text-white w-4 h-4 transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-3">
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg" style="background-color: rgba(244,123,32,0.15);">
+                            <img src="https://cdn.simpleicons.org/grafana/f47b20" alt="" class="w-6 h-6" loading="lazy">
+                        </span>
+                        Grafana Champion
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Grafana Labs' invitation-only program for contributors who advance the observability community. Part of the inaugural cohort of ~110 members worldwide. I organize <span class="text-gray-200">Grafana &amp; Friends Ahmedabad</span> and run workshops on the LGTM stack and OpenTelemetry.</p>
+                </a>
+            </div>
+
+            <h3 class="text-center text-sm font-fira text-gray-400 mt-12 mb-6 uppercase tracking-wider">Certifications</h3>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6" id="certs-grid">
+                <!-- Certifications injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6 section-reveal">
+            <div class="section-heading">
+                <h2 class="font-fira"><span class="num">03.</span><span class="gradient-text">Tech Stack</span></h2>
+            </div>
+            <p class="section-subtitle">The tools I reach for when building, shipping, and operating cloud infrastructure.</p>
+            <div class="max-w-5xl mx-auto space-y-6" id="skills-groups">
+                <!-- Skill groups injected here -->
             </div>
         </div>
     </section>
@@ -197,9 +312,11 @@
     <!-- Experience Section -->
     <section id="experience" class="py-20">
         <div class="container mx-auto px-6 section-reveal">
-            <h2 class="text-3xl font-bold text-center mb-16 font-fira"><span class="text-primary-color">02.</span> Where I've Worked</h2>
+            <div class="section-heading mb-16">
+                <h2 class="font-fira"><span class="num">04.</span><span class="gradient-text">Where I've Worked</span></h2>
+            </div>
             <div class="max-w-3xl mx-auto relative">
-                <div class="absolute left-4 top-0 h-full w-0.5 bg-border-color"></div>
+                <div class="absolute left-4 top-0 h-full w-0.5 bg-border-color" aria-hidden="true"></div>
                 <!-- Experience items will be injected here -->
             </div>
         </div>
@@ -208,9 +325,61 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20">
         <div class="container mx-auto px-6 section-reveal">
-            <h2 class="text-3xl font-bold text-center mb-12 font-fira"><span class="text-primary-color">03.</span> Things I've Built</h2>
+            <div class="section-heading">
+                <h2 class="font-fira"><span class="num">05.</span><span class="gradient-text">Things I've Built</span></h2>
+            </div>
+            <p class="section-subtitle">A small selection of open-source contributions, study material, and writing.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Projects will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing & Talks Section -->
+    <section id="writing" class="py-20">
+        <div class="container mx-auto px-6 section-reveal">
+            <div class="section-heading">
+                <h2 class="font-fira"><span class="num">06.</span><span class="gradient-text">Writing &amp; Talks</span></h2>
+            </div>
+            <p class="section-subtitle">Latest posts from my Hashnode blog and recent community engagements.</p>
+
+            <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10" id="hashnode-posts">
+                <!-- Latest Hashnode posts injected here. Falls back to a single "Read on Hashnode" card if API fails. -->
+                <div class="tech-card p-6 rounded-md flex items-center justify-center text-gray-500 font-fira text-sm lg:col-span-3" id="posts-loading">
+                    Loading latest posts<span class="typing-cursor" style="height: 1rem;"></span>
+                </div>
+            </div>
+
+            <h3 class="text-center text-sm font-fira text-gray-400 mb-6 uppercase tracking-wider">Speaking &amp; Community</h3>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-india/" target="_blank" rel="noopener noreferrer" class="tech-card p-6 rounded-md flex flex-col group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">Dec 2024 · Delhi</span>
+                        <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i data-feather="users" class="text-primary-color w-5 h-5"></i>
+                        KubeCon + CloudNativeCon India 2024
+                    </h3>
+                    <p class="text-gray-400 text-sm">Represented KodeKloud at the inaugural KubeCon India, engaging with the CNCF community across container, observability, and platform-engineering tracks.</p>
+                </a>
+                <a href="https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/" target="_blank" rel="noopener noreferrer" class="tech-card p-6 rounded-md flex flex-col group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">Quarterly · Ahmedabad</span>
+                        <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i data-feather="mic" class="text-primary-color w-5 h-5"></i>
+                        Grafana &amp; Friends Ahmedabad
+                    </h3>
+                    <p class="text-gray-400 text-sm">Organize and host the Ahmedabad chapter, a quarterly community meetup focused on observability, OpenTelemetry, and the Grafana LGTM stack.</p>
+                </a>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="https://iamrushabhshahh.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-fira text-sm text-primary-color hover:underline">
+                    Read all posts on Hashnode <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -218,15 +387,38 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20">
         <div class="container mx-auto px-6 section-reveal">
-            <h2 class="text-3xl font-bold text-center mb-4 font-fira"><span class="text-primary-color">04.</span> Get In Touch</h2>
-            <p class="text-center text-gray-400 mb-12 max-w-xl mx-auto">My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+            <div class="section-heading">
+                <h2 class="font-fira"><span class="num">07.</span><span class="gradient-text">Get In Touch</span></h2>
+            </div>
+            <p class="section-subtitle">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you.</p>
             <div class="max-w-xl mx-auto">
-                <form action="https://send.pageclip.co/ICvb34nUy3cZG613HmR5rbjZD16394SD" class="pageclip-form pageclip-form--no-redirect space-y-4 font-fira" method="post">
-                    <input type="text" name="contact_name" placeholder="user@host:~$ enter name" class="form-input w-full px-4 py-3 rounded-md" required>
-                    <input type="email" name="contact_email" placeholder="user@host:~$ enter email" class="form-input w-full px-4 py-3 rounded-md" required>
-                    <textarea name="contact_message" placeholder="user@host:~$ enter message" rows="5" class="form-input w-full px-4 py-3 rounded-md" required></textarea>
-                    <div class="text-center pt-4">
-                        <button type="submit" class="pageclip-form__submit bg-primary-color text-bg-color font-bold py-3 px-6 rounded-md hover:bg-opacity-90 transition-all">
+                <form id="contact-form" action="https://send.pageclip.co/ICvb34nUy3cZG613HmR5rbjZD16394SD" class="pageclip-form pageclip-form--no-redirect space-y-4 font-fira" method="post" novalidate>
+                    <!-- Honeypot: bots fill this; humans never see it. Server-side filtering still recommended. -->
+                    <div class="honeypot" aria-hidden="true">
+                        <label for="hp_website">Leave this field empty</label>
+                        <input id="hp_website" type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <!-- Hidden timestamp; submissions faster than 2s are almost certainly bots -->
+                    <input type="hidden" name="form_loaded_at" id="form_loaded_at">
+                    <div>
+                        <label for="contact_name" class="sr-only">Your name</label>
+                        <input id="contact_name" type="text" name="contact_name" autocomplete="name" placeholder="user@host:~$ enter name" class="form-input w-full px-4 py-3 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="contact_email" class="sr-only">Your email</label>
+                        <input id="contact_email" type="email" name="contact_email" autocomplete="email" placeholder="user@host:~$ enter email" class="form-input w-full px-4 py-3 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="contact_message" class="sr-only">Your message</label>
+                        <textarea id="contact_message" name="contact_message" placeholder="user@host:~$ enter message" rows="5" class="form-input w-full px-4 py-3 rounded-md" required></textarea>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-4">
+                        <button type="button" id="copy-email-btn" class="btn btn-ghost text-sm" data-email="rushabh.s@orocorp.in" aria-label="Copy email address to clipboard">
+                            <i data-feather="copy" class="w-4 h-4"></i>
+                            <span>Or copy email</span>
+                        </button>
+                        <button type="submit" class="pageclip-form__submit btn btn-primary">
+                            <i data-feather="send" class="w-4 h-4"></i>
                             <span>Execute 'send-message'</span>
                         </button>
                     </div>
@@ -236,149 +428,468 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-6 text-center text-gray-500 font-fira text-sm">
-        <p>Designed & Built by Rushabh Shah</p>
-        <div class="mt-4 flex justify-center space-x-4">
-            <a href="https://github.com/iamrushabhshahh" target="_blank" class="hover:text-primary-color"><i data-feather="github"></i></a>
-            <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" class="hover:text-primary-color"><i data-feather="linkedin"></i></a>
-            <a href="https://twitter.com/iamrushabhshahh" target="_blank" class="hover:text-primary-color"><i data-feather="twitter"></i></a>
+    <footer class="border-t border-border-color mt-10">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-5">
+                    <a href="#" class="font-fira text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
+                    <p class="text-sm text-gray-400 mt-3 max-w-sm leading-relaxed">
+                        DevOps Engineer, Docker Captain, and Grafana Champion. Building reliable cloud-native infrastructure from Ahmedabad, India.
+                    </p>
+                    <div class="status-pill mt-4">
+                        <span class="dot"></span>
+                        Open to collaboration &amp; speaking invites
+                    </div>
+                </div>
+
+                <div class="md:col-span-3">
+                    <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3">Sitemap</p>
+                    <ul class="space-y-2 text-sm font-fira">
+                        <li><a href="#about" class="text-gray-400 hover:text-primary-color">./about</a></li>
+                        <li><a href="#honors" class="text-gray-400 hover:text-primary-color">./honors</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-primary-color">./skills</a></li>
+                        <li><a href="#experience" class="text-gray-400 hover:text-primary-color">./experience</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-primary-color">./projects</a></li>
+                        <li><a href="#writing" class="text-gray-400 hover:text-primary-color">./writing</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary-color">./contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4">
+                    <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3">Elsewhere</p>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://github.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="chip" aria-label="GitHub profile">
+                            <i data-feather="github" class="w-4 h-4"></i> GitHub
+                        </a>
+                        <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="chip" aria-label="LinkedIn profile">
+                            <i data-feather="linkedin" class="w-4 h-4"></i> LinkedIn
+                        </a>
+                        <a href="https://twitter.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="chip" aria-label="Twitter profile">
+                            <i data-feather="twitter" class="w-4 h-4"></i> Twitter
+                        </a>
+                        <a href="https://iamrushabhshahh.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="chip" aria-label="Hashnode blog">
+                            <i data-feather="book-open" class="w-4 h-4"></i> Hashnode
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-6 border-t border-border-color flex flex-col md:flex-row justify-between items-center gap-3 text-xs font-fira text-gray-500">
+                <p>&copy; <span id="footer-year"></span> Rushabh Shah · Designed &amp; built with care.</p>
+                <p class="hidden md:inline-flex items-center gap-2">
+                    <span class="text-gray-600">try</span>
+                    <kbd class="kbd">?</kbd>
+                    <span class="text-gray-600">for keyboard shortcuts</span>
+                </p>
+                <a href="https://github.com/iamrushabhshahh/iamrushabhshahh.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">view source ↗</a>
+            </div>
         </div>
     </footer>
 
     <!-- Toast Notification HTML -->
-    <div id="toast-notification" class="fixed bottom-5 right-5 bg-green-color text-white py-3 px-6 rounded-lg shadow-lg opacity-0 transform translate-y-5 z-50 font-fira" style="background-color: var(--green-color);">
-        <i data-feather="check-circle" class="inline-block mr-2"></i>Message sent successfully!
+    <div id="toast-notification" role="status" aria-live="polite" class="fixed bottom-20 right-5 bg-green-color text-white py-3 px-6 rounded-lg shadow-lg opacity-0 transform translate-y-5 z-50 font-fira" style="background-color: var(--green-color);">
+        <i data-feather="check-circle" class="inline-block mr-2"></i><span id="toast-message">Message sent successfully!</span>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <!-- Back-to-top button -->
+    <button id="back-to-top" aria-label="Scroll back to top" type="button">
+        <i data-feather="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script defer src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
     <script>
-        // --- Feather Icons ---
-        feather.replace();
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        // --- Mobile Menu ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Feather Icons ---
+            if (window.feather) feather.replace();
 
-        // --- Particles.js ---
-        particlesJS('particles-js', {
-            "particles": { "number": { "value": 50, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#58a6ff" }, "shape": { "type": "circle" }, "opacity": { "value": 0.3, "random": true }, "size": { "value": 3, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#58a6ff", "opacity": 0.2, "width": 1 }, "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false } },
-            "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } } },
-            "retina_detect": true
-        });
+            // --- Footer year ---
+            const yearEl = document.getElementById('footer-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        // --- Typing Animation ---
-        const typingTextElement = document.getElementById('typing-text');
-        const roles = ["DevOps Engineer", "Cloud Advocate", "Infra Mentor", "Rushabh Shah."];
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+            // --- Mobile Menu ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const setMenu = (open) => {
+                mobileMenu.classList.toggle('hidden', !open);
+                mobileMenuButton.setAttribute('aria-expanded', String(open));
+            };
+            mobileMenuButton.addEventListener('click', () => {
+                const open = mobileMenu.classList.contains('hidden');
+                setMenu(open);
+            });
+            // Close menu after clicking a link
+            mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-        function type() {
-            const currentRole = roles[roleIndex];
-            if (isDeleting) {
-                typingTextElement.textContent = currentRole.substring(0, charIndex - 1);
-                charIndex--;
+            // --- Typing Animation ---
+            const typingTextElement = document.getElementById('typing-text');
+            const roles = ["DevOps Engineer", "Docker Captain", "Grafana Champion", "SRE Enthusiast", "Community Organizer"];
+            if (prefersReducedMotion) {
+                typingTextElement.textContent = roles[roles.length - 1];
             } else {
-                typingTextElement.textContent = currentRole.substring(0, charIndex + 1);
-                charIndex++;
+                let roleIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+                const type = () => {
+                    const currentRole = roles[roleIndex];
+                    typingTextElement.textContent = currentRole.substring(0, isDeleting ? --charIndex : ++charIndex);
+                    if (!isDeleting && charIndex === currentRole.length) {
+                        isDeleting = true;
+                        setTimeout(type, 2000);
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        roleIndex = (roleIndex + 1) % roles.length;
+                        setTimeout(type, 500);
+                    } else {
+                        setTimeout(type, isDeleting ? 50 : 150);
+                    }
+                };
+                type();
             }
 
-            if (!isDeleting && charIndex === currentRole.length) {
-                isDeleting = true;
-                setTimeout(type, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(type, 500);
-            } else {
-                setTimeout(type, isDeleting ? 50 : 150);
-            }
-        }
-        document.addEventListener('DOMContentLoaded', type);
+            // --- Scroll Animations ---
+            const revealElements = document.querySelectorAll('.section-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(el => observer.observe(el));
 
-        // --- Scroll Animations ---
-        const revealElements = document.querySelectorAll('.section-reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
+            // --- Dynamic Skills (grouped) ---
+            const skillsGroupsEl = document.getElementById('skills-groups');
+            const skillGroups = [
+                { label: 'Containers & Orchestration', items: [
+                    { name: 'Kubernetes', si: 'kubernetes' },
+                    { name: 'Docker', si: 'docker' },
+                    { name: 'Helm', si: 'helm' },
+                    { name: 'Argo CD', si: 'argo' },
+                ]},
+                { label: 'IaC & Automation', items: [
+                    { name: 'Terraform', si: 'terraform' },
+                    { name: 'Ansible', si: 'ansible' },
+                    { name: 'GitHub Actions', si: 'githubactions' },
+                ]},
+                { label: 'Cloud Platforms', items: [
+                    { name: 'AWS', if: 'logos/aws' },
+                    { name: 'Azure', if: 'logos/microsoft-azure' },
+                    { name: 'GCP', if: 'logos/google-cloud' },
+                    { name: 'OCI', if: 'logos/oracle' },
+                ]},
+                { label: 'Observability', items: [
+                    { name: 'Prometheus', si: 'prometheus' },
+                    { name: 'Grafana', si: 'grafana' },
+                    { name: 'Loki / Tempo / Mimir', icon: 'database' },
+                    { name: 'OpenTelemetry', si: 'opentelemetry' },
+                ]},
+                { label: 'Languages & Tooling', items: [
+                    { name: 'Linux', si: 'linux' },
+                    { name: 'Bash', si: 'gnubash' },
+                    { name: 'Python', si: 'python' },
+                    { name: 'Git', si: 'git' },
+                    { name: 'CI/CD', icon: 'git-branch' },
+                ]},
+            ];
+            skillGroups.forEach((group, gi) => {
+                const wrap = document.createElement('div');
+                wrap.className = 'flex flex-col md:flex-row md:items-center gap-4 stagger';
+                wrap.style.setProperty('--i', gi);
+                const chips = group.items.map(s => {
+                    let ic;
+                    if (s.if) {
+                        ic = `<img src="https://api.iconify.design/${s.if}.svg" alt="" loading="lazy" width="16" height="16">`;
+                    } else if (s.si) {
+                        ic = `<img src="https://cdn.simpleicons.org/${s.si}/c9d1d9" alt="" loading="lazy" width="16" height="16">`;
+                    } else {
+                        ic = `<i data-feather="${s.icon}" class="w-4 h-4"></i>`;
+                    }
+                    return `<span class="chip">${ic}${s.name}</span>`;
+                }).join('');
+                wrap.innerHTML = `
+                    <div class="md:w-48 flex-shrink-0">
+                        <p class="font-fira text-xs uppercase tracking-wider text-gray-500"># ${group.label}</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2.5 flex-1">${chips}</div>
+                `;
+                skillsGroupsEl.appendChild(wrap);
+            });
+
+            // --- Dynamic Certifications ---
+            const certsGrid = document.getElementById('certs-grid');
+            const certs = [
+                { name: 'Microsoft Certified: Azure Administrator Associate', code: 'AZ-104', icon: 'award' },
+                { name: 'Microsoft Certified: Azure Fundamentals', code: 'AZ-900', icon: 'award' },
+            ];
+            certs.forEach(c => {
+                const card = document.createElement('div');
+                card.className = 'tech-card p-5 rounded-md flex items-center gap-4';
+                card.innerHTML = `
+                    <i data-feather="${c.icon}" class="text-primary-color w-6 h-6 flex-shrink-0"></i>
+                    <div>
+                        <p class="text-white font-semibold text-sm">${c.name}</p>
+                        <p class="text-xs font-fira text-gray-400 mt-1">${c.code}</p>
+                    </div>
+                `;
+                certsGrid.appendChild(card);
+            });
+
+            // --- Dynamic Experience ---
+            const experienceContainer = document.querySelector('#experience .relative');
+            const experienceData = [
+                { company: 'Oro', role: 'DevOps Engineer', date: 'Jun 2025 - Present', current: true,
+                  desc: 'Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.' },
+                { company: 'Koenig Solutions Pvt. Ltd.', role: 'Corporate Trainer', date: 'Jun 2025 - Jul 2025',
+                  desc: 'Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.' },
+                { company: 'Genuin', role: 'DevOps Engineer', date: 'Jan 2025 - May 2025',
+                  desc: 'Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.' },
+                { company: 'KodeKloud', role: 'Jr DevOps Engineer', date: 'Jul 2024 - Dec 2024',
+                  desc: 'Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.' },
+                { company: 'Tridhya Tech Limited', role: 'Jr DevOps Engineer', date: 'Jun 2023 - Jun 2024',
+                  desc: 'Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.' },
+            ];
+            experienceData.forEach((item, i) => {
+                const expItem = document.createElement('div');
+                expItem.className = 'ml-10 mb-10 tech-card p-6 rounded-md';
+                expItem.style.setProperty('--i', i);
+                const dotClass = item.current ? 'timeline-dot timeline-dot-current' : 'timeline-dot';
+                const currentBadge = item.current ? `<span class="status-pill" style="font-size:0.7rem; padding:0.15rem 0.55rem;"><span class="dot"></span>Current</span>` : '';
+                expItem.innerHTML = `
+                    <div class="absolute ${dotClass}" aria-hidden="true"></div>
+                    <div class="flex items-start justify-between gap-3 mb-1">
+                        <h3 class="text-xl font-bold text-white">${item.role}</h3>
+                        ${currentBadge}
+                    </div>
+                    <p class="text-primary-color mb-1">${item.company}</p>
+                    <time class="text-sm font-fira text-gray-400 block mb-2">${item.date}</time>
+                    ${item.desc ? `<p class="text-gray-400 text-sm leading-relaxed">${item.desc}</p>` : ''}
+                `;
+                experienceContainer.appendChild(expItem);
+            });
+
+            // --- Dynamic Projects ---
+            const projectContainer = document.querySelector('#projects .grid');
+            const projectData = [
+                { title: 'eBPF.io: Hindi Translation', desc: 'Translated the eBPF.io website into Hindi so Hindi-speaking engineers can learn about eBPF for networking, observability, and security on Linux.', link: 'https://ebpf.io/hi-in/', tags: ['eBPF', 'Open Source', 'Linux', 'i18n'], src: '/assets/ebpf-logo.svg' },
+                { title: 'AWS SAA-C03 Prep', desc: 'Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.', link: 'https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', tags: ['AWS', 'Certification', 'Study Guide'], if: 'logos/aws' },
+                { title: 'Azure AZ-104 Prep', desc: 'A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.', link: 'https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', tags: ['Azure', 'Certification', 'DevOps'], if: 'logos/microsoft-azure' },
+                { title: 'Personal Tech Blog', desc: 'Articles on DevOps, cloud tech, Nginx, LAMP stack, and Linux.', link: 'https://iamrushabhshahh.hashnode.dev/', tags: ['Blog', 'Nginx', 'Linux', 'DevOps'], si: 'hashnode' }
+            ];
+            projectData.forEach((proj, i) => {
+                const tagsHtml = proj.tags.map(tag => `<span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">${tag}</span>`).join(' ');
+                let iconHtml;
+                if (proj.src) {
+                    iconHtml = `<img src="${proj.src}" alt="" loading="lazy" class="h-6 w-auto">`;
+                } else if (proj.if) {
+                    iconHtml = `<img src="https://api.iconify.design/${proj.if}.svg" alt="" loading="lazy" class="w-6 h-6">`;
+                } else if (proj.si) {
+                    iconHtml = `<img src="https://cdn.simpleicons.org/${proj.si}/58a6ff" alt="" loading="lazy" class="w-6 h-6">`;
+                } else {
+                    iconHtml = `<i data-feather="folder" class="text-primary-color"></i>`;
+                }
+                const projCard = document.createElement('a');
+                projCard.href = proj.link;
+                projCard.target = '_blank';
+                projCard.rel = 'noopener noreferrer';
+                projCard.setAttribute('aria-label', `Open ${proj.title}`);
+                projCard.className = 'tech-card p-6 rounded-md flex flex-col group';
+                projCard.style.setProperty('--i', i);
+                projCard.innerHTML = `
+                    <div class="flex justify-between items-center mb-4">
+                        ${iconHtml}
+                        <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">${proj.title}</h3>
+                    <p class="text-gray-400 mb-4 flex-grow text-sm leading-relaxed">${proj.desc}</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        ${tagsHtml}
+                    </div>
+                `;
+                projectContainer.appendChild(projCard);
+            });
+
+            if (window.feather) feather.replace(); // Render newly-injected icons
+
+            // --- Latest Hashnode Posts (auto-fetch) ---
+            const postsContainer = document.getElementById('hashnode-posts');
+            const loadingEl = document.getElementById('posts-loading');
+            const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+            const renderFallback = () => {
+                postsContainer.innerHTML = `
+                    <a href="https://iamrushabhshahh.hashnode.dev/" target="_blank" rel="noopener noreferrer"
+                       class="tech-card p-6 rounded-md flex flex-col items-center justify-center text-center lg:col-span-3 group">
+                        <i data-feather="book-open" class="text-primary-color w-8 h-8 mb-3"></i>
+                        <h3 class="text-lg font-bold text-white mb-1">Tech Blog on Hashnode</h3>
+                        <p class="text-gray-400 text-sm">Articles on DevOps, cloud, observability, Linux, and Nginx.</p>
+                    </a>`;
+                if (window.feather) feather.replace();
+            };
+            fetch('https://gql.hashnode.com/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `query { publication(host: "iamrushabhshahh.hashnode.dev") { posts(first: 3) { edges { node { title brief url publishedAt } } } } }`
+                })
+            })
+            .then(r => r.json())
+            .then(data => {
+                const edges = data?.data?.publication?.posts?.edges || [];
+                if (!edges.length) return renderFallback();
+                postsContainer.innerHTML = edges.map(({ node: p }) => `
+                    <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="tech-card p-5 rounded-md flex flex-col group">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-fira text-gray-400">${fmtDate(p.publishedAt)}</span>
+                            <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2 leading-snug">${p.title}</h3>
+                        <p class="text-gray-400 text-sm flex-grow">${(p.brief || '').slice(0, 140)}${p.brief && p.brief.length > 140 ? '…' : ''}</p>
+                    </a>
+                `).join('');
+                if (window.feather) feather.replace();
+            })
+            .catch(renderFallback);
+
+            // --- Honeypot + minimum-fill-time spam protection ---
+            const contactForm = document.getElementById('contact-form');
+            const formLoadedAtEl = document.getElementById('form_loaded_at');
+            if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    const honeypot = document.getElementById('hp_website');
+                    const elapsed = Date.now() - parseInt(formLoadedAtEl?.value || '0', 10);
+                    // If bot filled the honeypot OR submitted in <2s, silently drop.
+                    if ((honeypot && honeypot.value) || elapsed < 2000) {
+                        e.preventDefault();
+                        e.stopImmediatePropagation();
+                        // Pretend success so bots don't retry.
+                        const toast = document.getElementById('toast-notification');
+                        toast.classList.add('show');
+                        contactForm.reset();
+                        if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
+                        setTimeout(() => toast.classList.remove('show'), 2500);
+                        return false;
+                    }
+                });
+            }
+
+            // --- Copy email button ---
+            const copyEmailBtn = document.getElementById('copy-email-btn');
+            if (copyEmailBtn) {
+                copyEmailBtn.addEventListener('click', async () => {
+                    const email = copyEmailBtn.dataset.email;
+                    try {
+                        await navigator.clipboard.writeText(email);
+                        const original = copyEmailBtn.querySelector('span').textContent;
+                        copyEmailBtn.querySelector('span').textContent = 'Copied: ' + email;
+                        setTimeout(() => {
+                            copyEmailBtn.querySelector('span').textContent = original;
+                        }, 2000);
+                    } catch {
+                        window.location.href = 'mailto:' + email;
+                    }
+                });
+            }
+
+            // --- Back-to-top button ---
+            const backTop = document.getElementById('back-to-top');
+            if (backTop) {
+                const onScroll = () => backTop.classList.toggle('show', window.scrollY > 600);
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+                backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' }));
+            }
+
+            // --- Scroll-spy: highlight active nav link + update page title to reflect section ---
+            const sections = document.querySelectorAll('main[id], section[id]');
+            const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+            const linkByHash = new Map();
+            navLinks.forEach(a => linkByHash.set(a.getAttribute('href').slice(1), a));
+            const baseTitle = document.title;
+            const sectionTitles = {
+                about: 'About', honors: 'Honors', skills: 'Tech Stack',
+                experience: 'Experience', projects: 'Projects',
+                writing: 'Writing & Talks', contact: 'Contact', main: ''
+            };
+            const spy = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const id = entry.target.id;
+                    navLinks.forEach(a => {
+                        a.classList.remove('nav-active');
+                        a.removeAttribute('aria-current');
+                    });
+                    if (linkByHash.has(id)) {
+                        const active = linkByHash.get(id);
+                        active.classList.add('nav-active');
+                        active.setAttribute('aria-current', 'true');
+                    }
+                    const t = sectionTitles[id];
+                    document.title = t ? `${t} · ${baseTitle.split(' | ')[0]}` : baseTitle;
+                });
+            }, { rootMargin: '-40% 0px -55% 0px' });
+            sections.forEach(s => spy.observe(s));
+
+            // --- Vim-style keyboard navigation ---
+            // g + a/h/s/e/p/w/c → jump to section. ? → reveal shortcuts. Esc → cancel.
+            const navByKey = {
+                a: 'about', h: 'honors', s: 'skills', e: 'experience',
+                p: 'projects', w: 'writing', c: 'contact'
+            };
+            let chordPending = '';
+            let chordTimer = null;
+            const headerNav = document.querySelector('header nav');
+            const showKeys = () => headerNav && headerNav.classList.add('show-keys');
+            const hideKeys = () => headerNav && headerNav.classList.remove('show-keys');
+            document.addEventListener('keydown', (e) => {
+                // Don't intercept while typing in form fields
+                if (e.target.matches('input, textarea, [contenteditable]')) return;
+                if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+                if (e.key === 'Escape') {
+                    chordPending = '';
+                    hideKeys();
+                    return;
+                }
+                if (e.key === '?') {
+                    headerNav && headerNav.classList.toggle('show-keys');
+                    return;
+                }
+                if (e.key === 'g' && !chordPending) {
+                    chordPending = 'g';
+                    showKeys();
+                    clearTimeout(chordTimer);
+                    chordTimer = setTimeout(() => { chordPending = ''; hideKeys(); }, 1200);
+                    return;
+                }
+                if (chordPending === 'g' && navByKey[e.key]) {
+                    const target = document.getElementById(navByKey[e.key]);
+                    if (target) target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+                    chordPending = '';
+                    hideKeys();
+                    e.preventDefault();
                 }
             });
-        }, { threshold: 0.1 });
-        revealElements.forEach(el => observer.observe(el));
 
-        // --- Dynamic Experience ---
-        const experienceContainer = document.querySelector('#experience .relative');
-        const experienceData = [
-            { company: 'Grafana Labs', role: 'Community Organizer', date: 'Jan 2025 - Present' },
-            { company: 'Koenig Solutions', role: 'Corporate Trainer', date: 'Jun 2025 - Jul 2025' },
-            { company: 'Genuin', role: 'DevOps Engineer', date: 'Jan 2025 - May 2025' },
-            { company: 'KodeKloud', role: 'Jr DevOps Engineer', date: 'Jul 2024 - Dec 2024' },
-            { company: 'Tridhya Tech', role: 'Jr DevOps Engineer', date: 'Jun 2023 - Jun 2024' },
-        ];
-        experienceData.forEach(item => {
-            const expItem = document.createElement('div');
-            expItem.className = 'ml-10 mb-10 tech-card p-6 rounded-md';
-            expItem.innerHTML = `
-                <div class="absolute w-3 h-3 bg-primary-color rounded-full mt-1.5 -left-1.5 border border-bg-color"></div>
-                <h3 class="text-xl font-bold text-white">${item.role}</h3>
-                <p class="text-primary-color mb-2">${item.company}</p>
-                <time class="text-sm font-fira text-gray-400">${item.date}</time>
-            `;
-            experienceContainer.appendChild(expItem);
-        });
-        
-        // --- Dynamic Projects ---
-        const projectContainer = document.querySelector('#projects .grid');
-        const projectData = [
-            { title: 'AWS SAA-C03 Prep', desc: 'Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.', link: 'https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', tags: ['AWS', 'Certification', 'Study Guide'] },
-            { title: 'Azure AZ-104 Prep', desc: 'A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.', link: 'https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', tags: ['Azure', 'Certification', 'DevOps'] },
-            { title: 'Personal Tech Blog', desc: 'Articles on DevOps, cloud tech, Nginx, LAMP stack, and Linux.', link: 'https://iamrushabhshahh.hashnode.dev/', tags: ['Blog', 'Nginx', 'Linux', 'DevOps'] }
-        ];
-        
-        projectData.forEach(proj => {
-            const tagsHtml = proj.tags.map(tag => `<span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">${tag}</span>`).join(' ');
-            const projCard = document.createElement('div');
-            projCard.className = 'tech-card p-6 rounded-md flex flex-col';
-            projCard.innerHTML = `
-                <div class="flex justify-between items-center mb-4">
-                    <i data-feather="folder" class="text-primary-color"></i>
-                    <a href="${proj.link}" target="_blank" class="hover:text-primary-color"><i data-feather="external-link"></i></a>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2">${proj.title}</h3>
-                <p class="text-gray-400 mb-4 flex-grow">${proj.desc}</p>
-                <div class="flex flex-wrap gap-2 mt-auto">
-                    ${tagsHtml}
-                </div>
-            `;
-            projectContainer.appendChild(projCard);
-        });
-        feather.replace(); // Re-run feather to render new icons
+            // Friendly console welcome (terminal credibility move)
+            try {
+                const style = 'color:#58a6ff;font:bold 14px Fira Code,monospace';
+                console.log('%cwhoami → Rushabh Shah · DevOps Engineer · Docker Captain · Grafana Champion', style);
+                console.log('%cKeyboard shortcuts: g+a/h/s/e/p/w/c · ? to reveal · Esc to clear', 'color:#8b949e;font:12px Fira Code,monospace');
+                console.log('%csource → https://github.com/iamrushabhshahh/iamrushabhshahh.github.io', 'color:#3fb950;font:12px Fira Code,monospace');
+            } catch (_) {}
 
-        // --- Custom Toast for Pageclip ---
-        window.addEventListener('pageclip:success', function (event) {
-            // This prevents the default Pageclip behavior (like the gray overlay)
-            event.preventDefault(); 
-
-            const toast = document.getElementById('toast-notification');
-            
-            // Show the toast
-            toast.classList.add('show');
-            feather.replace(); // Re-render icons in the toast
-            
-            // Reset the form
-            const form = event.detail.form;
-            form.reset();
-
-            // Hide the toast after 3 seconds
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+            // --- Custom Toast for Pageclip ---
+            window.addEventListener('pageclip:success', function (event) {
+                event.preventDefault();
+                const toast = document.getElementById('toast-notification');
+                toast.classList.add('show');
+                if (window.feather) feather.replace();
+                event.detail.form.reset();
+                setTimeout(() => toast.classList.remove('show'), 3000);
+            });
         });
     </script>
 </body>

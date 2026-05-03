@@ -1,0 +1,12 @@
+{
+  "name": "Rushabh Shah",
+  "short_name": "Rushabh",
+  "description": "DevOps Engineer · Docker Captain · Grafana Champion",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#010409",
+  "theme_color": "#010409",
+  "icons": [
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}

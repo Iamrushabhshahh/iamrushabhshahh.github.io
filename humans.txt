@@ -1,0 +1,17 @@
+/* TEAM */
+Owner: Rushabh Shah
+Site: https://rushabhshah.dev
+Location: Ahmedabad, Gujarat, India
+GitHub: https://github.com/iamrushabhshahh
+LinkedIn: https://in.linkedin.com/in/iamrushabhshahh
+Twitter: https://twitter.com/iamrushabhshahh
+Hashnode: https://iamrushabhshahh.hashnode.dev/
+
+/* THANKS */
+Docker Captains program · Grafana Champions program · the Ahmedabad observability community.
+
+/* SITE */
+Standards: HTML5, CSS3, ES2020
+Components: Tailwind CSS, Simple Icons, Feather Icons
+Hosting: GitHub Pages
+Built with: a terminal, dark themes, and a lot of coffee.
