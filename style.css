@@ -294,6 +294,7 @@ h1, h2, .display-font {
 }
 @media (min-width: 768px) {
     .md\:flex { display: flex; }
+    .md\:inline-block { display: inline-block; }
     .md\:hidden { display: none; }
     .md\:flex-row { flex-direction: row; }
     .md\:py-32 { padding-block: 8rem; }
@@ -868,6 +869,100 @@ nav a { -webkit-tap-highlight-color: transparent; }
         transition: opacity 0.2s;
     }
     nav.show-keys a[data-key]::after { opacity: 1; }
+}
+
+/* =====================================================================
+   BLOG — long-form article typography (used by generated /blog pages)
+   ===================================================================== */
+
+.post-prose {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-color);
+}
+.post-prose > * + * { margin-top: 1.1em; }
+.post-prose h2, .post-prose h3, .post-prose h4 {
+    color: #ffffff;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin: 2em 0 0.6em;
+}
+.post-prose h2 { font-size: 1.65rem; }
+.post-prose h3 { font-size: 1.3rem; }
+.post-prose h4 { font-size: 1.1rem; }
+.post-prose h2::before { content: '## '; color: var(--primary-color); font-family: 'Fira Code', monospace; font-size: 0.8em; }
+.post-prose h3::before { content: '### '; color: var(--primary-color); font-family: 'Fira Code', monospace; font-size: 0.8em; }
+.post-prose a { color: var(--primary-color); text-decoration: underline; text-underline-offset: 3px; }
+.post-prose a:hover { color: #79b8ff; }
+.post-prose strong { color: #ffffff; }
+.post-prose ul { list-style: disc; padding-left: 1.4rem; }
+.post-prose ol { list-style: decimal; padding-left: 1.4rem; }
+.post-prose li { margin-top: 0.35em; }
+.post-prose li::marker { color: var(--primary-color); }
+.post-prose blockquote {
+    margin: 1.25em 0;
+    padding: 0.6rem 1.1rem;
+    border-left: 3px solid var(--primary-color);
+    background-color: rgba(13, 17, 23, 0.7);
+    border-radius: 4px;
+    color: #a5adb8;
+    font-style: italic;
+}
+.post-prose code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.88em;
+    background-color: rgba(88, 166, 255, 0.10);
+    color: #79b8ff;
+    padding: 0.15em 0.4em;
+    border-radius: 5px;
+}
+.post-prose pre {
+    background-color: var(--panel-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 1.25em 0;
+}
+.post-prose pre code {
+    background: transparent;
+    color: var(--text-color);
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+}
+.post-prose img {
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: block;
+    margin: 1.5em auto;
+}
+.post-prose hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 2.5em 0;
+}
+.post-prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+}
+.post-prose th, .post-prose td {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.85rem;
+    text-align: left;
+}
+.post-prose th {
+    background-color: var(--terminal-header);
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
 }
 
 /* Print styles — clean, paper-friendly version */

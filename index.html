@@ -41,6 +41,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="alternate" type="application/rss+xml" title="Rushabh Shah — Blog" href="https://rushabhshah.dev/blog/rss.xml">
+
     <link rel="stylesheet" href="/style.css">
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
@@ -105,6 +107,7 @@
                 <a href="#experience" data-key="ge" class="text-gray-400 hover:text-primary-color transition-colors">./experience</a>
                 <a href="#projects" data-key="gp" class="text-gray-400 hover:text-primary-color transition-colors">./projects</a>
                 <a href="#writing" data-key="gw" class="text-gray-400 hover:text-primary-color transition-colors">./writing</a>
+                <a href="/blog/" data-key="gb" class="text-gray-400 hover:text-primary-color transition-colors">./blog</a>
                 <a href="#contact" data-key="gc" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
@@ -118,6 +121,7 @@
             <a href="#experience" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./experience</a>
             <a href="#projects" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./projects</a>
             <a href="#writing" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./writing</a>
+            <a href="/blog/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./blog</a>
             <a href="#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
         </div>
     </header>
@@ -375,9 +379,12 @@
                 </a>
             </div>
 
-            <div class="text-center mt-10">
-                <a href="https://iamrushabhshahh.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-fira text-sm text-primary-color hover:underline">
-                    Read all posts on Hashnode <i data-feather="arrow-right" class="w-4 h-4"></i>
+            <div class="text-center mt-10 flex flex-wrap items-center justify-center gap-6">
+                <a href="/blog/" class="inline-flex items-center gap-2 font-fira text-sm text-primary-color hover:underline">
+                    Read the blog <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="https://iamrushabhshahh.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-fira text-sm text-gray-400 hover:text-primary-color">
+                    Older posts on Hashnode <i data-feather="external-link" class="w-4 h-4"></i>
                 </a>
             </div>
         </div>
@@ -458,6 +465,7 @@
                         <li><a href="#experience" class="text-gray-400 hover:text-primary-color">./experience</a></li>
                         <li><a href="#projects" class="text-gray-400 hover:text-primary-color">./projects</a></li>
                         <li><a href="#writing" class="text-gray-400 hover:text-primary-color">./writing</a></li>
+                        <li><a href="/blog/" class="text-gray-400 hover:text-primary-color">./blog</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-primary-color">./contact</a></li>
                     </ul>
                 </div>
@@ -936,6 +944,7 @@
                 a: 'about', h: 'honors', s: 'skills', e: 'experience',
                 p: 'projects', w: 'writing', c: 'contact'
             };
+            const pageByKey = { b: '/blog/' };
             let chordPending = '';
             let chordTimer = null;
             const headerNav = document.querySelector('header nav');
@@ -960,6 +969,13 @@
                     showKeys();
                     clearTimeout(chordTimer);
                     chordTimer = setTimeout(() => { chordPending = ''; hideKeys(); }, 1200);
+                    return;
+                }
+                if (chordPending === 'g' && pageByKey[e.key]) {
+                    chordPending = '';
+                    hideKeys();
+                    e.preventDefault();
+                    window.location.href = pageByKey[e.key];
                     return;
                 }
                 if (chordPending === 'g' && navByKey[e.key]) {

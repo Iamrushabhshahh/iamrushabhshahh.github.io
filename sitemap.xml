@@ -2,35 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rushabhshah.dev/</loc>
+    
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://rushabhshah.dev/#about</loc>
+    <loc>https://rushabhshah.dev/blog/</loc>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/blog/hello-world/</loc>
+    <lastmod>2026-07-09</lastmod>
+    
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rushabhshah.dev/#honors</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rushabhshah.dev/#skills</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://rushabhshah.dev/#experience</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rushabhshah.dev/#projects</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://rushabhshah.dev/#writing</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://rushabhshah.dev/#contact</loc>
-    <priority>0.6</priority>
   </url>
 </urlset>

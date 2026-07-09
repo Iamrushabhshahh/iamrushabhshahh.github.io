@@ -7,6 +7,9 @@
 .DS_Store
 Thumbs.db
 
+# Dependencies
+node_modules/
+
 # Local-only artifacts
 *.log
 *.tmp

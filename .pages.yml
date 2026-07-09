@@ -1,0 +1,44 @@
+# Pages CMS configuration (https://pagescms.org)
+# Sign in at https://app.pagescms.org with GitHub, pick this repo, and you
+# get a browser editor for blog posts — no servers, commits straight to git.
+media:
+  input: assets/blog
+  output: /assets/blog
+
+content:
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: content/posts
+    view:
+      fields: [title, date, draft]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description (shown in the post list, search results & RSS)
+        type: text
+      - name: date
+        label: Publish date & time (IST — future = scheduled)
+        type: date
+        required: true
+        options:
+          time: true
+          format: yyyy-MM-dd HH:mm
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: draft
+        label: Draft (hidden from the site while checked)
+        type: boolean
+        default: false
+      - name: body
+        label: Body
+        type: rich-text

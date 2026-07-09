@@ -1,0 +1,52 @@
+# Builds the markdown blog and commits the generated HTML back to main,
+# which GitHub Pages then serves. The hourly cron is what makes scheduled
+# publishing work: posts with a future frontmatter `date` are skipped at
+# build time and picked up by the first run after that moment.
+name: Publish blog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'style.css'
+      - 'package.json'
+      - '.github/workflows/publish-blog.yml'
+  schedule:
+    - cron: '10 * * * *' # hourly at :10
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-blog
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: node scripts/build-blog.mjs
+
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Nothing new to publish."
+          else
+            git commit -m "chore(blog): publish generated pages"
+            git push
+          fi
