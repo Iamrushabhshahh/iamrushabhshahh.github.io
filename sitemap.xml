@@ -13,9 +13,33 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/linux-foundation-coupon/</loc>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/privacy/</loc>
+    
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/blog/hello-world/</loc>
     <lastmod>2026-07-09</lastmod>
     
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/blog/tags/blog/</loc>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/blog/tags/meta/</loc>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
-    <title>Hello, world — the blog now lives on rushabhshah.dev · Rushabh Shah</title>
+    <title>Hello, world: the blog now lives on rushabhshah.dev · Rushabh Shah</title>
     <meta name="description" content="Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.">
     <meta name="author" content="Rushabh Shah">
     <link rel="canonical" href="https://rushabhshah.dev/blog/hello-world/">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="alternate" type="application/rss+xml" title="Rushabh Shah — Blog" href="https://rushabhshah.dev/blog/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://rushabhshah.dev/blog/hello-world/">
-    <meta property="og:title" content="Hello, world — the blog now lives on rushabhshah.dev · Rushabh Shah">
+    <meta property="og:title" content="Hello, world: the blog now lives on rushabhshah.dev · Rushabh Shah">
     <meta property="og:description" content="Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.">
     <meta property="og:image" content="https://rushabhshah.dev/assets/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@iamrushabhshahh">
-    <meta name="twitter:title" content="Hello, world — the blog now lives on rushabhshah.dev · Rushabh Shah">
+    <meta name="twitter:title" content="Hello, world: the blog now lives on rushabhshah.dev · Rushabh Shah">
     <meta name="twitter:description" content="Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.">
     <meta name="twitter:image" content="https://rushabhshah.dev/assets/og-image.jpg">
     <meta property="article:published_time" content="2026-07-09T06:30:00.000Z">
@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 
@@ -38,53 +38,75 @@
     <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
             <a href="/" class="text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
-            <div class="flex space-x-6 text-sm">
-                <a href="/#about" class="text-gray-400 hover:text-primary-color transition-colors hidden md:inline-block">./about</a>
-                <a href="/#writing" class="text-gray-400 hover:text-primary-color transition-colors hidden md:inline-block">./writing</a>
+            <div class="hidden md:flex space-x-6 text-sm">
+                <a href="/#about" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
                 <a href="/blog/" class="text-primary-color transition-colors" aria-current="true">./blog</a>
+                <a href="/linux-foundation-coupon/" class="text-gray-400 hover:text-primary-color transition-colors">./deals</a>
                 <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
             </div>
+            <button id="menu-btn" class="md:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
         </nav>
+        <div id="site-menu" class="hidden md:hidden bg-terminal-header/90 font-fira">
+            <a href="/#about" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./about</a>
+            <a href="/blog/" class="block py-2 px-4 text-sm text-primary-color">./blog</a>
+            <a href="/linux-foundation-coupon/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./deals</a>
+            <a href="/#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
+        </div>
+        <a href="/linux-foundation-coupon/" class="block bg-primary-color/10 border-b border-border-color text-center font-fira text-xs py-2 px-4 text-gray-300 hover:text-primary-color transition-colors">
+            🎓 30% off all Linux Foundation certifications (CKA, CKAD, CKS…) with code <span class="text-primary-color font-bold">RUSHABH30</span> →
+        </a>
     </header>
     <main id="main" class="container mx-auto px-6 py-12">
         <article class="max-w-3xl mx-auto">
             <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
             <header class="mb-10">
-                <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">Hello, world — the blog now lives on rushabhshah.dev</h1>
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">Hello, world: the blog now lives on rushabhshah.dev</h1>
                 <div class="flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
                     <time datetime="2026-07-09T06:30:00.000Z">Jul 9, 2026</time>
                     <span aria-hidden="true">·</span>
                     <span>1 min read</span>
-                    <span aria-hidden="true">·</span> <span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">meta</span> <span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">blog</span>
+                    <span id="post-views"></span>
+                    <span aria-hidden="true">·</span> <a href="/blog/tags/meta/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">meta</a> <a href="/blog/tags/blog/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">blog</a>
                 </div>
+                
             </header>
+            
             <div class="post-prose">
 <p>After two years of publishing on Hashnode, my writing finally has a home on my own domain. This post is both a hello and a quick tour of how this blog works.</p>
 <h2>Why move?</h2>
-<p>Every article I published was building <code>iamrushabhshahh.hashnode.dev</code>&#39;s search presence instead of <code>rushabhshah.dev</code>&#39;s. Owning the content, the URLs, and the reader relationship matters more every year — especially when AI assistants are increasingly the ones reading and summarizing your site.</p>
+<p>Every article I published was building <code>iamrushabhshahh.hashnode.dev</code>&#39;s search presence instead of <code>rushabhshah.dev</code>&#39;s. Owning the content, the URLs, and the reader relationship matters more every year, especially when AI assistants are increasingly the ones reading and summarizing your site.</p>
 <h2>How it works</h2>
 <p>The setup is deliberately boring, which is the highest compliment in infrastructure:</p>
 <ul>
-<li>Posts are <strong>markdown files</strong> in the site&#39;s GitHub repo — no database, no CMS server.</li>
+<li>Posts are <strong>markdown files</strong> in the site&#39;s GitHub repo. No database, no CMS server.</li>
 <li>A small Node script renders them into static HTML that matches the site&#39;s design, plus an RSS feed and sitemap.</li>
 <li><strong>GitHub Actions rebuilds hourly</strong>, so a post with a future <code>date</code> in its frontmatter goes live automatically at the scheduled time. Write today, publish Tuesday 9 AM.</li>
 <li>Editing happens either in any text editor, or from the browser through a git-backed CMS.</li>
 </ul>
 <pre><code class="language-yaml"># publishing a post is just frontmatter
 title: &quot;My next deep dive&quot;
-date: &quot;2026-07-15 09:00&quot;   # IST — goes live automatically
+date: &quot;2026-07-15 09:00&quot;   # IST, goes live automatically
 tags: [kubernetes, observability]
 </code></pre>
 <p>Zero servers, zero cost, everything version-controlled.</p>
 <h2>What to expect here</h2>
-<p>The same things I care about at work and in the community: <strong>Kubernetes, Docker, the Grafana LGTM stack, OpenTelemetry, cloud cost optimization, and Linux</strong> — written the way I&#39;d want to read them: reproducible, with real configs and honest trade-offs.</p>
+<p>The same things I care about at work and in the community: <strong>Kubernetes, Docker, the Grafana LGTM stack, OpenTelemetry, cloud cost optimization, and Linux</strong>, written the way I&#39;d want to read them: reproducible, with real configs and honest trade-offs.</p>
 <p>If that&#39;s your kind of content, <a href="/blog/rss.xml">subscribe via RSS</a> or find me on <a href="https://twitter.com/iamrushabhshahh">Twitter</a>.</p>
 <p>$ see you in the next post</p>
 
             </div>
-            <footer class="mt-12 pt-6 border-t border-border-color flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <p class="font-fira text-sm text-gray-400">Thanks for reading — <a href="https://twitter.com/intent/tweet?text=Hello%2C%20world%20%E2%80%94%20the%20blog%20now%20lives%20on%20rushabhshah.dev&url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fhello-world%2F" target="_blank" rel="noopener noreferrer" class="text-primary-color hover:underline">share this post</a> or <a href="/#contact" class="text-primary-color hover:underline">say hi</a>.</p>
-                <a href="/blog/rss.xml" class="chip">RSS feed</a>
+            <footer class="mt-12 pt-6 border-t border-border-color">
+                <div class="flex flex-wrap items-center gap-3 font-fira text-sm">
+                    <span class="text-gray-400">Share:</span>
+                    <a href="https://twitter.com/intent/tweet?text=Hello%2C%20world%3A%20the%20blog%20now%20lives%20on%20rushabhshah.dev&url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fhello-world%2F" target="_blank" rel="noopener noreferrer" class="chip">X / Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fhello-world%2F" target="_blank" rel="noopener noreferrer" class="chip">LinkedIn</a>
+                    <button type="button" id="copy-link" class="chip" data-url="https://rushabhshah.dev/blog/hello-world/">Copy link</button>
+                    <button type="button" id="native-share" class="chip hidden" data-title="Hello, world: the blog now lives on rushabhshah.dev" data-url="https://rushabhshah.dev/blog/hello-world/">Share…</button>
+                    <a href="/blog/rss.xml" class="chip">RSS</a>
+                </div>
+                <p class="font-fira text-sm text-gray-400 mt-5">Thanks for reading. <a href="/#contact" class="text-primary-color hover:underline">Say hi</a> if it was useful.</p>
             </footer>
         </article>
     </main>
@@ -97,9 +119,51 @@ tags: [kubernetes, observability]
                 <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">LinkedIn</a>
                 <a href="https://twitter.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">Twitter</a>
                 <a href="/blog/rss.xml" class="hover:text-primary-color">RSS</a>
+                <a href="/privacy/" class="hover:text-primary-color">Privacy</a>
+                <a href="/linux-foundation-coupon/" class="hover:text-primary-color">30% off Linux Foundation ↗</a>
             </div>
         </div>
     </footer>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hello, world — the blog now lives on rushabhshah.dev","description":"Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.","datePublished":"2026-07-09T06:30:00.000Z","dateModified":"2026-07-09T06:30:00.000Z","url":"https://rushabhshah.dev/blog/hello-world/","author":{"@type":"Person","name":"Rushabh Shah","url":"https://rushabhshah.dev"},"keywords":"meta, blog"}</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const b = document.getElementById('menu-btn');
+            const m = document.getElementById('site-menu');
+            if (b && m) {
+                b.addEventListener('click', () => {
+                    const open = m.classList.contains('hidden');
+                    m.classList.toggle('hidden', !open);
+                    b.setAttribute('aria-expanded', String(open));
+                });
+            }
+        });
+    </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hello, world: the blog now lives on rushabhshah.dev","description":"Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.","datePublished":"2026-07-09T06:30:00.000Z","dateModified":"2026-07-09T06:30:00.000Z","url":"https://rushabhshah.dev/blog/hello-world/","author":{"@type":"Person","name":"Rushabh Shah","url":"https://rushabhshah.dev"},"keywords":"meta, blog"}</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const v = document.getElementById('post-views');
+        if (v) fetch('https://rushabhshah.goatcounter.com/counter/' + location.pathname + '.json')
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(d => {
+                const n = (d.count || '').toString().replace(/\s/g, ',');
+                if (n) v.textContent = '· ' + n + ' views';
+            })
+            .catch(() => {});
+        const c = document.getElementById('copy-link');
+        if (c) c.addEventListener('click', () => {
+            navigator.clipboard.writeText(c.dataset.url).then(() => {
+                const t = c.textContent;
+                c.textContent = 'Copied!';
+                setTimeout(() => { c.textContent = t; }, 2000);
+            }).catch(() => {});
+        });
+        const s = document.getElementById('native-share');
+        if (s && navigator.share) {
+            s.classList.remove('hidden');
+            s.addEventListener('click', () => {
+                navigator.share({ title: s.dataset.title, url: s.dataset.url }).catch(() => {});
+            });
+        }
+    });
+    </script>
 </body>
 </html>

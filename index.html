@@ -41,15 +41,16 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="alternate" type="application/rss+xml" title="Rushabh Shah — Blog" href="https://rushabhshah.dev/blog/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
 
     <link rel="stylesheet" href="/style.css">
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
 
-    <!-- Analytics: GoatCounter (free, privacy-friendly, ~3KB).
-         To enable: sign up at https://www.goatcounter.com (free), then replace YOURSITE below with your account slug. -->
-    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <!-- Analytics: GoatCounter (free, privacy-friendly, ~3KB). Dashboard: https://rushabhshah.goatcounter.com
+         For the visible view counters to work, enable "Allow adding visitor counts on your website"
+         in GoatCounter → Settings. -->
+    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 
     <!-- JSON-LD: Person schema for richer search results -->
     <script type="application/ld+json">
@@ -170,7 +171,7 @@
                         <div class="terminal-button bg-red-500"></div>
                         <div class="terminal-button bg-yellow-500"></div>
                         <div class="terminal-button bg-green-500"></div>
-                        <span class="ml-3 font-fira text-xs text-gray-500">~/whoami.sh</span>
+                        <span class="ml-3 font-fira text-xs text-gray-400">~/whoami.sh</span>
                     </div>
                     <pre class="p-6 font-fira text-[13px] leading-relaxed overflow-x-auto"><code><span class="text-green-color">$</span> <span class="text-white">cat</span> whoami.json
 <span class="text-gray-500">{</span>
@@ -219,6 +220,16 @@
         </div>
     </section>
 
+    <!-- Linux Foundation community perk -->
+    <section id="deal" aria-label="Linux Foundation discount for the community" class="container mx-auto px-6 mb-12">
+        <a href="/linux-foundation-coupon/" class="tech-card p-5 rounded-md flex flex-col md:flex-row items-center justify-between gap-4 group">
+            <p class="text-sm text-gray-300 leading-relaxed">
+                <span class="font-fira font-bold text-primary-color">RUSHABH30</span>: as a Linux Foundation Education partner, my community gets <strong class="text-white">30% off all Linux Foundation certifications</strong> (CKA, CKAD, CKS, KCNA) and courses, all year round.
+            </p>
+            <span class="chip flex-shrink-0 group-hover:text-primary-color">Get the coupon code →</span>
+        </a>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="py-20">
         <div class="container mx-auto px-6 section-reveal">
@@ -236,7 +247,7 @@
                 </div>
                 <div class="md:w-2/3">
                     <p class="text-lg text-gray-300 mb-4">
-                        Hi, I'm Rushabh, a DevOps Engineer based in <span class="text-white font-semibold">Ahmedabad, India</span>, currently at <span class="text-primary-color font-semibold">Oro</span>, building reliable cloud infrastructure on Kubernetes with Helm, Argo CD, Terraform, and GitHub Actions. I'm a <span class="text-primary-color font-semibold">Docker Captain</span> (selected 2026, ~220 members worldwide) and a <span class="text-primary-color font-semibold">Grafana Champion</span> (inaugural 2025 cohort, ~110 worldwide).
+                        Hi, I'm Rushabh, a DevOps Engineer based in <span class="text-white font-semibold">Ahmedabad, India</span>, currently at <span class="text-primary-color font-semibold">Oro</span>, building reliable cloud infrastructure on Kubernetes with Helm, Argo CD, Terraform, and GitHub Actions. I'm a <span class="text-primary-color font-semibold">Docker Captain</span> (selected 2026, ~220 members worldwide) and a <span class="text-primary-color font-semibold">Grafana Champion</span> (inaugural 2026 cohort, ~110 worldwide).
                     </p>
                     <p class="text-lg text-gray-300 mb-6">
                         My focus areas are Kubernetes, CI/CD, IaC, observability with the Grafana LGTM stack (Loki, Grafana, Tempo, Mimir) and OpenTelemetry, and cloud cost optimization. Before Oro, I drove a 59% AWS spend reduction at Genuin, led a zero-downtime AWS→OCI migration under a hard deadline, and built ISO / SOC Type 1 readiness controls. I started out as a Laravel/PHP developer, then moved into DevOps via Tridhya Tech and KodeKloud, where I represented the team at KubeCon India 2024. I organize <span class="text-white">Grafana &amp; Friends Ahmedabad</span>, run workshops on Prometheus and the LGTM stack, write a bi-weekly newsletter, and contribute to open source, including translating eBPF.io into Hindi.
@@ -344,10 +355,10 @@
             <div class="section-heading">
                 <h2 class="font-fira"><span class="num">06.</span><span class="gradient-text">Writing &amp; Talks</span></h2>
             </div>
-            <p class="section-subtitle">Latest posts from my Hashnode blog and recent community engagements.</p>
+            <p class="section-subtitle">Latest posts from the blog and recent community engagements.</p>
 
-            <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10" id="hashnode-posts">
-                <!-- Latest Hashnode posts injected here. Falls back to a single "Read on Hashnode" card if API fails. -->
+            <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10" id="latest-posts">
+                <!-- Latest blog posts injected from /blog/posts.json. Falls back to Hashnode, then a static card. -->
                 <div class="tech-card p-6 rounded-md flex items-center justify-center text-gray-500 font-fira text-sm lg:col-span-3" id="posts-loading">
                     Loading latest posts<span class="typing-cursor" style="height: 1rem;"></span>
                 </div>
@@ -396,9 +407,12 @@
             <div class="section-heading">
                 <h2 class="font-fira"><span class="num">07.</span><span class="gradient-text">Get In Touch</span></h2>
             </div>
-            <p class="section-subtitle">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you.</p>
+            <p class="section-subtitle">My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you. Every message is read personally, and I usually reply within 24 to 48 hours.</p>
             <div class="max-w-xl mx-auto">
-                <form id="contact-form" action="https://send.pageclip.co/ICvb34nUy3cZG613HmR5rbjZD16394SD" class="space-y-4 font-fira" method="post" novalidate>
+                <!-- No action attribute on purpose: spam bots harvest form action URLs from the
+                     HTML and POST to them directly, bypassing all client-side checks. The endpoint
+                     is assembled in JS at submit time instead. -->
+                <form id="contact-form" class="space-y-4 font-fira" method="post" novalidate>
                     <!-- Multiple honeypot fields. Bot form-fillers target attractive field names
                          (website, url, phone, company). Hidden visually + tabindex=-1 + autocomplete=off
                          keeps real users and password managers from touching them. -->
@@ -427,7 +441,7 @@
                         <textarea id="contact_message" name="contact_message" placeholder="user@host:~$ enter message" rows="5" class="form-input w-full px-4 py-3 rounded-md" required></textarea>
                     </div>
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-4">
-                        <button type="button" id="copy-email-btn" class="btn btn-ghost text-sm" data-email="rushabhshah842@gmail.com" aria-label="Copy email address to clipboard">
+                        <button type="button" id="copy-email-btn" class="btn btn-ghost text-sm" data-email="rushabhshah842@gmail.com">
                             <i data-feather="copy" class="w-4 h-4"></i>
                             <span>Or copy email</span>
                         </button>
@@ -466,6 +480,7 @@
                         <li><a href="#projects" class="text-gray-400 hover:text-primary-color">./projects</a></li>
                         <li><a href="#writing" class="text-gray-400 hover:text-primary-color">./writing</a></li>
                         <li><a href="/blog/" class="text-gray-400 hover:text-primary-color">./blog</a></li>
+                        <li><a href="/linux-foundation-coupon/" class="text-gray-400 hover:text-primary-color">./linux-foundation-30-off</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-primary-color">./contact</a></li>
                     </ul>
                 </div>
@@ -490,13 +505,16 @@
             </div>
 
             <div class="mt-10 pt-6 border-t border-border-color flex flex-col md:flex-row justify-between items-center gap-3 text-xs font-fira text-gray-500">
-                <p>&copy; <span id="footer-year"></span> Rushabh Shah · Designed &amp; built with care.</p>
+                <p>&copy; <span id="footer-year"></span> Rushabh Shah · Designed &amp; built with care.<span id="site-views"></span></p>
                 <p class="hidden md:inline-flex items-center gap-2">
                     <span class="text-gray-600">try</span>
                     <kbd class="kbd">?</kbd>
                     <span class="text-gray-600">for keyboard shortcuts</span>
                 </p>
-                <a href="https://github.com/iamrushabhshahh/iamrushabhshahh.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">view source ↗</a>
+                <span class="inline-flex items-center gap-4">
+                    <a href="/privacy/" class="hover:text-primary-color">privacy</a>
+                    <a href="https://github.com/iamrushabhshahh/iamrushabhshahh.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">view source ↗</a>
+                </span>
             </div>
         </div>
     </footer>
@@ -521,6 +539,18 @@
             // --- Footer year ---
             const yearEl = document.getElementById('footer-year');
             if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // --- Homepage view counter (GoatCounter public counter API; silently absent if disabled) ---
+            const viewsEl = document.getElementById('site-views');
+            if (viewsEl) {
+                fetch('https://rushabhshah.goatcounter.com/counter//.json')
+                    .then(r => r.ok ? r.json() : Promise.reject())
+                    .then(d => {
+                        const n = (d.count || '').toString().replace(/\s/g, ',');
+                        if (n) viewsEl.textContent = ` · ${n} views`;
+                    })
+                    .catch(() => {});
+            }
 
             // --- Mobile Menu ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -684,33 +714,37 @@
             const projectContainer = document.querySelector('#projects .grid');
             const projectData = [
                 { title: 'eBPF.io: Hindi Translation', desc: 'Translated the eBPF.io website into Hindi so Hindi-speaking engineers can learn about eBPF for networking, observability, and security on Linux.', link: 'https://ebpf.io/hi-in/', tags: ['eBPF', 'Open Source', 'Linux', 'i18n'], src: '/assets/ebpf-logo.svg' },
-                { title: 'AWS SAA-C03 Prep', desc: 'Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.', link: 'https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', tags: ['AWS', 'Certification', 'Study Guide'], if: 'logos/aws' },
-                { title: 'Azure AZ-104 Prep', desc: 'A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.', link: 'https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', tags: ['Azure', 'Certification', 'DevOps'], if: 'logos/microsoft-azure' },
-                { title: 'Personal Tech Blog', desc: 'Articles on DevOps, cloud tech, Nginx, LAMP stack, and Linux.', link: 'https://iamrushabhshahh.hashnode.dev/', tags: ['Blog', 'Nginx', 'Linux', 'DevOps'], si: 'hashnode' }
+                { title: 'AWS SAA-C03 Prep', desc: 'Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.', link: 'https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', repo: 'Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', tags: ['AWS', 'Certification', 'Study Guide'], if: 'logos/aws' },
+                { title: 'Azure AZ-104 Prep', desc: 'A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.', link: 'https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', repo: 'Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', tags: ['Azure', 'Certification', 'DevOps'], if: 'logos/microsoft-azure' },
+                { title: 'Personal Tech Blog', desc: 'My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux. Earlier posts are archived on Hashnode.', link: '/blog/', tags: ['Blog', 'Observability', 'Linux', 'DevOps'], feather: 'book-open' }
             ];
             projectData.forEach((proj, i) => {
                 const tagsHtml = proj.tags.map(tag => `<span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">${tag}</span>`).join(' ');
                 let iconHtml;
                 if (proj.src) {
-                    iconHtml = `<img src="${proj.src}" alt="" loading="lazy" class="h-6 w-auto">`;
+                    iconHtml = `<img src="${proj.src}" alt="" loading="lazy" width="70" height="24" class="h-6 w-auto">`;
                 } else if (proj.if) {
                     iconHtml = `<img src="https://api.iconify.design/${proj.if}.svg" alt="" loading="lazy" class="w-6 h-6">`;
                 } else if (proj.si) {
                     iconHtml = `<img src="https://cdn.simpleicons.org/${proj.si}/58a6ff" alt="" loading="lazy" class="w-6 h-6">`;
                 } else {
-                    iconHtml = `<i data-feather="folder" class="text-primary-color"></i>`;
+                    iconHtml = `<i data-feather="${proj.feather || 'folder'}" class="text-primary-color"></i>`;
                 }
                 const projCard = document.createElement('a');
                 projCard.href = proj.link;
-                projCard.target = '_blank';
-                projCard.rel = 'noopener noreferrer';
-                projCard.setAttribute('aria-label', `Open ${proj.title}`);
+                if (!proj.link.startsWith('/')) {
+                    projCard.target = '_blank';
+                    projCard.rel = 'noopener noreferrer';
+                }
                 projCard.className = 'tech-card p-6 rounded-md flex flex-col group';
                 projCard.style.setProperty('--i', i);
                 projCard.innerHTML = `
                     <div class="flex justify-between items-center mb-4">
                         ${iconHtml}
-                        <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4 transition-colors"></i>
+                        <div class="flex items-center gap-3">
+                            ${proj.repo ? `<span class="gh-stars font-fira text-xs text-gray-400" data-repo="${proj.repo}"></span>` : ''}
+                            <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4 transition-colors"></i>
+                        </div>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">${proj.title}</h3>
                     <p class="text-gray-400 mb-4 flex-grow text-sm leading-relaxed">${proj.desc}</p>
@@ -723,49 +757,86 @@
 
             if (window.feather) feather.replace(); // Render newly-injected icons
 
-            // --- Latest Hashnode Posts (auto-fetch) ---
-            const postsContainer = document.getElementById('hashnode-posts');
-            const loadingEl = document.getElementById('posts-loading');
+            // --- Live GitHub star counts on project cards (unauthenticated API; silently absent on rate-limit) ---
+            document.querySelectorAll('.gh-stars').forEach(el => {
+                fetch('https://api.github.com/repos/' + el.dataset.repo)
+                    .then(r => r.ok ? r.json() : Promise.reject())
+                    .then(d => {
+                        if (typeof d.stargazers_count === 'number') el.textContent = '★ ' + d.stargazers_count.toLocaleString('en-US');
+                    })
+                    .catch(() => {});
+            });
+
+            // --- Latest blog posts: own blog first, Hashnode as fallback, static card as last resort ---
+            const postsContainer = document.getElementById('latest-posts');
             const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-            const renderFallback = () => {
+            const renderStaticFallback = () => {
                 postsContainer.innerHTML = `
-                    <a href="https://iamrushabhshahh.hashnode.dev/" target="_blank" rel="noopener noreferrer"
+                    <a href="/blog/"
                        class="tech-card p-6 rounded-md flex flex-col items-center justify-center text-center lg:col-span-3 group">
                         <i data-feather="book-open" class="text-primary-color w-8 h-8 mb-3"></i>
-                        <h3 class="text-lg font-bold text-white mb-1">Tech Blog on Hashnode</h3>
-                        <p class="text-gray-400 text-sm">Articles on DevOps, cloud, observability, Linux, and Nginx.</p>
+                        <h3 class="text-lg font-bold text-white mb-1">Read the blog</h3>
+                        <p class="text-gray-400 text-sm">Articles on DevOps, Kubernetes, observability, cloud cost, and Linux.</p>
                     </a>`;
                 if (window.feather) feather.replace();
             };
-            fetch('https://gql.hashnode.com/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    query: `query { publication(host: "iamrushabhshahh.hashnode.dev") { posts(first: 3) { edges { node { title brief url publishedAt } } } } }`
+            const renderHashnodeFallback = () => {
+                fetch('https://gql.hashnode.com/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        query: `query { publication(host: "iamrushabhshahh.hashnode.dev") { posts(first: 3) { edges { node { title brief url publishedAt } } } } }`
+                    })
                 })
-            })
-            .then(r => r.json())
-            .then(data => {
-                const edges = data?.data?.publication?.posts?.edges || [];
-                if (!edges.length) return renderFallback();
-                postsContainer.innerHTML = edges.map(({ node: p }) => `
-                    <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="tech-card p-5 rounded-md flex flex-col group">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-fira text-gray-400">${fmtDate(p.publishedAt)}</span>
-                            <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4"></i>
+                .then(r => r.json())
+                .then(data => {
+                    const edges = data?.data?.publication?.posts?.edges || [];
+                    if (!edges.length) return renderStaticFallback();
+                    postsContainer.innerHTML = edges.map(({ node: p }) => `
+                        <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="tech-card p-5 rounded-md flex flex-col group">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-fira text-gray-400">${fmtDate(p.publishedAt)}</span>
+                                <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-white mb-2 leading-snug">${p.title}</h3>
+                            <p class="text-gray-400 text-sm flex-grow">${(p.brief || '').slice(0, 140)}${p.brief && p.brief.length > 140 ? '…' : ''}</p>
+                        </a>
+                    `).join('');
+                    if (window.feather) feather.replace();
+                })
+                .catch(renderStaticFallback);
+            };
+            fetch('/blog/posts.json')
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(posts => {
+                if (!Array.isArray(posts) || !posts.length) return renderHashnodeFallback();
+                postsContainer.innerHTML = posts.slice(0, 3).map(p => `
+                    <a href="${p.url}" class="tech-card rounded-md flex flex-col group overflow-hidden">
+                        ${p.cover ? `<img src="${p.cover}" alt="" loading="lazy" class="w-full h-36 object-cover">` : ''}
+                        <div class="p-5 flex flex-col flex-grow">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-fira text-gray-400">${fmtDate(p.date)} · ${p.minutes} min read</span>
+                                <i data-feather="arrow-right" class="text-gray-500 group-hover:text-primary-color w-4 h-4"></i>
+                            </div>
+                            <h3 class="text-base font-bold text-white mb-2 leading-snug group-hover:text-primary-color transition-colors">${p.title}</h3>
+                            <p class="text-gray-400 text-sm flex-grow">${(p.description || '').slice(0, 140)}${p.description && p.description.length > 140 ? '…' : ''}</p>
                         </div>
-                        <h3 class="text-base font-bold text-white mb-2 leading-snug">${p.title}</h3>
-                        <p class="text-gray-400 text-sm flex-grow">${(p.brief || '').slice(0, 140)}${p.brief && p.brief.length > 140 ? '…' : ''}</p>
                     </a>
                 `).join('');
                 if (window.feather) feather.replace();
             })
-            .catch(renderFallback);
+            .catch(renderHashnodeFallback);
 
             // --- Contact form: manual fetch + layered spam protection ---
             const contactForm = document.getElementById('contact-form');
             const formLoadedAtEl = document.getElementById('form_loaded_at');
             if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
+
+            // Pageclip endpoint, assembled only at submit time so bots scraping the raw
+            // HTML never see a POSTable URL. If spam resumes, rotate the form key in the
+            // Pageclip dashboard and update KEY_PARTS (the key, split into chunks).
+            const KEY_PARTS = ['ICvb34', 'nUy3cZ', 'G613Hm', 'R5rbjZ', 'D16394', 'SD'];
+            const formEndpoint = () => 'https://send.pageclip' + '.co/' + KEY_PARTS.join('');
 
             const showToast = (message, type) => {
                 const toast = document.getElementById('toast-notification');
@@ -833,6 +904,12 @@
                 const nonLatin = (msg.match(/[Ѐ-ӿऀ-ॿ一-鿿]/g) || []).length;
                 if (nonLatin > 30) return 'non-latin-heavy';
 
+                // 9. Rate limit: max one submission per minute per browser
+                try {
+                    const last = parseInt(localStorage.getItem('contact_last_sent') || '0', 10);
+                    if (Date.now() - last < 60000) return 'rate-limit';
+                } catch (_) {}
+
                 return null;
             };
 
@@ -863,7 +940,7 @@
                         // Pageclip doesn't return CORS headers, so we fire-and-forget in no-cors mode.
                         // The opaque response means we can't read status, but Pageclip still receives the submission.
                         // Real network failures (offline, DNS) will still throw.
-                        await fetch(contactForm.action, {
+                        await fetch(formEndpoint(), {
                             method: 'POST',
                             body: formData,
                             mode: 'no-cors'
@@ -871,6 +948,7 @@
                         showToast('Message sent successfully!');
                         contactForm.reset();
                         focused.clear();
+                        try { localStorage.setItem('contact_last_sent', String(Date.now())); } catch (_) {}
                         if (formLoadedAtEl) formLoadedAtEl.value = String(Date.now());
                     } catch (_err) {
                         showToast('Network error. Please try again or email me at rushabhshah842@gmail.com', 'error');
