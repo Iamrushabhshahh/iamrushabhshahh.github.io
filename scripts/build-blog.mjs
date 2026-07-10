@@ -502,6 +502,32 @@ ${sitemapUrls.map(u => `  <url>
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
 console.log('✅ built     /sitemap.xml');
 
+/* ---------- inline CSS into standalone pages ----------
+   Replaces the render-blocking <link href="/style.css"> on hand-authored pages
+   with an inlined, minified <style> tag (first paint needs no CSS request).
+   Idempotent: re-runs refresh the existing inlined tag from style.css. */
+
+const cssMin = fs.readFileSync(path.join(ROOT, 'style.css'), 'utf8')
+  .replace(/\/\*[\s\S]*?\*\//g, '')   // strip comments
+  .replace(/\s+/g, ' ')               // collapse whitespace
+  .replace(/ *([{};,]) */g, '$1')     // trim around structural chars
+  .replace(/: /g, ':')                // trim after colons (safe: descendant-combinator spaces sit before the colon)
+  .trim();
+
+for (const page of ['linux-foundation-coupon/index.html', 'privacy/index.html']) {
+  const p = path.join(ROOT, page);
+  if (!fs.existsSync(p)) continue;
+  const html = fs.readFileSync(p, 'utf8');
+  const styleTag = `<style data-inline-css>${cssMin}</style>`;
+  const next = html
+    .replace(/<link rel="stylesheet" href="\/style\.css">/, styleTag)
+    .replace(/<style data-inline-css>[\s\S]*?<\/style>/, styleTag);
+  if (next !== html) {
+    fs.writeFileSync(p, next);
+    console.log(`✅ inlined   /${page.replace('/index.html', '/')} CSS (${Math.round(cssMin.length / 1024)} KiB)`);
+  }
+}
+
 /* ---------- prune deleted posts from blog/ ---------- */
 
 const liveSlugs = new Set([...all.map(p => p.slug), 'tags']);
