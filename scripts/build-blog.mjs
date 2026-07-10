@@ -519,9 +519,12 @@ for (const page of ['linux-foundation-coupon/index.html', 'privacy/index.html'])
   if (!fs.existsSync(p)) continue;
   const html = fs.readFileSync(p, 'utf8');
   const styleTag = `<style data-inline-css>${cssMin}</style>`;
+  // Replacer FUNCTION, not a string: the CSS contains "~$'" which a string
+  // replacement would interpret as the $' substitution pattern (inserts the
+  // rest of the document into the style tag).
   const next = html
-    .replace(/<link rel="stylesheet" href="\/style\.css">/, styleTag)
-    .replace(/<style data-inline-css>[\s\S]*?<\/style>/, styleTag);
+    .replace(/<link rel="stylesheet" href="\/style\.css">/, () => styleTag)
+    .replace(/<style data-inline-css>[\s\S]*?<\/style>/, () => styleTag);
   if (next !== html) {
     fs.writeFileSync(p, next);
     console.log(`✅ inlined   /${page.replace('/index.html', '/')} CSS (${Math.round(cssMin.length / 1024)} KiB)`);
