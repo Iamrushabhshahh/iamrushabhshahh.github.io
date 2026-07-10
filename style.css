@@ -634,11 +634,14 @@ section[id] { scroll-margin-top: 5rem; }
     margin-right: 0.75rem;
 }
 
-/* Toast */
+/* Toast. pointer-events must stay off while hidden: the toast sits fixed over
+   the footer's bottom-right corner and would otherwise swallow clicks on the
+   links underneath it (it's opacity-0, not display-none). */
 #toast-notification {
     transition: opacity 0.3s, transform 0.3s, background-color 0.2s;
+    pointer-events: none;
 }
-#toast-notification.show { opacity: 1; transform: translateY(0); }
+#toast-notification.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
 #toast-notification.error { background-color: #ef4444 !important; }
 
 /* Sr only */
@@ -973,3 +976,67 @@ nav a { -webkit-tap-highlight-color: transparent; }
     .tech-card { box-shadow: none; border: 1px solid #ccc; background: white !important; }
     a { color: black; text-decoration: underline; }
 }
+
+/* --- Utilities added for blog thumbnails, pinned posts & the coupon page --- */
+.w-44 { width: 11rem; }
+.h-28 { height: 7rem; }
+.h-36 { height: 9rem; }
+.gap-5 { gap: 1.25rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-5 { margin-top: 1.25rem; }
+.min-w-0 { min-width: 0; }
+.pinned-card { border-color: rgba(88, 166, 255, 0.4); }
+.code-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px dashed var(--primary-color);
+    border-radius: 10px;
+    padding: 0.7rem 1.1rem;
+    background: rgba(88, 166, 255, 0.08);
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+}
+@media (min-width: 640px) {
+    .sm\:w-44 { width: 11rem; }
+    .sm\:h-28 { height: 7rem; }
+}
+@media (min-width: 768px) {
+    .md\:text-5xl { font-size: 3rem; line-height: 1; }
+}
+
+/* --- FAQ accordions (coupon page) --- */
+.faq details {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: rgba(13, 17, 23, 0.6);
+    transition: border-color 0.2s;
+}
+.faq details[open] { border-color: rgba(88, 166, 255, 0.4); }
+.faq details + details { margin-top: 0.75rem; }
+.faq summary {
+    cursor: pointer;
+    padding: 0.9rem 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+    content: '+';
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+.faq details[open] summary::after { content: '−'; }
+.faq details > div { padding: 0 1.1rem 1rem; color: #8b949e; font-size: 0.925rem; line-height: 1.65; }
+.faq details > div a { color: var(--primary-color); text-decoration: underline; text-underline-offset: 3px; }

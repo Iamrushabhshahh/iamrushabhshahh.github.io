@@ -24,6 +24,9 @@ content:
       - name: description
         label: Description (shown in the post list, search results & RSS)
         type: text
+      - name: cover
+        label: Cover image (thumbnail in lists + social share preview)
+        type: image
       - name: date
         label: Publish date & time (IST — future = scheduled)
         type: date
@@ -39,6 +42,13 @@ content:
         label: Draft (hidden from the site while checked)
         type: boolean
         default: false
+      - name: featured
+        label: Pin this post at the top of the blog
+        type: boolean
+        default: false
+      - name: series
+        label: Series name (posts with the same name get linked as a series)
+        type: string
       - name: body
         label: Body
         type: rich-text
