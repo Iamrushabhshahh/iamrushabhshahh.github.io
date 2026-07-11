@@ -502,6 +502,25 @@ ${sitemapUrls.map(u => `  <url>
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
 console.log('✅ built     /sitemap.xml');
 
+/* ---------- freshness stamp: coupon page ----------
+   Coupon-query SERPs reward visible freshness. The hourly CI build re-stamps
+   the coupon page's title and "Updated ..." line with the current month, so
+   the page advertises this month's date forever with zero manual work. */
+
+const MONTH_YEAR = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
+const couponPath = path.join(ROOT, 'linux-foundation-coupon', 'index.html');
+if (fs.existsSync(couponPath)) {
+  const c = fs.readFileSync(couponPath, 'utf8');
+  const stamped = c
+    .replace(/Linux Foundation Coupon Code \([^)]*\)/g, `Linux Foundation Coupon Code (${MONTH_YEAR})`)
+    .replace(/Updated [A-Za-z]+ \d{4}/g, `Updated ${MONTH_YEAR}`)
+    .replace(/last updated this page \([^)]*\)/, `last updated this page (${MONTH_YEAR})`);
+  if (stamped !== c) {
+    fs.writeFileSync(couponPath, stamped);
+    console.log(`✅ stamped   /linux-foundation-coupon/ (${MONTH_YEAR})`);
+  }
+}
+
 /* ---------- inline CSS into standalone pages ----------
    Replaces the render-blocking <link href="/style.css"> on hand-authored pages
    with an inlined, minified <style> tag (first paint needs no CSS request).
