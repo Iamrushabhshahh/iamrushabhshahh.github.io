@@ -1,16 +1,16 @@
 ---
-title: "Hello, world: the blog now lives on rushabhshah.dev"
-description: "Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood."
+title: "Hello, world: this blog lives on my own domain"
+description: "Why my writing lives on rushabhshah.dev instead of a blogging platform, and how this markdown-powered blog with scheduled publishing works under the hood."
 date: "2026-07-09 12:00"
 tags: [meta, blog]
 draft: false
 ---
 
-After two years of publishing on Hashnode, my writing finally has a home on my own domain. This post is both a hello and a quick tour of how this blog works.
+My writing has a home on my own domain, starting today. This post is both a hello and a quick tour of how this blog works.
 
-## Why move?
+## Why my own domain?
 
-Every article I published was building `iamrushabhshahh.hashnode.dev`'s search presence instead of `rushabhshah.dev`'s. Owning the content, the URLs, and the reader relationship matters more every year, especially when AI assistants are increasingly the ones reading and summarizing your site.
+Anything I publish on a blogging platform builds that platform's search presence instead of `rushabhshah.dev`'s. Owning the content, the URLs, and the reader relationship matters more every year, especially when AI assistants are increasingly the ones reading and summarizing your site.
 
 ## How it works
 
@@ -34,6 +34,6 @@ Zero servers, zero cost, everything version-controlled.
 
 The same things I care about at work and in the community: **Kubernetes, Docker, the Grafana LGTM stack, OpenTelemetry, cloud cost optimization, and Linux**, written the way I'd want to read them: reproducible, with real configs and honest trade-offs.
 
-If that's your kind of content, [subscribe via RSS](/blog/rss.xml) or find me on [Twitter](https://twitter.com/iamrushabhshahh).
+If that's your kind of content, [subscribe via RSS](/blog/rss.xml) or find me on [LinkedIn](https://in.linkedin.com/in/iamrushabhshahh).
 
 $ see you in the next post

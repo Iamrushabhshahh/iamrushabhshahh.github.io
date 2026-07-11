@@ -1,7 +1,7 @@
 [
   {
-    "title": "Hello, world: the blog now lives on rushabhshah.dev",
-    "description": "Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.",
+    "title": "Hello, world: this blog lives on my own domain",
+    "description": "Why my writing lives on rushabhshah.dev instead of a blogging platform, and how this markdown-powered blog with scheduled publishing works under the hood.",
     "url": "/blog/hello-world/",
     "date": "2026-07-09T06:30:00.000Z",
     "tags": [

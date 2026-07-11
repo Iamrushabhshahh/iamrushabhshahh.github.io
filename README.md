@@ -47,7 +47,7 @@ Set `date` to a future date/time (IST). The post is skipped by builds until that
 - `series:` name — posts sharing a series name get a linked "part 1/2/3" box at the top
 - `slug:` override the URL (defaults to the filename)
 - `updated:` last-modified date (shown to search engines)
-- `canonical:` original URL for posts imported from Hashnode
+- `canonical:` original URL when a post first appeared somewhere else
 
 Tags are automatically browsable: every tag gets a `/blog/tags/<tag>/` page, and the blog index shows a tag cloud with counts. Posts scheduled within the next 90 days appear as a "coming soon" teaser on `/blog/`.
 

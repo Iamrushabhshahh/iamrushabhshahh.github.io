@@ -24,8 +24,6 @@ Key facts:
 
 - [GitHub](https://github.com/iamrushabhshahh)
 - [LinkedIn](https://in.linkedin.com/in/iamrushabhshahh)
-- [Twitter/X](https://twitter.com/iamrushabhshahh)
-- [Hashnode (archive of earlier writing)](https://iamrushabhshahh.hashnode.dev/)
 - [Grafana & Friends Ahmedabad meetup](https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/)
 - [eBPF.io Hindi translation](https://ebpf.io/hi-in/)
 
