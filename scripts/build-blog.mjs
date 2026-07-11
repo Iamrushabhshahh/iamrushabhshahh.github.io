@@ -130,7 +130,6 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
     <meta property="og:description" content="${escapeHtml(description)}">
     <meta property="og:image" content="${ogImage}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@iamrushabhshahh">
     <meta name="twitter:title" content="${escapeHtml(title)}">
     <meta name="twitter:description" content="${escapeHtml(description)}">
     <meta name="twitter:image" content="${ogImage}">
@@ -181,7 +180,6 @@ const footer = `
             <div class="flex flex-wrap gap-4">
                 <a href="https://github.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">GitHub</a>
                 <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">LinkedIn</a>
-                <a href="https://twitter.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">Twitter</a>
                 <a href="/blog/rss.xml" class="hover:text-primary-color">RSS</a>
                 <a href="/privacy/" class="hover:text-primary-color">Privacy</a>
                 <a href="/linux-foundation-coupon/" class="hover:text-primary-color">30% off Linux Foundation ↗</a>

@@ -26,7 +26,6 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@iamrushabhshahh">
     <meta name="twitter:title" content="Rushabh Shah | Docker Captain · Grafana Champion · DevOps Engineer">
     <meta name="twitter:description" content="Docker Captain, Grafana Champion, and DevOps Engineer building & automating cloud infrastructure on AWS, Azure and GCP.">
     <meta name="twitter:image" content="https://rushabhshah.dev/assets/og-image.jpg">
@@ -36,7 +35,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.simpleicons.org" crossorigin>
     <link rel="preconnect" href="https://api.iconify.design" crossorigin>
-    <link rel="dns-prefetch" href="https://gql.hashnode.com">
     <link rel="dns-prefetch" href="https://send.pageclip.co">
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" as="style">
@@ -73,8 +71,7 @@
       "sameAs": [
         "https://github.com/iamrushabhshahh",
         "https://in.linkedin.com/in/iamrushabhshahh",
-        "https://twitter.com/iamrushabhshahh",
-        "https://iamrushabhshahh.hashnode.dev/"
+        "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/"
       ],
       "award": ["Docker Captain (2026)", "Grafana Champion (2026)"],
       "hasCredential": [
@@ -360,7 +357,7 @@
             <p class="section-subtitle">Latest posts from the blog and recent community engagements.</p>
 
             <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10" id="latest-posts">
-                <!-- Latest blog posts injected from /blog/posts.json. Falls back to Hashnode, then a static card. -->
+                <!-- Latest blog posts injected from /blog/posts.json; static card if unavailable. -->
                 <div class="tech-card p-6 rounded-md flex items-center justify-center text-gray-500 font-fira text-sm lg:col-span-3" id="posts-loading">
                     Loading latest posts<span class="typing-cursor" style="height: 1rem;"></span>
                 </div>
@@ -395,9 +392,6 @@
             <div class="text-center mt-10 flex flex-wrap items-center justify-center gap-6">
                 <a href="/blog/" class="inline-flex items-center gap-2 font-fira text-sm text-primary-color hover:underline">
                     Read the blog <i data-feather="arrow-right" class="w-4 h-4"></i>
-                </a>
-                <a href="https://iamrushabhshahh.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-fira text-sm text-gray-400 hover:text-primary-color">
-                    Older posts on Hashnode <i data-feather="external-link" class="w-4 h-4"></i>
                 </a>
             </div>
         </div>
@@ -496,11 +490,8 @@
                         <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="chip" aria-label="LinkedIn profile">
                             <i data-feather="linkedin" class="w-4 h-4"></i> LinkedIn
                         </a>
-                        <a href="https://twitter.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="chip" aria-label="Twitter profile">
-                            <i data-feather="twitter" class="w-4 h-4"></i> Twitter
-                        </a>
-                        <a href="https://iamrushabhshahh.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="chip" aria-label="Hashnode blog">
-                            <i data-feather="book-open" class="w-4 h-4"></i> Hashnode
+                        <a href="https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/" target="_blank" rel="noopener noreferrer" class="chip" aria-label="Grafana and Friends Ahmedabad meetup">
+                            <i data-feather="users" class="w-4 h-4"></i> Meetup
                         </a>
                     </div>
                 </div>
@@ -718,7 +709,7 @@
                 { title: 'eBPF.io: Hindi Translation', desc: 'Translated the eBPF.io website into Hindi so Hindi-speaking engineers can learn about eBPF for networking, observability, and security on Linux.', link: 'https://ebpf.io/hi-in/', tags: ['eBPF', 'Open Source', 'Linux', 'i18n'], src: '/assets/ebpf-logo.svg' },
                 { title: 'AWS SAA-C03 Prep', desc: 'Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.', link: 'https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', repo: 'Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', tags: ['AWS', 'Certification', 'Study Guide'], if: 'logos/aws' },
                 { title: 'Azure AZ-104 Prep', desc: 'A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.', link: 'https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', repo: 'Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', tags: ['Azure', 'Certification', 'DevOps'], if: 'logos/microsoft-azure' },
-                { title: 'Personal Tech Blog', desc: 'My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux. Earlier posts are archived on Hashnode.', link: '/blog/', tags: ['Blog', 'Observability', 'Linux', 'DevOps'], feather: 'book-open' }
+                { title: 'Personal Tech Blog', desc: 'My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux.', link: '/blog/', tags: ['Blog', 'Observability', 'Linux', 'DevOps'], feather: 'book-open' }
             ];
             projectData.forEach((proj, i) => {
                 const tagsHtml = proj.tags.map(tag => `<span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">${tag}</span>`).join(' ');
@@ -769,7 +760,7 @@
                     .catch(() => {});
             });
 
-            // --- Latest blog posts: own blog first, Hashnode as fallback, static card as last resort ---
+            // --- Latest blog posts from /blog/posts.json (static card as fallback) ---
             const postsContainer = document.getElementById('latest-posts');
             const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
             const renderStaticFallback = () => {
@@ -782,36 +773,10 @@
                     </a>`;
                 if (window.feather) feather.replace();
             };
-            const renderHashnodeFallback = () => {
-                fetch('https://gql.hashnode.com/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        query: `query { publication(host: "iamrushabhshahh.hashnode.dev") { posts(first: 3) { edges { node { title brief url publishedAt } } } } }`
-                    })
-                })
-                .then(r => r.json())
-                .then(data => {
-                    const edges = data?.data?.publication?.posts?.edges || [];
-                    if (!edges.length) return renderStaticFallback();
-                    postsContainer.innerHTML = edges.map(({ node: p }) => `
-                        <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="tech-card p-5 rounded-md flex flex-col group">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="text-xs font-fira text-gray-400">${fmtDate(p.publishedAt)}</span>
-                                <i data-feather="external-link" class="text-gray-500 group-hover:text-primary-color w-4 h-4"></i>
-                            </div>
-                            <h3 class="text-base font-bold text-white mb-2 leading-snug">${p.title}</h3>
-                            <p class="text-gray-400 text-sm flex-grow">${(p.brief || '').slice(0, 140)}${p.brief && p.brief.length > 140 ? '…' : ''}</p>
-                        </a>
-                    `).join('');
-                    if (window.feather) feather.replace();
-                })
-                .catch(renderStaticFallback);
-            };
             fetch('/blog/posts.json')
             .then(r => r.ok ? r.json() : Promise.reject())
             .then(posts => {
-                if (!Array.isArray(posts) || !posts.length) return renderHashnodeFallback();
+                if (!Array.isArray(posts) || !posts.length) return renderStaticFallback();
                 postsContainer.innerHTML = posts.slice(0, 3).map(p => `
                     <a href="${p.url}" class="tech-card rounded-md flex flex-col group overflow-hidden">
                         ${p.cover ? `<img src="${p.cover}" alt="" loading="lazy" class="w-full h-36 object-cover">` : ''}
@@ -827,7 +792,7 @@
                 `).join('');
                 if (window.feather) feather.replace();
             })
-            .catch(renderHashnodeFallback);
+            .catch(renderStaticFallback);
 
             // --- Contact form: manual fetch + layered spam protection ---
             const contactForm = document.getElementById('contact-form');
