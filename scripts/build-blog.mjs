@@ -736,7 +736,7 @@ const cssMin = fs.readFileSync(path.join(ROOT, 'style.css'), 'utf8')
   .replace(/: /g, ':')                // trim after colons (safe: descendant-combinator spaces sit before the colon)
   .trim();
 
-for (const page of ['linux-foundation-coupon/index.html', 'privacy/index.html']) {
+for (const page of ['index.html', 'linux-foundation-coupon/index.html', 'privacy/index.html']) {
   const p = path.join(ROOT, page);
   if (!fs.existsSync(p)) continue;
   const html = fs.readFileSync(p, 'utf8');
@@ -749,7 +749,8 @@ for (const page of ['linux-foundation-coupon/index.html', 'privacy/index.html'])
     .replace(/<style data-inline-css>[\s\S]*?<\/style>/, () => styleTag);
   if (next !== html) {
     fs.writeFileSync(p, next);
-    console.log(`✅ inlined   /${page.replace('/index.html', '/')} CSS (${Math.round(cssMin.length / 1024)} KiB)`);
+    const label = page === 'index.html' ? '/' : `/${page.replace('/index.html', '/')}`;
+    console.log(`✅ inlined   ${label} CSS (${Math.round(cssMin.length / 1024)} KiB)`);
   }
 }
 
