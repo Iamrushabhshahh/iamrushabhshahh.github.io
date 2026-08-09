@@ -38,6 +38,14 @@ p { line-height: 1.65; }
 }
 
 
+/* Self-hosted variable webfonts: one file per family covers every weight
+   used on the site (Google serves the same variable-font file for each
+   static weight instance anyway), so this is 3 requests to our own origin
+   instead of a fonts.googleapis.com + fonts.gstatic.com round trip. */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/assets/fonts/inter-var.woff2') format('woff2-variations'); }
+@font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('/assets/fonts/space-grotesk-var.woff2') format('woff2-variations'); }
+@font-face { font-family: 'Fira Code'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('/assets/fonts/fira-code-var.woff2') format('woff2-variations'); }
+
 /* Metric-matched fallback fonts: sized to occupy the same space as the webfonts
    so the swap causes no layout shift (CLS). Tuned empirically with Lighthouse. */
 @font-face { font-family: 'Inter-fallback'; src: local('Arial'); size-adjust: 107%; ascent-override: 90.5%; descent-override: 22.5%; line-gap-override: 0%; }
