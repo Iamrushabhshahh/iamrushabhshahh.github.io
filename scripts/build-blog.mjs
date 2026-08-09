@@ -12,9 +12,10 @@
            sitemap.xml              regenerated with all live URLs
 
    Scheduling: a post whose `date` is in the future is skipped at build
-   time. The GitHub Actions workflow rebuilds hourly, so the post goes
-   live automatically within the hour after its date/time passes.
-   Dates without an explicit timezone are treated as IST (+05:30).
+   time. The GitHub Actions workflow rebuilds daily at 00:10 IST, so the
+   post goes live automatically on the first run after its date/time
+   passes (up to 24h later). Dates without an explicit timezone are
+   treated as IST (+05:30).
    ===================================================================== */
 
 import fs from 'node:fs';
@@ -619,6 +620,11 @@ fs.writeFileSync(path.join(OUT_DIR, 'posts.json'), JSON.stringify(
 
 /* ---------- RSS ---------- */
 
+// RSS's lastBuildDate is the last time feed CONTENT changed, not build time —
+// using build time would leave `blog/rss.xml` dirty on every rebuild even
+// when no post changed, forcing a commit (and a full Pages redeploy) daily.
+const lastBuild = all.length ? new Date(Math.max(...all.map(p => +p.updated))) : now;
+
 const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -626,7 +632,7 @@ const rss = `<?xml version="1.0" encoding="UTF-8"?>
     <link>${SITE}/blog/</link>
     <description>${escapeXml(BLOG_DESC)}</description>
     <language>en</language>
-    <lastBuildDate>${now.toUTCString()}</lastBuildDate>
+    <lastBuildDate>${lastBuild.toUTCString()}</lastBuildDate>
     <atom:link href="${SITE}/blog/rss.xml" rel="self" type="application/rss+xml"/>
 ${all.slice(0, 20).map(p => `    <item>
       <title>${escapeXml(p.title)}</title>
@@ -650,17 +656,24 @@ const sitemapUrls = [
   { loc: `${SITE}/linux-foundation-coupon/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('linux-foundation-coupon/index.html') },
   { loc: `${SITE}/privacy/`, priority: '0.2', changefreq: 'yearly', lastmod: gitLastMod('privacy/index.html') },
   ...all.map(p => ({ loc: `${SITE}/blog/${p.slug}/`, priority: '0.8', lastmod: isoDate(p.updated).slice(0, 10) })),
-  ...sortedTags.map(([t]) => ({ loc: `${SITE}/blog/tags/${slugify(t)}/`, priority: '0.3', changefreq: 'weekly' })),
+  ...sortedTags.map(([t]) => {
+    const tagPosts = all.filter(p => p.tags.includes(t));
+    const lastmod = tagPosts.length ? isoDate(new Date(Math.max(...tagPosts.map(p => +p.updated)))).slice(0, 10) : null;
+    return { loc: `${SITE}/blog/tags/${slugify(t)}/`, priority: '0.3', changefreq: 'weekly', lastmod };
+  }),
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(u => `  <url>
-    <loc>${u.loc}</loc>
-    ${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}
-    ${u.changefreq ? `<changefreq>${u.changefreq}</changefreq>` : ''}
-    <priority>${u.priority}</priority>
-  </url>`).join('\n')}
+${sitemapUrls.map(u => {
+  const children = [
+    `<loc>${u.loc}</loc>`,
+    u.lastmod && `<lastmod>${u.lastmod}</lastmod>`,
+    u.changefreq && `<changefreq>${u.changefreq}</changefreq>`,
+    `<priority>${u.priority}</priority>`,
+  ].filter(Boolean);
+  return `  <url>\n${children.map(c => `    ${c}`).join('\n')}\n  </url>`;
+}).join('\n')}
 </urlset>
 `;
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
@@ -676,12 +689,31 @@ const couponPath = path.join(ROOT, 'linux-foundation-coupon', 'index.html');
 if (fs.existsSync(couponPath)) {
   const c = fs.readFileSync(couponPath, 'utf8');
   const couponMod = gitLastMod('linux-foundation-coupon/index.html') || now.toISOString().slice(0, 10);
-  const stamped = c
+
+  /* Person node: the homepage copy is canonical (it carries award,
+     hasCredential and image). Copy it verbatim onto the coupon page so two
+     @id-identical nodes can never describe different people.
+     The (?:(?!<\/script>)[^])*? guard is load-bearing: without it, the lazy
+     [^]*? happily spans past this block's own </script> into a sibling
+     <script> tag, so on a page with multiple JSON-LD blocks (FAQPage,
+     BreadcrumbList, WebPage, then Person) it matches from the FIRST script
+     tag through to Person's closing tag and swallows every block in between. */
+  const PERSON_RE = /<script type="application\/ld\+json">(?:(?!<\/script>)[^])*?"@type":\s*"Person"(?:(?!<\/script>)[^])*?<\/script>/;
+  const personBlock = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8').match(PERSON_RE)?.[0];
+
+  let stamped = c
     .replace(/(<title>Linux Foundation Coupon )\([^)]*\)/, `$1(${MONTH_YEAR})`)
     .replace(/Updated [A-Za-z]+ \d{4}/g, `Updated ${MONTH_YEAR}`)
     .replace(/last updated this page \([^)]*\)/, `last updated this page (${MONTH_YEAR})`)
     .replace(/("dateModified":\s*")[^"]*(")/, `$1${couponMod}$2`)
     .replace(/Last verified: [A-Za-z]+ \d{4}/g, `Last verified: ${MONTH_YEAR}`);
+  if (personBlock) {
+    // Replacer FUNCTION, not a string: a string replacement would interpret
+    // any "$&"/"$'" etc. inside personBlock's JSON as a substitution pattern.
+    stamped = stamped.replace(PERSON_RE, () => personBlock);
+  } else {
+    console.warn('⚠️  could not find the Person JSON-LD block on index.html — skipping Person sync on the coupon page');
+  }
   if (stamped !== c) {
     fs.writeFileSync(couponPath, stamped);
     console.log(`✅ stamped   /linux-foundation-coupon/ (${MONTH_YEAR})`);

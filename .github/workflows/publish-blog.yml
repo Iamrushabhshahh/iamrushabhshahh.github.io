@@ -1,7 +1,8 @@
 # Builds the markdown blog and commits the generated HTML back to main,
-# which GitHub Pages then serves. The hourly cron is what makes scheduled
+# which GitHub Pages then serves. The daily cron is what makes scheduled
 # publishing work: posts with a future frontmatter `date` are skipped at
-# build time and picked up by the first run after that moment.
+# build time and picked up by the first run after that moment (up to 24h
+# later).
 name: Publish blog
 
 on:
@@ -17,7 +18,7 @@ on:
       - "package.json"
       - ".github/workflows/publish-blog.yml"
   schedule:
-    - cron: "10 8 * * *" # daily at 00:10
+    - cron: "40 18 * * *" # daily at 00:10 IST (18:40 UTC previous day)
   workflow_dispatch:
 
 permissions:

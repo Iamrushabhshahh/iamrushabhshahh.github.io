@@ -27,18 +27,17 @@
   <url>
     <loc>https://rushabhshah.dev/blog/hello-world/</loc>
     <lastmod>2026-07-09</lastmod>
-    
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://rushabhshah.dev/blog/tags/blog/</loc>
-    
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://rushabhshah.dev/blog/tags/meta/</loc>
-    
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
