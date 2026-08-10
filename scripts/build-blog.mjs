@@ -33,6 +33,214 @@ const AUTHOR = 'Rushabh Shah';
 const BLOG_TITLE = 'Rushabh Shah · Blog';
 const BLOG_DESC = 'Articles on DevOps, Kubernetes, Docker, observability (Grafana LGTM stack, OpenTelemetry), cloud cost optimization, and Linux, by Rushabh Shah, Docker Captain & Grafana Champion.';
 
+/* ---------- dedicated per-certification discount pages ----------
+   /linux-foundation-coupon/<slug>/ — one focused landing page per exam,
+   generated from data (not hand-copied HTML) so structure can't drift
+   between pages the way the coupon page's duplicated Person JSON-LD once did.
+
+   Scope is deliberately limited to the 6 certs with real, stable search
+   volume plus the Kubestronaut bundle, not all ~14 exams RUSHABH30 covers.
+   Cranking out a thin page for every exam code risks reading as doorway
+   pages to Google (near-identical content that only differs by keyword),
+   which can hurt the whole domain's trust — not just those pages. Exam
+   domain weightings are intentionally described qualitatively rather than
+   with precise percentages: CNCF revises curricula periodically and a
+   stale hardcoded number would be a fact this script has no way to verify. */
+
+const CERT_PAGES = [
+  {
+    slug: 'cka', name: 'CKA', fullName: 'Certified Kubernetes Administrator',
+    format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
+    priceList: 445, priceDiscounted: 311, prerequisite: null,
+    audience: 'Ops, platform engineering, and SRE roles who run Kubernetes clusters day to day.',
+    topics: [
+      'Cluster architecture, installation, and configuration',
+      'Workloads and scheduling',
+      'Services and networking',
+      'Storage',
+      'Troubleshooting cluster and application issues',
+    ],
+    why: 'The CKA is the credential hiring managers actually check for when a role involves running Kubernetes in production, not just deploying to it. It\'s a live-terminal, performance-based exam — you fix real broken clusters against the clock, not multiple-choice questions — so it certifies you can actually do the job, not just describe it.',
+    prepTips: [
+      'Practice in a real terminal daily in the weeks before — this exam is a speed test as much as a knowledge test, and muscle memory for kubectl and vim matters more than reading about concepts.',
+      'Get comfortable with the allowed documentation (kubernetes.io) during practice, since you\'re allowed to reference it in the real exam — know where to find things fast rather than memorizing everything.',
+      'Troubleshooting is the single biggest domain, so spend disproportionate practice time deliberately breaking and fixing clusters, not just deploying happy-path workloads.',
+    ],
+    retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Is the CKA exam multiple-choice?', a: 'No. It\'s 100% performance-based: you\'re given a live terminal and a set of real Kubernetes clusters, and you complete hands-on tasks against the clock. There\'s no multiple-choice section.' },
+      { q: 'Do I need any prerequisite certification for the CKA?', a: 'No. The CKA has no certification prerequisite, though the Linux Foundation recommends some hands-on Kubernetes experience first.' },
+      { q: 'How much is the CKA with a discount code?', a: `List price is $${445}. With RUSHABH30 it drops to about $${311}, a saving of roughly $134.` },
+      { q: 'Does RUSHABH30 work on the CKA course + exam bundle?', a: 'Yes. The 30% applies whether you buy the exam alone or bundled with the official prep course, and the bundle is usually the better value since it\'s already discounted before the code applies.' },
+      { q: 'What should I do after passing the CKA?', a: 'The natural next steps are the CKAD if you also ship applications to Kubernetes, or the CKS if you want the strongest Kubernetes security signal on your CV — CKS requires an active CKA to sit.' },
+    ],
+  },
+  {
+    slug: 'ckad', name: 'CKAD', fullName: 'Certified Kubernetes Application Developer',
+    format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
+    priceList: 445, priceDiscounted: 311, prerequisite: null,
+    audience: 'Developers who build and deploy applications to Kubernetes, without administering the underlying cluster.',
+    topics: [
+      'Application design and build',
+      'Application deployment',
+      'Application observability and maintenance',
+      'Application environment, configuration, and security',
+      'Services and networking',
+    ],
+    why: 'The CKAD exists for a real gap: most developers shipping to Kubernetes don\'t need cluster-administration depth — they need to know pods, deployments, config, probes, and how to debug their own workloads fast. It\'s the same performance-based format as the CKA, just scoped to the application layer instead of the platform layer.',
+    prepTips: [
+      'Focus practice time on the manifest types you\'ll actually write day to day — Deployments, ConfigMaps, Secrets, and probes — since the exam rewards speed writing and editing YAML under time pressure.',
+      'Practice debugging a broken Pod from logs and describe output alone; a meaningful slice of the exam is "this deployment is failing, find out why."',
+      'Like the CKA, you can reference kubernetes.io during the exam — practice navigating to the exact page you need instead of trying to memorize every flag.',
+    ],
+    retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Is the CKAD easier than the CKA?', a: 'It\'s narrower, not necessarily easier — CKAD skips cluster-administration topics but goes deep on the application layer (config, probes, multi-container pod patterns) that the CKA only touches lightly.' },
+      { q: 'Do I need the CKA before taking the CKAD?', a: 'No. CKAD has no certification prerequisite and is commonly taken by developers who never plan to sit the CKA at all.' },
+      { q: 'How much is the CKAD with a discount code?', a: `List price is $${445}. With RUSHABH30 it drops to about $${311}.` },
+      { q: 'Is the CKAD hands-on or multiple-choice?', a: 'Hands-on. Like the CKA, it\'s a live-terminal, performance-based exam against real clusters — no multiple-choice questions.' },
+      { q: 'Does RUSHABH30 work on the CKAD course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
+    ],
+  },
+  {
+    slug: 'cks', name: 'CKS', fullName: 'Certified Kubernetes Security Specialist',
+    format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
+    priceList: 445, priceDiscounted: 311, prerequisite: 'an active CKA certification',
+    audience: 'Security engineers and platform engineers who already hold the CKA and want the strongest Kubernetes security credential available.',
+    topics: [
+      'Cluster setup and hardening',
+      'System hardening',
+      'Minimizing microservice vulnerabilities',
+      'Supply chain security',
+      'Monitoring, logging, and runtime security',
+    ],
+    why: 'CKS is the one Linux Foundation cert with a real prerequisite — you need an active CKA to even sit it — which is exactly why it carries weight on a CV. It signals you can secure a cluster end to end: hardening, supply-chain integrity, runtime detection, not just administer one.',
+    prepTips: [
+      'Get your CKA active first; the Linux Foundation checks this at scheduling time, so leave a buffer if yours is close to expiring.',
+      'Spend real practice time on tools the exam actually uses hands-on — Falco for runtime detection, network policies, and admission controllers — rather than just reading security theory.',
+      'Supply-chain security (image scanning, signing, sane base images) is a newer domain relative to the older CKA/CKAD content; don\'t skip it assuming it\'s a small footnote.',
+    ],
+    retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Do I need the CKA before taking the CKS?', a: 'Yes — this is the one Linux Foundation Kubernetes cert with a hard prerequisite. You must hold an active CKA to schedule the CKS.' },
+      { q: 'How much is the CKS with a discount code?', a: `List price is $${445}. With RUSHABH30 it drops to about $${311}.` },
+      { q: 'Is the CKS worth it if I already have the CKA?', a: 'For anyone doing platform or security work, yes — it\'s one of the strongest security-specific signals you can add to a DevOps CV, and it\'s a natural next step once your CKA is active.' },
+      { q: 'Is the CKS multiple-choice?', a: 'No. Like the CKA and CKAD, it\'s 100% performance-based against live clusters.' },
+      { q: 'Does RUSHABH30 work on the CKS course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
+    ],
+  },
+  {
+    slug: 'kcna', name: 'KCNA', fullName: 'Kubernetes and Cloud Native Associate',
+    format: 'Multiple choice', duration: '90 minutes',
+    priceList: 250, priceDiscounted: 175, prerequisite: null,
+    audience: 'Students, career-changers, and anyone moving into cloud-native from another field who wants a beginner-friendly starting point.',
+    topics: [
+      'Kubernetes fundamentals',
+      'Container orchestration',
+      'Cloud native architecture',
+      'Cloud native observability',
+      'Cloud native application delivery',
+    ],
+    why: 'KCNA is the entry point built for people who aren\'t ready for a live-terminal exam yet. It\'s multiple choice, it\'s the cheapest cert in the catalog, and it forces you to learn the cloud-native landscape\'s vocabulary — Kubernetes, containers, observability, GitOps — before you touch a cluster in anger.',
+    prepTips: [
+      'Treat it as landscape literacy, not hands-on skill — you\'re learning what things are and how they fit together, not memorizing kubectl syntax.',
+      'The official CNCF/Linux Foundation curriculum outline is the most efficient study map; work through it topic by topic rather than a single dense course.',
+      'If you\'re also considering the CKA later, KCNA is a genuinely useful on-ramp — the vocabulary you learn here removes a lot of friction from CKA prep.',
+    ],
+    retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Is KCNA a good first certification for beginners?', a: 'Yes — it\'s specifically designed as the entry point into Kubernetes and cloud native, with no hands-on requirement and a lower price than the performance-based exams.' },
+      { q: 'How much is KCNA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}.` },
+      { q: 'Is KCNA hands-on like the CKA?', a: 'No. KCNA is entirely multiple choice, with no live terminal or cluster access required.' },
+      { q: 'Should I take KCNA before the CKA?', a: 'It\'s not required, but it\'s a sensible on-ramp if you\'re new to the ecosystem — it builds vocabulary and context that make CKA prep faster.' },
+      { q: 'Does RUSHABH30 work on the KCNA course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
+    ],
+  },
+  {
+    slug: 'kcsa', name: 'KCSA', fullName: 'Kubernetes and Cloud Native Security Associate',
+    format: 'Multiple choice', duration: '90 minutes',
+    priceList: 250, priceDiscounted: 175, prerequisite: null,
+    audience: 'Beginners who want security awareness early in their cloud-native career, without committing to the full CKA-then-CKS path yet.',
+    topics: [
+      'Overview of cloud native security',
+      'Kubernetes cluster component security',
+      'Kubernetes security fundamentals',
+      'Kubernetes threat model',
+      'Platform security, compliance, and security frameworks',
+    ],
+    why: 'KCSA pairs naturally with KCNA: same multiple-choice format, same entry-level price, but focused on security concepts instead of general architecture. It\'s a way to show security awareness on a CV years before you\'d be ready for the CKA-gated CKS.',
+    prepTips: [
+      'Pair it with KCNA if you\'re studying both — the fundamentals overlap enough that studying them together is more efficient than sequentially.',
+      'This is conceptual security knowledge (threat models, compliance frameworks), not hands-on hardening — save the tool-heavy practice for CKS later.',
+      'The 4Cs of cloud native security (Cloud, Cluster, Container, Code) are a recurring framing across the official curriculum and worth understanding cold.',
+    ],
+    retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Do I need the CKA or CKS before KCSA?', a: 'No. KCSA has no certification prerequisite and is designed as an entry-level security credential.' },
+      { q: 'How much is KCSA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}.` },
+      { q: 'Is KCSA the same as the CKS?', a: 'No — KCSA is a beginner, multiple-choice associate exam on security concepts. CKS is an advanced, hands-on exam that requires an active CKA. They\'re different tiers entirely.' },
+      { q: 'Is KCSA hands-on?', a: 'No, it\'s entirely multiple choice, like KCNA.' },
+      { q: 'Does RUSHABH30 work on the KCSA course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
+    ],
+  },
+  {
+    slug: 'lfcs', name: 'LFCS', fullName: 'Linux Foundation Certified System Administrator',
+    format: 'Performance-based (live terminal, real system)', duration: '2 hours',
+    priceList: 445, priceDiscounted: 311, prerequisite: null,
+    audience: 'Anyone in an infrastructure role — not Kubernetes-specific — who wants a hands-on Linux fundamentals credential.',
+    topics: [
+      'Essential commands',
+      'Operation of running systems',
+      'User and group management',
+      'Networking',
+      'Service configuration',
+      'Storage management',
+      'Essential security',
+    ],
+    why: 'LFCS is honestly underrated in a Kubernetes-heavy job market: a lot of "Kubernetes debugging" sessions are actually Linux debugging sessions wearing a trench coat — DNS, file permissions, systemd units, disk pressure. LFCS certifies the fundamentals that every other Linux Foundation cert quietly assumes you already have.',
+    prepTips: [
+      'If your Kubernetes troubleshooting keeps bottoming out in "wait, is this actually a Linux problem," take LFCS first — it fills exactly that gap.',
+      'It\'s performance-based like the CKA, so practice in a real shell daily rather than just reading man pages.',
+      'Storage and networking fundamentals here transfer directly into Kubernetes storage classes and CNI troubleshooting later, so it\'s not wasted effort even if Kubernetes is your end goal.',
+    ],
+    retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Is LFCS a Kubernetes certification?', a: 'No — LFCS is a general Linux system administration credential. It\'s a strong complement to the Kubernetes certs (CKA/CKAD/CKS) rather than a replacement for them.' },
+      { q: 'How much is LFCS with a discount code?', a: `List price is $${445}. With RUSHABH30 it drops to about $${311}.` },
+      { q: 'Is LFCS hands-on or multiple-choice?', a: 'Hands-on — it\'s a performance-based exam on a real Linux system, not multiple choice.' },
+      { q: 'Should I take LFCS before or after the CKA?', a: 'Before, if you\'re shaky on core Linux — the LFCS fundamentals (networking, storage, permissions) make CKA troubleshooting scenarios much less frustrating.' },
+      { q: 'Does RUSHABH30 work on the LFCS course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
+    ],
+  },
+  {
+    slug: 'kubestronaut', name: 'Kubestronaut bundle', fullName: 'Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)',
+    format: 'Bundle of 5 exams (2 multiple-choice, 3 performance-based)', duration: 'Varies per exam',
+    priceList: 1645, priceDiscounted: 1151, prerequisite: 'CKS specifically requires an active CKA',
+    audience: 'Engineers pursuing official Kubestronaut recognition from CNCF, or anyone who\'s decided to complete the full Kubernetes certification track.',
+    topics: [
+      'KCNA — Kubernetes and Cloud Native Associate',
+      'KCSA — Kubernetes and Cloud Native Security Associate',
+      'CKA — Certified Kubernetes Administrator',
+      'CKAD — Certified Kubernetes Application Developer',
+      'CKS — Certified Kubernetes Security Specialist',
+    ],
+    why: 'Kubestronaut is CNCF\'s recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — at the same time. Buying the bundle is the practical way to work toward it: on a five-exam purchase, RUSHABH30 produces the single biggest dollar saving it can generate, and this page runs the actual math instead of just quoting a percentage.',
+    prepTips: [
+      'Sequence matters: CKS needs an active CKA, so plan CKA before CKS even if you buy all five exams in one bundle purchase.',
+      'KCNA and KCSA (both multiple choice) are the fastest wins — knock those out first for early momentum before the three performance-based exams.',
+      'Because each cert has its own validity window, think about scheduling cadence up front so you\'re not racing to renew an early cert before you\'ve sat the later ones.',
+    ],
+    retakeNote: 'the full five-exam bundle; retakes on individual exams follow that exam\'s own eligibility window',
+    faqs: [
+      { q: 'What is Kubestronaut?', a: 'Kubestronaut is CNCF\'s official recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — simultaneously.' },
+      { q: 'How much does the Kubestronaut bundle cost with a discount code?', a: `List price is $${1645} for all five exams. With RUSHABH30 it drops to about $${1151}, a saving of roughly $494 — the largest single saving RUSHABH30 produces on any purchase.` },
+      { q: 'Do I have to pass all five exams at once?', a: 'No — buying the bundle just locks in the discounted price for all five; you can schedule and sit each exam on your own timeline within your eligibility window.' },
+      { q: 'Which exam should I take first in the bundle?', a: 'KCNA is the common starting point since it\'s multiple choice and builds vocabulary the other four assume you already know. Save CKS for last since it requires an active CKA.' },
+      { q: 'Is there an even bigger bundle than Kubestronaut?', a: 'Yes — the Golden Kubestronaut bundle adds every other CNCF associate exam plus LFCS on top of the five Kubestronaut certs, for engineers going for the full catalog.' },
+    ],
+  },
+];
+
 /* ---------- helpers ---------- */
 
 const escapeHtml = (s = '') => String(s)
@@ -652,6 +860,7 @@ const sitemapUrls = [
   { loc: `${SITE}/`, priority: '1.0', changefreq: 'monthly', lastmod: gitLastMod('index.html') },
   { loc: `${SITE}/blog/`, priority: '0.9', changefreq: 'weekly', lastmod: all.length ? isoDate(all[0].updated).slice(0, 10) : null },
   { loc: `${SITE}/linux-foundation-coupon/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('linux-foundation-coupon/index.html') },
+  ...CERT_PAGES.map(c => ({ loc: `${SITE}/linux-foundation-coupon/${c.slug}/`, priority: '0.8', changefreq: 'weekly', lastmod: gitLastMod(`linux-foundation-coupon/${c.slug}/index.html`) })),
   { loc: `${SITE}/links/`, priority: '0.5', changefreq: 'monthly', lastmod: gitLastMod('links/index.html') },
   { loc: `${SITE}/privacy/`, priority: '0.2', changefreq: 'yearly', lastmod: gitLastMod('privacy/index.html') },
   ...all.map(p => ({ loc: `${SITE}/blog/${p.slug}/`, priority: '0.8', lastmod: isoDate(p.updated).slice(0, 10) })),
@@ -752,6 +961,257 @@ for (const page of ['index.html', 'linux-foundation-coupon/index.html', 'privacy
     console.log(`✅ inlined   ${label} CSS (${Math.round(cssMin.length / 1024)} KiB)`);
   }
 }
+
+/* ---------- dedicated per-certification discount pages ----------
+   Generated fully at build time (unlike the hand-authored coupon page, so no
+   regex-stamping needed — the correct month/date is just interpolated once).
+   CSS is embedded pre-minified from the start; no separate inlining pass. */
+
+const certHeader = `
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
+            <a href="/" class="text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
+            <div class="hidden md:flex space-x-6 text-sm">
+                <a href="/#about" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
+                <a href="/blog/" class="text-gray-400 hover:text-primary-color transition-colors">./blog</a>
+                <a href="/linux-foundation-coupon/" class="text-primary-color transition-colors" aria-current="true">./deals</a>
+                <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
+            </div>
+            <button id="menu-btn" class="md:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
+        </nav>
+        <div id="site-menu" class="hidden md:hidden bg-terminal-header/90 font-fira">
+            <a href="/#about" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./about</a>
+            <a href="/blog/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./blog</a>
+            <a href="/linux-foundation-coupon/" class="block py-2 px-4 text-sm text-primary-color">./deals</a>
+            <a href="/#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
+        </div>
+    </header>`;
+
+const certFooter = `
+    <footer class="border-t border-border-color mt-10">
+        <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-fira text-gray-500">
+            <p>&copy; <span id="footer-year">${now.getFullYear()}</span> ${AUTHOR} &middot; Designed &amp; built with care.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://github.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">GitHub</a>
+                <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">LinkedIn</a>
+                <a href="/blog/rss.xml" class="hover:text-primary-color">RSS</a>
+                <a href="/privacy/" class="hover:text-primary-color">Privacy</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const y = document.getElementById('footer-year');
+            if (y) y.textContent = new Date().getFullYear();
+            document.querySelectorAll('.copy-code').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(btn.dataset.code).then(() => {
+                        const t = btn.textContent;
+                        btn.textContent = 'Copied!';
+                        setTimeout(() => { btn.textContent = t; }, 2000);
+                    }).catch(() => {});
+                });
+            });
+            const b = document.getElementById('menu-btn');
+            const m = document.getElementById('site-menu');
+            if (b && m) {
+                b.addEventListener('click', () => {
+                    const open = m.classList.contains('hidden');
+                    m.classList.toggle('hidden', !open);
+                    b.setAttribute('aria-expanded', String(open));
+                });
+            }
+        });
+    </script>`;
+
+function certPageHtml(c, siblings) {
+  const url = `${SITE}/linux-foundation-coupon/${c.slug}/`;
+  const title = `${c.name} Discount Code (${MONTH_YEAR}): 30% Off with RUSHABH30`;
+  const description = `Code RUSHABH30 gets 30% off the ${c.fullName} (${c.name}) exam${c.slug === 'kubestronaut' ? ' bundle' : ''}: ~$${c.priceDiscounted} instead of $${c.priceList}. Verified partner code, no expiry.`;
+  const savings = c.priceList - c.priceDiscounted;
+  const cModPath = `linux-foundation-coupon/${c.slug}/index.html`;
+  const dateModified = gitLastMod(cModPath) || now.toISOString().slice(0, 10);
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: c.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  };
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Linux Foundation Coupon', item: `${SITE}/linux-foundation-coupon/` },
+      { '@type': 'ListItem', position: 3, name: `${c.name} Discount`, item: url },
+    ],
+  };
+  const webPageJsonLd = {
+    '@context': 'https://schema.org', '@type': 'WebPage',
+    '@id': `${url}#webpage`, url, name: title, description, inLanguage: 'en',
+    datePublished: '2026-08-10', dateModified,
+    isPartOf: { '@type': 'WebSite', name: 'rushabhshah.dev', url: `${SITE}/` },
+    author: { '@id': `${SITE}/#person` }, publisher: { '@id': `${SITE}/#person` },
+  };
+
+  return `<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#010409">
+
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}">
+    <meta name="author" content="${AUTHOR}">
+    <link rel="canonical" href="${url}">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="${url}">
+    <meta property="og:title" content="${escapeHtml(title)}">
+    <meta property="og:description" content="${escapeHtml(description)}">
+    <meta property="og:image" content="${SITE}/assets/og-lf-coupon.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeHtml(title)}">
+    <meta name="twitter:description" content="${escapeHtml(description)}">
+    <meta name="twitter:image" content="${SITE}/assets/og-lf-coupon.jpg">
+
+    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
+    <style data-inline-css>${cssMin}</style>
+    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+
+    <script type="application/ld+json">${JSON.stringify(faqJsonLd)}</script>
+    <script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd)}</script>
+    <script type="application/ld+json">${JSON.stringify(webPageJsonLd)}</script>
+</head>
+<body>${certHeader}
+    <main id="main" class="container mx-auto px-6 py-12">
+        <article class="max-w-3xl mx-auto">
+            <header class="mb-10">
+                <p class="font-fira text-sm mb-6"><a href="/linux-foundation-coupon/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../linux-foundation-coupon</a></p>
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight mb-5">
+                    ${escapeHtml(c.name)} Discount Code: <span class="gradient-text">30% Off</span> with RUSHABH30
+                </h1>
+                <p class="font-fira text-sm text-gray-400 mb-8">Updated ${MONTH_YEAR} &middot; ${escapeHtml(c.fullName)}</p>
+                <div class="flex flex-wrap items-center gap-5">
+                    <span class="code-box">
+                        RUSHABH30
+                        <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
+                    </span>
+                    <a href="https://training.linuxfoundation.org/" target="_blank" rel="noopener sponsored" class="btn btn-primary">Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted} &rarr;</a>
+                </div>
+            </header>
+
+            <div class="post-prose">
+                <p>
+                    Put <code>RUSHABH30</code> in the coupon field at checkout on
+                    <a href="https://training.linuxfoundation.org/" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
+                    and the ${escapeHtml(c.fullName)} (${escapeHtml(c.name)})${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} drops from $${c.priceList} to about $${c.priceDiscounted} &mdash; a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+                </p>
+
+                <h2 id="quick-facts">Quick facts</h2>
+                <table>
+                    <tbody>
+                        <tr><td><strong>Format</strong></td><td>${escapeHtml(c.format)}</td></tr>
+                        <tr><td><strong>Duration</strong></td><td>${escapeHtml(c.duration)}</td></tr>
+                        <tr><td><strong>List price</strong></td><td>$${c.priceList}</td></tr>
+                        <tr><td><strong>With RUSHABH30</strong></td><td>~$${c.priceDiscounted}</td></tr>
+                        <tr><td><strong>Prerequisite</strong></td><td>${c.prerequisite ? escapeHtml(c.prerequisite) : 'None'}</td></tr>
+                    </tbody>
+                </table>
+
+                <h2 id="who-its-for">Who this is for</h2>
+                <p>${escapeHtml(c.audience)}</p>
+
+                <h2 id="what-it-covers">What it covers</h2>
+                <ul>
+                    ${c.topics.map(t => `<li>${escapeHtml(t)}</li>`).join('\n                    ')}
+                </ul>
+                <p><em>Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.</em></p>
+
+                <h2 id="why-it-matters">Why it's worth it</h2>
+                <p>${c.why}</p>
+
+                <h2 id="prep-tips">Prep tips</h2>
+                <ul>
+                    ${c.prepTips.map(t => `<li>${escapeHtml(t)}</li>`).join('\n                    ')}
+                </ul>
+
+                <h2 id="how-to-use">How to use the code</h2>
+                <ol>
+                    <li>Add the ${escapeHtml(c.name)}${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} to your cart on <a href="https://training.linuxfoundation.org/" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
+                    <li>Enter <code>RUSHABH30</code> in the coupon field at checkout.</li>
+                    <li>The total drops 30%. RUSHABH30 works on ${c.retakeNote}.</li>
+                </ol>
+            </div>
+
+            <div class="tech-card p-5 rounded-md mt-8 flex flex-wrap items-center justify-between gap-4">
+                <span class="code-box">
+                    RUSHABH30
+                    <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
+                </span>
+                <a href="https://training.linuxfoundation.org/" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
+            </div>
+
+            <div class="post-prose mt-8">
+                <h2 id="faq">Frequently asked questions</h2>
+            </div>
+            <div class="faq mt-5">
+                ${c.faqs.map(f => `<details>
+                    <summary>${escapeHtml(f.q)}</summary>
+                    <div>${escapeHtml(f.a)}</div>
+                </details>`).join('\n                ')}
+            </div>
+
+            <div class="post-prose mt-8">
+                <h2 id="other-certs">Other Linux Foundation &amp; CNCF certifications</h2>
+                <p>RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just ${escapeHtml(c.name)}. Dedicated discount guides:</p>
+                <ul>
+                    ${siblings.filter(s => s.slug !== c.slug).map(s => `<li><a href="/linux-foundation-coupon/${s.slug}/">${escapeHtml(s.name)} discount code</a></li>`).join('\n                    ')}
+                </ul>
+                <p>Or see the <a href="/linux-foundation-coupon/">full Linux Foundation coupon overview</a> for pricing across the whole catalog, including KCSA, PCA, OTCA, ICA, CCA, CGOA, CAPA, and LFCA.</p>
+            </div>
+
+            <aside class="tech-card p-5 rounded-md mt-8">
+                <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># Affiliate disclosure</p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this
+                    page or use code <strong class="text-white">RUSHABH30</strong>, I may earn a commission, at no
+                    extra cost to you (you save 30% either way).
+                </p>
+            </aside>
+        </article>
+    </main>${certFooter}
+</body>
+</html>
+`;
+}
+
+const certLiveSlugs = new Set(CERT_PAGES.map(c => c.slug));
+const certOutDir = path.join(ROOT, 'linux-foundation-coupon');
+if (fs.existsSync(certOutDir)) {
+  for (const entry of fs.readdirSync(certOutDir, { withFileTypes: true })) {
+    if (entry.isDirectory() && !certLiveSlugs.has(entry.name)) {
+      fs.rmSync(path.join(certOutDir, entry.name), { recursive: true });
+      console.log(`🗑  pruned    /linux-foundation-coupon/${entry.name}/`);
+    }
+  }
+}
+for (const c of CERT_PAGES) {
+  const html = certPageHtml(c, CERT_PAGES);
+  const dir = path.join(certOutDir, c.slug);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  const md = htmlFragmentToMarkdown(extractMirrorRegion(html));
+  fs.writeFileSync(path.join(dir, 'index.html.md'), md);
+}
+console.log(`✅ built     /linux-foundation-coupon/{${CERT_PAGES.map(c => c.slug).join(',')}}/`);
 
 /* ---------- markdown mirrors for hand-authored pages ----------
    Runs after stamping/CSS-inlining above so the mirror reflects final content.

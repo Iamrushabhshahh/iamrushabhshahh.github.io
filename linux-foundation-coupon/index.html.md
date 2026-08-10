@@ -51,27 +51,27 @@ Same answer for every one of them: `RUSHABH30` takes 30% off each certification 
 
 ### CKA coupon code
 
-The Certified Kubernetes Administrator exam lists at $445, so the code brings it to about $311. It also applies to the CKA course + exam bundle, which is the better buy if you want structured prep included. This is the certification I recommend most often to working DevOps and platform engineers.
+The Certified Kubernetes Administrator exam lists at $445, so the code brings it to about $311. It also applies to the CKA course + exam bundle, which is the better buy if you want structured prep included. This is the certification I recommend most often to working DevOps and platform engineers. [Full CKA discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/cka/)
 
 ### CKAD discount code
 
-Same math as the CKA: $445 list, about $311 with `RUSHABH30`. If you build services that run on Kubernetes but don't administer clusters, CKAD is the right exam, and it's a shorter, faster-paced test than the CKA.
+Same math as the CKA: $445 list, about $311 with `RUSHABH30`. If you build services that run on Kubernetes but don't administer clusters, CKAD is the right exam, and it's a shorter, faster-paced test than the CKA. [Full CKAD discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
 
 ### CKS discount code
 
-The Certified Kubernetes Security Specialist lists at $445 and drops to about $311 with the code. Remember you need a valid CKA before you can sit the CKS. If you already hold the CKA, this is one of the strongest security signals you can add to a DevOps CV right now.
+The Certified Kubernetes Security Specialist lists at $445 and drops to about $311 with the code. Remember you need a valid CKA before you can sit the CKS. If you already hold the CKA, this is one of the strongest security signals you can add to a DevOps CV right now. [Full CKS discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/cks/)
 
 ### KCNA coupon code
 
-The entry-level Kubernetes and Cloud Native Associate is $250 list, about $175 with the code. Multiple choice, no live terminal, and the best starting point if you're a student or moving into cloud-native from another field.
+The entry-level Kubernetes and Cloud Native Associate is $250 list, about $175 with the code. Multiple choice, no live terminal, and the best starting point if you're a student or moving into cloud-native from another field. [Full KCNA discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
 
 ### KCSA discount code
 
-Also $250 down to about $175. KCSA pairs naturally with KCNA if you want to show security awareness early in your career without committing to the full CKA-then-CKS path yet.
+Also $250 down to about $175. KCSA pairs naturally with KCNA if you want to show security awareness early in your career without committing to the full CKA-then-CKS path yet. [Full KCSA discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
 
 ### LFCS coupon code
 
-The Linux Foundation Certified System Administrator lists at $445, about $311 with the code. Honestly underrated: if your Kubernetes debugging sessions keep turning into Linux debugging sessions, do this one first.
+The Linux Foundation Certified System Administrator lists at $445, about $311 with the code. Honestly underrated: if your Kubernetes debugging sessions keep turning into Linux debugging sessions, do this one first. [Full LFCS discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
 
 ### PCA (Prometheus) discount code
 
@@ -103,7 +103,7 @@ The Linux Foundation Certified IT Associate is the gentlest entry point of all o
 
 ### Kubestronaut bundle discount
 
-Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, CKS)? The code applies to bundles too, and on a five-exam bundle it produces the single biggest saving you can get from it. Check the current bundle price in the catalog, then take 30% off that.
+Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, CKS)? The code applies to bundles too, and on a five-exam bundle it produces the single biggest saving you can get from it. Check the current bundle price in the catalog, then take 30% off that. [Full Kubestronaut bundle guide & savings math &rarr;](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
 
 ## How to use it
 
