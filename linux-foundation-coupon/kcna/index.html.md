@@ -6,9 +6,9 @@ Updated August 2026 &middot; Kubernetes and Cloud Native Associate
 
 RUSHABH30
 
-[Get KCNA for ~$175 &rarr;](https://training.linuxfoundation.org/)
+[Get KCNA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://training.linuxfoundation.org/) and the Kubernetes and Cloud Native Associate (KCNA) exam drops from $250 to about $175 &mdash; a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F) and the Kubernetes and Cloud Native Associate (KCNA) exam drops from $250 to about $175 &mdash; a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -45,13 +45,13 @@ KCNA is the entry point built for people who aren't ready for a live-terminal ex
 
 ## How to use the code
 
-- Add the KCNA exam to your cart on [training.linuxfoundation.org](https://training.linuxfoundation.org/).
+- Add the KCNA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F).
 - Enter `RUSHABH30` in the coupon field at checkout.
 - The total drops 30%. RUSHABH30 works on the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window.
 
 RUSHABH30
 
-[Apply it at checkout &rarr;](https://training.linuxfoundation.org/)
+[Apply it at checkout &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
 
 ## Frequently asked questions
 

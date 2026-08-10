@@ -30,6 +30,10 @@ const POSTS_DIR = path.join(ROOT, 'content', 'posts');
 const OUT_DIR = path.join(ROOT, 'blog');
 const SITE = 'https://rushabhshah.dev';
 const AUTHOR = 'Rushabh Shah';
+// AWIN deep link for The Linux Foundation (US) — advertiser 85919, publisher
+// 2950265 — generated via AWIN's Link Builder. Without this, RUSHABH30
+// clicks reach training.linuxfoundation.org untracked and earn no commission.
+const AWIN_LINK = 'https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F';
 const BLOG_TITLE = 'Rushabh Shah · Blog';
 const BLOG_DESC = 'Articles on DevOps, Kubernetes, Docker, observability (Grafana LGTM stack, OpenTelemetry), cloud cost optimization, and Linux, by Rushabh Shah, Docker Captain & Grafana Champion.';
 
@@ -1104,14 +1108,14 @@ function certPageHtml(c, siblings) {
                         RUSHABH30
                         <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                     </span>
-                    <a href="https://training.linuxfoundation.org/" target="_blank" rel="noopener sponsored" class="btn btn-primary">Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted} &rarr;</a>
+                    <a href="${AWIN_LINK}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted} &rarr;</a>
                 </div>
             </header>
 
             <div class="post-prose">
                 <p>
                     Put <code>RUSHABH30</code> in the coupon field at checkout on
-                    <a href="https://training.linuxfoundation.org/" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
+                    <a href="${AWIN_LINK}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
                     and the ${escapeHtml(c.fullName)} (${escapeHtml(c.name)})${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} drops from $${c.priceList} to about $${c.priceDiscounted} &mdash; a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
                 </p>
 
@@ -1145,7 +1149,7 @@ function certPageHtml(c, siblings) {
 
                 <h2 id="how-to-use">How to use the code</h2>
                 <ol>
-                    <li>Add the ${escapeHtml(c.name)}${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} to your cart on <a href="https://training.linuxfoundation.org/" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
+                    <li>Add the ${escapeHtml(c.name)}${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} to your cart on <a href="${AWIN_LINK}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
                     <li>Enter <code>RUSHABH30</code> in the coupon field at checkout.</li>
                     <li>The total drops 30%. RUSHABH30 works on ${c.retakeNote}.</li>
                 </ol>
@@ -1156,7 +1160,7 @@ function certPageHtml(c, siblings) {
                     RUSHABH30
                     <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                 </span>
-                <a href="https://training.linuxfoundation.org/" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
+                <a href="${AWIN_LINK}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">

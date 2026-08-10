@@ -4,11 +4,11 @@ Updated August 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
 RUSHABH30
 
-[Open the catalog →](https://training.linuxfoundation.org/)
+[Open the catalog →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
 
 Last verified: August 2026
 
-The short version: put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://training.linuxfoundation.org/) and the total drops by 30%. It works on the whole training catalog, every day of the year. The rest of this page is context: where the code comes from, what the popular certifications actually cost with it, and the advice I give people at meetups about which one is worth their money.
+The short version: put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F) and the total drops by 30%. It works on the whole training catalog, every day of the year. The rest of this page is context: where the code comes from, what the popular certifications actually cost with it, and the advice I give people at meetups about which one is worth their money.
 
 ## Where this code comes from
 
@@ -29,7 +29,7 @@ These are the certifications people ask me about most, with the math already don
 | **[KCSA](#kcsa-discount)** (Kubernetes and Cloud Native Security Associate) | Security beginners | $250 | ~$175 |
 | **[LFCS](#lfcs-coupon)** (Linux Foundation Certified SysAdmin) | Linux fundamentals, any infra role | $445 | ~$311 |
 
-**List prices when I last updated this page (August 2026), so check the [official catalog](https://training.linuxfoundation.org/) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
+**List prices when I last updated this page (August 2026), so check the [official catalog](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
 
 ### Bundle savings, in dollars
 
@@ -43,7 +43,7 @@ Percentages hide how much money this actually is, so here is the bundle math:
 
 RUSHABH30
 
-[Apply it at checkout →](https://training.linuxfoundation.org/)
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
 
 ## Looking for a discount on one specific exam?
 
@@ -107,7 +107,7 @@ Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, C
 
 ## How to use it
 
-- Add your certification, course, or bundle to the cart on [training.linuxfoundation.org](https://training.linuxfoundation.org/).
+- Add your certification, course, or bundle to the cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F).
 - At checkout, find the coupon field and enter `RUSHABH30`.
 - The total drops 30%. Pay, done.
 
@@ -135,7 +135,7 @@ The rule of thumb: codes don't stack, so it's always one or the other. If a seas
 
 Ready? The code is RUSHABH30. 30% off, no expiry.
 
-[Pick your certification →](https://training.linuxfoundation.org/)
+[Pick your certification →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
 
 ## Past Linux Foundation sales, and when the next one lands
 
