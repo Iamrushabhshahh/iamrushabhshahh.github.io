@@ -6,9 +6,9 @@ Updated August 2026 &middot; Linux Foundation Certified System Administrator
 
 RUSHABH30
 
-[Get LFCS for ~$311 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
+[Get LFCS for ~$311 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F) and the Linux Foundation Certified System Administrator (LFCS) exam drops from $445 to about $311 &mdash; a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F) and the Linux Foundation Certified System Administrator (LFCS) exam drops from $445 to about $311 &mdash; a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -47,13 +47,13 @@ LFCS is honestly underrated in a Kubernetes-heavy job market: a lot of "Kubernet
 
 ## How to use the code
 
-- Add the LFCS exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F).
+- Add the LFCS exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F).
 - Enter `RUSHABH30` in the coupon field at checkout.
 - The total drops 30%. RUSHABH30 works on the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window.
 
 RUSHABH30
 
-[Apply it at checkout &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
+[Apply it at checkout &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F)
 
 ## Frequently asked questions
 

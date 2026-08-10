@@ -33,7 +33,11 @@ const AUTHOR = 'Rushabh Shah';
 // AWIN deep link for The Linux Foundation (US) — advertiser 85919, publisher
 // 2950265 — generated via AWIN's Link Builder. Without this, RUSHABH30
 // clicks reach training.linuxfoundation.org untracked and earn no commission.
-const AWIN_LINK = 'https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F';
+// awinLink() wraps any destination on that domain with the same tracking
+// params (verified against AWIN's own Link Builder output byte-for-byte),
+// so each cert page can send its "Get X" button straight to that exam's own
+// page instead of the generic catalog.
+const awinLink = (dest) => `https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=${encodeURIComponent(dest)}`;
 const BLOG_TITLE = 'Rushabh Shah · Blog';
 const BLOG_DESC = 'Articles on DevOps, Kubernetes, Docker, observability (Grafana LGTM stack, OpenTelemetry), cloud cost optimization, and Linux, by Rushabh Shah, Docker Captain & Grafana Champion.';
 
@@ -54,6 +58,7 @@ const BLOG_DESC = 'Articles on DevOps, Kubernetes, Docker, observability (Grafan
 const CERT_PAGES = [
   {
     slug: 'cka', name: 'CKA', fullName: 'Certified Kubernetes Administrator',
+    dest: 'https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/',
     format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
     priceList: 445, priceDiscounted: 311, prerequisite: null,
     audience: 'Ops, platform engineering, and SRE roles who run Kubernetes clusters day to day.',
@@ -81,6 +86,7 @@ const CERT_PAGES = [
   },
   {
     slug: 'ckad', name: 'CKAD', fullName: 'Certified Kubernetes Application Developer',
+    dest: 'https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/',
     format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
     priceList: 445, priceDiscounted: 311, prerequisite: null,
     audience: 'Developers who build and deploy applications to Kubernetes, without administering the underlying cluster.',
@@ -108,6 +114,7 @@ const CERT_PAGES = [
   },
   {
     slug: 'cks', name: 'CKS', fullName: 'Certified Kubernetes Security Specialist',
+    dest: 'https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/',
     format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
     priceList: 445, priceDiscounted: 311, prerequisite: 'an active CKA certification',
     audience: 'Security engineers and platform engineers who already hold the CKA and want the strongest Kubernetes security credential available.',
@@ -135,6 +142,7 @@ const CERT_PAGES = [
   },
   {
     slug: 'kcna', name: 'KCNA', fullName: 'Kubernetes and Cloud Native Associate',
+    dest: 'https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/',
     format: 'Multiple choice', duration: '90 minutes',
     priceList: 250, priceDiscounted: 175, prerequisite: null,
     audience: 'Students, career-changers, and anyone moving into cloud-native from another field who wants a beginner-friendly starting point.',
@@ -162,6 +170,7 @@ const CERT_PAGES = [
   },
   {
     slug: 'kcsa', name: 'KCSA', fullName: 'Kubernetes and Cloud Native Security Associate',
+    dest: 'https://training.linuxfoundation.org/certification/kubernetes-and-cloud-native-security-associate-kcsa/',
     format: 'Multiple choice', duration: '90 minutes',
     priceList: 250, priceDiscounted: 175, prerequisite: null,
     audience: 'Beginners who want security awareness early in their cloud-native career, without committing to the full CKA-then-CKS path yet.',
@@ -189,6 +198,7 @@ const CERT_PAGES = [
   },
   {
     slug: 'lfcs', name: 'LFCS', fullName: 'Linux Foundation Certified System Administrator',
+    dest: 'https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/',
     format: 'Performance-based (live terminal, real system)', duration: '2 hours',
     priceList: 445, priceDiscounted: 311, prerequisite: null,
     audience: 'Anyone in an infrastructure role — not Kubernetes-specific — who wants a hands-on Linux fundamentals credential.',
@@ -218,6 +228,7 @@ const CERT_PAGES = [
   },
   {
     slug: 'kubestronaut', name: 'Kubestronaut bundle', fullName: 'Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)',
+    dest: 'https://training.linuxfoundation.org/certification/kubestronaut-bundle/',
     format: 'Bundle of 5 exams (2 multiple-choice, 3 performance-based)', duration: 'Varies per exam',
     priceList: 1645, priceDiscounted: 1151, prerequisite: 'CKS specifically requires an active CKA',
     audience: 'Engineers pursuing official Kubestronaut recognition from CNCF, or anyone who\'s decided to complete the full Kubernetes certification track.',
@@ -1108,14 +1119,14 @@ function certPageHtml(c, siblings) {
                         RUSHABH30
                         <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                     </span>
-                    <a href="${AWIN_LINK}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted} &rarr;</a>
+                    <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted} &rarr;</a>
                 </div>
             </header>
 
             <div class="post-prose">
                 <p>
                     Put <code>RUSHABH30</code> in the coupon field at checkout on
-                    <a href="${AWIN_LINK}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
+                    <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
                     and the ${escapeHtml(c.fullName)} (${escapeHtml(c.name)})${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} drops from $${c.priceList} to about $${c.priceDiscounted} &mdash; a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
                 </p>
 
@@ -1149,7 +1160,7 @@ function certPageHtml(c, siblings) {
 
                 <h2 id="how-to-use">How to use the code</h2>
                 <ol>
-                    <li>Add the ${escapeHtml(c.name)}${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} to your cart on <a href="${AWIN_LINK}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
+                    <li>Add the ${escapeHtml(c.name)}${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} to your cart on <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
                     <li>Enter <code>RUSHABH30</code> in the coupon field at checkout.</li>
                     <li>The total drops 30%. RUSHABH30 works on ${c.retakeNote}.</li>
                 </ol>
@@ -1160,7 +1171,7 @@ function certPageHtml(c, siblings) {
                     RUSHABH30
                     <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                 </span>
-                <a href="${AWIN_LINK}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
+                <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">
