@@ -8,7 +8,7 @@ Personal site + markdown blog, served by GitHub Pages.
 
 - Posts are markdown files in `content/posts/`.
 - `scripts/build-blog.mjs` renders them into static HTML under `blog/`, plus `blog/rss.xml` and `sitemap.xml`.
-- `.github/workflows/publish-blog.yml` builds on every push **and hourly** — the hourly run is what makes scheduled publishing work. Generated files are committed back to `main`, and GitHub Pages serves them.
+- `.github/workflows/publish-blog.yml` builds on every push **and once daily** (00:10 IST) — the daily run is what makes scheduled publishing work. Generated files are committed back to `main`, and GitHub Pages serves them.
 
 ## Publishing a post
 
