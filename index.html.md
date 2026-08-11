@@ -129,7 +129,6 @@ Organize and host the Ahmedabad chapter, a quarterly community meetup focused on
 (https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/)
 
 [Read the blog](https://rushabhshah.dev/blog/)
-[Older posts on Hashnode](https://iamrushabhshahh.hashnode.dev/)
 
 ## 07. Get In Touch
 
