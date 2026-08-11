@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
+    <meta name="color-scheme" content="dark">
     <title>404 · Path not found · Rushabh Shah</title>
     <meta name="robots" content="noindex">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
     <style>
+        /* Self-hosted, same as style.css — this page renders standalone (GitHub Pages
+           serves it directly on unmatched paths) so it can't rely on any external stylesheet. */
+        @font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/assets/fonts/inter-var.woff2') format('woff2-variations'); }
+        @font-face { font-family: 'Fira Code'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('/assets/fonts/fira-code-var.woff2') format('woff2-variations'); }
         :root {
             --bg-color: #010409;
             --primary-color: #58a6ff;

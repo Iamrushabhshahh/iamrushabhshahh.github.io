@@ -2,7 +2,7 @@ Currently DevOps Engineer @ Oro · Ahmedabad, India
 
 # Hi, I'm Rushabh Shah.
 
-$
+$ DevOps Engineer, Docker Captain, Grafana Champion, SRE Enthusiast, and Community Organizer.
 
 Docker Captain & Grafana Champion. I build and automate cloud-native infrastructure on Kubernetes, ship reliable observability, and simplify complex cloud concepts for the community.
 
