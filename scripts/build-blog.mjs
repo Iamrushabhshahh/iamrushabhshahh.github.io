@@ -940,6 +940,7 @@ const sitemapUrls = [
   { loc: `${SITE}/blog/`, priority: '0.9', changefreq: 'weekly', lastmod: all.length ? isoDate(all[0].updated).slice(0, 10) : null },
   { loc: `${SITE}/linux-foundation-coupon/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('linux-foundation-coupon/index.html') },
   ...CERT_PAGES.map(c => ({ loc: `${SITE}/linux-foundation-coupon/${c.slug}/`, priority: '0.8', changefreq: 'weekly', lastmod: gitLastMod(`linux-foundation-coupon/${c.slug}/index.html`) })),
+  { loc: `${SITE}/docker-captain/`, priority: '0.7', changefreq: 'monthly', lastmod: gitLastMod('docker-captain/index.html') },
   { loc: `${SITE}/links/`, priority: '0.5', changefreq: 'monthly', lastmod: gitLastMod('links/index.html') },
   { loc: `${SITE}/privacy/`, priority: '0.2', changefreq: 'yearly', lastmod: gitLastMod('privacy/index.html') },
   ...all.map(p => ({ loc: `${SITE}/blog/${p.slug}/`, priority: '0.8', lastmod: isoDate(p.updated).slice(0, 10) })),
@@ -1023,7 +1024,7 @@ const cssMin = fs.readFileSync(path.join(ROOT, 'style.css'), 'utf8')
   .replace(/: /g, ':')                // trim after colons (safe: descendant-combinator spaces sit before the colon)
   .trim();
 
-for (const page of ['index.html', 'linux-foundation-coupon/index.html', 'privacy/index.html', 'links/index.html']) {
+for (const page of ['index.html', 'linux-foundation-coupon/index.html', 'privacy/index.html', 'links/index.html', 'docker-captain/index.html']) {
   const p = path.join(ROOT, page);
   if (!fs.existsSync(p)) continue;
   const html = fs.readFileSync(p, 'utf8');
@@ -1533,7 +1534,7 @@ function swapMarker(html, marker, inner) {
    https://llmstxt.org proposes a clean markdown version of every page at the
    same URL with .md appended (index.html.md for extensionless URLs). */
 
-for (const page of ['index.html', 'linux-foundation-coupon/index.html', 'privacy/index.html', 'links/index.html']) {
+for (const page of ['index.html', 'linux-foundation-coupon/index.html', 'privacy/index.html', 'links/index.html', 'docker-captain/index.html']) {
   const p = path.join(ROOT, page);
   if (!fs.existsSync(p)) continue;
   const html = fs.readFileSync(p, 'utf8');

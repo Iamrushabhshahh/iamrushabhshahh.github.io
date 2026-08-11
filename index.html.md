@@ -6,7 +6,7 @@ Hi, I'm
 
 $ DevOps Engineer, Docker Captain, Grafana Champion, SRE Enthusiast, and Community Organizer.
 
-Docker Captain & Grafana Champion. I build and automate cloud-native infrastructure on Kubernetes, ship reliable observability, and simplify complex cloud concepts for the community.
+[Docker Captain](https://rushabhshah.dev/docker-captain/) & Grafana Champion. I build and automate cloud-native infrastructure on Kubernetes, ship reliable observability, and simplify complex cloud concepts for the community.
 
 [Get in touch](#contact)
 [Download résumé](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
@@ -66,7 +66,7 @@ Get the coupon code →
 
 ## 01. About Me
 
-Hi, I'm Rushabh, a DevOps Engineer based in Ahmedabad, India, currently at Oro, building reliable cloud infrastructure on Kubernetes with Helm, Argo CD, Terraform, and GitHub Actions. I'm a Docker Captain (selected 2026, ~220 members worldwide) and a Grafana Champion (selected 2026, ~110 worldwide).
+Hi, I'm Rushabh, a DevOps Engineer based in Ahmedabad, India, currently at Oro, building reliable cloud infrastructure on Kubernetes with Helm, Argo CD, Terraform, and GitHub Actions. I'm a [Docker Captain](https://rushabhshah.dev/docker-captain/) (selected 2026, ~220 members worldwide) and a Grafana Champion (selected 2026, ~110 worldwide).
 
 My focus areas are Kubernetes, CI/CD, IaC, observability with the Grafana LGTM stack (Loki, Grafana, Tempo, Mimir) and OpenTelemetry, and cloud cost optimization. Before Oro, I drove a 59% AWS spend reduction at Genuin, led a zero-downtime AWS→OCI migration under a hard deadline, and built ISO / SOC Type 1 readiness controls. I started out as a Laravel/PHP developer, then moved into DevOps via Tridhya Tech and KodeKloud, where I represented the team at KubeCon India 2024. I organize Grafana & Friends Ahmedabad, run workshops on Prometheus and the LGTM stack, and contribute to open source, including translating eBPF.io into Hindi. I'm also a Linux Foundation Education partner, so my community gets [30% off CKA, CKAD and CKS certifications](https://rushabhshah.dev/linux-foundation-coupon/) year-round.
 
@@ -82,7 +82,7 @@ Docker, Inc · Selected 2026
 
 Recognised by Docker, Inc. for technical expertise in containers and Kubernetes, real-world production experience, and consistent contribution to the global container community. The program includes ~220 members worldwide.
 
-(https://www.docker.com/contributors/rushabh-shah/)
+(https://rushabhshah.dev/docker-captain/)
 
 Grafana Labs · Selected 2026
 
