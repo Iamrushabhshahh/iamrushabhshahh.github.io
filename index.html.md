@@ -94,21 +94,129 @@ Grafana Labs' invitation-only program for contributors who advance the observabi
 
 ### Certifications
 
+Microsoft Certified: Azure Administrator Associate
+
+AZ-104
+
+Microsoft Certified: Azure Fundamentals
+
+AZ-900
+
 ## 03. Tech Stack
 
 The tools I reach for when building, shipping, and operating cloud infrastructure.
 
+\# Containers & Orchestration
+
+Kubernetes Docker Helm Argo CD
+
+\# IaC & Automation
+
+Terraform Ansible GitHub Actions
+
+\# Cloud Platforms
+
+AWS Azure GCP OCI
+
+\# Observability
+
+Prometheus Grafana Loki / Tempo / Mimir OpenTelemetry
+
+\# Languages & Tooling
+
+Linux Bash Python Git CI/CD
+
 ## 04. Where I've Worked
+
+### DevOps Engineer
+
+Current
+
+Oro
+
+Jun 2025 - Present
+
+Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.
+
+### Corporate Trainer
+
+Koenig Solutions Pvt. Ltd.
+
+Jun 2025 - Jul 2025
+
+Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.
+
+### DevOps Engineer
+
+Genuin
+
+Jan 2025 - May 2025
+
+Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.
+
+### Jr DevOps Engineer
+
+KodeKloud
+
+Jul 2024 - Dec 2024
+
+Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.
+
+### Jr DevOps Engineer
+
+Tridhya Tech Limited
+
+Jun 2023 - Jun 2024
+
+Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.
 
 ## 05. Things I've Built
 
 A small selection of open-source contributions, study material, and writing.
 
+### eBPF.io: Hindi Translation
+
+Translated the eBPF.io website into Hindi so Hindi-speaking engineers can learn about eBPF for networking, observability, and security on Linux.
+
+eBPF Open Source Linux i18n
+
+(https://ebpf.io/hi-in/)
+
+### AWS SAA-C03 Prep
+
+Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.
+
+AWS Certification Study Guide
+
+(https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution)
+
+### Azure AZ-104 Prep
+
+A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.
+
+Azure Certification DevOps
+
+(https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution)
+
+### Personal Tech Blog
+
+My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux. Earlier posts are archived on Hashnode.
+
+Blog Observability Linux DevOps
+
+(https://rushabhshah.dev/blog/)
+
 ## 06. Writing & Talks
 
 Latest posts from the blog and recent community engagements.
 
-Loading latest posts
+Jul 9, 2026 · 1 min read
+
+### Hello, world: the blog now lives on rushabhshah.dev
+
+Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.
+
+(https://rushabhshah.dev/blog/hello-world/)
 
 ### Speaking & Community
 

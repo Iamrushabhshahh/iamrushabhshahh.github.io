@@ -1286,6 +1286,229 @@ for (const c of CERT_PAGES) {
 }
 console.log(`✅ built     /linux-foundation-coupon/{${CERT_PAGES.map(c => c.slug).join(',')}}/`);
 
+/* ---------- homepage: pre-render Tech Stack, Certifications, Experience,
+   Projects, and Latest Posts ----------
+   These used to be built client-side from data arrays living inside
+   index.html's own <script> tag (so they were empty on first paint until JS
+   ran). Same data, ported here 1:1, rendered into index.html at build time
+   instead. Edit the data below, not index.html — index.html's markers get
+   overwritten on every build. */
+
+const ICON_PATHS = {
+  database: '<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>',
+  'git-branch': '<line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path>',
+  award: '<circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>',
+  folder: '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>',
+  'book-open': '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>',
+};
+const homeIcon = (name, cls = '') => `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${cls}">${ICON_PATHS[name] || ''}</svg>`;
+
+const SKILL_GROUPS = [
+  { label: 'Containers & Orchestration', items: [
+    { name: 'Kubernetes', si: 'kubernetes' },
+    { name: 'Docker', si: 'docker' },
+    { name: 'Helm', si: 'helm' },
+    { name: 'Argo CD', si: 'argo' },
+  ]},
+  { label: 'IaC & Automation', items: [
+    { name: 'Terraform', si: 'terraform' },
+    { name: 'Ansible', si: 'ansible' },
+    { name: 'GitHub Actions', si: 'githubactions' },
+  ]},
+  { label: 'Cloud Platforms', items: [
+    { name: 'AWS', if: 'logos/aws' },
+    { name: 'Azure', if: 'logos/microsoft-azure' },
+    { name: 'GCP', if: 'logos/google-cloud' },
+    { name: 'OCI', if: 'logos/oracle' },
+  ]},
+  { label: 'Observability', items: [
+    { name: 'Prometheus', si: 'prometheus' },
+    { name: 'Grafana', si: 'grafana' },
+    { name: 'Loki / Tempo / Mimir', icon: 'database' },
+    { name: 'OpenTelemetry', si: 'opentelemetry' },
+  ]},
+  { label: 'Languages & Tooling', items: [
+    { name: 'Linux', si: 'linux' },
+    { name: 'Bash', si: 'gnubash' },
+    { name: 'Python', si: 'python' },
+    { name: 'Git', si: 'git' },
+    { name: 'CI/CD', icon: 'git-branch' },
+  ]},
+];
+
+const CERTS = [
+  { name: 'Microsoft Certified: Azure Administrator Associate', code: 'AZ-104', icon: 'award' },
+  { name: 'Microsoft Certified: Azure Fundamentals', code: 'AZ-900', icon: 'award' },
+];
+
+const EXPERIENCE = [
+  { company: 'Oro', role: 'DevOps Engineer', date: 'Jun 2025 - Present', current: true,
+    desc: 'Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.' },
+  { company: 'Koenig Solutions Pvt. Ltd.', role: 'Corporate Trainer', date: 'Jun 2025 - Jul 2025',
+    desc: 'Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.' },
+  { company: 'Genuin', role: 'DevOps Engineer', date: 'Jan 2025 - May 2025',
+    desc: 'Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.' },
+  { company: 'KodeKloud', role: 'Jr DevOps Engineer', date: 'Jul 2024 - Dec 2024',
+    desc: 'Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.' },
+  { company: 'Tridhya Tech Limited', role: 'Jr DevOps Engineer', date: 'Jun 2023 - Jun 2024',
+    desc: 'Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.' },
+];
+
+const PROJECTS = [
+  { title: 'eBPF.io: Hindi Translation', desc: 'Translated the eBPF.io website into Hindi so Hindi-speaking engineers can learn about eBPF for networking, observability, and security on Linux.', link: 'https://ebpf.io/hi-in/', tags: ['eBPF', 'Open Source', 'Linux', 'i18n'], src: '/assets/ebpf-logo.svg' },
+  { title: 'AWS SAA-C03 Prep', desc: 'Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.', link: 'https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', repo: 'Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', tags: ['AWS', 'Certification', 'Study Guide'], if: 'logos/aws' },
+  { title: 'Azure AZ-104 Prep', desc: 'A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.', link: 'https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', repo: 'Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', tags: ['Azure', 'Certification', 'DevOps'], if: 'logos/microsoft-azure' },
+  { title: 'Personal Tech Blog', desc: 'My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux. Earlier posts are archived on Hashnode.', link: '/blog/', tags: ['Blog', 'Observability', 'Linux', 'DevOps'], feather: 'book-open' },
+];
+
+const renderSkillGroups = () => SKILL_GROUPS.map((group, gi) => {
+  const chips = group.items.map(s => {
+    let ic;
+    if (s.if) {
+      ic = `<img src="https://api.iconify.design/${s.if}.svg" alt="" loading="lazy" width="16" height="16">`;
+    } else if (s.si) {
+      ic = `<img class="mono-icon" src="https://cdn.simpleicons.org/${s.si}/c9d1d9" alt="" loading="lazy" width="16" height="16">`;
+    } else {
+      ic = homeIcon(s.icon, 'w-4 h-4');
+    }
+    return `<span class="chip">${ic}${escapeHtml(s.name)}</span>`;
+  }).join('');
+  return `<div class="flex flex-col md:flex-row md:items-center gap-4 stagger" style="--i: ${gi}">
+                    <div class="md:w-48 flex-shrink-0">
+                        <p class="font-fira text-xs uppercase tracking-wider text-gray-500"># ${escapeHtml(group.label)}</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2.5 flex-1">${chips}</div>
+                </div>`;
+}).join('');
+
+const renderCerts = () => CERTS.map(c => `<div class="tech-card p-5 rounded-md flex items-center gap-4">
+                    ${homeIcon(c.icon, 'text-primary-color w-6 h-6 flex-shrink-0')}
+                    <div>
+                        <p class="text-white font-semibold text-sm">${escapeHtml(c.name)}</p>
+                        <p class="text-xs font-fira text-gray-400 mt-1">${escapeHtml(c.code)}</p>
+                    </div>
+                </div>`).join('');
+
+const renderExperience = () => EXPERIENCE.map((item, i) => {
+  const dotClass = item.current ? 'timeline-dot timeline-dot-current' : 'timeline-dot';
+  const currentBadge = item.current ? `<span class="status-pill" style="font-size:0.7rem; padding:0.15rem 0.55rem;"><span class="dot"></span>Current</span>` : '';
+  return `<div class="ml-10 mb-10 tech-card p-6 rounded-md" style="--i: ${i}">
+                    <div class="absolute ${dotClass}" aria-hidden="true"></div>
+                    <div class="flex items-start justify-between gap-3 mb-1">
+                        <h3 class="text-xl font-bold text-white">${escapeHtml(item.role)}</h3>
+                        ${currentBadge}
+                    </div>
+                    <p class="text-primary-color mb-1">${escapeHtml(item.company)}</p>
+                    <time class="text-sm font-fira text-gray-400 block mb-2">${escapeHtml(item.date)}</time>
+                    ${item.desc ? `<p class="text-gray-400 text-sm leading-relaxed">${escapeHtml(item.desc)}</p>` : ''}
+                </div>`;
+}).join('');
+
+const renderProjects = () => PROJECTS.map((proj, i) => {
+  const tagsHtml = proj.tags.map(tag => `<span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">${escapeHtml(tag)}</span>`).join(' ');
+  let iconHtml;
+  if (proj.src) {
+    iconHtml = `<img src="${proj.src}" alt="" loading="lazy" width="70" height="24" class="h-6 w-auto">`;
+  } else if (proj.if) {
+    iconHtml = `<img src="https://api.iconify.design/${proj.if}.svg" alt="" loading="lazy" class="w-6 h-6">`;
+  } else if (proj.si) {
+    iconHtml = `<img src="https://cdn.simpleicons.org/${proj.si}/58a6ff" alt="" loading="lazy" class="w-6 h-6">`;
+  } else {
+    iconHtml = homeIcon(proj.feather || 'folder', 'text-primary-color');
+  }
+  const external = !proj.link.startsWith('/');
+  return `<a href="${proj.link}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''} class="tech-card p-6 rounded-md flex flex-col group" style="--i: ${i}">
+                    <div class="flex justify-between items-center mb-4">
+                        ${iconHtml}
+                        <div class="flex items-center gap-3">
+                            ${proj.repo ? `<span class="gh-stars font-fira text-xs text-gray-400" data-repo="${escapeHtml(proj.repo)}"></span>` : ''}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500 group-hover:text-primary-color w-4 h-4 transition-colors"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">${escapeHtml(proj.title)}</h3>
+                    <p class="text-gray-400 mb-4 flex-grow text-sm leading-relaxed">${escapeHtml(proj.desc)}</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        ${tagsHtml}
+                    </div>
+                </a>`;
+}).join('');
+
+const renderLatestPosts = () => {
+  if (!all.length) {
+    return `<a href="/blog/" class="tech-card p-6 rounded-md flex flex-col items-center justify-center text-center lg:col-span-3 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-color w-8 h-8 mb-3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        <h3 class="text-lg font-bold text-white mb-1">Read the blog</h3>
+                        <p class="text-gray-400 text-sm">Articles on DevOps, Kubernetes, observability, cloud cost, and Linux.</p>
+                    </a>`;
+  }
+  return all.slice(0, 3).map(p => {
+    const url = `/blog/${p.slug}/`;
+    const desc = p.description || '';
+    const descTrunc = escapeHtml(desc.slice(0, 140) + (desc.length > 140 ? '…' : ''));
+    return `<a href="${url}" class="tech-card rounded-md flex flex-col group overflow-hidden">
+                        ${p.cover ? `<img src="${p.cover}" alt="" loading="lazy" class="w-full h-36 object-cover">` : ''}
+                        <div class="p-5 flex flex-col flex-grow">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-fira text-gray-400">${fmtDate(p.date)} · ${p.minutes} min read</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500 group-hover:text-primary-color w-4 h-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white mb-2 leading-snug group-hover:text-primary-color transition-colors">${escapeHtml(p.title)}</h3>
+                            <p class="text-gray-400 text-sm flex-grow">${descTrunc}</p>
+                        </div>
+                    </a>`;
+  }).join('');
+};
+
+// Idempotent single-marker swap: finds the (unchanged, original) HTML comment
+// and replaces everything from right after it up to the closing tag of its
+// *own* enclosing element — found by tracking <div>/</div> nesting depth from
+// the marker's position, not a second textual marker. This is what makes a
+// second build safe: whatever a prior build already generated inside that
+// element is just more balanced <div> markup, so the depth count still lands
+// on the right closing tag whether the element is empty (first build) or
+// already full (every build after). Every element these markers live in is a
+// <div> — <a>/<svg>/<span> siblings inside the generated content are ignored,
+// which is fine, since only <div> nesting determines this boundary.
+function swapMarker(html, marker, inner) {
+  const marker_comment = `<!-- ${marker} -->`;
+  const startIdx = html.indexOf(marker_comment);
+  if (startIdx === -1) {
+    console.warn(`⚠️  marker "${marker}" not found on index.html — skipped`);
+    return html;
+  }
+  const contentStart = startIdx + marker_comment.length;
+  const tagRe = /<div\b[^>]*>|<\/div>/g;
+  tagRe.lastIndex = contentStart;
+  let depth = 1; // we're already inside the marker's enclosing <div>
+  let contentEnd = -1;
+  let m;
+  while ((m = tagRe.exec(html))) {
+    if (m[0] === '</div>') {
+      depth--;
+      if (depth === 0) { contentEnd = m.index; break; }
+    } else {
+      depth++;
+    }
+  }
+  if (contentEnd === -1) {
+    console.warn(`⚠️  marker "${marker}" has no balanced closing </div> — skipped`);
+    return html;
+  }
+  return html.slice(0, contentStart) + inner + html.slice(contentEnd);
+}
+
+{
+  const indexPath = path.join(ROOT, 'index.html');
+  let homeHtml = fs.readFileSync(indexPath, 'utf8');
+  homeHtml = swapMarker(homeHtml, 'Skill groups injected here', renderSkillGroups());
+  homeHtml = swapMarker(homeHtml, 'Certifications injected here', renderCerts());
+  homeHtml = swapMarker(homeHtml, 'Experience items will be injected here', renderExperience());
+  homeHtml = swapMarker(homeHtml, 'Projects will be injected here', renderProjects());
+  homeHtml = swapMarker(homeHtml, 'Latest blog posts injected from /blog/posts.json. Falls back to a static card.', renderLatestPosts());
+  fs.writeFileSync(indexPath, homeHtml);
+  console.log('✅ pre-rendered / (skills, certs, experience, projects, latest posts)');
+}
+
 /* ---------- markdown mirrors for hand-authored pages ----------
    Runs after stamping/CSS-inlining above so the mirror reflects final content.
    https://llmstxt.org proposes a clean markdown version of every page at the
