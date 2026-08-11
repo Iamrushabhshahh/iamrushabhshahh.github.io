@@ -642,7 +642,7 @@ for (const [postIndex, post] of all.entries()) {
     datePublished: isoDate(post.date),
     dateModified: isoDate(post.updated),
     url,
-    author: { '@type': 'Person', name: AUTHOR, url: SITE },
+    author: { '@id': `${SITE}/#person` },
     keywords: post.tags.join(', '),
     ...(post.cover ? { image: `${SITE}${post.cover}` } : {}),
   };
@@ -814,6 +814,16 @@ const indexBody = all.length === 0
   ? `<p class="text-gray-400 font-fira text-center py-12">No posts yet. First one is coming soon.</p>`
   : couponPromoSection + featuredSection + upcomingSection + yearSections + tagCloudSection;
 
+const blogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  '@id': `${SITE}/blog/#blog`,
+  name: BLOG_TITLE,
+  url: `${SITE}/blog/`,
+  description: BLOG_DESC,
+  author: { '@id': `${SITE}/#person` },
+};
+
 const indexHtml = `${head({ title: `Blog · ${AUTHOR}`, description: BLOG_DESC, url: `${SITE}/blog/` })}
 <body>
 ${header}
@@ -828,7 +838,7 @@ ${header}
 ${indexBody}
         </div>
     </main>
-${footer}`;
+${footer.replace('</body>', `<script type="application/ld+json">${JSON.stringify(blogJsonLd)}</script>\n</body>`)}`;
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(path.join(OUT_DIR, 'index.html'), indexHtml);
@@ -848,6 +858,15 @@ for (const [tag] of sortedTags) {
   const tSlug = slugify(tag);
   const posts = all.filter(p => p.tags.includes(tag));
   const url = `${SITE}/blog/tags/${tSlug}/`;
+  const tagJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${url}#collectionpage`,
+    name: `Posts tagged "${tag}"`,
+    url,
+    description: `All posts tagged ${tag}. ${BLOG_DESC}`,
+    author: { '@id': `${SITE}/#person` },
+  };
   const tagHtml = `${head({ title: `Posts tagged “${tag}” · ${AUTHOR}`, description: `All posts tagged ${tag}. ${BLOG_DESC}`, url })}
 <body>
 ${header}
@@ -865,7 +884,7 @@ ${header}
             </div>
         </div>
     </main>
-${footer}`;
+${footer.replace('</body>', `<script type="application/ld+json">${JSON.stringify(tagJsonLd)}</script>\n</body>`)}`;
   const dir = path.join(TAGS_DIR, tSlug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), tagHtml);
