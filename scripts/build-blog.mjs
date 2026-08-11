@@ -811,7 +811,7 @@ const indexBody = all.length === 0
   ? `<p class="text-gray-400 font-fira text-center py-12">No posts yet. First one is coming soon.</p>`
   : couponPromoSection + featuredSection + upcomingSection + yearSections + tagCloudSection;
 
-const indexHtml = `${head({ title: BLOG_TITLE, description: BLOG_DESC, url: `${SITE}/blog/` })}
+const indexHtml = `${head({ title: `Blog · ${AUTHOR}`, description: BLOG_DESC, url: `${SITE}/blog/` })}
 <body>
 ${header}
     <main id="main" class="container mx-auto px-6 py-12">
@@ -845,7 +845,7 @@ for (const [tag] of sortedTags) {
   const tSlug = slugify(tag);
   const posts = all.filter(p => p.tags.includes(tag));
   const url = `${SITE}/blog/tags/${tSlug}/`;
-  const tagHtml = `${head({ title: `Posts tagged “${tag}” · ${BLOG_TITLE}`, description: `All posts tagged ${tag}. ${BLOG_DESC}`, url })}
+  const tagHtml = `${head({ title: `Posts tagged “${tag}” · ${AUTHOR}`, description: `All posts tagged ${tag}. ${BLOG_DESC}`, url })}
 <body>
 ${header}
     <main id="main" class="container mx-auto px-6 py-12">
@@ -1097,7 +1097,7 @@ const certFooter = `
 
 function certPageHtml(c, siblings) {
   const url = `${SITE}/linux-foundation-coupon/${c.slug}/`;
-  const title = `${c.name} Discount Code (${MONTH_YEAR}): 30% Off with RUSHABH30`;
+  const title = `${c.name} Discount Code (${MONTH_YEAR}): 30% Off with RUSHABH30 · ${AUTHOR}`;
   const description = `Code RUSHABH30 gets 30% off the ${c.fullName} (${c.name}) exam${c.slug === 'kubestronaut' ? ' bundle' : ''}: ~$${c.priceDiscounted} instead of $${c.priceList}. Verified partner code, no expiry.`;
   const savings = c.priceList - c.priceDiscounted;
   const cModPath = `linux-foundation-coupon/${c.slug}/index.html`;
