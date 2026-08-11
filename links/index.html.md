@@ -18,7 +18,7 @@ DevOps Engineer &middot; Docker Captain &middot; Grafana Champion
 
 [Hashnode](https://iamrushabhshahh.hashnode.dev/)
 
-[Docker Captain profile](https://www.docker.com/captains/)
+[Docker Captain profile](https://www.docker.com/contributors/rushabh-shah/)
 
 [Grafana Champion profile](https://grafana.com/community/champions/)
 

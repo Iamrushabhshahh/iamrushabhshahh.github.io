@@ -82,7 +82,7 @@ Docker, Inc · Selected 2026
 
 Recognised by Docker, Inc. for technical expertise in containers and Kubernetes, real-world production experience, and consistent contribution to the global container community. The program includes ~220 members worldwide.
 
-(https://www.docker.com/captains/)
+(https://www.docker.com/contributors/rushabh-shah/)
 
 Grafana Labs · Selected 2026
 
