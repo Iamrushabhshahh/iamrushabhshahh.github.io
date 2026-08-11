@@ -479,6 +479,9 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
     <meta property="og:title" content="${escapeHtml(title)}">
     <meta property="og:description" content="${escapeHtml(description)}">
     <meta property="og:image" content="${ogImage}">
+    ${!image ? `<meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="${escapeHtml(AUTHOR)} — DevOps Engineer, Docker Captain, Grafana Champion">` : ''}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@iamrushabhshahh">
     <meta name="twitter:title" content="${escapeHtml(title)}">
