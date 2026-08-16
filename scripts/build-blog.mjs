@@ -39,7 +39,7 @@ const AUTHOR = 'Rushabh Shah';
 // page instead of the generic catalog.
 const awinLink = (dest) => `https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=${encodeURIComponent(dest)}`;
 const BLOG_TITLE = 'Rushabh Shah · Blog';
-const BLOG_DESC = 'Articles on DevOps, Kubernetes, Docker, observability (Grafana LGTM stack, OpenTelemetry), cloud cost optimization, and Linux, by Rushabh Shah, Docker Captain & Grafana Champion.';
+const BLOG_DESC = 'Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.';
 
 /* ---------- dedicated per-certification discount pages ----------
    /linux-foundation-coupon/<slug>/ — one focused landing page per exam,
@@ -261,7 +261,7 @@ const CERT_PAGES = [
     ],
   },
   {
-    slug: 'golden-kubestronaut', name: 'Golden Kubestronaut', fullName: 'Golden Kubestronaut bundle (all 16 current CNCF & Linux Foundation certifications)',
+    slug: 'golden-kubestronaut', name: 'Golden Kubestronaut', fullName: 'Golden Kubestronaut bundle (16 CNCF certs)',
     dest: 'https://training.linuxfoundation.org/certification/golden-kubestronaut-bundle/',
     format: 'Bundle of 16 exams (multiple-choice and performance-based)', duration: 'Varies per exam',
     priceList: 4229, priceDiscounted: 2960,

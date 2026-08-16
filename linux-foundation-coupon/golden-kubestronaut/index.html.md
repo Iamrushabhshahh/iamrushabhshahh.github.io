@@ -2,13 +2,13 @@
 
 # Golden Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated August 2026 &middot; Golden Kubestronaut bundle (all 16 current CNCF & Linux Foundation certifications)
+Updated August 2026 &middot; Golden Kubestronaut bundle (16 CNCF certs)
 
 RUSHABH30
 
 [Get Golden Kubestronaut for ~$2960 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fgolden-kubestronaut-bundle%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fgolden-kubestronaut-bundle%2F) and the Golden Kubestronaut bundle (all 16 current CNCF & Linux Foundation certifications) drops from $4229 to about $2960 &mdash; a saving of roughly $1269. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fgolden-kubestronaut-bundle%2F) and the Golden Kubestronaut bundle (16 CNCF certs) drops from $4229 to about $2960 &mdash; a saving of roughly $1269. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
