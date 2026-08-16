@@ -2,7 +2,15 @@
 
 Updated August 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-**Through August 18:** the official 35th-anniversary sale beats this code, [35% off sitewide with TUX35](#current-sale).
+**35 Years of Linux anniversary sale, live through August 18**
+
+I got the heads-up on this one directly from the Linux Foundation affiliate team, so it's not scraped from anywhere else. 35% off sitewide, ends August 18, 2026 (23:59 UTC). Doesn't stack with `RUSHABH30`, so use whichever discount is bigger right now. Excludes THRIVE-ONE subscriptions, the Yocto Project Super Practical Online Course (LFD461-JP), and FinOps courses/certifications, where `RUSHABH30` is still the better pick.
+
+TUX35
+
+[Use TUX35 before it expires →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Faugust-2026-promo%2F)
+
+No sale running? This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -145,14 +153,6 @@ The rule of thumb: codes don't stack, so it's always one or the other. If a seas
 Ready? The code is RUSHABH30. 30% off, no expiry.
 
 [Pick your certification →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
-
-## Live now: Linux Foundation 35 Years of Linux sale
-
-Until August 18, 2026 (23:59 UTC), the official 35th-anniversary sale beats my evergreen code: 35% off sitewide with code `TUX35`. It doesn't stack with `RUSHABH30`, so use TUX35 while it lasts. Excludes THRIVE-ONE subscriptions, the Yocto Project Super Practical Online Course (LFD461-JP), and FinOps courses/certifications. `RUSHABH30` is still the better pick for those. I'll update this section the day it ends.
-
-Code TUX35: 35% off sitewide, ends August 18, 2026.
-
-[Use TUX35 before it expires &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Faugust-2026-promo%2F)
 
 ## Past Linux Foundation sales, and when the next one lands
 
