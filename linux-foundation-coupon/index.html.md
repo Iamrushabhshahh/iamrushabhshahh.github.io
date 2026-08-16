@@ -86,19 +86,19 @@ The OpenTelemetry Certified Associate also lists around $250, about $175 with th
 
 ### ICA (Istio) discount code
 
-Istio Certified Associate: around $250 list, about $175 after the code. Worth it if service mesh is genuinely part of your platform, and skippable if you're still at the "do we even need a mesh" stage. Be honest with yourself about which one you're in.
+Istio Certified Associate: around $250 list, about $175 after the code. Worth it if service mesh is genuinely part of your platform, and skippable if you're still at the "do we even need a mesh" stage. Be honest with yourself about which one you're in. [Get ICA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F)
 
 ### CCA (Cilium) discount code
 
-Cilium Certified Associate: around $250, about $175 with the code. Cilium and eBPF networking are eating the Kubernetes CNI world, and I say that as someone who translated eBPF.io into Hindi. A smart differentiator for network-minded platform engineers.
+Cilium Certified Associate: around $250, about $175 with the code. Cilium and eBPF networking are eating the Kubernetes CNI world, and I say that as someone who translated eBPF.io into Hindi. A smart differentiator for network-minded platform engineers. [Get CCA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcilium-certified-associate-cca%2F)
 
 ### CGOA (GitOps) discount code
 
-Certified GitOps Associate: around $250 list, about $175 after the discount. Covers the concepts behind Argo CD and Flux. If you run GitOps in production already, the exam mostly confirms what you know, which makes it a quick win.
+Certified GitOps Associate: around $250 list, about $175 after the discount. Covers the concepts behind Argo CD and Flux. If you run GitOps in production already, the exam mostly confirms what you know, which makes it a quick win. [Get CGOA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F)
 
 ### CAPA (Argo) discount code
 
-Certified Argo Project Associate: around $250, about $175 with the code. I run Argo CD at work, and this pairs naturally with CGOA if you want your resume to say "GitOps" in two different ways that both survive a technical interview.
+Certified Argo Project Associate: around $250, about $175 with the code. I run Argo CD at work, and this pairs naturally with CGOA if you want your resume to say "GitOps" in two different ways that both survive a technical interview. [Get CAPA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F)
 
 ### LFCA discount code
 
