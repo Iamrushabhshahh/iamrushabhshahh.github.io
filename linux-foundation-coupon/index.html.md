@@ -2,7 +2,7 @@
 
 Updated August 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-🔥 **Live through August 18:** the official 35th-anniversary sale beats this code &mdash; [35% off sitewide with TUX35](#current-sale).
+**Through August 18:** the official 35th-anniversary sale beats this code, [35% off sitewide with TUX35](#current-sale).
 
 RUSHABH30
 
@@ -112,7 +112,7 @@ Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, C
 
 ### Golden Kubestronaut bundle discount
 
-Golden Kubestronaut is CNCF's recognition for holding all 16 current CNCF and Linux Foundation certifications at once, not just the five in standard Kubestronaut. CNCF launched it in April 2025 and over 100 engineers had earned it within five months, so it's a real, active program. List price is $4,229; with `RUSHABH30` it drops to about $2,960 &mdash; a saving of roughly $1,269, the single biggest dollar amount the code produces on this entire site. [Full Golden Kubestronaut bundle guide & savings math &rarr;](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+Golden Kubestronaut is CNCF's recognition for holding all 16 current CNCF and Linux Foundation certifications at once, not just the five in standard Kubestronaut. CNCF launched it in April 2025 and over 100 engineers had earned it within five months, so it's a real, active program. List price is $4,229; with `RUSHABH30` it drops to about $2,960, a saving of roughly $1,269, the single biggest dollar amount the code produces on this entire site. [Full Golden Kubestronaut bundle guide & savings math &rarr;](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
 
 ## How to use it
 
@@ -148,9 +148,9 @@ Ready? The code is RUSHABH30. 30% off, no expiry.
 
 ## Live now: Linux Foundation 35 Years of Linux sale
 
-Until August 18, 2026 (23:59 UTC), the official 35th-anniversary sale beats my evergreen code: 35% off sitewide with code `TUX35`. It doesn't stack with `RUSHABH30`, so use TUX35 while it lasts. Excludes THRIVE-ONE subscriptions, the Yocto Project Super Practical Online Course (LFD461-JP), and FinOps courses/certifications &mdash; `RUSHABH30` is still the better pick for those. I'll update this section the day it ends.
+Until August 18, 2026 (23:59 UTC), the official 35th-anniversary sale beats my evergreen code: 35% off sitewide with code `TUX35`. It doesn't stack with `RUSHABH30`, so use TUX35 while it lasts. Excludes THRIVE-ONE subscriptions, the Yocto Project Super Practical Online Course (LFD461-JP), and FinOps courses/certifications. `RUSHABH30` is still the better pick for those. I'll update this section the day it ends.
 
-Code TUX35 &mdash; 35% off sitewide, ends August 18, 2026.
+Code TUX35: 35% off sitewide, ends August 18, 2026.
 
 [Use TUX35 before it expires &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Faugust-2026-promo%2F)
 
