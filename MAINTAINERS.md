@@ -2,7 +2,7 @@
 
 - **Rushabh Shah** ([@iamrushabhshahh](https://github.com/iamrushabhshahh)) — owner & maintainer
   - Website: [rushabhshah.dev](https://rushabhshah.dev)
-  - Email: rushabhshah842@gmail.com
+  - Email: contact@rushabhshah.dev
   - Twitter/X: [@iamrushabhshahh](https://twitter.com/iamrushabhshahh)
   - LinkedIn: [in.linkedin.com/in/iamrushabhshahh](https://in.linkedin.com/in/iamrushabhshahh)
 
