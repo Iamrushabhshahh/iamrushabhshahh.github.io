@@ -2,6 +2,8 @@
 
 Updated August 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
+Affiliate disclosure: I'm an official Linux Foundation Education partner and may earn a commission on purchases made through the links below, at no extra cost to you.
+
 **35 Years of Linux anniversary sale, live through August 18**
 
 I got the heads-up on this one directly from the Linux Foundation affiliate team, so it's not scraped from anywhere else. 35% off sitewide, ends August 18, 2026 (23:59 UTC). Doesn't stack with `RUSHABH30`, so use whichever discount is bigger right now. Excludes THRIVE-ONE subscriptions, the Yocto Project Super Practical Online Course (LFD461-JP), and FinOps courses/certifications, where `RUSHABH30` is still the better pick.
@@ -52,6 +54,7 @@ Percentages hide how much money this actually is, so here is the bundle math:
 | --- | --- | --- | --- |
 | **[Kubestronaut bundle](#kubestronaut-discount)** (KCNA + KCSA + CKA + CKAD + CKS) | $1,645 | ~$1,151 | **~$494** |
 | **[Golden Kubestronaut bundle](#golden-kubestronaut-discount)** (all 16 current CNCF certs) | $4,229 | ~$2,960 | **~$1,269** |
+| **[Kubestronaut &rarr; Golden upgrade](#golden-kubestronaut-discount)** (already a Kubestronaut? just the other 11) | $2,669 | ~$1,868 | **~$801** |
 | **Any course + exam bundle** (e.g. CKA) | varies | 30% less | **$200+** |
 
 RUSHABH30
@@ -120,7 +123,9 @@ Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, C
 
 ### Golden Kubestronaut bundle discount
 
-Golden Kubestronaut is CNCF's recognition for holding all 16 current CNCF and Linux Foundation certifications at once, not just the five in standard Kubestronaut. CNCF launched it in April 2025 and over 100 engineers had earned it within five months, so it's a real, active program. List price is $4,229; with `RUSHABH30` it drops to about $2,960, a saving of roughly $1,269, the single biggest dollar amount the code produces on this entire site. [Full Golden Kubestronaut bundle guide & savings math &rarr;](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+Golden Kubestronaut is CNCF's recognition for holding all 16 current CNCF and Linux Foundation certifications at once, not just the five in standard Kubestronaut. The 16 are CKA, CKAD, CKS, KCNA, KCSA, LFCS, PCA, ICA, CCA, CAPA, CGOA, CBA, OTCA, KCA, CNPA and CNPE. LFCA is not one of them, even though it's a genuinely useful starting cert on its own. CNCF launched Golden Kubestronaut in April 2025 and over 100 engineers had earned it within five months, so it's a real, active program. List price is $4,229; with `RUSHABH30` it drops to about $2,960, a saving of roughly $1,269, the single biggest dollar amount the code produces on this entire site. [Full Golden Kubestronaut bundle guide & savings math &rarr;](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+
+Already a Kubestronaut? You don't need to buy all 16 again. Linux Foundation sells a Kubestronaut-to-Golden upgrade bundle covering just the remaining 11 certifications: $2,669 list, about $1,868 with `RUSHABH30`, a saving of roughly $801. [Get the upgrade bundle for ~$1,868 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftrainingportal.linuxfoundation.org%2Fcollections%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle)
 
 ## How to use it
 
