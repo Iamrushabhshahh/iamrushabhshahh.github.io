@@ -53,18 +53,21 @@ p { line-height: 1.65; }
 @font-face { font-family: 'Fira-Code-fallback'; src: local('Menlo'), local('Consolas'), local('Courier New'); size-adjust: 100%; ascent-override: 94%; descent-override: 25%; line-gap-override: 0%; }
 
 /* --- Tokens ---
-   Dark is the default brand appearance (naked :root). Light is an explicit
-   opt-in via [data-theme="light"] on <html>, toggled by the theme button —
-   it is NOT driven by prefers-color-scheme, since the dark terminal look is
-   a deliberate brand choice, not a system-preference fallback.
+   Dark is the naked-:root appearance; [data-theme="light"] on <html> opts
+   into light. Three-state preference (light/system/dark) lives in
+   assets/theme.js — visitors who've never chosen default to "system" and
+   follow prefers-color-scheme, which resolves to one of these two token
+   sets. Explicit Light/Dark picks stop following the OS (see theme.js).
    *-rgb tokens exist so translucent glass effects (rgba(var(--x-rgb), a))
    can swap tint per theme — plain hex vars can't be decomposed inside rgba(). */
 :root {
+    color-scheme: dark;
     --bg-color: #010409;
     --bg-rgb: 1, 4, 9;
     --panel-color: #0d1117;
     --panel-rgb: 13, 17, 23;
     --terminal-header: #161b22;
+    --terminal-header-rgb: 22, 27, 34;
     --text-color: #c9d1d9;
     --muted-color: #8b949e;
     --primary-color: #58a6ff;
@@ -95,11 +98,13 @@ p { line-height: 1.65; }
 }
 
 :root[data-theme="light"] {
+    color-scheme: light;
     --bg-color: #f6f8fa;
     --bg-rgb: 246, 248, 250;
     --panel-color: #ffffff;
     --panel-rgb: 255, 255, 255;
     --terminal-header: #eaeef2;
+    --terminal-header-rgb: 234, 238, 242;
     --text-color: #1f2328;
     --muted-color: #57606a;
     --primary-color: #0969da;
@@ -121,6 +126,20 @@ p { line-height: 1.65; }
     --gray-500-color: #57606a;
     --gray-600-color: #6e7781;
     --fg-strong: #14171a;
+}
+
+/* Colour transitions ONLY during a theme flip (assets/theme.js toggles this
+   class for 600ms around every preference/resolved-theme change) — a global
+   transition left on permanently would make every hover feel laggy. */
+html.theme-anim,
+html.theme-anim * {
+    transition: background-color 0.35s ease, border-color 0.35s ease, color 0.3s ease, box-shadow 0.35s ease !important;
+}
+@media (prefers-reduced-motion: reduce) {
+    html.theme-anim,
+    html.theme-anim * {
+        transition-duration: 0.001ms !important;
+    }
 }
 
 body {
@@ -177,6 +196,56 @@ h1, h2, .display-font {
 .items-center { align-items: center; }
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
+
+header.container.flex {
+    gap: 1.5rem;
+}
+
+/* justify-content:space-between (from .justify-between) dumps 100% of a
+   wide viewport's leftover slack into just the 2 gaps around nav-links
+   (logo<->links, links<->switch) while the 8 links between them keep a
+   fixed 24px rhythm (space-x-6) — the logo/switch gaps balloon far past
+   that rhythm and read as uneven the wider the screen gets. Overriding to
+   flex-start makes `gap` the only source of spacing (so logo<->links stays
+   the same fixed 24px as every other gap in the bar); margin-left:auto on
+   the switch's wrapper is the one deliberate exception, pushing it flush
+   right the way a separated utility control is expected to sit. */
+header nav {
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+header nav > .flex-shrink-0 {
+    margin-left: auto;
+}
+
+/* The .seg switch made the full nav row (logo + 8 links + switch) wider
+   than the old single icon button allowed for. Between roughly 768-1279px
+   that combined natural width exceeds the container's available space —
+   flex items default to min-width:auto, which refuses to shrink below
+   content size and forces the WHOLE PAGE to overflow horizontally at those
+   widths. .nav-links (only the links, not the switch) gets its min-width
+   overridden so it alone shrinks and scrolls internally when tight — the
+   logo and .seg switch (both flex-shrink-0) stay pinned and fully visible
+   at either end regardless of viewport width. */
+header nav .nav-links {
+    min-width: 0;
+    height: 1.25rem; /* == .text-sm's line-height, and a backstop against the
+       cause below ever re-inflating this box. */
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+header nav .nav-links::-webkit-scrollbar { display: none; }
+/* min-width:0 lets this row get assigned less width than its content needs
+   — but during the flex layout pass that measures each link's hypothetical
+   cross size, Chrome lays it out at that narrower width first, wraps
+   "./about" etc onto a second line, and that wrapped (taller) height
+   sticks even after the link's final width is resolved wider. nowrap
+   forces horizontal overflow (which the scroll container above already
+   handles) instead of a wrap that never should have been possible in a
+   single-line nav to begin with. */
+header nav .nav-links a {
+    white-space: nowrap;
+}
 
 /* --- Grid columns --- */
 .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
@@ -300,7 +369,7 @@ h1, h2, .display-font {
 .bg-red-500 { background-color: #ef4444; }
 .bg-yellow-500 { background-color: #eab308; }
 .bg-green-500 { background-color: #22c55e; }
-.bg-terminal-header\/90 { background-color: rgba(22,27,34,0.9); }
+.bg-terminal-header\/90 { background-color: rgba(var(--terminal-header-rgb),0.9); }
 .bg-primary-color\/10 { background-color: rgba(var(--primary-rgb),0.10); }
 
 /* --- Text colors --- */
@@ -626,48 +695,63 @@ section[id] { scroll-margin-top: 5rem; }
     transform: translateY(-1px);
 }
 
-/* Theme toggle — sun/moon swap is pure CSS via [data-theme], no icon-swap JS needed */
-.theme-toggle {
+/* Theme preference switch (Light / System / Dark) — a 3-way segmented
+   control, role="radiogroup" of role="radio" buttons. The sliding indicator
+   position is driven by [data-pref] on <html>, not on .seg itself, so the
+   same no-flash script that sets data-theme in <head> (assets/theme.js)
+   also plants the indicator in the right place before first paint — no
+   flash of it sitting on the wrong stop while JS wires up. */
+.seg {
+    position: relative;
+    display: inline-flex;
+    padding: 3px;
+    gap: 2px;
+    background-color: rgba(var(--panel-rgb),0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    flex-shrink: 0;
+}
+.seg::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 3px;
+    left: 3px;
+    width: calc((100% - 6px) / 3);
+    height: calc(100% - 6px);
+    border-radius: 999px;
+    background-color: var(--panel-color);
+    box-shadow: 0 1px 2px rgba(0,0,0,.14), 0 4px 10px rgba(0,0,0,.12);
+    transition: transform 420ms cubic-bezier(.68,-.2,.27,1.25);
+}
+html[data-pref="system"] .seg::before { transform: translateX(100%); }
+html[data-pref="dark"] .seg::before { transform: translateX(200%); }
+.seg button[role="radio"] {
+    position: relative;
+    z-index: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    min-height: 0;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    background-color: rgba(var(--panel-rgb),0.5);
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-family: 'Fira Code', 'Fira-Code-fallback', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
     color: var(--gray-400-color);
-    flex-shrink: 0;
-    transition: border-color 0.2s, color 0.2s, background-color 0.2s, transform 0.2s;
+    transition: color 0.3s ease;
+    white-space: nowrap;
 }
-.theme-toggle:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    transform: translateY(-1px);
-}
-.theme-toggle svg { width: 18px; height: 18px; }
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: block; }
-:root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
-:root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
-#mobile-menu .theme-toggle,
-#site-menu .theme-toggle {
-    width: auto;
-    height: auto;
+.seg button[role="radio"] svg { width: 14px; height: 14px; flex-shrink: 0; }
+.seg button[aria-checked="true"] { color: var(--primary-color); }
+.seg button[role="radio"]:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; }
+/* Compact variant (desktop nav): icon-only, footprint close to the old
+   36x36 icon button. Labels stay in the DOM as .sr-only so the accessible
+   name is still "Light"/"System"/"Dark", not a bare icon. */
+.seg--compact button[role="radio"] { padding: 7px; }
+#mobile-menu .seg,
+#site-menu .seg {
     margin: 0.5rem 1.25rem 0.85rem;
-    padding: 0.6rem 1rem;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-    border-radius: 6px;
-}
-#mobile-menu .theme-toggle::after,
-#site-menu .theme-toggle::after {
-    content: 'Switch to light';
-}
-:root[data-theme="light"] #mobile-menu .theme-toggle::after,
-:root[data-theme="light"] #site-menu .theme-toggle::after {
-    content: 'Switch to dark';
 }
 
 /* Status pill */

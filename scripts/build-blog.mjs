@@ -463,7 +463,8 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+    <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
+    <script defer src="/assets/theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">
@@ -499,41 +500,33 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
 </head>`;
 };
 
-// Shared sun/moon theme-toggle button, reused across every generated page's
-// desktop nav and mobile menu. `mobile` swaps in the wider, labelled variant
-// styled by #mobile-menu/#site-menu .theme-toggle in style.css.
-const themeToggleButton = (mobile = false) => `<button id="${mobile ? 'theme-toggle-mobile' : 'theme-toggle'}" class="theme-toggle${mobile ? ' flex items-center' : ''}" type="button" aria-label="Switch to light theme">
-                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
-                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>`;
-
-// Click-handler logic, identical to index.html's inline copy — kept as one
-// string so every generated page's DOMContentLoaded block can splice it in.
-const themeToggleScript = `
-            const themeMetaEl = document.querySelector('meta[name="theme-color"]');
-            const themeButtons = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')].filter(Boolean);
-            const setThemeLabel = (theme) => {
-                const label = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
-                themeButtons.forEach(btn => btn.setAttribute('aria-label', label));
-            };
-            const applyTheme = (theme) => {
-                document.documentElement.setAttribute('data-theme', theme);
-                if (themeMetaEl) themeMetaEl.setAttribute('content', theme === 'light' ? '#f6f8fa' : '#010409');
-                setThemeLabel(theme);
-            };
-            setThemeLabel(document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
-            themeButtons.forEach(btn => btn.addEventListener('click', () => {
-                const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-                try { localStorage.setItem('theme', next); } catch (_) {}
-                applyTheme(next);
-            }));`;
+// Shared Light/System/Dark segmented control, reused across every generated
+// page's desktop nav and mobile menu. `compact` renders the icon-only
+// variant (labels present but .sr-only) sized for the desktop nav; the
+// default renders icons + visible labels for the mobile menu row. Click and
+// keyboard wiring lives once in assets/theme.js, which finds every .seg on
+// the page — no per-page script needed here.
+const segControl = (compact = false) => {
+  const stops = [
+    { value: 'light', label: 'Light', icon: '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>' },
+    { value: 'system', label: 'System', icon: '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>' },
+    { value: 'dark', label: 'Dark', icon: '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>' },
+  ];
+  const button = (s) => `<button type="button" role="radio" data-value="${s.value}" aria-checked="${s.value === 'system'}" tabindex="${s.value === 'system' ? '0' : '-1'}"${compact ? ` title="${s.label}"` : ''}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${s.icon}</svg>
+                    <span class="seg-label${compact ? ' sr-only' : ''}">${s.label}</span>
+                </button>`;
+  return `<div class="seg${compact ? ' seg--compact' : ''}" role="radiogroup" aria-label="Theme preference">
+                ${stops.map(button).join('\n                ')}
+            </div>`;
+};
 
 const header = `
     <a href="#main" class="skip-link">Skip to content</a>
     <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
             <a href="/" class="text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
-            <div class="hidden md:flex items-center space-x-6 text-sm">
+            <div class="hidden md:flex items-center space-x-6 text-sm nav-links">
                 <a href="/#about" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
                 <a href="/#honors" class="text-gray-400 hover:text-primary-color transition-colors">./honors</a>
                 <a href="/#skills" class="text-gray-400 hover:text-primary-color transition-colors">./skills</a>
@@ -542,7 +535,9 @@ const header = `
                 <a href="/blog/" class="text-primary-color transition-colors" aria-current="true">./blog</a>
                 <a href="/linux-foundation-coupon/" class="text-gray-400 hover:text-primary-color transition-colors">./deals</a>
                 <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
-                ${themeToggleButton()}
+            </div>
+            <div class="hidden md:flex flex-shrink-0">
+                ${segControl(true)}
             </div>
             <button id="menu-btn" class="md:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
                 <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -557,7 +552,7 @@ const header = `
             <a href="/blog/" class="block py-2 px-4 text-sm text-primary-color">./blog</a>
             <a href="/linux-foundation-coupon/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./deals</a>
             <a href="/#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
-            ${themeToggleButton(true)}
+            ${segControl(false)}
         </div>
         <a href="/linux-foundation-coupon/" class="block bg-primary-color/10 border-b border-border-color text-center font-fira text-xs py-2 px-4 text-gray-300 hover:text-primary-color transition-colors">
             🎓 30% off all Linux Foundation certifications (CKA, CKAD, CKS…) with code <span class="text-primary-color font-bold">RUSHABH30</span> →
@@ -589,7 +584,6 @@ const footer = `
                     b.setAttribute('aria-expanded', String(open));
                 });
             }
-            ${themeToggleScript}
         });
     </script>
 </body>
@@ -1052,7 +1046,7 @@ const certHeader = `
     <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
             <a href="/" class="text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
-            <div class="hidden md:flex items-center space-x-6 text-sm">
+            <div class="hidden md:flex items-center space-x-6 text-sm nav-links">
                 <a href="/#about" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
                 <a href="/#honors" class="text-gray-400 hover:text-primary-color transition-colors">./honors</a>
                 <a href="/#skills" class="text-gray-400 hover:text-primary-color transition-colors">./skills</a>
@@ -1061,7 +1055,9 @@ const certHeader = `
                 <a href="/blog/" class="text-gray-400 hover:text-primary-color transition-colors">./blog</a>
                 <a href="/linux-foundation-coupon/" class="text-primary-color transition-colors" aria-current="true">./deals</a>
                 <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
-                ${themeToggleButton()}
+            </div>
+            <div class="hidden md:flex flex-shrink-0">
+                ${segControl(true)}
             </div>
             <button id="menu-btn" class="md:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
                 <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -1076,7 +1072,7 @@ const certHeader = `
             <a href="/blog/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./blog</a>
             <a href="/linux-foundation-coupon/" class="block py-2 px-4 text-sm text-primary-color">./deals</a>
             <a href="/#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
-            ${themeToggleButton(true)}
+            ${segControl(false)}
         </div>
     </header>`;
 
@@ -1114,7 +1110,6 @@ const certFooter = `
                     b.setAttribute('aria-expanded', String(open));
                 });
             }
-            ${themeToggleScript}
         });
     </script>`;
 
@@ -1150,7 +1145,8 @@ function certPageHtml(c, siblings) {
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+    <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
+    <script defer src="/assets/theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">

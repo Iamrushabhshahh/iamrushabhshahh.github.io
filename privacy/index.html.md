@@ -14,7 +14,7 @@ I use [GoatCounter](https://www.goatcounter.com) to see which pages people read.
 
 ## If you message me, I read it
 
-The contact form sends me your name, email, and message (through a service called [Pageclip](https://pageclip.co)). I use it to reply to you. That's it. You won't end up on a mailing list, and I don't pass it to anyone. Prefer plain email? [rushabhshah842@gmail.com](mailto:rushabhshah842@gmail.com).
+The contact form sends me your name, email, and message (through a service called [Pageclip](https://pageclip.co)). I use it to reply to you. That's it. You won't end up on a mailing list, and I don't pass it to anyone. Prefer plain email? [contact@rushabhshah.dev](mailto:contact@rushabhshah.dev).
 
 ## The coupon links earn me a commission
 
@@ -26,7 +26,7 @@ Fonts come from Google, icons from a couple of icon CDNs, my GitHub star counts 
 
 ## Want something deleted? Ask
 
-The only personal data I ever hold is correspondence you sent me yourself. If you want it gone, email me at [rushabhshah842@gmail.com](mailto:rushabhshah842@gmail.com) and I'll delete it. No forms, no fuss. The analytics can't be traced back to you even if I wanted to, which is the point.
+The only personal data I ever hold is correspondence you sent me yourself. If you want it gone, email me at [contact@rushabhshah.dev](mailto:contact@rushabhshah.dev) and I'll delete it. No forms, no fuss. The analytics can't be traced back to you even if I wanted to, which is the point.
 
 ## If anything changes
 
