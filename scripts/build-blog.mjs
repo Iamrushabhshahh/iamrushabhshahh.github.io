@@ -231,10 +231,11 @@ const CERT_PAGES = [
     ],
   },
   {
-    slug: 'kubestronaut', name: 'Kubestronaut bundle', fullName: 'Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)',
+    slug: 'kubestronaut', name: 'Kubestronaut', fullName: 'Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)',
     dest: 'https://training.linuxfoundation.org/certification/kubestronaut-bundle/',
     format: 'Bundle of 5 exams (2 multiple-choice, 3 performance-based)', duration: 'Varies per exam',
     priceList: 1645, priceDiscounted: 1151, prerequisite: 'CKS specifically requires an active CKA',
+    isBundle: true,
     audience: 'Engineers pursuing official Kubestronaut recognition from CNCF, or anyone who\'s decided to complete the full Kubernetes certification track.',
     topics: [
       'KCNA — Kubernetes and Cloud Native Associate',
@@ -243,7 +244,7 @@ const CERT_PAGES = [
       'CKAD — Certified Kubernetes Application Developer',
       'CKS — Certified Kubernetes Security Specialist',
     ],
-    why: 'Kubestronaut is CNCF\'s recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — at the same time. Buying the bundle is the practical way to work toward it: on a five-exam purchase, RUSHABH30 produces the single biggest dollar saving it can generate, and this page runs the actual math instead of just quoting a percentage.',
+    why: 'Kubestronaut is CNCF\'s recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — at the same time. Buying the bundle is the practical way to work toward it: on a five-exam purchase, RUSHABH30 produces a much bigger dollar saving than any single exam, and this page runs the actual math instead of just quoting a percentage. (If you\'re going for every CNCF certification, not just these five, see the Golden Kubestronaut bundle — the saving there is even larger.)',
     prepTips: [
       'Sequence matters: CKS needs an active CKA, so plan CKA before CKS even if you buy all five exams in one bundle purchase.',
       'KCNA and KCSA (both multiple choice) are the fastest wins — knock those out first for early momentum before the three performance-based exams.',
@@ -252,10 +253,51 @@ const CERT_PAGES = [
     retakeNote: 'the full five-exam bundle; retakes on individual exams follow that exam\'s own eligibility window',
     faqs: [
       { q: 'What is Kubestronaut?', a: 'Kubestronaut is CNCF\'s official recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — simultaneously.' },
-      { q: 'How much does the Kubestronaut bundle cost with a discount code?', a: `List price is $${1645} for all five exams. With RUSHABH30 it drops to about $${1151}, a saving of roughly $494 — the largest single saving RUSHABH30 produces on any purchase.` },
+      { q: 'How much does the Kubestronaut bundle cost with a discount code?', a: `List price is $${1645} for all five exams. With RUSHABH30 it drops to about $${1151}, a saving of roughly $494.` },
       { q: 'Do I have to pass all five exams at once?', a: 'No — buying the bundle just locks in the discounted price for all five; you can schedule and sit each exam on your own timeline within your eligibility window.' },
       { q: 'Which exam should I take first in the bundle?', a: 'KCNA is the common starting point since it\'s multiple choice and builds vocabulary the other four assume you already know. Save CKS for last since it requires an active CKA.' },
-      { q: 'Is there an even bigger bundle than Kubestronaut?', a: 'Yes — the Golden Kubestronaut bundle adds every other CNCF associate exam plus LFCS on top of the five Kubestronaut certs, for engineers going for the full catalog.' },
+      { q: 'Is there an even bigger bundle than Kubestronaut?', a: 'Yes — the Golden Kubestronaut bundle adds every other current CNCF certification on top of the five Kubestronaut certs, for engineers going for the full catalog.' },
+    ],
+  },
+  {
+    slug: 'golden-kubestronaut', name: 'Golden Kubestronaut', fullName: 'Golden Kubestronaut bundle (all 16 current CNCF & Linux Foundation certifications)',
+    dest: 'https://training.linuxfoundation.org/certification/golden-kubestronaut-bundle/',
+    format: 'Bundle of 16 exams (multiple-choice and performance-based)', duration: 'Varies per exam',
+    priceList: 4229, priceDiscounted: 2960,
+    prerequisite: 'CKS requires an active CKA; Golden Kubestronaut itself requires holding all 16 certifications at once',
+    isBundle: true,
+    audience: 'Experienced cloud native professionals going for the single most complete credential the Linux Foundation and CNCF offer — every certification in the Kubestronaut track plus every other current associate-level CNCF exam.',
+    topics: [
+      'CKA — Certified Kubernetes Administrator',
+      'CKAD — Certified Kubernetes Application Developer',
+      'CKS — Certified Kubernetes Security Specialist',
+      'LFCS — Linux Foundation Certified System Administrator',
+      'CNPE — Certified Cloud Native Platform Engineer',
+      'KCNA — Kubernetes and Cloud Native Associate',
+      'KCSA — Kubernetes and Cloud Native Security Associate',
+      'PCA — Prometheus Certified Associate',
+      'ICA — Istio Certified Associate',
+      'CCA — Cilium Certified Associate',
+      'CAPA — Certified Argo Project Associate',
+      'CGOA — Certified GitOps Associate',
+      'CBA — Certified Backstage Associate',
+      'OTCA — OpenTelemetry Certified Associate',
+      'KCA — Kyverno Certified Associate',
+      'CNPA — Certified Cloud Native Platform Engineering Associate',
+    ],
+    why: 'Golden Kubestronaut is CNCF\'s recognition for holding every one of its certifications at once — sixteen exams, not five. CNCF launched the program in April 2025, and over 100 engineers had already earned the title within five months, so this is an actively growing recognition, not a legacy badge nobody pursues. On a purchase this size, RUSHABH30 produces the single biggest dollar saving it generates on this entire site — more than double the five-exam Kubestronaut bundle, simply because there are more than three times as many exams for the same 30% to apply to.',
+    prepTips: [
+      'Sequence the sixteen exams deliberately: CKS still needs an active CKA even inside this bigger bundle, so don\'t buy the exams in a random order.',
+      'Clear the eleven multiple-choice associate exams (KCNA, KCSA, PCA, ICA, CCA, CAPA, CGOA, CBA, OTCA, KCA, CNPA) first to build momentum before the four performance-based, live-terminal exams (CKA, CKAD, CKS, LFCS).',
+      'Linux Foundation\'s own program page notes new CNCF certifications can be added to the requirement list as they launch — budget for the list to grow past sixteen, not assume it\'s fixed forever.',
+    ],
+    retakeNote: 'the full sixteen-exam bundle; retakes on individual exams follow that exam\'s own eligibility window',
+    faqs: [
+      { q: 'What is Golden Kubestronaut?', a: 'CNCF\'s recognition for holding all 16 current CNCF and Linux Foundation Kubernetes-ecosystem certifications simultaneously — the full catalog, not just the five-exam Kubestronaut track.' },
+      { q: 'How much does the Golden Kubestronaut bundle cost with a discount code?', a: `List price is $${4229} for all sixteen exams. With RUSHABH30 it drops to about $${2960}, a saving of roughly $1,269 — the largest single saving RUSHABH30 produces on any purchase on this site.` },
+      { q: 'Do I need the regular Kubestronaut certification before Golden Kubestronaut?', a: 'There\'s no separate application step — Golden Kubestronaut is earned simply by holding all 16 certifications, which happen to include the same five that make up standard Kubestronaut (KCNA, KCSA, CKA, CKAD, CKS) plus eleven more.' },
+      { q: 'Is Golden Kubestronaut a real, active program?', a: 'Yes — CNCF launched it in April 2025, and Linux Foundation reported over 100 engineers had achieved it within the first five months. It\'s actively promoted, not a dormant legacy title.' },
+      { q: 'Can the certification list change?', a: 'Yes — Linux Foundation\'s own program page states that as new CNCF certifications launch, they may be added to the Golden Kubestronaut requirements to keep the badge current.' },
     ],
   },
   {
@@ -1204,7 +1246,7 @@ const certFooter = `
 function certPageHtml(c, siblings) {
   const url = `${SITE}/linux-foundation-coupon/${c.slug}/`;
   const title = `${c.name} Discount Code (${MONTH_YEAR}): 30% Off with RUSHABH30 · ${AUTHOR}`;
-  const description = `Code RUSHABH30 gets 30% off the ${c.fullName} (${c.name}) exam${c.slug === 'kubestronaut' ? ' bundle' : ''}: ~$${c.priceDiscounted} instead of $${c.priceList}. Verified partner code, no expiry.`;
+  const description = `Code RUSHABH30 gets 30% off the ${c.fullName}${c.isBundle ? '' : ` (${c.name}) exam`}: ~$${c.priceDiscounted} instead of $${c.priceList}. Verified partner code, no expiry.`;
   const savings = c.priceList - c.priceDiscounted;
   const cModPath = `linux-foundation-coupon/${c.slug}/index.html`;
   const dateModified = gitLastMod(cModPath) || now.toISOString().slice(0, 10);
@@ -1234,7 +1276,7 @@ function certPageHtml(c, siblings) {
   const priceValidUntil = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
   const offerJsonLd = {
     '@context': 'https://schema.org', '@type': 'Product',
-    name: `${c.fullName} (${c.name})${c.slug === 'kubestronaut' ? '' : ' Certification Exam'}`,
+    name: c.isBundle ? c.fullName : `${c.fullName} (${c.name}) Certification Exam`,
     description: c.why,
     brand: { '@type': 'Organization', name: 'The Linux Foundation' },
     offers: {
@@ -1309,7 +1351,7 @@ function certPageHtml(c, siblings) {
                 <p>
                     Put <code>RUSHABH30</code> in the coupon field at checkout on
                     <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
-                    and the ${escapeHtml(c.fullName)} (${escapeHtml(c.name)})${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} drops from $${c.priceList} to about $${c.priceDiscounted} &mdash; a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+                    and the ${escapeHtml(c.fullName)}${c.isBundle ? '' : ` (${escapeHtml(c.name)}) exam`} drops from $${c.priceList} to about $${c.priceDiscounted} &mdash; a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
                 </p>
 
                 <h2 id="quick-facts">Quick facts</h2>
@@ -1342,7 +1384,7 @@ function certPageHtml(c, siblings) {
 
                 <h2 id="how-to-use">How to use the code</h2>
                 <ol>
-                    <li>Add the ${escapeHtml(c.name)}${c.slug === 'kubestronaut' ? ' bundle' : ' exam'} to your cart on <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
+                    <li>Add the ${escapeHtml(c.name)}${c.isBundle ? ' bundle' : ' exam'} to your cart on <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
                     <li>Enter <code>RUSHABH30</code> in the coupon field at checkout.</li>
                     <li>The total drops 30%. RUSHABH30 works on ${c.retakeNote}.</li>
                 </ol>

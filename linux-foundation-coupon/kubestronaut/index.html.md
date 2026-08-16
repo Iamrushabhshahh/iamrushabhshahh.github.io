@@ -1,14 +1,14 @@
 [$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
 
-# Kubestronaut bundle Discount Code: 30% Off with RUSHABH30
+# Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated August 2026 &middot; Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
 
 RUSHABH30
 
-[Get Kubestronaut bundle for ~$1151 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
+[Get Kubestronaut for ~$1151 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F) and the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS) (Kubestronaut bundle) bundle drops from $1645 to about $1151 &mdash; a saving of roughly $494. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F) and the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS) drops from $1645 to about $1151 &mdash; a saving of roughly $494. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -35,7 +35,7 @@ Engineers pursuing official Kubestronaut recognition from CNCF, or anyone who's 
 
 ## Why it's worth it
 
-Kubestronaut is CNCF's recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — at the same time. Buying the bundle is the practical way to work toward it: on a five-exam purchase, RUSHABH30 produces the single biggest dollar saving it can generate, and this page runs the actual math instead of just quoting a percentage.
+Kubestronaut is CNCF's recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — at the same time. Buying the bundle is the practical way to work toward it: on a five-exam purchase, RUSHABH30 produces a much bigger dollar saving than any single exam, and this page runs the actual math instead of just quoting a percentage. (If you're going for every CNCF certification, not just these five, see the Golden Kubestronaut bundle — the saving there is even larger.)
 
 ## Prep tips
 
@@ -45,7 +45,7 @@ Kubestronaut is CNCF's recognition for engineers who hold all five Kubernetes ce
 
 ## How to use the code
 
-- Add the Kubestronaut bundle bundle to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F).
+- Add the Kubestronaut bundle to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F).
 - Enter `RUSHABH30` in the coupon field at checkout.
 - The total drops 30%. RUSHABH30 works on the full five-exam bundle; retakes on individual exams follow that exam's own eligibility window.
 
@@ -61,7 +61,7 @@ Kubestronaut is CNCF's official recognition for engineers who hold all five Kube
 
 **How much does the Kubestronaut bundle cost with a discount code?**
 
-List price is $1645 for all five exams. With RUSHABH30 it drops to about $1151, a saving of roughly $494 — the largest single saving RUSHABH30 produces on any purchase.
+List price is $1645 for all five exams. With RUSHABH30 it drops to about $1151, a saving of roughly $494.
 
 **Do I have to pass all five exams at once?**
 
@@ -73,11 +73,11 @@ KCNA is the common starting point since it's multiple choice and builds vocabula
 
 **Is there an even bigger bundle than Kubestronaut?**
 
-Yes — the Golden Kubestronaut bundle adds every other CNCF associate exam plus LFCS on top of the five Kubestronaut certs, for engineers going for the full catalog.
+Yes — the Golden Kubestronaut bundle adds every other current CNCF certification on top of the five Kubestronaut certs, for engineers going for the full catalog.
 
 ## Other Linux Foundation & CNCF certifications
 
-RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just Kubestronaut bundle. Dedicated discount guides:
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just Kubestronaut. Dedicated discount guides:
 
 - [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
 - [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
@@ -85,6 +85,7 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
 - [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
 - [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)

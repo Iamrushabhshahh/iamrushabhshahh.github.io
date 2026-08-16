@@ -41,7 +41,7 @@ Percentages hide how much money this actually is, so here is the bundle math:
 | Bundle | List price* | With RUSHABH30 | You save |
 | --- | --- | --- | --- |
 | **[Kubestronaut bundle](#kubestronaut-discount)** (KCNA + KCSA + CKA + CKAD + CKS) | $1,645 | ~$1,151 | **~$494** |
-| **Golden Kubestronaut bundle** (all CNCF certs + LFCS) | ~$4,229 | ~$2,960 | **~$1,269** |
+| **[Golden Kubestronaut bundle](#golden-kubestronaut-discount)** (all 16 current CNCF certs) | $4,229 | ~$2,960 | **~$1,269** |
 | **Any course + exam bundle** (e.g. CKA) | varies | 30% less | **$200+** |
 
 RUSHABH30
@@ -106,7 +106,11 @@ The Linux Foundation Certified IT Associate is the gentlest entry point of all o
 
 ### Kubestronaut bundle discount
 
-Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, CKS)? The code applies to bundles too, and on a five-exam bundle it produces the single biggest saving you can get from it. Check the current bundle price in the catalog, then take 30% off that. [Full Kubestronaut bundle guide & savings math &rarr;](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, CKS)? The code applies to bundles too, and on a five-exam bundle it produces a much bigger saving than any single exam. Check the current bundle price in the catalog, then take 30% off that. [Full Kubestronaut bundle guide & savings math &rarr;](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+
+### Golden Kubestronaut bundle discount
+
+Golden Kubestronaut is CNCF's recognition for holding all 16 current CNCF and Linux Foundation certifications at once, not just the five in standard Kubestronaut. CNCF launched it in April 2025 and over 100 engineers had earned it within five months, so it's a real, active program. List price is $4,229; with `RUSHABH30` it drops to about $2,960 &mdash; a saving of roughly $1,269, the single biggest dollar amount the code produces on this entire site. [Full Golden Kubestronaut bundle guide & savings math &rarr;](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
 
 ## How to use it
 
