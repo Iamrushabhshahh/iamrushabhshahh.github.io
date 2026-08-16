@@ -71,6 +71,10 @@ List price is $445. With RUSHABH30 it drops to about $311, a saving of roughly $
 
 Yes. The 30% applies whether you buy the exam alone or bundled with the official prep course, and the bundle is usually the better value since it's already discounted before the code applies.
 
+**What's actually included in the $445, not just the exam attempt?**
+
+One free retake if you don't pass the first time, two exam simulator attempts (36 hours of access each, from activation), and a 12-month window to schedule and sit the exam after purchase. Most coupon pages only mention the price and skip this.
+
 **What should I do after passing the CKA?**
 
 The natural next steps are the CKAD if you also ship applications to Kubernetes, or the CKS if you want the strongest Kubernetes security signal on your CV — CKS requires an active CKA to sit.
