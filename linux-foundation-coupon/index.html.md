@@ -2,8 +2,6 @@
 
 Updated August 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Affiliate disclosure: I'm an official Linux Foundation Education partner and may earn a commission on purchases made through the links below, at no extra cost to you.
-
 **35 Years of Linux anniversary sale, live through August 18**
 
 I got the heads-up on this one directly from the Linux Foundation affiliate team, so it's not scraped from anywhere else. 35% off sitewide, ends August 18, 2026 (23:59 UTC). Doesn't stack with `RUSHABH30`, so use whichever discount is bigger right now. Excludes THRIVE-ONE subscriptions, the Yocto Project Super Practical Online Course (LFD461-JP), and FinOps courses/certifications, where `RUSHABH30` is still the better pick.
