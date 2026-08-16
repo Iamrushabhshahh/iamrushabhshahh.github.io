@@ -1140,6 +1140,25 @@ function certPageHtml(c, siblings) {
     isPartOf: { '@type': 'WebSite', name: 'rushabhshah.dev', url: `${SITE}/` },
     author: { '@id': `${SITE}/#person` }, publisher: { '@id': `${SITE}/#person` },
   };
+  // priceValidUntil rolls forward automatically — the daily rebuild cron
+  // (.github/workflows/publish-blog.yml) recomputes it every run, so it's
+  // always ~60 days out without needing a manual per-cert update.
+  const priceValidUntil = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  const offerJsonLd = {
+    '@context': 'https://schema.org', '@type': 'Product',
+    name: `${c.fullName} (${c.name})${c.slug === 'kubestronaut' ? '' : ' Certification Exam'}`,
+    description: c.why,
+    brand: { '@type': 'Organization', name: 'The Linux Foundation' },
+    offers: {
+      '@type': 'Offer',
+      url,
+      priceCurrency: 'USD',
+      price: String(c.priceDiscounted),
+      priceValidUntil,
+      availability: 'https://schema.org/InStock',
+      seller: { '@type': 'Organization', name: 'The Linux Foundation' },
+    },
+  };
 
   return `<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -1178,6 +1197,7 @@ function certPageHtml(c, siblings) {
     <script type="application/ld+json">${JSON.stringify(faqJsonLd)}</script>
     <script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd)}</script>
     <script type="application/ld+json">${JSON.stringify(webPageJsonLd)}</script>
+    <script type="application/ld+json">${JSON.stringify(offerJsonLd)}</script>
 </head>
 <body>${certHeader}
     <main id="main" class="container mx-auto px-6 py-12">
