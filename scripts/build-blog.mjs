@@ -46,14 +46,18 @@ const BLOG_DESC = 'Articles on DevOps, Kubernetes, Docker, observability (Grafan
    generated from data (not hand-copied HTML) so structure can't drift
    between pages the way the coupon page's duplicated Person JSON-LD once did.
 
-   Scope is deliberately limited to the 6 certs with real, stable search
-   volume plus the Kubestronaut bundle, not all ~14 exams RUSHABH30 covers.
+   Scope is deliberately limited to certs with real, stable search volume
+   or a genuine authority angle, not all ~14 exams RUSHABH30 covers.
    Cranking out a thin page for every exam code risks reading as doorway
    pages to Google (near-identical content that only differs by keyword),
-   which can hurt the whole domain's trust — not just those pages. Exam
-   domain weightings are intentionally described qualitatively rather than
-   with precise percentages: CNCF revises curricula periodically and a
-   stale hardcoded number would be a fact this script has no way to verify. */
+   which can hurt the whole domain's trust — not just those pages. LFCA,
+   PCA and OTCA earned pages alongside the original 6 + Kubestronaut: LFCA
+   is the true broad on-ramp (KCNA is Kubernetes-specific; LFCA is the
+   actual entry point), and PCA/OTCA are the observability certs a Grafana
+   Champion has real standing to write about. Exam domain weightings are
+   intentionally described qualitatively rather than with precise
+   percentages: CNCF revises curricula periodically and a stale hardcoded
+   number would be a fact this script has no way to verify. */
 
 const CERT_PAGES = [
   {
@@ -252,6 +256,90 @@ const CERT_PAGES = [
       { q: 'Do I have to pass all five exams at once?', a: 'No — buying the bundle just locks in the discounted price for all five; you can schedule and sit each exam on your own timeline within your eligibility window.' },
       { q: 'Which exam should I take first in the bundle?', a: 'KCNA is the common starting point since it\'s multiple choice and builds vocabulary the other four assume you already know. Save CKS for last since it requires an active CKA.' },
       { q: 'Is there an even bigger bundle than Kubestronaut?', a: 'Yes — the Golden Kubestronaut bundle adds every other CNCF associate exam plus LFCS on top of the five Kubestronaut certs, for engineers going for the full catalog.' },
+    ],
+  },
+  {
+    slug: 'lfca', name: 'LFCA', fullName: 'Linux Foundation Certified IT Associate',
+    dest: 'https://training.linuxfoundation.org/certification/certified-it-associate/',
+    format: 'Multiple choice', duration: '90 minutes',
+    priceList: 250, priceDiscounted: 175, prerequisite: null,
+    audience: 'Career-changers and anyone new to IT who wants a broad, vendor-neutral credential covering Linux, sysadmin, cloud, security, and DevOps fundamentals before specializing.',
+    topics: [
+      'Linux Fundamentals',
+      'System Administration Fundamentals',
+      'Cloud Computing Fundamentals',
+      'Security Fundamentals',
+      'DevOps Fundamentals',
+      'IT Project Management Fundamentals',
+    ],
+    why: 'LFCA is the Linux Foundation\'s broadest entry-level credential — it doesn\'t specialize in Kubernetes or Linux administration specifically, it certifies the full spread of fundamentals (Linux, networking, cloud, security, DevOps basics, even project management) that every other Linux Foundation cert quietly assumes you already have. The exam itself was refreshed in September 2025, so it\'s testing current material, not a stale curriculum.',
+    prepTips: [
+      'Treat System Administration Fundamentals as the highest-value domain to study — it\'s the single biggest slice of the exam, ahead of even Cloud Computing.',
+      'This is multiple choice, not hands-on, so focus on recognizing concepts and terminology across a wide surface area rather than deep muscle-memory practice in a terminal.',
+      'If you\'re also eyeing LFCS or a Kubernetes cert later, LFCA is worth doing first — the vocabulary overlap makes everything after it faster to learn.',
+    ],
+    retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Is the LFCA exam hands-on or multiple-choice?', a: 'Multiple choice — 90 minutes, no live terminal or cluster access required, unlike the performance-based LFCS or CKA.' },
+      { q: 'Do I need any prerequisite certification for the LFCA?', a: 'No. LFCA has no certification prerequisite and is explicitly designed as a pre-professional, entry-level credential.' },
+      { q: 'How much is the LFCA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}, a saving of roughly $75.` },
+      { q: 'Does RUSHABH30 work on the LFCA course + exam bundle?', a: 'Yes. The 30% applies whether you buy the exam alone or bundled with the official prep course.' },
+      { q: 'What should I do after passing the LFCA?', a: 'LFCA is a broad on-ramp — the natural next steps are LFCS if you want to go deep on Linux system administration, or KCNA if Kubernetes and cloud native is the direction you\'re headed.' },
+    ],
+  },
+  {
+    slug: 'pca', name: 'PCA', fullName: 'Prometheus Certified Associate',
+    dest: 'https://training.linuxfoundation.org/certification/prometheus-certified-associate/',
+    format: 'Multiple choice', duration: '90 minutes',
+    priceList: 250, priceDiscounted: 175, prerequisite: null,
+    audience: 'Engineers and application developers with a specific interest in monitoring — ideal candidates already hold a Kubernetes cert like KCNA, CKA, or CKAD, or have completed a cloud engineer bootcamp.',
+    topics: [
+      'Observability Concepts',
+      'Prometheus Fundamentals',
+      'PromQL',
+      'Instrumentation and Exporters',
+      'Alerting & Dashboarding',
+    ],
+    why: 'PCA is CNCF official content, and it exists because "I can install Grafana" and "I actually understand Prometheus\'s data model and PromQL" are very different claims. The exam leans hard on PromQL — it\'s the largest single domain on the exam, bigger than Prometheus Fundamentals itself — so it certifies you can actually query and reason about metrics, not just point a dashboard at a data source.',
+    prepTips: [
+      'PromQL is worth a disproportionate amount of your study time — it\'s the single biggest domain on the exam, bigger than Prometheus Fundamentals itself.',
+      'Practice writing queries from scratch rather than just reading example dashboards — the exam tests your ability to construct PromQL, not just recognize it.',
+      'If you already hold KCNA, CKA, or CKAD, you\'re the exact candidate profile Linux Foundation built this exam for — the Kubernetes context will make the instrumentation and exporters domain much more intuitive.',
+    ],
+    retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Do I need Prometheus experience before taking the PCA?', a: 'There\'s no formal prerequisite, but Linux Foundation designed it for engineers who already have some Kubernetes exposure (KCNA, CKA, or CKAD) or a cloud engineering background.' },
+      { q: 'Is the PCA exam hands-on or multiple-choice?', a: 'Multiple choice — 90 minutes, no live cluster or terminal required.' },
+      { q: 'How much is the PCA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}.` },
+      { q: 'Is the PCA a CNCF-recognized certification?', a: 'Yes — it carries the CNCF official content badge, alongside KCNA, CKA, CKAD, CKS, and the other Cloud Native Computing Foundation-aligned exams.' },
+      { q: 'What should I take after the PCA?', a: 'If observability is your focus, OTCA (OpenTelemetry Certified Associate) is the natural companion — Prometheus handles metrics, OpenTelemetry adds traces and logs to the picture.' },
+    ],
+  },
+  {
+    slug: 'otca', name: 'OTCA', fullName: 'OpenTelemetry Certified Associate',
+    dest: 'https://training.linuxfoundation.org/certification/opentelemetry-certified-associate-otca/',
+    format: 'Multiple choice', duration: '90 minutes',
+    priceList: 250, priceDiscounted: 175, prerequisite: null,
+    audience: 'Engineers working in DevOps or platform roles who want to prove observability expertise using OpenTelemetry, the vendor-neutral standard for traces, metrics, and logs.',
+    topics: [
+      'Fundamentals of Observability',
+      'The OpenTelemetry API and SDK',
+      'The OpenTelemetry Collector',
+      'Maintaining and Debugging Observability Pipelines',
+    ],
+    why: 'OpenTelemetry has become the default way applications emit traces, metrics, and logs without locking into one vendor\'s SDK, and OTCA is CNCF official content proving you actually know the API and SDK, not just that you\'ve wired up an agent once. The OpenTelemetry API and SDK domain alone makes up close to half the exam, so it certifies real instrumentation knowledge, not just Collector configuration.',
+    prepTips: [
+      'The API and SDK domain is worth studying hardest — it\'s close to half the exam on its own, well ahead of the Collector domain.',
+      'Get hands-on with Collector configuration stanzas specifically — real exam-takers report the questions use practical, real-world config examples rather than abstract theory.',
+      'This pairs naturally with Prometheus knowledge: OpenTelemetry handles the instrumentation and pipeline side, Prometheus is a common metrics backend it feeds into.',
+    ],
+    retakeNote: 'the exam alone, and a retake within your eligibility window',
+    faqs: [
+      { q: 'Do I need any prerequisite for the OTCA?', a: 'No. OTCA has no certification prerequisite.' },
+      { q: 'Is the OTCA exam hands-on or multiple-choice?', a: 'Multiple choice — 90 minutes, online and proctored, no live terminal required.' },
+      { q: 'How much is the OTCA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}.` },
+      { q: 'How many attempts do I get on the OTCA?', a: 'Your purchase includes one retake (two attempts total) within a 12-month exam eligibility window.' },
+      { q: 'What should I take after the OTCA?', a: 'Linux Foundation points candidates toward CKA to round out Kubernetes fundamentals, or toward Kubestronaut status if you\'re already deep into the certification track.' },
     ],
   },
 ];
@@ -1284,7 +1372,7 @@ function certPageHtml(c, siblings) {
                 <ul>
                     ${siblings.filter(s => s.slug !== c.slug).map(s => `<li><a href="/linux-foundation-coupon/${s.slug}/">${escapeHtml(s.name)} discount code</a></li>`).join('\n                    ')}
                 </ul>
-                <p>Or see the <a href="/linux-foundation-coupon/">full Linux Foundation coupon overview</a> for pricing across the whole catalog, including KCSA, PCA, OTCA, ICA, CCA, CGOA, CAPA, and LFCA.</p>
+                <p>Or see the <a href="/linux-foundation-coupon/">full Linux Foundation coupon overview</a> for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.</p>
             </div>
 
             <aside class="tech-card p-5 rounded-md mt-8">
