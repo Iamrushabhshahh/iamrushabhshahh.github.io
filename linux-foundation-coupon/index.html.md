@@ -28,6 +28,9 @@ These are the certifications people ask me about most, with the math already don
 | **[KCNA](#kcna-coupon)** (Kubernetes and Cloud Native Associate) | Beginners & students | $250 | ~$175 |
 | **[KCSA](#kcsa-discount)** (Kubernetes and Cloud Native Security Associate) | Security beginners | $250 | ~$175 |
 | **[LFCS](#lfcs-coupon)** (Linux Foundation Certified SysAdmin) | Linux fundamentals, any infra role | $445 | ~$311 |
+| **[LFCA](#lfca-discount)** (Linux Foundation Certified IT Associate) | Total beginners, career-changers | $250 | ~$175 |
+| **[PCA](#pca-discount)** (Prometheus Certified Associate) | Engineers focused on monitoring | $250 | ~$175 |
+| **[OTCA](#otca-discount)** (OpenTelemetry Certified Associate) | DevOps & platform engineers standardizing on OTel | $250 | ~$175 |
 
 **List prices when I last updated this page (August 2026), so check the [official catalog](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
 
@@ -75,11 +78,11 @@ The Linux Foundation Certified System Administrator lists at $445, about $311 wi
 
 ### PCA (Prometheus) discount code
 
-The Prometheus Certified Associate is about $250 list, roughly $175 with `RUSHABH30`. Observability is my home turf as a Grafana Champion, and this is the exam I bring up most at Grafana & Friends meetups: short, focused, and it forces you to actually understand PromQL.
+The Prometheus Certified Associate is about $250 list, roughly $175 with `RUSHABH30`. Observability is my home turf as a Grafana Champion, and this is the exam I bring up most at Grafana & Friends meetups: short, focused, and it forces you to actually understand PromQL. [Full PCA discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 
 ### OTCA (OpenTelemetry) discount code
 
-The OpenTelemetry Certified Associate also lists around $250, about $175 with the code. If your team is standardizing on OTel (most are, eventually), this is a cheap way to get ahead of that migration with a credential to show for it.
+The OpenTelemetry Certified Associate also lists around $250, about $175 with the code. If your team is standardizing on OTel (most are, eventually), this is a cheap way to get ahead of that migration with a credential to show for it. [Full OTCA discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/otca/)
 
 ### ICA (Istio) discount code
 
@@ -99,7 +102,7 @@ Certified Argo Project Associate: around $250, about $175 with the code. I run A
 
 ### LFCA discount code
 
-The Linux Foundation Certified IT Associate is the gentlest entry point of all of them, around $250 list and about $175 with the code. Aimed at people at the very start of an IT career; if you can already navigate a shell comfortably, skip ahead to LFCS.
+The Linux Foundation Certified IT Associate is the gentlest entry point of all of them, around $250 list and about $175 with the code. Aimed at people at the very start of an IT career; if you can already navigate a shell comfortably, skip ahead to LFCS. [Full LFCA discount guide, prep tips & FAQ &rarr;](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 
 ### Kubestronaut bundle discount
 
