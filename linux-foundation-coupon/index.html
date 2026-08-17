@@ -254,7 +254,7 @@
                     <div class="flex flex-wrap items-center gap-5">
                         <span class="code-box">
                             TUX35
-                            <button type="button" class="chip copy-code" data-code="TUX35" aria-label="Copy coupon code TUX35">Copy</button>
+                            <button type="button" class="chip copy-code" data-code="TUX35" data-awin="https://www.awin1.com/cread.php?awinmid=85919&amp;awinaffid=2950265&amp;ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Faugust-2026-promo%2F" aria-label="Copy coupon code TUX35">Copy</button>
                         </span>
                         <a href="https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Faugust-2026-promo%2F" target="_blank" rel="noopener sponsored" class="btn btn-primary">
                             Use TUX35 before it expires →
@@ -266,7 +266,7 @@
                 <div class="flex flex-wrap items-center gap-5">
                     <span class="code-box">
                         RUSHABH30
-                        <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
+                        <button type="button" class="chip copy-code" data-code="RUSHABH30" data-awin="https://www.awin1.com/cread.php?awinmid=85919&amp;awinaffid=2950265&amp;ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F" aria-label="Copy coupon code RUSHABH30">Copy</button>
                     </span>
                     <a href="https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F" target="_blank" rel="noopener sponsored" class="btn btn-ghost">
                         Open the catalog →
@@ -344,7 +344,7 @@
             <div class="tech-card p-5 rounded-md mt-8 flex flex-wrap items-center justify-between gap-4">
                 <span class="code-box">
                     RUSHABH30
-                    <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
+                    <button type="button" class="chip copy-code" data-code="RUSHABH30" data-awin="https://www.awin1.com/cread.php?awinmid=85919&amp;awinaffid=2950265&amp;ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F" aria-label="Copy coupon code RUSHABH30">Copy</button>
                 </span>
                 <a href="https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout →</a>
             </div>
@@ -649,6 +649,7 @@
                         btn.textContent = 'Copied!';
                         setTimeout(() => { btn.textContent = t; }, 2000);
                     }).catch(() => {});
+                    if (btn.dataset.awin) window.open(btn.dataset.awin, '_blank', 'noopener');
                 });
             });
             const b = document.getElementById('menu-btn');
