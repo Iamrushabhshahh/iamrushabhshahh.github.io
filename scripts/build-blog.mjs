@@ -1530,9 +1530,10 @@ const renderSkillGroups = () => SKILL_GROUPS.map((group, gi) => {
   const chips = group.items.map(s => {
     let ic;
     if (s.if) {
-      ic = `<img src="https://api.iconify.design/${s.if}.svg" alt="${escapeHtml(s.name)} logo" loading="lazy" width="16" height="16">`;
+      const fname = s.if.replace(/\//g, '-');
+      ic = `<img src="/assets/icons/color/${fname}.svg" alt="${escapeHtml(s.name)} logo" loading="lazy" width="16" height="16">`;
     } else if (s.si) {
-      ic = `<img class="mono-icon" src="https://cdn.simpleicons.org/${s.si}/c9d1d9" alt="${escapeHtml(s.name)} logo" loading="lazy" width="16" height="16">`;
+      ic = `<img class="mono-icon" src="/assets/icons/mono/${s.si}.svg" alt="${escapeHtml(s.name)} logo" loading="lazy" width="16" height="16">`;
     } else {
       ic = homeIcon(s.icon, 'w-4 h-4');
     }
