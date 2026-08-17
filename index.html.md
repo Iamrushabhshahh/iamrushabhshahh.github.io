@@ -180,22 +180,6 @@ eBPF Open Source Linux i18n
 
 (https://ebpf.io/hi-in/)
 
-### AWS SAA-C03 Prep
-
-Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.
-
-AWS Certification Study Guide
-
-(https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution)
-
-### Azure AZ-104 Prep
-
-A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.
-
-Azure Certification DevOps
-
-(https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution)
-
 ### Personal Tech Blog
 
 My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux. Earlier posts are archived on Hashnode.
