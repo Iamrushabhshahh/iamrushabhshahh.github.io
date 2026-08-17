@@ -1523,8 +1523,6 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   { title: 'eBPF.io: Hindi Translation', desc: 'Translated the eBPF.io website into Hindi so Hindi-speaking engineers can learn about eBPF for networking, observability, and security on Linux.', link: 'https://ebpf.io/hi-in/', tags: ['eBPF', 'Open Source', 'Linux', 'i18n'], src: '/assets/ebpf-logo.svg' },
-  { title: 'AWS SAA-C03 Prep', desc: 'Study materials and practice exams for the AWS Certified Solutions Architect – Associate exam.', link: 'https://github.com/Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', repo: 'Iamrushabhshahh/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Exam-Dump-With-Solution', tags: ['AWS', 'Certification', 'Study Guide'], if: 'logos/aws' },
-  { title: 'Azure AZ-104 Prep', desc: 'A hub for Azure Administrator (AZ-104) exam prep with questions and solutions.', link: 'https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', repo: 'Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution', tags: ['Azure', 'Certification', 'DevOps'], if: 'logos/microsoft-azure' },
   { title: 'Personal Tech Blog', desc: 'My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux. Earlier posts are archived on Hashnode.', link: '/blog/', tags: ['Blog', 'Observability', 'Linux', 'DevOps'], feather: 'book-open' },
 ];
 
