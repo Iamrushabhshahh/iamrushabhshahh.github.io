@@ -2,15 +2,7 @@
 
 Updated August 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-**35 Years of Linux anniversary sale, live through August 18**
-
-I got the heads-up on this one directly from the Linux Foundation affiliate team, so it's not scraped from anywhere else. 35% off sitewide, ends August 18, 2026 (23:59 UTC). Doesn't stack with `RUSHABH30`, so use whichever discount is bigger right now. Excludes THRIVE-ONE subscriptions, the Yocto Project Super Practical Online Course (LFD461-JP), and FinOps courses/certifications, where `RUSHABH30` is still the better pick.
-
-TUX35
-
-[Use TUX35 before it expires →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Faugust-2026-promo%2F)
-
-No sale running? This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -161,6 +153,7 @@ Ready? The code is RUSHABH30. 30% off, no expiry.
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **35 Years of Linux anniversary sale, August 2026**: 35% off sitewide with code TUX35, ended August 18.
 - **Mega May 2026** (May 12 to 24): 50% off individual certifications, up to 65% off THRIVE subscription bundles. Announced about three weeks early, then extended past the original deadline.
 - **Kubernetes Birthday sale, June 2026**: around 45% off Kubernetes certifications.
 - **Tech Talent sale, June 2026**: around 48% off, ended June 14.
