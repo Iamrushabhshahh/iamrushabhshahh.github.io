@@ -672,14 +672,6 @@ const segControl = (compact = false) => {
             </div>`;
 };
 
-// Search trigger button — opens the Cmd+K / "/" command palette (markup +
-// script live once in `cmdkOverlay` below, shared by every page).
-const cmdkTrigger = (compact = false) => `<button type="button" class="cmdk-trigger${compact ? ' cmdk-trigger--compact' : ''}" aria-haspopup="dialog" aria-controls="cmdk" title="Search (/ or ⌘K)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <span class="cmdk-trigger-label${compact ? ' sr-only' : ''}">Search</span>
-                    <kbd class="kbd cmdk-trigger-kbd" aria-hidden="true">/</kbd>
-                </button>`;
-
 const header = `
     <a href="#main" class="skip-link">Skip to content</a>
     <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
@@ -695,13 +687,9 @@ const header = `
                 <a href="/linux-foundation-coupon/" class="text-gray-400 hover:text-primary-color transition-colors">./deals</a>
                 <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
             </div>
-            <div class="hidden xl:flex flex-shrink-0 items-center" style="gap: 0.6rem;">
-                ${cmdkTrigger(true)}
+            <div class="hidden xl:flex flex-shrink-0">
                 ${segControl(true)}
             </div>
-            <button type="button" class="cmdk-trigger cmdk-trigger--mobile xl:hidden" aria-haspopup="dialog" aria-controls="cmdk" aria-label="Search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
             <button id="menu-btn" class="xl:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
                 <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
             </button>
@@ -722,113 +710,6 @@ const header = `
         </a>
     </header>`;
 
-// Cmd+K / "/" command palette — markup once, fetches /search-index.json
-// lazily on first open, plain-JS substring scoring (no dependency needed
-// for a few dozen entries). Shared verbatim across every page's footer.
-const cmdkOverlay = `
-    <div id="cmdk" class="cmdk-overlay hidden" role="dialog" aria-modal="true" aria-label="Search">
-        <div class="cmdk-panel">
-            <div class="cmdk-input-row">
-                <span class="font-fira text-green-color" aria-hidden="true">$</span>
-                <input id="cmdk-input" class="cmdk-input" type="text" placeholder="Search posts, certs, sections…" autocomplete="off" spellcheck="false" aria-label="Search" aria-controls="cmdk-results" role="combobox" aria-expanded="true">
-                <kbd class="kbd">esc</kbd>
-            </div>
-            <ul id="cmdk-results" class="cmdk-results" role="listbox"></ul>
-            <p id="cmdk-empty" class="cmdk-empty hidden">No results. Try a different search.</p>
-            <div class="cmdk-footer font-fira">
-                <span><kbd class="kbd">↑</kbd><kbd class="kbd">↓</kbd> navigate</span>
-                <span><kbd class="kbd">↵</kbd> open</span>
-                <span><kbd class="kbd">esc</kbd> close</span>
-            </div>
-        </div>
-    </div>
-    <script>
-        (function () {
-            const overlay = document.getElementById('cmdk');
-            const input = document.getElementById('cmdk-input');
-            const resultsEl = document.getElementById('cmdk-results');
-            const emptyEl = document.getElementById('cmdk-empty');
-            if (!overlay || !input || !resultsEl) return;
-
-            const TYPE_LABEL = { post: 'post', deal: 'deal', section: 'section', page: 'page' };
-            let index = null, indexPromise = null, results = [], activeIndex = 0, lastFocused = null;
-
-            const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-
-            const loadIndex = () => indexPromise || (indexPromise = fetch('/search-index.json')
-                .then((r) => r.json()).then((data) => (index = data))
-                .catch(() => (index = [])));
-
-            const score = (entry, q) => {
-                const title = entry.title.toLowerCase();
-                if (title === q) return 100;
-                if (title.startsWith(q)) return 80;
-                if (title.includes(q)) return 60;
-                if ((entry.tags || []).join(' ').toLowerCase().includes(q)) return 40;
-                if ((entry.description || '').toLowerCase().includes(q)) return 20;
-                return 0;
-            };
-
-            const render = () => {
-                resultsEl.innerHTML = '';
-                emptyEl.classList.toggle('hidden', results.length > 0);
-                results.forEach((r, i) => {
-                    const li = document.createElement('li');
-                    li.className = 'cmdk-result' + (i === activeIndex ? ' active' : '');
-                    li.setAttribute('role', 'option');
-                    li.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
-                    li.innerHTML = '<div class="cmdk-result-title">' + esc(r.title) + ' <span class="cmdk-result-type">' + (TYPE_LABEL[r.type] || r.type) + '</span></div>' +
-                        (r.description ? '<div class="cmdk-result-desc">' + esc(r.description) + '</div>' : '');
-                    li.addEventListener('mouseenter', () => { activeIndex = i; render(); });
-                    li.addEventListener('click', () => go(r));
-                    resultsEl.appendChild(li);
-                });
-                const activeEl = resultsEl.children[activeIndex];
-                if (activeEl) activeEl.scrollIntoView({ block: 'nearest' });
-            };
-
-            const search = (raw) => {
-                const q = raw.trim().toLowerCase();
-                results = !q ? (index || []).slice(0, 8)
-                    : (index || []).map((e) => ({ e, s: score(e, q) })).filter((x) => x.s > 0)
-                        .sort((a, b) => b.s - a.s).slice(0, 8).map((x) => x.e);
-                activeIndex = 0;
-                render();
-            };
-
-            const go = (entry) => { window.location.href = entry.url; };
-
-            const open = () => {
-                lastFocused = document.activeElement;
-                overlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-                input.value = '';
-                loadIndex().then(() => search(''));
-                input.focus();
-            };
-            const close = () => {
-                overlay.classList.add('hidden');
-                document.body.style.overflow = '';
-                if (lastFocused && lastFocused.focus) lastFocused.focus();
-            };
-
-            document.querySelectorAll('.cmdk-trigger').forEach((btn) => btn.addEventListener('click', open));
-            overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
-            input.addEventListener('input', () => search(input.value));
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowDown') { e.preventDefault(); activeIndex = Math.min(activeIndex + 1, results.length - 1); render(); }
-                else if (e.key === 'ArrowUp') { e.preventDefault(); activeIndex = Math.max(activeIndex - 1, 0); render(); }
-                else if (e.key === 'Enter') { e.preventDefault(); if (results[activeIndex]) go(results[activeIndex]); }
-                else if (e.key === 'Escape') { e.preventDefault(); close(); }
-            });
-            document.addEventListener('keydown', (e) => {
-                const isOpen = !overlay.classList.contains('hidden');
-                if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); isOpen ? close() : open(); return; }
-                if (!isOpen && e.key === '/' && !e.target.matches('input, textarea, [contenteditable]')) { e.preventDefault(); open(); }
-            });
-        })();
-    </script>`;
-
 const footer = `
     <footer class="border-t border-border-color mt-10">
         <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-fira text-gray-500">
@@ -843,7 +724,6 @@ const footer = `
             </div>
         </div>
     </footer>
-    ${cmdkOverlay}
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const b = document.getElementById('menu-btn');
@@ -1307,32 +1187,6 @@ ${sitemapUrls.map(u => {
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
 console.log('✅ built     /sitemap.xml');
 
-/* ---------- search-index.json (Cmd+K / "/" command palette) ---------- */
-
-const searchIndex = [
-  { title: 'Home', description: 'Rushabh Shah — DevOps Engineer, Docker Captain, Grafana Champion', url: '/', type: 'page' },
-  { title: 'About', description: 'Who I am and what I do', url: '/#about', type: 'section' },
-  { title: 'Honors', description: 'Docker Captain, Grafana Champion, and other recognitions', url: '/#honors', type: 'section' },
-  { title: 'Tech Stack', description: 'Tools and technologies I work with day to day', url: '/#skills', type: 'section' },
-  { title: 'Experience', description: 'Work history', url: '/#experience', type: 'section' },
-  { title: 'Projects', description: "Things I've built and contributed to", url: '/#projects', type: 'section' },
-  { title: 'Writing & Talks', description: 'Blog posts and speaking engagements', url: '/#writing', type: 'section' },
-  { title: 'Contact', description: 'Get in touch', url: '/#contact', type: 'section' },
-  { title: 'Blog', description: 'DevOps, Kubernetes, observability, cloud cost, and Linux writing', url: '/blog/', type: 'page' },
-  { title: 'Linux Foundation & CNCF coupon codes', description: 'RUSHABH30 — 30% off every certification, all year', url: '/linux-foundation-coupon/', type: 'page' },
-  { title: 'Docker Captain', description: 'Docker Captain recognition and community work', url: '/docker-captain/', type: 'page' },
-  { title: 'Links', description: 'Every profile and link in one place', url: '/links/', type: 'page' },
-  ...all.map(p => ({ title: p.title, description: p.description, url: `/blog/${p.slug}/`, type: 'post', tags: p.tags })),
-  ...CERT_PAGES.map(c => ({
-    title: `${c.name} discount code`,
-    description: `${c.fullName} — RUSHABH30 gets it to ~$${c.priceDiscounted} instead of $${c.priceList}`,
-    url: `/linux-foundation-coupon/${c.slug}/`,
-    type: 'deal',
-  })),
-];
-fs.writeFileSync(path.join(ROOT, 'search-index.json'), JSON.stringify(searchIndex));
-console.log(`✅ built     /search-index.json (${searchIndex.length} entries)`);
-
 /* ---------- freshness stamp: coupon page ----------
    Coupon-query SERPs reward visible freshness. The hourly CI build re-stamps
    the coupon page's title and "Updated ..." line with the current month, so
@@ -1428,13 +1282,9 @@ const certHeader = `
                 <a href="/linux-foundation-coupon/" class="text-primary-color transition-colors" aria-current="true">./deals</a>
                 <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
             </div>
-            <div class="hidden xl:flex flex-shrink-0 items-center" style="gap: 0.6rem;">
-                ${cmdkTrigger(true)}
+            <div class="hidden xl:flex flex-shrink-0">
                 ${segControl(true)}
             </div>
-            <button type="button" class="cmdk-trigger cmdk-trigger--mobile xl:hidden" aria-haspopup="dialog" aria-controls="cmdk" aria-label="Search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
             <button id="menu-btn" class="xl:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
                 <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
             </button>
@@ -1464,7 +1314,6 @@ const certFooter = `
             </div>
         </div>
     </footer>
-    ${cmdkOverlay}
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const y = document.getElementById('footer-year');
