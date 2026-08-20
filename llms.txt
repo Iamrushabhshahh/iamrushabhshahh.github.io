@@ -10,7 +10,7 @@ Key facts:
 - Community: Organizer of Grafana & Friends Ahmedabad (quarterly observability meetup); represented KodeKloud at KubeCon + CloudNativeCon India 2024; translated eBPF.io into Hindi
 - Focus areas: Kubernetes, Docker, Helm, Argo CD, Terraform, GitHub Actions, CI/CD, AWS, Azure, GCP, OCI, Prometheus, Grafana LGTM stack (Loki, Grafana, Tempo, Mimir), OpenTelemetry, eBPF, Linux, cloud cost optimization
 - Notable work: 59% AWS spend reduction at Genuin; zero-downtime AWS to Oracle Cloud Infrastructure migration under a hard deadline; ISO / SOC Type 1 readiness controls
-- Certifications: Microsoft Certified Azure Administrator Associate (AZ-104), Azure Fundamentals (AZ-900)
+- Certifications: KCNA - Kubernetes and Cloud Native Associate (The Linux Foundation), Microsoft Certified Azure Administrator Associate (AZ-104), Azure Fundamentals (AZ-900)
 - Availability: open to collaboration, speaking invitations, and workshops on Kubernetes, the Grafana LGTM stack, OpenTelemetry, and cloud cost
 
 ## Key pages

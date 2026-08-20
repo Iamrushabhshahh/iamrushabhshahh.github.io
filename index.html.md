@@ -92,6 +92,10 @@ Grafana Labs' invitation-only program for contributors who advance the observabi
 
 ### Certifications
 
+KCNA: Kubernetes and Cloud Native Associate
+
+The Linux Foundation
+
 Microsoft Certified: Azure Administrator Associate
 
 AZ-104

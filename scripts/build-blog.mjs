@@ -1601,6 +1601,7 @@ const SKILL_GROUPS = [
 ];
 
 const CERTS = [
+  { name: 'KCNA: Kubernetes and Cloud Native Associate', code: 'The Linux Foundation', icon: 'award' },
   { name: 'Microsoft Certified: Azure Administrator Associate', code: 'AZ-104', icon: 'award' },
   { name: 'Microsoft Certified: Azure Fundamentals', code: 'AZ-900', icon: 'award' },
 ];
