@@ -461,6 +461,21 @@ header nav .nav-links a {
     .lg\:col-span-7 { grid-column: span 7 / span 7; }
     .lg\:text-7xl { font-size: 4.5rem; line-height: 1; }
 }
+/* Header nav specifically needs more room than the standard 1280px container
+   cap once it's carrying logo + 8 links + search + theme switch — at exactly
+   1280 that combined content still doesn't fit (measured ~1423px needed vs
+   ~1232px available), so both the container and the show/hide threshold for
+   the header are widened together to a point that actually fits. */
+header nav.container { max-width: 1536px; }
+/* !important here, unlike the other responsive display utilities above:
+   the elements these toggle (.cmdk-trigger buttons) carry their own
+   unconditional `display` in the component rules below, which — being later
+   in the file at equal specificity — would otherwise win regardless of
+   viewport. These two are meant to unconditionally override that. */
+@media (min-width: 1536px) {
+    .xl\:flex { display: flex !important; }
+    .xl\:hidden { display: none !important; }
+}
 
 /* =====================================================================
    COMPONENTS
@@ -663,6 +678,11 @@ section[id] { scroll-margin-top: 5rem; }
 }
 .orb-blue { background: radial-gradient(circle, rgba(var(--primary-rgb),0.45), transparent 70%); }
 .orb-purple { background: radial-gradient(circle, rgba(var(--purple-rgb),0.40), transparent 70%); }
+/* On light backgrounds these blurred blobs stack with the body's own
+   top-left/top-right radial-gradient wash and read as a visible color
+   smear (most noticeable behind the hero's status pill) instead of the
+   subtle glow they are on dark. Same two colors, just toned down. */
+:root[data-theme="light"] .orb { opacity: 0.35; }
 
 /* Buttons */
 .btn {
@@ -1039,6 +1059,134 @@ nav a { -webkit-tap-highlight-color: transparent; }
     line-height: 1;
 }
 
+/* Command palette (Cmd+K / "/") */
+.cmdk-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--gray-400-color);
+    background-color: rgba(var(--panel-rgb), 0.5);
+    transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+.cmdk-trigger:hover { border-color: var(--primary-color); color: var(--primary-color); }
+.cmdk-trigger--compact .cmdk-trigger-label { display: none; }
+.cmdk-trigger--mobile {
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-right: 0.5rem;
+    color: var(--gray-400-color);
+}
+.cmdk-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(1, 4, 9, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10vh 1rem 1rem;
+}
+.cmdk-overlay.hidden { display: none; }
+.cmdk-panel {
+    width: 100%;
+    max-width: 560px;
+    background-color: var(--panel-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    overflow: hidden;
+    animation: cmdk-in 0.15s ease-out;
+}
+@keyframes cmdk-in { from { opacity: 0; transform: translateY(-8px) scale(0.98); } to { opacity: 1; transform: none; } }
+.cmdk-input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.cmdk-input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: var(--text-color);
+    font-family: 'Fira Code', 'Fira-Code-fallback', monospace;
+    font-size: 0.95rem;
+}
+.cmdk-input::placeholder { color: var(--gray-500-color); }
+.cmdk-results { list-style: none; margin: 0; padding: 0.5rem; max-height: 50vh; overflow-y: auto; }
+.cmdk-result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.cmdk-result.active { background-color: rgba(var(--primary-rgb), 0.12); }
+.cmdk-result-title { display: flex; align-items: center; gap: 0.5rem; color: var(--fg-strong); font-weight: 600; font-size: 0.92rem; }
+.cmdk-result-desc { color: var(--gray-400-color); font-size: 0.8rem; }
+.cmdk-result-type {
+    font-family: 'Fira Code', 'Fira-Code-fallback', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-500-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.05rem 0.35rem;
+}
+.cmdk-empty { padding: 2rem 1rem; text-align: center; color: var(--gray-500-color); font-size: 0.875rem; }
+.cmdk-footer {
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem 1.1rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--gray-500-color);
+    font-size: 0.72rem;
+}
+.cmdk-footer span { display: flex; align-items: center; gap: 0.3rem; }
+@media (max-width: 639px) {
+    .cmdk-trigger-kbd { display: none; }
+    .cmdk-overlay { padding-top: 4vh; }
+}
+
+/* Reading progress bar (blog posts only) */
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 50;
+    background: transparent;
+    pointer-events: none;
+}
+#reading-progress-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-purple));
+    transform: scaleX(0);
+    transform-origin: left;
+    will-change: transform;
+}
+
+/* Copy-code / copy-link satisfying click feedback */
+.chip.copied, .copy-code.copied {
+    border-color: var(--green-color) !important;
+    color: var(--green-color) !important;
+    background-color: rgba(var(--green-rgb), 0.12) !important;
+    animation: copy-pop 0.3s ease-out;
+}
+@keyframes copy-pop { 0% { transform: scale(1); } 40% { transform: scale(1.06); } 100% { transform: scale(1); } }
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -1046,6 +1194,7 @@ nav a { -webkit-tap-highlight-color: transparent; }
     .status-pill .dot, .timeline-dot-current { animation: none; }
     .tech-card, .btn { transition: none; }
     .tech-card:hover, .btn:hover, .btn:active { transform: none; }
+    .cmdk-panel, .chip.copied, .copy-code.copied { animation: none; }
 }
 
 /* =====================================================================
@@ -1071,7 +1220,7 @@ nav a { -webkit-tap-highlight-color: transparent; }
 }
 
 /* Code-style inline annotation for keyboard shortcuts in nav (only desktop) */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     nav a[data-key]::after {
         content: ' [' attr(data-key) ']';
         font-size: 0.65em;
@@ -1221,7 +1370,7 @@ nav a { -webkit-tap-highlight-color: transparent; }
 /* Print styles — clean, paper-friendly version */
 @media print {
     body { background: white; color: black; }
-    body::before, .orb, #back-to-top, #mobile-menu-button, #toast-notification, .skip-link, header, .post-toc { display: none !important; }
+    body::before, .orb, #back-to-top, #mobile-menu-button, #toast-notification, .skip-link, header, .post-toc, .cmdk-overlay, #reading-progress { display: none !important; }
     .gradient-text { -webkit-text-fill-color: black; color: black; background: none; }
     .tech-card { box-shadow: none; border: 1px solid #ccc; background: white !important; }
     a { color: black; text-decoration: underline; }
