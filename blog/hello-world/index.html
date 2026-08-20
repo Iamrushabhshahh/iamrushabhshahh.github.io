@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
@@ -103,7 +103,8 @@
         </a>
     </header>
     <main id="main" class="container mx-auto px-6 py-12">
-        <article class="max-w-3xl mx-auto">
+        <div class="post-layout">
+        <article class="post-article max-w-3xl">
             <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
             <header class="mb-10">
                 <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">Hello, world: the blog now lives on rushabhshah.dev</h1>
@@ -119,9 +120,9 @@
             
             <div class="post-prose">
 <p>After two years of publishing on Hashnode, my writing finally has a home on my own domain. This post is both a hello and a quick tour of how this blog works.</p>
-<h2>Why move?</h2>
+<h2 id="why-move">Why move?</h2>
 <p>Every article I published was building <code>iamrushabhshahh.hashnode.dev</code>&#39;s search presence instead of <code>rushabhshah.dev</code>&#39;s. Owning the content, the URLs, and the reader relationship matters more every year, especially when AI assistants are increasingly the ones reading and summarizing your site.</p>
-<h2>How it works</h2>
+<h2 id="how-it-works">How it works</h2>
 <p>The setup is deliberately boring, which is the highest compliment in infrastructure:</p>
 <ul>
 <li>Posts are <strong>markdown files</strong> in the site&#39;s GitHub repo. No database, no CMS server.</li>
@@ -135,7 +136,7 @@ date: &quot;2026-07-15 09:00&quot;   # IST, goes live automatically
 tags: [kubernetes, observability]
 </code></pre>
 <p>Zero servers, zero cost, everything version-controlled.</p>
-<h2>What to expect here</h2>
+<h2 id="what-to-expect-here">What to expect here</h2>
 <p>The same things I care about at work and in the community: <strong>Kubernetes, Docker, the Grafana LGTM stack, OpenTelemetry, cloud cost optimization, and Linux</strong>, written the way I&#39;d want to read them: reproducible, with real configs and honest trade-offs.</p>
 <p>If that&#39;s your kind of content, <a href="/blog/rss.xml">subscribe via RSS</a> or find me on <a href="https://twitter.com/iamrushabhshahh">Twitter</a>.</p>
 <p>$ see you in the next post</p>
@@ -154,6 +155,18 @@ tags: [kubernetes, observability]
                 
             </footer>
         </article>
+        
+        <aside class="post-toc" aria-label="Table of contents">
+            <div class="post-toc-sticky">
+                <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># on this page</p>
+                <nav class="post-toc-nav">
+                    <a href="#why-move" data-toc-link="why-move" class="post-toc-link">Why move?</a>
+                    <a href="#how-it-works" data-toc-link="how-it-works" class="post-toc-link">How it works</a>
+                    <a href="#what-to-expect-here" data-toc-link="what-to-expect-here" class="post-toc-link">What to expect here</a>
+                </nav>
+            </div>
+        </aside>
+        </div>
     </main>
 
     <footer class="border-t border-border-color mt-10">
@@ -206,6 +219,40 @@ tags: [kubernetes, observability]
             s.classList.remove('hidden');
             s.addEventListener('click', () => {
                 navigator.share({ title: s.dataset.title, url: s.dataset.url }).catch(() => {});
+            });
+        }
+        const tocLinks = document.querySelectorAll('.post-toc-link');
+        if (tocLinks.length) {
+            const byId = new Map();
+            tocLinks.forEach(a => {
+                const heading = document.getElementById(a.dataset.tocLink);
+                if (heading) byId.set(heading, a);
+            });
+            let current = null;
+            const setActive = (link) => {
+                tocLinks.forEach(a => a.classList.toggle('active', a === link));
+            };
+            // A thin band across the top ~30% of the viewport. Whichever heading
+            // most recently entered it stays "current" until the next one does,
+            // so the highlight doesn't reset while a heading scrolls past upward.
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) current = entry.target; });
+                if (current) setActive(byId.get(current));
+            }, { rootMargin: '0px 0px -70% 0px', threshold: 0 });
+            byId.forEach((_link, heading) => observer.observe(heading));
+
+            // Explicit smooth animation for in-page TOC clicks (heading ids are
+            // already in the static HTML, so the browser's own default jump
+            // works fine on its own — this just makes clicking one feel nicer).
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            tocLinks.forEach(a => {
+                a.addEventListener('click', (e) => {
+                    const heading = document.getElementById(a.dataset.tocLink);
+                    if (!heading) return;
+                    e.preventDefault();
+                    heading.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+                    history.pushState(null, '', '#' + a.dataset.tocLink);
+                });
             });
         }
     });

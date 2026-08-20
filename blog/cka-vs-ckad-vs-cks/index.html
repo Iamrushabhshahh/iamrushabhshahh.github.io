@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
@@ -103,7 +103,8 @@
         </a>
     </header>
     <main id="main" class="container mx-auto px-6 py-12">
-        <article class="max-w-3xl mx-auto">
+        <div class="post-layout">
+        <article class="post-article max-w-3xl">
             <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
             <header class="mb-10">
                 <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">CKA vs CKAD vs CKS: which to take first</h1>
@@ -119,16 +120,16 @@
             
             <div class="post-prose">
 <p>People ask me this constantly, usually phrased as &quot;which Kubernetes cert should I get&quot;: CKA, CKAD, or CKS. The honest answer is that they&#39;re not really competing for the same slot. They share a format (live terminal, real clusters, no multiple choice) and a price ($445 list), but they certify three different jobs.</p>
-<h2>Who each one is actually for</h2>
+<h2 id="who-each-one-is-actually-for">Who each one is actually for</h2>
 <p><strong>CKA (Certified Kubernetes Administrator)</strong> is for the person who keeps the cluster running: installation, upgrades, networking, storage, and troubleshooting when something breaks at 2 a.m. If your job title has &quot;platform,&quot; &quot;SRE,&quot; or &quot;infrastructure&quot; in it, this is the default starting point.</p>
 <p><strong>CKAD (Certified Kubernetes Application Developer)</strong> is for the person shipping workloads <em>to</em> a cluster someone else administers. It skips cluster-admin depth entirely and goes deep on the stuff developers actually touch: Deployments, ConfigMaps, Secrets, probes, and debugging a Pod that won&#39;t come up. If you write the app and someone else runs the cluster, this is the closer match, and you don&#39;t need CKA first.</p>
 <p><strong>CKS (Certified Kubernetes Security Specialist)</strong> is for hardening a cluster end to end: cluster and system hardening, minimizing microservice vulnerabilities, supply-chain security, and runtime detection with tools like Falco. It&#39;s the deepest of the three, and it&#39;s the only one with a real prerequisite.</p>
-<h2>Where they overlap, and where they don&#39;t</h2>
+<h2 id="where-they-overlap-and-where-they-don-39-t">Where they overlap, and where they don&#39;t</h2>
 <p>All three are performance-based against live clusters, so the exam-taking <em>skill</em> transfers: speed with kubectl, comfort editing YAML under time pressure, knowing how to navigate the allowed documentation fast instead of memorizing it. CKA and CKAD both touch Services and Networking, since both administrators and developers need to reason about how traffic reaches a Pod.</p>
 <p>Where they diverge is depth versus breadth. CKA spreads across the whole cluster lifecycle. CKAD narrows to the application layer but goes deeper there than CKA does. CKS narrows even further, to security, and assumes CKA-level cluster fluency as a starting point rather than teaching it again.</p>
-<h2>Why CKS needs an active CKA</h2>
+<h2 id="why-cks-needs-an-active-cka">Why CKS needs an active CKA</h2>
 <p>This is the one hard prerequisite in the group, and it&#39;s enforced at scheduling time, not just a suggestion: you cannot sit the CKS without holding a currently active CKA. It&#39;s the right call. Cluster hardening only makes sense once you&#39;re already fluent in how a cluster is put together, so CKS builds directly on CKA fluency instead of re-teaching it under a security lens.</p>
-<h2>Recommended order by where you&#39;re starting</h2>
+<h2 id="recommended-order-by-where-you-39-re-starting">Recommended order by where you&#39;re starting</h2>
 <ul>
 <li><strong>Already doing ops, platform, or SRE work:</strong> CKA first. It&#39;s the credential hiring managers actually check for production Kubernetes roles, and it unlocks CKS later if you want it.</li>
 <li><strong>Shipping applications to a cluster someone else runs:</strong> CKAD, and you can stop there if cluster administration genuinely isn&#39;t your job. No need to detour through CKA first.</li>
@@ -152,6 +153,19 @@
                 <p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">30% off the CKA, CKAD and CKS with code RUSHABH30</a>.</p>
             </footer>
         </article>
+        
+        <aside class="post-toc" aria-label="Table of contents">
+            <div class="post-toc-sticky">
+                <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># on this page</p>
+                <nav class="post-toc-nav">
+                    <a href="#who-each-one-is-actually-for" data-toc-link="who-each-one-is-actually-for" class="post-toc-link">Who each one is actually for</a>
+                    <a href="#where-they-overlap-and-where-they-don-39-t" data-toc-link="where-they-overlap-and-where-they-don-39-t" class="post-toc-link">Where they overlap, and where they don&#39;t</a>
+                    <a href="#why-cks-needs-an-active-cka" data-toc-link="why-cks-needs-an-active-cka" class="post-toc-link">Why CKS needs an active CKA</a>
+                    <a href="#recommended-order-by-where-you-39-re-starting" data-toc-link="recommended-order-by-where-you-39-re-starting" class="post-toc-link">Recommended order by where you&#39;re starting</a>
+                </nav>
+            </div>
+        </aside>
+        </div>
     </main>
 
     <footer class="border-t border-border-color mt-10">
@@ -204,6 +218,40 @@
             s.classList.remove('hidden');
             s.addEventListener('click', () => {
                 navigator.share({ title: s.dataset.title, url: s.dataset.url }).catch(() => {});
+            });
+        }
+        const tocLinks = document.querySelectorAll('.post-toc-link');
+        if (tocLinks.length) {
+            const byId = new Map();
+            tocLinks.forEach(a => {
+                const heading = document.getElementById(a.dataset.tocLink);
+                if (heading) byId.set(heading, a);
+            });
+            let current = null;
+            const setActive = (link) => {
+                tocLinks.forEach(a => a.classList.toggle('active', a === link));
+            };
+            // A thin band across the top ~30% of the viewport. Whichever heading
+            // most recently entered it stays "current" until the next one does,
+            // so the highlight doesn't reset while a heading scrolls past upward.
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) current = entry.target; });
+                if (current) setActive(byId.get(current));
+            }, { rootMargin: '0px 0px -70% 0px', threshold: 0 });
+            byId.forEach((_link, heading) => observer.observe(heading));
+
+            // Explicit smooth animation for in-page TOC clicks (heading ids are
+            // already in the static HTML, so the browser's own default jump
+            // works fine on its own — this just makes clicking one feel nicer).
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            tocLinks.forEach(a => {
+                a.addEventListener('click', (e) => {
+                    const heading = document.getElementById(a.dataset.tocLink);
+                    if (!heading) return;
+                    e.preventDefault();
+                    heading.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+                    history.pushState(null, '', '#' + a.dataset.tocLink);
+                });
             });
         }
     });

@@ -398,6 +398,24 @@ const escapeXml = escapeHtml;
 const slugify = (s) => String(s).toLowerCase().trim()
   .replace(/['".]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
+// Injects id="..." into every H2/H3 in rendered post HTML and returns a flat
+// table of contents alongside it. marked v15 dropped the old headerIds option,
+// so this is a hand-rolled replacement for it.
+function addHeadingIds(html) {
+  const toc = [];
+  const seen = new Set();
+  const out = html.replace(/<h([23])>(.*?)<\/h\1>/gs, (_match, level, inner) => {
+    const text = inner.replace(/<[^>]+>/g, '').trim();
+    const base = slugify(text) || 'section';
+    let id = base, n = 2;
+    while (seen.has(id)) id = `${base}-${n++}`;
+    seen.add(id);
+    toc.push({ id, text, level: Number(level) });
+    return `<h${level} id="${id}">${inner}</h${level}>`;
+  });
+  return { html: out, toc };
+}
+
 // Parse frontmatter date. Strings without a timezone are assumed IST (+05:30).
 function parseDate(value) {
   if (value instanceof Date) return value; // YAML unquoted timestamps arrive as UTC Dates
@@ -567,6 +585,7 @@ for (const file of fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'))) {
   }
 
   const slug = data.slug ? slugify(data.slug) : slugify(file.replace(/\.md$/, ''));
+  const { html: bodyHtml, toc } = addHeadingIds(marked.parse(content));
   all.push({
     slug,
     title: data.title || slug,
@@ -578,7 +597,8 @@ for (const file of fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'))) {
     series: data.series ? String(data.series) : null, // posts sharing a series name get a linked series box
     date,
     updated: parseDate(data.updated) || date,
-    html: marked.parse(content, { mangle: false, headerIds: true }),
+    html: bodyHtml,
+    toc, // [{id, text, level}] — h2/h3 headings, used for the on-page nav sidebar
     rawContent: content.trim(),
     minutes: readingTime(content),
   });
@@ -591,7 +611,7 @@ all.sort((a, b) => b.date - a.date);
 const head = ({ title, description, url, ogType = 'website', published, updated, tags, image }) => {
   const ogImage = image ? (image.startsWith('http') ? image : `${SITE}${image}`) : `${SITE}/assets/og-image.jpg`;
   return `<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
@@ -757,6 +777,27 @@ const seriesBox = (post) => {
             </aside>`;
 };
 
+// Sticky "on this page" nav, built from the post's own h2/h3s. Skipped for
+// short posts with fewer than 3 headings, since there's nothing to navigate.
+const tocNav = (toc) => {
+  if (toc.length < 3) return '';
+  // h.text already comes out of marked's own HTML-escaped heading content
+  // (addHeadingIds only strips tags, it doesn't touch entities), so it must
+  // NOT be passed through escapeHtml() again here or "don't" becomes don&amp;#39;t.
+  const links = toc.map(h =>
+    `<a href="#${h.id}" data-toc-link="${h.id}" class="post-toc-link${h.level === 3 ? ' post-toc-sub' : ''}">${h.text}</a>`
+  ).join('\n                    ');
+  return `
+        <aside class="post-toc" aria-label="Table of contents">
+            <div class="post-toc-sticky">
+                <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># on this page</p>
+                <nav class="post-toc-nav">
+                    ${links}
+                </nav>
+            </div>
+        </aside>`;
+};
+
 for (const [postIndex, post] of all.entries()) {
   const url = `${SITE}/blog/${post.slug}/`;
   const jsonLd = {
@@ -800,6 +841,40 @@ for (const [postIndex, post] of all.entries()) {
                 navigator.share({ title: s.dataset.title, url: s.dataset.url }).catch(() => {});
             });
         }
+        const tocLinks = document.querySelectorAll('.post-toc-link');
+        if (tocLinks.length) {
+            const byId = new Map();
+            tocLinks.forEach(a => {
+                const heading = document.getElementById(a.dataset.tocLink);
+                if (heading) byId.set(heading, a);
+            });
+            let current = null;
+            const setActive = (link) => {
+                tocLinks.forEach(a => a.classList.toggle('active', a === link));
+            };
+            // A thin band across the top ~30% of the viewport. Whichever heading
+            // most recently entered it stays "current" until the next one does,
+            // so the highlight doesn't reset while a heading scrolls past upward.
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) current = entry.target; });
+                if (current) setActive(byId.get(current));
+            }, { rootMargin: '0px 0px -70% 0px', threshold: 0 });
+            byId.forEach((_link, heading) => observer.observe(heading));
+
+            // Explicit smooth animation for in-page TOC clicks (heading ids are
+            // already in the static HTML, so the browser's own default jump
+            // works fine on its own — this just makes clicking one feel nicer).
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            tocLinks.forEach(a => {
+                a.addEventListener('click', (e) => {
+                    const heading = document.getElementById(a.dataset.tocLink);
+                    if (!heading) return;
+                    e.preventDefault();
+                    heading.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+                    history.pushState(null, '', '#' + a.dataset.tocLink);
+                });
+            });
+        }
     });
     </script>`;
 
@@ -807,7 +882,8 @@ for (const [postIndex, post] of all.entries()) {
 <body>
 ${header}
     <main id="main" class="container mx-auto px-6 py-12">
-        <article class="max-w-3xl mx-auto">
+        <div class="post-layout">
+        <article class="post-article max-w-3xl">
             <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
             <header class="mb-10">
                 <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">${escapeHtml(post.title)}</h1>
@@ -837,6 +913,8 @@ ${post.html}
                 ${couponFooterLink(post, postIndex)}
             </footer>
         </article>
+        ${tocNav(post.toc)}
+        </div>
     </main>
 ${footer.replace('</body>', `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n${postScript}\n</body>`)}`;
 
@@ -1292,7 +1370,7 @@ function certPageHtml(c, siblings) {
   };
 
   return `<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>

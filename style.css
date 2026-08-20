@@ -1094,6 +1094,7 @@ nav a { -webkit-tap-highlight-color: transparent; }
 }
 .post-prose > * + * { margin-top: 1.1em; }
 .post-prose h2, .post-prose h3, .post-prose h4 {
+    scroll-margin-top: 6.5rem; /* clears the sticky header + promo banner when jumped to */
     color: var(--fg-strong);
     font-family: 'Space Grotesk', 'Space-Grotesk-fallback', 'Inter', 'Inter-fallback', sans-serif;
     letter-spacing: -0.01em;
@@ -1177,10 +1178,50 @@ nav a { -webkit-tap-highlight-color: transparent; }
     font-size: 0.8rem;
 }
 
+/* Post layout: article + sticky "on this page" nav sidebar */
+.post-layout {
+    display: flex;
+    gap: 3.5rem;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.post-layout .post-article { flex: 1 1 auto; min-width: 0; margin: 0; }
+.post-toc {
+    order: -1;
+    width: 220px;
+    flex: none;
+}
+.post-toc-sticky {
+    position: sticky;
+    /* clears the site's own sticky header + promo banner (~94px) plus breathing room */
+    top: 7rem;
+    max-height: calc(100vh - 9rem);
+    overflow-y: auto;
+}
+.post-toc-nav { display: flex; flex-direction: column; }
+.post-toc-link {
+    display: block;
+    padding: 0.4rem 0 0.4rem 0.9rem;
+    border-left: 2px solid var(--border-color);
+    color: var(--gray-400-color);
+    font-size: 0.85rem;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+}
+.post-toc-link:hover { color: var(--text-color); border-left-color: var(--gray-400-color); }
+.post-toc-link.active { color: var(--primary-color); border-left-color: var(--primary-color); font-weight: 600; }
+.post-toc-link.post-toc-sub { padding-left: 1.75rem; font-size: 0.8rem; }
+@media (max-width: 1023px) {
+    .post-toc { display: none; }
+    .post-layout { display: block; }
+    .post-layout .post-article { margin: 0 auto; }
+}
+
 /* Print styles — clean, paper-friendly version */
 @media print {
     body { background: white; color: black; }
-    body::before, .orb, #back-to-top, #mobile-menu-button, #toast-notification, .skip-link, header { display: none !important; }
+    body::before, .orb, #back-to-top, #mobile-menu-button, #toast-notification, .skip-link, header, .post-toc { display: none !important; }
     .gradient-text { -webkit-text-fill-color: black; color: black; background: none; }
     .tech-card { box-shadow: none; border: 1px solid #ccc; background: white !important; }
     a { color: black; text-decoration: underline; }
