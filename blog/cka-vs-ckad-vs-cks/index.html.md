@@ -1,10 +1,9 @@
----
-title: "CKA vs CKAD vs CKS: which to take first"
-description: "CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who each one is for and what order makes sense."
-date: "2026-08-20 09:00"
-tags: [kubernetes, certification]
-draft: false
----
+# CKA vs CKAD vs CKS: which to take first
+
+> CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who each one is for and what order makes sense.
+
+Published: 2026-08-20 · Updated: 2026-08-20 · Tags: kubernetes, certification
+Canonical: https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/
 
 People ask me this constantly, usually phrased as "which Kubernetes cert should I get": CKA, CKAD, or CKS. The honest answer is that they're not really competing for the same slot. They share a format (live terminal, real clusters, no multiple choice) and a price ($445 list), but they certify three different jobs.
 

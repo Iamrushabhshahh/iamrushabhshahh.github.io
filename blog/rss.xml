@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jul 2026 06:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 03:30:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>CKA vs CKAD vs CKS: which to take first</title>
+      <link>https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/</guid>
+      <pubDate>Thu, 20 Aug 2026 03:30:00 GMT</pubDate>
+      <description>CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here&#39;s who each one is for and what order makes sense.</description>
+      <category>kubernetes</category><category>certification</category>
+    </item>
     <item>
       <title>Hello, world: the blog now lives on rushabhshah.dev</title>
       <link>https://rushabhshah.dev/blog/hello-world/</link>

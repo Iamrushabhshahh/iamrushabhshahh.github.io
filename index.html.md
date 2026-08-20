@@ -192,6 +192,14 @@ Blog Observability Linux DevOps
 
 Latest posts from the blog and recent community engagements.
 
+Aug 20, 2026 · 3 min read
+
+### CKA vs CKAD vs CKS: which to take first
+
+CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who eac…
+
+(https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/)
+
 Jul 9, 2026 · 1 min read
 
 ### Hello, world: the blog now lives on rushabhshah.dev
