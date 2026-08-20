@@ -182,7 +182,7 @@ eBPF Open Source Linux i18n
 
 ### Personal Tech Blog
 
-My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux. Earlier posts are archived on Hashnode.
+My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux.
 
 Blog Observability Linux DevOps
 
