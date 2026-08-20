@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Aug 2026 03:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 17:30:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>My CNCF DevStats score is 178, and now I can&#39;t stop checking it</title>
+      <link>https://rushabhshah.dev/blog/cncf-devstats-score/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/cncf-devstats-score/</guid>
+      <pubDate>Thu, 20 Aug 2026 17:30:00 GMT</pubDate>
+      <description>A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here&#39;s what that number is actually made of, and how to check yours.</description>
+      <category>open-source</category><category>cncf</category><category>meta</category>
+    </item>
     <item>
       <title>CKA vs CKAD vs CKS: which to take first</title>
       <link>https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/</link>

@@ -1,5 +1,18 @@
 [
   {
+    "title": "My CNCF DevStats score is 178, and now I can't stop checking it",
+    "description": "A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here's what that number is actually made of, and how to check yours.",
+    "url": "/blog/cncf-devstats-score/",
+    "date": "2026-08-20T17:30:00.000Z",
+    "tags": [
+      "open-source",
+      "cncf",
+      "meta"
+    ],
+    "minutes": 1,
+    "cover": null
+  },
+  {
     "title": "CKA vs CKAD vs CKS: which to take first",
     "description": "CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who each one is for and what order makes sense.",
     "url": "/blog/cka-vs-ckad-vs-cks/",

@@ -103,6 +103,11 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/blog/cncf-devstats-score/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/</loc>
     <lastmod>2026-08-20</lastmod>
     <priority>0.8</priority>
@@ -111,6 +116,12 @@
     <loc>https://rushabhshah.dev/blog/hello-world/</loc>
     <lastmod>2026-07-09</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/blog/tags/meta/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://rushabhshah.dev/blog/tags/blog/</loc>
@@ -125,14 +136,20 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/blog/tags/cncf/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/blog/tags/kubernetes/</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://rushabhshah.dev/blog/tags/meta/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://rushabhshah.dev/blog/tags/open-source/</loc>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
