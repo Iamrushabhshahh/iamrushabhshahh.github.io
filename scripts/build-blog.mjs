@@ -1526,6 +1526,7 @@ function certPageHtml(c, siblings) {
     '@context': 'https://schema.org', '@type': 'Product',
     name: c.isBundle ? c.fullName : `${c.fullName} (${c.name}) Certification Exam`,
     description: c.why,
+    image: `${SITE}/assets/og-lf-coupon.jpg`,
     brand: { '@type': 'Organization', name: 'The Linux Foundation' },
     offers: {
       '@type': 'Offer',
