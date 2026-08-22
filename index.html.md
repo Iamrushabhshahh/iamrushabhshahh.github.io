@@ -196,6 +196,14 @@ Blog Observability Linux DevOps
 
 Latest posts from the blog and recent community engagements.
 
+Aug 22, 2026 · 4 min read
+
+### The Kubestronaut path and what it really costs
+
+Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here's the real cost breakdown, a realistic stu…
+
+(https://rushabhshah.dev/blog/kubestronaut-path-cost/)
+
 Aug 20, 2026 · 1 min read
 
 ### My CNCF DevStats score is 178, and now I can't stop checking it
@@ -211,14 +219,6 @@ Aug 20, 2026 · 3 min read
 CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who eac…
 
 (https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/)
-
-Jul 9, 2026 · 1 min read
-
-### Hello, world: the blog now lives on rushabhshah.dev
-
-Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.
-
-(https://rushabhshah.dev/blog/hello-world/)
 
 ### Speaking & Community
 

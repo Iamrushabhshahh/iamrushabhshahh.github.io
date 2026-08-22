@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Aug 2026 17:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 03:30:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Kubestronaut path and what it really costs</title>
+      <link>https://rushabhshah.dev/blog/kubestronaut-path-cost/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/kubestronaut-path-cost/</guid>
+      <pubDate>Sat, 22 Aug 2026 03:30:00 GMT</pubDate>
+      <description>Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here&#39;s the real cost breakdown, a realistic study timeline, and who it&#39;s actually for.</description>
+      <category>kubernetes</category><category>certification</category>
+    </item>
     <item>
       <title>My CNCF DevStats score is 178, and now I can&#39;t stop checking it</title>
       <link>https://rushabhshah.dev/blog/cncf-devstats-score/</link>
