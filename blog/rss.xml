@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Aug 2026 03:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 03:30:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Is KCNA worth $250 as a first certification</title>
+      <link>https://rushabhshah.dev/blog/kcna-worth-it/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/kcna-worth-it/</guid>
+      <pubDate>Mon, 24 Aug 2026 03:30:00 GMT</pubDate>
+      <description>KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here&#39;s what it actually covers, and who should skip it entirely.</description>
+      <category>kubernetes</category><category>certification</category>
+    </item>
     <item>
       <title>The Kubestronaut path and what it really costs</title>
       <link>https://rushabhshah.dev/blog/kubestronaut-path-cost/</link>

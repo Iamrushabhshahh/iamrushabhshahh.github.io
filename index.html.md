@@ -196,6 +196,14 @@ Blog Observability Linux DevOps
 
 Latest posts from the blog and recent community engagements.
 
+Aug 24, 2026 · 3 min read
+
+### Is KCNA worth $250 as a first certification
+
+KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and …
+
+(https://rushabhshah.dev/blog/kcna-worth-it/)
+
 Aug 22, 2026 · 4 min read
 
 ### The Kubestronaut path and what it really costs
@@ -211,14 +219,6 @@ Aug 20, 2026 · 1 min read
 A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here's what that number is actually made of, and …
 
 (https://rushabhshah.dev/blog/cncf-devstats-score/)
-
-Aug 20, 2026 · 3 min read
-
-### CKA vs CKAD vs CKS: which to take first
-
-CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who eac…
-
-(https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/)
 
 ### Speaking & Community
 
