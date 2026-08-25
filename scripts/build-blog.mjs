@@ -765,7 +765,12 @@ const SALE = {
   // everywhere else. Times below are that ET window converted to UTC.
   start: '2026-08-24T19:00:00Z',
   end: '2026-08-29T06:59:00Z',
-  advertisedEnd: 'August 27',
+  // The marketing copy says "August 25-27" but the offer terms run to
+  // 8/29 2:59 AM ET, i.e. through the end of August 28. Advertising the 27th
+  // told people the sale was dead a day early, mid-sale. Quote the terms date
+  // and name the discrepancy rather than picking one and hoping.
+  advertisedEnd: 'August 28',
+  copyEnd: 'August 27',
   courses: { code: 'AUG26F35', pct: 35, what: 'courses & certifications' },
   bundles: { code: 'AUG26F40', pct: 40, what: 'bundles & instructor-led training' },
   dest: 'https://training.linuxfoundation.org/august-flash-1/',
@@ -1466,6 +1471,10 @@ const saleBannerHtml = () => {
                         ${bundles.pct}% off ${escapeHtml(bundles.what)}. Sale codes don't stack with RUSHABH30, so take
                         the bigger number while it's running. RUSHABH30 goes back to being the best price here at 30%
                         the day the sale closes.
+                    </p>
+                    <p class="text-gray-500 text-xs leading-relaxed mb-4">
+                        On the date: the announcement's own copy says ${escapeHtml(SALE.copyEnd)} while its offer terms
+                        run to 2:59 AM ET on August 29. ${escapeHtml(SALE.advertisedEnd)} is the safe last day to buy.
                     </p>
                     <div class="flex flex-wrap items-center gap-4">
                         <span class="code-box">${courses.code}${copyBtn(courses.code)}</span>
@@ -2569,6 +2578,77 @@ ${signupHub()}
   fs.writeFileSync(path.join(dir, 'index.html.md'), htmlFragmentToMarkdown(extractMirrorRegion(html)));
   console.log('✅ built     /coupons/');
 }
+
+/* ---------- /go/<slug>/ — branded affiliate redirects ----------
+   Competitors hand out kube.promo/... links; ours were raw
+   awin1.com/cread.php?awinmid=85919&awinaffid=... URLs, which look like
+   tracking spam in a README and are unusable in a talk or a slide.
+
+   These are the same destinations behind a link on my own domain, which means:
+   the URL is readable, it works anywhere I paste it, and if the affiliate
+   network or the deep link ever changes I re-point one file here instead of
+   editing every page and every README that quotes it.
+
+   Deliberately noindex + excluded from the sitemap: they're plumbing, not
+   content, and letting Google index a pile of thin redirect pages on a domain
+   whose whole argument is "real practitioner, not an affiliate farm" would be
+   the exact wrong signal. Attribution still runs through Awin's own click
+   reporting, so nothing here needs to count anything itself. */
+
+const GO_LINKS = () => {
+  const map = {
+    catalog: awinLink('https://training.linuxfoundation.org/'),
+    sale: SALE ? awinLink(SALE.dest) : awinLink('https://training.linuxfoundation.org/'),
+    finops: 'https://learn.finops.org/',
+  };
+  // Every cert that has a page gets a matching short link, generated from the
+  // same dest the page's own CTA uses so the two can never disagree.
+  for (const c of CERT_PAGES) map[c.slug] = awinLink(c.dest);
+  // Multi-exam bundles. These product pages are real (verified 200) but carry
+  // no machine-readable price, so they get links here and are quoted without
+  // prices elsewhere rather than guessing at numbers.
+  for (const [slug, dest] of Object.entries({
+    'cka-cks': 'https://training.linuxfoundation.org/certification/cka-cks-exam-bundle/',
+    'cka-ckad-cks': 'https://training.linuxfoundation.org/certification/cka-ckad-cks-exam-bundle/',
+    'kcna-cka': 'https://training.linuxfoundation.org/certification/kcna-cka-exam-bundle/',
+  })) map[slug] = awinLink(dest);
+  return map;
+};
+
+{
+  const links = GO_LINKS();
+  const goDir = path.join(ROOT, 'go');
+  const live = new Set(Object.keys(links));
+  if (fs.existsSync(goDir)) {
+    for (const e of fs.readdirSync(goDir, { withFileTypes: true })) {
+      if (e.isDirectory() && !live.has(e.name)) {
+        fs.rmSync(path.join(goDir, e.name), { recursive: true });
+        console.log(`🗑  pruned    /go/${e.name}/`);
+      }
+    }
+  }
+  for (const [slug, dest] of Object.entries(links)) {
+    const dir = path.join(goDir, slug);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="refresh" content="0;url=${escapeHtml(dest)}">
+<link rel="canonical" href="${SITE}/linux-foundation-coupon/">
+<title>Redirecting&hellip;</title>
+</head>
+<body>
+<p>Redirecting to the offer. <a href="${escapeHtml(dest)}" rel="noopener sponsored nofollow">Continue &rarr;</a></p>
+<p><small>Affiliate link: I may earn a commission at no extra cost to you.</small></p>
+</body>
+</html>
+`);
+  }
+  console.log(`✅ built     /go/{${Object.keys(links).join(',')}}/`);
+}
+
 
 
 

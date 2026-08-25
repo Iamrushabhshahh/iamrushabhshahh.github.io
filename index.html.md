@@ -58,7 +58,7 @@ Hard-deadline cutover
 
 Two partner codes, [compared side by side &rarr;](https://rushabhshah.dev/coupons/)
 
-Sale live &middot; ends August 27
+Sale live &middot; ends August 28
 
 AUG26F35: the Linux Foundation End-of-Season Flash Sale is live: **35% off certifications** and **40% off bundles**, for a few days only. My evergreen RUSHABH30 code takes over at 30% when it ends.
 

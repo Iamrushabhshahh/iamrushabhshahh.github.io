@@ -16,6 +16,7 @@ on:
       - "linux-foundation-coupon/**"
       - "finops-coupon/**"
       - "coupons/**"
+      - "go/**"
       - "docker-captain/**"
       - "privacy/**"
       - "package.json"
@@ -52,7 +53,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add blog sitemap.xml linux-foundation-coupon finops-coupon coupons links privacy docker-captain index.html index.html.md
+          git add blog sitemap.xml linux-foundation-coupon finops-coupon coupons go links privacy docker-captain index.html index.html.md
           if git diff --cached --quiet; then
             echo "Nothing new to publish."
           else

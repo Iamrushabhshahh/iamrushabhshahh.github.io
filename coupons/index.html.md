@@ -2,7 +2,7 @@
 
 Updated August 2026 &middot; Two official partner codes, one page
 
-**Right now there's a Linux Foundation sale running** that beats RUSHABH30 (35% off with `AUG26F35`, 40% off bundles with `AUG26F40`, ends August 27). Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
+**Right now there's a Linux Foundation sale running** that beats RUSHABH30 (35% off with `AUG26F35`, 40% off bundles with `AUG26F40`, ends August 28). Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
 
 RUSHABH30
 
