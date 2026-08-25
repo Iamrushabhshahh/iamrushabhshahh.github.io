@@ -771,6 +771,33 @@ const SALE = {
   dest: 'https://training.linuxfoundation.org/august-flash-1/',
 };
 const saleLive = !!SALE && now >= new Date(SALE.start) && now < new Date(SALE.end);
+
+/* ---------- sale-alert email capture ----------
+   The one offer here that an aggregator can't copy: the affiliate agreements
+   give real advance notice of sales, so "I'll tell you before the next one"
+   is both true and worth an address. That's the pitch, not "subscribe to my
+   newsletter" — nobody wants that, and the sale archive section is where a
+   reader is already thinking "should I wait for a sale?".
+
+   Collection reuses the Pageclip account the contact form already runs on, so
+   there's no ESP and no sending lock-in: addresses land in the dashboard and
+   export as CSV to be mailed from wherever later. Create a SECOND form in
+   Pageclip (so alerts don't mix with contact messages) and paste its key below,
+   split into chunks the same way the contact form does it — the URL is only
+   assembled at submit time so bots scraping the HTML never see a POSTable
+   endpoint.
+
+   Until a key is set the box renders nothing at all, everywhere, so a
+   half-configured form can't ship a broken input to a live money page. */
+const SIGNUP = {
+  keyParts: [],           // e.g. ['ICvb34', 'nUy3cZ', ...] from the Pageclip dashboard
+  // Roughly how often people should expect to hear from you. Stated on the box
+  // because a list that goes silent for months gets marked as spam the day it
+  // finally sends, which costs far more than the signups are worth.
+  cadence: 'A few times a year, only when a sale actually beats the everyday code.',
+};
+const signupLive = SIGNUP.keyParts.length > 0;
+
 const saleLink = SALE ? awinLink(SALE.dest) : null;
 
 const all = [];
@@ -1366,6 +1393,7 @@ const sitemapUrls = [
   { loc: `${SITE}/blog/`, priority: '0.9', changefreq: 'weekly', lastmod: all.length ? isoDate(all[0].updated).slice(0, 10) : null },
   { loc: `${SITE}/linux-foundation-coupon/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('linux-foundation-coupon/index.html') },
   ...CERT_PAGES.map(c => ({ loc: `${SITE}/linux-foundation-coupon/${c.slug}/`, priority: '0.8', changefreq: 'weekly', lastmod: gitLastMod(`linux-foundation-coupon/${c.slug}/index.html`) })),
+  { loc: `${SITE}/coupons/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('coupons/index.html') },
   { loc: `${SITE}/finops-coupon/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('finops-coupon/index.html') },
   ...FINOPS_PAGES.map(f => ({ loc: `${SITE}/finops-coupon/${f.slug}/`, priority: '0.8', changefreq: 'weekly', lastmod: gitLastMod(`finops-coupon/${f.slug}/index.html`) })),
   { loc: `${SITE}/docker-captain/`, priority: '0.7', changefreq: 'monthly', lastmod: gitLastMod('docker-captain/index.html') },
@@ -1442,7 +1470,7 @@ const saleBannerHtml = () => {
                     <div class="flex flex-wrap items-center gap-4">
                         <span class="code-box">${courses.code}${copyBtn(courses.code)}</span>
                         <span class="code-box">${bundles.code}${copyBtn(bundles.code)}</span>
-                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Shop the sale &rarr;</a>
+                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">Shop the sale &rarr;</a>
                     </div>
                 </div>`;
 };
@@ -1473,6 +1501,112 @@ if (saleLive) {
   console.log(`💤 sale idle  window ${SALE.start} → ${SALE.end} is not open; evergreen copy rendered`);
 }
 
+/* ---------- sale-alert capture box ----------
+   Rendered at the points where a reader is already weighing "buy now or wait":
+   under the sale archive on the coupon page, under the FAQ on each cert page,
+   and on the /coupons/ hub. Never as a popup — these pages earn their
+   conversions on tone, and an interstitial would spend that credibility for a
+   handful of addresses.
+
+   `context` distinguishes which catalog the reader is looking at so the copy
+   names the right code, and rides along in a hidden field so the dashboard
+   shows which page actually converts rather than one undifferentiated list.
+
+   Progressive enhancement: the <form> posts natively if the inline script never
+   runs. The script only upgrades it to a fetch so the reader isn't bounced to a
+   Pageclip confirmation page and loses their place on a long page. */
+const signupBoxHtml = ({ context = 'linux-foundation', heading, blurb } = {}) => {
+  if (!signupLive) return '';
+  const id = `signup-${context}`;
+  return `
+            <aside class="tech-card p-5 rounded-md mt-8" id="sale-alerts" aria-labelledby="${id}-h">
+                <p class="font-fira text-xs uppercase tracking-wider text-primary-color mb-3"># Sale alerts</p>
+                <h2 id="${id}-h" class="text-white font-bold text-lg mb-2">${escapeHtml(heading)}</h2>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">${blurb}</p>
+                <form class="signup-form flex flex-wrap items-center gap-3" method="post" novalidate data-context="${context}">
+                    <label class="sr-only" for="${id}-email">Email address</label>
+                    <input class="form-input flex-1 min-w-[220px]" id="${id}-email" type="email" name="email"
+                           inputmode="email" autocomplete="email" required placeholder="you@example.com">
+                    <div class="honeypot" aria-hidden="true">
+                        <label for="${id}-website">Website</label>
+                        <input id="${id}-website" type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <input type="hidden" name="source" value="${context}">
+                    <input type="hidden" name="page" value="">
+                    <input type="hidden" name="loaded_at" value="">
+                    <button class="btn btn-primary" type="submit">Notify me &rarr;</button>
+                    <p class="signup-status font-fira text-xs w-full" role="status" aria-live="polite"></p>
+                </form>
+                <p class="text-gray-500 text-xs leading-relaxed mt-3">
+                    ${escapeHtml(SIGNUP.cadence)} No spam, no selling your address, unsubscribe any time by replying.
+                    See the <a href="/privacy/" class="text-primary-color hover:underline">privacy page</a> for what I store and how to have it deleted.
+                </p>
+            </aside>
+            <script>
+            (function(){
+              var f = document.querySelector('form.signup-form');
+              if (!f || f.dataset.wired) return;
+              f.dataset.wired = '1';
+              // Assembled at submit time only, same reasoning as the contact form:
+              // the raw HTML never contains a POSTable URL for scrapers to harvest.
+              var K = ${JSON.stringify(SIGNUP.keyParts)};
+              var page = f.querySelector('[name=page]');
+              var loaded = f.querySelector('[name=loaded_at]');
+              if (page) page.value = location.pathname;
+              if (loaded) loaded.value = String(Date.now());
+              var status = f.querySelector('.signup-status');
+              var focused = false;
+              var email = f.querySelector('input[type=email]');
+              email.addEventListener('focus', function(){ focused = true; });
+              function say(msg, ok){
+                if (!status) return;
+                status.textContent = msg;
+                status.style.color = ok ? 'var(--green-color)' : 'var(--primary-color)';
+              }
+              f.addEventListener('submit', function(e){
+                e.preventDefault();
+                if (!email.value || email.validity.typeMismatch) { say('That email address looks incomplete.', false); return; }
+                // Bots fill fields without focusing them and submit near-instantly.
+                if (f.querySelector('[name=website]').value) return;
+                if (!focused || Date.now() - Number(loaded.value || 0) < 1500) { say('Something went wrong. Try again in a moment.', false); return; }
+                var btn = f.querySelector('button[type=submit]');
+                btn.disabled = true;
+                say('Adding you…', true);
+                fetch('https://send.pageclip' + '.co/' + K.join(''), {
+                  method: 'POST', body: new FormData(f), mode: 'no-cors'
+                }).then(function(){
+                  f.reset();
+                  say('Done. You will hear from me before the next sale, not after.', true);
+                  if (window.goatcounter && window.goatcounter.count) {
+                    window.goatcounter.count({ path: 'signup-' + f.dataset.context, title: 'Sale alert signup', event: true });
+                  }
+                }).catch(function(){
+                  say('Network error. Try again, or email contact@rushabhshah.dev.', false);
+                }).finally(function(){ btn.disabled = false; loaded.value = String(Date.now()); });
+              });
+            })();
+            </script>`;
+};
+
+const signupLF = () => signupBoxHtml({
+  context: 'linux-foundation',
+  heading: 'Get told before the next sale, not after',
+  blurb: `The table above is the pattern: a few times a year the Linux Foundation runs a sale that beats <code>RUSHABH30</code>. As an affiliate partner I get the heads-up before those go public, so I can tell you while there's still time to use it rather than writing it up afterwards.`,
+});
+
+const signupFinOps = () => signupBoxHtml({
+  context: 'finops',
+  heading: 'Told first when FinOps pricing moves',
+  blurb: `FinOps Foundation pricing and promotions change without much warning, and <code>${FINOPS_CODE}</code> covers five specific offerings that could be revised. Leave an address and I'll tell you when something changes that affects what you'd pay, including if a better offer than mine turns up.`,
+});
+
+const signupHub = () => signupBoxHtml({
+  context: 'coupons-hub',
+  heading: 'One email when a sale beats these codes',
+  blurb: `Both partner programmes give me advance notice of sales. Rather than checking back, leave an address and I'll tell you when a discount lands that's genuinely better than the everyday codes on this page.`,
+});
+
+
 const couponPath = path.join(ROOT, 'linux-foundation-coupon', 'index.html');
 if (fs.existsSync(couponPath)) {
   const c = fs.readFileSync(couponPath, 'utf8');
@@ -1497,6 +1631,7 @@ if (fs.existsSync(couponPath)) {
     .replace(/Last verified: [A-Za-z]+ \d{4}/g, `Last verified: ${MONTH_YEAR}`);
   stamped = swapRegion(stamped, 'SALE-BANNER', saleBannerHtml());
   stamped = swapRegion(stamped, 'SALE-INTRO', saleIntroHtml());
+  stamped = swapRegion(stamped, 'SIGNUP-BOX', signupLF());
   if (personBlock) {
     // Replacer FUNCTION, not a string: a string replacement would interpret
     // any "$&"/"$'" etc. inside personBlock's JSON as a substitution pattern.
@@ -1730,7 +1865,7 @@ ${saleBannerHtml()}
                         RUSHABH30
                         <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                     </span>
-                    <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted} &rarr;</a>
+                    <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-lf-${c.slug}-hero" data-goatcounter-title="LF ${c.name} hero CTA">Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted} &rarr;</a>
                 </div>
             </header>
 
@@ -1782,7 +1917,7 @@ ${saleBannerHtml()}
                     RUSHABH30
                     <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                 </span>
-                <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
+                <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-lf-${c.slug}-footer" data-goatcounter-title="LF ${c.name} footer CTA">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">
@@ -1794,6 +1929,8 @@ ${saleBannerHtml()}
                     <div>${escapeHtml(f.a)}</div>
                 </details>`).join('\n                ')}
             </div>
+
+${signupLF()}
 
             <div class="post-prose mt-8">
                 <h2 id="other-certs">Other Linux Foundation &amp; CNCF certifications</h2>
@@ -1951,7 +2088,7 @@ function finopsPageHtml(f, siblings) {
                 <p class="font-fira text-sm text-gray-400 mb-8">Updated ${MONTH_YEAR} &middot; ${escapeHtml(f.offering)}</p>
                 <div class="flex flex-wrap items-center gap-5">
                     ${finopsCodeBox()}
-                    <a href="${f.dest}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Get it for ~$${price} &rarr;</a>
+                    <a href="${f.dest}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-finops-${f.slug}-hero" data-goatcounter-title="FinOps ${f.name} hero CTA">Get it for ~$${price} &rarr;</a>
                 </div>
             </header>
 
@@ -2004,7 +2141,7 @@ function finopsPageHtml(f, siblings) {
 
             <div class="tech-card p-5 rounded-md mt-8 flex flex-wrap items-center justify-between gap-4">
                 ${finopsCodeBox()}
-                <a href="${f.dest}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
+                <a href="${f.dest}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-finops-${f.slug}-footer" data-goatcounter-title="FinOps ${f.name} footer CTA">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">
@@ -2016,6 +2153,8 @@ function finopsPageHtml(f, siblings) {
                     <div>${escapeHtml(q.a)}</div>
                 </details>`).join('\n                ')}
             </div>
+
+${signupFinOps()}
 
             <div class="post-prose mt-8">
                 <h2 id="other-finops">The other FinOps certifications this code covers</h2>
@@ -2173,7 +2312,7 @@ function finopsIndexHtml(pages) {
 
             <div class="tech-card p-5 rounded-md mt-8 flex flex-wrap items-center justify-between gap-4">
                 ${finopsCodeBox()}
-                <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
+                <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-finops-overview" data-goatcounter-title="FinOps overview CTA">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">
@@ -2210,6 +2349,8 @@ function finopsIndexHtml(pages) {
                 </details>
             </div>
 
+${signupFinOps()}
+
 ${finopsDisclosure()}
         </article>
     </main>${certFooter}
@@ -2244,6 +2385,191 @@ for (const f of FINOPS_PAGES) {
   fs.writeFileSync(path.join(dir, 'index.html.md'), htmlFragmentToMarkdown(extractMirrorRegion(html)));
 }
 console.log(`✅ built     /finops-coupon/ + {${FINOPS_PAGES.map(f => f.slug).join(',')}}/`);
+
+/* ---------- /coupons/ — the hub above both partner programmes ----------
+   Deliberately comparative and navigational rather than a third copy of the
+   pricing tables. The two section pages already rank for their own catalogs;
+   what neither can do is answer "I want a DevOps certification, which of these
+   two codes do I even need?", which is the query this page exists for.
+
+   Keeping it here rather than on a separate coupon domain is a considered
+   call: these pages convert on E-E-A-T (named partner, verifiable track
+   record, real per-exam guidance) and a standalone coupon site throws exactly
+   that away while starting from zero authority. The hub gives the section room
+   to grow to a third programme without needing a new domain. */
+
+function couponsHubHtml() {
+  const url = `${SITE}/coupons/`;
+  const title = `Certification Discount Codes (${MONTH_YEAR}): 30% Off Linux Foundation, ${FINOPS_PCT}% Off FinOps · ${AUTHOR}`;
+  const description = `Two official partner codes: RUSHABH30 for 30% off every Linux Foundation and CNCF certification, ${FINOPS_CODE} for ${FINOPS_PCT}% off FinOps Foundation certifications. Which one you need, and what each covers.`;
+  const dateModified = gitLastMod('coupons/index.html') || now.toISOString().slice(0, 10);
+  const cheapestLF = CERT_PAGES.reduce((a, b) => (b.priceDiscounted < a.priceDiscounted ? b : a));
+  const cheapestFin = FINOPS_PAGES.reduce((a, b) => (b.priceList < a.priceList ? b : a));
+
+  const jsonLd = [
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Certification discount codes', item: url },
+      ] },
+    { '@context': 'https://schema.org', '@type': 'WebPage',
+      '@id': `${url}#webpage`, url, name: title, description, inLanguage: 'en',
+      datePublished: '2026-08-26', dateModified,
+      isPartOf: { '@type': 'WebSite', name: 'rushabhshah.dev', url: `${SITE}/` },
+      author: { '@id': `${SITE}/#person` }, publisher: { '@id': `${SITE}/#person` } },
+    { '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Which discount code do I need?', acceptedAnswer: { '@type': 'Answer', text: `RUSHABH30 for anything bought on training.linuxfoundation.org, which is every Linux Foundation and CNCF certification including CKA, CKAD, CKS, KCNA and the Kubestronaut bundles. ${FINOPS_CODE} for the five FinOps Foundation certifications bought on learn.finops.org. The two checkouts don't accept each other's codes.` } },
+        { '@type': 'Question', name: 'Are these real partner codes?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Both were issued to me directly by the organisations that run the certifications, as an affiliate or promotional partner. Neither is scraped or recycled from a coupon aggregator, and both are honoured at the official checkout.' } },
+        { '@type': 'Question', name: 'Do the codes expire?', acceptedAnswer: { '@type': 'Answer', text: 'Neither has an end date. These pages rebuild daily, so if a code ever stops being honoured it gets corrected here rather than left up as a dead coupon.' } },
+        { '@type': 'Question', name: 'What if there is a bigger sale running?', acceptedAnswer: { '@type': 'Answer', text: "Take the sale. Official sales beat both partner codes a few times a year and the codes never stack with them, so the rule is always to use the single biggest discount available at that moment. When a sale is live it's shown at the top of the relevant page here." } },
+      ] },
+  ];
+
+  const saleNote = saleLive
+    ? `<p class="text-gray-400 text-sm leading-relaxed mb-6"><strong class="text-white">Right now there's a Linux Foundation sale running</strong> that beats RUSHABH30 (${SALE.courses.pct}% off with <code>${SALE.courses.code}</code>, ${SALE.bundles.pct}% off bundles with <code>${SALE.bundles.code}</code>, ends ${escapeHtml(SALE.advertisedEnd)}). Details on the <a href="/linux-foundation-coupon/">Linux Foundation page</a>.</p>`
+    : '';
+
+  return `${finopsHead({ title, description, url, ogImage: `${SITE}/assets/og-lf-coupon.jpg`, jsonLd })}
+<body>${dealsHeader('/coupons/')}
+    <main id="main" class="container mx-auto px-6 py-12">
+        <article class="max-w-3xl mx-auto">
+            <header class="mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight mb-5">
+                    Certification Discount Codes That <span class="gradient-text">Actually Work</span>
+                </h1>
+                <p class="font-fira text-sm text-gray-400 mb-8">Updated ${MONTH_YEAR} &middot; Two official partner codes, one page</p>
+                ${saleNote}
+                <div class="flex flex-wrap items-center gap-5">
+                    <span class="code-box">
+                        RUSHABH30
+                        <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
+                    </span>
+                    ${finopsCodeBox()}
+                </div>
+            </header>
+
+            <div class="post-prose">
+                <p>
+                    I hold two training partnerships, and they cover completely different catalogs on completely
+                    different checkouts. That trips people up, so this page exists to answer one question: which code
+                    do you need? Once you know, the linked page has the pricing, the exam formats, and the prep advice.
+                </p>
+
+                <h2 id="which-code">Which code do you need?</h2>
+                <table>
+                    <thead>
+                        <tr><th>If you're buying</th><th>Use</th><th>You save</th><th>Where</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Any Linux Foundation or CNCF certification, course or bundle: CKA, CKAD, CKS, KCNA, KCSA, LFCS, LFCA, PCA, OTCA, ICA, CCA, CGOA, CAPA, Kubestronaut</td>
+                            <td><code>RUSHABH30</code></td>
+                            <td>30%</td>
+                            <td>training.linuxfoundation.org</td>
+                        </tr>
+                        <tr>
+                            <td>A FinOps Foundation certification: Practitioner, Engineer, FOCUS Analyst, AI Value, Technology Value</td>
+                            <td><code>${FINOPS_CODE}</code></td>
+                            <td>${FINOPS_PCT}%</td>
+                            <td>learn.finops.org</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    They are not interchangeable. Each checkout rejects the other's code, which is the single most
+                    common thing people email me about.
+                </p>
+
+                <h2 id="lf">Linux Foundation &amp; CNCF: 30% off with RUSHABH30</h2>
+                <p>
+                    This is the big catalog: every Kubernetes certification, the CNCF associate exams, LFCS and LFCA,
+                    the self-paced courses, and the Kubestronaut and Golden Kubestronaut bundles. The code is evergreen
+                    with no expiry, and it works on course + exam bundles as well as bare exams, which is usually the
+                    better buy. The cheapest way in is ${escapeHtml(cheapestLF.name)} at about $${cheapestLF.priceDiscounted}.
+                </p>
+                <p><a href="/linux-foundation-coupon/"><strong>Full pricing across the catalog, per-exam guides and the sale archive &rarr;</strong></a></p>
+
+                <h2 id="finops">FinOps Foundation: ${FINOPS_PCT}% off with ${FINOPS_CODE}</h2>
+                <p>
+                    A separate programme covering five self-paced FinOps certifications. Worth knowing up front: this
+                    code covers those five specifically and not FinOps Certified Professional, the multi-certification
+                    bundles, exam-only purchases, or corporate subscriptions. The cheapest is the
+                    ${escapeHtml(cheapestFin.fullName)} at about $${finopsPrice(cheapestFin.priceList)}.
+                </p>
+                <p><a href="/finops-coupon/"><strong>All five certifications, what the code excludes, and which to take first &rarr;</strong></a></p>
+
+                <h2 id="which-cert">Not sure which certification, never mind which code?</h2>
+                <p>The short version of advice I give at meetups:</p>
+                <ul>
+                    <li><strong>You run Kubernetes in production.</strong> <a href="/linux-foundation-coupon/cka/">CKA</a>. It's the one hiring managers actually check for, and it's a live-terminal exam so it proves you can do the job rather than describe it.</li>
+                    <li><strong>You ship apps onto Kubernetes but don't run the cluster.</strong> <a href="/linux-foundation-coupon/ckad/">CKAD</a>.</li>
+                    <li><strong>You're new to cloud native.</strong> <a href="/linux-foundation-coupon/kcna/">KCNA</a> for the vocabulary, or <a href="/linux-foundation-coupon/lfca/">LFCA</a> if you're starting further back than that.</li>
+                    <li><strong>Your job is cloud cost.</strong> <a href="/finops-coupon/practitioner/">FinOps Certified Practitioner</a>, which is the one that gives you and your finance team a shared language.</li>
+                    <li><strong>You build cost data pipelines.</strong> <a href="/finops-coupon/focus-analyst/">FinOps Certified FOCUS Analyst</a>, the cheapest entry point of the five.</li>
+                </ul>
+
+                <h2 id="sales">When a sale beats both codes</h2>
+                <p>
+                    A few times a year the Linux Foundation runs an official sale deeper than 30%, and sale codes never
+                    stack with partner codes. The rule is simple: use the single biggest discount available right now,
+                    even when that isn't mine. Both organisations give me advance notice of these, which is what the
+                    box below is for.
+                </p>
+            </div>
+
+${signupHub()}
+
+            <div class="post-prose mt-8">
+                <h2 id="faq">Frequently asked questions</h2>
+            </div>
+            <div class="faq mt-5">
+                <details>
+                    <summary>Which discount code do I need?</summary>
+                    <div>RUSHABH30 for anything on training.linuxfoundation.org, ${FINOPS_CODE} for the five FinOps certifications on learn.finops.org. Each checkout rejects the other's code.</div>
+                </details>
+                <details>
+                    <summary>Are these real partner codes, or scraped coupons?</summary>
+                    <div>Both were issued to me directly by the organisations running the certifications, as an affiliate or promotional partner. Neither is recycled from an aggregator, and both are honoured at the official checkout.</div>
+                </details>
+                <details>
+                    <summary>Do they expire?</summary>
+                    <div>Neither has an end date. These pages rebuild daily, so if a code stops being honoured it gets corrected here rather than left up as a dead coupon.</div>
+                </details>
+                <details>
+                    <summary>What if a bigger sale is running?</summary>
+                    <div>Take the sale. The codes never stack with official sales, so always use the single biggest discount available at that moment. When one is live it's shown at the top of the relevant page here.</div>
+                </details>
+                <details>
+                    <summary>Why should I trust this over a coupon aggregator?</summary>
+                    <div>You don't have to take my word for it. I'm a named person with a checkable track record (Docker Captain, Grafana Champion, a public GitHub history), every price here is checkable against the official catalog, and I tell you when a sale beats my own code rather than hiding it.</div>
+                </details>
+            </div>
+
+            <aside class="tech-card p-5 rounded-md mt-8">
+                <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># Affiliate disclosure</p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Both codes are partner codes and I earn a commission when someone uses one, at no extra cost to you.
+                    That's also why you'll see me point at official sales that beat my own codes: the discount you get
+                    doesn't depend on which is better for me.
+                </p>
+            </aside>
+        </article>
+    </main>${certFooter}
+</body>
+</html>
+`;
+}
+
+{
+  const dir = path.join(ROOT, 'coupons');
+  fs.mkdirSync(dir, { recursive: true });
+  const html = couponsHubHtml();
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  fs.writeFileSync(path.join(dir, 'index.html.md'), htmlFragmentToMarkdown(extractMirrorRegion(html)));
+  console.log('✅ built     /coupons/');
+}
+
 
 
 /* ---------- homepage: pre-render Tech Stack, Certifications, Experience,

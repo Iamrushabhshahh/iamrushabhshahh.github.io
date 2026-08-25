@@ -28,6 +28,18 @@ Fonts come from Google, icons from a couple of icon CDNs, my GitHub star counts 
 
 The only personal data I ever hold is correspondence you sent me yourself. If you want it gone, email me at [contact@rushabhshah.dev](mailto:contact@rushabhshah.dev) and I'll delete it. No forms, no fuss. The analytics can't be traced back to you even if I wanted to, which is the point.
 
+## If you sign up for sale alerts
+
+Some of the coupon pages have a box to leave your email address so I can tell you when a certification sale beats my everyday partner codes. If you use it, here's exactly what happens.
+
+**What I store:** your email address, which page you signed up from, and the time you did it. Nothing else. I don't ask for your name and I don't attach any browsing history to it.
+
+**Where it goes:** Pageclip, the same form host the contact form on my homepage uses. It sits there until I send an alert. I don't sell it, rent it, or hand it to an advertiser, and I don't use it to build a profile of you.
+
+**What you'll get:** a short email when a sale lands that's genuinely better than the everyday codes, which realistically means a few times a year. Not a newsletter, and not a drip sequence.
+
+**Getting out:** reply to any alert and say so, or email [contact@rushabhshah.dev](mailto:contact@rushabhshah.dev). I'll delete the address rather than just flagging it unsubscribed, and you don't have to give a reason.
+
 ## If anything changes
 
 If I ever add something that collects more (a newsletter signup, for example), I'll update this page first and change the date at the top. No silent changes.
