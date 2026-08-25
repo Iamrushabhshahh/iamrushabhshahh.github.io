@@ -608,6 +608,16 @@ section[id] { scroll-margin-top: 5rem; }
     background: linear-gradient(135deg, rgba(29,99,237,0.10), rgba(var(--panel-rgb),0.7));
     border-color: rgba(29,99,237,0.45);
 }
+/* Live-sale banner. Only ever on the page while a sale window is open —
+   see SALE in scripts/build-blog.mjs, which renders and retires it. */
+.tech-card-sale {
+    background: linear-gradient(135deg, rgba(240,136,62,0.12), rgba(var(--panel-rgb),0.7));
+    border-color: rgba(240,136,62,0.45);
+}
+.tech-card-sale:hover {
+    border-color: rgba(240,136,62,0.8);
+    box-shadow: 0 8px 24px -8px rgba(240,136,62,0.35);
+}
 .tech-card-docker:hover {
     border-color: var(--docker-blue);
     box-shadow: 0 8px 30px -8px rgba(29,99,237,0.55);

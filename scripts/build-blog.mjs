@@ -387,6 +387,176 @@ const CERT_PAGES = [
   },
 ];
 
+/* ---------- FinOps Foundation partner code ----------
+   /finops-coupon/ and /finops-coupon/<slug>/ — a second, separate affiliate
+   programme from the Linux Foundation one above, and the two must not be
+   blurred together on the page. RUSHABH30 does NOT work on FinOps training and
+   RUSHABH_20 does NOT work on the Linux Foundation catalog, so each section
+   states its own scope plainly and cross-links rather than sharing copy.
+
+   Scope is set by the partner agreement, not by what's in the catalog: the
+   FinOps Foundation approved five specific offerings for promotion, so only
+   those five get pages. Notably NOT eligible, and therefore never quoted with
+   a discount anywhere on this site: FinOps Certified Professional, the
+   multi-cert bundles, FinOps for Containers, the exam-only and recertification
+   SKUs, and the corporate training subscriptions.
+
+   List prices below were read off learn.finops.org's own catalog. Unlike the
+   Linux Foundation pages there is no tracking-link equivalent here (no AWIN
+   deep link exists for this programme), so attribution runs entirely through
+   the code itself — which is also why every CTA sends people to the exact
+   product page rather than a generic catalog URL. */
+
+const FINOPS_CODE = 'RUSHABH_20';
+const FINOPS_PCT = 20;
+const finopsPrice = (list) => Math.round(list * (100 - FINOPS_PCT) / 100);
+
+const FINOPS_PAGES = [
+  {
+    slug: 'practitioner', name: 'FOCP', shortFor: 'Everyone: the default first FinOps certification', fullName: 'FinOps Certified Practitioner',
+    dest: 'https://learn.finops.org/path/finops-certified-practitioner-self-paced',
+    offering: 'Self-Paced Course + Certification Exam',
+    format: 'Multiple choice, online, self-directed', duration: 'About 6 to 8 hours of course content',
+    priceList: 500, validity: '24 months', prerequisite: null,
+    audience: 'Anyone who touches a cloud bill: finance, engineering, procurement, and product people who need one shared language for cost, usage, and value. It is the default first FinOps certification.',
+    topics: [
+      'What FinOps is, and the FinOps Framework',
+      'FinOps teams, culture, personas, and motivations',
+      'FinOps domains and capabilities',
+      'Anatomy of the cloud bill, and the data in the path',
+      'The Inform, Optimize, and Operate phases',
+      'Adopting and maturing a FinOps practice',
+    ],
+    why: 'FOCP is the one FinOps credential most job descriptions actually name. The real value is not the badge, it is the vocabulary: once your finance team and your platform team both say "allocation", "unit economics" and "showback" to mean the same thing, cost conversations stop being arguments about whose number is right. Everything else in the FinOps catalog assumes you already have this.',
+    prepTips: [
+      'Bring a real bill. Open your own AWS, Azure, or GCP cost console next to the course and map each concept onto spend you actually recognise, because the exam rewards understanding the shape of a bill rather than memorising definitions.',
+      'The Inform, Optimize, Operate loop is the spine of the whole framework and the thing most questions hang off, so get comfortable placing any given activity into the right phase.',
+      'Do not skip the personas material even though it feels soft next to the billing content. A meaningful slice of the exam is about who cares about which metric and why.',
+    ],
+    faqs: [
+      { q: 'Is the FinOps Certified Practitioner exam hands-on?', a: 'No. It is a multiple-choice exam you complete online at your own pace, with no live console or terminal work. Enrolment includes the exam alongside the course.' },
+      { q: 'How much is the FinOps Certified Practitioner with a discount code?', a: 'The self-paced course plus certification exam lists at $500. With RUSHABH_20 it comes to about $400, saving roughly $100.' },
+      { q: 'Do I need a prerequisite for FOCP?', a: 'No formal prerequisite. The FinOps Foundation recommends a general understanding of infrastructure, usage-based pricing, and familiarity with at least one major cloud provider.' },
+      { q: 'How long does the FinOps Practitioner certification last?', a: 'The certification is valid for 24 months, and your enrolment includes 12 months of access to the course materials.' },
+      { q: 'Does RUSHABH_20 work on the exam-only option?', a: 'No. The code covers the Self-Paced Course + Certification Exam offering. The cheaper exam-only SKU is not one of the five offerings the FinOps Foundation approved for this code.' },
+      { q: 'Is FOCP worth it if I already do cloud cost work?', a: 'If you already cut spend for a living, the framework will not teach you new levers. What it gives you is the shared structure and language to defend those decisions to finance and leadership, which is usually the harder half of the job.' },
+    ],
+  },
+  {
+    slug: 'engineer', name: 'FOCE', shortFor: 'Engineers who build and run the infrastructure', fullName: 'FinOps Certified Engineer',
+    dest: 'https://learn.finops.org/page/finops-certified-engineer',
+    offering: 'Self-Paced Course + Certification Exam',
+    format: 'Multiple choice, online, self-directed', duration: 'About 10 hours of course content; exam about 1 hour',
+    priceList: 500, validity: '24 months', prerequisite: null,
+    audience: 'Engineers who design, build, and run cloud infrastructure, and who keep being told their systems are a cost line rather than a value driver.',
+    topics: [
+      'How FinOps applies inside the development lifecycle',
+      'Working with FinOps practitioners rather than around them',
+      'Using cost and usage data to drive engineering decisions',
+      'Architecting and operating for cost efficiency',
+      'Moving the conversation from cloud cost to cloud value',
+    ],
+    why: 'This is the FinOps certification aimed squarely at the people who actually change the bill. Practitioners can report a number and file a ticket, but the instance type, the retention policy, and the autoscaling floor are engineering decisions. FOCE is about making cost a normal input to those decisions instead of a quarterly surprise, which is the single highest-leverage shift I have seen in cost work.',
+    prepTips: [
+      'Pick one workload you own and cost it end to end before you start, then re-cost it after each module. Concrete numbers make the material stick in a way the slides alone will not.',
+      'The course keeps returning to how engineers and practitioners hand data to each other, so pay attention to the collaboration content rather than skimming to the optimization levers.',
+      'If you have already done real rightsizing or commitment work, the value is in the framing and the vocabulary, so read for how to present a decision upward rather than for new techniques.',
+    ],
+    faqs: [
+      { q: 'What is the difference between FinOps Certified Engineer and Practitioner?', a: 'Practitioner is the broad, cross-functional foundation for anyone working with cloud spend. Engineer is scoped to people who build and operate the infrastructure, focusing on how to fold cost data into design, deployment, and operations decisions.' },
+      { q: 'How much is the FinOps Certified Engineer with a discount code?', a: 'The self-paced course plus certification exam lists at $500. With RUSHABH_20 it comes to about $400.' },
+      { q: 'Do I need FOCP before FOCE?', a: 'No. There is no formal prerequisite and the two can be taken in either order, though Practitioner first is the more common path because it establishes the framework vocabulary.' },
+      { q: 'Is the FinOps Certified Engineer exam hands-on?', a: 'No. It is multiple choice and self-directed online, roughly an hour, with no live cloud environment.' },
+      { q: 'Does RUSHABH_20 work on the Engineer plus FOCUS Analyst bundle?', a: 'No. The code applies to the five individual offerings approved for it, not the multi-certification bundles. Compare the bundle price against two discounted individual enrolments before deciding.' },
+    ],
+  },
+  {
+    slug: 'focus-analyst', name: 'FOCUS Analyst', shortFor: 'Data and platform engineers working with billing data', fullName: 'FinOps Certified FOCUS Analyst',
+    dest: 'https://learn.finops.org/finops-certified-focus-analyst-certification',
+    offering: 'Self-Paced Course + Certification Exam',
+    format: 'Multiple choice, online, self-directed', duration: 'Self-paced, with 12 months of access',
+    priceList: 400, validity: '24 months', prerequisite: null,
+    audience: 'Anyone who generates, ingests, or analyses billing and usage data: data engineers, analysts, platform engineers building cost pipelines, and vendors producing FOCUS-conformant exports.',
+    topics: [
+      'What the FOCUS specification is and the problem it solves',
+      'Column definitions, attributes, and metadata',
+      'Reading, validating, and interpreting FOCUS datasets',
+      'Working with billing data consistently across providers',
+      'Best practice for FOCUS-aligned analysis',
+    ],
+    why: 'FOCUS is the most quietly useful thing to come out of the FinOps Foundation. Every provider invented its own billing schema, so multi-cloud cost analysis has always started with weeks of bespoke normalisation before anyone can answer a simple question. FOCUS is the vendor-neutral format that deletes that step. This is also the cheapest of the five offerings and the most directly technical, which makes it the easiest one to justify if you build the pipelines rather than read the dashboards.',
+    prepTips: [
+      'Pull a real FOCUS export from a provider you use and keep it open while you work through the column definitions, because the specification makes far more sense against actual rows than in the abstract.',
+      'Pay close attention to where costs can be double counted or misattributed when you join datasets, since that is exactly the failure mode the specification exists to prevent.',
+      'The free Introduction to FOCUS course on the same platform is a good half-hour orientation before you start the paid one, and it costs nothing.',
+    ],
+    faqs: [
+      { q: 'What is FOCUS?', a: 'FOCUS is the FinOps Open Cost and Usage Specification, an open, vendor-neutral schema for cloud billing and usage data. It lets cost data from different providers be read with one set of column definitions instead of a bespoke parser per vendor.' },
+      { q: 'How much is the FinOps Certified FOCUS Analyst with a discount code?', a: 'It lists at $400, the cheapest of the five offerings this code covers. With RUSHABH_20 it comes to about $320.' },
+      { q: 'Do I need to know SQL for the FOCUS Analyst certification?', a: 'Not formally. The FinOps Foundation suggests familiarity with basic data analysis and some awareness of how providers produce billing data. Experience querying datasets helps but is not required.' },
+      { q: 'Should I take FOCP or FOCUS Analyst first?', a: 'If you work on cost data pipelines, FOCUS Analyst stands on its own and you can start there. If you need the wider practice context first, take Practitioner and add FOCUS Analyst after.' },
+      { q: 'Is there a free way to learn FOCUS?', a: 'Yes. The FinOps Foundation publishes a free Introduction to FOCUS course. It will not certify you, but it is a genuine introduction and worth doing before you pay for the full certification.' },
+    ],
+  },
+  {
+    slug: 'ai-value', name: 'AI Value', shortFor: 'Teams whose AI spend has become material', fullName: 'FinOps Certified: AI Value',
+    dest: 'https://learn.finops.org/path/certified-finops-for-ai',
+    offering: 'Self-Paced Course + Certification Exam',
+    format: 'Multiple choice, online, self-directed', duration: 'Self-paced across three levels, with 12 months of access',
+    priceList: 500, validity: '24 months', prerequisite: 'None formally, though FOCP or FOCE first is strongly recommended',
+    audience: 'Practitioners and engineers whose organisations have started spending real money on AI and cannot yet explain what that spend is buying.',
+    topics: [
+      'How AI cost behaves differently from traditional cloud services',
+      'AI cost allocation, data ingestion, and anomaly detection',
+      'Workload and rate optimization for AI systems',
+      'Unit economics, sustainability, and cost-efficient system design',
+      'Estimating AI workloads, forecasting, budgeting, and governance',
+    ],
+    why: 'AI spend broke most of the assumptions FinOps practices were built on. Token-based pricing has no instance to rightsize, GPU capacity is committed to rather than autoscaled, and a single team can move the monthly bill by an order of magnitude in a week. This is the newest of the five certifications and the one where existing cloud cost instincts transfer least well, which is exactly why it is worth doing deliberately rather than improvising.',
+    prepTips: [
+      'Go in with your own AI bill in front of you, split into inference, training, and the storage and egress around them, because the allocation material only lands once you can see how blurred those lines are in practice.',
+      'The three levels build on each other, moving from visibility to optimization to forecasting and governance, so resist skipping ahead to the optimization content.',
+      'Treat the forecasting section as the important one. AI budgets fail on estimation far more often than on inefficiency.',
+    ],
+    faqs: [
+      { q: 'Do I need FinOps experience before FinOps Certified: AI Value?', a: 'There is no hard prerequisite, but the FinOps Foundation strongly recommends completing either FinOps Certified Practitioner or FinOps Certified Engineer first, because the course assumes you already know the framework.' },
+      { q: 'How much is FinOps Certified: AI Value with a discount code?', a: 'The self-paced course plus certification exam lists at $500. With RUSHABH_20 it comes to about $400.' },
+      { q: 'How is FinOps for AI different from regular cloud FinOps?', a: 'The levers change. There is no instance to rightsize on token-priced inference, GPU capacity is committed to rather than scaled on demand, and cost per unit of business value is much harder to attribute. The framework still applies; the specific optimization and allocation techniques do not transfer directly.' },
+      { q: 'Is this certification worth it if we only use hosted APIs?', a: 'Yes, arguably more so. API-billed AI spend is the easiest kind to lose track of, because it needs no provisioning and shows up as one line on a bill that nobody owns.' },
+      { q: 'Does RUSHABH_20 work on the AI Value plus Technology Value bundle?', a: 'No. The code applies to the individual approved offerings, not the bundles. Buy them separately with the code, or price the bundle and compare.' },
+    ],
+  },
+  {
+    slug: 'technology-value', name: 'Technology Value', shortFor: 'Practices growing past public cloud into SaaS and data centres', fullName: 'FinOps Certified: Technology Value',
+    dest: 'https://learn.finops.org/path/technology-value',
+    offering: 'Self-Paced Course + Certification Exam',
+    format: 'Multiple choice, online, self-directed', duration: 'Six modules, self-paced, with 12 months of access',
+    priceList: 500, validity: '24 months', prerequisite: 'None formally, though FOCP or FOCE first is strongly recommended',
+    audience: 'Established practitioners whose remit has grown past public cloud into data centres, SaaS, and data platforms, and who need the framework to stretch that far.',
+    topics: [
+      'Defining and managing FinOps Scopes',
+      'Applying the FinOps Framework beyond public cloud',
+      'Public cloud, data centre, SaaS, and data cloud platforms as distinct categories',
+      'How capabilities, personas, and optimization levers differ per category',
+      'Connecting technology spend to business strategy and outcomes',
+      'Driving executive alignment on technology investment',
+    ],
+    why: 'Most FinOps practices hit the same wall: the cloud bill gets well managed, and then someone points out that SaaS licences, the remaining data centre, and the data platform together cost more than the cloud does. This is the certification for widening the practice without abandoning the framework, and Scopes are the piece that makes that tractable rather than infinite.',
+    prepTips: [
+      'List every technology cost category your organisation actually carries before you start, including the ones nobody currently owns, and use that list as the worked example throughout.',
+      'Scopes are the load-bearing concept in this course. Getting precise about what your practice does and does not cover is most of the value on offer.',
+      'Each category has genuinely different cost structures and data models, so resist mapping cloud habits onto SaaS or data centre spend.',
+    ],
+    faqs: [
+      { q: 'What are FinOps Scopes?', a: 'Scopes are how a FinOps practice declares what it covers. They set the boundary and the shared expectations around which technology categories, such as public cloud, SaaS, or data centre, the practice actually operates in.' },
+      { q: 'How much is FinOps Certified: Technology Value with a discount code?', a: 'The self-paced course plus certification exam lists at $500. With RUSHABH_20 it comes to about $400.' },
+      { q: 'Do I need to be a FinOps Practitioner first?', a: 'Not formally, but the FinOps Foundation recommends completing FinOps Certified Practitioner or FinOps Certified Engineer beforehand, since the course builds directly on framework knowledge.' },
+      { q: 'Is this useful if we are cloud only?', a: 'Less so today, more so later. If you have no data centre and minimal SaaS, start elsewhere. The moment someone asks you to account for SaaS licences or a data platform, this is the certification that has already thought about it.' },
+      { q: 'How does this compare to FinOps Certified: AI Value?', a: 'They are siblings, both extending an existing practice into new territory. AI Value goes deep on one fast-moving category; Technology Value goes wide across the whole portfolio. Pick by whichever question your leadership is actually asking.' },
+    ],
+  },
+];
+
 /* ---------- helpers ---------- */
 
 const escapeHtml = (s = '') => String(s)
@@ -567,6 +737,39 @@ if (!fs.existsSync(POSTS_DIR)) {
 }
 
 const now = new Date();
+
+/* ---------- live Linux Foundation sale ----------
+   A few times a year LF Education runs an official sale that beats RUSHABH30.
+   Fill in the window from the affiliate announcement and the banner renders
+   itself onto the coupon page, every per-cert page and the homepage deals
+   card for exactly that window.
+
+   The daily rebuild cron is what retires it: once `end` passes, all three
+   surfaces fall back to their evergreen RUSHABH30 copy on the next build with
+   no manual edit, so a stale "sale ends today" banner can't outlive the sale.
+   Set SALE to null once it's over and the run has retired it.
+
+   Sale codes don't stack with RUSHABH30, and the buyer should always take the
+   bigger number — but commission is attributed by the AWIN link, not the code,
+   so pointing people at the better sale code through the tracking link below
+   costs nothing and is the honest recommendation. */
+const SALE = {
+  name: 'End-of-Season Flash Sale',
+  // Awin's announcement quotes two different windows: the marketing copy says
+  // "August 25-27" while the offer terms give 8/24 3:00 PM - 8/29 2:59 AM ET.
+  // The terms are the window the codes actually honour, so the banner runs to
+  // the terms while the copy quotes the advertised date the reader will see
+  // everywhere else. Times below are that ET window converted to UTC.
+  start: '2026-08-24T19:00:00Z',
+  end: '2026-08-29T06:59:00Z',
+  advertisedEnd: 'August 27',
+  courses: { code: 'AUG26F35', pct: 35, what: 'courses & certifications' },
+  bundles: { code: 'AUG26F40', pct: 40, what: 'bundles & instructor-led training' },
+  dest: 'https://training.linuxfoundation.org/august-flash-1/',
+};
+const saleLive = !!SALE && now >= new Date(SALE.start) && now < new Date(SALE.end);
+const saleLink = SALE ? awinLink(SALE.dest) : null;
+
 const all = [];
 const scheduled = [];
 
@@ -1160,6 +1363,8 @@ const sitemapUrls = [
   { loc: `${SITE}/blog/`, priority: '0.9', changefreq: 'weekly', lastmod: all.length ? isoDate(all[0].updated).slice(0, 10) : null },
   { loc: `${SITE}/linux-foundation-coupon/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('linux-foundation-coupon/index.html') },
   ...CERT_PAGES.map(c => ({ loc: `${SITE}/linux-foundation-coupon/${c.slug}/`, priority: '0.8', changefreq: 'weekly', lastmod: gitLastMod(`linux-foundation-coupon/${c.slug}/index.html`) })),
+  { loc: `${SITE}/finops-coupon/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('finops-coupon/index.html') },
+  ...FINOPS_PAGES.map(f => ({ loc: `${SITE}/finops-coupon/${f.slug}/`, priority: '0.8', changefreq: 'weekly', lastmod: gitLastMod(`finops-coupon/${f.slug}/index.html`) })),
   { loc: `${SITE}/docker-captain/`, priority: '0.7', changefreq: 'monthly', lastmod: gitLastMod('docker-captain/index.html') },
   { loc: `${SITE}/links/`, priority: '0.5', changefreq: 'monthly', lastmod: gitLastMod('links/index.html') },
   { loc: `${SITE}/privacy/`, priority: '0.2', changefreq: 'yearly', lastmod: gitLastMod('privacy/index.html') },
@@ -1193,6 +1398,78 @@ console.log('✅ built     /sitemap.xml');
    the page advertises this month's date forever with zero manual work. */
 
 const MONTH_YEAR = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
+/* ---------- live-sale rendering ----------
+   swapRegion() rewrites everything between a matched pair of
+   <!-- MARKER:START --> / <!-- MARKER:END --> comments, leaving the comments
+   themselves in place so the next build can find the region again. That's what
+   makes the sale banner reversible on hand-authored pages: when the window
+   closes, the same call writes the region back to empty (or to the evergreen
+   line) without anyone editing HTML. */
+const swapRegion = (html, marker, inner) => {
+  const re = new RegExp(`(<!-- ${marker}:START -->)[\\s\\S]*?(<!-- ${marker}:END -->)`);
+  if (!re.test(html)) {
+    console.warn(`⚠️  region "${marker}" not found — skipped`);
+    return html;
+  }
+  // Replacer FUNCTION, not a string: `inner` carries "$" sequences (prices,
+  // and "~$'" from the CSS-adjacent copy) that a string replacement would
+  // treat as substitution patterns.
+  return html.replace(re, (_m, open, close) => `${open}${inner}${close}`);
+};
+
+const copyBtn = (code) => `<button type="button" class="chip copy-code" data-code="${code}" aria-label="Copy coupon code ${code}">Copy</button>`;
+
+/* The banner body, shared by the coupon page and every per-cert page. Empty
+   string when no sale is live, which is what makes the region self-retiring. */
+const saleBannerHtml = () => {
+  if (!saleLive) return '';
+  const { name, advertisedEnd, courses, bundles } = SALE;
+  const top = Math.max(courses.pct, bundles.pct);
+  return `
+                <div id="current-sale" class="tech-card tech-card-sale p-5 rounded-md mb-8">
+                    <p class="status-pill mb-3"><span class="dot"></span> Sale live now &middot; ends ${escapeHtml(advertisedEnd)}</p>
+                    <p class="text-white font-bold text-lg mb-2">Linux Foundation ${escapeHtml(name)}: up to ${top}% off</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        For a few days only, the official sale beats RUSHABH30. Use <code>${courses.code}</code> for
+                        ${courses.pct}% off ${escapeHtml(courses.what)}, or <code>${bundles.code}</code> for
+                        ${bundles.pct}% off ${escapeHtml(bundles.what)}. Sale codes don't stack with RUSHABH30, so take
+                        the bigger number while it's running. RUSHABH30 goes back to being the best price here at 30%
+                        the day the sale closes.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <span class="code-box">${courses.code}${copyBtn(courses.code)}</span>
+                        <span class="code-box">${bundles.code}${copyBtn(bundles.code)}</span>
+                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Shop the sale &rarr;</a>
+                    </div>
+                </div>`;
+};
+
+/* The one-liner directly above the RUSHABH30 code box on the coupon page. */
+const saleIntroHtml = () => saleLive
+  ? `<p class="font-fira text-xs text-gray-400 mb-3">A sale is running right now (see above). Once it ends, this is the everyday code, and it works year-round:</p>`
+  : `<p class="font-fira text-xs text-gray-400 mb-3">No sale running right now. This is the everyday code, works year-round:</p>`;
+
+/* The homepage deals card. Same card, different pitch while a sale is on. */
+const saleHomeCardHtml = () => saleLive
+  ? `
+                <span class="status-pill mb-1"><span class="dot"></span> Sale live &middot; ends ${escapeHtml(SALE.advertisedEnd)}</span>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    <span class="font-fira font-bold text-primary-color">${SALE.courses.code}</span>: the Linux Foundation
+                    ${escapeHtml(SALE.name)} is live: <strong class="text-white">${SALE.courses.pct}% off certifications</strong>
+                    and <strong class="text-white">${SALE.bundles.pct}% off bundles</strong>, for a few days only. My evergreen
+                    <span class="font-fira text-primary-color">RUSHABH30</span> code takes over at 30% when it ends.
+                </p>`
+  : `
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    <span class="font-fira font-bold text-primary-color">RUSHABH30</span>: as a Linux Foundation Education partner, my community gets <strong class="text-white">30% off all Linux Foundation certifications</strong> (CKA, CKAD, CKS, KCNA) and courses, all year round.
+                </p>`;
+
+if (saleLive) {
+  console.log(`🔥 sale live  ${SALE.courses.code} / ${SALE.bundles.code} until ${SALE.end}`);
+} else if (SALE) {
+  console.log(`💤 sale idle  window ${SALE.start} → ${SALE.end} is not open; evergreen copy rendered`);
+}
+
 const couponPath = path.join(ROOT, 'linux-foundation-coupon', 'index.html');
 if (fs.existsSync(couponPath)) {
   const c = fs.readFileSync(couponPath, 'utf8');
@@ -1215,6 +1492,8 @@ if (fs.existsSync(couponPath)) {
     .replace(/last updated this page \([^)]*\)/, `last updated this page (${MONTH_YEAR})`)
     .replace(/("dateModified":\s*")[^"]*(")/, `$1${couponMod}$2`)
     .replace(/Last verified: [A-Za-z]+ \d{4}/g, `Last verified: ${MONTH_YEAR}`);
+  stamped = swapRegion(stamped, 'SALE-BANNER', saleBannerHtml());
+  stamped = swapRegion(stamped, 'SALE-INTRO', saleIntroHtml());
   if (personBlock) {
     // Replacer FUNCTION, not a string: a string replacement would interpret
     // any "$&"/"$'" etc. inside personBlock's JSON as a substitution pattern.
@@ -1267,7 +1546,10 @@ for (const page of ['index.html', 'linux-foundation-coupon/index.html', 'privacy
    regex-stamping needed — the correct month/date is just interpolated once).
    CSS is embedded pre-minified from the start; no separate inlining pass. */
 
-const certHeader = `
+/* One header for every generated deals page. `dealsHref` decides which section
+   the ./deals nav item points at and marks as current, so a FinOps page's nav
+   sends you back to /finops-coupon/ rather than to the Linux Foundation one. */
+const dealsHeader = (dealsHref = '/linux-foundation-coupon/') => `
     <a href="#main" class="skip-link">Skip to content</a>
     <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
@@ -1279,7 +1561,7 @@ const certHeader = `
                 <a href="/#experience" class="text-gray-400 hover:text-primary-color transition-colors">./experience</a>
                 <a href="/#projects" class="text-gray-400 hover:text-primary-color transition-colors">./projects</a>
                 <a href="/blog/" class="text-gray-400 hover:text-primary-color transition-colors">./blog</a>
-                <a href="/linux-foundation-coupon/" class="text-primary-color transition-colors" aria-current="true">./deals</a>
+                <a href="${dealsHref}" class="text-primary-color transition-colors" aria-current="true">./deals</a>
                 <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
             </div>
             <div class="hidden xl:flex flex-shrink-0">
@@ -1296,11 +1578,14 @@ const certHeader = `
             <a href="/#experience" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./experience</a>
             <a href="/#projects" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./projects</a>
             <a href="/blog/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./blog</a>
-            <a href="/linux-foundation-coupon/" class="block py-2 px-4 text-sm text-primary-color">./deals</a>
+            <a href="${dealsHref}" class="block py-2 px-4 text-sm text-primary-color">./deals</a>
             <a href="/#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
             ${segControl(false)}
         </div>
     </header>`;
+
+const certHeader = dealsHeader('/linux-foundation-coupon/');
+const finopsHeader = dealsHeader('/finops-coupon/');
 
 const certFooter = `
     <footer class="border-t border-border-color mt-10">
@@ -1436,6 +1721,7 @@ function certPageHtml(c, siblings) {
                     ${escapeHtml(c.name)} Discount Code: <span class="gradient-text">30% Off</span> with RUSHABH30
                 </h1>
                 <p class="font-fira text-sm text-gray-400 mb-8">Updated ${MONTH_YEAR} &middot; ${escapeHtml(c.fullName)}</p>
+${saleBannerHtml()}
                 <div class="flex flex-wrap items-center gap-5">
                     <span class="code-box">
                         RUSHABH30
@@ -1549,6 +1835,412 @@ for (const c of CERT_PAGES) {
   fs.writeFileSync(path.join(dir, 'index.html.md'), md);
 }
 console.log(`✅ built     /linux-foundation-coupon/{${CERT_PAGES.map(c => c.slug).join(',')}}/`);
+
+/* ---------- FinOps Foundation discount pages ----------
+   Same generated-from-data approach as the Linux Foundation pages above, kept
+   as a separate family on purpose. Two different partner programmes, two
+   different codes, two different catalogs: sharing a template would make it far
+   too easy for a 30%-off claim to leak onto a page where the code takes 20%.
+   The shared pieces are the chrome (head, header, footer), not the copy. */
+
+const finopsHead = ({ title, description, url, ogImage = `${SITE}/assets/og-finops-coupon.jpg`, jsonLd = [] }) => `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
+    <script defer src="/assets/theme.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#010409">
+    <meta name="color-scheme" content="dark light">
+
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}">
+    <meta name="author" content="${AUTHOR}">
+    <link rel="canonical" href="${url}">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="${url}">
+    <meta property="og:title" content="${escapeHtml(title)}">
+    <meta property="og:description" content="${escapeHtml(description)}">
+    <meta property="og:image" content="${ogImage}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeHtml(title)}">
+    <meta name="twitter:description" content="${escapeHtml(description)}">
+    <meta name="twitter:image" content="${ogImage}">
+
+    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
+    <style data-inline-css>${cssMin}</style>
+    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+
+${jsonLd.map(j => `    <script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}
+</head>`;
+
+const finopsCodeBox = () => `<span class="code-box">
+                        ${FINOPS_CODE}
+                        <button type="button" class="chip copy-code" data-code="${FINOPS_CODE}" aria-label="Copy promo code ${FINOPS_CODE}">Copy</button>
+                    </span>`;
+
+/* Repeated verbatim on all six pages: the affiliate relationship, and the fact
+   that the code covers five specific offerings rather than the whole catalog.
+   Being explicit about what is NOT covered is the part that stops this reading
+   as an inflated claim, and it is the part most coupon pages leave out. */
+const finopsDisclosure = () => `            <aside class="tech-card p-5 rounded-md mt-8">
+                <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># Affiliate disclosure</p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    I'm a FinOps Foundation promotional partner. If you enrol using code
+                    <strong class="text-white">${FINOPS_CODE}</strong> I earn a commission, at no extra cost to you
+                    (you save ${FINOPS_PCT}% either way). The code covers the five self-paced offerings listed on this
+                    site and not the rest of the FinOps catalog, so I've said plainly on every page which is which
+                    rather than implying it works on everything. This is a separate programme from my Linux Foundation
+                    partnership: <a href="/linux-foundation-coupon/">RUSHABH30</a> does not work on FinOps training, and
+                    ${FINOPS_CODE} does not work on Linux Foundation or CNCF certifications.
+                </p>
+            </aside>`;
+
+function finopsPageHtml(f, siblings) {
+  const url = `${SITE}/finops-coupon/${f.slug}/`;
+  const price = finopsPrice(f.priceList);
+  const savings = f.priceList - price;
+  const title = `${f.fullName} Discount Code (${MONTH_YEAR}): ${FINOPS_PCT}% Off with ${FINOPS_CODE} · ${AUTHOR}`;
+  const description = `Code ${FINOPS_CODE} takes ${FINOPS_PCT}% off the ${f.fullName} ${f.offering}: about $${price} instead of $${f.priceList}. Official FinOps Foundation partner code.`;
+  const dateModified = gitLastMod(`finops-coupon/${f.slug}/index.html`) || now.toISOString().slice(0, 10);
+  const priceValidUntil = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+
+  const jsonLd = [
+    { '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: f.faqs.map(q => ({ '@type': 'Question', name: q.q, acceptedAnswer: { '@type': 'Answer', text: q.a } })) },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'FinOps Coupon', item: `${SITE}/finops-coupon/` },
+        { '@type': 'ListItem', position: 3, name: `${f.fullName} Discount`, item: url },
+      ] },
+    { '@context': 'https://schema.org', '@type': 'WebPage',
+      '@id': `${url}#webpage`, url, name: title, description, inLanguage: 'en',
+      datePublished: '2026-08-26', dateModified,
+      isPartOf: { '@type': 'WebSite', name: 'rushabhshah.dev', url: `${SITE}/` },
+      author: { '@id': `${SITE}/#person` }, publisher: { '@id': `${SITE}/#person` } },
+    { '@context': 'https://schema.org', '@type': 'Product',
+      name: `${f.fullName}: ${f.offering}`,
+      description: f.why,
+      image: `${SITE}/assets/og-finops-coupon.jpg`,
+      brand: { '@type': 'Organization', name: 'FinOps Foundation' },
+      offers: { '@type': 'Offer', url, priceCurrency: 'USD', price: String(price), priceValidUntil,
+        availability: 'https://schema.org/InStock',
+        seller: { '@type': 'Organization', name: 'FinOps Foundation' } } },
+  ];
+
+  return `${finopsHead({ title, description, url, jsonLd })}
+<body>${finopsHeader}
+    <main id="main" class="container mx-auto px-6 py-12">
+        <article class="max-w-3xl mx-auto">
+            <header class="mb-10">
+                <p class="font-fira text-sm mb-6"><a href="/finops-coupon/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../finops-coupon</a></p>
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight mb-5">
+                    ${escapeHtml(f.fullName)} Discount Code: <span class="gradient-text">${FINOPS_PCT}% Off</span> with ${FINOPS_CODE}
+                </h1>
+                <p class="font-fira text-sm text-gray-400 mb-8">Updated ${MONTH_YEAR} &middot; ${escapeHtml(f.offering)}</p>
+                <div class="flex flex-wrap items-center gap-5">
+                    ${finopsCodeBox()}
+                    <a href="${f.dest}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Get it for ~$${price} &rarr;</a>
+                </div>
+            </header>
+
+            <div class="post-prose">
+                <p>
+                    Enter <code>${FINOPS_CODE}</code> at checkout on
+                    <a href="${f.dest}" target="_blank" rel="noopener sponsored">learn.finops.org</a>
+                    and the ${escapeHtml(f.fullName)} ${escapeHtml(f.offering)} drops from $${f.priceList} to about
+                    $${price}, a saving of roughly $${savings}. It's a partner code issued to me directly by the FinOps
+                    Foundation, and it applies to five specific self-paced offerings rather than the whole catalog.
+                </p>
+
+                <h2 id="quick-facts">Quick facts</h2>
+                <table>
+                    <tbody>
+                        <tr><td><strong>Offering</strong></td><td>${escapeHtml(f.offering)}</td></tr>
+                        <tr><td><strong>Format</strong></td><td>${escapeHtml(f.format)}</td></tr>
+                        <tr><td><strong>Time to complete</strong></td><td>${escapeHtml(f.duration)}</td></tr>
+                        <tr><td><strong>List price</strong></td><td>$${f.priceList}</td></tr>
+                        <tr><td><strong>With ${FINOPS_CODE}</strong></td><td>~$${price}</td></tr>
+                        <tr><td><strong>Certification valid for</strong></td><td>${escapeHtml(f.validity)}</td></tr>
+                        <tr><td><strong>Prerequisite</strong></td><td>${f.prerequisite ? escapeHtml(f.prerequisite) : 'None'}</td></tr>
+                    </tbody>
+                </table>
+                <p><em>List price read from the FinOps Foundation's own catalog in ${MONTH_YEAR}. They set the prices and can revise them, so check <a href="${f.dest}" target="_blank" rel="noopener sponsored">the product page</a> for the current number before you buy.</em></p>
+
+                <h2 id="who-its-for">Who this is for</h2>
+                <p>${escapeHtml(f.audience)}</p>
+
+                <h2 id="what-it-covers">What it covers</h2>
+                <ul>
+                    ${f.topics.map(t => `<li>${escapeHtml(t)}</li>`).join('\n                    ')}
+                </ul>
+
+                <h2 id="why-it-matters">Why it's worth it</h2>
+                <p>${escapeHtml(f.why)}</p>
+
+                <h2 id="prep-tips">Prep tips</h2>
+                <ul>
+                    ${f.prepTips.map(t => `<li>${escapeHtml(t)}</li>`).join('\n                    ')}
+                </ul>
+
+                <h2 id="how-to-use">How to use the code</h2>
+                <ol>
+                    <li>Open the <a href="${f.dest}" target="_blank" rel="noopener sponsored">${escapeHtml(f.fullName)} page</a> on learn.finops.org and choose the ${escapeHtml(f.offering)} option.</li>
+                    <li>Enter <code>${FINOPS_CODE}</code> in the promo code field and apply it before paying.</li>
+                    <li>Check the total actually dropped by ${FINOPS_PCT}%. If it didn't, you've probably selected an exam-only, bundle, or subscription SKU, which this code doesn't cover.</li>
+                </ol>
+            </div>
+
+            <div class="tech-card p-5 rounded-md mt-8 flex flex-wrap items-center justify-between gap-4">
+                ${finopsCodeBox()}
+                <a href="${f.dest}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
+            </div>
+
+            <div class="post-prose mt-8">
+                <h2 id="faq">Frequently asked questions</h2>
+            </div>
+            <div class="faq mt-5">
+                ${f.faqs.map(q => `<details>
+                    <summary>${escapeHtml(q.q)}</summary>
+                    <div>${escapeHtml(q.a)}</div>
+                </details>`).join('\n                ')}
+            </div>
+
+            <div class="post-prose mt-8">
+                <h2 id="other-finops">The other FinOps certifications this code covers</h2>
+                <p>${FINOPS_CODE} takes ${FINOPS_PCT}% off five FinOps Foundation offerings. Dedicated guides for the rest:</p>
+                <ul>
+                    ${siblings.filter(s => s.slug !== f.slug).map(s => `<li><a href="/finops-coupon/${s.slug}/">${escapeHtml(s.fullName)} discount code</a>: $${s.priceList}, about $${finopsPrice(s.priceList)} with the code</li>`).join('\n                    ')}
+                </ul>
+                <p>Or see the <a href="/finops-coupon/">full FinOps coupon overview</a> for all five side by side and advice on which to take first.</p>
+                <p>Doing Kubernetes or CNCF certifications too? Those run on a different partner code: <a href="/linux-foundation-coupon/">RUSHABH30 takes 30% off the Linux Foundation catalog</a>.</p>
+            </div>
+
+${finopsDisclosure()}
+        </article>
+    </main>${certFooter}
+</body>
+</html>
+`;
+}
+
+function finopsIndexHtml(pages) {
+  const url = `${SITE}/finops-coupon/`;
+  const title = `FinOps Certification Discount Code (${MONTH_YEAR}): ${FINOPS_PCT}% Off with ${FINOPS_CODE} · ${AUTHOR}`;
+  const description = `Official FinOps Foundation partner code ${FINOPS_CODE} takes ${FINOPS_PCT}% off FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value, and Technology Value. Prices, comparison, and which one to take first.`;
+  const dateModified = gitLastMod('finops-coupon/index.html') || now.toISOString().slice(0, 10);
+  const cheapest = pages.reduce((a, b) => (b.priceList < a.priceList ? b : a));
+
+  const jsonLd = [
+    { '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: `Is ${FINOPS_CODE} a real FinOps Foundation discount code?`, acceptedAnswer: { '@type': 'Answer', text: `Yes. It's a promo code issued to me directly by the FinOps Foundation as a promotional partner. It isn't scraped or recycled from a coupon aggregator, and it's honoured at checkout on learn.finops.org.` } },
+        { '@type': 'Question', name: 'Which FinOps offerings does the code work on?', acceptedAnswer: { '@type': 'Answer', text: `Five: FinOps Certified Practitioner, FinOps Certified Engineer, FinOps Certified FOCUS Analyst, FinOps Certified: AI Value, and FinOps Certified: Technology Value, each as the Self-Paced Course + Certification Exam offering. It does not cover FinOps Certified Professional, the multi-certification bundles, FinOps for Containers, exam-only or recertification purchases, or corporate training subscriptions.` } },
+        { '@type': 'Question', name: 'How much does FinOps certification cost with a discount code?', acceptedAnswer: { '@type': 'Answer', text: `The four $500 offerings come to about $400 each with ${FINOPS_CODE}, and the FOCUS Analyst certification comes from $400 to about $320. That's ${FINOPS_PCT}% off, saving $80 to $100 per certification.` } },
+        { '@type': 'Question', name: 'Which FinOps certification should I take first?', acceptedAnswer: { '@type': 'Answer', text: 'FinOps Certified Practitioner for almost everyone, because it establishes the framework and vocabulary the others assume. Engineers who own infrastructure can reasonably start with FinOps Certified Engineer instead, and anyone who mainly builds cost data pipelines can start with FOCUS Analyst, which stands on its own.' } },
+        { '@type': 'Question', name: 'Does the code expire?', acceptedAnswer: { '@type': 'Answer', text: 'No end date was set when the FinOps Foundation issued it. This page is rebuilt daily, so if the code ever stops being honoured it gets corrected here rather than left up.' } },
+        { '@type': 'Question', name: 'Can I combine it with other FinOps discounts?', acceptedAnswer: { '@type': 'Answer', text: 'No. Promo codes on learn.finops.org do not stack. Use whichever single discount is larger.' } },
+      ] },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'FinOps Coupon', item: url },
+      ] },
+    { '@context': 'https://schema.org', '@type': 'WebPage',
+      '@id': `${url}#webpage`, url, name: title, description, inLanguage: 'en',
+      datePublished: '2026-08-26', dateModified,
+      isPartOf: { '@type': 'WebSite', name: 'rushabhshah.dev', url: `${SITE}/` },
+      author: { '@id': `${SITE}/#person` }, publisher: { '@id': `${SITE}/#person` } },
+  ];
+
+  return `${finopsHead({ title, description, url, jsonLd })}
+<body>${finopsHeader}
+    <main id="main" class="container mx-auto px-6 py-12">
+        <article class="max-w-3xl mx-auto">
+            <header class="mb-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight mb-5">
+                    FinOps Certification Coupon: <span class="gradient-text">${FINOPS_PCT}% Off</span> with ${FINOPS_CODE}
+                </h1>
+                <p class="font-fira text-sm text-gray-400 mb-8">
+                    Updated ${MONTH_YEAR} &middot; Works on FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value &amp; Technology Value
+                </p>
+                <div class="flex flex-wrap items-center gap-5">
+                    ${finopsCodeBox()}
+                    <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored" class="btn btn-ghost">Open the FinOps catalog &rarr;</a>
+                </div>
+                <p class="font-fira text-xs text-gray-400 mt-3">Last verified: ${MONTH_YEAR}</p>
+            </header>
+
+            <div class="post-prose">
+                <p>
+                    The short version: put <code>${FINOPS_CODE}</code> in the promo code field at checkout on
+                    <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored">learn.finops.org</a>
+                    and the total drops ${FINOPS_PCT}%. It works on five self-paced FinOps Foundation certifications,
+                    listed below with the maths already done. The rest of this page is context: where the code comes
+                    from, what each certification is actually for, and which one I'd tell you to take first.
+                </p>
+
+                <h2 id="where-from">Where this code comes from</h2>
+                <p>
+                    I'm <a href="/">Rushabh Shah</a>, a DevOps engineer in Ahmedabad, a Docker Captain, and a Grafana
+                    Champion. Cloud cost is not a side interest for me: I drove a 59% AWS spend reduction at Genuin,
+                    led a zero-downtime AWS to Oracle Cloud migration under a hard deadline, and cost optimization is
+                    part of my day job now. That work is why the FinOps Foundation set up
+                    <code>${FINOPS_CODE}</code> as a partner code for my community.
+                </p>
+                <p>
+                    The reason I care about the discount specifically is the same reason I pushed for the Linux
+                    Foundation one: a $500 certification is a serious decision on an Indian salary, and the people who
+                    would benefit most from FinOps training are usually the ones who cannot expense it. ${FINOPS_PCT}%
+                    is not life-changing, but it is real, and the code is honoured by the FinOps Foundation directly
+                    rather than being a recycled aggregator coupon that stopped working two quarters ago.
+                </p>
+
+                <h2 id="prices">What each one costs with the code</h2>
+                <p>All five are the Self-Paced Course + Certification Exam offering, which bundles the course and the exam together and includes 12 months of access to the material:</p>
+                <table>
+                    <thead>
+                        <tr><th>Certification</th><th>Best for</th><th>List price*</th><th>With ${FINOPS_CODE}</th></tr>
+                    </thead>
+                    <tbody>
+                        ${pages.map(f => `<tr><td><strong><a href="/finops-coupon/${f.slug}/">${escapeHtml(f.fullName)}</a></strong></td><td>${escapeHtml(f.shortFor)}</td><td>$${f.priceList}</td><td>~$${finopsPrice(f.priceList)}</td></tr>`).join('\n                        ')}
+                    </tbody>
+                </table>
+                <p><em>*List prices read from the FinOps Foundation's own catalog in ${MONTH_YEAR}. They set the prices and revise them periodically, so check <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored">learn.finops.org</a> for current numbers.</em></p>
+
+                <h2 id="not-covered">What the code does not cover</h2>
+                <p>
+                    Worth stating plainly, because most coupon pages imply a code works on everything. The FinOps
+                    Foundation approved five offerings for this code. These are <strong>not</strong> included:
+                </p>
+                <ul>
+                    <li>FinOps Certified Professional, the advanced certification</li>
+                    <li>The multi-certification bundles, such as Practitioner + FOCUS Analyst or the Full Catalog plan</li>
+                    <li>FinOps for Containers</li>
+                    <li>Exam-only and recertification purchases</li>
+                    <li>Corporate training subscriptions</li>
+                </ul>
+                <p>
+                    If you're weighing a bundle against buying two certifications separately with the code, do the
+                    arithmetic both ways. Sometimes the bundle still wins, and I'd rather you saved the money than
+                    used my code.
+                </p>
+
+                <h2 id="which-first">Which FinOps certification should you take first?</h2>
+                <p>
+                    <strong>Almost everyone should start with the <a href="/finops-coupon/practitioner/">FinOps
+                    Certified Practitioner</a>.</strong> It is the one job descriptions name, and more usefully it is
+                    the one that gives you and your finance team a shared vocabulary. The other four assume you already
+                    have it.
+                </p>
+                <p>Two reasonable exceptions:</p>
+                <ul>
+                    <li>If you build and run the infrastructure and want cost folded into engineering decisions rather than reported after the fact, <a href="/finops-coupon/engineer/">FinOps Certified Engineer</a> is the better fit and reads as the more relevant credential on an engineering CV.</li>
+                    <li>If your actual job is billing data pipelines and cost reporting, <a href="/finops-coupon/focus-analyst/">FinOps Certified FOCUS Analyst</a> stands on its own, and at $${cheapest.priceList} it is the cheapest way into the catalog.</li>
+                </ul>
+                <p>
+                    <a href="/finops-coupon/ai-value/">AI Value</a> and
+                    <a href="/finops-coupon/technology-value/">Technology Value</a> are both extensions of an existing
+                    practice rather than entry points. Take them when the question they answer is one your leadership
+                    is actually asking: AI Value when AI spend has become material and nobody can explain it, Technology
+                    Value when the remit has grown past public cloud into SaaS, data centres, and data platforms.
+                </p>
+
+                <h2 id="per-cert">Guides for each certification</h2>
+                <p>Each one has its own page with pricing, format, what it covers, prep advice, and an FAQ:</p>
+                <ul>
+                    ${pages.map(f => `<li><a href="/finops-coupon/${f.slug}/">${escapeHtml(f.fullName)} discount code</a>: $${f.priceList}, about $${finopsPrice(f.priceList)} with ${FINOPS_CODE}</li>`).join('\n                    ')}
+                </ul>
+
+                <h2 id="how-to-use">How to use the code</h2>
+                <ol>
+                    <li>Open the certification you want on <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored">learn.finops.org</a> and pick the Self-Paced Course + Certification Exam option.</li>
+                    <li>Enter <code>${FINOPS_CODE}</code> in the promo code field and apply it before paying.</li>
+                    <li>Confirm the total dropped by ${FINOPS_PCT}%. If nothing happens, you've selected a SKU the code doesn't cover, most likely an exam-only, bundle, or subscription option.</li>
+                </ol>
+            </div>
+
+            <div class="tech-card p-5 rounded-md mt-8 flex flex-wrap items-center justify-between gap-4">
+                ${finopsCodeBox()}
+                <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored" class="btn btn-primary">Apply it at checkout &rarr;</a>
+            </div>
+
+            <div class="post-prose mt-8">
+                <h2 id="faq">Frequently asked questions</h2>
+            </div>
+            <div class="faq mt-5">
+                <details>
+                    <summary>Is ${FINOPS_CODE} legit?</summary>
+                    <div>Yes. It's a promo code issued to me directly by the FinOps Foundation as a promotional partner. It isn't scraped or recycled from a coupon aggregator, and it's honoured at checkout on learn.finops.org.</div>
+                </details>
+                <details>
+                    <summary>Which FinOps offerings does it work on?</summary>
+                    <div>Five: FinOps Certified Practitioner, FinOps Certified Engineer, FinOps Certified FOCUS Analyst, FinOps Certified: AI Value, and FinOps Certified: Technology Value, each as the Self-Paced Course + Certification Exam offering. Not FinOps Certified Professional, the bundles, FinOps for Containers, exam-only or recertification purchases, or corporate subscriptions.</div>
+                </details>
+                <details>
+                    <summary>How much does FinOps certification cost with the code?</summary>
+                    <div>The four $500 offerings come to about $400 each, and the FOCUS Analyst certification goes from $400 to about $320. That's ${FINOPS_PCT}% off, so $80 to $100 saved per certification.</div>
+                </details>
+                <details>
+                    <summary>Does it stack with other discounts?</summary>
+                    <div>No. Promo codes on learn.finops.org don't combine. Use whichever single discount is larger.</div>
+                </details>
+                <details>
+                    <summary>Does the code expire?</summary>
+                    <div>No end date was set when it was issued. This page rebuilds daily, so if the code ever stops working it gets corrected here rather than left up as a dead coupon.</div>
+                </details>
+                <details>
+                    <summary>Does RUSHABH30 work on FinOps training?</summary>
+                    <div>No, and ${FINOPS_CODE} doesn't work on Linux Foundation training either. They're two separate partner programmes with separate catalogs. Use <a href="/linux-foundation-coupon/">RUSHABH30</a> for CKA, CKAD, CKS, KCNA and the rest of the CNCF certifications, and ${FINOPS_CODE} here.</div>
+                </details>
+                <details>
+                    <summary>Is FinOps certification worth it at all?</summary>
+                    <div>It depends what you want from it. It won't teach an experienced engineer new ways to cut a bill. What it gives you is a framework and a shared language for defending cost decisions to finance and leadership, which is usually the harder half of the work, plus a credential that's increasingly named in cloud cost job descriptions.</div>
+                </details>
+            </div>
+
+${finopsDisclosure()}
+        </article>
+    </main>${certFooter}
+</body>
+</html>
+`;
+}
+
+/* ---------- write the FinOps pages ---------- */
+
+const finopsLiveSlugs = new Set(FINOPS_PAGES.map(f => f.slug));
+const finopsOutDir = path.join(ROOT, 'finops-coupon');
+if (fs.existsSync(finopsOutDir)) {
+  for (const entry of fs.readdirSync(finopsOutDir, { withFileTypes: true })) {
+    if (entry.isDirectory() && !finopsLiveSlugs.has(entry.name)) {
+      fs.rmSync(path.join(finopsOutDir, entry.name), { recursive: true });
+      console.log(`🗑  pruned    /finops-coupon/${entry.name}/`);
+    }
+  }
+}
+fs.mkdirSync(finopsOutDir, { recursive: true });
+{
+  const html = finopsIndexHtml(FINOPS_PAGES);
+  fs.writeFileSync(path.join(finopsOutDir, 'index.html'), html);
+  fs.writeFileSync(path.join(finopsOutDir, 'index.html.md'), htmlFragmentToMarkdown(extractMirrorRegion(html)));
+}
+for (const f of FINOPS_PAGES) {
+  const html = finopsPageHtml(f, FINOPS_PAGES);
+  const dir = path.join(finopsOutDir, f.slug);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  fs.writeFileSync(path.join(dir, 'index.html.md'), htmlFragmentToMarkdown(extractMirrorRegion(html)));
+}
+console.log(`✅ built     /finops-coupon/ + {${FINOPS_PAGES.map(f => f.slug).join(',')}}/`);
+
 
 /* ---------- homepage: pre-render Tech Stack, Certifications, Experience,
    Projects, and Latest Posts ----------
@@ -1769,6 +2461,7 @@ function swapMarker(html, marker, inner) {
   homeHtml = swapMarker(homeHtml, 'Experience items will be injected here', renderExperience());
   homeHtml = swapMarker(homeHtml, 'Projects will be injected here', renderProjects());
   homeHtml = swapMarker(homeHtml, 'Latest blog posts injected from /blog/posts.json. Falls back to a static card.', renderLatestPosts());
+  homeHtml = swapRegion(homeHtml, 'SALE-HOME', saleHomeCardHtml());
   fs.writeFileSync(indexPath, homeHtml);
   console.log('✅ pre-rendered / (skills, certs, experience, projects, latest posts)');
 }

@@ -56,11 +56,19 @@ Downtime · AWS → OCI migration
 
 Hard-deadline cutover
 
-RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
+Sale live &middot; ends August 27
+
+AUG26F35: the Linux Foundation End-of-Season Flash Sale is live: **35% off certifications** and **40% off bundles**, for a few days only. My evergreen RUSHABH30 code takes over at 30% when it ends.
 
 Get the coupon code →
 
 (https://rushabhshah.dev/linux-foundation-coupon/)
+
+RUSHABH_20: I'm also a FinOps Foundation partner, so my community gets **20% off FinOps certifications** (Practitioner, Engineer, FOCUS Analyst, AI Value, Technology Value).
+
+Get the FinOps code →
+
+(https://rushabhshah.dev/finops-coupon/)
 
 ## 01. About Me
 
