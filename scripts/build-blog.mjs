@@ -2604,6 +2604,18 @@ const GO_LINKS = () => {
   // Every cert that has a page gets a matching short link, generated from the
   // same dest the page's own CTA uses so the two can never disagree.
   for (const c of CERT_PAGES) map[c.slug] = awinLink(c.dest);
+  // Certs that don't have a dedicated page here but do appear in the coupon
+  // repo's pricing table, so every row there can carry a branded link.
+  for (const [slug, dest] of Object.entries({
+    cnpe: 'certified-cloud-native-platform-engineer-cnpe',
+    ica: 'istio-certified-associate-ica',
+    cca: 'cilium-certified-associate-cca',
+    capa: 'certified-argo-project-associate-capa',
+    cgoa: 'certified-gitops-associate-cgoa',
+    cba: 'certified-backstage-associate-cba',
+    kca: 'kyverno-certified-associate-kca',
+    cnpa: 'certified-cloud-native-platform-engineering-associate-cnpa',
+  })) map[slug] = awinLink(`https://training.linuxfoundation.org/certification/${dest}/`);
   // Multi-exam bundles. These product pages are real (verified 200) but carry
   // no machine-readable price, so they get links here and are quoted without
   // prices elsewhere rather than guessing at numbers.
