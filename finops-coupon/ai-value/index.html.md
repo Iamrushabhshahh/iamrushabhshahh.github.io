@@ -88,8 +88,8 @@ RUSHABH_20 takes 20% off five FinOps Foundation offerings. Dedicated guides for 
 
 Or see the [full FinOps coupon overview](https://rushabhshah.dev/finops-coupon/) for all five side by side and advice on which to take first.
 
-Doing Kubernetes or CNCF certifications too? Those run on a different partner code: [RUSHABH30 takes 30% off the Linux Foundation catalog](https://rushabhshah.dev/linux-foundation-coupon/).
+Doing Kubernetes or CNCF certifications too? Those are a different checkout and a different code: [RUSHABH30 takes 30% off the Linux Foundation catalog](https://rushabhshah.dev/linux-foundation-coupon/) at training.linuxfoundation.org.
 
 \# Affiliate disclosure
 
-I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) does not work on FinOps training, and RUSHABH_20 does not work on Linux Foundation or CNCF certifications.
+I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.

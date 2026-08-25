@@ -390,9 +390,12 @@ const CERT_PAGES = [
 /* ---------- FinOps Foundation partner code ----------
    /finops-coupon/ and /finops-coupon/<slug>/ — a second, separate affiliate
    programme from the Linux Foundation one above, and the two must not be
-   blurred together on the page. RUSHABH30 does NOT work on FinOps training and
-   RUSHABH_20 does NOT work on the Linux Foundation catalog, so each section
-   states its own scope plainly and cross-links rather than sharing copy.
+   blurred together on the page. They're separated by checkout, not by topic:
+   RUSHABH30 applies at training.linuxfoundation.org and RUSHABH_20 at
+   learn.finops.org, and neither is accepted by the other. Say it that way
+   rather than "RUSHABH30 doesn't work on FinOps" — the LF catalog does carry
+   some FinOps-branded material, so the topic-based phrasing is wrong and
+   contradicts the linux-foundation-coupon repo's own sale notes.
 
    Scope is set by the partner agreement, not by what's in the catalog: the
    FinOps Foundation approved five specific offerings for promotion, so only
@@ -1897,8 +1900,9 @@ const finopsDisclosure = () => `            <aside class="tech-card p-5 rounded-
                     (you save ${FINOPS_PCT}% either way). The code covers the five self-paced offerings listed on this
                     site and not the rest of the FinOps catalog, so I've said plainly on every page which is which
                     rather than implying it works on everything. This is a separate programme from my Linux Foundation
-                    partnership: <a href="/linux-foundation-coupon/">RUSHABH30</a> does not work on FinOps training, and
-                    ${FINOPS_CODE} does not work on Linux Foundation or CNCF certifications.
+                    partnership, and the two run on different checkouts: <a href="/linux-foundation-coupon/">RUSHABH30</a>
+                    applies at training.linuxfoundation.org, ${FINOPS_CODE} applies at learn.finops.org, and neither
+                    is accepted by the other.
                 </p>
             </aside>`;
 
@@ -2020,7 +2024,7 @@ function finopsPageHtml(f, siblings) {
                     ${siblings.filter(s => s.slug !== f.slug).map(s => `<li><a href="/finops-coupon/${s.slug}/">${escapeHtml(s.fullName)} discount code</a>: $${s.priceList}, about $${finopsPrice(s.priceList)} with the code</li>`).join('\n                    ')}
                 </ul>
                 <p>Or see the <a href="/finops-coupon/">full FinOps coupon overview</a> for all five side by side and advice on which to take first.</p>
-                <p>Doing Kubernetes or CNCF certifications too? Those run on a different partner code: <a href="/linux-foundation-coupon/">RUSHABH30 takes 30% off the Linux Foundation catalog</a>.</p>
+                <p>Doing Kubernetes or CNCF certifications too? Those are a different checkout and a different code: <a href="/linux-foundation-coupon/">RUSHABH30 takes 30% off the Linux Foundation catalog</a> at training.linuxfoundation.org.</p>
             </div>
 
 ${finopsDisclosure()}
@@ -2197,8 +2201,8 @@ function finopsIndexHtml(pages) {
                     <div>No end date was set when it was issued. This page rebuilds daily, so if the code ever stops working it gets corrected here rather than left up as a dead coupon.</div>
                 </details>
                 <details>
-                    <summary>Does RUSHABH30 work on FinOps training?</summary>
-                    <div>No, and ${FINOPS_CODE} doesn't work on Linux Foundation training either. They're two separate partner programmes with separate catalogs. Use <a href="/linux-foundation-coupon/">RUSHABH30</a> for CKA, CKAD, CKS, KCNA and the rest of the CNCF certifications, and ${FINOPS_CODE} here.</div>
+                    <summary>Does RUSHABH30 work on these FinOps certifications?</summary>
+                    <div>Not on learn.finops.org, which is where these five certifications are sold. They're two separate partner programmes on two separate checkouts: RUSHABH30 applies at training.linuxfoundation.org and ${FINOPS_CODE} applies at learn.finops.org. Use <a href="/linux-foundation-coupon/">RUSHABH30</a> for CKA, CKAD, CKS, KCNA and the rest of the CNCF catalog, and ${FINOPS_CODE} here.</div>
                 </details>
                 <details>
                     <summary>Is FinOps certification worth it at all?</summary>

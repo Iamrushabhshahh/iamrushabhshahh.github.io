@@ -95,9 +95,9 @@ No. Promo codes on learn.finops.org don't combine. Use whichever single discount
 
 No end date was set when it was issued. This page rebuilds daily, so if the code ever stops working it gets corrected here rather than left up as a dead coupon.
 
-**Does RUSHABH30 work on FinOps training?**
+**Does RUSHABH30 work on these FinOps certifications?**
 
-No, and RUSHABH_20 doesn't work on Linux Foundation training either. They're two separate partner programmes with separate catalogs. Use [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) for CKA, CKAD, CKS, KCNA and the rest of the CNCF certifications, and RUSHABH_20 here.
+Not on learn.finops.org, which is where these five certifications are sold. They're two separate partner programmes on two separate checkouts: RUSHABH30 applies at training.linuxfoundation.org and RUSHABH_20 applies at learn.finops.org. Use [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) for CKA, CKAD, CKS, KCNA and the rest of the CNCF catalog, and RUSHABH_20 here.
 
 **Is FinOps certification worth it at all?**
 
@@ -105,4 +105,4 @@ It depends what you want from it. It won't teach an experienced engineer new way
 
 \# Affiliate disclosure
 
-I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) does not work on FinOps training, and RUSHABH_20 does not work on Linux Foundation or CNCF certifications.
+I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.
