@@ -447,7 +447,7 @@ const FINOPS_PAGES = [
   },
   {
     slug: 'engineer', name: 'FOCE', shortFor: 'Engineers who build and run the infrastructure', fullName: 'FinOps Certified Engineer',
-    dest: 'https://learn.finops.org/page/finops-certified-engineer',
+    dest: 'https://learn.finops.org/path/finops-certified-engineer',
     offering: 'Self-Paced Course + Certification Exam',
     format: 'Multiple choice, online, self-directed', duration: 'About 10 hours of course content; exam about 1 hour',
     priceList: 500, validity: '24 months', prerequisite: null,
@@ -1948,6 +1948,7 @@ ${signupLF()}
                     ${siblings.filter(s => s.slug !== c.slug).map(s => `<li><a href="/linux-foundation-coupon/${s.slug}/">${escapeHtml(s.name)} discount code</a></li>`).join('\n                    ')}
                 </ul>
                 <p>Or see the <a href="/linux-foundation-coupon/">full Linux Foundation coupon overview</a> for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.</p>
+                <p>Buying FinOps certifications too? Both partner codes are compared side by side on the <a href="/coupons/">certification discount codes hub</a>.</p>
             </div>
 
             <aside class="tech-card p-5 rounded-md mt-8">
@@ -2173,6 +2174,7 @@ ${signupFinOps()}
                 </ul>
                 <p>Or see the <a href="/finops-coupon/">full FinOps coupon overview</a> for all five side by side and advice on which to take first.</p>
                 <p>Doing Kubernetes or CNCF certifications too? Those are a different checkout and a different code: <a href="/linux-foundation-coupon/">RUSHABH30 takes 30% off the Linux Foundation catalog</a> at training.linuxfoundation.org.</p>
+                <p>Both codes side by side, and which one applies to what: <a href="/coupons/">certification discount codes hub</a>.</p>
             </div>
 
 ${finopsDisclosure()}

@@ -106,6 +106,8 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 
 Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
 
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
 \# Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).

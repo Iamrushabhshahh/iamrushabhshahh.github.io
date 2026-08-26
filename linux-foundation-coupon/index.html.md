@@ -161,6 +161,8 @@ Ready? The code is RUSHABH30. 30% off, no expiry.
 
 [Pick your certification →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
 
+Also running a FinOps partner code at 20%. Both are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
 ## Past Linux Foundation sales, and when the next one lands
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
