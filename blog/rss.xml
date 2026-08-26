@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Aug 2026 03:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 03:30:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>What the CKA actually tests in 2026</title>
+      <link>https://rushabhshah.dev/blog/cka-exam-guide/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/cka-exam-guide/</guid>
+      <pubDate>Wed, 26 Aug 2026 03:30:00 GMT</pubDate>
+      <description>The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here&#39;s the format, what it actually covers, how to practice, and where people lose time.</description>
+      <category>kubernetes</category><category>certification</category>
+    </item>
     <item>
       <title>Is KCNA worth $250 as a first certification</title>
       <link>https://rushabhshah.dev/blog/kcna-worth-it/</link>

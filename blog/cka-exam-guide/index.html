@@ -7,28 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">
-    <title>Is KCNA worth $250 as a first certification · Rushabh Shah</title>
-    <meta name="description" content="KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here&#39;s what it actually covers, and who should skip it entirely.">
+    <title>What the CKA actually tests in 2026 · Rushabh Shah</title>
+    <meta name="description" content="The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here&#39;s the format, what it actually covers, how to practice, and where people lose time.">
     <meta name="author" content="Rushabh Shah">
-    <link rel="canonical" href="https://rushabhshah.dev/blog/kcna-worth-it/">
+    <link rel="canonical" href="https://rushabhshah.dev/blog/cka-exam-guide/">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://rushabhshah.dev/blog/kcna-worth-it/">
-    <meta property="og:title" content="Is KCNA worth $250 as a first certification · Rushabh Shah">
-    <meta property="og:description" content="KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here&#39;s what it actually covers, and who should skip it entirely.">
+    <meta property="og:url" content="https://rushabhshah.dev/blog/cka-exam-guide/">
+    <meta property="og:title" content="What the CKA actually tests in 2026 · Rushabh Shah">
+    <meta property="og:description" content="The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here&#39;s the format, what it actually covers, how to practice, and where people lose time.">
     <meta property="og:image" content="https://rushabhshah.dev/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Rushabh Shah — DevOps Engineer, Docker Captain, Grafana Champion">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@iamrushabhshahh">
-    <meta name="twitter:title" content="Is KCNA worth $250 as a first certification · Rushabh Shah">
-    <meta name="twitter:description" content="KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here&#39;s what it actually covers, and who should skip it entirely.">
+    <meta name="twitter:title" content="What the CKA actually tests in 2026 · Rushabh Shah">
+    <meta name="twitter:description" content="The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here&#39;s the format, what it actually covers, how to practice, and where people lose time.">
     <meta name="twitter:image" content="https://rushabhshah.dev/assets/og-image.jpg">
-    <meta property="article:published_time" content="2026-08-24T03:30:00.000Z">
-    <meta property="article:modified_time" content="2026-08-24T03:30:00.000Z">
+    <meta property="article:published_time" content="2026-08-26T03:30:00.000Z">
+    <meta property="article:modified_time" content="2026-08-26T03:30:00.000Z">
     <meta property="article:author" content="Rushabh Shah">
     <meta property="article:tag" content="kubernetes">
     <meta property="article:tag" content="certification">
@@ -109,9 +109,9 @@
         <article class="post-article max-w-3xl">
             <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
             <header class="mb-10">
-                <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">Is KCNA worth $250 as a first certification</h1>
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">What the CKA actually tests in 2026</h1>
                 <div class="flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
-                    <time datetime="2026-08-24T03:30:00.000Z">Aug 24, 2026</time>
+                    <time datetime="2026-08-26T03:30:00.000Z">Aug 26, 2026</time>
                     <span aria-hidden="true">·</span>
                     <span>3 min read</span>
                     <span id="post-views"></span>
@@ -121,34 +121,42 @@
             </header>
             
             <div class="post-prose">
-<p>KCNA (Kubernetes and Cloud Native Associate) is the cheapest certification in the whole Linux Foundation and CNCF catalog at $250 list, and it&#39;s the one I get asked about most by people who are new to cloud native, usually with some version of &quot;is this worth it or should I just go straight for CKA.&quot;</p>
-<h2 id="what-kcna-actually-covers">What KCNA actually covers</h2>
-<p>It&#39;s 90 minutes, entirely multiple choice, and there&#39;s no live cluster or terminal involved. The domains are Kubernetes fundamentals, container orchestration, cloud native architecture, cloud native observability, and cloud native application delivery. There&#39;s no certification prerequisite to sit it.</p>
-<p>In practice, that means KCNA tests whether you know what the pieces are and how they fit together: what a Pod is versus a Deployment, what a Service does, what GitOps means, what observability is and why it matters, that kind of landscape literacy. It doesn&#39;t test whether you can actually operate a cluster under time pressure. That&#39;s what CKA is for.</p>
-<h2 id="cost-versus-the-alternatives">Cost versus the alternatives</h2>
-<p>$250 for a multiple-choice exam is a fair question to interrogate, because free options exist. The Linux Foundation and CNCF publish free introductory Kubernetes course material covering a lot of the same ground, and there&#39;s no shortage of free YouTube courses and blog series on the same fundamentals. If your only goal is learning the material, you don&#39;t strictly need to pay $250 to do that.</p>
-<p>What the $250 buys you is a CNCF-recognized credential you can put on a resume or LinkedIn profile that a hiring manager or recruiter can independently verify, which self-study alone doesn&#39;t give you. Whether that&#39;s worth it to you depends entirely on whether you&#39;re job-hunting or career-switching right now, versus just learning for your own use.</p>
-<h2 id="who-it-39-s-genuinely-useful-for">Who it&#39;s genuinely useful for</h2>
-<p>Students, career-changers, and anyone moving into cloud native from another field with no Kubernetes background yet are the exact audience this was built for. It&#39;s a real, verifiable credential at a price that doesn&#39;t gate people out, and the vocabulary you build studying for it removes a lot of friction when you move on to CKA later, since you&#39;re not learning what a Pod is <em>and</em> trying to move fast in a live terminal at the same time.</p>
-<h2 id="who-should-skip-straight-to-cka">Who should skip straight to CKA</h2>
-<p>If you&#39;re already working with Kubernetes day to day, running clusters, debugging deployments, reading manifests without needing a glossary, KCNA tests things you already know, and $250 is better spent going straight at CKA, which is the credential that actually gets checked for production-facing roles. KCNA isn&#39;t a required stepping stone for anyone; it&#39;s an on-ramp for people who genuinely need one.</p>
-<h2 id="verdict">Verdict</h2>
-<p>Worth it if you&#39;re new to the ecosystem and want a verifiable credential while you&#39;re still building vocabulary. Skip it if you&#39;re already operationally fluent in Kubernetes and go straight to <a href="/linux-foundation-coupon/cka/">CKA</a> instead, where the credential actually matches what you can already do.</p>
-<p><code>RUSHABH30</code> takes 30% off KCNA, dropping it to about $175. I&#39;m an official Linux Foundation Education affiliate partner, so the code costs you nothing extra to use.</p>
-<p>$ get <a href="/linux-foundation-coupon/kcna/">KCNA for ~$175 with RUSHABH30 →</a></p>
+<p>I run into a lot of confusion about what the CKA (Certified Kubernetes Administrator) exam is actually like, mostly from people picturing a multiple-choice test. It isn&#39;t one. Here&#39;s what you&#39;re actually walking into.</p>
+<h2 id="exam-format">Exam format</h2>
+<p>CKA is 100% performance-based: two hours, a live terminal, and a set of real Kubernetes clusters you complete hands-on tasks against, against the clock. There&#39;s no multiple-choice section anywhere in it. You&#39;re allowed to reference the official Kubernetes documentation (kubernetes.io) during the exam, which matters a lot for how you should prepare, more on that below.</p>
+<h2 id="what-it-covers">What it covers</h2>
+<p>The current curriculum groups the exam into cluster architecture, installation, and configuration; workloads and scheduling; services and networking; storage; and troubleshooting cluster and application issues. Troubleshooting is consistently the domain people underestimate, since it&#39;s less about knowing a command and more about diagnosing something that&#39;s already broken under time pressure.</p>
+<p>Exact percentage weightings shift as the Linux Foundation and CNCF revise the curriculum periodically, so treat the domain list above as the shape of the exam rather than a fixed scorecard, and check their published curriculum for the current breakdown before you sit it.</p>
+<h2 id="how-to-practice">How to practice</h2>
+<p>The single biggest mistake I see is people studying CKA the way they&#39;d study a multiple-choice exam: reading, note-taking, watching videos. That builds knowledge, but this exam tests speed and terminal fluency, which only comes from reps.</p>
+<ul>
+<li><strong>Killercoda</strong> and similar browser-based scenario platforms let you practice realistic, timed tasks without provisioning anything locally.</li>
+<li><strong>Local kind or minikube clusters</strong> are worth setting up early, so you can break things deliberately and fix them, which is closer to what the real exam asks than following a happy-path tutorial.</li>
+<li><strong>Real terminal reps matter more than reading.</strong> Practice with the actual tools you&#39;ll have in the exam: kubectl, vim or nano, and the allowed documentation. If you&#39;re still looking up basic YAML structure mid-task during practice, you&#39;re not ready yet.</li>
+</ul>
+<p>Since you&#39;re allowed to reference kubernetes.io live during the exam, practice <em>using</em> the docs under time pressure, not avoiding them. The skill isn&#39;t memorizing every flag, it&#39;s knowing exactly where to find what you need in under thirty seconds.</p>
+<h2 id="common-failure-points-and-time-management-traps">Common failure points and time-management traps</h2>
+<ul>
+<li><strong>Getting stuck on one question.</strong> The exam gives you a fixed two hours across multiple tasks; a hard question that eats twenty minutes can cost you two easier ones later. Flag it, move on, come back if time allows.</li>
+<li><strong>Hand-writing YAML from scratch.</strong> Generating boilerplate with <code>kubectl create ... --dry-run=client -o yaml</code> and editing from there is faster and less error-prone than typing a Deployment manifest by hand under pressure.</li>
+<li><strong>Not verifying your own work.</strong> A task that looks done isn&#39;t necessarily graded as done. Get in the habit of running a quick <code>kubectl get</code> or <code>describe</code> after every change to confirm it actually took effect, especially before moving to the next task.</li>
+<li><strong>Losing track of context.</strong> Multiple clusters means multiple contexts. Confirm <code>kubectl config current-context</code> before you start each task; solving the right problem on the wrong cluster still counts as wrong.</li>
+</ul>
+<p><code>RUSHABH30</code> takes 30% off the CKA, dropping it from $445 to about $311. I&#39;m an official Linux Foundation Education affiliate partner, so the code costs you nothing extra.</p>
+<p>$ get <a href="/linux-foundation-coupon/cka/">CKA for ~$311 with RUSHABH30 →</a></p>
 
             </div>
             <footer class="mt-12 pt-6 border-t border-border-color">
                 <div class="flex flex-wrap items-center gap-3 font-fira text-sm">
                     <span class="text-gray-400">Share:</span>
-                    <a href="https://twitter.com/intent/tweet?text=Is%20KCNA%20worth%20%24250%20as%20a%20first%20certification&url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fkcna-worth-it%2F" target="_blank" rel="noopener noreferrer" class="chip">X / Twitter</a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fkcna-worth-it%2F" target="_blank" rel="noopener noreferrer" class="chip">LinkedIn</a>
-                    <button type="button" id="copy-link" class="chip" data-url="https://rushabhshah.dev/blog/kcna-worth-it/">Copy link</button>
-                    <button type="button" id="native-share" class="chip hidden" data-title="Is KCNA worth $250 as a first certification" data-url="https://rushabhshah.dev/blog/kcna-worth-it/">Share…</button>
+                    <a href="https://twitter.com/intent/tweet?text=What%20the%20CKA%20actually%20tests%20in%202026&url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fcka-exam-guide%2F" target="_blank" rel="noopener noreferrer" class="chip">X / Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fcka-exam-guide%2F" target="_blank" rel="noopener noreferrer" class="chip">LinkedIn</a>
+                    <button type="button" id="copy-link" class="chip" data-url="https://rushabhshah.dev/blog/cka-exam-guide/">Copy link</button>
+                    <button type="button" id="native-share" class="chip hidden" data-title="What the CKA actually tests in 2026" data-url="https://rushabhshah.dev/blog/cka-exam-guide/">Share…</button>
                     <a href="/blog/rss.xml" class="chip">RSS</a>
                 </div>
                 <p class="font-fira text-sm text-gray-400 mt-5">Thanks for reading. <a href="/#contact" class="text-primary-color hover:underline">Say hi</a> if it was useful.</p>
-                <p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">a 30% discount code for Linux Foundation certifications</a>.</p>
+                <p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">30% off the CKA, CKAD and CKS with code RUSHABH30</a>.</p>
             </footer>
         </article>
         
@@ -156,11 +164,10 @@
             <div class="post-toc-sticky">
                 <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># on this page</p>
                 <nav class="post-toc-nav">
-                    <a href="#what-kcna-actually-covers" data-toc-link="what-kcna-actually-covers" class="post-toc-link">What KCNA actually covers</a>
-                    <a href="#cost-versus-the-alternatives" data-toc-link="cost-versus-the-alternatives" class="post-toc-link">Cost versus the alternatives</a>
-                    <a href="#who-it-39-s-genuinely-useful-for" data-toc-link="who-it-39-s-genuinely-useful-for" class="post-toc-link">Who it&#39;s genuinely useful for</a>
-                    <a href="#who-should-skip-straight-to-cka" data-toc-link="who-should-skip-straight-to-cka" class="post-toc-link">Who should skip straight to CKA</a>
-                    <a href="#verdict" data-toc-link="verdict" class="post-toc-link">Verdict</a>
+                    <a href="#exam-format" data-toc-link="exam-format" class="post-toc-link">Exam format</a>
+                    <a href="#what-it-covers" data-toc-link="what-it-covers" class="post-toc-link">What it covers</a>
+                    <a href="#how-to-practice" data-toc-link="how-to-practice" class="post-toc-link">How to practice</a>
+                    <a href="#common-failure-points-and-time-management-traps" data-toc-link="common-failure-points-and-time-management-traps" class="post-toc-link">Common failure points and time-management traps</a>
                 </nav>
             </div>
         </aside>
@@ -193,7 +200,7 @@
             }
         });
     </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Is KCNA worth $250 as a first certification","description":"KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.","datePublished":"2026-08-24T03:30:00.000Z","dateModified":"2026-08-24T03:30:00.000Z","url":"https://rushabhshah.dev/blog/kcna-worth-it/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"kubernetes, certification"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"What the CKA actually tests in 2026","description":"The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.","datePublished":"2026-08-26T03:30:00.000Z","dateModified":"2026-08-26T03:30:00.000Z","url":"https://rushabhshah.dev/blog/cka-exam-guide/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"kubernetes, certification"}</script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const v = document.getElementById('post-views');
