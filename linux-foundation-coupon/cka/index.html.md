@@ -20,7 +20,7 @@ RUSHABH30
 
 [Get CKA for ~$311 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F) and the Certified Kubernetes Administrator (CKA) exam drops from $445 to about $311 &mdash; a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F) and the Certified Kubernetes Administrator (CKA) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -47,12 +47,12 @@ Ops, platform engineering, and SRE roles who run Kubernetes clusters day to day.
 
 ## Why it's worth it
 
-The CKA is the credential hiring managers actually check for when a role involves running Kubernetes in production, not just deploying to it. It's a live-terminal, performance-based exam — you fix real broken clusters against the clock, not multiple-choice questions — so it certifies you can actually do the job, not just describe it.
+The CKA is the credential hiring managers actually check for when a role involves running Kubernetes in production, not just deploying to it. It's a live-terminal, performance-based exam. You fix real broken clusters against the clock, not multiple-choice questions. So it certifies you can actually do the job, not just describe it.
 
 ## Prep tips
 
-- Practice in a real terminal daily in the weeks before — this exam is a speed test as much as a knowledge test, and muscle memory for kubectl and vim matters more than reading about concepts.
-- Get comfortable with the allowed documentation (kubernetes.io) during practice, since you're allowed to reference it in the real exam — know where to find things fast rather than memorizing everything.
+- Practice in a real terminal daily in the weeks before. This exam is a speed test as much as a knowledge test, and muscle memory for kubectl and vim matters more than reading about concepts.
+- Get comfortable with the allowed documentation (kubernetes.io) during practice, since you're allowed to reference it in the real exam. Know where to find things fast rather than memorizing everything.
 - Troubleshooting is the single biggest domain, so spend disproportionate practice time deliberately breaking and fixing clusters, not just deploying happy-path workloads.
 
 ## How to use the code
@@ -89,7 +89,7 @@ One free retake if you don't pass the first time, two exam simulator attempts (3
 
 **What should I do after passing the CKA?**
 
-The natural next steps are the CKAD if you also ship applications to Kubernetes, or the CKS if you want the strongest Kubernetes security signal on your CV — CKS requires an active CKA to sit.
+The natural next steps are the CKAD if you also ship applications to Kubernetes, or the CKS if you want the strongest Kubernetes security signal on your CV. CKS requires an active CKA to sit.
 
 ## Other Linux Foundation & CNCF certifications
 

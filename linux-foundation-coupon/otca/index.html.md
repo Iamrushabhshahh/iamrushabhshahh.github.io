@@ -20,7 +20,7 @@ RUSHABH30
 
 [Get OTCA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F) and the OpenTelemetry Certified Associate (OTCA) exam drops from $250 to about $175 &mdash; a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F) and the OpenTelemetry Certified Associate (OTCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -50,8 +50,8 @@ OpenTelemetry has become the default way applications emit traces, metrics, and 
 
 ## Prep tips
 
-- The API and SDK domain is worth studying hardest — it's close to half the exam on its own, well ahead of the Collector domain.
-- Get hands-on with Collector configuration stanzas specifically — real exam-takers report the questions use practical, real-world config examples rather than abstract theory.
+- The API and SDK domain is worth studying hardest. It's close to half the exam on its own, well ahead of the Collector domain.
+- Get hands-on with Collector configuration stanzas specifically. Real exam-takers report the questions use practical, real-world config examples rather than abstract theory.
 - This pairs naturally with Prometheus knowledge: OpenTelemetry handles the instrumentation and pipeline side, Prometheus is a common metrics backend it feeds into.
 
 ## How to use the code
@@ -72,7 +72,7 @@ No. OTCA has no certification prerequisite.
 
 **Is the OTCA exam hands-on or multiple-choice?**
 
-Multiple choice — 90 minutes, online and proctored, no live terminal required.
+Multiple choice: 90 minutes, online and proctored, no live terminal required.
 
 **How much is the OTCA with a discount code?**
 

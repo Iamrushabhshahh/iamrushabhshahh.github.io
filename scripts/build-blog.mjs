@@ -73,10 +73,10 @@ const CERT_PAGES = [
       'Storage',
       'Troubleshooting cluster and application issues',
     ],
-    why: 'The CKA is the credential hiring managers actually check for when a role involves running Kubernetes in production, not just deploying to it. It\'s a live-terminal, performance-based exam — you fix real broken clusters against the clock, not multiple-choice questions — so it certifies you can actually do the job, not just describe it.',
+    why: 'The CKA is the credential hiring managers actually check for when a role involves running Kubernetes in production, not just deploying to it. It\'s a live-terminal, performance-based exam. You fix real broken clusters against the clock, not multiple-choice questions. So it certifies you can actually do the job, not just describe it.',
     prepTips: [
-      'Practice in a real terminal daily in the weeks before — this exam is a speed test as much as a knowledge test, and muscle memory for kubectl and vim matters more than reading about concepts.',
-      'Get comfortable with the allowed documentation (kubernetes.io) during practice, since you\'re allowed to reference it in the real exam — know where to find things fast rather than memorizing everything.',
+      'Practice in a real terminal daily in the weeks before. This exam is a speed test as much as a knowledge test, and muscle memory for kubectl and vim matters more than reading about concepts.',
+      'Get comfortable with the allowed documentation (kubernetes.io) during practice, since you\'re allowed to reference it in the real exam. Know where to find things fast rather than memorizing everything.',
       'Troubleshooting is the single biggest domain, so spend disproportionate practice time deliberately breaking and fixing clusters, not just deploying happy-path workloads.',
     ],
     retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
@@ -86,7 +86,7 @@ const CERT_PAGES = [
       { q: 'How much is the CKA with a discount code?', a: `List price is $${445}. With RUSHABH30 it drops to about $${311}, a saving of roughly $134.` },
       { q: 'Does RUSHABH30 work on the CKA course + exam bundle?', a: 'Yes. The 30% applies whether you buy the exam alone or bundled with the official prep course, and the bundle is usually the better value since it\'s already discounted before the code applies.' },
       { q: 'What\'s actually included in the $445, not just the exam attempt?', a: 'One free retake if you don\'t pass the first time, two exam simulator attempts (36 hours of access each, from activation), and a 12-month window to schedule and sit the exam after purchase. Most coupon pages only mention the price and skip this.' },
-      { q: 'What should I do after passing the CKA?', a: 'The natural next steps are the CKAD if you also ship applications to Kubernetes, or the CKS if you want the strongest Kubernetes security signal on your CV — CKS requires an active CKA to sit.' },
+      { q: 'What should I do after passing the CKA?', a: 'The natural next steps are the CKAD if you also ship applications to Kubernetes, or the CKS if you want the strongest Kubernetes security signal on your CV. CKS requires an active CKA to sit.' },
     ],
   },
   {
@@ -102,18 +102,18 @@ const CERT_PAGES = [
       'Application environment, configuration, and security',
       'Services and networking',
     ],
-    why: 'The CKAD exists for a real gap: most developers shipping to Kubernetes don\'t need cluster-administration depth — they need to know pods, deployments, config, probes, and how to debug their own workloads fast. It\'s the same performance-based format as the CKA, just scoped to the application layer instead of the platform layer.',
+    why: 'The CKAD exists for a real gap: most developers shipping to Kubernetes don\'t need cluster-administration depth. They need to know pods, deployments, config, probes, and how to debug their own workloads fast. It\'s the same performance-based format as the CKA, just scoped to the application layer instead of the platform layer.',
     prepTips: [
-      'Focus practice time on the manifest types you\'ll actually write day to day — Deployments, ConfigMaps, Secrets, and probes — since the exam rewards speed writing and editing YAML under time pressure.',
+      'Focus practice time on the manifest types you\'ll actually write day to day (Deployments, ConfigMaps, Secrets, and probes), since the exam rewards speed writing and editing YAML under time pressure.',
       'Practice debugging a broken Pod from logs and describe output alone; a meaningful slice of the exam is "this deployment is failing, find out why."',
-      'Like the CKA, you can reference kubernetes.io during the exam — practice navigating to the exact page you need instead of trying to memorize every flag.',
+      'Like the CKA, you can reference kubernetes.io during the exam. Practice navigating to the exact page you need instead of trying to memorize every flag.',
     ],
     retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
     faqs: [
-      { q: 'Is the CKAD easier than the CKA?', a: 'It\'s narrower, not necessarily easier — CKAD skips cluster-administration topics but goes deep on the application layer (config, probes, multi-container pod patterns) that the CKA only touches lightly.' },
+      { q: 'Is the CKAD easier than the CKA?', a: 'It\'s narrower, not necessarily easier. CKAD skips cluster-administration topics but goes deep on the application layer (config, probes, multi-container pod patterns) that the CKA only touches lightly.' },
       { q: 'Do I need the CKA before taking the CKAD?', a: 'No. CKAD has no certification prerequisite and is commonly taken by developers who never plan to sit the CKA at all.' },
       { q: 'How much is the CKAD with a discount code?', a: `List price is $${445}. With RUSHABH30 it drops to about $${311}.` },
-      { q: 'Is the CKAD hands-on or multiple-choice?', a: 'Hands-on. Like the CKA, it\'s a live-terminal, performance-based exam against real clusters — no multiple-choice questions.' },
+      { q: 'Is the CKAD hands-on or multiple-choice?', a: 'Hands-on. Like the CKA, it\'s a live-terminal, performance-based exam against real clusters, with no multiple-choice questions.' },
       { q: 'Does RUSHABH30 work on the CKAD course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
     ],
   },
@@ -130,17 +130,17 @@ const CERT_PAGES = [
       'Supply chain security',
       'Monitoring, logging, and runtime security',
     ],
-    why: 'CKS is the one Linux Foundation cert with a real prerequisite — you need an active CKA to even sit it — which is exactly why it carries weight on a CV. It signals you can secure a cluster end to end: hardening, supply-chain integrity, runtime detection, not just administer one.',
+    why: 'CKS is the one Linux Foundation cert with a real prerequisite. You need an active CKA to even sit it. Which is exactly why it carries weight on a CV. It signals you can secure a cluster end to end: hardening, supply-chain integrity, runtime detection, not just administer one.',
     prepTips: [
       'Get your CKA active first; the Linux Foundation checks this at scheduling time, so leave a buffer if yours is close to expiring.',
-      'Spend real practice time on tools the exam actually uses hands-on — Falco for runtime detection, network policies, and admission controllers — rather than just reading security theory.',
+      'Spend real practice time on tools the exam actually uses hands-on, such as Falco for runtime detection, network policies, and admission controllers, rather than just reading security theory.',
       'Supply-chain security (image scanning, signing, sane base images) is a newer domain relative to the older CKA/CKAD content; don\'t skip it assuming it\'s a small footnote.',
     ],
     retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
     faqs: [
-      { q: 'Do I need the CKA before taking the CKS?', a: 'Yes — this is the one Linux Foundation Kubernetes cert with a hard prerequisite. You must hold an active CKA to schedule the CKS.' },
+      { q: 'Do I need the CKA before taking the CKS?', a: 'Yes. This is the one Linux Foundation Kubernetes cert with a hard prerequisite. You must hold an active CKA to schedule the CKS.' },
       { q: 'How much is the CKS with a discount code?', a: `List price is $${445}. With RUSHABH30 it drops to about $${311}.` },
-      { q: 'Is the CKS worth it if I already have the CKA?', a: 'For anyone doing platform or security work, yes — it\'s one of the strongest security-specific signals you can add to a DevOps CV, and it\'s a natural next step once your CKA is active.' },
+      { q: 'Is the CKS worth it if I already have the CKA?', a: 'For anyone doing platform or security work, yes. It\'s one of the strongest security-specific signals you can add to a DevOps CV, and it\'s a natural next step once your CKA is active.' },
       { q: 'Is the CKS multiple-choice?', a: 'No. Like the CKA and CKAD, it\'s 100% performance-based against live clusters.' },
       { q: 'Does RUSHABH30 work on the CKS course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
     ],
@@ -158,18 +158,18 @@ const CERT_PAGES = [
       'Cloud native observability',
       'Cloud native application delivery',
     ],
-    why: 'KCNA is the entry point built for people who aren\'t ready for a live-terminal exam yet. It\'s multiple choice, it\'s the cheapest cert in the catalog, and it forces you to learn the cloud-native landscape\'s vocabulary — Kubernetes, containers, observability, GitOps — before you touch a cluster in anger.',
+    why: 'KCNA is the entry point built for people who aren\'t ready for a live-terminal exam yet. It\'s multiple choice, it\'s the cheapest cert in the catalog, and it forces you to learn the cloud-native landscape\'s vocabulary (Kubernetes, containers, observability, GitOps) before you touch a cluster in anger.',
     prepTips: [
-      'Treat it as landscape literacy, not hands-on skill — you\'re learning what things are and how they fit together, not memorizing kubectl syntax.',
+      'Treat it as landscape literacy, not hands-on skill. You\'re learning what things are and how they fit together, not memorizing kubectl syntax.',
       'The official CNCF/Linux Foundation curriculum outline is the most efficient study map; work through it topic by topic rather than a single dense course.',
-      'If you\'re also considering the CKA later, KCNA is a genuinely useful on-ramp — the vocabulary you learn here removes a lot of friction from CKA prep.',
+      'If you\'re also considering the CKA later, KCNA is a genuinely useful on-ramp. The vocabulary you learn here removes a lot of friction from CKA prep.',
     ],
     retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
     faqs: [
-      { q: 'Is KCNA a good first certification for beginners?', a: 'Yes — it\'s specifically designed as the entry point into Kubernetes and cloud native, with no hands-on requirement and a lower price than the performance-based exams.' },
+      { q: 'Is KCNA a good first certification for beginners?', a: 'Yes. It\'s specifically designed as the entry point into Kubernetes and cloud native, with no hands-on requirement and a lower price than the performance-based exams.' },
       { q: 'How much is KCNA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}.` },
       { q: 'Is KCNA hands-on like the CKA?', a: 'No. KCNA is entirely multiple choice, with no live terminal or cluster access required.' },
-      { q: 'Should I take KCNA before the CKA?', a: 'It\'s not required, but it\'s a sensible on-ramp if you\'re new to the ecosystem — it builds vocabulary and context that make CKA prep faster.' },
+      { q: 'Should I take KCNA before the CKA?', a: 'It\'s not required, but it\'s a sensible on-ramp if you\'re new to the ecosystem. It builds vocabulary and context that make CKA prep faster.' },
       { q: 'Does RUSHABH30 work on the KCNA course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
     ],
   },
@@ -188,15 +188,15 @@ const CERT_PAGES = [
     ],
     why: 'KCSA pairs naturally with KCNA: same multiple-choice format, same entry-level price, but focused on security concepts instead of general architecture. It\'s a way to show security awareness on a CV years before you\'d be ready for the CKA-gated CKS.',
     prepTips: [
-      'Pair it with KCNA if you\'re studying both — the fundamentals overlap enough that studying them together is more efficient than sequentially.',
-      'This is conceptual security knowledge (threat models, compliance frameworks), not hands-on hardening — save the tool-heavy practice for CKS later.',
+      'Pair it with KCNA if you\'re studying both. The fundamentals overlap enough that studying them together is more efficient than sequentially.',
+      'This is conceptual security knowledge (threat models, compliance frameworks), not hands-on hardening. Save the tool-heavy practice for CKS later.',
       'The 4Cs of cloud native security (Cloud, Cluster, Container, Code) are a recurring framing across the official curriculum and worth understanding cold.',
     ],
     retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
     faqs: [
       { q: 'Do I need the CKA or CKS before KCSA?', a: 'No. KCSA has no certification prerequisite and is designed as an entry-level security credential.' },
       { q: 'How much is KCSA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}.` },
-      { q: 'Is KCSA the same as the CKS?', a: 'No — KCSA is a beginner, multiple-choice associate exam on security concepts. CKS is an advanced, hands-on exam that requires an active CKA. They\'re different tiers entirely.' },
+      { q: 'Is KCSA the same as the CKS?', a: 'No. KCSA is a beginner, multiple-choice associate exam on security concepts. CKS is an advanced, hands-on exam that requires an active CKA. They\'re different tiers entirely.' },
       { q: 'Is KCSA hands-on?', a: 'No, it\'s entirely multiple choice, like KCNA.' },
       { q: 'Does RUSHABH30 work on the KCSA course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
     ],
@@ -206,7 +206,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/',
     format: 'Performance-based (live terminal, real system)', duration: '2 hours',
     priceList: 445, priceDiscounted: 311, prerequisite: null,
-    audience: 'Anyone in an infrastructure role — not Kubernetes-specific — who wants a hands-on Linux fundamentals credential.',
+    audience: 'Anyone in an infrastructure role, not Kubernetes-specific, who wants a hands-on Linux fundamentals credential.',
     topics: [
       'Essential commands',
       'Operation of running systems',
@@ -216,18 +216,18 @@ const CERT_PAGES = [
       'Storage management',
       'Essential security',
     ],
-    why: 'LFCS is honestly underrated in a Kubernetes-heavy job market: a lot of "Kubernetes debugging" sessions are actually Linux debugging sessions wearing a trench coat — DNS, file permissions, systemd units, disk pressure. LFCS certifies the fundamentals that every other Linux Foundation cert quietly assumes you already have.',
+    why: 'LFCS is honestly underrated in a Kubernetes-heavy job market: a lot of "Kubernetes debugging" sessions are actually Linux debugging sessions wearing a trench coat: DNS, file permissions, systemd units, disk pressure. LFCS certifies the fundamentals that every other Linux Foundation cert quietly assumes you already have.',
     prepTips: [
-      'If your Kubernetes troubleshooting keeps bottoming out in "wait, is this actually a Linux problem," take LFCS first — it fills exactly that gap.',
+      'If your Kubernetes troubleshooting keeps bottoming out in "wait, is this actually a Linux problem," take LFCS first. It fills exactly that gap.',
       'It\'s performance-based like the CKA, so practice in a real shell daily rather than just reading man pages.',
       'Storage and networking fundamentals here transfer directly into Kubernetes storage classes and CNI troubleshooting later, so it\'s not wasted effort even if Kubernetes is your end goal.',
     ],
     retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
     faqs: [
-      { q: 'Is LFCS a Kubernetes certification?', a: 'No — LFCS is a general Linux system administration credential. It\'s a strong complement to the Kubernetes certs (CKA/CKAD/CKS) rather than a replacement for them.' },
+      { q: 'Is LFCS a Kubernetes certification?', a: 'No. LFCS is a general Linux system administration credential. It\'s a strong complement to the Kubernetes certs (CKA/CKAD/CKS) rather than a replacement for them.' },
       { q: 'How much is LFCS with a discount code?', a: `List price is $${445}. With RUSHABH30 it drops to about $${311}.` },
-      { q: 'Is LFCS hands-on or multiple-choice?', a: 'Hands-on — it\'s a performance-based exam on a real Linux system, not multiple choice.' },
-      { q: 'Should I take LFCS before or after the CKA?', a: 'Before, if you\'re shaky on core Linux — the LFCS fundamentals (networking, storage, permissions) make CKA troubleshooting scenarios much less frustrating.' },
+      { q: 'Is LFCS hands-on or multiple-choice?', a: 'Hands-on. It\'s a performance-based exam on a real Linux system, not multiple choice.' },
+      { q: 'Should I take LFCS before or after the CKA?', a: 'Before, if you\'re shaky on core Linux. The LFCS fundamentals (networking, storage, permissions) make CKA troubleshooting scenarios much less frustrating.' },
       { q: 'Does RUSHABH30 work on the LFCS course + exam bundle?', a: 'Yes, on the exam alone or bundled with the official prep course.' },
     ],
   },
@@ -239,25 +239,25 @@ const CERT_PAGES = [
     isBundle: true,
     audience: 'Engineers pursuing official Kubestronaut recognition from CNCF, or anyone who\'s decided to complete the full Kubernetes certification track.',
     topics: [
-      'KCNA — Kubernetes and Cloud Native Associate',
-      'KCSA — Kubernetes and Cloud Native Security Associate',
-      'CKA — Certified Kubernetes Administrator',
-      'CKAD — Certified Kubernetes Application Developer',
-      'CKS — Certified Kubernetes Security Specialist',
+      'KCNA: Kubernetes and Cloud Native Associate',
+      'KCSA: Kubernetes and Cloud Native Security Associate',
+      'CKA: Certified Kubernetes Administrator',
+      'CKAD: Certified Kubernetes Application Developer',
+      'CKS: Certified Kubernetes Security Specialist',
     ],
-    why: 'Kubestronaut is CNCF\'s recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — at the same time. Buying the bundle is the practical way to work toward it: on a five-exam purchase, RUSHABH30 produces a much bigger dollar saving than any single exam, and this page runs the actual math instead of just quoting a percentage. (If you\'re going for every CNCF certification, not just these five, see the Golden Kubestronaut bundle — the saving there is even larger.)',
+    why: 'Kubestronaut is CNCF\'s recognition for engineers who hold all five Kubernetes certifications (KCNA, KCSA, CKA, CKAD, and CKS) at the same time. Buying the bundle is the practical way to work toward it: on a five-exam purchase, RUSHABH30 produces a much bigger dollar saving than any single exam, and this page runs the actual math instead of just quoting a percentage. (If you\'re going for every CNCF certification, not just these five, see the Golden Kubestronaut bundle, where the saving is even larger.)',
     prepTips: [
       'Sequence matters: CKS needs an active CKA, so plan CKA before CKS even if you buy all five exams in one bundle purchase.',
-      'KCNA and KCSA (both multiple choice) are the fastest wins — knock those out first for early momentum before the three performance-based exams.',
+      'KCNA and KCSA (both multiple choice) are the fastest wins. Knock those out first for early momentum before the three performance-based exams.',
       'Because each cert has its own validity window, think about scheduling cadence up front so you\'re not racing to renew an early cert before you\'ve sat the later ones.',
     ],
     retakeNote: 'the full five-exam bundle; retakes on individual exams follow that exam\'s own eligibility window',
     faqs: [
-      { q: 'What is Kubestronaut?', a: 'Kubestronaut is CNCF\'s official recognition for engineers who hold all five Kubernetes certifications — KCNA, KCSA, CKA, CKAD, and CKS — simultaneously.' },
+      { q: 'What is Kubestronaut?', a: 'Kubestronaut is CNCF\'s official recognition for engineers who hold all five Kubernetes certifications (KCNA, KCSA, CKA, CKAD, and CKS) simultaneously.' },
       { q: 'How much does the Kubestronaut bundle cost with a discount code?', a: `List price is $${1645} for all five exams. With RUSHABH30 it drops to about $${1151}, a saving of roughly $494.` },
-      { q: 'Do I have to pass all five exams at once?', a: 'No — buying the bundle just locks in the discounted price for all five; you can schedule and sit each exam on your own timeline within your eligibility window.' },
+      { q: 'Do I have to pass all five exams at once?', a: 'No. Buying the bundle just locks in the discounted price for all five; you can schedule and sit each exam on your own timeline within your eligibility window.' },
       { q: 'Which exam should I take first in the bundle?', a: 'KCNA is the common starting point since it\'s multiple choice and builds vocabulary the other four assume you already know. Save CKS for last since it requires an active CKA.' },
-      { q: 'Is there an even bigger bundle than Kubestronaut?', a: 'Yes — the Golden Kubestronaut bundle adds every other current CNCF certification on top of the five Kubestronaut certs, for engineers going for the full catalog.' },
+      { q: 'Is there an even bigger bundle than Kubestronaut?', a: 'Yes. The Golden Kubestronaut bundle adds every other current CNCF certification on top of the five Kubestronaut certs, for engineers going for the full catalog.' },
     ],
   },
   {
@@ -267,38 +267,38 @@ const CERT_PAGES = [
     priceList: 4229, priceDiscounted: 2960,
     prerequisite: 'CKS requires an active CKA; Golden Kubestronaut itself requires holding all 16 certifications at once',
     isBundle: true,
-    audience: 'Experienced cloud native professionals going for the single most complete credential the Linux Foundation and CNCF offer — every certification in the Kubestronaut track plus every other current associate-level CNCF exam.',
+    audience: 'Experienced cloud native professionals going for the single most complete credential the Linux Foundation and CNCF offer: every certification in the Kubestronaut track plus every other current associate-level CNCF exam.',
     topics: [
-      'CKA — Certified Kubernetes Administrator',
-      'CKAD — Certified Kubernetes Application Developer',
-      'CKS — Certified Kubernetes Security Specialist',
-      'LFCS — Linux Foundation Certified System Administrator',
-      'CNPE — Certified Cloud Native Platform Engineer',
-      'KCNA — Kubernetes and Cloud Native Associate',
-      'KCSA — Kubernetes and Cloud Native Security Associate',
-      'PCA — Prometheus Certified Associate',
-      'ICA — Istio Certified Associate',
-      'CCA — Cilium Certified Associate',
-      'CAPA — Certified Argo Project Associate',
-      'CGOA — Certified GitOps Associate',
-      'CBA — Certified Backstage Associate',
-      'OTCA — OpenTelemetry Certified Associate',
-      'KCA — Kyverno Certified Associate',
-      'CNPA — Certified Cloud Native Platform Engineering Associate',
+      'CKA: Certified Kubernetes Administrator',
+      'CKAD: Certified Kubernetes Application Developer',
+      'CKS: Certified Kubernetes Security Specialist',
+      'LFCS: Linux Foundation Certified System Administrator',
+      'CNPE: Certified Cloud Native Platform Engineer',
+      'KCNA: Kubernetes and Cloud Native Associate',
+      'KCSA: Kubernetes and Cloud Native Security Associate',
+      'PCA: Prometheus Certified Associate',
+      'ICA: Istio Certified Associate',
+      'CCA: Cilium Certified Associate',
+      'CAPA: Certified Argo Project Associate',
+      'CGOA: Certified GitOps Associate',
+      'CBA: Certified Backstage Associate',
+      'OTCA: OpenTelemetry Certified Associate',
+      'KCA: Kyverno Certified Associate',
+      'CNPA: Certified Cloud Native Platform Engineering Associate',
     ],
-    why: 'Golden Kubestronaut is CNCF\'s recognition for holding every one of its certifications at once — sixteen exams, not five. CNCF launched the program in April 2025, and over 100 engineers had already earned the title within five months, so this is an actively growing recognition, not a legacy badge nobody pursues. On a purchase this size, RUSHABH30 produces the single biggest dollar saving it generates on this entire site — more than double the five-exam Kubestronaut bundle, simply because there are more than three times as many exams for the same 30% to apply to.',
+    why: 'Golden Kubestronaut is CNCF\'s recognition for holding every one of its certifications at once: sixteen exams, not five. CNCF launched the program in April 2025, and over 100 engineers had already earned the title within five months, so this is an actively growing recognition, not a legacy badge nobody pursues. On a purchase this size, RUSHABH30 produces the single biggest dollar saving it generates on this entire site. More than double the five-exam Kubestronaut bundle, simply because there are more than three times as many exams for the same 30% to apply to.',
     prepTips: [
       'Sequence the sixteen exams deliberately: CKS still needs an active CKA even inside this bigger bundle, so don\'t buy the exams in a random order.',
       'Clear the eleven multiple-choice associate exams (KCNA, KCSA, PCA, ICA, CCA, CAPA, CGOA, CBA, OTCA, KCA, CNPA) first to build momentum before the four performance-based, live-terminal exams (CKA, CKAD, CKS, LFCS).',
-      'Linux Foundation\'s own program page notes new CNCF certifications can be added to the requirement list as they launch — budget for the list to grow past sixteen, not assume it\'s fixed forever.',
+      'Linux Foundation\'s own program page notes new CNCF certifications can be added to the requirement list as they launch. Budget for the list to grow past sixteen, not assume it\'s fixed forever.',
     ],
     retakeNote: 'the full sixteen-exam bundle; retakes on individual exams follow that exam\'s own eligibility window',
     faqs: [
-      { q: 'What is Golden Kubestronaut?', a: 'CNCF\'s recognition for holding all 16 current CNCF and Linux Foundation Kubernetes-ecosystem certifications simultaneously — the full catalog, not just the five-exam Kubestronaut track.' },
-      { q: 'How much does the Golden Kubestronaut bundle cost with a discount code?', a: `List price is $${4229} for all sixteen exams. With RUSHABH30 it drops to about $${2960}, a saving of roughly $1,269 — the largest single saving RUSHABH30 produces on any purchase on this site.` },
-      { q: 'Do I need the regular Kubestronaut certification before Golden Kubestronaut?', a: 'There\'s no separate application step — Golden Kubestronaut is earned simply by holding all 16 certifications, which happen to include the same five that make up standard Kubestronaut (KCNA, KCSA, CKA, CKAD, CKS) plus eleven more.' },
-      { q: 'Is Golden Kubestronaut a real, active program?', a: 'Yes — CNCF launched it in April 2025, and Linux Foundation reported over 100 engineers had achieved it within the first five months. It\'s actively promoted, not a dormant legacy title.' },
-      { q: 'Can the certification list change?', a: 'Yes — Linux Foundation\'s own program page states that as new CNCF certifications launch, they may be added to the Golden Kubestronaut requirements to keep the badge current.' },
+      { q: 'What is Golden Kubestronaut?', a: 'CNCF\'s recognition for holding all 16 current CNCF and Linux Foundation Kubernetes-ecosystem certifications simultaneously: the full catalog, not just the five-exam Kubestronaut track.' },
+      { q: 'How much does the Golden Kubestronaut bundle cost with a discount code?', a: `List price is $${4229} for all sixteen exams. With RUSHABH30 it drops to about $${2960}, a saving of roughly $1,269, the largest single saving RUSHABH30 produces on any purchase on this site.` },
+      { q: 'Do I need the regular Kubestronaut certification before Golden Kubestronaut?', a: 'There\'s no separate application step. Golden Kubestronaut is earned simply by holding all 16 certifications, which happen to include the same five that make up standard Kubestronaut (KCNA, KCSA, CKA, CKAD, CKS) plus eleven more.' },
+      { q: 'Is Golden Kubestronaut a real, active program?', a: 'Yes. CNCF launched it in April 2025, and Linux Foundation reported over 100 engineers had achieved it within the first five months. It\'s actively promoted, not a dormant legacy title.' },
+      { q: 'Can the certification list change?', a: 'Yes. Linux Foundation\'s own program page states that as new CNCF certifications launch, they may be added to the Golden Kubestronaut requirements to keep the badge current.' },
     ],
   },
   {
@@ -315,19 +315,19 @@ const CERT_PAGES = [
       'DevOps Fundamentals',
       'IT Project Management Fundamentals',
     ],
-    why: 'LFCA is the Linux Foundation\'s broadest entry-level credential — it doesn\'t specialize in Kubernetes or Linux administration specifically, it certifies the full spread of fundamentals (Linux, networking, cloud, security, DevOps basics, even project management) that every other Linux Foundation cert quietly assumes you already have. The exam itself was refreshed in September 2025, so it\'s testing current material, not a stale curriculum.',
+    why: 'LFCA is the Linux Foundation\'s broadest entry-level credential. It doesn\'t specialize in Kubernetes or Linux administration specifically, it certifies the full spread of fundamentals (Linux, networking, cloud, security, DevOps basics, even project management) that every other Linux Foundation cert quietly assumes you already have. The exam itself was refreshed in September 2025, so it\'s testing current material, not a stale curriculum.',
     prepTips: [
-      'Treat System Administration Fundamentals as the highest-value domain to study — it\'s the single biggest slice of the exam, ahead of even Cloud Computing.',
+      'Treat System Administration Fundamentals as the highest-value domain to study. It\'s the single biggest slice of the exam, ahead of even Cloud Computing.',
       'This is multiple choice, not hands-on, so focus on recognizing concepts and terminology across a wide surface area rather than deep muscle-memory practice in a terminal.',
-      'If you\'re also eyeing LFCS or a Kubernetes cert later, LFCA is worth doing first — the vocabulary overlap makes everything after it faster to learn.',
+      'If you\'re also eyeing LFCS or a Kubernetes cert later, LFCA is worth doing first. The vocabulary overlap makes everything after it faster to learn.',
     ],
     retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
     faqs: [
-      { q: 'Is the LFCA exam hands-on or multiple-choice?', a: 'Multiple choice — 90 minutes, no live terminal or cluster access required, unlike the performance-based LFCS or CKA.' },
+      { q: 'Is the LFCA exam hands-on or multiple-choice?', a: 'Multiple choice: 90 minutes, no live terminal or cluster access required, unlike the performance-based LFCS or CKA.' },
       { q: 'Do I need any prerequisite certification for the LFCA?', a: 'No. LFCA has no certification prerequisite and is explicitly designed as a pre-professional, entry-level credential.' },
       { q: 'How much is the LFCA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}, a saving of roughly $75.` },
       { q: 'Does RUSHABH30 work on the LFCA course + exam bundle?', a: 'Yes. The 30% applies whether you buy the exam alone or bundled with the official prep course.' },
-      { q: 'What should I do after passing the LFCA?', a: 'LFCA is a broad on-ramp — the natural next steps are LFCS if you want to go deep on Linux system administration, or KCNA if Kubernetes and cloud native is the direction you\'re headed.' },
+      { q: 'What should I do after passing the LFCA?', a: 'LFCA is a broad on-ramp. The natural next steps are LFCS if you want to go deep on Linux system administration, or KCNA if Kubernetes and cloud native is the direction you\'re headed.' },
     ],
   },
   {
@@ -335,7 +335,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/prometheus-certified-associate/',
     format: 'Multiple choice', duration: '90 minutes',
     priceList: 250, priceDiscounted: 175, prerequisite: null,
-    audience: 'Engineers and application developers with a specific interest in monitoring — ideal candidates already hold a Kubernetes cert like KCNA, CKA, or CKAD, or have completed a cloud engineer bootcamp.',
+    audience: 'Engineers and application developers with a specific interest in monitoring. Ideal candidates already hold a Kubernetes cert like KCNA, CKA, or CKAD, or have completed a cloud engineer bootcamp.',
     topics: [
       'Observability Concepts',
       'Prometheus Fundamentals',
@@ -343,19 +343,19 @@ const CERT_PAGES = [
       'Instrumentation and Exporters',
       'Alerting & Dashboarding',
     ],
-    why: 'PCA is CNCF official content, and it exists because "I can install Grafana" and "I actually understand Prometheus\'s data model and PromQL" are very different claims. The exam leans hard on PromQL — it\'s the largest single domain on the exam, bigger than Prometheus Fundamentals itself — so it certifies you can actually query and reason about metrics, not just point a dashboard at a data source.',
+    why: 'PCA is CNCF official content, and it exists because "I can install Grafana" and "I actually understand Prometheus\'s data model and PromQL" are very different claims. The exam leans hard on PromQL. It\'s the largest single domain on the exam, bigger than Prometheus Fundamentals itself. So it certifies you can actually query and reason about metrics, not just point a dashboard at a data source.',
     prepTips: [
-      'PromQL is worth a disproportionate amount of your study time — it\'s the single biggest domain on the exam, bigger than Prometheus Fundamentals itself.',
-      'Practice writing queries from scratch rather than just reading example dashboards — the exam tests your ability to construct PromQL, not just recognize it.',
-      'If you already hold KCNA, CKA, or CKAD, you\'re the exact candidate profile Linux Foundation built this exam for — the Kubernetes context will make the instrumentation and exporters domain much more intuitive.',
+      'PromQL is worth a disproportionate amount of your study time. It\'s the single biggest domain on the exam, bigger than Prometheus Fundamentals itself.',
+      'Practice writing queries from scratch rather than just reading example dashboards. The exam tests your ability to construct PromQL, not just recognize it.',
+      'If you already hold KCNA, CKA, or CKAD, you\'re the exact candidate profile Linux Foundation built this exam for, and the Kubernetes context will make the instrumentation and exporters domain much more intuitive.',
     ],
     retakeNote: 'the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window',
     faqs: [
       { q: 'Do I need Prometheus experience before taking the PCA?', a: 'There\'s no formal prerequisite, but Linux Foundation designed it for engineers who already have some Kubernetes exposure (KCNA, CKA, or CKAD) or a cloud engineering background.' },
-      { q: 'Is the PCA exam hands-on or multiple-choice?', a: 'Multiple choice — 90 minutes, no live cluster or terminal required.' },
+      { q: 'Is the PCA exam hands-on or multiple-choice?', a: 'Multiple choice: 90 minutes, no live cluster or terminal required.' },
       { q: 'How much is the PCA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}.` },
-      { q: 'Is the PCA a CNCF-recognized certification?', a: 'Yes — it carries the CNCF official content badge, alongside KCNA, CKA, CKAD, CKS, and the other Cloud Native Computing Foundation-aligned exams.' },
-      { q: 'What should I take after the PCA?', a: 'If observability is your focus, OTCA (OpenTelemetry Certified Associate) is the natural companion — Prometheus handles metrics, OpenTelemetry adds traces and logs to the picture.' },
+      { q: 'Is the PCA a CNCF-recognized certification?', a: 'Yes. It carries the CNCF official content badge, alongside KCNA, CKA, CKAD, CKS, and the other Cloud Native Computing Foundation-aligned exams.' },
+      { q: 'What should I take after the PCA?', a: 'If observability is your focus, OTCA (OpenTelemetry Certified Associate) is the natural companion: Prometheus handles metrics, OpenTelemetry adds traces and logs to the picture.' },
     ],
   },
   {
@@ -372,14 +372,14 @@ const CERT_PAGES = [
     ],
     why: 'OpenTelemetry has become the default way applications emit traces, metrics, and logs without locking into one vendor\'s SDK, and OTCA is CNCF official content proving you actually know the API and SDK, not just that you\'ve wired up an agent once. The OpenTelemetry API and SDK domain alone makes up close to half the exam, so it certifies real instrumentation knowledge, not just Collector configuration.',
     prepTips: [
-      'The API and SDK domain is worth studying hardest — it\'s close to half the exam on its own, well ahead of the Collector domain.',
-      'Get hands-on with Collector configuration stanzas specifically — real exam-takers report the questions use practical, real-world config examples rather than abstract theory.',
+      'The API and SDK domain is worth studying hardest. It\'s close to half the exam on its own, well ahead of the Collector domain.',
+      'Get hands-on with Collector configuration stanzas specifically. Real exam-takers report the questions use practical, real-world config examples rather than abstract theory.',
       'This pairs naturally with Prometheus knowledge: OpenTelemetry handles the instrumentation and pipeline side, Prometheus is a common metrics backend it feeds into.',
     ],
     retakeNote: 'the exam alone, and a retake within your eligibility window',
     faqs: [
       { q: 'Do I need any prerequisite for the OTCA?', a: 'No. OTCA has no certification prerequisite.' },
-      { q: 'Is the OTCA exam hands-on or multiple-choice?', a: 'Multiple choice — 90 minutes, online and proctored, no live terminal required.' },
+      { q: 'Is the OTCA exam hands-on or multiple-choice?', a: 'Multiple choice: 90 minutes, online and proctored, no live terminal required.' },
       { q: 'How much is the OTCA with a discount code?', a: `List price is $${250}. With RUSHABH30 it drops to about $${175}.` },
       { q: 'How many attempts do I get on the OTCA?', a: 'Your purchase includes one retake (two attempts total) within a 12-month exam eligibility window.' },
       { q: 'What should I take after the OTCA?', a: 'Linux Foundation points candidates toward CKA to round out Kubernetes fundamentals, or toward Kubestronaut status if you\'re already deep into the certification track.' },
@@ -881,6 +881,7 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
     <meta property="article:modified_time" content="${isoDate(updated)}">
     <meta property="article:author" content="${AUTHOR}">
     ${(tags || []).map(t => `<meta property="article:tag" content="${escapeHtml(t)}">`).join('\n    ')}` : ''}
+    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -997,7 +998,10 @@ const COUPON_FOOTER_ANCHORS = [
 const couponFooterLink = (post, index) => {
   if (!post.tags.some(t => COUPON_FOOTER_TAGS.has(t.toLowerCase()))) return '';
   const anchor = COUPON_FOOTER_ANCHORS[index % COUPON_FOOTER_ANCHORS.length];
-  return `<p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">${anchor}</a>.</p>`;
+  // Alternate the destination so the hub gets internal-link equity from the
+  // blog too, instead of every post feeding only the Linux Foundation page.
+  const href = index % 3 === 2 ? '/coupons/' : '/linux-foundation-coupon/';
+  return `<p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="${href}" class="text-primary-color hover:underline">${anchor}</a>.</p>`;
 };
 
 // Series box shown at the top of every post that belongs to a series.
@@ -1485,6 +1489,18 @@ const saleBannerHtml = () => {
 };
 
 /* The one-liner directly above the RUSHABH30 code box on the coupon page. */
+/* Once a sale's window closes the banner disappears, but the archive entry
+   describing it has to appear, or the page quietly loses the record of a sale
+   that just happened. That list is the page's main argument for *when* to buy,
+   so leaving it to a manual edit meant the most valuable section decayed first.
+   Rendered from the same SALE object: nothing while it's live (the banner has
+   it), an archive bullet the moment it expires. */
+const pastSaleAutoHtml = () => {
+  if (!SALE || saleLive) return '';
+  const top = Math.max(SALE.courses.pct, SALE.bundles.pct);
+  return `<li><strong>${escapeHtml(SALE.name)}, ${new Date(SALE.start).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' })}</strong>: up to ${top}% off (${SALE.courses.pct}% on courses and certifications with ${SALE.courses.code}, ${SALE.bundles.pct}% on bundles with ${SALE.bundles.code}), ended ${escapeHtml(SALE.advertisedEnd)}.</li>`;
+};
+
 const saleIntroHtml = () => saleLive
   ? `<p class="font-fira text-xs text-gray-400 mb-3">A sale is running right now (see above). Once it ends, this is the everyday code, and it works year-round:</p>`
   : `<p class="font-fira text-xs text-gray-400 mb-3">No sale running right now. This is the everyday code, works year-round:</p>`;
@@ -1641,6 +1657,7 @@ if (fs.existsSync(couponPath)) {
   stamped = swapRegion(stamped, 'SALE-BANNER', saleBannerHtml());
   stamped = swapRegion(stamped, 'SALE-INTRO', saleIntroHtml());
   stamped = swapRegion(stamped, 'SIGNUP-BOX', signupLF());
+  stamped = swapRegion(stamped, 'PAST-SALE-AUTO', pastSaleAutoHtml());
   if (personBlock) {
     // Replacer FUNCTION, not a string: a string replacement would interpret
     // any "$&"/"$'" etc. inside personBlock's JSON as a substitution pattern.
@@ -1848,6 +1865,7 @@ function certPageHtml(c, siblings) {
     <meta name="twitter:description" content="${escapeHtml(description)}">
     <meta name="twitter:image" content="${SITE}/assets/og-lf-coupon.jpg">
 
+    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -1882,7 +1900,7 @@ ${saleBannerHtml()}
                 <p>
                     Put <code>RUSHABH30</code> in the coupon field at checkout on
                     <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
-                    and the ${escapeHtml(c.fullName)}${c.isBundle ? '' : ` (${escapeHtml(c.name)}) exam`} drops from $${c.priceList} to about $${c.priceDiscounted} &mdash; a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+                    and the ${escapeHtml(c.fullName)}${c.isBundle ? '' : ` (${escapeHtml(c.name)}) exam`} drops from $${c.priceList} to about $${c.priceDiscounted}, a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
                 </p>
 
                 <h2 id="quick-facts">Quick facts</h2>
@@ -2021,6 +2039,7 @@ const finopsHead = ({ title, description, url, ogImage = `${SITE}/assets/og-fino
     <meta name="twitter:description" content="${escapeHtml(description)}">
     <meta name="twitter:image" content="${ogImage}">
 
+    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -2441,7 +2460,7 @@ function couponsHubHtml() {
     ? `<p class="text-gray-400 text-sm leading-relaxed mb-6"><strong class="text-white">Right now there's a Linux Foundation sale running</strong> that beats RUSHABH30 (${SALE.courses.pct}% off with <code>${SALE.courses.code}</code>, ${SALE.bundles.pct}% off bundles with <code>${SALE.bundles.code}</code>, ends ${escapeHtml(SALE.advertisedEnd)}). Details on the <a href="/linux-foundation-coupon/">Linux Foundation page</a>.</p>`
     : '';
 
-  return `${finopsHead({ title, description, url, ogImage: `${SITE}/assets/og-lf-coupon.jpg`, jsonLd })}
+  return `${finopsHead({ title, description, url, ogImage: `${SITE}/assets/og-coupons.jpg`, jsonLd })}
 <body>${dealsHeader('/coupons/')}
     <main id="main" class="container mx-auto px-6 py-12">
         <article class="max-w-3xl mx-auto">

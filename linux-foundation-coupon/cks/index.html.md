@@ -20,7 +20,7 @@ RUSHABH30
 
 [Get CKS for ~$311 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F) and the Certified Kubernetes Security Specialist (CKS) exam drops from $445 to about $311 &mdash; a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F) and the Certified Kubernetes Security Specialist (CKS) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -47,12 +47,12 @@ Security engineers and platform engineers who already hold the CKA and want the 
 
 ## Why it's worth it
 
-CKS is the one Linux Foundation cert with a real prerequisite — you need an active CKA to even sit it — which is exactly why it carries weight on a CV. It signals you can secure a cluster end to end: hardening, supply-chain integrity, runtime detection, not just administer one.
+CKS is the one Linux Foundation cert with a real prerequisite. You need an active CKA to even sit it. Which is exactly why it carries weight on a CV. It signals you can secure a cluster end to end: hardening, supply-chain integrity, runtime detection, not just administer one.
 
 ## Prep tips
 
 - Get your CKA active first; the Linux Foundation checks this at scheduling time, so leave a buffer if yours is close to expiring.
-- Spend real practice time on tools the exam actually uses hands-on — Falco for runtime detection, network policies, and admission controllers — rather than just reading security theory.
+- Spend real practice time on tools the exam actually uses hands-on, such as Falco for runtime detection, network policies, and admission controllers, rather than just reading security theory.
 - Supply-chain security (image scanning, signing, sane base images) is a newer domain relative to the older CKA/CKAD content; don't skip it assuming it's a small footnote.
 
 ## How to use the code
@@ -69,7 +69,7 @@ RUSHABH30
 
 **Do I need the CKA before taking the CKS?**
 
-Yes — this is the one Linux Foundation Kubernetes cert with a hard prerequisite. You must hold an active CKA to schedule the CKS.
+Yes. This is the one Linux Foundation Kubernetes cert with a hard prerequisite. You must hold an active CKA to schedule the CKS.
 
 **How much is the CKS with a discount code?**
 
@@ -77,7 +77,7 @@ List price is $445. With RUSHABH30 it drops to about $311.
 
 **Is the CKS worth it if I already have the CKA?**
 
-For anyone doing platform or security work, yes — it's one of the strongest security-specific signals you can add to a DevOps CV, and it's a natural next step once your CKA is active.
+For anyone doing platform or security work, yes. It's one of the strongest security-specific signals you can add to a DevOps CV, and it's a natural next step once your CKA is active.
 
 **Is the CKS multiple-choice?**
 

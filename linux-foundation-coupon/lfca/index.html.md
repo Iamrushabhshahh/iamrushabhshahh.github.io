@@ -20,7 +20,7 @@ RUSHABH30
 
 [Get LFCA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F) and the Linux Foundation Certified IT Associate (LFCA) exam drops from $250 to about $175 &mdash; a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F) and the Linux Foundation Certified IT Associate (LFCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -48,13 +48,13 @@ Career-changers and anyone new to IT who wants a broad, vendor-neutral credentia
 
 ## Why it's worth it
 
-LFCA is the Linux Foundation's broadest entry-level credential — it doesn't specialize in Kubernetes or Linux administration specifically, it certifies the full spread of fundamentals (Linux, networking, cloud, security, DevOps basics, even project management) that every other Linux Foundation cert quietly assumes you already have. The exam itself was refreshed in September 2025, so it's testing current material, not a stale curriculum.
+LFCA is the Linux Foundation's broadest entry-level credential. It doesn't specialize in Kubernetes or Linux administration specifically, it certifies the full spread of fundamentals (Linux, networking, cloud, security, DevOps basics, even project management) that every other Linux Foundation cert quietly assumes you already have. The exam itself was refreshed in September 2025, so it's testing current material, not a stale curriculum.
 
 ## Prep tips
 
-- Treat System Administration Fundamentals as the highest-value domain to study — it's the single biggest slice of the exam, ahead of even Cloud Computing.
+- Treat System Administration Fundamentals as the highest-value domain to study. It's the single biggest slice of the exam, ahead of even Cloud Computing.
 - This is multiple choice, not hands-on, so focus on recognizing concepts and terminology across a wide surface area rather than deep muscle-memory practice in a terminal.
-- If you're also eyeing LFCS or a Kubernetes cert later, LFCA is worth doing first — the vocabulary overlap makes everything after it faster to learn.
+- If you're also eyeing LFCS or a Kubernetes cert later, LFCA is worth doing first. The vocabulary overlap makes everything after it faster to learn.
 
 ## How to use the code
 
@@ -70,7 +70,7 @@ RUSHABH30
 
 **Is the LFCA exam hands-on or multiple-choice?**
 
-Multiple choice — 90 minutes, no live terminal or cluster access required, unlike the performance-based LFCS or CKA.
+Multiple choice: 90 minutes, no live terminal or cluster access required, unlike the performance-based LFCS or CKA.
 
 **Do I need any prerequisite certification for the LFCA?**
 
@@ -86,7 +86,7 @@ Yes. The 30% applies whether you buy the exam alone or bundled with the official
 
 **What should I do after passing the LFCA?**
 
-LFCA is a broad on-ramp — the natural next steps are LFCS if you want to go deep on Linux system administration, or KCNA if Kubernetes and cloud native is the direction you're headed.
+LFCA is a broad on-ramp. The natural next steps are LFCS if you want to go deep on Linux system administration, or KCNA if Kubernetes and cloud native is the direction you're headed.
 
 ## Other Linux Foundation & CNCF certifications
 

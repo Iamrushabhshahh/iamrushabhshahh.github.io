@@ -20,7 +20,7 @@ RUSHABH30
 
 [Get CKAD for ~$311 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F) and the Certified Kubernetes Application Developer (CKAD) exam drops from $445 to about $311 &mdash; a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F) and the Certified Kubernetes Application Developer (CKAD) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -47,13 +47,13 @@ Developers who build and deploy applications to Kubernetes, without administerin
 
 ## Why it's worth it
 
-The CKAD exists for a real gap: most developers shipping to Kubernetes don't need cluster-administration depth — they need to know pods, deployments, config, probes, and how to debug their own workloads fast. It's the same performance-based format as the CKA, just scoped to the application layer instead of the platform layer.
+The CKAD exists for a real gap: most developers shipping to Kubernetes don't need cluster-administration depth. They need to know pods, deployments, config, probes, and how to debug their own workloads fast. It's the same performance-based format as the CKA, just scoped to the application layer instead of the platform layer.
 
 ## Prep tips
 
-- Focus practice time on the manifest types you'll actually write day to day — Deployments, ConfigMaps, Secrets, and probes — since the exam rewards speed writing and editing YAML under time pressure.
+- Focus practice time on the manifest types you'll actually write day to day (Deployments, ConfigMaps, Secrets, and probes), since the exam rewards speed writing and editing YAML under time pressure.
 - Practice debugging a broken Pod from logs and describe output alone; a meaningful slice of the exam is "this deployment is failing, find out why."
-- Like the CKA, you can reference kubernetes.io during the exam — practice navigating to the exact page you need instead of trying to memorize every flag.
+- Like the CKA, you can reference kubernetes.io during the exam. Practice navigating to the exact page you need instead of trying to memorize every flag.
 
 ## How to use the code
 
@@ -69,7 +69,7 @@ RUSHABH30
 
 **Is the CKAD easier than the CKA?**
 
-It's narrower, not necessarily easier — CKAD skips cluster-administration topics but goes deep on the application layer (config, probes, multi-container pod patterns) that the CKA only touches lightly.
+It's narrower, not necessarily easier. CKAD skips cluster-administration topics but goes deep on the application layer (config, probes, multi-container pod patterns) that the CKA only touches lightly.
 
 **Do I need the CKA before taking the CKAD?**
 
@@ -81,7 +81,7 @@ List price is $445. With RUSHABH30 it drops to about $311.
 
 **Is the CKAD hands-on or multiple-choice?**
 
-Hands-on. Like the CKA, it's a live-terminal, performance-based exam against real clusters — no multiple-choice questions.
+Hands-on. Like the CKA, it's a live-terminal, performance-based exam against real clusters, with no multiple-choice questions.
 
 **Does RUSHABH30 work on the CKAD course + exam bundle?**
 

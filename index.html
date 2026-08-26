@@ -44,6 +44,7 @@
     <!-- Self-hosted webfonts (see style.css @font-face) — preload so the
          browser fetches them immediately instead of waiting to discover
          them mid-CSS-parse. -->
+    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -320,7 +321,7 @@
                         <div class="w-full h-full rounded-full" style="background: radial-gradient(circle, rgba(88,166,255,0.45), transparent 65%);"></div>
                     </div>
                     <div class="relative inline-block rounded-2xl p-[2px]" style="background: linear-gradient(135deg, #58a6ff, #a371f7, #f47b20);">
-                        <img src="/assets/rushabh-shah.webp" alt="Rushabh Shah, DevOps Engineer, Docker Captain and Grafana Champion" loading="lazy" decoding="async" width="240" height="240" class="rounded-2xl w-48 h-48 md:w-60 md:h-60 object-cover bg-bg-color block">
+                        <img src="/assets/rushabh-shah.webp" srcset="/assets/rushabh-shah-240.webp 240w, /assets/rushabh-shah.webp 460w" sizes="(min-width: 768px) 240px, 192px" alt="Rushabh Shah, DevOps Engineer, Docker Captain and Grafana Champion" loading="lazy" decoding="async" width="240" height="240" class="rounded-2xl w-48 h-48 md:w-60 md:h-60 object-cover bg-bg-color block">
                     </div>
                 </div>
                 <div class="md:w-2/3">

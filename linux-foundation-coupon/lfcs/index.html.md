@@ -20,7 +20,7 @@ RUSHABH30
 
 [Get LFCS for ~$311 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F) and the Linux Foundation Certified System Administrator (LFCS) exam drops from $445 to about $311 &mdash; a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F) and the Linux Foundation Certified System Administrator (LFCS) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -33,7 +33,7 @@ Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org
 
 ## Who this is for
 
-Anyone in an infrastructure role — not Kubernetes-specific — who wants a hands-on Linux fundamentals credential.
+Anyone in an infrastructure role, not Kubernetes-specific, who wants a hands-on Linux fundamentals credential.
 
 ## What it covers
 
@@ -49,11 +49,11 @@ Anyone in an infrastructure role — not Kubernetes-specific — who wants a han
 
 ## Why it's worth it
 
-LFCS is honestly underrated in a Kubernetes-heavy job market: a lot of "Kubernetes debugging" sessions are actually Linux debugging sessions wearing a trench coat — DNS, file permissions, systemd units, disk pressure. LFCS certifies the fundamentals that every other Linux Foundation cert quietly assumes you already have.
+LFCS is honestly underrated in a Kubernetes-heavy job market: a lot of "Kubernetes debugging" sessions are actually Linux debugging sessions wearing a trench coat: DNS, file permissions, systemd units, disk pressure. LFCS certifies the fundamentals that every other Linux Foundation cert quietly assumes you already have.
 
 ## Prep tips
 
-- If your Kubernetes troubleshooting keeps bottoming out in "wait, is this actually a Linux problem," take LFCS first — it fills exactly that gap.
+- If your Kubernetes troubleshooting keeps bottoming out in "wait, is this actually a Linux problem," take LFCS first. It fills exactly that gap.
 - It's performance-based like the CKA, so practice in a real shell daily rather than just reading man pages.
 - Storage and networking fundamentals here transfer directly into Kubernetes storage classes and CNI troubleshooting later, so it's not wasted effort even if Kubernetes is your end goal.
 
@@ -71,7 +71,7 @@ RUSHABH30
 
 **Is LFCS a Kubernetes certification?**
 
-No — LFCS is a general Linux system administration credential. It's a strong complement to the Kubernetes certs (CKA/CKAD/CKS) rather than a replacement for them.
+No. LFCS is a general Linux system administration credential. It's a strong complement to the Kubernetes certs (CKA/CKAD/CKS) rather than a replacement for them.
 
 **How much is LFCS with a discount code?**
 
@@ -79,11 +79,11 @@ List price is $445. With RUSHABH30 it drops to about $311.
 
 **Is LFCS hands-on or multiple-choice?**
 
-Hands-on — it's a performance-based exam on a real Linux system, not multiple choice.
+Hands-on. It's a performance-based exam on a real Linux system, not multiple choice.
 
 **Should I take LFCS before or after the CKA?**
 
-Before, if you're shaky on core Linux — the LFCS fundamentals (networking, storage, permissions) make CKA troubleshooting scenarios much less frustrating.
+Before, if you're shaky on core Linux. The LFCS fundamentals (networking, storage, permissions) make CKA troubleshooting scenarios much less frustrating.
 
 **Does RUSHABH30 work on the LFCS course + exam bundle?**
 

@@ -20,7 +20,7 @@ RUSHABH30
 
 [Get PCA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F) and the Prometheus Certified Associate (PCA) exam drops from $250 to about $175 &mdash; a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F) and the Prometheus Certified Associate (PCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -33,7 +33,7 @@ Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org
 
 ## Who this is for
 
-Engineers and application developers with a specific interest in monitoring — ideal candidates already hold a Kubernetes cert like KCNA, CKA, or CKAD, or have completed a cloud engineer bootcamp.
+Engineers and application developers with a specific interest in monitoring. Ideal candidates already hold a Kubernetes cert like KCNA, CKA, or CKAD, or have completed a cloud engineer bootcamp.
 
 ## What it covers
 
@@ -47,13 +47,13 @@ Engineers and application developers with a specific interest in monitoring — 
 
 ## Why it's worth it
 
-PCA is CNCF official content, and it exists because "I can install Grafana" and "I actually understand Prometheus's data model and PromQL" are very different claims. The exam leans hard on PromQL — it's the largest single domain on the exam, bigger than Prometheus Fundamentals itself — so it certifies you can actually query and reason about metrics, not just point a dashboard at a data source.
+PCA is CNCF official content, and it exists because "I can install Grafana" and "I actually understand Prometheus's data model and PromQL" are very different claims. The exam leans hard on PromQL. It's the largest single domain on the exam, bigger than Prometheus Fundamentals itself. So it certifies you can actually query and reason about metrics, not just point a dashboard at a data source.
 
 ## Prep tips
 
-- PromQL is worth a disproportionate amount of your study time — it's the single biggest domain on the exam, bigger than Prometheus Fundamentals itself.
-- Practice writing queries from scratch rather than just reading example dashboards — the exam tests your ability to construct PromQL, not just recognize it.
-- If you already hold KCNA, CKA, or CKAD, you're the exact candidate profile Linux Foundation built this exam for — the Kubernetes context will make the instrumentation and exporters domain much more intuitive.
+- PromQL is worth a disproportionate amount of your study time. It's the single biggest domain on the exam, bigger than Prometheus Fundamentals itself.
+- Practice writing queries from scratch rather than just reading example dashboards. The exam tests your ability to construct PromQL, not just recognize it.
+- If you already hold KCNA, CKA, or CKAD, you're the exact candidate profile Linux Foundation built this exam for, and the Kubernetes context will make the instrumentation and exporters domain much more intuitive.
 
 ## How to use the code
 
@@ -73,7 +73,7 @@ There's no formal prerequisite, but Linux Foundation designed it for engineers w
 
 **Is the PCA exam hands-on or multiple-choice?**
 
-Multiple choice — 90 minutes, no live cluster or terminal required.
+Multiple choice: 90 minutes, no live cluster or terminal required.
 
 **How much is the PCA with a discount code?**
 
@@ -81,11 +81,11 @@ List price is $250. With RUSHABH30 it drops to about $175.
 
 **Is the PCA a CNCF-recognized certification?**
 
-Yes — it carries the CNCF official content badge, alongside KCNA, CKA, CKAD, CKS, and the other Cloud Native Computing Foundation-aligned exams.
+Yes. It carries the CNCF official content badge, alongside KCNA, CKA, CKAD, CKS, and the other Cloud Native Computing Foundation-aligned exams.
 
 **What should I take after the PCA?**
 
-If observability is your focus, OTCA (OpenTelemetry Certified Associate) is the natural companion — Prometheus handles metrics, OpenTelemetry adds traces and logs to the picture.
+If observability is your focus, OTCA (OpenTelemetry Certified Associate) is the natural companion: Prometheus handles metrics, OpenTelemetry adds traces and logs to the picture.
 
 ## Other Linux Foundation & CNCF certifications
 

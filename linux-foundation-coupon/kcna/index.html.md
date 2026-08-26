@@ -20,7 +20,7 @@ RUSHABH30
 
 [Get KCNA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F) and the Kubernetes and Cloud Native Associate (KCNA) exam drops from $250 to about $175 &mdash; a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F) and the Kubernetes and Cloud Native Associate (KCNA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -47,13 +47,13 @@ Students, career-changers, and anyone moving into cloud-native from another fiel
 
 ## Why it's worth it
 
-KCNA is the entry point built for people who aren't ready for a live-terminal exam yet. It's multiple choice, it's the cheapest cert in the catalog, and it forces you to learn the cloud-native landscape's vocabulary — Kubernetes, containers, observability, GitOps — before you touch a cluster in anger.
+KCNA is the entry point built for people who aren't ready for a live-terminal exam yet. It's multiple choice, it's the cheapest cert in the catalog, and it forces you to learn the cloud-native landscape's vocabulary (Kubernetes, containers, observability, GitOps) before you touch a cluster in anger.
 
 ## Prep tips
 
-- Treat it as landscape literacy, not hands-on skill — you're learning what things are and how they fit together, not memorizing kubectl syntax.
+- Treat it as landscape literacy, not hands-on skill. You're learning what things are and how they fit together, not memorizing kubectl syntax.
 - The official CNCF/Linux Foundation curriculum outline is the most efficient study map; work through it topic by topic rather than a single dense course.
-- If you're also considering the CKA later, KCNA is a genuinely useful on-ramp — the vocabulary you learn here removes a lot of friction from CKA prep.
+- If you're also considering the CKA later, KCNA is a genuinely useful on-ramp. The vocabulary you learn here removes a lot of friction from CKA prep.
 
 ## How to use the code
 
@@ -69,7 +69,7 @@ RUSHABH30
 
 **Is KCNA a good first certification for beginners?**
 
-Yes — it's specifically designed as the entry point into Kubernetes and cloud native, with no hands-on requirement and a lower price than the performance-based exams.
+Yes. It's specifically designed as the entry point into Kubernetes and cloud native, with no hands-on requirement and a lower price than the performance-based exams.
 
 **How much is KCNA with a discount code?**
 
@@ -81,7 +81,7 @@ No. KCNA is entirely multiple choice, with no live terminal or cluster access re
 
 **Should I take KCNA before the CKA?**
 
-It's not required, but it's a sensible on-ramp if you're new to the ecosystem — it builds vocabulary and context that make CKA prep faster.
+It's not required, but it's a sensible on-ramp if you're new to the ecosystem. It builds vocabulary and context that make CKA prep faster.
 
 **Does RUSHABH30 work on the KCNA course + exam bundle?**
 
