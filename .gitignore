@@ -2,6 +2,8 @@
 .claude/
 .vscode/
 .idea/
+.obsidian/
+content/.obsidian/
 
 # OS junk
 .DS_Store
@@ -14,3 +16,5 @@ node_modules/
 *.log
 *.tmp
 .cache/
+
+.obsidian

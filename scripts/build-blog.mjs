@@ -1191,10 +1191,42 @@ ${footer.replace('</body>', `<script type="application/ld+json">${JSON.stringify
 
 /* ---------- blog index ---------- */
 
+/* ---------- post cards ---------- */
+
+/* Every post card gets a media slot whether or not the post has a cover, so a
+   list mixing illustrated and plain posts still reads as one grid instead of
+   some cards starting 200px further left than others. Without a cover we draw
+   a tinted tile carrying the post's primary tag. The tint is derived from the
+   slug, so it's stable across builds but differs between neighbours. Once a
+   post gets a real banner the fallback simply stops firing. */
+const CARD_TINTS = ['var(--primary-rgb)', 'var(--purple-rgb)', 'var(--green-rgb)', 'var(--orange-rgb)'];
+const cardTint = (slug) => {
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) >>> 0;
+  return CARD_TINTS[h % CARD_TINTS.length];
+};
+/* Label the tile with the post's *rarest* tag rather than its first. Nearly
+   every post here is tagged `kubernetes`, so leading with the first tag would
+   print the same word on every tile; the rarest one is the one that actually
+   tells them apart. */
+const tagFreq = new Map();
+for (const p of all) for (const t of p.tags) tagFreq.set(t, (tagFreq.get(t) || 0) + 1);
+const distinctTag = (tags) =>
+  [...tags].sort((a, b) => (tagFreq.get(a) - tagFreq.get(b)) || a.localeCompare(b))[0];
+
+const cardMedia = (p, extraClass = '') => {
+  const cls = `post-card-media${extraClass ? ' ' + extraClass : ''}`;
+  if (p.cover) {
+    return `<div class="${cls}"><img src="${p.cover}" alt="" loading="lazy" decoding="async"></div>`;
+  }
+  const label = p.tags.length ? `#${distinctTag(p.tags)}` : '$ post';
+  return `<div class="${cls} post-card-media-blank" style="--card-tint: ${cardTint(p.slug)}" aria-hidden="true"><span>${escapeHtml(label)}</span></div>`;
+};
+
 const postCard = (p, { pinned = false } = {}) => `
                     <a href="/blog/${p.slug}/" class="tech-card p-6 rounded-md group block${pinned ? ' pinned-card' : ''}">
-                        <div class="flex flex-col sm:flex-row gap-5">
-                            ${p.cover ? `<img src="${p.cover}" alt="" loading="lazy" decoding="async" class="w-full sm:w-44 h-36 sm:h-28 object-cover rounded-lg border border-border-color flex-shrink-0">` : ''}
+                        <div class="post-card-row flex flex-col sm:flex-row gap-5">
+                            ${cardMedia(p)}
                             <div class="flex flex-col min-w-0">
                                 <div class="flex flex-wrap items-center gap-3 font-fira text-xs text-gray-400 mb-2">
                                     ${pinned ? `<span class="text-primary-color">★ Pinned</span><span aria-hidden="true">·</span>` : ''}
@@ -2845,7 +2877,7 @@ const renderLatestPosts = () => {
     const desc = p.description || '';
     const descTrunc = escapeHtml(desc.slice(0, 140) + (desc.length > 140 ? '…' : ''));
     return `<a href="${url}" class="tech-card rounded-md flex flex-col group overflow-hidden">
-                        ${p.cover ? `<img src="${p.cover}" alt="" loading="lazy" class="w-full h-36 object-cover">` : ''}
+                        ${cardMedia(p, 'post-card-media-top')}
                         <div class="p-5 flex flex-col flex-grow">
                             <div class="flex items-center justify-between mb-3">
                                 <span class="text-xs font-fira text-gray-400">${fmtDate(p.date)} · ${p.minutes} min read</span>
