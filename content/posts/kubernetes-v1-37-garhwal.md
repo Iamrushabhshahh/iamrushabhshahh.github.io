@@ -46,7 +46,6 @@ Thirteen dialects, one language. Fifty-two forts, one kingdom. It's a fitting na
 
 <figure class="figure-plain">
   <img src="/assets/blog/kubernetes-1-37-garhwal-logo.svg" alt="The Kubernetes v1.37 Garhwal release logo: terraced fields climbing towards snow-capped Himalayan peaks, a river winding past a mountain house, deodar forest, prayer flags, a Himalayan monal, and red buransh flowers with Kubernetes helms at their centres." width="420" height="404" loading="lazy" decoding="async">
-  <figcaption>Terraced fields, deodars, a monal, buransh flowers with helms in the middle, and a house marked १.३७. Leave it on screen: it runs a 37 second day-to-night cycle, on a loop.</figcaption>
 </figure>
 
 Whoever made this did the homework. The bird is a Himalayan [monal](https://en.wikipedia.org/wiki/Himalayan_monal), Uttarakhand's state bird. The red flowers are buransh, the state tree, with Kubernetes helms where the centres should be. The terraced fields climb the way they actually climb there. The house is marked १.३७ in Devanagari. It also animates. The light drains out of the valley about fifteen seconds in, holds at night for a while, then comes back, on a 37 second loop. Which is a very patient way to hide a version number.
