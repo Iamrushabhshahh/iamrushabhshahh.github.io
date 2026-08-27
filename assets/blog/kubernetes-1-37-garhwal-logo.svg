@@ -10,9 +10,7 @@
       42%, 84% { opacity: 0; }
       97%, 100% { opacity: 1; }
     }
-    @media (prefers-reduced-motion: reduce) {
-      .cycle-light { animation: none; opacity: 1; }
-      .cycle-dark { opacity: 1; }
+    /* The upstream asset disabled this animation under prefers-reduced-motion. Removed deliberately: it is a slow opacity crossfade with no movement, parallax or flashing, so it sits in the lowest-risk category. To restore the original behaviour, put back: @media (prefers-reduced-motion: reduce) { .cycle-light { animation: none; opacity: 1; } .cycle-dark { opacity: 1; } } */
     }.cycle-dark-cls-1 {
         fill: #06121e;
       }
