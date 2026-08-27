@@ -846,6 +846,32 @@ all.sort((a, b) => b.date - a.date);
 
 /* ---------- shared page chrome ---------- */
 
+/* Read the real pixel dimensions of a local JPEG or PNG so og:image:width and
+   og:image:height are always correct. LinkedIn in particular renders the large
+   card unreliably when they're missing, and they used to be omitted for exactly
+   the posts that had a custom cover. Falls back to the 1200x630 convention if
+   the file can't be read. */
+const imageSize = (siteRelPath) => {
+  try {
+    const buf = fs.readFileSync(path.join(ROOT, siteRelPath.replace(/^\//, '')));
+    if (buf.readUInt32BE(0) === 0x89504e47) {                 // PNG
+      return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20) };
+    }
+    if (buf[0] === 0xff && buf[1] === 0xd8) {                  // JPEG: walk to SOFn
+      let i = 2;
+      while (i < buf.length) {
+        if (buf[i] !== 0xff) { i++; continue; }
+        const marker = buf[i + 1];
+        if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) {
+          return { h: buf.readUInt16BE(i + 5), w: buf.readUInt16BE(i + 7) };
+        }
+        i += 2 + buf.readUInt16BE(i + 2);
+      }
+    }
+  } catch { /* fall through */ }
+  return { w: 1200, h: 630 };
+};
+
 const head = ({ title, description, url, ogType = 'website', published, updated, tags, image }) => {
   const ogImage = image ? (image.startsWith('http') ? image : `${SITE}${image}`) : `${SITE}/assets/og-image.jpg`;
   return `<!DOCTYPE html>
@@ -869,9 +895,10 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
     <meta property="og:title" content="${escapeHtml(title)}">
     <meta property="og:description" content="${escapeHtml(description)}">
     <meta property="og:image" content="${ogImage}">
-    ${!image ? `<meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="${escapeHtml(AUTHOR)} — DevOps Engineer, Docker Captain, Grafana Champion">` : ''}
+    <meta property="og:image:width" content="${imageSize(image || '/assets/og-image.jpg').w}">
+    <meta property="og:image:height" content="${imageSize(image || '/assets/og-image.jpg').h}">
+    <meta property="og:image:alt" content="${escapeHtml(image ? title : AUTHOR + ' — DevOps Engineer, Docker Captain, Grafana Champion')}">
+    <meta property="og:site_name" content="${escapeHtml(AUTHOR)}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@iamrushabhshahh">
     <meta name="twitter:title" content="${escapeHtml(title)}">
