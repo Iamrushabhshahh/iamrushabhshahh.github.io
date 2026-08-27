@@ -46,7 +46,7 @@ Thirteen dialects, one language. Fifty-two forts, one kingdom. It's a fitting na
 
 <figure class="figure-plain">
   <img src="/assets/blog/kubernetes-1-37-garhwal-logo.svg" alt="The Kubernetes v1.37 Garhwal release logo: terraced fields climbing towards snow-capped Himalayan peaks, a river winding past a mountain house, deodar forest, prayer flags, a Himalayan monal, and red buransh flowers with Kubernetes helms at their centres." width="420" height="404" loading="lazy" decoding="async">
-  <figcaption>The official release asset, unchanged except for one thing: kubernetes.io holds it still for anyone who asks for reduced motion, and this copy doesn't.</figcaption>
+  <figcaption>The frame is ringaal, a dwarf Himalayan bamboo used for basket weaving. A single strip bends; interlaced, they hold. The release team picked it on purpose.</figcaption>
 </figure>
 
 Whoever made this did the homework. The bird is a Himalayan [monal](https://en.wikipedia.org/wiki/Himalayan_monal), Uttarakhand's state bird. The red flowers are buransh, the state tree, with Kubernetes helms where the centres should be. The terraced fields climb the way they actually climb there. The house is marked १.३७ in Devanagari. It also animates, and more than I first noticed. The prayer flags catch the wind, the river shimmers on its own ten second cycle, and the whole valley runs a 37 second day-to-night loop: the light drains out around fifteen seconds in, the stars come out, and dawn arrives by the end. Four keyframe sets, thirty animations running at once, because every flag and every star gets its own. The version on kubernetes.io switches all of it off for anyone whose system asks for reduced motion, which is a thoughtful touch; the copy here always runs.
