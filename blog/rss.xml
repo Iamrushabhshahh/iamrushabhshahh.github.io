@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Aug 2026 03:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 19:00:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks</title>
+      <link>https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/</guid>
+      <pubDate>Wed, 26 Aug 2026 19:00:00 GMT</pubDate>
+      <description>A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.</description>
+      <category>kubernetes</category><category>releases</category>
+    </item>
     <item>
       <title>What the CKA actually tests in 2026</title>
       <link>https://rushabhshah.dev/blog/cka-exam-guide/</link>

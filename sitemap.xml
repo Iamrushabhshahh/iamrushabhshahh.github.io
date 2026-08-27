@@ -145,6 +145,11 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/blog/cka-exam-guide/</loc>
     <lastmod>2026-08-26</lastmod>
     <priority>0.8</priority>
@@ -175,13 +180,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rushabhshah.dev/blog/tags/certification/</loc>
+    <loc>https://rushabhshah.dev/blog/tags/kubernetes/</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://rushabhshah.dev/blog/tags/kubernetes/</loc>
+    <loc>https://rushabhshah.dev/blog/tags/certification/</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -207,6 +212,12 @@
   <url>
     <loc>https://rushabhshah.dev/blog/tags/open-source/</loc>
     <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/blog/tags/releases/</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>

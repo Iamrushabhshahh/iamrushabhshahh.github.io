@@ -1,5 +1,17 @@
 [
   {
+    "title": "Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks",
+    "description": "A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.",
+    "url": "/blog/kubernetes-v1-37-garhwal/",
+    "date": "2026-08-26T19:00:00.000Z",
+    "tags": [
+      "kubernetes",
+      "releases"
+    ],
+    "minutes": 26,
+    "cover": "/assets/blog/kubernetes-1-37-garhwal-og.jpg"
+  },
+  {
     "title": "What the CKA actually tests in 2026",
     "description": "The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.",
     "url": "/blog/cka-exam-guide/",
@@ -58,18 +70,6 @@
       "certification"
     ],
     "minutes": 3,
-    "cover": null
-  },
-  {
-    "title": "Hello, world: the blog now lives on rushabhshah.dev",
-    "description": "Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.",
-    "url": "/blog/hello-world/",
-    "date": "2026-07-09T06:30:00.000Z",
-    "tags": [
-      "meta",
-      "blog"
-    ],
-    "minutes": 1,
     "cover": null
   }
 ]

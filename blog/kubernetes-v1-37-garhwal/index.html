@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
+    <script defer src="/assets/theme.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#010409">
+    <meta name="color-scheme" content="dark light">
+    <title>Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah</title>
+    <meta name="description" content="A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.">
+    <meta name="author" content="Rushabh Shah">
+    <link rel="canonical" href="https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/">
+    <meta property="og:title" content="Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah">
+    <meta property="og:description" content="A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.">
+    <meta property="og:image" content="https://rushabhshah.dev/assets/blog/kubernetes-1-37-garhwal-og.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@iamrushabhshahh">
+    <meta name="twitter:title" content="Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah">
+    <meta name="twitter:description" content="A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.">
+    <meta name="twitter:image" content="https://rushabhshah.dev/assets/blog/kubernetes-1-37-garhwal-og.jpg">
+    <meta property="article:published_time" content="2026-08-26T19:00:00.000Z">
+    <meta property="article:modified_time" content="2026-08-26T19:00:00.000Z">
+    <meta property="article:author" content="Rushabh Shah">
+    <meta property="article:tag" content="kubernetes">
+    <meta property="article:tag" content="releases">
+    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
+    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <div id="reading-progress" aria-hidden="true"><div id="reading-progress-bar"></div></div>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
+            <a href="/" class="text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
+            <div class="hidden xl:flex items-center space-x-6 text-sm nav-links">
+                <a href="/#about" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
+                <a href="/#honors" class="text-gray-400 hover:text-primary-color transition-colors">./honors</a>
+                <a href="/#skills" class="text-gray-400 hover:text-primary-color transition-colors">./skills</a>
+                <a href="/#experience" class="text-gray-400 hover:text-primary-color transition-colors">./experience</a>
+                <a href="/#projects" class="text-gray-400 hover:text-primary-color transition-colors">./projects</a>
+                <a href="/blog/" class="text-primary-color transition-colors" aria-current="true">./blog</a>
+                <a href="/linux-foundation-coupon/" class="text-gray-400 hover:text-primary-color transition-colors">./deals</a>
+                <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
+            </div>
+            <div class="hidden xl:flex flex-shrink-0">
+                <div class="seg seg--compact" role="radiogroup" aria-label="Theme preference">
+                <button type="button" role="radio" data-value="light" aria-checked="false" tabindex="-1" title="Light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+                    <span class="seg-label sr-only">Light</span>
+                </button>
+                <button type="button" role="radio" data-value="system" aria-checked="true" tabindex="0" title="System">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <span class="seg-label sr-only">System</span>
+                </button>
+                <button type="button" role="radio" data-value="dark" aria-checked="false" tabindex="-1" title="Dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <span class="seg-label sr-only">Dark</span>
+                </button>
+            </div>
+            </div>
+            <button id="menu-btn" class="xl:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
+        </nav>
+        <div id="site-menu" class="hidden xl:hidden bg-terminal-header/90 font-fira">
+            <a href="/#about" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./about</a>
+            <a href="/#honors" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./honors</a>
+            <a href="/#skills" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./skills</a>
+            <a href="/#experience" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./experience</a>
+            <a href="/#projects" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./projects</a>
+            <a href="/blog/" class="block py-2 px-4 text-sm text-primary-color">./blog</a>
+            <a href="/linux-foundation-coupon/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./deals</a>
+            <a href="/#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
+            <div class="seg" role="radiogroup" aria-label="Theme preference">
+                <button type="button" role="radio" data-value="light" aria-checked="false" tabindex="-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+                    <span class="seg-label">Light</span>
+                </button>
+                <button type="button" role="radio" data-value="system" aria-checked="true" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <span class="seg-label">System</span>
+                </button>
+                <button type="button" role="radio" data-value="dark" aria-checked="false" tabindex="-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <span class="seg-label">Dark</span>
+                </button>
+            </div>
+        </div>
+        <a href="/linux-foundation-coupon/" class="block bg-primary-color/10 border-b border-border-color text-center font-fira text-xs py-2 px-4 text-gray-300 hover:text-primary-color transition-colors">
+            🎓 30% off all Linux Foundation certifications (CKA, CKAD, CKS…) with code <span class="text-primary-color font-bold">RUSHABH30</span> →
+        </a>
+    </header>
+    <main id="main" class="container mx-auto px-6 py-12">
+        <div class="post-layout">
+        <article class="post-article max-w-3xl">
+            <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
+            <header class="mb-10">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks</h1>
+                <div class="flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
+                    <time datetime="2026-08-26T19:00:00.000Z">Aug 27, 2026</time>
+                    <span aria-hidden="true">·</span>
+                    <span>26 min read</span>
+                    <span id="post-views"></span>
+                    <span aria-hidden="true">·</span> <a href="/blog/tags/kubernetes/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">kubernetes</a> <a href="/blog/tags/releases/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">releases</a>
+                </div>
+                <img src="/assets/blog/kubernetes-1-37-garhwal-og.jpg" alt="" class="w-full rounded-xl border border-border-color mt-8" loading="eager" decoding="async">
+            </header>
+            
+            <div class="post-prose">
+<p>Kubernetes v1.37 is called <strong>Garhwal</strong> (गढ़वाल). I read that and stopped for a second.</p>
+<p>Release names usually slide past me. This one I already knew, and not from a map.</p>
+<p>Years ago I was close to someone from Doiwala, a town just outside Dehradun. Doiwala sits in Dehradun district, and Dehradun district sits inside the Garhwal (गढ़वाल) division of Uttarakhand. So for a stretch of time I got a second-hand education in a place I had never been. The food, the words, the way people from the hills talk about the hills, like a person rather than a location. People from that part of Uttarakhand call themselves <strong>pahari</strong> (पहाड़ी), which means something close to &quot;of the mountains&quot;, and once you hear how they say it you understand it isn&#39;t only geography.</p>
+<p>A couple of years ago, in my last few days of college, some friends and I were presenting a <a href="https://ijsrem.com/download/foni-drone">drone project</a> we had built together. Genuinely brilliant people, that team. And then one of the components went missing.</p>
+<p>Which is how I ended up in the security office at Parul University, asking someone to scrub through camera footage with me. Already sitting there, waiting on the same tapes, was a person who had lost something of their own that day. Theirs mattered a great deal more than a drone part.</p>
+<p>So we got talking, because there is not much else to do while a guard fast-forwards through six hours of grainy corridor footage.</p>
+<p>We became good friends after that, and spent a good stretch of time in each other&#39;s company. Somewhere in there I picked up the pahari side of things properly. The culture, the food, a pile of Garhwali songs on YouTube that are still sitting in my watch history.</p>
+<p>Everything has an expiry date, though.</p>
+<p>We are not in touch any more. Nothing dramatic happened. College ended, I got busy with work and life and all the rest of it, and two people&#39;s lives simply stopped overlapping, the way they do.</p>
+<p>So if this ever finds its way to you, my friend: those were good memories, and the trip is still on my list.</p>
+<p>That&#39;s the honest reason this release landed differently for me. Garhwal has sat in my bucket list for years and I still haven&#39;t gone. This week the Kubernetes project put the name on a release, which is the closest I have come to visiting.</p>
+<p>I&#39;ll take it.</p>
+<h2 id="what-garhwal-actually-is">What Garhwal (गढ़वाल) actually is</h2>
+<p>Uttarakhand has two administrative divisions. Kumaon (कुमाऊं) is one. Garhwal is the other, and it covers seven districts: Chamoli, Dehradun, Haridwar, Pauri Garhwal, Rudraprayag, Tehri Garhwal and Uttarkashi.</p>
+<p>The name comes from forts. <em>Garh</em> (गढ़) means fort, and the region takes its name from the <a href="https://en.wikipedia.org/wiki/Garhwal_kingdom#52_garh_of_Garhwal">52 garhs</a> that were brought together into a single kingdom around the 14th century. Fifty-two separate strongholds, each with its own chief, folded into one thing that held.</p>
+<p>I am not going to pretend that isn&#39;t a good accident for a release carrying 67 independent enhancements.</p>
+<p>The language isn&#39;t one thing either. Garhwali (गढ़वाली) has roughly thirteen dialects depending on which valley you are standing in. Srinagaria, around Srinagar in Pauri, is the literary standard. Tehriyali runs through the Bhagirathi valley, Gangadi through Uttarkashi, Bangani out west where Garhwal starts turning into Himachal. Jaunsari, spoken by the Jaunsari community in Jaunsar-Bawar in Dehradun district, sits right on that bridge. Go east into Kumaon and it changes again, until the dialects near the border start sounding like western Nepal.</p>
+<p>Thirteen dialects, one language. Fifty-two forts, one kingdom. It&#39;s a fitting name for a project built by a couple of thousand people who mostly don&#39;t agree with each other.</p>
+<figure class="figure-plain">
+  <img src="/assets/blog/kubernetes-1-37-garhwal-logo.svg" alt="The Kubernetes v1.37 Garhwal release logo: terraced fields climbing towards snow-capped Himalayan peaks, a river winding past a mountain house, deodar forest, prayer flags, a Himalayan monal, and red buransh flowers with Kubernetes helms at their centres." width="420" height="404" loading="lazy" decoding="async">
+  <figcaption>Terraced fields, deodars, a monal, buransh flowers with helms in the middle, and a house marked १.३७. Sit with it for 37 seconds and the river starts moving.</figcaption>
+</figure>
+
+<p>Whoever made this did the homework. The bird is a Himalayan <a href="https://en.wikipedia.org/wiki/Himalayan_monal">monal</a>, Uttarakhand&#39;s state bird. The red flowers are buransh, the state tree, with Kubernetes helms where the centres should be. The terraced fields climb the way they actually climb there. The house is marked १.३७ in Devanagari. And there&#39;s an easter egg: watch it for 37 seconds and the whole scene turns from day to night.</p>
+<p>Right. Since I&#39;m visiting Garhwal through a changelog, I may as well do the thing I&#39;d want done for me and take the 67 changes apart in a way that still holds up when you&#39;re reading it in the middle of a chaotic day 😅, with YAML where it genuinely helps.</p>
+<p>Although let&#39;s be honest, most of us don&#39;t write YAML from scratch any more. The AI does that part now. One of my recent CFP submissions is about exactly that, and if it gets picked I&#39;ll write it up properly. Fingers crossed.</p>
+<p>Anyway. On to the release notes, and the postmortem ☺️</p>
+<h2 id="the-short-version">The short version</h2>
+<p>If you close this tab now, take these:</p>
+<table>
+<thead>
+<tr>
+<th>What changed</th>
+<th>Stage</th>
+<th>Why you care</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HPA can scale to zero</td>
+<td>Beta, <strong>on</strong></td>
+<td>Idle GPU and queue workloads can go to nothing. Needs an external metric.</td>
+</tr>
+<tr>
+<td>Gang scheduling</td>
+<td>Beta</td>
+<td>All-or-nothing placement for training jobs. No more 40-of-64 deadlocks.</td>
+</tr>
+<tr>
+<td>API server cache warms ~55% faster</td>
+<td>Stable + Beta, on</td>
+<td>Large clusters recover far quicker. Handle HTTP 429 in your controllers.</td>
+</tr>
+<tr>
+<td>Memory QoS</td>
+<td>Beta, <strong>on</strong></td>
+<td>cgroups v2 memory protection and throttling. Defaults are safe.</td>
+</tr>
+<tr>
+<td>PVC &quot;unused since&quot;</td>
+<td>Beta, <strong>on</strong></td>
+<td>Finally find the disks nobody has mounted since March.</td>
+</tr>
+<tr>
+<td>Pod certificates</td>
+<td>Stable</td>
+<td>Built-in workload identity without a mesh.</td>
+</tr>
+<tr>
+<td>KYAML</td>
+<td>Stable</td>
+<td>YAML without the foot-guns. Nothing to migrate.</td>
+</tr>
+<tr>
+<td><code>metrics.k8s.io</code> v1</td>
+<td>Stable</td>
+<td>Nine years in Beta. <code>kubectl top</code> sits on a stable API.</td>
+</tr>
+<tr>
+<td><strong>SELinux volume mounting</strong></td>
+<td>Stable, <strong>on</strong></td>
+<td><strong>Can stop pods starting.</strong> The one that ruins upgrades.</td>
+</tr>
+<tr>
+<td><strong>Old cAdvisor kubelet flags</strong></td>
+<td>Removed</td>
+<td><strong>Kubelet refuses to start.</strong> Grep your config first.</td>
+</tr>
+<tr>
+<td><code>eventRecordQPS: 0</code></td>
+<td>Changed</td>
+<td>Now means unlimited, not default. Set 50 if you meant the old thing.</td>
+</tr>
+<tr>
+<td><code>scheduling.k8s.io/v1alpha2</code></td>
+<td>Removed</td>
+<td>Delete those objects <em>before</em> upgrading, not after.</td>
+</tr>
+<tr>
+<td>kube-dns, ipvs, cgroups v1</td>
+<td>Deprecated</td>
+<td>Nothing breaks today. All of it breaks eventually.</td>
+</tr>
+</tbody></table>
+<p>The bold rows are the ones that can bite you. They&#39;re covered in full further down.</p>
+<h2 id="an-honest-triage">An honest triage</h2>
+<p>16 went Stable, 23 went Beta, 27 are brand new in Alpha, and one thing got deprecated.</p>
+<p>Every release write-up lists all 67 and leaves you to figure out which ones are your problem. That&#39;s not useful. Most of those 67 are invisible to you.</p>
+<p>Before the triage, the one bit of vocabulary the whole post leans on:</p>
+<figure>
+  <img src="/assets/blog/k8s-137-alpha-beta-stable.svg" alt="A three-step ladder. Alpha: off by default, can change or vanish next release, 27 in v1.37. Beta: mostly works and the API is settling, some are now on by default, 23 in v1.37. Stable: finished and supported, safe to build on, 16 in v1.37." width="860" height="528" loading="lazy" decoding="async">
+  <figcaption>The middle step is where upgrades bite. Beta used to mean "off unless you ask for it". It doesn't always mean that any more.</figcaption>
+</figure>
+
+<p>That middle box is the whole reason upgrade notes exist. A feature going Beta <em>and</em> getting flipped on by default means your cluster&#39;s behaviour changes without you asking for it. Several of those happened this release.</p>
+<p>Want to know what&#39;s actually switched on in your cluster right now?</p>
+<pre><code class="language-bash"># every feature gate the API server is running, and its state
+kubectl get --raw /metrics | grep &#39;^kubernetes_feature_enabled&#39; \
+  | grep -E &#39;HPAScaleToZero|MemoryQoS|SELinuxMount&#39;
+</code></pre>
+<p>So: four features you&#39;ll actually notice, four things that can break, and a deprecation list for next quarter&#39;s roadmap.</p>
+<h2 id="the-one-i-39-d-turn-on-first">The one I&#39;d turn on first</h2>
+<p>HorizontalPodAutoscaler can finally scale to zero.</p>
+<p>Until now the autoscaler could take you down to one pod and no further. One idle pod sounds like a rounding error, right up until it&#39;s a pod holding a GPU. Then it&#39;s the whole bill.</p>
+<p>There&#39;s a catch, and it&#39;s the part people get stuck on, so here it is drawn out:</p>
+<figure>
+  <img src="/assets/blog/k8s-137-scale-to-zero.svg" alt="Two rows. Top row, scaling on CPU: zero pods running means no CPU reading, which means nothing to scale up from, so the workload is stuck at zero forever. Bottom row, scaling on queue depth: zero pods running, the queue still reports 12 jobs waiting because it lives outside the cluster, so the HPA wakes the workload up to 3 pods." width="860" height="530" loading="lazy" decoding="async">
+  <figcaption>Scale to zero only works on object and external metrics. Never on CPU or memory.</figcaption>
+</figure>
+
+<p>CPU and memory readings come from running pods. Zero pods, zero readings, nothing to trigger a scale-up, workload parked forever. A queue length lives outside your cluster, so it keeps reporting whether you have pods or not. That&#39;s the signal that can wake something from the dead.</p>
+<p>Here&#39;s the whole thing:</p>
+<pre><code class="language-yaml">apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: batch-worker
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: batch-worker
+  minReplicas: 0        # the new bit. Before v1.37 this was rejected
+  maxReplicas: 20
+  metrics:
+    - type: External    # External or Object only. CPU and memory cannot work here
+      external:
+        metric:
+          name: queue_messages_ready
+          selector:
+            matchLabels:
+              queue: batch-jobs
+        target:
+          type: AverageValue
+          averageValue: &quot;10&quot;   # one pod per 10 queued messages
+</code></pre>
+<p>Kubernetes also stamps a <code>ScaledToZero</code> condition on the autoscaler while it&#39;s holding a workload at zero. Sounds like bookkeeping. It isn&#39;t. Without it, &quot;the autoscaler parked this because nothing was queued&quot; and &quot;a human set replicas to 0 on purpose&quot; look identical, and that ambiguity is exactly how workloads get restarted at 2am by something trying to be helpful.</p>
+<pre><code class="language-bash">kubectl get hpa batch-worker \
+  -o jsonpath=&#39;{range .status.conditions[?(@.type==&quot;ScaledToZero&quot;)]}{.status}{&quot; &quot;}{.reason}{&quot;\n&quot;}{end}&#39;
+# True  ScaledToZero        &lt;- parked by the autoscaler
+# False NotScaledToZero     &lt;- back up and running
+</code></pre>
+<p>First proposed in v1.16, via <a href="https://github.com/kubernetes/enhancements/issues/2021">KEP-2021</a>. Six years to Beta.</p>
+<h2 id="if-you-run-ai-training-jobs-read-this-one">If you run AI training jobs, read this one</h2>
+<p>The default scheduler places pods one at a time. Fine for a web service. Actively bad for a 64-pod training job.</p>
+<figure>
+  <img src="/assets/blog/k8s-137-gang-scheduling.svg" alt="One training job of 64 pods, shown two ways. Left, the default scheduler: 40 pods running and 24 pending, GPUs held, zero useful work. Right, gang scheduling: all 64 start together, or the whole group waits in the queue." width="860" height="460" loading="lazy" decoding="async">
+  <figcaption>40 out of 64 is not 62% of a training job. It's zero training and 40 GPUs you're paying for.</figcaption>
+</figure>
+
+<p>Forty pods scheduled, twenty-four pending, forty GPUs sitting there doing nothing while the job waits for room that may never come. Put two of those jobs on the same cluster and they can deadlock, each holding what the other needs.</p>
+<p>Gang scheduling is all or nothing: a PodGroup gets placed only when there&#39;s room for every pod in it. <a href="https://github.com/kubernetes/enhancements/issues/4671">KEP-4671</a> takes it to Beta and adds two things on top.</p>
+<p><strong>Workload-aware preemption</strong> (<a href="https://github.com/kubernetes/enhancements/issues/5710">KEP-5710</a>, also Beta) means that when the scheduler evicts lower-priority pods to make room, it evicts enough to actually let the workload run, instead of disrupting pods for nothing. And <strong>PodGroup queueing</strong> handles the livelock case where competing workloads keep tripping over each other without any of them making progress.</p>
+<p>Alongside it, <code>batch/v1</code> Job picks up a <code>spec.scheduling</code> field (<a href="https://github.com/kubernetes/enhancements/issues/5547">KEP-5547</a>, Alpha) so a plain Job can opt into gang scheduling directly rather than going through a separate controller. Leave <code>spec.scheduling</code> off and the Job behaves exactly as it does today, so this is additive. Opt into Gang and <code>minCount</code> defaults to the Job&#39;s <code>parallelism</code>.</p>
+<p>Two more that matter if you&#39;re building an ML platform:</p>
+<ul>
+<li><strong><code>CompositePodGroup</code></strong> (<a href="https://github.com/kubernetes/enhancements/issues/6012">KEP-6012</a>, Alpha) describes a workload as a <em>hierarchy</em> of groups instead of one flat set of pods, which is what a real multi-stage pipeline actually looks like.</li>
+<li><strong>DRA ResourceClaims for workloads</strong> (<a href="https://github.com/kubernetes/enhancements/issues/5729">KEP-5729</a>, Beta) lets a claim be shared across a whole PodGroup rather than reserved per pod.</li>
+</ul>
+<p>If your platform team is running a custom scheduler purely for gang semantics, this is the thing that eventually replaces it.</p>
+<h2 id="the-boring-one-that-matters-most">The boring one that matters most</h2>
+<p>Nothing about this is exciting and it&#39;s probably the biggest operational win in the release.</p>
+<figure>
+  <img src="/assets/blog/k8s-137-apiserver-startup.svg" alt="Before: etcd sends one giant blob, the API server builds it fully in memory first, then a single decoder handles one event at a time while everything queues. In v1.37: etcd 3.7 sends streamed chunks, each chunk is decoded as it arrives, and 10 workers decode in parallel and reorder before delivery. About 55% faster to warm the cache, benchmarked over 150,000 pods." width="860" height="484" loading="lazy" decoding="async">
+  <figcaption>Three separate pieces of work that all land in the same release and compound.</figcaption>
+</figure>
+
+<p>Three things happened at once.</p>
+<p><strong>Resilient watchcache initialization</strong> (<a href="https://github.com/kubernetes/enhancements/issues/4568">KEP-4568</a>) went Stable, so a starting API server no longer hammers etcd with a flood of expensive list requests at the exact moment you need etcd most. It bounds the work and returns <code>429 Too Many Requests</code> for what it can&#39;t take.</p>
+<p>If you write controllers or operators, this is your homework. Handle 429 properly: respect <code>Retry-After</code>, back off exponentially. Plenty of custom controllers don&#39;t, and this is the release where that starts showing.</p>
+<p><strong>etcd RangeStream</strong> (<a href="https://github.com/kubernetes/enhancements/issues/5966">KEP-5966</a>, Beta, on by default) means etcd streams results in chunks instead of building one enormous response in memory first. It needs etcd 3.7, which is what v1.37 now ships with by default. On older etcd the API server detects the missing RPC and quietly falls back to the old path, so nothing breaks.</p>
+<p><strong>Concurrent watch decode</strong> (<a href="https://github.com/kubernetes/enhancements/issues/6178">KEP-6178</a>), which had been sitting in Beta and off since v1.31, is now on by default. Ten worker goroutines instead of one, with a collector putting events back in their original order before delivery.</p>
+<p>Together: roughly <strong>55% faster</strong> to warm the cache on a 150,000 pod benchmark. Concurrent decode alone accounts for about 40% of that.</p>
+<p>One trap. If you have a CRD with a conversion webhook, up to 10 conversions can now hit that webhook at once instead of one at a time. Same total number of calls, very different shape. If your webhook caps its own concurrency below 10, look at it before you upgrade.</p>
+<h2 id="smaller-things-worth-knowing">Smaller things worth knowing</h2>
+<p><strong><code>kubectl top</code> finally sits on a stable API.</strong> <code>metrics.k8s.io</code> spent <strong>nine years</strong> in Beta (<a href="https://github.com/kubernetes/enhancements/issues/5207">KEP-5207</a>). Nine. It&#39;s v1 now. Nothing breaks, <code>v1beta1</code> keeps working through the transition, but that&#39;s one fewer beta API holding up something you depend on.</p>
+<p><strong>KYAML is Stable</strong> (<a href="https://github.com/kubernetes/enhancements/issues/5295">KEP-5295</a>). A stricter subset of YAML that kills the classic foot-guns, the ones where <code>no</code> silently becomes <code>false</code>. The good part is that it&#39;s not a migration: every KYAML file is already valid YAML, so every version of kubectl already reads it.</p>
+<pre><code class="language-bash">kubectl get deploy/api -o kyaml
+</code></pre>
+<p><strong>PVCs now tell you they&#39;re unused</strong> (<a href="https://github.com/kubernetes/enhancements/issues/5541">KEP-5541</a>, Beta, on by default). A new <code>Unused</code> condition flips to <code>True</code> when the last pod referencing a claim goes away, and the condition&#39;s <code>lastTransitionTime</code> doubles as an &quot;unused since&quot; timestamp. Kubernetes deliberately deletes nothing. It just tells you, and what you do about it is your call. Correct design.</p>
+<p>Go find the money:</p>
+<pre><code class="language-bash"># every PVC nothing has mounted, oldest first
+kubectl get pvc -A -o json | jq -r &#39;
+  .items[]
+  | select(.status.conditions[]? | select(.type == &quot;Unused&quot; and .status == &quot;True&quot;))
+  | [ (.status.conditions[] | select(.type == &quot;Unused&quot;) | .lastTransitionTime),
+      .metadata.namespace, .metadata.name, .spec.resources.requests.storage ]
+  | @tsv&#39; | sort
+</code></pre>
+<p>One caveat: the timestamp records when the controller noticed nothing was using the claim, not the exact moment the disk unmounted. The idle time it reports may run slightly short, never longer.</p>
+<p><strong>Memory QoS went Beta and on by default</strong> (<a href="https://github.com/kubernetes/enhancements/issues/2570">KEP-2570</a>). Kubernetes now uses your memory requests and limits to set cgroups v2 controls (<code>memory.min</code>, <code>memory.low</code>, <code>memory.high</code>), protecting requested memory from reclaim and throttling a pod that&#39;s climbing towards its limit instead of letting it hit the wall and get OOM-killed. The defaults were chosen so upgrading doesn&#39;t start throttling anything unexpectedly.</p>
+<pre><code class="language-yaml">apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+
+# Memory QoS is on by default in v1.37. These are the two knobs.
+memoryThrottlingFactor: 0.9   # where memory.high sits relative to the limit
+# memoryReservationPolicy:    # new in v1.37: how much requested memory is
+                              # protected from reclaim. Check the kubelet
+                              # reference for the current values before setting it.
+</code></pre>
+<p>This needs cgroups v2, which is its own reason to read the deprecation section.</p>
+<p><strong>Pod certificates and ClusterTrustBundles are Stable</strong> (<a href="https://github.com/kubernetes/enhancements/issues/4317">KEP-4317</a> and <a href="https://github.com/kubernetes/enhancements/issues/3257">KEP-3257</a>). Built-in workload identity: a pod gets its own private key and X.509 certificate through a projected volume, plus the trust anchors needed to verify other workloads. You pick a signer name and run a signer controller that watches <code>PodCertificateRequest</code> objects and issues certificates for eligible pods.</p>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: payments-api
+spec:
+  containers:
+    - name: app
+      image: registry.example/payments:2.4
+      volumeMounts:
+        - name: identity
+          mountPath: /var/run/identity
+          readOnly: true
+  volumes:
+    - name: identity
+      projected:
+        sources:
+          # the pod&#39;s own key and certificate, refreshed by your signer controller
+          - podCertificate:
+              signerName: example.com/workload-identity
+              keyType: ECDSAP256
+              credentialBundlePath: creds.pem
+          # the trust anchors needed to verify everyone else
+          - clusterTrustBundle:
+              signerName: example.com/workload-identity
+              path: ca.crt
+</code></pre>
+<p>If you deployed a service mesh purely to get mTLS identity, this is the beginning of not needing to. Check the <a href="https://kubernetes.io/docs/concepts/storage/projected-volumes/">projected volume docs</a> for the full field list before you wire it up.</p>
+<p><strong>A <code>Recreate</code> update strategy for StatefulSets</strong> (<a href="https://github.com/kubernetes/enhancements/issues/3541">KEP-3541</a>, Alpha). Deployments have had this forever; StatefulSets only had <code>OnDelete</code> and <code>RollingUpdate</code>. Delete every pod, then create the new ones.</p>
+<pre><code class="language-yaml">apiVersion: apps/v1
+kind: StatefulSet
+spec:
+  updateStrategy:
+    type: Recreate     # Alpha: needs the StatefulSetRecreateStrategy gate
+</code></pre>
+<p>And quickly: pod-level checkpoint and restore (<a href="https://github.com/kubernetes/enhancements/issues/5823">KEP-5823</a>, Alpha, and your container runtime has to implement the new CRI calls too), proper Node lifecycle conditions like <code>DrainInProgress</code> and <code>MaintenanceInProgress</code> so every tool stops guessing from taints and annotations (<a href="https://github.com/kubernetes/enhancements/issues/5683">KEP-5683</a>, Alpha), a faster nftables kube-proxy that talks netlink instead of shelling out to <code>nft</code> and can finally serve NodePort over localhost (<a href="https://github.com/kubernetes/enhancements/issues/6032">KEP-6032</a>), and <code>maxUnavailable</code> for StatefulSets switched back on after the v1.36 bug that could pin a pod in CrashLoopBackOff forever.</p>
+<h2 id="now-the-part-that-can-ruin-your-week">Now the part that can ruin your week</h2>
+<p>Straight from the changelog&#39;s &quot;no, really, you MUST read this before you upgrade&quot; section. Four of these, and one of them is nasty.</p>
+<h3 id="1-selinux-volume-mounting">1. SELinux volume mounting</h3>
+<p>This is the big one, and only if you run SELinux. If you don&#39;t, skip to the next.</p>
+<p><code>SELinuxMount</code> and <code>SELinuxChangePolicy</code> (<a href="https://github.com/kubernetes/enhancements/issues/1710">KEP-1710</a>) are Stable and on. Volumes now get mounted with an SELinux context rather than recursively relabelled, when the volume&#39;s CSI driver opts in via <code>.spec.seLinuxMount: true</code>. Here&#39;s what that does to you:</p>
+<figure>
+  <img src="/assets/blog/k8s-137-selinux-breakage.svg" alt="Two pods with different SELinux labels sharing one volume. In v1.36 and earlier the volume is relabelled recursively and both pods start. In v1.37 the volume is mounted with one SELinux context, so Pod A starts and Pod B is refused and fails to start. Fix: set spec.seLinuxChangePolicy to Recursive on the pod." width="860" height="516" loading="lazy" decoding="async">
+  <figcaption>A mount carries exactly one SELinux context. Two pods, two labels, one volume, and the second pod stops starting.</figcaption>
+</figure>
+
+<p>Two pods with different SELinux labels sharing a volume on the same node used to work fine. Now the second one can just fail to start. Go looking for shared volumes before you upgrade, not after.</p>
+<p>To keep the old behaviour for a specific workload:</p>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: legacy-shared-volume
+spec:
+  seLinuxChangePolicy: Recursive   # opt back into pre-v1.37 relabelling
+  containers:
+    - name: app
+      image: registry.example/app:1.0
+      volumeMounts:
+        - name: shared
+          mountPath: /data
+  volumes:
+    - name: shared
+      persistentVolumeClaim:
+        claimName: shared-data
+</code></pre>
+<p>You can still disable it cluster-wide, but only for one more release. It locks in v1.38. Clusters without SELinux see no effect at all.</p>
+<h3 id="2-the-schedulingk8sio-v1alpha2-api-is-gone">2. The <code>scheduling.k8s.io/v1alpha2</code> API is gone</h3>
+<p>Promoted to <code>v1alpha3</code>, and <code>v1alpha2</code> dropped outright. You have to <strong>remove every v1alpha2 object from your API server before you upgrade</strong>, not after. Only bites you if you were playing with the alpha workload-aware scheduling APIs, but if you were, this is a hard stop.</p>
+<pre><code class="language-bash">kubectl get --raw /apis/scheduling.k8s.io/v1alpha2 2&gt;/dev/null \
+  &amp;&amp; echo &quot;v1alpha2 still served here. Clean it out before upgrading.&quot;
+</code></pre>
+<h3 id="3-eventrecordqps-0-quietly-changed-meaning">3. <code>eventRecordQPS: 0</code> quietly changed meaning</h3>
+<p>It used to mean &quot;use the default&quot;. Now it means what the docs always claimed: unlimited, no rate limit whatsoever. If you have a 0 in your kubelet config and you liked the old behaviour, say the number out loud.</p>
+<pre><code class="language-yaml">apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+
+# v1.37 fixed this: 0 now genuinely means &quot;no limit&quot;, not &quot;use the default&quot;.
+# If you had 0 and wanted the old behaviour, this is what it was.
+eventRecordQPS: 50
+
+# Escape hatch for cgroups v1 nodes. Treat this as a countdown, not a fix.
+failCgroupV1: false
+</code></pre>
+<p>Otherwise you have silently removed a rate limit and you&#39;ll find out during your next event storm.</p>
+<h3 id="4-old-cadvisor-kubelet-flags-now-stop-the-kubelet-from-starting">4. Old cAdvisor kubelet flags now stop the kubelet from starting</h3>
+<p>Not a warning. The kubelet does not come up.</p>
+<p>The embedded cAdvisor moved to a leaner module and a long list of deprecated flags is simply no longer accepted: <code>--containerd</code>, <code>--containerd-namespace</code>, <code>--container-hints</code>, <code>--boot-id-file</code>, <code>--machine-id-file</code>, <code>--global-housekeeping-interval</code>, <code>--application-metrics-count-limit</code>, <code>--enable-load-reader</code>, <code>--event-storage-age-limit</code>, <code>--event-storage-event-limit</code>, <code>--log-cadvisor-usage</code>, and the whole <code>--storage-driver-*</code> family. Only <code>--housekeeping-interval</code> survives.</p>
+<pre><code class="language-bash">DEAD=&#39;containerd|containerd-namespace|container-hints|boot-id-file|machine-id-file&#39;
+DEAD=&quot;$DEAD|storage-driver|global-housekeeping|application-metrics|event-storage&quot;
+DEAD=&quot;$DEAD|enable-load-reader|log-cadvisor-usage&quot;
+
+grep -rE -- &quot;--($DEAD)&quot; \
+  /etc/systemd/system/kubelet* /etc/default/kubelet /var/lib/kubelet/ 2&gt;/dev/null
+</code></pre>
+<p>Three metric series disappear with it: <code>container_cpu_load_average_10s</code>, <code>container_cpu_load_d_average_10s</code> and <code>container_tasks_state</code>, plus any custom <code>container_application_*</code> metrics. Check your dashboards and, more importantly, your alerts. An alert that silently stops firing is worse than one that breaks loudly.</p>
+<p>Two smaller ones while you&#39;re in here. <strong>Static pods can no longer reference Secrets or ConfigMaps</strong>, which was always a bug, and the <code>PreventStaticPodAPIReferences</code> gate that let you opt out has been removed. And the kubelet now <strong>logs its full effective configuration at startup</strong>, so go look at who has access to the <code>nodes/logs</code> ClusterRole.</p>
+<h2 id="the-slow-motion-deprecations">The slow-motion deprecations</h2>
+<p>None of this breaks today. All of it breaks eventually.</p>
+<p><strong>kube-dns.</strong> CoreDNS has been the default since v1.13 and kube-dns never caught up: no EndpointSlices, no dual-stack Services. The subproject is already retired and no new packages are expected after v1.40. If you&#39;re still on it, that&#39;s a migration to schedule.</p>
+<p><strong>kube-proxy&#39;s ipvs mode</strong> (<a href="https://github.com/kubernetes/enhancements/issues/5495">KEP-5495</a>). Added in v1.8 to work around iptables performance, but the kernel&#39;s ipvs API can&#39;t fully implement Kubernetes Services on its own, so ipvs mode has been quietly using iptables underneath the whole time. v1.37 logs a deprecation warning at startup, v1.40 turns it off by default, v1.43 removes it.</p>
+<pre><code class="language-bash">kubectl -n kube-system get configmap kube-proxy \
+  -o jsonpath=&#39;{.data.config\.conf}&#39; | grep &#39;mode:&#39;
+</code></pre>
+<p>On a modern kernel you want nftables, GA since v1.33. On an older kernel, iptables is still the default and still fine. Note that kubeadm now warns if you haven&#39;t set <code>mode</code> explicitly, because the default is heading for nftables.</p>
+<p><strong>cgroups v1</strong> (<a href="https://github.com/kubernetes/enhancements/issues/5573">KEP-5573</a>). Since v1.35 the kubelet refuses to start on a cgroups v1 node unless you set <code>failCgroupV1: false</code>. That override still works in v1.37. Treat it as a countdown: memory QoS and memory-backed volume resizing only exist on v2.</p>
+<p><strong><code>kubectl run --filename</code>.</strong> Deprecated. The flag was ignored anyway, since <code>kubectl run</code> builds the pod purely from command-line arguments.</p>
+<h2 id="everything-that-graduated-in-one-place">Everything that graduated, in one place</h2>
+<p>Most write-ups either list all 67 changes or list four. Here&#39;s the complete Stable set, which is the part with the longest half-life, plus what each one actually gives you.</p>
+<table>
+<thead>
+<tr>
+<th>Graduated to Stable</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5295">KYAML</a></td>
+<td>YAML subset without the foot-guns, <code>kubectl get -o kyaml</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5207"><code>metrics.k8s.io</code> API</a></td>
+<td><code>kubectl top</code> and HPA finally on a v1 API after nine years</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/4568">Resilient watchcache initialization</a></td>
+<td>API server stops overloading etcd at startup</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/4317">Pod Certificates</a></td>
+<td>Per-pod key and X.509 cert via projected volume</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/3257">ClusterTrustBundles</a></td>
+<td>Distributing the trust anchors that verify them</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5328">Node Declared Features</a></td>
+<td>Nodes publish which gated features they support, for version skew</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/4192">Storage Version Migrator in-tree</a></td>
+<td>Rewrite stored objects after an API or encryption change, declaratively</td>
+</tr>
+<tr>
+<td>Speed up recursive SELinux label change</td>
+<td>The mount-context behaviour described above</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5055">DRA: device taints and tolerations</a></td>
+<td>Mark individual devices unschedulable, or taint by rule</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5004">DRA: extended resource requests via DRA driver</a></td>
+<td><code>example.com/gpu: 3</code> served by DRA, no device plugin needed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/4817">DRA: ResourceClaim device status</a></td>
+<td>Drivers report per-device state, including assigned IPs</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kubernetes/enhancements/issues/6072">DRA: standard <code>numaNode</code> attribute</a></td>
+<td>One attribute name for NUMA placement across every driver</td>
+</tr>
+<tr>
+<td>Configurable tolerance for HPAs</td>
+<td>Per-HPA tolerance instead of one cluster-wide value</td>
+</tr>
+<tr>
+<td>Resource health status in Pod status</td>
+<td>Device failures visible on the pod, not just in node logs</td>
+</tr>
+<tr>
+<td>Arbitrary FQDN as a pod&#39;s hostname</td>
+<td>Set the fully qualified hostname a workload sees</td>
+</tr>
+<tr>
+<td>Relaxed validation for Service names</td>
+<td>Fewer names rejected for no good reason</td>
+</tr>
+<tr>
+<td>Condition for sandbox creation</td>
+<td>A real signal for &quot;the sandbox came up&quot;</td>
+</tr>
+</tbody></table>
+<p>Beta this cycle, roughly in the order you&#39;re likely to feel them. The last column is the one that matters: a Beta feature that is <strong>on</strong> changes your cluster whether you asked for it or not.</p>
+<table>
+<thead>
+<tr>
+<th>Beta in v1.37</th>
+<th>KEP</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HPA scale to zero</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/2021">2021</a></td>
+<td><strong>on</strong></td>
+</tr>
+<tr>
+<td>Memory QoS</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/2570">2570</a></td>
+<td><strong>on</strong></td>
+</tr>
+<tr>
+<td>PVC unused tracking</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5541">5541</a></td>
+<td><strong>on</strong></td>
+</tr>
+<tr>
+<td>etcd RangeStream</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5966">5966</a></td>
+<td><strong>on</strong></td>
+</tr>
+<tr>
+<td>Concurrent watch decode</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/6178">6178</a></td>
+<td><strong>on</strong></td>
+</tr>
+<tr>
+<td>Stale controller mitigation</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5647">5647</a></td>
+<td><strong>on</strong>, per controller</td>
+</tr>
+<tr>
+<td>Gang scheduling</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/4671">4671</a></td>
+<td>gate</td>
+</tr>
+<tr>
+<td>Workload-aware preemption</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5710">5710</a></td>
+<td>gate</td>
+</tr>
+<tr>
+<td>DRA ResourceClaims for workloads</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5729">5729</a></td>
+<td>gate</td>
+</tr>
+<tr>
+<td>Native histograms for metrics</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5808">5808</a></td>
+<td>gate</td>
+</tr>
+<tr>
+<td>Manifest-based admission control</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5793">5793</a></td>
+<td>gate</td>
+</tr>
+<tr>
+<td>Removing undecryptable resources</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/3926">3926</a></td>
+<td>gate</td>
+</tr>
+<tr>
+<td>Storage capacity scoring</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/4049">4049</a></td>
+<td>off</td>
+</tr>
+<tr>
+<td>CSI attach limits for Cluster Autoscaler</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5030">5030</a></td>
+<td>off</td>
+</tr>
+<tr>
+<td>Watch-based route reconciliation</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5237">5237</a></td>
+<td>off</td>
+</tr>
+<tr>
+<td>Pod-level resource managers</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5526">5526</a></td>
+<td>off</td>
+</tr>
+<tr>
+<td>CRI-only container stats</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/2371">2371</a></td>
+<td>off</td>
+</tr>
+</tbody></table>
+<p>&quot;gate&quot; means the release notes don&#39;t state a default either way, so check the feature gate reference before assuming. I&#39;d rather say that than guess on your behalf.</p>
+<p>Alpha is where v1.38 and v1.39 come from, so this is a watch list rather than a to-do list. All of it is off by default.</p>
+<table>
+<thead>
+<tr>
+<th>New in Alpha</th>
+<th>KEP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pod-level checkpoint and restore</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5823">5823</a></td>
+</tr>
+<tr>
+<td><code>CompositePodGroup</code> for hierarchical workloads</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/6012">6012</a></td>
+</tr>
+<tr>
+<td>Job <code>spec.scheduling</code></td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5547">5547</a></td>
+</tr>
+<tr>
+<td>Workload-aware scheduling controller APIs</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/6089">6089</a></td>
+</tr>
+<tr>
+<td>DRA derived attributes</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/6080">6080</a></td>
+</tr>
+<tr>
+<td>DRA device compatibility groups</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5963">5963</a></td>
+</tr>
+<tr>
+<td>DRA node-allocatable resource requests</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5517">5517</a></td>
+</tr>
+<tr>
+<td>Scheduler preemption for in-place pod resize</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5836">5836</a></td>
+</tr>
+<tr>
+<td>Resizing memory-backed volumes in place</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/6030">6030</a></td>
+</tr>
+<tr>
+<td>Node lifecycle conditions</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/5683">5683</a></td>
+</tr>
+<tr>
+<td><code>Recreate</code> update strategy for StatefulSets</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/3541">3541</a></td>
+</tr>
+<tr>
+<td>localhost NodePort proxy for nftables</td>
+<td><a href="https://github.com/kubernetes/enhancements/issues/6032">6032</a></td>
+</tr>
+</tbody></table>
+<p>For the full 67 with every PR link, the <a href="https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.37.md#changelog-since-v1360">v1.37 changelog</a> is the source of truth.</p>
+<h2 id="does-this-touch-the-cka">Does this touch the CKA?</h2>
+<p>Not really, no.</p>
+<p>Cert curricula track Kubernetes on a lag, and the CKA tests concepts rather than release-specific feature gates. Nothing here changes how you write a Deployment or debug a pending pod.</p>
+<p>The one habit worth forming now is nftables over ipvs, because that&#39;s clearly where kube-proxy is going. Beyond that, the exam lets you use the docs while you sit it, so being fast at looking things up beats memorising which feature landed in which version. I wrote up <a href="/blog/cka-exam-guide/">what the CKA actually tests</a> if that&#39;s on your list.</p>
+<h2 id="try-it-this-week">Try it this week</h2>
+<p>Three things, none of which need a maintenance window.</p>
+<p><strong>1. Find the storage you&#39;re paying for and not using.</strong> Run the <code>jq</code> one-liner above against a staging cluster. It takes ten seconds and it usually finds something.</p>
+<p><strong>2. Pick one idle workload and set <code>minReplicas: 0</code>.</strong> A queue consumer, a batch worker, anything driven by an external metric. Watch for the <code>ScaledToZero</code> condition. This is the single highest-value change in the release for most people&#39;s bills.</p>
+<p><strong>3. Run the four pre-upgrade checks.</strong> Before v1.37 goes anywhere near production:</p>
+<pre><code class="language-bash"># 1. dead cAdvisor flags that stop the kubelet booting
+grep -rE -- &#39;--(containerd|container-hints|boot-id-file|storage-driver)&#39; \
+  /etc/systemd/system/kubelet* /var/lib/kubelet/ 2&gt;/dev/null
+
+# 2. an eventRecordQPS of 0 that now means something else
+grep -r &#39;eventRecordQPS&#39; /var/lib/kubelet/config.yaml 2&gt;/dev/null
+
+# 3. which kube-proxy backend you&#39;re on, and how much ipvs runway you have
+kubectl -n kube-system get configmap kube-proxy \
+  -o jsonpath=&#39;{.data.config\.conf}&#39; | grep &#39;mode:&#39;
+
+# 4. alpha scheduling objects that must be deleted before the upgrade
+kubectl get --raw /apis/scheduling.k8s.io/v1alpha2 2&gt;/dev/null
+</code></pre>
+<p>And if you run SELinux, go find volumes shared between pods with different labels. That&#39;s the one that will actually page you.</p>
+<p>Then let a patch release or two land, if you can afford to wait. You usually can.</p>
+<p>Having gone through all of it, the first thing I&#39;m actually going to test is HPA scaling to zero. Gang scheduling after that, probably.</p>
+<h2 id="credits-where-they-39-re-due">Credits where they&#39;re due</h2>
+<p>15 weeks of work, May 18 to August 26, <strong>1,754 people across 212 companies</strong>, led by <a href="https://www.linkedin.com/in/dipeshrawat/">Dipesh Rawat</a>. That&#39;s the part of a release nobody reads and everybody depends on.</p>
+<p>The Release Team runs a webinar on <strong>September 23 at 4:00 PM UTC</strong> through CNCF Online Programs if you want it from the people who built it.</p>
+<p>And if you&#39;re anywhere near Gujarat, <a href="https://www.kcdgujarat.com/">KCD Gujarat is in Ahmedabad on September 19</a>, the state&#39;s first Kubernetes Community Day. I&#39;ll be there. Good place to argue about whether scale-to-zero will actually save anyone money.</p>
+<p>As for the other Garhwal, the one with the 52 forts: still haven&#39;t been. Still going.</p>
+<p>Now go stare at that logo for 37 seconds.</p>
+<p>$ happy upgrading</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/">Kubernetes v1.37: Garhwal</a>, the official release announcement</li>
+<li><a href="https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.37.md#changelog-since-v1360">CHANGELOG-1.37.md</a>, including the urgent upgrade notes quoted above</li>
+<li><a href="https://kubernetes.io/blog/2026/04/22/breaking-changes-in-selinux-volume-labeling/">SELinux volume labelling changes</a>, the pre-announcement worth reading if you run SELinux</li>
+<li><a href="https://kubernetes.io/docs/concepts/storage/projected-volumes/">Projected volumes</a>, for the pod certificate field reference</li>
+<li><a href="https://en.wikipedia.org/wiki/Garhwal_kingdom#52_garh_of_Garhwal">Garhwal kingdom and the 52 garh</a>, where the release name comes from</li>
+<li><a href="https://en.wikipedia.org/wiki/Garhwal_division">Garhwal division</a>, the seven districts and the geography</li>
+</ul>
+<p><em>The diagrams in this post are hand-drawn and free to reuse with attribution.</em></p>
+<p>Hopefully, you enjoyed the article! See you in the next one. Until then, happy podding.</p>
+
+            </div>
+            <footer class="mt-12 pt-6 border-t border-border-color">
+                <div class="flex flex-wrap items-center gap-3 font-fira text-sm">
+                    <span class="text-gray-400">Share:</span>
+                    <a href="https://twitter.com/intent/tweet?text=Kubernetes%20v1.37%20(Garhwal)%3A%2052%20forts%2C%2067%20changes%2C%20and%20what%20actually%20breaks&url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fkubernetes-v1-37-garhwal%2F" target="_blank" rel="noopener noreferrer" class="chip">X / Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fkubernetes-v1-37-garhwal%2F" target="_blank" rel="noopener noreferrer" class="chip">LinkedIn</a>
+                    <button type="button" id="copy-link" class="chip" data-url="https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/">Copy link</button>
+                    <button type="button" id="native-share" class="chip hidden" data-title="Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks" data-url="https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/">Share…</button>
+                    <a href="/blog/rss.xml" class="chip">RSS</a>
+                </div>
+                <p class="font-fira text-sm text-gray-400 mt-5">Thanks for reading. <a href="/#contact" class="text-primary-color hover:underline">Say hi</a> if it was useful.</p>
+                <p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">30% off the CKA, CKAD and CKS with code RUSHABH30</a>.</p>
+            </footer>
+        </article>
+        
+        <aside class="post-toc" aria-label="Table of contents">
+            <div class="post-toc-sticky">
+                <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># on this page</p>
+                <nav class="post-toc-nav">
+                    <a href="#what-garhwal-actually-is" data-toc-link="what-garhwal-actually-is" class="post-toc-link">What Garhwal (गढ़वाल) actually is</a>
+                    <a href="#the-short-version" data-toc-link="the-short-version" class="post-toc-link">The short version</a>
+                    <a href="#an-honest-triage" data-toc-link="an-honest-triage" class="post-toc-link">An honest triage</a>
+                    <a href="#the-one-i-39-d-turn-on-first" data-toc-link="the-one-i-39-d-turn-on-first" class="post-toc-link">The one I&#39;d turn on first</a>
+                    <a href="#if-you-run-ai-training-jobs-read-this-one" data-toc-link="if-you-run-ai-training-jobs-read-this-one" class="post-toc-link">If you run AI training jobs, read this one</a>
+                    <a href="#the-boring-one-that-matters-most" data-toc-link="the-boring-one-that-matters-most" class="post-toc-link">The boring one that matters most</a>
+                    <a href="#smaller-things-worth-knowing" data-toc-link="smaller-things-worth-knowing" class="post-toc-link">Smaller things worth knowing</a>
+                    <a href="#now-the-part-that-can-ruin-your-week" data-toc-link="now-the-part-that-can-ruin-your-week" class="post-toc-link">Now the part that can ruin your week</a>
+                    <a href="#1-selinux-volume-mounting" data-toc-link="1-selinux-volume-mounting" class="post-toc-link post-toc-sub">1. SELinux volume mounting</a>
+                    <a href="#2-the-schedulingk8sio-v1alpha2-api-is-gone" data-toc-link="2-the-schedulingk8sio-v1alpha2-api-is-gone" class="post-toc-link post-toc-sub">2. The scheduling.k8s.io/v1alpha2 API is gone</a>
+                    <a href="#3-eventrecordqps-0-quietly-changed-meaning" data-toc-link="3-eventrecordqps-0-quietly-changed-meaning" class="post-toc-link post-toc-sub">3. eventRecordQPS: 0 quietly changed meaning</a>
+                    <a href="#4-old-cadvisor-kubelet-flags-now-stop-the-kubelet-from-starting" data-toc-link="4-old-cadvisor-kubelet-flags-now-stop-the-kubelet-from-starting" class="post-toc-link post-toc-sub">4. Old cAdvisor kubelet flags now stop the kubelet from starting</a>
+                    <a href="#the-slow-motion-deprecations" data-toc-link="the-slow-motion-deprecations" class="post-toc-link">The slow-motion deprecations</a>
+                    <a href="#everything-that-graduated-in-one-place" data-toc-link="everything-that-graduated-in-one-place" class="post-toc-link">Everything that graduated, in one place</a>
+                    <a href="#does-this-touch-the-cka" data-toc-link="does-this-touch-the-cka" class="post-toc-link">Does this touch the CKA?</a>
+                    <a href="#try-it-this-week" data-toc-link="try-it-this-week" class="post-toc-link">Try it this week</a>
+                    <a href="#credits-where-they-39-re-due" data-toc-link="credits-where-they-39-re-due" class="post-toc-link">Credits where they&#39;re due</a>
+                    <a href="#references" data-toc-link="references" class="post-toc-link">References</a>
+                </nav>
+            </div>
+        </aside>
+        </div>
+    </main>
+
+    <footer class="border-t border-border-color mt-10">
+        <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-fira text-gray-500">
+            <p>&copy; 2026 Rushabh Shah · Designed &amp; built with care.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://github.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">GitHub</a>
+                <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">LinkedIn</a>
+                <a href="https://twitter.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">Twitter</a>
+                <a href="/blog/rss.xml" class="hover:text-primary-color">RSS</a>
+                <a href="/privacy/" class="hover:text-primary-color">Privacy</a>
+                <a href="/linux-foundation-coupon/" class="hover:text-primary-color">30% off Linux Foundation ↗</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const b = document.getElementById('menu-btn');
+            const m = document.getElementById('site-menu');
+            if (b && m) {
+                b.addEventListener('click', () => {
+                    const open = m.classList.contains('hidden');
+                    m.classList.toggle('hidden', !open);
+                    b.setAttribute('aria-expanded', String(open));
+                });
+            }
+        });
+    </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks","description":"A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.","datePublished":"2026-08-26T19:00:00.000Z","dateModified":"2026-08-26T19:00:00.000Z","url":"https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"kubernetes, releases","image":"https://rushabhshah.dev/assets/blog/kubernetes-1-37-garhwal-og.jpg"}</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const v = document.getElementById('post-views');
+        if (v) fetch('https://rushabhshah.goatcounter.com/counter/' + location.pathname + '.json')
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(d => {
+                const n = (d.count || '').toString().replace(/\s/g, ',');
+                if (n) v.textContent = '· ' + n + ' views';
+            })
+            .catch(() => {});
+        const c = document.getElementById('copy-link');
+        if (c) c.addEventListener('click', () => {
+            navigator.clipboard.writeText(c.dataset.url).then(() => {
+                c.classList.add('copied');
+                const t = c.textContent;
+                c.textContent = 'Copied!';
+                setTimeout(() => { c.textContent = t; c.classList.remove('copied'); }, 2000);
+            }).catch(() => {});
+        });
+        const progressBar = document.getElementById('reading-progress-bar');
+        if (progressBar) {
+            const article = document.querySelector('.post-article');
+            let ticking = false;
+            const update = () => {
+                ticking = false;
+                const total = article.offsetHeight - window.innerHeight;
+                const pct = total > 0 ? Math.min(1, Math.max(0, (window.scrollY - article.offsetTop + 200) / total)) : 0;
+                progressBar.style.transform = 'scaleX(' + pct + ')';
+            };
+            document.addEventListener('scroll', () => {
+                if (!ticking) { ticking = true; requestAnimationFrame(update); }
+            }, { passive: true });
+            update();
+        }
+        const s = document.getElementById('native-share');
+        if (s && navigator.share) {
+            s.classList.remove('hidden');
+            s.addEventListener('click', () => {
+                navigator.share({ title: s.dataset.title, url: s.dataset.url }).catch(() => {});
+            });
+        }
+        const tocLinks = document.querySelectorAll('.post-toc-link');
+        if (tocLinks.length) {
+            const byId = new Map();
+            tocLinks.forEach(a => {
+                const heading = document.getElementById(a.dataset.tocLink);
+                if (heading) byId.set(heading, a);
+            });
+            let current = null;
+            const setActive = (link) => {
+                tocLinks.forEach(a => a.classList.toggle('active', a === link));
+            };
+            // A thin band across the top ~30% of the viewport. Whichever heading
+            // most recently entered it stays "current" until the next one does,
+            // so the highlight doesn't reset while a heading scrolls past upward.
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) current = entry.target; });
+                if (current) setActive(byId.get(current));
+            }, { rootMargin: '0px 0px -70% 0px', threshold: 0 });
+            byId.forEach((_link, heading) => observer.observe(heading));
+
+            // Explicit smooth animation for in-page TOC clicks (heading ids are
+            // already in the static HTML, so the browser's own default jump
+            // works fine on its own — this just makes clicking one feel nicer).
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            tocLinks.forEach(a => {
+                a.addEventListener('click', (e) => {
+                    const heading = document.getElementById(a.dataset.tocLink);
+                    if (!heading) return;
+                    e.preventDefault();
+                    heading.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+                    history.pushState(null, '', '#' + a.dataset.tocLink);
+                });
+            });
+        }
+    });
+    </script>
+</body>
+</html>
