@@ -1240,6 +1240,20 @@ nav a { -webkit-tap-highlight-color: transparent; }
     .post-prose table { font-size: 0.85rem; }
 }
 
+/* A full-bleed illustration, embedded with <object> rather than <img> so its
+   own hover styles and text selection still work. An <img>-loaded SVG never
+   receives pointer events, which would kill both. */
+.post-prose figure.figure-wide { margin: 0 0 2.4em; }
+.post-prose figure.figure-wide object {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 520;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background: #150d14;
+}
+
 /* Scrollable code blocks and tables get a fade on whichever edge still has
    content off-screen. Thirteen code blocks overflow on a 390px phone and
    nothing previously signalled that, so readers hit a cut-off line and assumed
