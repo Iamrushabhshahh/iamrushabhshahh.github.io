@@ -85,7 +85,7 @@ Every release write-up lists all 67 and leaves you to figure out which ones are 
 Before the triage, the one bit of vocabulary the whole post leans on:
 
 <figure>
-  <img src="/assets/blog/k8s-137-alpha-beta-stable.svg" alt="A three-step ladder. Alpha: off by default, can change or vanish next release, 27 in v1.37. Beta: mostly works and the API is settling, some are now on by default, 23 in v1.37. Stable: finished and supported, safe to build on, 16 in v1.37." width="860" height="528" loading="lazy" decoding="async">
+  <a href="/assets/blog/k8s-137-alpha-beta-stable.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/k8s-137-alpha-beta-stable.svg" alt="A three-step ladder. Alpha: off by default, can change or vanish next release, 27 in v1.37. Beta: mostly works and the API is settling, some are now on by default, 23 in v1.37. Stable: finished and supported, safe to build on, 16 in v1.37." width="860" height="528" loading="lazy" decoding="async"></a>
   <figcaption>The middle step is where upgrades bite. Beta used to mean "off unless you ask for it". It doesn't always mean that any more.</figcaption>
 </figure>
 
@@ -94,9 +94,10 @@ That middle box is the whole reason upgrade notes exist. A feature going Beta *a
 Want to know what's actually switched on in your cluster right now?
 
 ```bash
-# every feature gate the API server is running, and its state
-kubectl get --raw /metrics | grep '^kubernetes_feature_enabled' \
-  | grep -E 'HPAScaleToZero|MemoryQoS|SELinuxMount'
+# feature gates the API server is running
+kubectl get --raw /metrics \
+  | grep '^kubernetes_feature_enabled' \
+  | grep -E 'HPAScaleToZero|MemoryQoS|SELinux'
 ```
 
 So: four features you'll actually notice, four things that can break, and a deprecation list for next quarter's roadmap.
@@ -110,7 +111,7 @@ Until now the autoscaler could take you down to one pod and no further. One idle
 There's a catch, and it's the part people get stuck on, so here it is drawn out:
 
 <figure>
-  <img src="/assets/blog/k8s-137-scale-to-zero.svg" alt="Two rows. Top row, scaling on CPU: zero pods running means no CPU reading, which means nothing to scale up from, so the workload is stuck at zero forever. Bottom row, scaling on queue depth: zero pods running, the queue still reports 12 jobs waiting because it lives outside the cluster, so the HPA wakes the workload up to 3 pods." width="860" height="530" loading="lazy" decoding="async">
+  <a href="/assets/blog/k8s-137-scale-to-zero.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/k8s-137-scale-to-zero.svg" alt="Two rows. Top row, scaling on CPU: zero pods running means no CPU reading, which means nothing to scale up from, so the workload is stuck at zero forever. Bottom row, scaling on queue depth: zero pods running, the queue still reports 12 jobs waiting because it lives outside the cluster, so the HPA wakes the workload up to 3 pods." width="860" height="530" loading="lazy" decoding="async"></a>
   <figcaption>Scale to zero only works on object and external metrics. Never on CPU or memory.</figcaption>
 </figure>
 
@@ -128,10 +129,12 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: batch-worker
-  minReplicas: 0        # the new bit. Before v1.37 this was rejected
+  minReplicas: 0   # new. Before v1.37 this was rejected
   maxReplicas: 20
   metrics:
-    - type: External    # External or Object only. CPU and memory cannot work here
+    # External or Object only.
+    # CPU and memory cannot work here
+    - type: External
       external:
         metric:
           name: queue_messages_ready
@@ -140,14 +143,17 @@ spec:
               queue: batch-jobs
         target:
           type: AverageValue
-          averageValue: "10"   # one pod per 10 queued messages
+          # one pod per 10 queued messages
+          averageValue: "10"
 ```
 
 Kubernetes also stamps a `ScaledToZero` condition on the autoscaler while it's holding a workload at zero. Sounds like bookkeeping. It isn't. Without it, "the autoscaler parked this because nothing was queued" and "a human set replicas to 0 on purpose" look identical, and that ambiguity is exactly how workloads get restarted at 2am by something trying to be helpful.
 
 ```bash
-kubectl get hpa batch-worker \
-  -o jsonpath='{range .status.conditions[?(@.type=="ScaledToZero")]}{.status}{" "}{.reason}{"\n"}{end}'
+kubectl get hpa batch-worker -o json \
+  | jq -r '.status.conditions[]
+           | select(.type == "ScaledToZero")
+           | .status + " " + .reason'
 # True  ScaledToZero        <- parked by the autoscaler
 # False NotScaledToZero     <- back up and running
 ```
@@ -158,7 +164,7 @@ First proposed in v1.16, via [KEP-2021](https://github.com/kubernetes/enhancemen
 The default scheduler places pods one at a time. Fine for a web service. Actively bad for a 64-pod training job.
 
 <figure>
-  <img src="/assets/blog/k8s-137-gang-scheduling.svg" alt="One training job of 64 pods, shown two ways. Left, the default scheduler: 40 pods running and 24 pending, GPUs held, zero useful work. Right, gang scheduling: all 64 start together, or the whole group waits in the queue." width="860" height="460" loading="lazy" decoding="async">
+  <a href="/assets/blog/k8s-137-gang-scheduling.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/k8s-137-gang-scheduling.svg" alt="One training job of 64 pods, shown two ways. Left, the default scheduler: 40 pods running and 24 pending, GPUs held, zero useful work. Right, gang scheduling: all 64 start together, or the whole group waits in the queue." width="860" height="460" loading="lazy" decoding="async"></a>
   <figcaption>40 out of 64 is not 62% of a training job. It's zero training and 40 GPUs you're paying for.</figcaption>
 </figure>
 
@@ -182,7 +188,7 @@ If your platform team is running a custom scheduler purely for gang semantics, t
 Nothing about this is exciting and it's probably the biggest operational win in the release.
 
 <figure>
-  <img src="/assets/blog/k8s-137-apiserver-startup.svg" alt="Before: etcd sends one giant blob, the API server builds it fully in memory first, then a single decoder handles one event at a time while everything queues. In v1.37: etcd 3.7 sends streamed chunks, each chunk is decoded as it arrives, and 10 workers decode in parallel and reorder before delivery. About 55% faster to warm the cache, benchmarked over 150,000 pods." width="860" height="484" loading="lazy" decoding="async">
+  <a href="/assets/blog/k8s-137-apiserver-startup.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/k8s-137-apiserver-startup.svg" alt="Before: etcd sends one giant blob, the API server builds it fully in memory first, then a single decoder handles one event at a time while everything queues. In v1.37: etcd 3.7 sends streamed chunks, each chunk is decoded as it arrives, and 10 workers decode in parallel and reorder before delivery. About 55% faster to warm the cache, benchmarked over 150,000 pods." width="860" height="484" loading="lazy" decoding="async"></a>
   <figcaption>Three separate pieces of work that all land in the same release and compound.</figcaption>
 </figure>
 
@@ -218,9 +224,15 @@ Go find the money:
 # every PVC nothing has mounted, oldest first
 kubectl get pvc -A -o json | jq -r '
   .items[]
-  | select(.status.conditions[]? | select(.type == "Unused" and .status == "True"))
-  | [ (.status.conditions[] | select(.type == "Unused") | .lastTransitionTime),
-      .metadata.namespace, .metadata.name, .spec.resources.requests.storage ]
+  | select(.status.conditions[]?
+           | select(.type == "Unused"
+                    and .status == "True"))
+  | [ (.status.conditions[]
+       | select(.type == "Unused")
+       | .lastTransitionTime),
+      .metadata.namespace,
+      .metadata.name,
+      .spec.resources.requests.storage ]
   | @tsv' | sort
 ```
 
@@ -232,11 +244,15 @@ One caveat: the timestamp records when the controller noticed nothing was using 
 apiVersion: kubelet.config.k8s.io/v1beta1
 kind: KubeletConfiguration
 
-# Memory QoS is on by default in v1.37. These are the two knobs.
-memoryThrottlingFactor: 0.9   # where memory.high sits relative to the limit
-# memoryReservationPolicy:    # new in v1.37: how much requested memory is
-                              # protected from reclaim. Check the kubelet
-                              # reference for the current values before setting it.
+# Memory QoS is on by default in v1.37.
+# These are the two knobs.
+# where memory.high sits relative to the limit
+memoryThrottlingFactor: 0.9
+
+# New in v1.37: how much requested memory is
+# protected from reclaim. Check the kubelet
+# reference for the values before setting it.
+# memoryReservationPolicy:
 ```
 
 This needs cgroups v2, which is its own reason to read the deprecation section.
@@ -260,12 +276,13 @@ spec:
     - name: identity
       projected:
         sources:
-          # the pod's own key and certificate, refreshed by your signer controller
+          # the pod's own key and certificate,
+          # refreshed by your signer controller
           - podCertificate:
               signerName: example.com/workload-identity
               keyType: ECDSAP256
               credentialBundlePath: creds.pem
-          # the trust anchors needed to verify everyone else
+          # trust anchors, to verify everyone else
           - clusterTrustBundle:
               signerName: example.com/workload-identity
               path: ca.crt
@@ -280,7 +297,8 @@ apiVersion: apps/v1
 kind: StatefulSet
 spec:
   updateStrategy:
-    type: Recreate     # Alpha: needs the StatefulSetRecreateStrategy gate
+    # Alpha: needs StatefulSetRecreateStrategy
+    type: Recreate
 ```
 
 And quickly: pod-level checkpoint and restore ([KEP-5823](https://github.com/kubernetes/enhancements/issues/5823), Alpha, and your container runtime has to implement the new CRI calls too), proper Node lifecycle conditions like `DrainInProgress` and `MaintenanceInProgress` so every tool stops guessing from taints and annotations ([KEP-5683](https://github.com/kubernetes/enhancements/issues/5683), Alpha), a faster nftables kube-proxy that talks netlink instead of shelling out to `nft` and can finally serve NodePort over localhost ([KEP-6032](https://github.com/kubernetes/enhancements/issues/6032)), and `maxUnavailable` for StatefulSets switched back on after the v1.36 bug that could pin a pod in CrashLoopBackOff forever.
@@ -296,7 +314,7 @@ This is the big one, and only if you run SELinux. If you don't, skip to the next
 `SELinuxMount` and `SELinuxChangePolicy` ([KEP-1710](https://github.com/kubernetes/enhancements/issues/1710)) are Stable and on. Volumes now get mounted with an SELinux context rather than recursively relabelled, when the volume's CSI driver opts in via `.spec.seLinuxMount: true`. Here's what that does to you:
 
 <figure>
-  <img src="/assets/blog/k8s-137-selinux-breakage.svg" alt="Two pods with different SELinux labels sharing one volume. In v1.36 and earlier the volume is relabelled recursively and both pods start. In v1.37 the volume is mounted with one SELinux context, so Pod A starts and Pod B is refused and fails to start. Fix: set spec.seLinuxChangePolicy to Recursive on the pod." width="860" height="516" loading="lazy" decoding="async">
+  <a href="/assets/blog/k8s-137-selinux-breakage.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/k8s-137-selinux-breakage.svg" alt="Two pods with different SELinux labels sharing one volume. In v1.36 and earlier the volume is relabelled recursively and both pods start. In v1.37 the volume is mounted with one SELinux context, so Pod A starts and Pod B is refused and fails to start. Fix: set spec.seLinuxChangePolicy to Recursive on the pod." width="860" height="516" loading="lazy" decoding="async"></a>
   <figcaption>A mount carries exactly one SELinux context. Two pods, two labels, one volume, and the second pod stops starting.</figcaption>
 </figure>
 
@@ -310,7 +328,8 @@ kind: Pod
 metadata:
   name: legacy-shared-volume
 spec:
-  seLinuxChangePolicy: Recursive   # opt back into pre-v1.37 relabelling
+  # opt back into pre-v1.37 relabelling
+  seLinuxChangePolicy: Recursive
   containers:
     - name: app
       image: registry.example/app:1.0
@@ -330,8 +349,8 @@ You can still disable it cluster-wide, but only for one more release. It locks i
 Promoted to `v1alpha3`, and `v1alpha2` dropped outright. You have to **remove every v1alpha2 object from your API server before you upgrade**, not after. Only bites you if you were playing with the alpha workload-aware scheduling APIs, but if you were, this is a hard stop.
 
 ```bash
-kubectl get --raw /apis/scheduling.k8s.io/v1alpha2 2>/dev/null \
-  && echo "v1alpha2 still served here. Clean it out before upgrading."
+kubectl get --raw /apis/scheduling.k8s.io/v1alpha2 \
+  2>/dev/null && echo "still served. Clean it out."
 ```
 
 ### 3. `eventRecordQPS: 0` quietly changed meaning
@@ -342,11 +361,13 @@ It used to mean "use the default". Now it means what the docs always claimed: un
 apiVersion: kubelet.config.k8s.io/v1beta1
 kind: KubeletConfiguration
 
-# v1.37 fixed this: 0 now genuinely means "no limit", not "use the default".
-# If you had 0 and wanted the old behaviour, this is what it was.
+# v1.37 fixed this: 0 now genuinely means "no
+# limit", not "use the default". If you had 0
+# and wanted the old behaviour, this was it.
 eventRecordQPS: 50
 
-# Escape hatch for cgroups v1 nodes. Treat this as a countdown, not a fix.
+# Escape hatch for cgroups v1 nodes.
+# A countdown, not a fix.
 failCgroupV1: false
 ```
 
@@ -359,12 +380,17 @@ Not a warning. The kubelet does not come up.
 The embedded cAdvisor moved to a leaner module and a long list of deprecated flags is simply no longer accepted: `--containerd`, `--containerd-namespace`, `--container-hints`, `--boot-id-file`, `--machine-id-file`, `--global-housekeeping-interval`, `--application-metrics-count-limit`, `--enable-load-reader`, `--event-storage-age-limit`, `--event-storage-event-limit`, `--log-cadvisor-usage`, and the whole `--storage-driver-*` family. Only `--housekeeping-interval` survives.
 
 ```bash
-DEAD='containerd|containerd-namespace|container-hints|boot-id-file|machine-id-file'
-DEAD="$DEAD|storage-driver|global-housekeeping|application-metrics|event-storage"
-DEAD="$DEAD|enable-load-reader|log-cadvisor-usage"
+DEAD='containerd|containerd-namespace'
+DEAD="$DEAD|container-hints|boot-id-file"
+DEAD="$DEAD|machine-id-file|storage-driver"
+DEAD="$DEAD|global-housekeeping|event-storage"
+DEAD="$DEAD|application-metrics|enable-load-reader"
+DEAD="$DEAD|log-cadvisor-usage"
 
 grep -rE -- "--($DEAD)" \
-  /etc/systemd/system/kubelet* /etc/default/kubelet /var/lib/kubelet/ 2>/dev/null
+  /etc/systemd/system/kubelet* \
+  /etc/default/kubelet \
+  /var/lib/kubelet/ 2>/dev/null
 ```
 
 Three metric series disappear with it: `container_cpu_load_average_10s`, `container_cpu_load_d_average_10s` and `container_tasks_state`, plus any custom `container_application_*` metrics. Check your dashboards and, more importantly, your alerts. An alert that silently stops firing is worse than one that breaks loudly.
@@ -476,18 +502,21 @@ Three things, none of which need a maintenance window.
 **3. Run the four pre-upgrade checks.** Before v1.37 goes anywhere near production:
 
 ```bash
-# 1. dead cAdvisor flags that stop the kubelet booting
-grep -rE -- '--(containerd|container-hints|boot-id-file|storage-driver)' \
-  /etc/systemd/system/kubelet* /var/lib/kubelet/ 2>/dev/null
+# 1. dead cAdvisor flags that stop the kubelet
+grep -rE -- '--(containerd|container-hints)' \
+  -e '--(boot-id-file|storage-driver)' \
+  /etc/systemd/system/kubelet* \
+  /var/lib/kubelet/ 2>/dev/null
 
-# 2. an eventRecordQPS of 0 that now means something else
-grep -r 'eventRecordQPS' /var/lib/kubelet/config.yaml 2>/dev/null
+# 2. eventRecordQPS: 0 now means something else
+grep -r 'eventRecordQPS' \
+  /var/lib/kubelet/config.yaml 2>/dev/null
 
-# 3. which kube-proxy backend you're on, and how much ipvs runway you have
+# 3. kube-proxy backend, and your ipvs runway
 kubectl -n kube-system get configmap kube-proxy \
   -o jsonpath='{.data.config\.conf}' | grep 'mode:'
 
-# 4. alpha scheduling objects that must be deleted before the upgrade
+# 4. alpha scheduling objects to delete first
 kubectl get --raw /apis/scheduling.k8s.io/v1alpha2 2>/dev/null
 ```
 

@@ -1233,6 +1233,57 @@ nav a { -webkit-tap-highlight-color: transparent; }
     line-height: 1.5;
     color: var(--muted-color, #8b949e);
 }
+/* 13.6px monospace is tight on a phone. A touch larger costs nothing on
+   desktop and is easier to read at arm's length. */
+@media (max-width: 640px) {
+    .post-prose pre { font-size: 0.875rem; padding: 1rem; }
+    .post-prose table { font-size: 0.85rem; }
+}
+
+/* Scrollable code blocks and tables get a fade on whichever edge still has
+   content off-screen. Thirteen code blocks overflow on a 390px phone and
+   nothing previously signalled that, so readers hit a cut-off line and assumed
+   it was broken. Pure CSS: the two `local` layers sit on the content and scroll
+   away, uncovering the fixed gradients only while there is more to reach. */
+.post-prose pre,
+.post-prose table {
+    background-image:
+        linear-gradient(to right, var(--panel-color) 30%, rgba(var(--panel-rgb), 0)),
+        linear-gradient(to left,  var(--panel-color) 30%, rgba(var(--panel-rgb), 0)),
+        linear-gradient(to right, rgba(var(--neutral-rgb), 0.16), rgba(var(--neutral-rgb), 0)),
+        linear-gradient(to left,  rgba(var(--neutral-rgb), 0.16), rgba(var(--neutral-rgb), 0));
+    background-position: 0 0, 100% 0, 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 44px 100%, 44px 100%, 14px 100%, 14px 100%;
+    background-attachment: local, local, scroll, scroll;
+}
+/* Tapping a diagram opens the SVG full screen, where it can be pinch-zoomed.
+   On a 390px phone the labels render around 6px, so this is the difference
+   between a diagram being useful and being decoration. */
+.post-prose figure a {
+    display: block;
+    position: relative;
+}
+.post-prose figure a::after {
+    content: "tap to enlarge";
+    position: absolute;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    font-family: 'Fira Code', 'Fira-Code-fallback', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+    color: #4b5563;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(27, 31, 35, 0.14);
+    border-radius: 6px;
+    padding: 0.18rem 0.45rem;
+    pointer-events: none;
+}
+@media (min-width: 900px) {
+    /* on a desktop the diagram is already legible, so the hint just adds noise */
+    .post-prose figure a::after { content: none; }
+}
+
 /* ---------- Post cards ----------
    The media slot is always present, so a list of posts lines up whether or not
    each one has a banner. Cards with a cover show it; cards without show a

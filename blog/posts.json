@@ -1,5 +1,17 @@
 [
   {
+    "title": "CKA exam day: PSI bridge, terminal, kubectl aliases",
+    "description": "The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.",
+    "url": "/blog/cka-exam-day-setup/",
+    "date": "2026-08-28T03:30:00.000Z",
+    "tags": [
+      "kubernetes",
+      "certification"
+    ],
+    "minutes": 3,
+    "cover": null
+  },
+  {
     "title": "Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks",
     "description": "A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.",
     "url": "/blog/kubernetes-v1-37-garhwal/",
@@ -58,18 +70,6 @@
       "meta"
     ],
     "minutes": 1,
-    "cover": null
-  },
-  {
-    "title": "CKA vs CKAD vs CKS: which to take first",
-    "description": "CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who each one is for and what order makes sense.",
-    "url": "/blog/cka-vs-ckad-vs-cks/",
-    "date": "2026-08-20T03:30:00.000Z",
-    "tags": [
-      "kubernetes",
-      "certification"
-    ],
-    "minutes": 3,
     "cover": null
   }
 ]

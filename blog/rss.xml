@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Aug 2026 19:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 03:30:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>CKA exam day: PSI bridge, terminal, kubectl aliases</title>
+      <link>https://rushabhshah.dev/blog/cka-exam-day-setup/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/cka-exam-day-setup/</guid>
+      <pubDate>Fri, 28 Aug 2026 03:30:00 GMT</pubDate>
+      <description>The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.</description>
+      <category>kubernetes</category><category>certification</category>
+    </item>
     <item>
       <title>Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks</title>
       <link>https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/</link>

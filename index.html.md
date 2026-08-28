@@ -206,6 +206,16 @@ Blog Observability Linux DevOps
 
 Latest posts from the blog and recent community engagements.
 
+#certification
+
+Aug 28, 2026 · 3 min read
+
+### CKA exam day: PSI bridge, terminal, kubectl aliases
+
+The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth mem…
+
+(https://rushabhshah.dev/blog/cka-exam-day-setup/)
+
 Aug 27, 2026 · 26 min read
 
 ### Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks
@@ -223,16 +233,6 @@ Aug 26, 2026 · 3 min read
 The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, h…
 
 (https://rushabhshah.dev/blog/cka-exam-guide/)
-
-#certification
-
-Aug 24, 2026 · 3 min read
-
-### Is KCNA worth $250 as a first certification
-
-KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and …
-
-(https://rushabhshah.dev/blog/kcna-worth-it/)
 
 ### Speaking & Community
 

@@ -2,6 +2,7 @@
 
 > Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.
 
+- [CKA exam day: PSI bridge, terminal, kubectl aliases](https://rushabhshah.dev/blog/cka-exam-day-setup/) (2026-08-28): The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.
 - [Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks](https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/) (2026-08-26): A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.
 - [What the CKA actually tests in 2026](https://rushabhshah.dev/blog/cka-exam-guide/) (2026-08-26): The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.
 - [Is KCNA worth $250 as a first certification](https://rushabhshah.dev/blog/kcna-worth-it/) (2026-08-24): KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.
