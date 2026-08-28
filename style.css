@@ -1248,7 +1248,7 @@ nav a { -webkit-tap-highlight-color: transparent; }
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 1200 / 520;
+    aspect-ratio: 1200 / 630;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     background: #150d14;
