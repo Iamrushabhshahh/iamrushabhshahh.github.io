@@ -6,6 +6,7 @@
   "description": "Personal site and markdown blog for rushabhshah.dev",
   "scripts": {
     "build": "node scripts/build-blog.mjs",
+    "dev": "node scripts/dev.mjs",
     "serve": "python3 -m http.server 8080"
   },
   "dependencies": {

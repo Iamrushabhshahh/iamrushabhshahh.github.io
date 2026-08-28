@@ -739,6 +739,7 @@ if (!fs.existsSync(POSTS_DIR)) {
   process.exit(1);
 }
 
+const DEV = process.env.DEV === '1';
 const now = new Date();
 
 /* ---------- live Linux Foundation sale ----------
@@ -812,11 +813,14 @@ for (const file of fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'))) {
   const raw = fs.readFileSync(path.join(POSTS_DIR, file), 'utf8');
   const { data, content } = matter(raw);
 
-  if (data.draft === true) { console.log(`⏸  draft     ${file}`); continue; }
+  if (data.draft === true) {
+    if (!DEV) { console.log(`⏸  draft     ${file}`); continue; }
+    console.log(`👁  draft     ${file} (shown because DEV=1)`);
+  }
 
   const date = parseDate(data.date);
   if (!date) { console.warn(`⚠️  skipped   ${file} — missing/invalid date`); continue; }
-  if (date > now) {
+  if (date > now && !DEV) {
     scheduled.push({ file, date, title: data.title || file.replace(/\.md$/, '') });
     console.log(`⏰ scheduled ${file} — goes live ${date.toISOString()}`);
     continue;
