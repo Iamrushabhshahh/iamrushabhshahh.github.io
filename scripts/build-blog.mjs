@@ -1141,15 +1141,18 @@ const prevNextNav = (post) => {
   const older = all[i + 1];
   const newer = all[i - 1];
   if (!older && !newer) return '';
-  const link = (p, dir) => `<a href="/blog/${p.slug}/" class="tech-card p-4 rounded-md block prevnext-${dir}">
-                        <span class="read-next-meta">${dir === 'older' ? '← Older' : 'Newer →'}</span>
-                        <span class="block text-sm text-white mt-1">${escapeHtml(p.title)}</span>
+  // Deliberately quieter than the cards above: the cards are a recommendation,
+  // this is just archive navigation, and five bordered boxes in a row at the
+  // end of every post reads as a wall rather than a hierarchy.
+  const link = (p, dir) => `<a href="/blog/${p.slug}/" class="block prevnext-link prevnext-${dir}">
+                        <span class="prevnext-label">${dir === 'older' ? '← Older' : 'Newer →'}</span>
+                        <span class="prevnext-title">${escapeHtml(p.title)}</span>
                     </a>`;
   return `
-                <div class="post-prevnext">
-                    ${older ? link(older, 'older') : ''}
-                    ${newer ? link(newer, 'newer') : ''}
-                </div>`;
+            <nav class="post-prevnext" aria-label="More posts">
+                ${older ? link(older, 'older') : ''}
+                ${newer ? link(newer, 'newer') : ''}
+            </nav>`;
 };
 
 const readNextSection = (post) => {

@@ -1432,6 +1432,11 @@ nav a { -webkit-tap-highlight-color: transparent; }
     margin: 4rem auto 0;
     padding-left: calc(220px + 3.5rem);
 }
+/* .mb-5 is referenced across the site but never defined in this file, so the
+   heading would otherwise sit flush against the cards. Scoped here rather than
+   adding the missing utility globally, which would also shift the post <h1>
+   and the blog index headings. */
+.post-readnext > h2 { margin: 0 0 1.25rem; }
 .read-next-grid {
     display: grid;
     /* auto-fit, so a post with only one or two related siblings still fills
@@ -1455,24 +1460,46 @@ nav a { -webkit-tap-highlight-color: transparent; }
     color: var(--gray-400-color);
 }
 /* Chronological neighbours: older on the left, newer on the right, so a reader
-   working through the archive in either direction always has one more step. */
+   working through the archive in either direction always has one more step.
+   Plain links under a rule rather than a second row of bordered cards — these
+   are navigation, not recommendations, and should read as the quieter tier. */
 .post-prevnext {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 2rem;
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
 }
-.post-prevnext a { flex: 1 1 0; min-width: 0; }
-.post-prevnext .prevnext-newer { text-align: right; }
-/* The oldest and newest posts only have one neighbour; a lone card fills the
-   row, so right-aligning its label would leave it stranded. */
-.post-prevnext .prevnext-newer:only-child { text-align: left; }
+.prevnext-link { max-width: 48%; }
+/* margin-left:auto keeps "Newer" on the right even when it is the only link,
+   which is the case on the oldest post. */
+.prevnext-newer { margin-left: auto; text-align: right; }
+.prevnext-label {
+    display: block;
+    font-family: 'Fira Code', 'Fira-Code-fallback', monospace;
+    font-size: 0.7rem;
+    color: var(--gray-400-color);
+    margin-bottom: 0.35rem;
+}
+.prevnext-title {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--gray-400-color);
+    transition: color 0.15s;
+}
+.prevnext-link:hover .prevnext-title { color: var(--primary-color); }
 @media (max-width: 1023px) {
     .post-readnext { max-width: 768px; padding-left: 0; }
     .read-next-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 639px) {
-    .post-prevnext { flex-direction: column; }
-    .post-prevnext .prevnext-newer { text-align: left; }
+    .post-prevnext { flex-direction: column; gap: 1.25rem; }
+    .prevnext-link, .prevnext-newer {
+        max-width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
 }
 
 /* Print styles — clean, paper-friendly version */
