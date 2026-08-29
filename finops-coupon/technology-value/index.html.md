@@ -2,11 +2,11 @@
 
 # FinOps Certified: Technology Value Discount Code: 20% Off with RUSHABH_20
 
-Updated August 2026 &middot; Self-Paced Course + Certification Exam
+Updated August 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
-[Get it for ~$400 &rarr;](https://learn.finops.org/path/technology-value)
+[Get it for ~$400 →](https://learn.finops.org/path/technology-value)
 
 Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/path/technology-value) and the FinOps Certified: Technology Value Self-Paced Course + Certification Exam drops from $500 to about $400, a saving of roughly $100. It's a partner code issued to me directly by the FinOps Foundation, and it applies to five specific self-paced offerings rather than the whole catalog.
 
@@ -54,7 +54,7 @@ Most FinOps practices hit the same wall: the cloud bill gets well managed, and t
 
 RUSHABH_20
 
-[Apply it at checkout &rarr;](https://learn.finops.org/path/technology-value)
+[Apply it at checkout →](https://learn.finops.org/path/technology-value)
 
 ## Frequently asked questions
 

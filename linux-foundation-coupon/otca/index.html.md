@@ -2,11 +2,11 @@
 
 # OTCA Discount Code: 30% Off with RUSHABH30
 
-Updated August 2026 &middot; OpenTelemetry Certified Associate
+Updated August 2026 · OpenTelemetry Certified Associate
 
 RUSHABH30
 
-[Get OTCA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
+[Get OTCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F) and the OpenTelemetry Certified Associate (OTCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -50,7 +50,7 @@ OpenTelemetry has become the default way applications emit traces, metrics, and 
 
 RUSHABH30
 
-[Apply it at checkout &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
 
 ## Frequently asked questions
 

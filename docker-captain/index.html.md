@@ -2,9 +2,9 @@
 
 # Rushabh Shah, Docker Captain
 
-Docker, Inc &middot; Selected 2026
+Docker, Inc · Selected 2026
 
-&middot; DevOps Engineer @ Oro &middot; Ahmedabad, India
+· DevOps Engineer @ Oro · Ahmedabad, India
 
 I'm a [Docker Captain](https://www.docker.com/contributors/rushabh-shah/), selected in 2026 as one of roughly 220 members worldwide in Docker's global program for community leaders and technical experts in the container ecosystem. I'm a DevOps Engineer based in Ahmedabad, India, currently building cloud-native infrastructure on Kubernetes at [Oro](https://rushabhshah.dev/#experience).
 
@@ -16,7 +16,7 @@ Docker Captains are an invitation-only group of experts recognized by Docker, In
 
 Docker's own program criteria are technical expertise in containers and Kubernetes, hands-on production experience, and consistent community contribution. In my case, that's backed by:
 
-- **Production experience**: running Kubernetes workloads with Helm and GitOps (Argo CD), building CI/CD on GitHub Actions, and managing infrastructure as code with Terraform, across roles at [Oro, Genuin, KodeKloud, and Tridhya Tech](https://rushabhshah.dev/#experience), including a zero-downtime AWS &rarr; Oracle Cloud Infrastructure migration under a fixed deadline and a 59% AWS cost reduction.
+- **Production experience**: running Kubernetes workloads with Helm and GitOps (Argo CD), building CI/CD on GitHub Actions, and managing infrastructure as code with Terraform, across roles at [Oro, Genuin, KodeKloud, and Tridhya Tech](https://rushabhshah.dev/#experience), including a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline and a 59% AWS cost reduction.
 - **Community involvement**: I organize [Grafana & Friends Ahmedabad](https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/), a quarterly observability meetup; I represented KodeKloud at [KubeCon + CloudNativeCon India 2024](https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-india/); and I translated [eBPF.io into Hindi](https://ebpf.io/hi-in/) so Hindi-speaking engineers have a way in to eBPF, container networking, and observability.
 - **Teaching**: I've delivered corporate training on Azure and cloud infrastructure certifications, and I built hands-on multi-cloud lab environments used by working engineers preparing for real certification exams.
 

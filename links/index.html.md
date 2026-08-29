@@ -1,6 +1,6 @@
 # Rushabh Shah
 
-DevOps Engineer &middot; Docker Captain &middot; Grafana Champion
+DevOps Engineer · Docker Captain · Grafana Champion
 
 [Blog](https://rushabhshah.dev/blog/)
 
@@ -20,4 +20,4 @@ DevOps Engineer &middot; Docker Captain &middot; Grafana Champion
 
 [Résumé](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf?v=34823de89f1e)
 
-&copy; 2026 Rushabh Shah &middot; [rushabhshah.dev](https://rushabhshah.dev/)
+© 2026 Rushabh Shah · [rushabhshah.dev](https://rushabhshah.dev/)

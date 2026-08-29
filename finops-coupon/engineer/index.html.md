@@ -2,11 +2,11 @@
 
 # FinOps Certified Engineer Discount Code: 20% Off with RUSHABH_20
 
-Updated August 2026 &middot; Self-Paced Course + Certification Exam
+Updated August 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
-[Get it for ~$400 &rarr;](https://learn.finops.org/path/finops-certified-engineer)
+[Get it for ~$400 →](https://learn.finops.org/path/finops-certified-engineer)
 
 Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/path/finops-certified-engineer) and the FinOps Certified Engineer Self-Paced Course + Certification Exam drops from $500 to about $400, a saving of roughly $100. It's a partner code issued to me directly by the FinOps Foundation, and it applies to five specific self-paced offerings rather than the whole catalog.
 
@@ -53,7 +53,7 @@ This is the FinOps certification aimed squarely at the people who actually chang
 
 RUSHABH_20
 
-[Apply it at checkout &rarr;](https://learn.finops.org/path/finops-certified-engineer)
+[Apply it at checkout →](https://learn.finops.org/path/finops-certified-engineer)
 
 ## Frequently asked questions
 

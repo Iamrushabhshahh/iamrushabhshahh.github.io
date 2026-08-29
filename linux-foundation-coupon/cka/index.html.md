@@ -2,11 +2,11 @@
 
 # CKA Discount Code: 30% Off with RUSHABH30
 
-Updated August 2026 &middot; Certified Kubernetes Administrator
+Updated August 2026 · Certified Kubernetes Administrator
 
 RUSHABH30
 
-[Get CKA for ~$311 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
+[Get CKA for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F) and the Certified Kubernetes Administrator (CKA) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -51,7 +51,7 @@ The CKA is the credential hiring managers actually check for when a role involve
 
 RUSHABH30
 
-[Apply it at checkout &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
 
 ## Frequently asked questions
 

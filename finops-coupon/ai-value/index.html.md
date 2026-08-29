@@ -2,11 +2,11 @@
 
 # FinOps Certified: AI Value Discount Code: 20% Off with RUSHABH_20
 
-Updated August 2026 &middot; Self-Paced Course + Certification Exam
+Updated August 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
-[Get it for ~$400 &rarr;](https://learn.finops.org/path/certified-finops-for-ai)
+[Get it for ~$400 →](https://learn.finops.org/path/certified-finops-for-ai)
 
 Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/path/certified-finops-for-ai) and the FinOps Certified: AI Value Self-Paced Course + Certification Exam drops from $500 to about $400, a saving of roughly $100. It's a partner code issued to me directly by the FinOps Foundation, and it applies to five specific self-paced offerings rather than the whole catalog.
 
@@ -53,7 +53,7 @@ AI spend broke most of the assumptions FinOps practices were built on. Token-bas
 
 RUSHABH_20
 
-[Apply it at checkout &rarr;](https://learn.finops.org/path/certified-finops-for-ai)
+[Apply it at checkout →](https://learn.finops.org/path/certified-finops-for-ai)
 
 ## Frequently asked questions
 

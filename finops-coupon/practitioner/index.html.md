@@ -2,11 +2,11 @@
 
 # FinOps Certified Practitioner Discount Code: 20% Off with RUSHABH_20
 
-Updated August 2026 &middot; Self-Paced Course + Certification Exam
+Updated August 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
-[Get it for ~$400 &rarr;](https://learn.finops.org/path/finops-certified-practitioner-self-paced)
+[Get it for ~$400 →](https://learn.finops.org/path/finops-certified-practitioner-self-paced)
 
 Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/path/finops-certified-practitioner-self-paced) and the FinOps Certified Practitioner Self-Paced Course + Certification Exam drops from $500 to about $400, a saving of roughly $100. It's a partner code issued to me directly by the FinOps Foundation, and it applies to five specific self-paced offerings rather than the whole catalog.
 
@@ -54,7 +54,7 @@ FOCP is the one FinOps credential most job descriptions actually name. The real 
 
 RUSHABH_20
 
-[Apply it at checkout &rarr;](https://learn.finops.org/path/finops-certified-practitioner-self-paced)
+[Apply it at checkout →](https://learn.finops.org/path/finops-certified-practitioner-self-paced)
 
 ## Frequently asked questions
 

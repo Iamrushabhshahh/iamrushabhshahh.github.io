@@ -1,6 +1,6 @@
 # Certification Discount Codes That Actually Work
 
-Updated August 2026 &middot; Two official partner codes, one page
+Updated August 2026 · Two official partner codes, one page
 
 RUSHABH30
 
@@ -21,13 +21,13 @@ They are not interchangeable. Each checkout rejects the other's code, which is t
 
 This is the big catalog: every Kubernetes certification, the CNCF associate exams, LFCS and LFCA, the self-paced courses, and the Kubestronaut and Golden Kubestronaut bundles. The code is evergreen with no expiry, and it works on course + exam bundles as well as bare exams, which is usually the better buy. The cheapest way in is KCNA at about $175.
 
-[Full pricing across the catalog, per-exam guides and the sale archive &rarr;](https://rushabhshah.dev/linux-foundation-coupon/)
+[Full pricing across the catalog, per-exam guides and the sale archive →](https://rushabhshah.dev/linux-foundation-coupon/)
 
 ## FinOps Foundation: 20% off with RUSHABH_20
 
 A separate programme covering five self-paced FinOps certifications. Worth knowing up front: this code covers those five specifically and not FinOps Certified Professional, the multi-certification bundles, exam-only purchases, or corporate subscriptions. The cheapest is the FinOps Certified FOCUS Analyst at about $320.
 
-[All five certifications, what the code excludes, and which to take first &rarr;](https://rushabhshah.dev/finops-coupon/)
+[All five certifications, what the code excludes, and which to take first →](https://rushabhshah.dev/finops-coupon/)
 
 ## Not sure which certification, never mind which code?
 

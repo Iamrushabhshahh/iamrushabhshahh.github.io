@@ -56,7 +56,7 @@ Downtime · AWS → OCI migration
 
 Hard-deadline cutover
 
-Two partner codes, [compared side by side &rarr;](https://rushabhshah.dev/coupons/)
+Two partner codes, [compared side by side →](https://rushabhshah.dev/coupons/)
 
 RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
 

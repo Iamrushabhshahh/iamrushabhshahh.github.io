@@ -651,10 +651,20 @@ const gitLastMod = (relPath) => {
    tags, FAQ <details>, pricing <table>s) rather than a general-purpose
    converter, so it stays a dependency-free ~40 lines instead of a full DOM. */
 
+/* The markdown mirrors are what agents read, so every entity the site's HTML
+   uses has to survive the trip as a real character. Named entities beyond the
+   XML five were previously passed through untouched, which is why 22 mirrors
+   shipped with a literal "&middot;" where a "·" belonged. &amp; is decoded
+   LAST: decoding it first turns an authored "&amp;rarr;" into "&rarr;", which
+   the arrow rule would then wrongly decode a second time into "→". */
 const decodeEntities = (s) => s
-  .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
-  .replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'")
-  .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
+  .replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+  .replace(/&quot;/g, '"').replace(/&#0?39;/g, "'")
+  .replace(/&middot;/g, '\u00b7').replace(/&rarr;/g, '\u2192')
+  .replace(/&copy;/g, '\u00a9').replace(/&hellip;/g, '\u2026')
+  .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+  .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+  .replace(/&amp;/g, '&');
 
 // Collapses ALL whitespace (including literal newlines from multi-line HTML
 // source — a <p> in HTML doesn't preserve source line breaks, so neither

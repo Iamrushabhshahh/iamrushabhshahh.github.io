@@ -2,11 +2,11 @@
 
 # FinOps Certified FOCUS Analyst Discount Code: 20% Off with RUSHABH_20
 
-Updated August 2026 &middot; Self-Paced Course + Certification Exam
+Updated August 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
-[Get it for ~$320 &rarr;](https://learn.finops.org/finops-certified-focus-analyst-certification)
+[Get it for ~$320 →](https://learn.finops.org/finops-certified-focus-analyst-certification)
 
 Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/finops-certified-focus-analyst-certification) and the FinOps Certified FOCUS Analyst Self-Paced Course + Certification Exam drops from $400 to about $320, a saving of roughly $80. It's a partner code issued to me directly by the FinOps Foundation, and it applies to five specific self-paced offerings rather than the whole catalog.
 
@@ -53,7 +53,7 @@ FOCUS is the most quietly useful thing to come out of the FinOps Foundation. Eve
 
 RUSHABH_20
 
-[Apply it at checkout &rarr;](https://learn.finops.org/finops-certified-focus-analyst-certification)
+[Apply it at checkout →](https://learn.finops.org/finops-certified-focus-analyst-certification)
 
 ## Frequently asked questions
 

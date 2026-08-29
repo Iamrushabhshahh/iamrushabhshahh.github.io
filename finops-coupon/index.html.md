@@ -1,10 +1,10 @@
 # FinOps Certification Coupon: 20% Off with RUSHABH_20
 
-Updated August 2026 &middot; Works on FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value & Technology Value
+Updated August 2026 · Works on FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value & Technology Value
 
 RUSHABH_20
 
-[Open the FinOps catalog &rarr;](https://learn.finops.org/)
+[Open the FinOps catalog →](https://learn.finops.org/)
 
 Last verified: August 2026
 
@@ -71,7 +71,7 @@ Each one has its own page with pricing, format, what it covers, prep advice, and
 
 RUSHABH_20
 
-[Apply it at checkout &rarr;](https://learn.finops.org/)
+[Apply it at checkout →](https://learn.finops.org/)
 
 ## Frequently asked questions
 
