@@ -2,19 +2,7 @@
 
 Updated August 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Sale live now &middot; ends August 28
-
-Linux Foundation End-of-Season Flash Sale: up to 40% off
-
-For a few days only, the official sale beats RUSHABH30. Use `AUG26F35` for 35% off courses & certifications, or `AUG26F40` for 40% off bundles & instructor-led training. Sale codes don't stack with RUSHABH30, so take the bigger number while it's running. RUSHABH30 goes back to being the best price here at 30% the day the sale closes.
-
-On the date: the announcement's own copy says August 27 while its offer terms run to 2:59 AM ET on August 29. August 28 is the safe last day to buy.
-
-AUG26F35
-AUG26F40
-[Shop the sale &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Faugust-flash-1%2F)
-
-A sale is running right now (see above). Once it ends, this is the everyday code, and it works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -167,6 +155,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **End-of-Season Flash Sale, August 2026**: up to 40% off (35% on courses and certifications with AUG26F35, 40% on bundles with AUG26F40), ended August 28.
 - **35 Years of Linux anniversary sale, August 2026**: 35% off sitewide with code TUX35, ended August 18.
 - **Mega May 2026** (May 12 to 24): 50% off individual certifications, up to 65% off THRIVE subscription bundles. Announced about three weeks early, then extended past the original deadline.
 - **Kubernetes Birthday sale, June 2026**: around 45% off Kubernetes certifications.

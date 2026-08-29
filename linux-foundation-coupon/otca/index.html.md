@@ -4,18 +4,6 @@
 
 Updated August 2026 &middot; OpenTelemetry Certified Associate
 
-Sale live now &middot; ends August 28
-
-Linux Foundation End-of-Season Flash Sale: up to 40% off
-
-For a few days only, the official sale beats RUSHABH30. Use `AUG26F35` for 35% off courses & certifications, or `AUG26F40` for 40% off bundles & instructor-led training. Sale codes don't stack with RUSHABH30, so take the bigger number while it's running. RUSHABH30 goes back to being the best price here at 30% the day the sale closes.
-
-On the date: the announcement's own copy says August 27 while its offer terms run to 2:59 AM ET on August 29. August 28 is the safe last day to buy.
-
-AUG26F35
-AUG26F40
-[Shop the sale &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Faugust-flash-1%2F)
-
 RUSHABH30
 
 [Get OTCA for ~$175 &rarr;](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
