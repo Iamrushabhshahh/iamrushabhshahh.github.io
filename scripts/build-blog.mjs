@@ -22,10 +22,26 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import crypto from 'node:crypto';
 import { marked } from 'marked';
 import matter from 'gray-matter';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+/* Cache-bust the stylesheet with a hash of its own contents.
+   /style.css is served with max-age=14400, so for four hours after a deploy a
+   returning visitor pairs freshly-changed HTML with the stylesheet they already
+   had — any markup that depends on new CSS renders broken, and no amount of
+   local testing catches it because localhost has neither a CDN nor a warm
+   cache. A content-derived URL makes changed CSS a different resource, so the
+   two can never go out of sync; when the CSS is unchanged the URL is unchanged
+   and the cached copy is still reused. */
+const CSS_VERSION = crypto
+  .createHash('sha256')
+  .update(fs.readFileSync(path.join(ROOT, 'style.css')))
+  .digest('hex')
+  .slice(0, 8);
+const CSS_HREF = `/style.css?v=${CSS_VERSION}`;
 const POSTS_DIR = path.join(ROOT, 'content', 'posts');
 const OUT_DIR = path.join(ROOT, 'blog');
 const SITE = 'https://rushabhshah.dev';
@@ -916,7 +932,7 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
     <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="${CSS_HREF}">
     <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>`;
 };
@@ -1111,7 +1127,7 @@ const relatedPosts = (post) => {
 };
 
 const readNextCard = (p) => `
-                    <a href="/blog/${p.slug}/" class="tech-card p-5 rounded-md read-next-card">
+                    <a href="/blog/${p.slug}/" class="tech-card p-5 rounded-md block read-next-card">
                         <span class="read-next-meta">${fmtDate(p.date)} · ${p.minutes} min</span>
                         <h3>${escapeHtml(p.title)}</h3>
                     </a>`;
@@ -1125,7 +1141,7 @@ const prevNextNav = (post) => {
   const older = all[i + 1];
   const newer = all[i - 1];
   if (!older && !newer) return '';
-  const link = (p, dir) => `<a href="/blog/${p.slug}/" class="tech-card p-4 rounded-md prevnext-${dir}">
+  const link = (p, dir) => `<a href="/blog/${p.slug}/" class="tech-card p-4 rounded-md block prevnext-${dir}">
                         <span class="read-next-meta">${dir === 'older' ? '← Older' : 'Newer →'}</span>
                         <span class="block text-sm text-white mt-1">${escapeHtml(p.title)}</span>
                     </a>`;
