@@ -1424,10 +1424,61 @@ nav a { -webkit-tap-highlight-color: transparent; }
     .post-layout .post-article { margin: 0 auto; }
 }
 
+/* "Read next" block under every post. Sits outside .post-layout so the reading
+   progress bar still measures the article alone, but lines up under the article
+   column: 1040px container, offset past the 220px TOC rail + its 3.5rem gap. */
+.post-readnext {
+    max-width: 1040px;
+    margin: 4rem auto 0;
+    padding-left: calc(220px + 3.5rem);
+}
+.read-next-grid {
+    display: grid;
+    /* auto-fit, so a post with only one or two related siblings still fills
+       the row instead of leaving an empty third column */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.read-next-card { display: flex; flex-direction: column; height: 100%; }
+.read-next-card h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+    font-weight: 700;
+    color: var(--fg-strong);
+    margin: 0.5rem 0 0;
+    transition: color 0.15s;
+}
+.read-next-card:hover h3 { color: var(--primary-color); }
+.read-next-meta {
+    font-family: 'Fira Code', 'Fira-Code-fallback', monospace;
+    font-size: 0.7rem;
+    color: var(--gray-400-color);
+}
+/* Chronological neighbours: older on the left, newer on the right, so a reader
+   working through the archive in either direction always has one more step. */
+.post-prevnext {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.post-prevnext a { flex: 1 1 0; min-width: 0; }
+.post-prevnext .prevnext-newer { text-align: right; }
+/* The oldest and newest posts only have one neighbour; a lone card fills the
+   row, so right-aligning its label would leave it stranded. */
+.post-prevnext .prevnext-newer:only-child { text-align: left; }
+@media (max-width: 1023px) {
+    .post-readnext { max-width: 768px; padding-left: 0; }
+    .read-next-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 639px) {
+    .post-prevnext { flex-direction: column; }
+    .post-prevnext .prevnext-newer { text-align: left; }
+}
+
 /* Print styles — clean, paper-friendly version */
 @media print {
     body { background: white; color: black; }
-    body::before, .orb, #back-to-top, #mobile-menu-button, #toast-notification, .skip-link, header, .post-toc, #reading-progress { display: none !important; }
+    body::before, .orb, #back-to-top, #mobile-menu-button, #toast-notification, .skip-link, header, .post-toc, .post-readnext, #reading-progress { display: none !important; }
     .gradient-text { -webkit-text-fill-color: black; color: black; background: none; }
     .tech-card { box-shadow: none; border: 1px solid #ccc; background: white !important; }
     a { color: black; text-decoration: underline; }

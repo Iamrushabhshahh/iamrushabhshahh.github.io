@@ -1071,6 +1071,85 @@ const tocNav = (toc) => {
         </aside>`;
 };
 
+/* ---------- "read next" ----------
+
+   Tag frequency across the whole blog. Used two ways: to pick the most
+   *distinctive* tag for a card tile (below), and to weight related-post
+   scoring here — it has to live above the post loop because that loop runs
+   first. */
+const tagFreq = new Map();
+for (const p of all) for (const t of p.tags) tagFreq.set(t, (tagFreq.get(t) || 0) + 1);
+
+/* Every post ends with somewhere to go next. Two reasons: a reader who finishes
+   a post has no reason to leave the site, and every post picks up inbound
+   internal links from its siblings instead of hanging off /blog/ alone. Half
+   the posts here currently have zero inbound links from another post.
+
+   Ranking is shared tags weighted by rarity, not a plain overlap count: nearly
+   everything is tagged `kubernetes`, so counting overlaps would score most
+   pairs identically. Sharing `releases` (2 posts) is a real signal; sharing
+   `kubernetes` (most of the blog) barely is. Ties break newest-first. */
+const READ_NEXT_COUNT = 3;
+const relatedPosts = (post) => {
+  const own = new Set(post.tags.map(t => t.toLowerCase()));
+  const picked = all
+    .filter(p => p.slug !== post.slug)
+    .map(p => ({
+      p,
+      score: p.tags.reduce((sum, t) =>
+        own.has(t.toLowerCase()) ? sum + 1 / (tagFreq.get(t) || 1) : sum, 0),
+    }))
+    .filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score || b.p.date - a.p.date)
+    .map(x => x.p);
+
+  // The chronological neighbours get their own row below, so keep them out of
+  // the grid — otherwise most posts print the same two links twice.
+  const i = all.indexOf(post);
+  const neighbours = new Set([all[i + 1]?.slug, all[i - 1]?.slug]);
+  return picked.filter(p => !neighbours.has(p.slug)).slice(0, READ_NEXT_COUNT);
+};
+
+const readNextCard = (p) => `
+                    <a href="/blog/${p.slug}/" class="tech-card p-5 rounded-md read-next-card">
+                        <span class="read-next-meta">${fmtDate(p.date)} · ${p.minutes} min</span>
+                        <h3>${escapeHtml(p.title)}</h3>
+                    </a>`;
+
+/* Chronological neighbours as well as the related grid. The grid answers "what
+   else is on this topic"; this answers "what came before/after", which is what
+   someone reading the archive in order actually wants. all is newest-first, so
+   i+1 is older and i-1 is newer. */
+const prevNextNav = (post) => {
+  const i = all.indexOf(post);
+  const older = all[i + 1];
+  const newer = all[i - 1];
+  if (!older && !newer) return '';
+  const link = (p, dir) => `<a href="/blog/${p.slug}/" class="tech-card p-4 rounded-md prevnext-${dir}">
+                        <span class="read-next-meta">${dir === 'older' ? '← Older' : 'Newer →'}</span>
+                        <span class="block text-sm text-white mt-1">${escapeHtml(p.title)}</span>
+                    </a>`;
+  return `
+                <div class="post-prevnext">
+                    ${older ? link(older, 'older') : ''}
+                    ${newer ? link(newer, 'newer') : ''}
+                </div>`;
+};
+
+const readNextSection = (post) => {
+  const related = relatedPosts(post);
+  const nav = prevNextNav(post);
+  if (!related.length && !nav) return '';
+  const grid = related.length ? `
+            <div class="read-next-grid">
+                ${related.map(readNextCard).join('\n')}
+            </div>` : '';
+  return `
+        <section class="post-readnext" aria-labelledby="read-next-heading">
+            <h2 id="read-next-heading" class="font-fira text-sm uppercase tracking-wider text-gray-500 mb-5"># read next</h2>${grid}${nav}
+        </section>`;
+};
+
 for (const [postIndex, post] of all.entries()) {
   const url = `${SITE}/blog/${post.slug}/`;
   const jsonLd = {
@@ -1205,6 +1284,7 @@ ${post.html}
         </article>
         ${tocNav(post.toc)}
         </div>
+${readNextSection(post)}
     </main>
 ${footer.replace('</body>', `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n${postScript}\n</body>`)}`;
 
@@ -1240,8 +1320,6 @@ const cardTint = (slug) => {
    every post here is tagged `kubernetes`, so leading with the first tag would
    print the same word on every tile; the rarest one is the one that actually
    tells them apart. */
-const tagFreq = new Map();
-for (const p of all) for (const t of p.tags) tagFreq.set(t, (tagFreq.get(t) || 0) + 1);
 const distinctTag = (tags) =>
   [...tags].sort((a, b) => (tagFreq.get(a) - tagFreq.get(b)) || a.localeCompare(b))[0];
 
