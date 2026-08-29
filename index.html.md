@@ -7,7 +7,7 @@ $ DevOps Engineer, Docker Captain, Grafana Champion, SRE Enthusiast, and Communi
 [Docker Captain](https://rushabhshah.dev/docker-captain/) & Grafana Champion. I build and automate cloud-native infrastructure on Kubernetes, ship reliable observability, and simplify complex cloud concepts for the community.
 
 [Get in touch](#contact)
-[Download résumé](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf?v=a3fe9383)
+[Download résumé](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf?v=34823de8)
 [Read my writing](#writing)
 [GitHub](https://github.com/iamrushabhshahh)
 

@@ -18,6 +18,6 @@ DevOps Engineer &middot; Docker Captain &middot; Grafana Champion
 
 [Contact](https://rushabhshah.dev/#contact)
 
-[Résumé](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf?v=a3fe9383)
+[Résumé](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf?v=34823de8)
 
 &copy; 2026 Rushabh Shah &middot; [rushabhshah.dev](https://rushabhshah.dev/)
