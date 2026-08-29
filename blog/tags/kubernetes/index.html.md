@@ -1,5 +1,7 @@
 # Posts tagged "kubernetes"
 
+- [India's first heritage city, Gujarat's first KCD](https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/) (2026-08-30): Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you about.
+- [Prometheus PCA and OpenTelemetry OTCA, reviewed](https://rushabhshah.dev/blog/pca-otca-review/) (2026-08-30): Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.
 - [CKA exam day: PSI bridge, terminal, kubectl aliases](https://rushabhshah.dev/blog/cka-exam-day-setup/) (2026-08-28): The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.
 - [Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks](https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/) (2026-08-26): A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.
 - [What the CKA actually tests in 2026](https://rushabhshah.dev/blog/cka-exam-guide/) (2026-08-26): The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.

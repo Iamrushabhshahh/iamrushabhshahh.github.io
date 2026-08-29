@@ -1,5 +1,30 @@
 [
   {
+    "title": "India's first heritage city, Gujarat's first KCD",
+    "description": "Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you about.",
+    "url": "/blog/kcd-gujarat-2026-ahmedabad-guide/",
+    "date": "2026-08-30T03:30:00.000Z",
+    "tags": [
+      "kubernetes",
+      "community",
+      "kcd"
+    ],
+    "minutes": 8,
+    "cover": null
+  },
+  {
+    "title": "Prometheus PCA and OpenTelemetry OTCA, reviewed",
+    "description": "Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.",
+    "url": "/blog/pca-otca-review/",
+    "date": "2026-08-30T03:30:00.000Z",
+    "tags": [
+      "kubernetes",
+      "certification"
+    ],
+    "minutes": 3,
+    "cover": null
+  },
+  {
     "title": "CKA exam day: PSI bridge, terminal, kubectl aliases",
     "description": "The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.",
     "url": "/blog/cka-exam-day-setup/",
@@ -45,31 +70,6 @@
       "certification"
     ],
     "minutes": 3,
-    "cover": null
-  },
-  {
-    "title": "The Kubestronaut path and what it really costs",
-    "description": "Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here's the real cost breakdown, a realistic study timeline, and who it's actually for.",
-    "url": "/blog/kubestronaut-path-cost/",
-    "date": "2026-08-22T03:30:00.000Z",
-    "tags": [
-      "kubernetes",
-      "certification"
-    ],
-    "minutes": 4,
-    "cover": null
-  },
-  {
-    "title": "My CNCF DevStats score is 178, and now I can't stop checking it",
-    "description": "A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here's what that number is actually made of, and how to check yours.",
-    "url": "/blog/cncf-devstats-score/",
-    "date": "2026-08-20T17:30:00.000Z",
-    "tags": [
-      "open-source",
-      "cncf",
-      "meta"
-    ],
-    "minutes": 1,
     "cover": null
   }
 ]

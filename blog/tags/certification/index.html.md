@@ -1,5 +1,6 @@
 # Posts tagged "certification"
 
+- [Prometheus PCA and OpenTelemetry OTCA, reviewed](https://rushabhshah.dev/blog/pca-otca-review/) (2026-08-30): Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.
 - [CKA exam day: PSI bridge, terminal, kubectl aliases](https://rushabhshah.dev/blog/cka-exam-day-setup/) (2026-08-28): The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.
 - [What the CKA actually tests in 2026](https://rushabhshah.dev/blog/cka-exam-guide/) (2026-08-26): The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.
 - [Is KCNA worth $250 as a first certification](https://rushabhshah.dev/blog/kcna-worth-it/) (2026-08-24): KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.
