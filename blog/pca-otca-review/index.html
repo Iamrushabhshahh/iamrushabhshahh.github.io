@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">
-    <title>CKA exam day: PSI bridge, terminal, kubectl aliases · Rushabh Shah</title>
-    <meta name="description" content="The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.">
+    <title>Prometheus PCA and OpenTelemetry OTCA, reviewed · Rushabh Shah</title>
+    <meta name="description" content="Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here&#39;s an honest read on both, and which to take first.">
     <meta name="author" content="Rushabh Shah">
-    <link rel="canonical" href="https://rushabhshah.dev/blog/cka-exam-day-setup/">
+    <link rel="canonical" href="https://rushabhshah.dev/blog/pca-otca-review/">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://rushabhshah.dev/blog/cka-exam-day-setup/">
-    <meta property="og:title" content="CKA exam day: PSI bridge, terminal, kubectl aliases · Rushabh Shah">
-    <meta property="og:description" content="The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.">
+    <meta property="og:url" content="https://rushabhshah.dev/blog/pca-otca-review/">
+    <meta property="og:title" content="Prometheus PCA and OpenTelemetry OTCA, reviewed · Rushabh Shah">
+    <meta property="og:description" content="Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here&#39;s an honest read on both, and which to take first.">
     <meta property="og:image" content="https://rushabhshah.dev/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -25,11 +25,11 @@
     <meta property="og:site_name" content="Rushabh Shah">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@iamrushabhshahh">
-    <meta name="twitter:title" content="CKA exam day: PSI bridge, terminal, kubectl aliases · Rushabh Shah">
-    <meta name="twitter:description" content="The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.">
+    <meta name="twitter:title" content="Prometheus PCA and OpenTelemetry OTCA, reviewed · Rushabh Shah">
+    <meta name="twitter:description" content="Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here&#39;s an honest read on both, and which to take first.">
     <meta name="twitter:image" content="https://rushabhshah.dev/assets/og-image.jpg">
-    <meta property="article:published_time" content="2026-08-28T03:30:00.000Z">
-    <meta property="article:modified_time" content="2026-08-28T03:30:00.000Z">
+    <meta property="article:published_time" content="2026-08-30T03:30:00.000Z">
+    <meta property="article:modified_time" content="2026-08-30T03:30:00.000Z">
     <meta property="article:author" content="Rushabh Shah">
     <meta property="article:tag" content="kubernetes">
     <meta property="article:tag" content="certification">
@@ -110,9 +110,9 @@
         <article class="post-article max-w-3xl">
             <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
             <header class="mb-10">
-                <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">CKA exam day: PSI bridge, terminal, kubectl aliases</h1>
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">Prometheus PCA and OpenTelemetry OTCA, reviewed</h1>
                 <div class="flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
-                    <time datetime="2026-08-28T03:30:00.000Z">Aug 28, 2026</time>
+                    <time datetime="2026-08-30T03:30:00.000Z">Aug 30, 2026</time>
                     <span aria-hidden="true">·</span>
                     <span>3 min read</span>
                     <span id="post-views"></span>
@@ -122,60 +122,32 @@
             </header>
             
             <div class="post-prose">
-<p>Knowing the CKA domains cold and still losing time to exam-day logistics is a genuinely common way to hurt your own score. This is the setup and workflow side of it, meant to sit alongside <a href="/blog/cka-exam-guide/">what the CKA actually tests</a>.</p>
-<h2 id="psi-bridge-and-secure-browser-setup">PSI bridge and secure browser setup</h2>
-<p>Linux Foundation exams are proctored remotely through PSI&#39;s secure browser, and the gotchas are almost always about the room and the machine, not the Kubernetes content:</p>
-<ul>
-<li><strong>Test your setup well before exam time</strong>, not the morning of. Camera, microphone, and a stable, reasonably fast connection all matter, and a failed system check with no buffer left before your slot is a bad way to start.</li>
-<li><strong>Clear your desk and the room around you.</strong> The proctor does a visual scan, and a second monitor, notes on the wall, or another device in view are common reasons for a delay or a flag.</li>
-<li><strong>Close everything except what you need.</strong> Background apps, notification popups, and secondary monitors are typically restricted during the session; shut them down ahead of time instead of scrambling once the proctor asks.</li>
-<li><strong>Have your ID ready</strong> and match the name you registered with. This sounds obvious until it&#39;s the thing that costs you ten minutes at the start.</li>
-</ul>
-<h2 id="what-the-exam-terminal-actually-gives-you">What the exam terminal actually gives you</h2>
-<p>Inside the proctored environment, you get a browser-based terminal connected to real clusters, plus access to the allowed official documentation (kubernetes.io). That&#39;s genuinely useful: you&#39;re not working from memory alone.</p>
-<p>What you don&#39;t get is anything outside that sandbox: no personal notes, no copy-pasting from outside sources, no browsing beyond the permitted docs. If your prep leaned on external cheat sheets or a personal notes file, that crutch disappears the moment the exam starts. Practice using only what will actually be in front of you.</p>
-<h2 id="kubectl-aliases-and-shortcuts-worth-memorizing">kubectl aliases and shortcuts worth memorizing</h2>
-<p>The exam environment typically has <code>kubectl</code> pre-aliased to <code>k</code>, but set these up in your own practice environment beforehand so the muscle memory is already there on exam day:</p>
-<pre><code class="language-bash">alias k=kubectl
-export do=&quot;--dry-run=client -o yaml&quot;
-export now=&quot;--force --grace-period 0&quot;
-
-# generate a Deployment manifest instead of hand-typing one
-k create deploy nginx --image=nginx $do &gt; deploy.yaml
-
-# confirm which cluster you&#39;re actually working against
-k config current-context
-k config use-context &lt;name&gt;
-
-# fast troubleshooting loop
-k get pods -A
-k describe pod &lt;name&gt;
-k logs &lt;name&gt; --previous
-</code></pre>
-<p>The theme across all of these is the same: generate boilerplate instead of typing it, and always confirm which context you&#39;re in before you start a task. Both save real minutes, and minutes are the actual scarce resource in this exam.</p>
-<h2 id="time-management-across-the-exam-39-s-tasks">Time management across the exam&#39;s tasks</h2>
-<p>Two hours across multiple weighted tasks means the clock is as much a part of the exam as the Kubernetes knowledge is.</p>
-<ul>
-<li><strong>Scan everything before diving in.</strong> A rough sense of which tasks are quick wins and which are heavier lets you sequence for points instead of solving in the order given.</li>
-<li><strong>Set a personal time cap per task</strong>, and if you blow past it with no clear path forward, flag it and move on. A stuck twenty minutes on one task is a worse trade than two solved easier ones.</li>
-<li><strong>Verify before moving on.</strong> A quick <code>kubectl get</code> or <code>describe</code> after each change confirms it actually landed, which is faster than discovering at the end that three tasks silently failed.</li>
-<li><strong>Leave a buffer at the end</strong> to revisit flagged tasks rather than treating the full two hours as study-until-the-buzzer time.</li>
-</ul>
-<p><code>RUSHABH30</code> takes 30% off the CKA, dropping it from $445 to about $311. I&#39;m an official Linux Foundation Education affiliate partner, so the code costs you nothing extra.</p>
-<p>$ get <a href="/linux-foundation-coupon/cka/">CKA for ~$311 with RUSHABH30 →</a></p>
+<p>Observability is most of my day job, Prometheus, Grafana, Loki, Tempo, and OpenTelemetry, so I get asked a lot about the two CNCF associate exams that cover this space: PCA (Prometheus Certified Associate) and OTCA (OpenTelemetry Certified Associate). Both are $250, both are 90-minute multiple choice, no live terminal for either, and both carry the CNCF official content badge. Here&#39;s an honest read on each.</p>
+<h2 id="prometheus-certified-associate-reviewed">Prometheus Certified Associate, reviewed</h2>
+<p>PCA covers observability concepts, Prometheus fundamentals, PromQL, instrumentation and exporters, and alerting and dashboarding. The thing worth knowing going in: PromQL is the largest single domain on the exam, bigger than Prometheus fundamentals itself. That&#39;s a deliberate signal about what this credential actually certifies.</p>
+<p>Being able to install Prometheus and point Grafana at it is not the same skill as being able to write a PromQL query from scratch to answer a real question about your metrics, and PCA is built to test the second one specifically. If your PromQL is mostly copy-pasted from dashboards you didn&#39;t write, that&#39;s exactly the gap this exam will find.</p>
+<p>Linux Foundation designed it with a specific candidate in mind: people who already hold something like KCNA, CKA, or CKAD, or have a cloud engineering background. If that&#39;s you, the Kubernetes context makes the instrumentation and exporters domain click much faster than coming in cold.</p>
+<h2 id="opentelemetry-certified-associate-reviewed">OpenTelemetry Certified Associate, reviewed</h2>
+<p>OTCA covers observability fundamentals, the OpenTelemetry API and SDK, the OpenTelemetry Collector, and maintaining and debugging observability pipelines. Here the weighting story is even more lopsided: the API and SDK domain alone makes up close to half the exam, well ahead of the Collector domain.</p>
+<p>That tells you what OTCA actually validates: real instrumentation knowledge, not just the ability to write a Collector config. If your OpenTelemetry experience so far is &quot;I deployed the Collector someone else configured,&quot; this exam is going to test territory you haven&#39;t actually touched yet. Exam-takers consistently report the Collector questions use realistic, practical config examples rather than abstract theory, so hands-on time with actual configuration stanzas matters more than reading the spec.</p>
+<h2 id="which-to-take-first-and-why">Which to take first, and why</h2>
+<p>If your day-to-day already leans on metrics and dashboards, PCA is the natural first move: it validates knowledge you likely already have a head start on, and passing it builds confidence before you tackle OTCA&#39;s heavier SDK content. If you&#39;re doing greenfield instrumentation work, wiring traces and logs into a new service from scratch, OTCA maps more directly to what you&#39;re already doing day to day, and PCA becomes the complementary second exam once you&#39;ve got metrics backend knowledge to pair with it.</p>
+<p>Either order works. They&#39;re genuinely complementary rather than sequential: Prometheus handles metrics, OpenTelemetry adds traces and logs to the same picture, and most observability work eventually touches both.</p>
+<p><code>RUSHABH30</code> takes 30% off either exam, dropping each from $250 to about $175.</p>
+<p>$ get <a href="/linux-foundation-coupon/pca/">PCA for ~$175 →</a> or <a href="/linux-foundation-coupon/otca/">OTCA for ~$175 →</a> with RUSHABH30. I&#39;m an official Linux Foundation Education affiliate partner, so the code costs you nothing extra.</p>
 
             </div>
             <footer class="mt-12 pt-6 border-t border-border-color">
                 <div class="flex flex-wrap items-center gap-3 font-fira text-sm">
                     <span class="text-gray-400">Share:</span>
-                    <a href="https://twitter.com/intent/tweet?text=CKA%20exam%20day%3A%20PSI%20bridge%2C%20terminal%2C%20kubectl%20aliases&url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fcka-exam-day-setup%2F" target="_blank" rel="noopener noreferrer" class="chip">X / Twitter</a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fcka-exam-day-setup%2F" target="_blank" rel="noopener noreferrer" class="chip">LinkedIn</a>
-                    <button type="button" id="copy-link" class="chip" data-url="https://rushabhshah.dev/blog/cka-exam-day-setup/">Copy link</button>
-                    <button type="button" id="native-share" class="chip hidden" data-title="CKA exam day: PSI bridge, terminal, kubectl aliases" data-url="https://rushabhshah.dev/blog/cka-exam-day-setup/">Share…</button>
+                    <a href="https://twitter.com/intent/tweet?text=Prometheus%20PCA%20and%20OpenTelemetry%20OTCA%2C%20reviewed&url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fpca-otca-review%2F" target="_blank" rel="noopener noreferrer" class="chip">X / Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fpca-otca-review%2F" target="_blank" rel="noopener noreferrer" class="chip">LinkedIn</a>
+                    <button type="button" id="copy-link" class="chip" data-url="https://rushabhshah.dev/blog/pca-otca-review/">Copy link</button>
+                    <button type="button" id="native-share" class="chip hidden" data-title="Prometheus PCA and OpenTelemetry OTCA, reviewed" data-url="https://rushabhshah.dev/blog/pca-otca-review/">Share…</button>
                     <a href="/blog/rss.xml" class="chip">RSS</a>
                 </div>
                 <p class="font-fira text-sm text-gray-400 mt-5">Thanks for reading. <a href="/#contact" class="text-primary-color hover:underline">Say hi</a> if it was useful.</p>
-                <p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">a 30% discount code for Linux Foundation certifications</a>.</p>
+                <p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">30% off the CKA, CKAD and CKS with code RUSHABH30</a>.</p>
             </footer>
         </article>
         
@@ -183,10 +155,9 @@ k logs &lt;name&gt; --previous
             <div class="post-toc-sticky">
                 <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># on this page</p>
                 <nav class="post-toc-nav">
-                    <a href="#psi-bridge-and-secure-browser-setup" data-toc-link="psi-bridge-and-secure-browser-setup" class="post-toc-link">PSI bridge and secure browser setup</a>
-                    <a href="#what-the-exam-terminal-actually-gives-you" data-toc-link="what-the-exam-terminal-actually-gives-you" class="post-toc-link">What the exam terminal actually gives you</a>
-                    <a href="#kubectl-aliases-and-shortcuts-worth-memorizing" data-toc-link="kubectl-aliases-and-shortcuts-worth-memorizing" class="post-toc-link">kubectl aliases and shortcuts worth memorizing</a>
-                    <a href="#time-management-across-the-exam-39-s-tasks" data-toc-link="time-management-across-the-exam-39-s-tasks" class="post-toc-link">Time management across the exam&#39;s tasks</a>
+                    <a href="#prometheus-certified-associate-reviewed" data-toc-link="prometheus-certified-associate-reviewed" class="post-toc-link">Prometheus Certified Associate, reviewed</a>
+                    <a href="#opentelemetry-certified-associate-reviewed" data-toc-link="opentelemetry-certified-associate-reviewed" class="post-toc-link">OpenTelemetry Certified Associate, reviewed</a>
+                    <a href="#which-to-take-first-and-why" data-toc-link="which-to-take-first-and-why" class="post-toc-link">Which to take first, and why</a>
                 </nav>
             </div>
         </aside>
@@ -212,14 +183,11 @@ k logs &lt;name&gt; --previous
                     </a>
             </div>
             <nav class="post-prevnext" aria-label="More posts">
-                <a href="/blog/kubernetes-v1-37-garhwal/" class="block prevnext-link prevnext-older">
+                <a href="/blog/cka-exam-day-setup/" class="block prevnext-link prevnext-older">
                         <span class="prevnext-label">← Older</span>
-                        <span class="prevnext-title">Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks</span>
+                        <span class="prevnext-title">CKA exam day: PSI bridge, terminal, kubectl aliases</span>
                     </a>
-                <a href="/blog/pca-otca-review/" class="block prevnext-link prevnext-newer">
-                        <span class="prevnext-label">Newer →</span>
-                        <span class="prevnext-title">Prometheus PCA and OpenTelemetry OTCA, reviewed</span>
-                    </a>
+                
             </nav>
         </section>
     </main>
@@ -250,7 +218,7 @@ k logs &lt;name&gt; --previous
             }
         });
     </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"CKA exam day: PSI bridge, terminal, kubectl aliases","description":"The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.","datePublished":"2026-08-28T03:30:00.000Z","dateModified":"2026-08-28T03:30:00.000Z","url":"https://rushabhshah.dev/blog/cka-exam-day-setup/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"kubernetes, certification"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Prometheus PCA and OpenTelemetry OTCA, reviewed","description":"Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.","datePublished":"2026-08-30T03:30:00.000Z","dateModified":"2026-08-30T03:30:00.000Z","url":"https://rushabhshah.dev/blog/pca-otca-review/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"kubernetes, certification"}</script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const v = document.getElementById('post-views');

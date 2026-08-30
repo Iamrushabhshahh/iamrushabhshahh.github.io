@@ -206,6 +206,16 @@ Latest posts from the blog and recent community engagements.
 
 #certification
 
+Aug 30, 2026 · 3 min read
+
+### Prometheus PCA and OpenTelemetry OTCA, reviewed
+
+Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SD…
+
+(https://rushabhshah.dev/blog/pca-otca-review/)
+
+#certification
+
 Aug 28, 2026 · 3 min read
 
 ### CKA exam day: PSI bridge, terminal, kubectl aliases
@@ -221,16 +231,6 @@ Aug 27, 2026 · 26 min read
 A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for…
 
 (https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/)
-
-#certification
-
-Aug 26, 2026 · 3 min read
-
-### What the CKA actually tests in 2026
-
-The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, h…
-
-(https://rushabhshah.dev/blog/cka-exam-guide/)
 
 ### Speaking & Community
 
