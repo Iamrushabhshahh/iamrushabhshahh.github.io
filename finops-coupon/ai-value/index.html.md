@@ -2,7 +2,7 @@
 
 # FinOps Certified: AI Value Discount Code: 20% Off with RUSHABH_20
 
-Updated August 2026 · Self-Paced Course + Certification Exam
+Updated September 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
@@ -21,7 +21,7 @@ Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/pa
 | **Certification valid for** | 24 months |
 | **Prerequisite** | None formally, though FOCP or FOCE first is strongly recommended |
 
-*List price read from the FinOps Foundation's own catalog in August 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/certified-finops-for-ai) for the current number before you buy.*
+*List price read from the FinOps Foundation's own catalog in September 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/certified-finops-for-ai) for the current number before you buy.*
 
 ## Who this is for
 

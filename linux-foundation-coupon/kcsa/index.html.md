@@ -2,7 +2,7 @@
 
 # KCSA Discount Code: 30% Off with RUSHABH30
 
-Updated August 2026 · Kubernetes and Cloud Native Security Associate
+Updated September 2026 · Kubernetes and Cloud Native Security Associate
 
 RUSHABH30
 

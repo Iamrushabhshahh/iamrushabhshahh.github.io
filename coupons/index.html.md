@@ -1,6 +1,6 @@
 # Certification Discount Codes That Actually Work
 
-Updated August 2026 · Two official partner codes, one page
+Updated September 2026 · Two official partner codes, one page
 
 RUSHABH30
 

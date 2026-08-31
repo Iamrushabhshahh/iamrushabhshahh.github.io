@@ -2,7 +2,7 @@
 
 # Golden Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated August 2026 · Golden Kubestronaut bundle (16 CNCF certs)
+Updated September 2026 · Golden Kubestronaut bundle (16 CNCF certs)
 
 RUSHABH30
 

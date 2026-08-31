@@ -2,7 +2,7 @@
 
 # PCA Discount Code: 30% Off with RUSHABH30
 
-Updated August 2026 · Prometheus Certified Associate
+Updated September 2026 · Prometheus Certified Associate
 
 RUSHABH30
 

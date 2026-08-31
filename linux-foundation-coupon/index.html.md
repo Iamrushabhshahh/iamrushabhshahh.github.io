@@ -1,6 +1,6 @@
 # Linux Foundation Coupon Code: 30% Off Everything, All Year
 
-Updated August 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
+Updated September 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
 No sale running right now. This is the everyday code, works year-round:
 
@@ -8,7 +8,7 @@ RUSHABH30
 
 [Open the catalog →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F)
 
-Last verified: August 2026
+Last verified: September 2026
 
 The short version: put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F) and the total drops by 30%. It works on the whole training catalog, every day of the year. The rest of this page is context: where the code comes from, what the popular certifications actually cost with it, and the advice I give people at meetups about which one is worth their money.
 
@@ -34,7 +34,7 @@ These are the certifications people ask me about most, with the math already don
 | **[PCA](#pca-discount)** (Prometheus Certified Associate) | Engineers focused on monitoring | $250 | ~$175 |
 | **[OTCA](#otca-discount)** (OpenTelemetry Certified Associate) | DevOps & platform engineers standardizing on OTel | $250 | ~$175 |
 
-**List prices when I last updated this page (August 2026), so check the [official catalog](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
+**List prices when I last updated this page (September 2026), so check the [official catalog](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
 
 ### Bundle savings, in dollars
 

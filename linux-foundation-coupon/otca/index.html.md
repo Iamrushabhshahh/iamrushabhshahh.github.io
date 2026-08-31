@@ -2,7 +2,7 @@
 
 # OTCA Discount Code: 30% Off with RUSHABH30
 
-Updated August 2026 · OpenTelemetry Certified Associate
+Updated September 2026 · OpenTelemetry Certified Associate
 
 RUSHABH30
 

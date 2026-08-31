@@ -1,12 +1,12 @@
 # FinOps Certification Coupon: 20% Off with RUSHABH_20
 
-Updated August 2026 · Works on FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value & Technology Value
+Updated September 2026 · Works on FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value & Technology Value
 
 RUSHABH_20
 
 [Open the FinOps catalog →](https://learn.finops.org/)
 
-Last verified: August 2026
+Last verified: September 2026
 
 The short version: put `RUSHABH_20` in the promo code field at checkout on [learn.finops.org](https://learn.finops.org/) and the total drops 20%. It works on five self-paced FinOps Foundation certifications, listed below with the maths already done. The rest of this page is context: where the code comes from, what each certification is actually for, and which one I'd tell you to take first.
 
@@ -28,7 +28,7 @@ All five are the Self-Paced Course + Certification Exam offering, which bundles 
 | **[FinOps Certified: AI Value](https://rushabhshah.dev/finops-coupon/ai-value/)** | Teams whose AI spend has become material | $500 | ~$400 |
 | **[FinOps Certified: Technology Value](https://rushabhshah.dev/finops-coupon/technology-value/)** | Practices growing past public cloud into SaaS and data centres | $500 | ~$400 |
 
-**List prices read from the FinOps Foundation's own catalog in August 2026. They set the prices and revise them periodically, so check [learn.finops.org](https://learn.finops.org/) for current numbers.*
+**List prices read from the FinOps Foundation's own catalog in September 2026. They set the prices and revise them periodically, so check [learn.finops.org](https://learn.finops.org/) for current numbers.*
 
 ## What the code does not cover
 

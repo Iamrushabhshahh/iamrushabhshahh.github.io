@@ -2,7 +2,7 @@
 
 # LFCS Discount Code: 30% Off with RUSHABH30
 
-Updated August 2026 · Linux Foundation Certified System Administrator
+Updated September 2026 · Linux Foundation Certified System Administrator
 
 RUSHABH30
 
