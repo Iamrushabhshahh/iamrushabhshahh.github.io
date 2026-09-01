@@ -2,8 +2,9 @@
 .claude/
 .vscode/
 .idea/
+# a trailing comment would become part of the pattern, so keep it above:
+# this matches .obsidian/ at any depth, content/.obsidian/ included.
 .obsidian/
-content/.obsidian/
 
 # OS junk
 .DS_Store
@@ -16,8 +17,6 @@ node_modules/
 *.log
 *.tmp
 .cache/
-
-.obsidian
 
 # python scratch from diagrams/
 __pycache__/
