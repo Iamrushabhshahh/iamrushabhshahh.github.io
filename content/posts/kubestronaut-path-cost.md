@@ -3,6 +3,7 @@ title: "The Kubestronaut path and what it really costs"
 description: "Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here's the real cost breakdown, a realistic study timeline, and who it's actually for."
 date: "2026-08-22 09:00"
 tags: [kubernetes, certification]
+cover: /assets/blog/og/kubestronaut-path-cost.jpg
 draft: false
 ---
 

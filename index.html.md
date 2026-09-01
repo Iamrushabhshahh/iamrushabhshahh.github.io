@@ -204,7 +204,13 @@ Blog Observability Linux DevOps
 
 Latest posts from the blog and recent community engagements.
 
-#certification
+Sep 1, 2026 · 19 min read
+
+### India's first heritage city, Gujarat's first KCD
+
+Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you a…
+
+(https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/)
 
 Aug 30, 2026 · 3 min read
 
@@ -214,8 +220,6 @@ Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA
 
 (https://rushabhshah.dev/blog/pca-otca-review/)
 
-#certification
-
 Aug 28, 2026 · 3 min read
 
 ### CKA exam day: PSI bridge, terminal, kubectl aliases
@@ -223,14 +227,6 @@ Aug 28, 2026 · 3 min read
 The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth mem…
 
 (https://rushabhshah.dev/blog/cka-exam-day-setup/)
-
-Aug 27, 2026 · 26 min read
-
-### Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks
-
-A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for…
-
-(https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/)
 
 ### Speaking & Community
 

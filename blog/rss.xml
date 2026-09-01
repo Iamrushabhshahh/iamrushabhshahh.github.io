@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Aug 2026 03:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 03:30:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>India&#39;s first heritage city, Gujarat&#39;s first KCD</title>
+      <link>https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/</guid>
+      <pubDate>Tue, 01 Sep 2026 03:30:00 GMT</pubDate>
+      <description>Gujarat&#39;s first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you about.</description>
+      <category>kubernetes</category><category>community</category><category>kcd</category>
+    </item>
     <item>
       <title>Prometheus PCA and OpenTelemetry OTCA, reviewed</title>
       <link>https://rushabhshah.dev/blog/pca-otca-review/</link>

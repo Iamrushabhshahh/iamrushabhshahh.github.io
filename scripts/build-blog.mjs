@@ -624,7 +624,17 @@ const fmtDate = (d) => d.toLocaleDateString('en-US', {
 
 const isoDate = (d) => d.toISOString();
 
-const readingTime = (text) => Math.max(1, Math.round(text.split(/\s+/).filter(Boolean).length / 200));
+/* Words a human actually reads, so raw HTML in the source doesn't inflate the
+   estimate. A post carrying 43 photo cards was reporting 21 minutes for what is
+   really about 12, because every tag, attribute and URL counted as a word. */
+const readingTime = (text) => Math.max(1, Math.round(
+  text
+    .replace(/<(script|style)[\s\S]*?<\/\1>/gi, '')
+    .replace(/<details[\s\S]*?<\/details>/gi, '')  // collapsed by default, so nobody is reading it
+    .replace(/<[^>]+>/g, ' ')      // tags, and with them every attribute and src
+    .replace(/&[a-z]+;|&#\d+;/gi, ' ')
+    .replace(/```[\s\S]*?```/g, ' ')
+    .split(/\s+/).filter(Boolean).length / 200));
 
 /* Last git commit date (YYYY-MM-DD) for a repo-relative path, ignoring this
    script's own bot commits — otherwise each bot commit that touches a stamped
@@ -686,6 +696,20 @@ const tableToMarkdown = (inner) => {
   const [header, ...body] = rows;
   return `\n${[`| ${header.join(' | ')} |`, `| ${header.map(() => '---').join(' | ')} |`, ...body.map(r => `| ${r.join(' | ')} |`)].join('\n')}\n`;
 };
+
+// Photo rails are raw HTML in the markdown source, which is right for the page
+// and useless in the llms.txt mirror — a reader (or a model) fetching
+// index.html.md wants the list, not the scroll-container that renders it. Flatten
+// each rail back to a labelled bullet list of "name: note".
+function railsToMarkdown(md) {
+  return md.replace(/<div class="rail"[\s\S]*?<\/ul><\/div>/g, (block) => {
+    const label = decodeEntities((block.match(/<p class="rail-label">([\s\S]*?)<span/) || [, ''])[1].trim());
+    const items = [...block.matchAll(/<b>([\s\S]*?)<\/b><span>([\s\S]*?)<\/span>/g)]
+      .map(([, name, note]) => `- **${decodeEntities(name.trim())}**: ${decodeEntities(note.trim())}`);
+    if (!items.length) return '';
+    return `${label ? `_${label}_\n\n` : ''}${items.join('\n')}`;
+  });
+}
 
 function htmlFragmentToMarkdown(html) {
   let s = html
@@ -1272,6 +1296,41 @@ for (const [postIndex, post] of all.entries()) {
                 });
             });
         }
+
+        // Horizontal photo rails (.rail in a post body). The track scrolls on
+        // its own with touch, trackpad and arrow keys; this only adds the
+        // desktop prev/next buttons and keeps the edge fades in sync with how
+        // far along the track is. The buttons stay hidden until 'ready' lands,
+        // so no-JS readers never see a control that does nothing.
+        const railReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        document.querySelectorAll('.rail').forEach(rail => {
+            const track = rail.querySelector('.rail-track');
+            const nav = rail.querySelector('.rail-nav');
+            if (!track || !nav) return;
+            const buttons = nav.querySelectorAll('button');
+            const prev = buttons[0], next = buttons[1];
+            if (!prev || !next) return;
+            const sync = () => {
+                const max = track.scrollWidth - track.clientWidth;
+                const atStart = track.scrollLeft <= 2;
+                const atEnd = track.scrollLeft >= max - 2;
+                rail.dataset.atStart = atStart ? 'true' : 'false';
+                rail.dataset.atEnd = atEnd ? 'true' : 'false';
+                prev.disabled = atStart;
+                next.disabled = atEnd;
+            };
+            const go = (dir) => {
+                const card = track.querySelector('li');
+                const step = card ? card.offsetWidth + 14 : 260;
+                track.scrollBy({ left: dir * step * 2, behavior: railReduced ? 'auto' : 'smooth' });
+            };
+            prev.addEventListener('click', () => go(-1));
+            next.addEventListener('click', () => go(1));
+            track.addEventListener('scroll', sync, { passive: true });
+            window.addEventListener('resize', sync);
+            nav.classList.add('ready');
+            sync();
+        });
     });
     </script>`;
 
@@ -1323,7 +1382,7 @@ ${footer.replace('</body>', `<script type="application/ld+json">${JSON.stringify
 
   // llms.txt-spec markdown mirror, from the original markdown source (higher
   // fidelity than re-deriving it from the rendered HTML).
-  const postMd = `# ${post.title}\n\n> ${post.description}\n\nPublished: ${isoDate(post.date).slice(0, 10)} · Updated: ${isoDate(post.updated).slice(0, 10)} · Tags: ${post.tags.join(', ') || 'none'}\nCanonical: ${url}\n\n${post.rawContent}\n`;
+  const postMd = `# ${post.title}\n\n> ${post.description}\n\nPublished: ${isoDate(post.date).slice(0, 10)} · Updated: ${isoDate(post.updated).slice(0, 10)} · Tags: ${post.tags.join(', ') || 'none'}\nCanonical: ${url}\n\n${railsToMarkdown(post.rawContent)}\n`;
   fs.writeFileSync(path.join(dir, 'index.html.md'), postMd);
 
   console.log(`✅ built     /blog/${post.slug}/`);

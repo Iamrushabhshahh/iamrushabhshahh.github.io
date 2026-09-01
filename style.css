@@ -1298,6 +1298,174 @@ nav a { -webkit-tap-highlight-color: transparent; }
     .post-prose figure a::after { content: none; }
 }
 
+/* ---------- Horizontal photo rail ----------
+   A long list of places reads as a wall of bullets. The same list as a
+   swipeable rail of photos is skimmable in one gesture, and costs one screen
+   of vertical space instead of ten. The track is a plain overflow-x scroller,
+   so touch swipe, trackpad and keyboard arrows all work with no JS; the arrow
+   buttons are progressive enhancement, added and wired by the post script and
+   hidden until then. On a phone the rail bleeds to the viewport edge, which is
+   what signals "there is more to the right" without a scrollbar.
+
+   Selectors are doubled up (.rail .rail-track rather than .rail-track) on
+   purpose: the track is a <ul> inside .post-prose, and .post-prose ul/li/img
+   would otherwise win on specificity and put list padding and image borders
+   back. The padding one is not cosmetic — a track whose padding-left does not
+   match its scroll-padding-left starts life snapped 19px into the first card. */
+.post-prose .rail { margin: 1.9em 0 2.3em; }
+.rail .rail-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Fira Code', 'Fira-Code-fallback', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    color: var(--muted-color);
+    margin: 0 0 0.7rem;
+}
+.rail .rail-label::before { content: '$'; color: var(--green-color); }
+.rail .rail-nav { margin-left: auto; display: none; gap: 0.35rem; }
+.rail .rail-nav button {
+    width: 1.9rem;
+    height: 1.9rem;
+    line-height: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    background: var(--panel-color);
+    color: var(--muted-color);
+    font-size: 0.9rem;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+.rail .rail-nav button:hover:not(:disabled) { color: var(--primary-color); border-color: var(--primary-color); }
+.rail .rail-nav button:disabled { opacity: 0.3; cursor: default; }
+
+.rail .rail-track {
+    display: flex;
+    gap: 0.85rem;
+    list-style: none;
+    padding: 0.25rem 0.25rem 0.9rem;
+    margin: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    /* proximity, not mandatory: a mandatory track re-snaps itself whenever the
+       page reflows, which on a lazy-loading gallery means rails that silently
+       scroll themselves away from card one. */
+    scroll-snap-type: x proximity;
+    scroll-padding-left: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+}
+.rail .rail-track > li {
+    flex: 0 0 clamp(215px, 60vw, 258px);
+    margin: 0;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    background: var(--panel-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.18s ease, transform 0.18s ease;
+}
+.rail .rail-track > li:hover { border-color: rgba(var(--primary-rgb), 0.55); transform: translateY(-2px); }
+.rail .rail-track img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: rgba(var(--neutral-rgb), 0.10);
+}
+.rail .rail-card-body { padding: 0.7rem 0.8rem 0.85rem; }
+.rail .rail-track b {
+    display: block;
+    color: var(--fg-strong);
+    font-family: 'Space Grotesk', 'Space-Grotesk-fallback', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    font-weight: 600;
+}
+.rail .rail-track span {
+    display: block;
+    margin-top: 0.3rem;
+    color: var(--muted-color);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+/* Cards that scroll off an edge fade rather than being guillotined, so the rail
+   reads as continuing past the column. Each edge's fade is dropped once the
+   track is actually parked against it. */
+@supports (mask-image: linear-gradient(#000, #000)) {
+    .rail .rail-track {
+        mask-image: linear-gradient(to right, transparent 0, #000 34px, #000 calc(100% - 64px), transparent 100%);
+    }
+    .rail[data-at-start="true"] .rail-track {
+        mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 64px), transparent 100%);
+    }
+    .rail[data-at-end="true"] .rail-track {
+        mask-image: linear-gradient(to right, transparent 0, #000 34px, #000 100%);
+    }
+    .rail[data-at-start="true"][data-at-end="true"] .rail-track { mask-image: none; }
+}
+
+/* On a phone the article gutter is 1.5rem (px-6). Cancelling it lets the rail
+   run to both screen edges, which is the strongest possible hint that it
+   scrolls, and buys back ~48px of card width on the narrowest devices. */
+@media (max-width: 767px) {
+    .post-prose .rail { margin-left: -1.5rem; margin-right: -1.5rem; }
+    .rail .rail-label { padding-left: 1.5rem; }
+    .rail .rail-track {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        scroll-padding-left: 1.5rem;
+        scrollbar-width: none;
+    }
+    .rail .rail-track::-webkit-scrollbar { height: 0; }
+}
+@media (min-width: 768px) {
+    .rail .rail-nav.ready { display: flex; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .rail .rail-track > li:hover { transform: none; }
+}
+
+/* Image attribution for posts that reuse Commons photography. Collapsed by
+   default: the licences have to be on the page, but a 41-item list does not
+   have to be the last thing a reader scrolls past. */
+.post-prose details.photo-credits {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: rgba(var(--panel-rgb), 0.6);
+    padding: 0;
+}
+.post-prose details.photo-credits summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.75rem 1rem;
+    font-family: 'Fira Code', 'Fira-Code-fallback', monospace;
+    font-size: 0.82rem;
+    color: var(--muted-color);
+}
+.post-prose details.photo-credits summary::-webkit-details-marker { display: none; }
+.post-prose details.photo-credits summary::before { content: '+ '; color: var(--primary-color); }
+.post-prose details.photo-credits[open] summary::before { content: '\2212 '; }
+.post-prose details.photo-credits summary:hover { color: var(--text-color); }
+.post-prose details.photo-credits > ul {
+    margin: 0;
+    padding: 0 1rem 0.5rem 2.3rem;
+    font-size: 0.8rem;
+    color: var(--muted-color);
+}
+.post-prose details.photo-credits > ul li { margin-top: 0.2em; }
+.post-prose details.photo-credits > p {
+    margin: 0;
+    padding: 0.4rem 1rem 0.9rem;
+    font-size: 0.8rem;
+    color: var(--muted-color);
+}
+
 /* ---------- Post cards ----------
    The media slot is always present, so a list of posts lines up whether or not
    each one has a banner. Cards with a cover show it; cards without show a

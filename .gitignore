@@ -18,3 +18,7 @@ node_modules/
 .cache/
 
 .obsidian
+
+# python scratch from diagrams/
+__pycache__/
+.venv/

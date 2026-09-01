@@ -3,6 +3,7 @@ title: "What the CKA actually tests in 2026"
 description: "The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time."
 date: "2026-08-26 09:00"
 tags: [kubernetes, certification]
+cover: /assets/blog/og/cka-exam-guide.jpg
 draft: false
 ---
 

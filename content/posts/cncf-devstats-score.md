@@ -3,6 +3,7 @@ title: "My CNCF DevStats score is 178, and now I can't stop checking it"
 description: "A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here's what that number is actually made of, and how to check yours."
 date: "2026-08-20 23:00"
 tags: [open-source, cncf, meta]
+cover: /assets/blog/og/cncf-devstats-score.jpg
 draft: false
 ---
 

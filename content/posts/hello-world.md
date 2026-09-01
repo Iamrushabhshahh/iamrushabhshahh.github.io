@@ -3,6 +3,7 @@ title: "Hello, world: the blog now lives on rushabhshah.dev"
 description: "Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood."
 date: "2026-07-09 12:00"
 tags: [meta, blog]
+cover: /assets/blog/og/hello-world.jpg
 draft: false
 ---
 
