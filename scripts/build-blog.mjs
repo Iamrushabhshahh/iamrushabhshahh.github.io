@@ -808,7 +808,7 @@ const now = new Date();
    so pointing people at the better sale code through the tracking link below
    costs nothing and is the honest recommendation. */
 const SALE = {
-  name: 'Switch & Save flash sale',
+  name: 'Switch & Save sale',
   // Awin quotes three windows: the marketing copy says September 9-11, the
   // offer terms say September 9 through September 11, 23:59 UTC, and the
   // tracking link itself is padded to 9/8 8:15 PM - 9/13 2:59 AM ET. Copy and
@@ -817,7 +817,7 @@ const SALE = {
   start: '2026-09-09T00:15:00Z',
   end: '2026-09-11T23:59:00Z',
   advertisedEnd: 'September 11',
-  dateNote: 'The offer terms end at 23:59 UTC on September 11, which is 5:29 AM IST on September 12. Copy and terms agree this time, so September 11 is the last day to buy.',
+  dateNote: 'Runs until 23:59 UTC on September 11, which is 5:29 AM IST on the 12th. New purchases only, not renewals.',
   // No coupon code this time. The cut is already applied to the bundle prices
   // on the landing page, so `codes` is empty and the banner says so instead of
   // rendering code boxes. A future coded sale fills this with
@@ -833,7 +833,7 @@ const SALE = {
   // every bundle listed there.
   tiers: [
     { label: 'CKA, CKAD, CKS, LFCS or CNPE + THRIVE-ONE Annual', list: 805, sale: 553 },
-    { label: 'KCNA, KCSA, PCA, OTCA, CGOA, ICA, CCA, CAPA, LFCA and the other associate exams + THRIVE-ONE Annual', list: 610, sale: 423 },
+    { label: 'KCNA, KCSA, PCA, OTCA and the other associate exams + THRIVE-ONE Annual', list: 610, sale: 423 },
   ],
   // This sale does NOT beat RUSHABH30 for someone who only wants the exam:
   // CKA alone is ~$311 with the code, the CKA bundle is $553. It only wins if
@@ -841,11 +841,11 @@ const SALE = {
   // rather than shouting "beats RUSHABH30" the way a flat sitewide sale can.
   beatsEveryday: false,
   // One-line record for the past-sales archive once the window closes.
-  summary: '40% off a certification exam plus an extra 20% off THRIVE-ONE Annual when bought as a bundle, no code, prices cut on the landing page ($805 bundles at $553, $610 bundles at $423)',
+  summary: '40% off a certification and 20% off THRIVE-ONE Annual, bundle only, no code ($805 bundles went to $553, $610 to $423). Only cheaper than RUSHABH30 if you wanted the subscription',
   banner: {
     src: '/assets/linux-foundation-sep26-switch-save-40-20-percent-off.webp',
     width: 901, height: 501,
-    alt: 'Linux Foundation Switch & Save, September 9 to 11: 40% off certifications plus 20% off THRIVE-ONE Annual when bundled. Unlimited learning, subscriber exclusives, SkillCred All-Access, plus an industry-recognized certification.',
+    alt: 'Linux Foundation Switch & Save sale, September 9 to 11: 40% off certifications, 20% off THRIVE-ONE Annual, bundled',
   },
   dest: 'https://training.linuxfoundation.org/september-2026-flash/',
 };
@@ -1716,17 +1716,16 @@ const copyBtn = (code) => `<button type="button" class="chip copy-code" data-cod
 const saleBannerHtml = () => {
   if (!saleLive) return '';
   const { name, advertisedEnd, codes, offers, tiers, banner, dateNote } = SALE;
-  const top = Math.max(...offers.map(o => o.pct));
   const offerList = offers.map((o, i) => `${i === 0 ? '' : 'plus '}<strong class="text-white">${o.pct}% off</strong> ${escapeHtml(o.what)}`).join(', ');
   const codeBoxes = codes.length
     ? codes.map(c => `<span class="code-box">${c.code}${copyBtn(c.code)}</span>`).join('\n                        ')
-    : `<span class="font-fira text-xs text-gray-400">No code needed: the bundle prices on the landing page already include both cuts.</span>`;
+    : `<span class="font-fira text-xs text-gray-400">No code for this one. The bundle price is already cut.</span>`;
   const tierRows = tiers?.length
     ? `<ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${tiers.map(t => `<li>${escapeHtml(t.label)}: <s class="text-gray-500">$${t.list}</s> <strong class="text-white">$${t.sale}</strong></li>`).join('')}</ul>`
     : '';
   const compare = SALE.beatsEveryday
     ? `Sale prices don't stack with RUSHABH30, so take the bigger number while it's running. RUSHABH30 goes back to being the best price here at 30% the day the sale closes.`
-    : `Who it's for: if you wanted the THRIVE-ONE subscription anyway (unlimited courses, SkillCred All-Access, subscriber extras), this is the cheapest way to get it with an exam. If you only want the exam, <code>RUSHABH30</code> is still cheaper: CKA alone is about $311 with it, against $553 for the CKA bundle. Sale prices don't stack with RUSHABH30.`;
+    : `Honest take: good deal if you actually want THRIVE-ONE (every course and every SkillCred exam for a year). If you just want the exam, skip it. CKA with <code>RUSHABH30</code> is $311. The CKA bundle is $553. You can't use the code on top of the sale.`;
   const img = banner
     ? `<a href="${saleLink}" target="_blank" rel="noopener sponsored" class="block mb-4" data-goatcounter-click="cta-sale-banner-image" data-goatcounter-title="Live sale banner image"><img src="${banner.src}" width="${banner.width}" height="${banner.height}" alt="${escapeHtml(banner.alt)}" class="w-full h-auto rounded-md" decoding="async"></a>`
     : '';
@@ -1734,17 +1733,16 @@ const saleBannerHtml = () => {
                 <div id="current-sale" class="tech-card tech-card-sale p-5 rounded-md mb-8">
                     <p class="status-pill mb-3"><span class="dot"></span> Sale live now &middot; ends ${escapeHtml(advertisedEnd)}</p>
                     ${img}
-                    <p class="text-white font-bold text-lg mb-2">Linux Foundation ${escapeHtml(name)}: up to ${top}% off, bundled</p>
+                    <p class="text-white font-bold text-lg mb-2">Linux Foundation ${escapeHtml(name)}</p>
                     <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        For three days only, the Linux Foundation is selling certification exams bundled with a
-                        THRIVE-ONE Annual subscription: ${offerList}.
+                        ${offerList}${SALE.condition ? `, ${escapeHtml(SALE.condition)}` : ''}. What the bundles cost:
                     </p>
                     ${tierRows}
                     <p class="text-gray-400 text-sm leading-relaxed mb-4">${compare}</p>
-                    ${dateNote ? `<p class="text-gray-500 text-xs leading-relaxed mb-4">On the date: ${escapeHtml(dateNote)}</p>` : ''}
+                    ${dateNote ? `<p class="text-gray-500 text-xs leading-relaxed mb-4">${escapeHtml(dateNote)}</p>` : ''}
                     <div class="flex flex-wrap items-center gap-4">
                         ${codeBoxes}
-                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">See the bundles &rarr;</a>
+                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">Go to the sale &rarr;</a>
                     </div>
                 </div>`;
 };
@@ -1763,7 +1761,7 @@ const pastSaleAutoHtml = () => {
 };
 
 const saleIntroHtml = () => saleLive
-  ? `<p class="font-fira text-xs text-gray-400 mb-3">A sale is running right now (see above)${SALE.beatsEveryday ? '' : ', though it only beats this code if you want the THRIVE-ONE subscription too'}. This is the everyday code, and it works year-round:</p>`
+  ? `<p class="font-fira text-xs text-gray-400 mb-3">A sale is running right now (see above)${SALE.beatsEveryday ? '' : ', but it only beats this code if you want THRIVE-ONE too'}. This is the everyday code, works year-round:</p>`
   : `<p class="font-fira text-xs text-gray-400 mb-3">No sale running right now. This is the everyday code, works year-round:</p>`;
 
 /* The homepage deals card. Same card, different pitch while a sale is on. */
@@ -1773,10 +1771,10 @@ const saleHomeCardHtml = () => saleLive
                 <p class="text-sm text-gray-300 leading-relaxed">
                     The Linux Foundation <strong class="text-white">${escapeHtml(SALE.name)}</strong> is live:
                     ${SALE.offers.map(o => `<strong class="text-white">${o.pct}% off</strong> ${escapeHtml(o.what)}`).join(', plus ')}${SALE.condition ? `, ${escapeHtml(SALE.condition)}` : ''}.
-                    ${SALE.codes.length ? `Use <span class="font-fira font-bold text-primary-color">${SALE.codes[0].code}</span> at checkout.` : 'No code needed, the bundle prices already include it.'}
+                    ${SALE.codes.length ? `Use <span class="font-fira font-bold text-primary-color">${SALE.codes[0].code}</span> at checkout.` : 'No code, the bundle price is already cut.'}
                     ${SALE.beatsEveryday
                       ? `My evergreen <span class="font-fira text-primary-color">RUSHABH30</span> code takes over at 30% when it ends.`
-                      : `Only want the exam? <span class="font-fira text-primary-color">RUSHABH30</span> at 30% is still the cheaper route.`}
+                      : `Just want the exam? Skip it and use <span class="font-fira text-primary-color">RUSHABH30</span>, it's cheaper.`}
                 </p>`
   : `
                 <p class="text-sm text-gray-300 leading-relaxed">
@@ -2720,7 +2718,7 @@ function couponsHubHtml() {
   ];
 
   const saleNote = saleLive
-    ? `<p class="text-gray-400 text-sm leading-relaxed mb-6"><strong class="text-white">Right now there's a Linux Foundation sale running</strong>${SALE.beatsEveryday ? ' that beats RUSHABH30' : ''}: ${SALE.offers.map(o => `${o.pct}% off ${escapeHtml(o.what)}`).join(', plus ')}${SALE.condition ? `, ${escapeHtml(SALE.condition)}` : ''}, ends ${escapeHtml(SALE.advertisedEnd)}${SALE.codes.length ? `, code <code>${SALE.codes[0].code}</code>` : ', no code needed'}.${SALE.beatsEveryday ? '' : ' It only beats RUSHABH30 if you want the subscription too.'} Details on the <a href="/linux-foundation-coupon/">Linux Foundation page</a>.</p>`
+    ? `<p class="text-gray-400 text-sm leading-relaxed mb-6"><strong class="text-white">Right now there's a Linux Foundation sale running</strong>${SALE.beatsEveryday ? ' that beats RUSHABH30' : ''}: ${SALE.offers.map(o => `${o.pct}% off ${escapeHtml(o.what)}`).join(', plus ')}${SALE.condition ? `, ${escapeHtml(SALE.condition)}` : ''}, ends ${escapeHtml(SALE.advertisedEnd)}${SALE.codes.length ? `, code <code>${SALE.codes[0].code}</code>` : ', no code'}.${SALE.beatsEveryday ? '' : ' Only worth it if you want the subscription too.'} Details on the <a href="/linux-foundation-coupon/">Linux Foundation page</a>.</p>`
     : '';
 
   return `${finopsHead({ title, description, url, ogImage: `${SITE}/assets/og-coupons.jpg`, jsonLd })}
