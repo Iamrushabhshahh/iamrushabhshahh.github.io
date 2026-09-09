@@ -2,6 +2,8 @@
 
 Updated September 2026 · Two official partner codes, one page
 
+**Right now there's a Linux Foundation sale running**: 40% off the certification exam, plus 20% off the THRIVE-ONE Annual subscription, when you buy the two together as a bundle, ends September 11, no code needed. It only beats RUSHABH30 if you want the subscription too. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
+
 RUSHABH30
 
 RUSHABH_20

@@ -4,6 +4,22 @@
 
 Updated September 2026 · Golden Kubestronaut bundle (16 CNCF certs)
 
+Sale live now · ends September 11
+
+Linux Foundation Switch & Save flash sale: up to 40% off, bundled
+
+For three days only, the Linux Foundation is selling certification exams bundled with a THRIVE-ONE Annual subscription: **40% off** the certification exam, plus **20% off** the THRIVE-ONE Annual subscription.
+
+- CKA, CKAD, CKS, LFCS or CNPE + THRIVE-ONE Annual: $805 **$553**
+- KCNA, KCSA, PCA, OTCA, CGOA, ICA, CCA, CAPA, LFCA and the other associate exams + THRIVE-ONE Annual: $610 **$423**
+
+Who it's for: if you wanted the THRIVE-ONE subscription anyway (unlimited courses, SkillCred All-Access, subscriber extras), this is the cheapest way to get it with an exam. If you only want the exam, `RUSHABH30` is still cheaper: CKA alone is about $311 with it, against $553 for the CKA bundle. Sale prices don't stack with RUSHABH30.
+
+On the date: The offer terms end at 23:59 UTC on September 11, which is 5:29 AM IST on September 12. Copy and terms agree this time, so September 11 is the last day to buy.
+
+No code needed: the bundle prices on the landing page already include both cuts.
+[See the bundles →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-flash%2F)
+
 RUSHABH30
 
 [Get Golden Kubestronaut for ~$2960 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fgolden-kubestronaut-bundle%2F)

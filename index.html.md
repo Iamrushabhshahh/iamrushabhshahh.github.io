@@ -58,7 +58,9 @@ Hard-deadline cutover
 
 Two partner codes, [compared side by side →](https://rushabhshah.dev/coupons/)
 
-RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
+Sale live · ends September 11
+
+The Linux Foundation **Switch & Save flash sale** is live: **40% off** the certification exam, plus **20% off** the THRIVE-ONE Annual subscription, when you buy the two together as a bundle. No code needed, the bundle prices already include it. Only want the exam? RUSHABH30 at 30% is still the cheaper route.
 
 Get the coupon code →
 
