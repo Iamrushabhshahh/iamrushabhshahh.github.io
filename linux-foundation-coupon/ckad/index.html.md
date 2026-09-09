@@ -6,19 +6,19 @@ Updated September 2026 · Certified Kubernetes Application Developer
 
 Sale live now · ends September 11
 
-Linux Foundation Switch & Save flash sale: up to 40% off, bundled
+Linux Foundation Switch & Save sale
 
-For three days only, the Linux Foundation is selling certification exams bundled with a THRIVE-ONE Annual subscription: **40% off** the certification exam, plus **20% off** the THRIVE-ONE Annual subscription.
+**40% off** the certification exam, plus **20% off** the THRIVE-ONE Annual subscription, when you buy the two together as a bundle. What the bundles cost:
 
 - CKA, CKAD, CKS, LFCS or CNPE + THRIVE-ONE Annual: $805 **$553**
-- KCNA, KCSA, PCA, OTCA, CGOA, ICA, CCA, CAPA, LFCA and the other associate exams + THRIVE-ONE Annual: $610 **$423**
+- KCNA, KCSA, PCA, OTCA and the other associate exams + THRIVE-ONE Annual: $610 **$423**
 
-Who it's for: if you wanted the THRIVE-ONE subscription anyway (unlimited courses, SkillCred All-Access, subscriber extras), this is the cheapest way to get it with an exam. If you only want the exam, `RUSHABH30` is still cheaper: CKA alone is about $311 with it, against $553 for the CKA bundle. Sale prices don't stack with RUSHABH30.
+Honest take: good deal if you actually want THRIVE-ONE (every course and every SkillCred exam for a year). If you just want the exam, skip it. CKA with `RUSHABH30` is $311. The CKA bundle is $553. You can't use the code on top of the sale.
 
-On the date: The offer terms end at 23:59 UTC on September 11, which is 5:29 AM IST on September 12. Copy and terms agree this time, so September 11 is the last day to buy.
+Runs until 23:59 UTC on September 11, which is 5:29 AM IST on the 12th. New purchases only, not renewals.
 
-No code needed: the bundle prices on the landing page already include both cuts.
-[See the bundles →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-flash%2F)
+No code for this one. The bundle price is already cut.
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-flash%2F)
 
 RUSHABH30
 

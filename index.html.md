@@ -60,7 +60,7 @@ Two partner codes, [compared side by side →](https://rushabhshah.dev/coupons/)
 
 Sale live · ends September 11
 
-The Linux Foundation **Switch & Save flash sale** is live: **40% off** the certification exam, plus **20% off** the THRIVE-ONE Annual subscription, when you buy the two together as a bundle. No code needed, the bundle prices already include it. Only want the exam? RUSHABH30 at 30% is still the cheaper route.
+The Linux Foundation **Switch & Save sale** is live: **40% off** the certification exam, plus **20% off** the THRIVE-ONE Annual subscription, when you buy the two together as a bundle. No code, the bundle price is already cut. Just want the exam? Skip it and use RUSHABH30, it's cheaper.
 
 Get the coupon code →
 
