@@ -2,23 +2,7 @@
 
 Updated September 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Sale live now · ends September 11
-
-Linux Foundation Switch & Save sale
-
-**40% off** the certification exam, plus **20% off** the THRIVE-ONE Annual subscription, when you buy the two together as a bundle. What the bundles cost:
-
-- CKA, CKAD, CKS, LFCS or CNPE + THRIVE-ONE Annual: $805 **$553**
-- KCNA, KCSA, PCA, OTCA and the other associate exams + THRIVE-ONE Annual: $610 **$423**
-
-Honest take: good deal if you actually want THRIVE-ONE (every course and every SkillCred exam for a year). If you just want the exam, skip it. CKA with `RUSHABH30` is $311. The CKA bundle is $553. You can't use the code on top of the sale.
-
-Runs until 23:59 UTC on September 11, which is 5:29 AM IST on the 12th. New purchases only, not renewals.
-
-No code for this one. The bundle price is already cut.
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-flash%2F)
-
-A sale is running right now (see above), but it only beats this code if you want THRIVE-ONE too. This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -171,6 +155,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **Switch & Save sale, September 2026**: 40% off a certification and 20% off THRIVE-ONE Annual, bundle only, no code ($805 bundles went to $553, $610 to $423). Only cheaper than RUSHABH30 if you wanted the subscription, ended September 11.
 - **End-of-Season Flash Sale, August 2026**: up to 40% off (35% on courses and certifications with AUG26F35, 40% on bundles with AUG26F40), ended August 28.
 - **35 Years of Linux anniversary sale, August 2026**: 35% off sitewide with code TUX35, ended August 18.
 - **Mega May 2026** (May 12 to 24): 50% off individual certifications, up to 65% off THRIVE subscription bundles. Announced about three weeks early, then extended past the original deadline.

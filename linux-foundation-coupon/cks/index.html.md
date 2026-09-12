@@ -4,22 +4,6 @@
 
 Updated September 2026 · Certified Kubernetes Security Specialist
 
-Sale live now · ends September 11
-
-Linux Foundation Switch & Save sale
-
-**40% off** the certification exam, plus **20% off** the THRIVE-ONE Annual subscription, when you buy the two together as a bundle. What the bundles cost:
-
-- CKA, CKAD, CKS, LFCS or CNPE + THRIVE-ONE Annual: $805 **$553**
-- KCNA, KCSA, PCA, OTCA and the other associate exams + THRIVE-ONE Annual: $610 **$423**
-
-Honest take: good deal if you actually want THRIVE-ONE (every course and every SkillCred exam for a year). If you just want the exam, skip it. CKA with `RUSHABH30` is $311. The CKA bundle is $553. You can't use the code on top of the sale.
-
-Runs until 23:59 UTC on September 11, which is 5:29 AM IST on the 12th. New purchases only, not renewals.
-
-No code for this one. The bundle price is already cut.
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-flash%2F)
-
 RUSHABH30
 
 [Get CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
