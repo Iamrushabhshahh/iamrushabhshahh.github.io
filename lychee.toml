@@ -26,6 +26,10 @@ exclude = [
   # bare URL is a genuine 404 for any crawler.
   'cdn-cgi/l/email-protection',
 
+  # x.com serves 403 to GitHub Actions datacenter IPs. It returns 200 from a
+  # home connection, so this is invisible outside CI. Not link rot.
+  '^https?://(www\.)?(x|twitter)\.com',
+
   # Alive in a browser, but their WAF rejects lychee's TLS fingerprint no
   # matter the UA. Linked from the KCD Gujarat guide.
   '^https?://(www\.)?(urbanchowk|kovallamrestaurant|jassideparathe)\.com',
