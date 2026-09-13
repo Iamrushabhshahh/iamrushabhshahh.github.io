@@ -1,0 +1,32 @@
+# Config for the weekly broken-link sweep (.github/workflows/link-check.yml).
+# Lives here rather than in the workflow args so a newly bot-hostile host can be
+# excluded without editing CI YAML. Auto-loaded by lychee from the repo root.
+
+# Default UA is "lychee/x.y.z", which learn.finops.org and several small
+# restaurant sites reject with a 403. A browser UA clears 30+ false positives.
+user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+
+# Link rot is the signal we want; a blipping server is not. Retry patiently
+# before calling anything broken.
+max_retries = 4
+retry_wait_time = 15
+timeout = 30
+
+# Well under the default 128. We hit ~440 unique URLs across a handful of
+# hosts, so high concurrency mostly just earns rate limits.
+max_concurrency = 32
+
+exclude = [
+  # LinkedIn answers every non-browser request with HTTP 999, with or without
+  # a real UA. Nothing to verify here.
+  '^https?://([a-z]{2,3}\.)?linkedin\.com',
+
+  # Cloudflare's email obfuscation rewrites mailto: links to
+  # /cdn-cgi/l/email-protection#<hash>, which only resolves via its JS. The
+  # bare URL is a genuine 404 for any crawler.
+  'cdn-cgi/l/email-protection',
+
+  # Alive in a browser, but their WAF rejects lychee's TLS fingerprint no
+  # matter the UA. Linked from the KCD Gujarat guide.
+  '^https?://(www\.)?(urbanchowk|kovallamrestaurant|jassideparathe)\.com',
+]

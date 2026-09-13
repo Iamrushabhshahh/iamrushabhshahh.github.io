@@ -1,6 +1,9 @@
 # Weekly broken-link sweep of the live site. Runs independently of the
-# publish-blog workflow (doesn't gate deploys) — external sites blip
-# transiently, so this should surface problems, not block publishing.
+# publish-blog workflow (doesn't gate deploys), because external sites blip
+# transiently and this should surface problems, not block publishing.
+#
+# lychee has no crawler, so the sitemap is expanded into an explicit page list
+# and every link found on those pages is checked. Tuning lives in lychee.toml.
 name: Check for broken links
 
 on:
@@ -8,15 +11,80 @@ on:
     - cron: "0 3 * * 1" # weekly, Monday 08:30 IST
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
+# A manual run during a scheduled one would double the request volume at every
+# linked host for no extra signal.
+concurrency:
+  group: link-check
+  cancel-in-progress: false
+
 jobs:
   lychee:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
+      - name: Check out lychee.toml
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Expand sitemap into a page list
+        run: |
+          curl -sSfL --retry 3 --retry-delay 5 \
+            https://rushabhshah.dev/sitemap.xml > sitemap.xml
+          grep -oE '<loc>[^<]+</loc>' sitemap.xml \
+            | sed -E 's|</?loc>||g' > pages.txt
+          count=$(wc -l < pages.txt)
+          echo "Sitemap lists $count pages."
+          # An empty list makes lychee pass vacuously, which would read as a
+          # green run while nothing was checked.
+          if [ "$count" -lt 20 ]; then
+            echo "::error::Expected at least 20 pages, got $count. Sitemap may be broken."
+            exit 1
+          fi
+
       - name: Link Checker
         id: lychee
         uses: lycheeverse/lychee-action@v2
+        env:
+          # Without this, 117 github.com links draw anonymous rate limits.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: >-
-            --no-progress
-            --sitemap https://rushabhshah.dev/sitemap.xml
-          fail: true
+          args: --no-progress --files-from pages.txt
+          # Report first, then fail in a later step, so the issue still gets
+          # filed when links break.
+          fail: false
+
+      - name: File or update the report issue
+        if: steps.lychee.outputs.exit_code != 0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          # Issue bodies cap at 65536 chars.
+          head -c 60000 lychee/out.md > body.md
+          printf '\n\n[Full run log](%s)\n' "$RUN_URL" >> body.md
+
+          existing=$(gh issue list --state open --label link-rot \
+            --json number --jq '.[0].number // empty')
+
+          if [ -n "$existing" ]; then
+            # Comment rather than open a duplicate every Monday.
+            gh issue comment "$existing" --body-file body.md
+            echo "Updated issue #$existing"
+          else
+            gh label create link-rot --color d93f0b \
+              --description "Broken links found by the weekly sweep" || true
+            gh issue create --title "Broken links on rushabhshah.dev" \
+              --label link-rot --body-file body.md
+          fi
+
+      - name: Fail if links are broken
+        if: steps.lychee.outputs.exit_code != 0
+        run: |
+          echo "::error::lychee exited ${{ steps.lychee.outputs.exit_code }}. See the report issue."
+          exit 1
