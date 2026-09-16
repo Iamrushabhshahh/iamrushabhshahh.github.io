@@ -55,6 +55,7 @@ These are the certifications people ask me about most, with the math already don
 | **[KCSA](#kcsa-discount)** (Kubernetes and Cloud Native Security Associate) | Security beginners | $250 | ~$175 |
 | **[LFCS](#lfcs-coupon)** (Linux Foundation Certified SysAdmin) | Linux fundamentals, any infra role | $445 | ~$311 |
 | **[LFCA](#lfca-discount)** (Linux Foundation Certified IT Associate) | Total beginners, career-changers | $250 | ~$175 |
+| **[MCPA](#mcpa-discount)** (Model Context Protocol Associate, new Sept 2026) | Engineers building AI agents and tool integrations | $250 | ~$175 |
 | **[PCA](#pca-discount)** (Prometheus Certified Associate) | Engineers focused on monitoring | $250 | ~$175 |
 | **[OTCA](#otca-discount)** (OpenTelemetry Certified Associate) | DevOps & platform engineers standardizing on OTel | $250 | ~$175 |
 
@@ -136,6 +137,10 @@ The Linux Foundation Certified IT Associate is the gentlest entry point of all o
 ### Kubestronaut bundle discount
 
 Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, CKS)? The code applies to bundles too, and on a five-exam bundle it produces a much bigger saving than any single exam. Check the current bundle price in the catalog, then take 30% off that. [Full Kubestronaut bundle guide & savings math →](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+
+### MCPA discount code
+
+The Model Context Protocol Associate is the newest exam in the catalog, launched September 2026, and the first certification against MCP. $250 list, about $175 with the code. It is multiple choice and beginner level, so it is a knowledge exam rather than a skills one, but the weighting is more interesting than that suggests: interactions and execution is 26% and security and governance another 24%, so half the paper is about runtime behaviour and the trust model rather than definitions. [Full MCPA discount guide, domains & FAQ →](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
 
 ### Already hold a cert? Use an upgrade bundle
 

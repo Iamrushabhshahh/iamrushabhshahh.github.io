@@ -115,6 +115,7 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
