@@ -1,8 +1,8 @@
 [$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
 
-# KCNA Discount Code: 30% Off with RUSHABH30
+# CKAD to Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated September 2026 · Kubernetes and Cloud Native Associate
+Updated September 2026 · CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS)
 
 Sale live now · ends September 22
 
@@ -30,88 +30,83 @@ SEPT26BTS40
 
 RUSHABH30
 
-[Get KCNA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F)
+[Get CKAD to Kubestronaut for ~$864 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F) and the Kubernetes and Cloud Native Associate (KCNA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F) and the CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS) drops from $1235 to about $864, a saving of roughly $371. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
-| **Format** | Multiple choice |
+| **Format** | Bundle of 4 exams (2 multiple-choice, 2 performance-based) |
 | --- | --- |
-| **Duration** | 90 minutes |
-| **List price** | $250 |
-| **With RUSHABH30** | ~$175 |
-| **Prerequisite** | None |
+| **Duration** | Varies per exam |
+| **List price** | $1235 |
+| **With RUSHABH30** | ~$864 |
+| **Prerequisite** | An active CKAD, which is what this bundle upgrades from |
 
 ## Who this is for
 
-Students, career-changers, and anyone moving into cloud-native from another field who wants a beginner-friendly starting point.
+Developers who already hold the CKAD and want the remaining four exams without paying for the CKAD again.
 
 ## What it covers
 
-- Kubernetes fundamentals
-- Container orchestration
-- Cloud native architecture
-- Cloud native observability
-- Cloud native application delivery
+- KCNA: Kubernetes and Cloud Native Associate
+- KCSA: Kubernetes and Cloud Native Security Associate
+- CKA: Certified Kubernetes Administrator
+- CKS: Certified Kubernetes Security Specialist
 
 *Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
 
 ## Why it's worth it
 
-KCNA is the entry point built for people who aren't ready for a live-terminal exam yet. It's multiple choice, it's the cheapest cert in the catalog, and it forces you to learn the cloud-native landscape's vocabulary (Kubernetes, containers, observability, GitOps) before you touch a cluster in anger.
+The mirror of the CKA upgrade, for people who came to Kubernetes from the application side. You keep the CKAD you already earned and buy the other four, including the CKA that CKS depends on.
 
 ## Prep tips
 
-- Treat it as landscape literacy, not hands-on skill. You're learning what things are and how they fit together, not memorizing kubectl syntax.
-- The official CNCF/Linux Foundation curriculum outline is the most efficient study map; work through it topic by topic rather than a single dense course.
-- If you're also considering the CKA later, KCNA is a genuinely useful on-ramp. The vocabulary you learn here removes a lot of friction from CKA prep.
+- Take the CKA before the CKS. CKS requires an active CKA to sit, and this bundle is the one of the two upgrades where that ordering is forced on you.
+- The CKA is the biggest step up from the CKAD, since cluster administration barely appears in the CKAD. Budget most of your preparation time there rather than spreading it evenly.
+- KCNA and KCSA are multiple choice and can be cleared quickly, which is useful for keeping momentum while you work through the CKA.
 
 ## How to use the code
 
-- Add the KCNA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F).
+- Add the CKAD to Kubestronaut bundle to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F).
 - Enter `RUSHABH30` in the coupon field at checkout.
-- The total drops 30%. RUSHABH30 works on the exam alone, the exam bundled with the official prep course, and a retake within your eligibility window.
+- The total drops 30%. RUSHABH30 works on the four-exam upgrade bundle; retakes on individual exams follow that exam's own eligibility window.
 
 RUSHABH30
 
-[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F)
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F)
 
 ## Frequently asked questions
 
-**Is KCNA a good first certification for beginners?**
+**What is in the CKAD to Kubestronaut upgrade bundle?**
 
-Yes. It's specifically designed as the entry point into Kubernetes and cloud native, with no hands-on requirement and a lower price than the performance-based exams.
+KCNA, KCSA, CKA and CKS. It is the Kubestronaut set minus the CKAD, for people who already hold the CKAD.
 
-**How much is KCNA with a discount code?**
+**How much is the CKAD to Kubestronaut upgrade with a discount code?**
 
-List price is $250. With RUSHABH30 it drops to about $175.
+List price is $1235. With RUSHABH30 it drops to about $864, a saving of roughly $371.
 
-**Is KCNA hands-on like the CKA?**
+**Which exam should I take first?**
 
-No. KCNA is entirely multiple choice, with no live terminal or cluster access required.
+The CKA, because the CKS cannot be scheduled without an active CKA. It is also the largest jump from what the CKAD covers.
 
-**Should I take KCNA before the CKA?**
+**How is this different from the CKA upgrade bundle?**
 
-It's not required, but it's a sensible on-ramp if you're new to the ecosystem. It builds vocabulary and context that make CKA prep faster.
-
-**Does RUSHABH30 work on the KCNA course + exam bundle?**
-
-Yes, on the exam alone or bundled with the official prep course.
+Same price and same size. This one includes the CKA and excludes the CKAD; the other does the opposite. Pick the one matching the certification you already hold.
 
 ## Other Linux Foundation & CNCF certifications
 
-RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just KCNA. Dedicated discount guides:
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just CKAD to Kubestronaut. Dedicated discount guides:
 
 - [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
 - [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
 - [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
 - [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
 - [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
 - [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
 - [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
 - [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
-- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)

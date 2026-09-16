@@ -67,6 +67,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/linux-foundation-coupon/lfca/</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>

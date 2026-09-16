@@ -15,6 +15,8 @@ What they cost with the sale on:
 - KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
 - Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
 - Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
+- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
+- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
 
 These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
 
@@ -65,8 +67,10 @@ Percentages hide how much money this actually is, so here is the bundle math:
 | Bundle | List price* | With RUSHABH30 | You save |
 | --- | --- | --- | --- |
 | **[Kubestronaut bundle](#kubestronaut-discount)** (KCNA + KCSA + CKA + CKAD + CKS) | $1,645 | ~$1,151 | **~$494** |
+| **[CKA → Kubestronaut upgrade](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)** (hold the CKA? just the other 4) | $1,235 | ~$864 | **~$371** |
+| **[CKAD → Kubestronaut upgrade](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)** (hold the CKAD? just the other 4) | $1,235 | ~$864 | **~$371** |
 | **[Golden Kubestronaut bundle](#golden-kubestronaut-discount)** (all 16 current CNCF certs) | $4,229 | ~$2,960 | **~$1,269** |
-| **[Kubestronaut → Golden upgrade](#golden-kubestronaut-discount)** (already a Kubestronaut? just the other 11) | $2,669 | ~$1,868 | **~$801** |
+| **[Kubestronaut → Golden upgrade](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)** (already a Kubestronaut? just the other 11) | $2,669 | ~$1,868 | **~$801** |
 | **Any course + exam bundle** (e.g. CKA) | varies | 30% less | **$200+** |
 
 RUSHABH30
@@ -132,6 +136,10 @@ The Linux Foundation Certified IT Associate is the gentlest entry point of all o
 ### Kubestronaut bundle discount
 
 Chasing Kubestronaut status (all five Kubernetes certs: KCNA, KCSA, CKA, CKAD, CKS)? The code applies to bundles too, and on a five-exam bundle it produces a much bigger saving than any single exam. Check the current bundle price in the catalog, then take 30% off that. [Full Kubestronaut bundle guide & savings math →](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+
+### Already hold a cert? Use an upgrade bundle
+
+The full bundles make you pay again for exams you have already passed, so the Linux Foundation sells upgrade bundles that leave out the one you hold. Hold the CKA? The [CKA to Kubestronaut upgrade](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/) sells the other four (KCNA, KCSA, CKAD, CKS) for $1,235 list, about $864 with the code. Came from the application side instead? The [CKAD to Kubestronaut upgrade](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/) is the same price and swaps the CKAD out for the CKA. Already a Kubestronaut going for Golden? The [Kubestronaut to Golden Kubestronaut upgrade](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/) covers the remaining eleven exams for $2,669 list, about $1,868 with the code, rather than buying all sixteen a second time.
 
 ### Golden Kubestronaut bundle discount
 
