@@ -839,9 +839,17 @@ const SALE = {
   // and quoting the worse of the two prices as if it were the price would be
   // wrong in the reader's favour but still wrong. The banner says bundles take
   // 40% with the other code and leaves the arithmetic to the landing page.
+  // `slugs` is what lets the Product/Offer JSON-LD quote the sale price instead
+  // of the evergreen one. Google requires the price in structured data to match
+  // the price the visitor actually sees, and while this sale runs the headline
+  // price on these pages is the sale price, not RUSHABH30's. Keeping the slugs
+  // next to the price they belong to is what stops the two drifting apart.
+  // Kubestronaut and Golden Kubestronaut are deliberately absent: their sale
+  // price is not published on the page, so their schema keeps quoting RUSHABH30,
+  // which is what those pages still show.
   tiers: [
-    { label: 'CKA, CKAD, CKS or LFCS', list: 445, sale: 289 },
-    { label: 'KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams', list: 250, sale: 163 },
+    { label: 'CKA, CKAD, CKS or LFCS', list: 445, sale: 289, slugs: ['cka', 'ckad', 'cks', 'lfcs'] },
+    { label: 'KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams', list: 250, sale: 163, slugs: ['kcna', 'kcsa', 'pca', 'otca', 'lfca'] },
   ],
   // 35% clears the evergreen 30%, so for once the sale is the better buy on every
   // exam in the catalog. CKA goes $311 -> $289, associate exams $175 -> $163.
@@ -856,6 +864,16 @@ const SALE = {
   dest: 'https://training.linuxfoundation.org/september-2026-promo/',
 };
 const saleLive = !!SALE && now >= new Date(SALE.start) && now < new Date(SALE.end);
+
+/* slug -> live sale price, empty whenever no sale is running. Consumed by the
+   per-cert Product/Offer node so the structured data and the visible headline
+   price never disagree. A sale with no `slugs` on its tiers contributes nothing
+   here, and every page falls back to the evergreen RUSHABH30 price. */
+const saleCertPrice = new Map(
+  saleLive
+    ? (SALE.tiers || []).flatMap(t => (t.slugs || []).map(slug => [slug, t.sale]))
+    : [],
+);
 
 /* ---------- sale-alert email capture ----------
    The one offer here that an aggregator can't copy: the affiliate agreements
@@ -2103,6 +2121,13 @@ function certPageHtml(c, siblings) {
   // (.github/workflows/publish-blog.yml) recomputes it every run, so it's
   // always ~60 days out without needing a manual per-cert update.
   const priceValidUntil = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  /* Quote whichever price this page actually leads with. While a sale that beats
+     RUSHABH30 is running that is the sale price; otherwise it is the evergreen
+     one. Taking the lower of the two rather than assuming the sale always wins
+     keeps this correct for a sale that only beats the code on some exams. */
+  const certSale = saleCertPrice.get(c.slug);
+  const offerIsSale = !!certSale && certSale < c.priceDiscounted;
+  const offerPrice = offerIsSale ? certSale : c.priceDiscounted;
   const offerJsonLd = {
     '@context': 'https://schema.org', '@type': 'Product',
     name: c.isBundle ? c.fullName : `${c.fullName} (${c.name}) Certification Exam`,
@@ -2113,8 +2138,12 @@ function certPageHtml(c, siblings) {
       '@type': 'Offer',
       url,
       priceCurrency: 'USD',
-      price: String(c.priceDiscounted),
-      priceValidUntil,
+      price: String(offerPrice),
+      // A sale price is only valid to the end of the sale. Rolling it 60 days
+      // forward like the evergreen price would claim the discount outlives the
+      // window, and the first thing a shopper sees after that is a price that
+      // does not match the page.
+      priceValidUntil: offerIsSale ? SALE.end.slice(0, 10) : priceValidUntil,
       availability: 'https://schema.org/InStock',
       seller: { '@type': 'Organization', name: 'The Linux Foundation' },
     },
