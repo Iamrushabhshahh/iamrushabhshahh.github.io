@@ -4,6 +4,26 @@
 
 Updated September 2026 · Golden Kubestronaut bundle (16 CNCF certs)
 
+Sale live now · ends September 22
+
+Linux Foundation Back to School sale
+
+- **35% off** e-learning courses and certifications with `SEPT26BTS35`
+- **40% off** bundles and instructor-led training with `SEPT26BTS40`
+
+What the exams cost with SEPT26BTS35:
+
+- CKA, CKAD, CKS or LFCS: $445 **$289**
+- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163**
+
+These codes don't stack with RUSHABH30, and they beat it, so use the sale code while it runs. RUSHABH30 goes back to being the best price here at 30% the day the sale closes.
+
+Runs until 11:59 PM Eastern on September 22, which is 9:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
+
+SEPT26BTS35
+SEPT26BTS40
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
+
 RUSHABH30
 
 [Get Golden Kubestronaut for ~$2960 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fgolden-kubestronaut-bundle%2F)

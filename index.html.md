@@ -58,7 +58,9 @@ Hard-deadline cutover
 
 Two partner codes, [compared side by side →](https://rushabhshah.dev/coupons/)
 
-RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
+Sale live · ends September 22
+
+The Linux Foundation **Back to School sale** is live: **35% off** e-learning courses and certifications with SEPT26BTS35, plus **40% off** bundles and instructor-led training with SEPT26BTS40. My evergreen RUSHABH30 code takes over at 30% when it ends.
 
 Get the coupon code →
 
