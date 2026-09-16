@@ -11,14 +11,16 @@ Linux Foundation Back to School sale
 - **35% off** e-learning courses and certifications with `SEPT26BTS35`
 - **40% off** bundles and instructor-led training with `SEPT26BTS40`
 
-What the exams cost with SEPT26BTS35:
+What they cost with the sale on:
 
-- CKA, CKAD, CKS or LFCS: $445 **$289**
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163**
+- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
+- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
+- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
+- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
 
-These codes don't stack with RUSHABH30, and they beat it, so use the sale code while it runs. RUSHABH30 goes back to being the best price here at 30% the day the sale closes.
+These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
 
-Runs until 11:59 PM Eastern on September 22, which is 9:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
+Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
 
 SEPT26BTS35
 SEPT26BTS40

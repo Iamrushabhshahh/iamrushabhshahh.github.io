@@ -814,9 +814,13 @@ const SALE = {
   // falling on the 23rd. Stored in UTC because `saleLive` compares against a UTC
   // `now` and a local-time string here would open the window four hours early.
   start: '2026-09-15T04:37:00Z',
-  end: '2026-09-23T03:59:00Z',
+  // 23:59 UTC on the 22nd, per the Restrictions block on
+  // training.linuxfoundation.org/september-2026-promo/. The affiliate email
+  // said "11:59 PM ET", which is four hours later. The public terms are what a
+  // buyer can hold them to, and they are the earlier of the two, so they win.
+  end: '2026-09-22T23:59:00Z',
   advertisedEnd: 'September 22',
-  dateNote: 'Runs until 11:59 PM Eastern on September 22, which is 9:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.',
+  dateNote: 'Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.',
   // Rendered on /coupons/, which compares this catalog against the FinOps one.
   // Without it a reader on that page reasonably assumes the sale covers both.
   excludes: 'THRIVE-ONE subscriptions or any FinOps certification',
@@ -833,7 +837,7 @@ const SALE = {
   ],
   // Nothing has to be bought together this time, unlike the September bundle sale.
   condition: null,
-  tiersLead: 'What the exams cost with SEPT26BTS35:',
+  tiersLead: 'What they cost with the sale on:',
   // Only the two clean certification tiers are priced here. The Kubestronaut and
   // Golden Kubestronaut packages may qualify as "bundles" at 40% rather than 35%,
   // and quoting the worse of the two prices as if it were the price would be
@@ -844,18 +848,22 @@ const SALE = {
   // the price the visitor actually sees, and while this sale runs the headline
   // price on these pages is the sale price, not RUSHABH30's. Keeping the slugs
   // next to the price they belong to is what stops the two drifting apart.
-  // Kubestronaut and Golden Kubestronaut are deliberately absent: their sale
-  // price is not published on the page, so their schema keeps quoting RUSHABH30,
-  // which is what those pages still show.
+  //
+  // Every figure below is read off the sale grid on
+  // training.linuxfoundation.org/september-2026-promo/, not computed from a
+  // percentage. The Kubestronaut bundles take 40% via SEPT26BTS40 rather than
+  // the 35% that applies to single exams, which is why each row names its code.
   tiers: [
-    { label: 'CKA, CKAD, CKS or LFCS', list: 445, sale: 289, slugs: ['cka', 'ckad', 'cks', 'lfcs'] },
-    { label: 'KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams', list: 250, sale: 163, slugs: ['kcna', 'kcsa', 'pca', 'otca', 'lfca'] },
+    { label: 'CKA, CKAD, CKS or LFCS', list: 445, sale: 289, code: 'SEPT26BTS35', slugs: ['cka', 'ckad', 'cks', 'lfcs'] },
+    { label: 'KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams', list: 250, sale: 163, code: 'SEPT26BTS35', slugs: ['kcna', 'kcsa', 'pca', 'otca', 'lfca'] },
+    { label: 'Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS)', list: 1645, sale: 987, code: 'SEPT26BTS40', slugs: ['kubestronaut'] },
+    { label: 'Golden Kubestronaut bundle (all 16 exams)', list: 4229, sale: 2538, code: 'SEPT26BTS40', slugs: ['golden-kubestronaut'] },
   ],
   // 35% clears the evergreen 30%, so for once the sale is the better buy on every
   // exam in the catalog. CKA goes $311 -> $289, associate exams $175 -> $163.
   beatsEveryday: true,
   // One-line record for the archive once the window closes.
-  summary: '40% off bundles and instructor-led training with SEPT26BTS40, 35% off e-learning courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163). Beat RUSHABH30 on every exam',
+  summary: '40% off bundles and instructor-led training with SEPT26BTS40, 35% off courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163, the Kubestronaut bundle to $987 and Golden Kubestronaut to $2538). Beat RUSHABH30 on everything in the catalog',
   banner: {
     src: '/assets/linux-foundation-sep26-back-to-school-40-35-percent-off.webp',
     width: 1200, height: 628,
@@ -1745,7 +1753,7 @@ const saleBannerHtml = () => {
     ? codes.map(c => `<span class="code-box">${c.code}${copyBtn(c.code)}</span>`).join('\n                        ')
     : `<span class="font-fira text-xs text-gray-400">No code for this one. The bundle price is already cut.</span>`;
   const tierRows = tiers?.length
-    ? `<ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${tiers.map(t => `<li>${escapeHtml(t.label)}: <s class="text-gray-500">$${t.list}</s> <strong class="text-white">$${t.sale}</strong></li>`).join('')}</ul>`
+    ? `<ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${tiers.map(t => `<li>${escapeHtml(t.label)}: <s class="text-gray-500">$${t.list}</s> <strong class="text-white">$${t.sale}</strong>${t.code ? ` with <code>${escapeHtml(t.code)}</code>` : ''}</li>`).join('')}</ul>`
     : '';
   /* When a sale ships more than one code, each covering a different part of the
      catalog, one run-on sentence leaves the reader guessing which code to paste.
@@ -1759,7 +1767,7 @@ const saleBannerHtml = () => {
     ? `<p class="text-gray-400 text-sm leading-relaxed mb-2">${escapeHtml(SALE.tiersLead || 'What the bundles cost:')}</p>`
     : '';
   const compare = SALE.beatsEveryday
-    ? `These codes don't stack with RUSHABH30, and they beat it, so use the sale code while it runs. RUSHABH30 goes back to being the best price here at 30% the day the sale closes.`
+    ? `These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.`
     : `Honest take: good deal if you actually want THRIVE-ONE (every course and every SkillCred exam for a year). If you just want the exam, skip it. CKA with <code>RUSHABH30</code> is $311. The CKA bundle is $553. You can't use the code on top of the sale.`;
   const img = banner
     ? `<a href="${saleLink}" target="_blank" rel="noopener sponsored" class="block mb-4" data-goatcounter-click="cta-sale-banner-image" data-goatcounter-title="Live sale banner image"><img src="${banner.src}" width="${banner.width}" height="${banner.height}" alt="${escapeHtml(banner.alt)}" class="w-full h-auto rounded-md" decoding="async"></a>`
