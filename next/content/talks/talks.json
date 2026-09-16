@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Grafana & Friends Ahmedabad",
+    "slug": "grafana-and-friends-ahmedabad",
+    "eventName": "Grafana & Friends Ahmedabad",
+    "date": "2026-01-01",
+    "location": "Ahmedabad, India",
+    "badges": ["meetup"],
+    "abstract": "Organizer and host of the Ahmedabad chapter, a recurring community meetup on observability, OpenTelemetry and the Grafana LGTM stack."
+  }
+]

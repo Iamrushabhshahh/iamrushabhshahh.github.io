@@ -1,0 +1,74 @@
+[
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56834,
+    "prUrl": "https://github.com/kubernetes/website/pull/56834",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of docs/contribute/review/for-approvers.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  },
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56900,
+    "prUrl": "https://github.com/kubernetes/website/pull/56900",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of concepts/extend-kubernetes/_index.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  },
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56901,
+    "prUrl": "https://github.com/kubernetes/website/pull/56901",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of concepts/extend-kubernetes/api-extension/_index.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  },
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56902,
+    "prUrl": "https://github.com/kubernetes/website/pull/56902",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of concepts/extend-kubernetes/api-extension/apiserver-aggregation.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  },
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56903,
+    "prUrl": "https://github.com/kubernetes/website/pull/56903",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of concepts/extend-kubernetes/api-extension/custom-resources.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  },
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56904,
+    "prUrl": "https://github.com/kubernetes/website/pull/56904",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of concepts/extend-kubernetes/compute-storage-net/_index.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  },
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56905,
+    "prUrl": "https://github.com/kubernetes/website/pull/56905",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of concepts/extend-kubernetes/compute-storage-net/device-plugins.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  },
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56906,
+    "prUrl": "https://github.com/kubernetes/website/pull/56906",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of concepts/extend-kubernetes/compute-storage-net/network-plugins.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  },
+  {
+    "project": "kubernetes/website",
+    "prNumber": 56907,
+    "prUrl": "https://github.com/kubernetes/website/pull/56907",
+    "type": "translation",
+    "state": "open",
+    "impactSummary": "Hindi localization of concepts/extend-kubernetes/operator.md, part of an ongoing series bringing the extend-kubernetes and contributor-guide sections into Hindi."
+  }
+]

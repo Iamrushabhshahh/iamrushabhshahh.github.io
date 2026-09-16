@@ -1,0 +1,47 @@
+[
+  {
+    "project": "ebpf-io/ebpf.io-website",
+    "prNumber": 684,
+    "prUrl": "https://github.com/ebpf-io/ebpf.io-website/pull/684",
+    "type": "translation",
+    "state": "merged",
+    "mergedAt": "2025-03-18",
+    "liveUrl": "https://ebpf.io/hi-in/",
+    "impactSummary": "Authored the complete Hindi localization of ebpf.io, the project's primary front door. It is live at ebpf.io/hi-in/ and is the first Indic-language version of the site. eBPF explainers are dense even in English, so the translation had to settle Hindi renderings for kernel terms that had no established equivalent."
+  },
+  {
+    "project": "KusionStack/kusion",
+    "prNumber": 1420,
+    "prUrl": "https://github.com/KusionStack/kusion/pull/1420",
+    "type": "translation",
+    "state": "merged",
+    "mergedAt": "2025-04-08",
+    "impactSummary": "Added the Hindi translation of the Kusion README, giving the project its first Hindi-language entry point for contributors evaluating it."
+  },
+  {
+    "project": "helm/helm-www",
+    "prNumber": 1748,
+    "prUrl": "https://github.com/helm/helm-www/pull/1748",
+    "type": "docs",
+    "state": "merged",
+    "mergedAt": "2025-10-23",
+    "impactSummary": "Documented uninstalling a release with an explicit namespace. The existing page showed the command without the namespace flag, which silently fails or targets the wrong namespace for anyone not working in default."
+  },
+  {
+    "project": "docker/sbx-kits-contrib",
+    "prNumber": 138,
+    "prUrl": "https://github.com/docker/sbx-kits-contrib/pull/138",
+    "type": "code",
+    "state": "merged",
+    "mergedAt": "2026-07-13",
+    "impactSummary": "Contributed a Playwright browser-automation mixin kit, so a sandbox can be provisioned with a working headless browser toolchain rather than each user assembling the dependency set by hand."
+  },
+  {
+    "project": "docker/sbx-kits-contrib",
+    "prNumber": 137,
+    "prUrl": "https://github.com/docker/sbx-kits-contrib/pull/137",
+    "type": "code",
+    "state": "open",
+    "impactSummary": "A Kubernetes toolchain mixin kit bundling kubectl and Helm, so cluster work in a sandbox does not start with a manual install step."
+  }
+]

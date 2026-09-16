@@ -1,0 +1,36 @@
+{
+  "name": "rushabhshah-dev-next",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "velite --watch & next dev",
+    "build": "velite && next build",
+    "check": "tsc --noEmit && velite",
+    "export:verify": "node ../scripts/verify-url-parity.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "lucide-react": "^0.544.0",
+    "framer-motion": "^12.23.12",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1",
+    "class-variance-authority": "^0.7.1",
+    "@radix-ui/react-tabs": "^1.1.12",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-tooltip": "^1.2.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.5.6",
+    "autoprefixer": "^10.4.21",
+    "velite": "^0.3.0",
+    "zod": "^3.25.76"
+  }
+}

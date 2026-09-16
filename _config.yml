@@ -1,0 +1,20 @@
+# GitHub Pages runs its own legacy Jekyll build against this repo's root on every
+# push (confirmed via the Pages API: "build_type":"legacy"). Without this file it
+# uses Jekyll's default excludes, which do not know about the Next app added in
+# next/.
+#
+# `exclude` REPLACES Jekyll's default list rather than extending it, so the
+# defaults are restated here. Dropping one of them would start publishing it.
+exclude:
+  # Jekyll defaults, restated so they are not lost
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  # The Next source tree. Only its BUILD OUTPUT belongs on the site, copied to
+  # the root by the deploy step; the sources, node_modules and .next cache must
+  # never be served.
+  - next

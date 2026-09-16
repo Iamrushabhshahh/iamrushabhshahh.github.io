@@ -1,0 +1,5 @@
+/* Tailwind utilities only. No @tailwind base: preflight is disabled in
+   tailwind.config.ts because ../style.css owns the reset and the base element
+   styles for the whole site. Adding base here would restyle every page. */
+@tailwind components;
+@tailwind utilities;

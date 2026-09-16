@@ -1,0 +1,9 @@
+[
+  { "examName": "Certified Kubernetes Administrator (CKA)", "provider": "LinuxFoundation", "defaultPrice": 445, "discountPercent": 30, "promoCode": "RUSHABH30", "affiliateUrl": "/go/cka/", "expiry": null, "studyGuideSlug": "cka-exam-guide" },
+  { "examName": "Certified Kubernetes Application Developer (CKAD)", "provider": "LinuxFoundation", "defaultPrice": 445, "discountPercent": 30, "promoCode": "RUSHABH30", "affiliateUrl": "/go/ckad/", "expiry": null, "studyGuideSlug": "cka-vs-ckad-vs-cks" },
+  { "examName": "Certified Kubernetes Security Specialist (CKS)", "provider": "LinuxFoundation", "defaultPrice": 445, "discountPercent": 30, "promoCode": "RUSHABH30", "affiliateUrl": "/go/cks/", "expiry": null, "studyGuideSlug": "cka-vs-ckad-vs-cks" },
+  { "examName": "Kubernetes and Cloud Native Associate (KCNA)", "provider": "LinuxFoundation", "defaultPrice": 250, "discountPercent": 30, "promoCode": "RUSHABH30", "affiliateUrl": "/go/kcna/", "expiry": null, "studyGuideSlug": "kcna-worth-it" },
+  { "examName": "Prometheus Certified Associate (PCA)", "provider": "LinuxFoundation", "defaultPrice": 250, "discountPercent": 30, "promoCode": "RUSHABH30", "affiliateUrl": "/go/pca/", "expiry": null, "studyGuideSlug": "pca-otca-review" },
+  { "examName": "OpenTelemetry Certified Associate (OTCA)", "provider": "LinuxFoundation", "defaultPrice": 250, "discountPercent": 30, "promoCode": "RUSHABH30", "affiliateUrl": "/go/otca/", "expiry": null, "studyGuideSlug": "pca-otca-review" },
+  { "examName": "FinOps Certified Practitioner", "provider": "FinOps", "defaultPrice": 300, "discountPercent": 20, "promoCode": "RUSHABH_20", "affiliateUrl": "/go/finops/", "expiry": null }
+]
