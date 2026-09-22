@@ -3197,6 +3197,8 @@ const SKILL_GROUPS = [
 ];
 
 const CERTS = [
+  { name: 'CKAD: Certified Kubernetes Application Developer', code: 'The Linux Foundation', icon: 'award' },
+  { name: 'KCSA: Kubernetes and Cloud Native Security Associate', code: 'The Linux Foundation', icon: 'award' },
   { name: 'KCNA: Kubernetes and Cloud Native Associate', code: 'The Linux Foundation', icon: 'award' },
   { name: 'Microsoft Certified: Azure Administrator Associate', code: 'AZ-104', icon: 'award' },
   { name: 'Microsoft Certified: Azure Fundamentals', code: 'AZ-900', icon: 'award' },

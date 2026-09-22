@@ -1,6 +1,6 @@
 # Rushabh Shah: full site content
 
-> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-09-16. The curated index is at https://rushabhshah.dev/llms.txt.
+> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-09-22. The curated index is at https://rushabhshah.dev/llms.txt.
 
 <!-- https://rushabhshah.dev/blog/cka-exam-day-setup/ -->
 
@@ -2065,6 +2065,14 @@ Grafana Labs' invitation-only program for contributors who advance the observabi
 (https://grafana.com/community/champions/)
 
 ### Certifications
+
+CKAD: Certified Kubernetes Application Developer
+
+The Linux Foundation
+
+KCSA: Kubernetes and Cloud Native Security Associate
+
+The Linux Foundation
 
 KCNA: Kubernetes and Cloud Native Associate
 

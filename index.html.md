@@ -102,6 +102,14 @@ Grafana Labs' invitation-only program for contributors who advance the observabi
 
 ### Certifications
 
+CKAD: Certified Kubernetes Application Developer
+
+The Linux Foundation
+
+KCSA: Kubernetes and Cloud Native Security Associate
+
+The Linux Foundation
+
 KCNA: Kubernetes and Cloud Native Associate
 
 The Linux Foundation
