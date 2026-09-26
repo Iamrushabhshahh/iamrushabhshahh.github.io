@@ -2,31 +2,7 @@
 
 Updated September 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
-
-A sale is running right now (see above). This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -56,6 +32,15 @@ These are the certifications people ask me about most, with the math already don
 | **[LFCS](#lfcs-coupon)** (Linux Foundation Certified SysAdmin) | Linux fundamentals, any infra role | $445 | ~$311 |
 | **[LFCA](#lfca-discount)** (Linux Foundation Certified IT Associate) | Total beginners, career-changers | $250 | ~$175 |
 | **[MCPA](#mcpa-discount)** (Model Context Protocol Associate, new Sept 2026) | Engineers building AI agents and tool integrations | $250 | ~$175 |
+| **[CNPE](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)** (Certified Cloud Native Platform Engineer, performance-based) | Platform engineers building the paved road | $445 | ~$311 | **~$134** |
+| **[CNPA](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)** (Certified Cloud Native Platform Engineering Associate) | Moving into platform work | $250 | ~$175 | **~$75** |
+| **[ICA](https://rushabhshah.dev/linux-foundation-coupon/ica/)** (Istio Certified Associate, performance-based) | Running a service mesh | $250 | ~$175 | **~$75** |
+| **[CCA](https://rushabhshah.dev/linux-foundation-coupon/cca/)** (Cilium Certified Associate) | eBPF networking and Hubble | $250 | ~$175 | **~$75** |
+| **[CAPA](https://rushabhshah.dev/linux-foundation-coupon/capa/)** (Certified Argo Project Associate) | Argo Workflows, CD, Rollouts, Events | $250 | ~$175 | **~$75** |
+| **[CGOA](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)** (Certified GitOps Associate, tool-agnostic) | GitOps principles, not one vendor | $250 | ~$175 | **~$75** |
+| **[KCA](https://rushabhshah.dev/linux-foundation-coupon/kca/)** (Kyverno Certified Associate) | Policy enforcement on clusters | $250 | ~$175 | **~$75** |
+| **[CBA](https://rushabhshah.dev/linux-foundation-coupon/cba/)** (Certified Backstage Associate) | Running an internal developer portal | $250 | ~$175 | **~$75** |
+| **[PTCA](https://rushabhshah.dev/linux-foundation-coupon/ptca/)** (PyTorch Certified Associate) | PyTorch, new to the LF catalogue | $250 | ~$175 | **~$75** |
 | **[PCA](#pca-discount)** (Prometheus Certified Associate) | Engineers focused on monitoring | $250 | ~$175 |
 | **[OTCA](#otca-discount)** (OpenTelemetry Certified Associate) | DevOps & platform engineers standardizing on OTel | $250 | ~$175 |
 
@@ -190,6 +175,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **Back to School sale, September 2026**: 40% off bundles and instructor-led training with SEPT26BTS40, 35% off courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163, the Kubestronaut bundle to $987 and Golden Kubestronaut to $2538). Beat RUSHABH30 on everything in the catalog, ended September 22.
 - **Switch & Save sale, September 2026**: 40% off a certification and 20% off THRIVE-ONE Annual, bundle only, no code ($805 bundles went to $553, $610 to $423). Only cheaper than RUSHABH30 if you wanted the subscription, ended September 11.
 - **End-of-Season Flash Sale, August 2026**: up to 40% off (35% on courses and certifications with AUG26F35, 40% on bundles with AUG26F40), ended August 28.
 - **35 Years of Linux anniversary sale, August 2026**: 35% off sitewide with code TUX35, ended August 18.

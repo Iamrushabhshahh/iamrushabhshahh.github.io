@@ -1,6 +1,6 @@
 # Rushabh Shah: full site content
 
-> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-09-22. The curated index is at https://rushabhshah.dev/llms.txt.
+> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-09-26. The curated index is at https://rushabhshah.dev/llms.txt.
 
 <!-- https://rushabhshah.dev/blog/cka-exam-day-setup/ -->
 
@@ -1226,8 +1226,6 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 Updated September 2026 · Two official partner codes, one page
 
-**Right now there's a Linux Foundation sale running** that beats RUSHABH30: 35% off e-learning courses and certifications with `SEPT26BTS35`, plus 40% off bundles and instructor-led training with `SEPT26BTS40`, ends September 22. It does not apply to THRIVE-ONE subscriptions or any FinOps certification, so the FinOps code below is unaffected. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
-
 RUSHABH30
 
 RUSHABH_20
@@ -2022,9 +2020,7 @@ Hard-deadline cutover
 
 Two partner codes, [compared side by side →](https://rushabhshah.dev/coupons/)
 
-Sale live · ends September 22
-
-The Linux Foundation **Back to School sale** is live: **35% off** e-learning courses and certifications with SEPT26BTS35, plus **40% off** bundles and instructor-led training with SEPT26BTS40. My evergreen RUSHABH30 code takes over at 30% when it ends.
+RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
 
 Get the coupon code →
 
@@ -2256,6 +2252,459 @@ DevOps Engineer · Docker Captain · Grafana Champion
 
 ---
 
+<!-- https://rushabhshah.dev/linux-foundation-coupon/capa/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# CAPA Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · Certified Argo Project Associate
+
+RUSHABH30
+
+[Get CAPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F) and the Certified Argo Project Associate (CAPA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Multiple choice, online proctored |
+| --- | --- |
+| **Duration** | 90 minutes |
+| **List price** | $250 |
+| **With RUSHABH30** | ~$175 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+Teams running any part of the Argo suite, particularly Argo CD for delivery or Workflows for batch work.
+
+## What it covers
+
+- Argo Workflows (36%)
+- Argo CD (34%)
+- Argo Rollouts (18%)
+- Argo Events (12%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+Worth checking the weighting before you buy, because it surprises people: Workflows is the single largest domain at 36%, slightly ahead of Argo CD. If you came for GitOps and have never run a Workflow, that is over a third of the exam on a tool you do not use. Genuinely useful if your shop runs the suite; a poor choice if you only run Argo CD.
+
+## Prep tips
+
+- Do not assume this is an Argo CD exam. Workflows and Argo CD are 70% between them and Workflows is the bigger half, so budget your preparation accordingly.
+- Argo Rollouts at 18% means progressive delivery is worth real study: analysis templates, AnalysisRun, and how a canary actually decides to proceed.
+- Argo Events is only 12% but it is the piece most people have never touched. It is cheap marks if you spend an evening on it.
+
+## How to use the code
+
+- Add the CAPA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F)
+
+## Frequently asked questions
+
+**What does the CAPA exam cover?**
+
+The four Argo projects: Workflows at 36%, Argo CD at 34%, Rollouts at 18% and Events at 12%. Ninety minutes, multiple choice.
+
+**How much is the CAPA with a discount code?**
+
+List price is $250. With RUSHABH30 it drops to about $175, a saving of roughly $75.
+
+**CAPA or CGOA for GitOps?**
+
+CGOA is tool-agnostic and covers GitOps principles; CAPA is specifically the Argo suite and spends most of its weight on Workflows and Argo CD. If you run Argo, CAPA is more immediately useful. If you want the concepts, CGOA travels better.
+
+**Is it only about Argo CD?**
+
+No, and this catches people out. Argo Workflows is the largest single domain at 36%, so someone who only uses Argo CD is walking into a third of the exam cold.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just CAPA. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
+<!-- https://rushabhshah.dev/linux-foundation-coupon/cba/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# CBA Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · Certified Backstage Associate
+
+RUSHABH30
+
+[Get CBA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F) and the Certified Backstage Associate (CBA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Multiple choice, online proctored |
+| --- | --- |
+| **Duration** | 90 minutes |
+| **List price** | $250 |
+| **With RUSHABH30** | ~$175 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+Engineers building or running an internal developer portal on Backstage.
+
+## What it covers
+
+- Backstage development workflow (24%)
+- Backstage infrastructure (22%)
+- Backstage catalog (22%)
+- Customizing Backstage (32%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+Customizing Backstage is the largest domain at 32%, which is an honest reflection of the product: almost nobody runs it unmodified, and the work is mostly plugins, templates and catalog integration. The narrowest exam in the catalogue, and the one where "do you actually use this" matters most. If your company has not adopted Backstage, this certifies a skill you cannot practise.
+
+## Prep tips
+
+- Run a Backstage instance locally and add a plugin. A third of the exam is customisation and there is no way to learn it from documentation alone.
+- The catalog is 22% and it is the conceptual heart: entity kinds, relations, and how descriptors get discovered. Get this right and the rest follows.
+- Development workflow at 24% assumes familiarity with the local development loop, which is Node-based and unlike the rest of the cloud native catalogue.
+
+## How to use the code
+
+- Add the CBA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F)
+
+## Frequently asked questions
+
+**What is the CBA certification?**
+
+The Certified Backstage Associate, a 90-minute multiple-choice exam on the Backstage development workflow, infrastructure, catalog and customisation.
+
+**How much is the CBA with a discount code?**
+
+List price is $250. With RUSHABH30 it drops to about $175, a saving of roughly $75.
+
+**Is CBA worth it if we do not use Backstage?**
+
+Probably not. It is the most product-specific exam in the catalogue, and a third of it is customisation you cannot meaningfully practise without a real instance. If you are evaluating developer portals rather than running one, CNPA covers the concepts more usefully.
+
+**Do I need JavaScript or TypeScript?**
+
+It helps considerably. Backstage is a Node and React application, which makes it the odd one out in a catalogue that is otherwise Go and YAML.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just CBA. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
+<!-- https://rushabhshah.dev/linux-foundation-coupon/cca/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# CCA Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · Cilium Certified Associate
+
+RUSHABH30
+
+[Get CCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcilium-certified-associate-cca%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcilium-certified-associate-cca%2F) and the Cilium Certified Associate (CCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Multiple choice, online proctored |
+| --- | --- |
+| **Duration** | 90 minutes |
+| **List price** | $250 |
+| **With RUSHABH30** | ~$175 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+Engineers running Cilium, or anyone who wants a structured reason to finally understand eBPF networking.
+
+## What it covers
+
+- Architecture (20%)
+- Network policy (18%)
+- Service mesh (16%)
+- Network observability (10%)
+- Installation and configuration (10%)
+- Cluster mesh (10%)
+- eBPF (10%)
+- BGP and external networking (6%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+The most evenly spread exam in the catalogue: eight domains, none above 20%, so there is nowhere to hide. It is also the only certification here that makes you learn eBPF properly, which is increasingly the answer to "how is this doing networking without iptables". Worth it if you run Cilium, and defensible as a learning structure even if you do not.
+
+## Prep tips
+
+- Install Cilium on a throwaway cluster and turn Hubble on. Network observability and eBPF are 20% combined, and both make far more sense once you have watched flows rather than read about them.
+- Network policy is 18% and the Cilium model differs from stock Kubernetes NetworkPolicy. Learn both and learn where they diverge.
+- Do not skip cluster mesh and BGP because they are only 16% together. With eight domains, dropping two entirely is most of your margin.
+
+## How to use the code
+
+- Add the CCA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcilium-certified-associate-cca%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcilium-certified-associate-cca%2F)
+
+## Frequently asked questions
+
+**What is the CCA certification?**
+
+The Cilium Certified Associate, a 90-minute multiple-choice exam covering Cilium architecture, network policy, service mesh, Hubble observability, cluster mesh, eBPF and BGP.
+
+**How much is the CCA with a discount code?**
+
+List price is $250. With RUSHABH30 it drops to about $175, a saving of roughly $75.
+
+**Do I need to know eBPF first?**
+
+No, and the exam only weights eBPF at 10%. But Cilium is built on it, so the parts that look like magic stop looking that way once you understand roughly what the kernel is doing.
+
+**Is CCA performance-based?**
+
+No, it is multiple choice. Istio's ICA is the performance-based one of the two mesh-adjacent associate exams, which is worth knowing if you want the stronger signal.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just CCA. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
+<!-- https://rushabhshah.dev/linux-foundation-coupon/cgoa/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# CGOA Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · Certified GitOps Associate
+
+RUSHABH30
+
+[Get CGOA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F) and the Certified GitOps Associate (CGOA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Multiple choice, online proctored |
+| --- | --- |
+| **Duration** | 90 minutes |
+| **List price** | $250 |
+| **With RUSHABH30** | ~$175 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+Anyone doing continuous delivery who wants the principles rather than one vendor's implementation of them.
+
+## What it covers
+
+- GitOps terminology (20%)
+- GitOps principles (30%)
+- Related practices (16%)
+- GitOps patterns (20%)
+- Tooling (14%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+The tool-agnostic one, and the only exam here where tooling is the smallest domain at 14%. That is the point: it certifies that you understand declarative desired state, continuous reconciliation and drift, rather than which buttons a particular controller has. If you have been doing GitOps by copying someone else's Argo config, this is the exam that makes you understand why it works.
+
+## Prep tips
+
+- Principles and patterns are half the exam. Be able to explain state drift, reconciliation and rollback in your own words before you touch a practice test.
+- The terminology domain is 20% and it is precise. The GitOps working group has written definitions, and the exam uses them rather than the loose industry usage.
+- Do not over-prepare tooling. It is 14%, and candidates routinely spend most of their time there because it is the comfortable part.
+
+## How to use the code
+
+- Add the CGOA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F)
+
+## Frequently asked questions
+
+**What is the CGOA certification?**
+
+The Certified GitOps Associate, a 90-minute multiple-choice exam on GitOps terminology, principles, patterns and related practices. Deliberately tool-agnostic.
+
+**How much is the CGOA with a discount code?**
+
+List price is $250. With RUSHABH30 it drops to about $175, a saving of roughly $75.
+
+**Do I need to know Argo or Flux?**
+
+Not specifically. Tooling is the smallest domain at 14%, and the exam is written to be implementation-neutral. Experience with either helps, but neither is assumed.
+
+**Is CGOA worth it if I already do GitOps daily?**
+
+Honestly, less than you would hope. It certifies understanding rather than skill, so its value is mostly to people formalising knowledge or needing the credential on paper. If you already run reconciling delivery and nobody is asking you to prove it, spend the money elsewhere.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just CGOA. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/ -->
 
 [$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
@@ -2263,30 +2712,6 @@ DevOps Engineer · Docker Captain · Grafana Champion
 # CKA to Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -2369,6 +2794,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -2390,30 +2824,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CKA Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Certified Kubernetes Administrator
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -2505,6 +2915,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -2526,30 +2945,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CKAD to Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS)
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -2632,6 +3027,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -2653,30 +3057,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CKAD Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Certified Kubernetes Application Developer
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -2764,6 +3144,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -2785,30 +3174,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CKS Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Certified Kubernetes Security Specialist
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -2896,6 +3261,246 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
+<!-- https://rushabhshah.dev/linux-foundation-coupon/cnpa/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# CNPA Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · Certified Cloud Native Platform Engineering Associate
+
+RUSHABH30
+
+[Get CNPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F) and the Certified Cloud Native Platform Engineering Associate (CNPA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Multiple choice, online proctored |
+| --- | --- |
+| **Duration** | 120 minutes |
+| **List price** | $250 |
+| **With RUSHABH30** | ~$175 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+People moving toward platform engineering who want the vocabulary and the shape of the discipline before committing to the performance-based exam.
+
+## What it covers
+
+- Platform engineering core fundamentals (36%)
+- Platform observability, security and conformance (20%)
+- Continuous delivery and platform engineering (16%)
+- Platform APIs and provisioning infrastructure (12%)
+- Internal developer platforms and developer experience (8%)
+- Measuring your platform (8%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+Platform engineering suffers from being a job title before it was a defined discipline, and this exam is the Linux Foundation writing down what it thinks the discipline is. Over a third of it is core fundamentals, which is unusually top-heavy and tells you it is aimed at people who have not done the job yet. Useful as an orientation and as the step below CNPE.
+
+## Prep tips
+
+- Pay attention to the measurement domain. It is only 8% but it is the part most practitioners have never thought about, and the one that separates a platform from a pile of tooling.
+- You do not need to have built an internal developer platform, but you should have used one and be able to say what made it good or bad.
+- Multiple choice and 120 minutes, so it is a recall exam. Read the curriculum and map each item to something you have seen rather than practising in a terminal.
+
+## How to use the code
+
+- Add the CNPA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F)
+
+## Frequently asked questions
+
+**What is the CNPA certification?**
+
+The Certified Cloud Native Platform Engineering Associate, a 120-minute multiple-choice exam covering platform engineering fundamentals, observability, delivery, platform APIs and developer experience.
+
+**How much is the CNPA with a discount code?**
+
+List price is $250. With RUSHABH30 it drops to about $175, a saving of roughly $75.
+
+**CNPA or CNPE, which should I take?**
+
+CNPA if you are moving into platform work and want the map. CNPE if you already do it and want a credential that proves you can build. CNPA is the cheaper, multiple-choice orientation; CNPE is performance-based at $445.
+
+**Are there prerequisites?**
+
+None formally. In practice you will struggle without hands-on Kubernetes experience, since almost every domain assumes a cluster underneath.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just CNPA. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
+<!-- https://rushabhshah.dev/linux-foundation-coupon/cnpe/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# CNPE Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · Certified Cloud Native Platform Engineer
+
+RUSHABH30
+
+[Get CNPE for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineer-cnpe%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineer-cnpe%2F) and the Certified Cloud Native Platform Engineer (CNPE) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Performance-based (live terminal) |
+| --- | --- |
+| **Duration** | 2 hours |
+| **List price** | $445 |
+| **With RUSHABH30** | ~$311 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+Engineers who build the internal platform other teams ship on, rather than operating a cluster directly.
+
+## What it covers
+
+- Platform architecture and infrastructure (15%)
+- GitOps and continuous delivery (25%)
+- Platform APIs and self-service capabilities (25%)
+- Observability and operations (20%)
+- Security and policy enforcement (15%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+The most senior exam in the cloud native catalogue and the only one that tests design judgement rather than operation. It is performance-based at the same price as the CKA, and the weighting tells you what it cares about: half the exam is delivery and self-service APIs, which is the part of platform engineering people usually learn by getting it wrong in production first. Do not treat it as a first certification. It assumes everything the CKA covers.
+
+## Prep tips
+
+- Build a real self-service path end to end before sitting it, even a small one. The exam rewards having designed an interface other engineers consume, and that is hard to fake from reading.
+- GitOps and continuous delivery is 25% on its own. If your delivery experience is pipeline scripts rather than a reconciling controller, close that gap first.
+- It is a live terminal like the CKA, so the same advice applies: practise against the clock, and know where the documentation lives rather than memorising flags.
+
+## How to use the code
+
+- Add the CNPE exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineer-cnpe%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineer-cnpe%2F)
+
+## Frequently asked questions
+
+**What is the CNPE certification?**
+
+The Certified Cloud Native Platform Engineer, a performance-based Linux Foundation exam covering platform architecture, GitOps delivery, self-service APIs, observability and policy enforcement. Two hours in a live terminal.
+
+**How much is the CNPE with a discount code?**
+
+List price is $445. With RUSHABH30 it drops to about $311, a saving of roughly $134.
+
+**Is the CNPE harder than the CKA?**
+
+Different rather than harder. The CKA tests whether you can operate a cluster; the CNPE tests whether you can design something other engineers build on top of. It assumes CKA-level knowledge as a starting point.
+
+**Should this be my first certification?**
+
+No. It is aimed at people already doing platform work. If you are new to Kubernetes, the CKA is the better purchase and the natural prerequisite in practice, even though it is not a formal one.
+
+**What is the difference between CNPE and CNPA?**
+
+CNPA is the associate-level, multiple-choice version covering the same territory at a recall level. CNPE is performance-based and costs more because it asks you to actually build. CNPA is the sensible stepping stone.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just CNPE. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -2917,30 +3522,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # Golden Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Golden Kubestronaut bundle (16 CNCF certs)
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -3039,6 +3620,127 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
+<!-- https://rushabhshah.dev/linux-foundation-coupon/ica/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# ICA Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · Istio Certified Associate
+
+RUSHABH30
+
+[Get ICA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F) and the Istio Certified Associate (ICA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Performance-based (live terminal) |
+| --- | --- |
+| **Duration** | 2 hours |
+| **List price** | $250 |
+| **With RUSHABH30** | ~$175 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+Engineers running or about to run Istio, who need to prove they can configure traffic and mTLS rather than describe them.
+
+## What it covers
+
+- Installation, upgrade and configuration (20%)
+- Traffic management (35%)
+- Securing workloads (25%)
+- Troubleshooting (20%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+One of the few associate-level exams that is performance-based rather than multiple choice, which makes it worth noticeably more than its "associate" label suggests. Traffic management alone is 35%, so it is largely about whether you can express routing, retries and failure injection correctly under time pressure. Only worth taking if you actually run Istio; a mesh certification on top of shaky networking fundamentals is a poor trade.
+
+## Prep tips
+
+- Practise in a real mesh with real traffic. The traffic-management domain is a third of the exam and it is all configuration you either have written before or have not.
+- Know the difference between a VirtualService and a DestinationRule cold. Confusing the two is the classic way to lose time.
+- Troubleshooting is 20%, so deliberately break your mesh and fix it: misapplied policy, wrong namespace, sidecar not injected.
+
+## How to use the code
+
+- Add the ICA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F)
+
+## Frequently asked questions
+
+**Is the ICA multiple choice?**
+
+No. Unusually for an associate-level exam it is performance-based: a live terminal with a real mesh, two hours. That makes it stronger evidence than most associate certifications.
+
+**How much is the ICA with a discount code?**
+
+List price is $250. With RUSHABH30 it drops to about $175, a saving of roughly $75.
+
+**Do I need the CKA before the ICA?**
+
+Not formally, and there is no prerequisite. In practice a service mesh sits on top of Kubernetes networking, so if pods, services and DNS are still hazy, learn those first or the mesh will look like magic.
+
+**ICA or CCA, which is more useful?**
+
+Whichever you actually run. ICA is Istio, CCA is Cilium, and they solve overlapping problems in very different ways. Taking the one your employer does not use is an expensive way to learn a tool you will not touch.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just ICA. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -3059,31 +3761,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated September 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
-
-A sale is running right now (see above). This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -3113,6 +3791,15 @@ These are the certifications people ask me about most, with the math already don
 | **[LFCS](#lfcs-coupon)** (Linux Foundation Certified SysAdmin) | Linux fundamentals, any infra role | $445 | ~$311 |
 | **[LFCA](#lfca-discount)** (Linux Foundation Certified IT Associate) | Total beginners, career-changers | $250 | ~$175 |
 | **[MCPA](#mcpa-discount)** (Model Context Protocol Associate, new Sept 2026) | Engineers building AI agents and tool integrations | $250 | ~$175 |
+| **[CNPE](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)** (Certified Cloud Native Platform Engineer, performance-based) | Platform engineers building the paved road | $445 | ~$311 | **~$134** |
+| **[CNPA](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)** (Certified Cloud Native Platform Engineering Associate) | Moving into platform work | $250 | ~$175 | **~$75** |
+| **[ICA](https://rushabhshah.dev/linux-foundation-coupon/ica/)** (Istio Certified Associate, performance-based) | Running a service mesh | $250 | ~$175 | **~$75** |
+| **[CCA](https://rushabhshah.dev/linux-foundation-coupon/cca/)** (Cilium Certified Associate) | eBPF networking and Hubble | $250 | ~$175 | **~$75** |
+| **[CAPA](https://rushabhshah.dev/linux-foundation-coupon/capa/)** (Certified Argo Project Associate) | Argo Workflows, CD, Rollouts, Events | $250 | ~$175 | **~$75** |
+| **[CGOA](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)** (Certified GitOps Associate, tool-agnostic) | GitOps principles, not one vendor | $250 | ~$175 | **~$75** |
+| **[KCA](https://rushabhshah.dev/linux-foundation-coupon/kca/)** (Kyverno Certified Associate) | Policy enforcement on clusters | $250 | ~$175 | **~$75** |
+| **[CBA](https://rushabhshah.dev/linux-foundation-coupon/cba/)** (Certified Backstage Associate) | Running an internal developer portal | $250 | ~$175 | **~$75** |
+| **[PTCA](https://rushabhshah.dev/linux-foundation-coupon/ptca/)** (PyTorch Certified Associate) | PyTorch, new to the LF catalogue | $250 | ~$175 | **~$75** |
 | **[PCA](#pca-discount)** (Prometheus Certified Associate) | Engineers focused on monitoring | $250 | ~$175 |
 | **[OTCA](#otca-discount)** (OpenTelemetry Certified Associate) | DevOps & platform engineers standardizing on OTel | $250 | ~$175 |
 
@@ -3247,6 +3934,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **Back to School sale, September 2026**: 40% off bundles and instructor-led training with SEPT26BTS40, 35% off courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163, the Kubestronaut bundle to $987 and Golden Kubestronaut to $2538). Beat RUSHABH30 on everything in the catalog, ended September 22.
 - **Switch & Save sale, September 2026**: 40% off a certification and 20% off THRIVE-ONE Annual, bundle only, no code ($805 bundles went to $553, $610 to $423). Only cheaper than RUSHABH30 if you wanted the subscription, ended September 11.
 - **End-of-Season Flash Sale, August 2026**: up to 40% off (35% on courses and certifications with AUG26F35, 40% on bundles with AUG26F40), ended August 28.
 - **35 Years of Linux anniversary sale, August 2026**: 35% off sitewide with code TUX35, ended August 18.
@@ -3303,6 +3991,120 @@ Know someone prepping for the CKA? Share this:
 
 ---
 
+<!-- https://rushabhshah.dev/linux-foundation-coupon/kca/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# KCA Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · Kyverno Certified Associate
+
+RUSHABH30
+
+[Get KCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkyverno-certified-associate-kca%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkyverno-certified-associate-kca%2F) and the Kyverno Certified Associate (KCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Multiple choice, online proctored |
+| --- | --- |
+| **Duration** | 90 minutes |
+| **List price** | $250 |
+| **With RUSHABH30** | ~$175 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+Platform and security engineers who enforce cluster policy, or are about to be asked to.
+
+## What it covers
+
+- Fundamentals of Kyverno (18%)
+- Installation, configuration and upgrades (18%)
+- Kyverno CLI (12%)
+- Applying policies (10%)
+- Writing policies (32%)
+- Policy management (10%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+Almost a third of this exam is writing policies, which is the correct emphasis and also the reason it is harder than its beginner label suggests. Kyverno's pitch is policy as Kubernetes resources rather than a separate language, so if you have bounced off Rego and OPA before, this is the friendlier route into admission control.
+
+## Prep tips
+
+- Writing policies is 32%. Write them, repeatedly, against a real cluster. Validate, mutate and generate rules all behave differently and the exam covers all three.
+- Learn the CLI properly. It is 12% and it is also how you will test policies without deploying them, which makes the rest of the preparation faster.
+- Understand where admission control sits in the request path. Several questions become obvious once you know when a policy actually runs.
+
+## How to use the code
+
+- Add the KCA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkyverno-certified-associate-kca%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkyverno-certified-associate-kca%2F)
+
+## Frequently asked questions
+
+**What is the KCA certification?**
+
+The Kyverno Certified Associate, a 90-minute multiple-choice exam on Kyverno fundamentals, installation, the CLI, and writing, applying and managing policies.
+
+**How much is the KCA with a discount code?**
+
+List price is $250. With RUSHABH30 it drops to about $175, a saving of roughly $75.
+
+**Is KCA a security certification?**
+
+Partly. It covers policy enforcement, which is a security control, but it is narrower than the CKS. If you want a broad Kubernetes security credential, CKS is the one; KCA proves you can enforce policy with a specific tool.
+
+**Kyverno or OPA?**
+
+Kyverno expresses policy as Kubernetes resources, OPA uses Rego, a separate language. Neither is objectively better, but Kyverno has the gentler learning curve for people who already think in YAML manifests. This exam only covers Kyverno.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just KCA. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
 <!-- https://rushabhshah.dev/linux-foundation-coupon/kcna/ -->
 
 [$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
@@ -3310,30 +4112,6 @@ Know someone prepping for the CKA? Share this:
 # KCNA Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Kubernetes and Cloud Native Associate
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -3421,6 +4199,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -3442,30 +4229,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # KCSA Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Kubernetes and Cloud Native Security Associate
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -3553,6 +4316,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -3574,30 +4346,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # Kubestronaut to Golden Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams)
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -3687,6 +4435,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -3708,30 +4465,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -3819,6 +4552,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -3840,30 +4582,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # LFCA Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Linux Foundation Certified IT Associate
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -3953,6 +4671,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
 
@@ -3973,30 +4700,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # LFCS Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Linux Foundation Certified System Administrator
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -4086,6 +4789,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -4107,30 +4819,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # MCPA Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Model Context Protocol Associate
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -4222,6 +4910,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
@@ -4243,30 +4940,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # OTCA Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · OpenTelemetry Certified Associate
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -4354,6 +5027,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 
@@ -4374,30 +5056,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # PCA Discount Code: 30% Off with RUSHABH30
 
 Updated September 2026 · Prometheus Certified Associate
-
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
 
 RUSHABH30
 
@@ -4486,7 +5144,128 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
+
+Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
+
+Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
+
+\# Affiliate disclosure
+
+I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
+
+---
+
+<!-- https://rushabhshah.dev/linux-foundation-coupon/ptca/ -->
+
+[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+
+# PTCA Discount Code: 30% Off with RUSHABH30
+
+Updated September 2026 · PyTorch Certified Associate
+
+RUSHABH30
+
+[Get PTCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fpytorch-certified-associate-ptca%2F)
+
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fpytorch-certified-associate-ptca%2F) and the PyTorch Certified Associate (PTCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+## Quick facts
+
+| **Format** | Multiple choice, online proctored |
+| --- | --- |
+| **Duration** | 120 minutes |
+| **List price** | $250 |
+| **With RUSHABH30** | ~$175 |
+| **Prerequisite** | None |
+
+## Who this is for
+
+Engineers working with PyTorch who want a vendor-neutral credential, including infrastructure people who serve models without training them.
+
+## What it covers
+
+- PyTorch fundamentals (38%)
+- Model development (20%)
+- Performance and optimization (26%)
+- Data handling (16%)
+
+*Domain names above reflect the current official curriculum's topic areas; exact weightings are set by the Linux Foundation/CNCF and revised periodically, so check their published curriculum for the current breakdown.*
+
+## Why it's worth it
+
+PyTorch moved to the Linux Foundation in 2022 and this is its first certification, which makes it the AI entry in a catalogue that is otherwise infrastructure. Fundamentals is 38% and performance another 26%, so it leans toward tensors, devices and making training fast rather than model architecture theory. That weighting makes it more useful to an infrastructure engineer than the title suggests.
+
+## Prep tips
+
+- Fundamentals is 38% and it means tensors, devices and the training loop. If you use PyTorch through a higher-level wrapper, drop down a level before sitting it.
+- Performance and optimization at 26% covers precision, execution optimisation and distributed training, which is where the infrastructure overlap is. Know what moves between CPU, CUDA and MPS and what it costs.
+- Data handling is only 16% but Datasets, DataLoaders and transforms are easy marks if you have ever built a pipeline.
+
+## How to use the code
+
+- Add the PTCA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fpytorch-certified-associate-ptca%2F).
+- Enter `RUSHABH30` in the coupon field at checkout.
+- The total drops 30%. RUSHABH30 works on the exam with one free retake, within a 12-month eligibility window.
+
+RUSHABH30
+
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fpytorch-certified-associate-ptca%2F)
+
+## Frequently asked questions
+
+**What is the PTCA certification?**
+
+The PyTorch Certified Associate, a 120-minute multiple-choice exam covering PyTorch fundamentals, model development, performance and optimisation, and data handling. PyTorch is a Linux Foundation project.
+
+**How much is the PTCA with a discount code?**
+
+List price is $250. With RUSHABH30 it drops to about $175, a saving of roughly $75.
+
+**Is PTCA useful if I do infrastructure rather than machine learning?**
+
+More than you would expect. Fundamentals and performance are 64% between them, and both are about tensors, devices and making things run efficiently, which is closer to infrastructure work than to model research.
+
+**Do I need a GPU to prepare?**
+
+Not strictly. The exam covers device basics across CPU, CUDA and MPS, and you can learn the concepts on a laptop. Access to a GPU helps for the distributed-training portion of the performance domain.
+
+## Other Linux Foundation & CNCF certifications
+
+RUSHABH30 works on every Linux Foundation and CNCF course and certification, not just PTCA. Dedicated discount guides:
+
+- [CKA discount code](https://rushabhshah.dev/linux-foundation-coupon/cka/)
+- [CKAD discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad/)
+- [CKS discount code](https://rushabhshah.dev/linux-foundation-coupon/cks/)
+- [KCNA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcna/)
+- [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
+- [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
+- [Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+- [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
+- [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
 
 Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux-foundation-coupon/) for pricing across the whole catalog, including ICA, CCA, CGOA, and CAPA.
