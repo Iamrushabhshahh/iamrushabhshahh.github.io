@@ -4,30 +4,6 @@
 
 Updated September 2026 · Linux Foundation Certified IT Associate
 
-Sale live now · ends September 22
-
-Linux Foundation Back to School sale
-
-- **35% off** e-learning courses and certifications with `SEPT26BTS35`
-- **40% off** bundles and instructor-led training with `SEPT26BTS40`
-
-What they cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$289** with `SEPT26BTS35`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$163** with `SEPT26BTS35`
-- Kubestronaut bundle (KCNA, KCSA, CKA, CKAD, CKS): $1645 **$987** with `SEPT26BTS40`
-- Golden Kubestronaut bundle (all 16 exams): $4229 **$2538** with `SEPT26BTS40`
-- CKA or CKAD to Kubestronaut upgrade (4 exams): $1235 **$741** with `SEPT26BTS40`
-- Kubestronaut to Golden Kubestronaut upgrade (11 exams): $2669 **$1602** with `SEPT26BTS40`
-
-These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.
-
-Runs until 23:59 UTC on September 22, which is 5:29 AM IST on the 23rd. New and individual purchases only, not renewals. Does not apply to THRIVE-ONE subscriptions, the Yocto course (LFD461-JP), or any FinOps certification.
-
-SEPT26BTS35
-SEPT26BTS40
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fseptember-2026-promo%2F)
-
 RUSHABH30
 
 [Get LFCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F)
@@ -116,6 +92,15 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
 - [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
 - [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)
 

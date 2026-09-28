@@ -1742,3 +1742,198 @@ nav a { -webkit-tap-highlight-color: transparent; }
 .faq details[open] summary::after { content: '−'; }
 .faq details > div { padding: 0 1.1rem 1rem; color: var(--muted-color); font-size: 0.925rem; line-height: 1.65; }
 .faq details > div a { color: var(--primary-color); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- cert chooser + savings calculator ----------
+   Both sit above the 25-row pricing table. The table is thorough and that is
+   exactly why someone who has not already decided needs a shorter path to an
+   answer before they reach it. */
+.chooser,.calc{border:1px solid var(--border-color);background:var(--panel-color);
+  border-radius:8px;padding:20px 22px;margin:14px 0 30px}
+.ch-lead{font-size:0.95rem;color:var(--muted-color);margin:0 0 14px;max-width:62ch}
+.ch-opts{display:flex;flex-wrap:wrap;gap:8px}
+.ch-opt{font-family:'Fira Code',monospace;font-size:0.78rem;padding:8px 13px;cursor:pointer;
+  border:1px solid var(--border-color);background:var(--terminal-header);color:var(--text-color);
+  border-radius:6px;transition:border-color .15s,color .15s,background .15s}
+.ch-opt:hover{border-color:var(--primary-color);color:var(--primary-color)}
+.ch-opt[aria-pressed="true"]{background:var(--primary-color);border-color:var(--primary-color);color:#fff;font-weight:600}
+.ch-results{margin-top:16px}
+.pk-why{font-size:0.92rem;color:var(--text-color);margin:0 0 12px;max-width:70ch}
+.pk-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.pick-card{display:block;border:1px solid var(--border-color);border-left:3px solid var(--primary-color);
+  background:var(--bg-color);border-radius:0 6px 6px 0;padding:14px 16px;text-decoration:none;transition:.15s}
+.pick-card:hover{border-left-color:var(--green-color);transform:translateX(2px)}
+.pk-n{display:block;font-weight:700;font-size:1.15rem;color:var(--primary-color)}
+.pk-f{display:block;font-size:0.8rem;color:var(--muted-color);margin-top:2px}
+.pk-p{display:block;font-family:'Fira Code',monospace;font-size:0.8rem;color:var(--text-color);margin-top:8px}
+.pk-p s{color:var(--muted-color)}
+.pk-p strong{color:var(--green-color)}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;margin-bottom:16px}
+.calc-i{display:flex;align-items:center;gap:8px;font-size:0.85rem;padding:7px 10px;cursor:pointer;
+  border:1px solid transparent;border-radius:6px;transition:.12s}
+.calc-i:hover{background:var(--terminal-header);border-color:var(--border-color)}
+.calc-i input{accent-color:var(--primary-color);cursor:pointer;flex:0 0 auto}
+.calc-i span{flex:1;font-weight:600}
+.calc-i em{font-family:'Fira Code',monospace;font-style:normal;font-size:0.76rem;color:var(--muted-color)}
+.calc-out{border-top:1px solid var(--border-color);padding-top:14px}
+.co-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;font-size:0.9rem;color:var(--muted-color)}
+.co-row b{font-family:'Fira Code',monospace;font-size:1.05rem;color:var(--text-color)}
+.co-row.hi b{color:var(--primary-color);font-size:1.3rem}
+.co-row.save b{color:var(--green-color)}
+.co-bundle{margin:12px 0 0;padding:12px 14px;border-radius:6px;font-size:0.88rem;
+  background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--green-color);color:var(--text-color)}
+.co-bundle a{color:var(--primary-color);font-weight:600}
+@media (max-width:600px){.calc-grid{grid-template-columns:1fr 1fr}.ch-opt{font-size:0.72rem;padding:7px 10px}}
+@media (prefers-reduced-motion:reduce){.pick-card,.ch-opt,.calc-i{transition:none}.pick-card:hover{transform:none}}
+
+/* ============================================================================
+   DESIGN SYSTEM LAYER
+   Added deliberately at the end so it wins specificity ties without touching
+   the rules above it, which keeps this revertible in one block.
+
+   The problem it solves: this stylesheet had grown 35 distinct font sizes and
+   27 distinct spacing values, with clusters like 0.72 / 0.75 / 0.78 / 0.8 /
+   0.85 / 0.875 / 0.9 / 0.95rem sitting within a whisker of each other. Nothing
+   there is wrong individually, and collectively the eye reads it as noise. A
+   page looks expensive because it is systematic, not because it has effects.
+   ========================================================================= */
+:root{
+  /* Type scale, 1.2 minor third from 0.875rem. Eight steps, not thirty-five. */
+  --t-2xs:0.75rem; --t-xs:0.8125rem; --t-sm:0.875rem; --t-base:1rem;
+  --t-lg:1.125rem; --t-xl:1.375rem; --t-2xl:1.75rem; --t-3xl:2.25rem; --t-4xl:3rem;
+  /* Spacing, 0.25rem base. Seven steps. */
+  --s-1:0.25rem; --s-2:0.5rem; --s-3:0.75rem; --s-4:1rem;
+  --s-5:1.5rem; --s-6:2rem; --s-7:3rem;
+  /* Elevation. Three levels, each a real step, not eighteen one-offs. */
+  --e-1:0 1px 2px rgba(0,0,0,.05), 0 1px 3px rgba(0,0,0,.08);
+  --e-2:0 2px 4px rgba(0,0,0,.05), 0 8px 20px -6px rgba(0,0,0,.12);
+  --e-3:0 4px 8px rgba(0,0,0,.06), 0 16px 40px -12px rgba(0,0,0,.18);
+  /* Motion. One curve, three durations. */
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --d-1:120ms; --d-2:200ms; --d-3:320ms;
+}
+:root[data-theme="dark"],
+html:not([data-theme="light"]){
+  --e-1:0 1px 2px rgba(0,0,0,.4), 0 1px 3px rgba(0,0,0,.5);
+  --e-2:0 2px 4px rgba(0,0,0,.45), 0 8px 20px -6px rgba(0,0,0,.6);
+  --e-3:0 4px 8px rgba(0,0,0,.5), 0 16px 40px -12px rgba(0,0,0,.7);
+}
+
+/* ---- optical refinement. No new assets, no extra bytes over the wire. ---- */
+
+/* Inter ships alternate letterforms that read better at UI sizes, and a
+   straight-sided lowercase l that stops it being confused with capital I. */
+body{font-feature-settings:"cv05" 1,"cv11" 1,"ss01" 1;}
+
+/* Headings were wrapping with orphan words, which is the single most common
+   reason a careful layout still looks careless. */
+h1,h2,h3,h4,.display-font,.pk-n{text-wrap:balance}
+p,li,.pk-f,.pk-why,.ch-lead{text-wrap:pretty}
+
+/* Large type needs tighter tracking than body type. This is why display text
+   set at body tracking always looks slightly loose and amateur. */
+h1,.display-font{letter-spacing:-0.028em;line-height:1.04}
+h2{letter-spacing:-0.022em;line-height:1.12}
+h3{letter-spacing:-0.015em;line-height:1.2}
+
+/* THE detail that matters most on a pricing page: proportional figures make
+   numbers in a column fail to line up, and every financial interface that
+   looks professional is using tabular ones. */
+table td,table th,.code-box,.calc-i em,.co-row b,.pk-p,
+.stat-value,.metric .mv,[class*="price"]{
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum" 1,"zero" 1;
+}
+
+/* ---- surfaces ---- */
+table{border-collapse:separate;border-spacing:0}
+table th{
+  font-size:var(--t-2xs);letter-spacing:.07em;text-transform:uppercase;
+  font-weight:600;color:var(--muted-color);
+  padding:var(--s-3) var(--s-4);
+  border-bottom:1px solid var(--border-color);
+}
+table td{padding:var(--s-3) var(--s-4);border-bottom:1px solid var(--border-color)}
+table tbody tr{transition:background var(--d-1) var(--ease)}
+table tbody tr:hover{background:rgba(var(--primary-rgb),0.045)}
+table tbody tr:last-child td{border-bottom:0}
+
+/* Chooser and calculator, retuned onto the scale. */
+.chooser,.calc{box-shadow:var(--e-1);padding:var(--s-5) var(--s-5)}
+.ch-lead{font-size:var(--t-sm)}
+.ch-opt{font-size:var(--t-xs);padding:var(--s-2) var(--s-3);
+  transition:border-color var(--d-1) var(--ease),color var(--d-1) var(--ease),
+             background var(--d-1) var(--ease),transform var(--d-1) var(--ease)}
+.ch-opt:hover{transform:translateY(-1px)}
+.ch-opt[aria-pressed="true"]{box-shadow:var(--e-1)}
+.pick-card{box-shadow:var(--e-1);transition:transform var(--d-2) var(--ease),
+  box-shadow var(--d-2) var(--ease),border-left-color var(--d-2) var(--ease)}
+.pick-card:hover{box-shadow:var(--e-2);transform:translateY(-2px)}
+.pk-n{font-size:var(--t-lg);letter-spacing:-0.015em}
+.pk-f{font-size:var(--t-2xs)}
+.pk-p{font-size:var(--t-xs)}
+.calc-i{font-size:var(--t-sm);transition:background var(--d-1) var(--ease),
+  border-color var(--d-1) var(--ease)}
+.co-row{font-size:var(--t-sm)}
+.co-row.hi b{font-size:var(--t-xl);letter-spacing:-0.02em}
+
+/* Focus, made consistent and actually visible, including on dark. */
+a:focus-visible,button:focus-visible,input:focus-visible,
+summary:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--primary-color);outline-offset:3px;border-radius:4px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .ch-opt:hover,.pick-card:hover{transform:none}
+  *{transition-duration:0.01ms!important}
+}
+
+/* The result card is an <a>, so the site's link styling was underlining every
+   line inside it. A card should read as a surface you click, not as a stack of
+   three underlined links. */
+/* .post-prose a sets text-decoration:underline at specificity 0-1-1, which beat
+   a plain .pick-card at 0-1-0. The subtler half: text-decoration drawn on an
+   ancestor cannot be switched off by a descendant, so styling the spans inside
+   was never going to work either. It has to be removed on the anchor itself. */
+.pick-card,.pick-card:hover,.pick-card:focus{text-decoration:none!important}
+.pick-card .pk-n{border-bottom:0}
+/* Keep the title reading as the clickable thing, without underlining the card. */
+.pick-card:hover .pk-n,.pick-card:focus-visible .pk-n{text-decoration:underline;text-underline-offset:3px}
+
+/* A single result was stretching to the full container width, which made one
+   recommendation look like an empty table row. Cap the track so one card sits
+   at a natural width and two still sit side by side. */
+.pk-cards{grid-template-columns:repeat(auto-fit,minmax(240px,340px));justify-content:start}
+
+/* ---- motion for the chooser and calculator ----
+   Kept short and single-purpose. Anything longer than about 300ms on a page
+   that is selling something starts to feel like it is performing rather than
+   responding. Every rule here is cancelled wholesale under reduced motion. */
+.pick-result{opacity:0}
+.pick-result.in{animation:cneFade var(--d-2) var(--ease) forwards}
+.pick-card{opacity:0}
+.pick-card.in{animation:cneRise var(--d-3) var(--ease) forwards;
+  animation-delay:calc(var(--i,0) * 70ms)}
+.co-bundle.in{animation:cneRise var(--d-3) var(--ease)}
+@keyframes cneFade{to{opacity:1}}
+@keyframes cneRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* The saving is the number people came for, so it gets one brief pulse when it
+   changes. Colour only, no scale: scaling a price makes the row reflow. */
+.co-row.save b{transition:color var(--d-2) var(--ease)}
+
+@media (prefers-reduced-motion:reduce){
+  .pick-result,.pick-card{opacity:1!important;animation:none!important;transform:none!important}
+  .co-bundle.in{animation:none!important}
+}
+
+/* The scroll-fade above paints four gradient layers across .post-prose table,
+   which is display:block; width:100%. For a wide table that overflows, that is
+   exactly right. For a narrow one like the two-column "Quick facts" block on
+   every certification page, the block still fills the container while the rows
+   occupy a third of it, so the fade paints an empty panel to the right of the
+   content and reads as a rendering bug.
+
+   max-content sizes the table to its rows; max-width keeps a genuinely wide one
+   capped at the container so overflow-x and the fade still do their job. */
+.post-prose table{width:max-content;max-width:100%}

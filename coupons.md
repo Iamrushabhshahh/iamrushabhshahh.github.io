@@ -2,8 +2,6 @@
 
 Updated September 2026 · Two official partner codes, one page
 
-**Right now there's a Linux Foundation sale running** that beats RUSHABH30: 35% off e-learning courses and certifications with `SEPT26BTS35`, plus 40% off bundles and instructor-led training with `SEPT26BTS40`, ends September 22. It does not apply to THRIVE-ONE subscriptions or any FinOps certification, so the FinOps code below is unaffected. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
-
 RUSHABH30
 
 RUSHABH_20
