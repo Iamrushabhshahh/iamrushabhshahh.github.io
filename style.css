@@ -1891,11 +1891,38 @@ summary:focus-visible,[tabindex]:focus-visible{
 /* The result card is an <a>, so the site's link styling was underlining every
    line inside it. A card should read as a surface you click, not as a stack of
    three underlined links. */
-.pick-card,.pick-card:hover,.pick-card:focus{text-decoration:none}
-.pick-card *{text-decoration:none!important}
-.pick-card .pk-n{text-decoration:none;border-bottom:0}
+/* .post-prose a sets text-decoration:underline at specificity 0-1-1, which beat
+   a plain .pick-card at 0-1-0. The subtler half: text-decoration drawn on an
+   ancestor cannot be switched off by a descendant, so styling the spans inside
+   was never going to work either. It has to be removed on the anchor itself. */
+.pick-card,.pick-card:hover,.pick-card:focus{text-decoration:none!important}
+.pick-card .pk-n{border-bottom:0}
+/* Keep the title reading as the clickable thing, without underlining the card. */
+.pick-card:hover .pk-n,.pick-card:focus-visible .pk-n{text-decoration:underline;text-underline-offset:3px}
 
 /* A single result was stretching to the full container width, which made one
    recommendation look like an empty table row. Cap the track so one card sits
    at a natural width and two still sit side by side. */
 .pk-cards{grid-template-columns:repeat(auto-fit,minmax(240px,340px));justify-content:start}
+
+/* ---- motion for the chooser and calculator ----
+   Kept short and single-purpose. Anything longer than about 300ms on a page
+   that is selling something starts to feel like it is performing rather than
+   responding. Every rule here is cancelled wholesale under reduced motion. */
+.pick-result{opacity:0}
+.pick-result.in{animation:cneFade var(--d-2) var(--ease) forwards}
+.pick-card{opacity:0}
+.pick-card.in{animation:cneRise var(--d-3) var(--ease) forwards;
+  animation-delay:calc(var(--i,0) * 70ms)}
+.co-bundle.in{animation:cneRise var(--d-3) var(--ease)}
+@keyframes cneFade{to{opacity:1}}
+@keyframes cneRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* The saving is the number people came for, so it gets one brief pulse when it
+   changes. Colour only, no scale: scaling a price makes the row reflow. */
+.co-row.save b{transition:color var(--d-2) var(--ease)}
+
+@media (prefers-reduced-motion:reduce){
+  .pick-result,.pick-card{opacity:1!important;animation:none!important;transform:none!important}
+  .co-bundle.in{animation:none!important}
+}

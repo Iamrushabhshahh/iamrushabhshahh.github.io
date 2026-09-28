@@ -54,6 +54,16 @@ const JS_VERSION = crypto
   .digest('hex')
   .slice(0, 8);
 const JS_SRC = `/assets/theme.js?v=${JS_VERSION}`;
+
+/* Hand-authored pages hold their own <script> tag, so the fingerprint above
+   only reaches generated output unless something rewrites them. Stamping it
+   here rather than by hand is the whole point: the first version of this fix
+   hardcoded a hash into the source files, which meant the very next change to
+   theme.js shipped with a stale fingerprint and the new code was invisible
+   again. Anything derived from a file's contents has to be derived on every
+   build, not pasted once. */
+const stampAssets = (html) =>
+  html.replace(/\/assets\/theme\.js(\?v=[a-f0-9]+)?/g, JS_SRC);
 const POSTS_DIR = path.join(ROOT, 'content', 'posts');
 const OUT_DIR = path.join(ROOT, 'blog');
 const SITE = 'https://rushabhshah.dev';
@@ -2446,7 +2456,7 @@ if (fs.existsSync(couponPath)) {
     console.warn('⚠️  could not find the Person JSON-LD block on index.html — skipping Person sync on the coupon page');
   }
   if (stamped !== c) {
-    fs.writeFileSync(couponPath, stamped);
+    fs.writeFileSync(couponPath, stampAssets(stamped));
     console.log(`✅ stamped   /linux-foundation-coupon/ (${MONTH_YEAR})`);
   }
   const bareLinks = (stamped.match(/href="https:\/\/training\.linuxfoundation\.org\//g) || []).length;
@@ -3710,7 +3720,7 @@ function swapMarker(html, marker, inner) {
   homeHtml = swapMarker(homeHtml, 'Projects will be injected here', renderProjects());
   homeHtml = swapMarker(homeHtml, 'Latest blog posts injected from /blog/posts.json. Falls back to a static card.', renderLatestPosts());
   homeHtml = swapRegion(homeHtml, 'SALE-HOME', saleHomeCardHtml());
-  fs.writeFileSync(indexPath, homeHtml);
+  fs.writeFileSync(indexPath, stampAssets(homeHtml));
   console.log('✅ pre-rendered / (skills, certs, experience, projects, latest posts)');
 }
 
@@ -3740,6 +3750,30 @@ for (const entry of fs.readdirSync(OUT_DIR, { withFileTypes: true })) {
     fs.rmSync(path.join(OUT_DIR, entry.name), { recursive: true });
     console.log(`🗑  pruned    /blog/${entry.name}/`);
   }
+}
+
+/* Final pass: stamp the asset fingerprint into every page on disk, generated or
+   hand-authored. Doing it per-write-path missed the pages the build does not
+   otherwise touch (/links/, /privacy/, /docker-captain/), which then served an
+   un-fingerprinted theme.js and sat in Cloudflare's cache for four hours after
+   any change. One pass over the output is both simpler and complete. */
+{
+  let stamped = 0;
+  const walkHtml = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) {
+        if (['.git', 'node_modules', 'next', '.venv', 'content', 'scripts', 'diagrams', 'assets'].includes(e.name)) continue;
+        walkHtml(full);
+      } else if (e.name.endsWith('.html')) {
+        const before = fs.readFileSync(full, 'utf8');
+        const after = stampAssets(before);
+        if (after !== before) { fs.writeFileSync(full, after); stamped++; }
+      }
+    }
+  };
+  walkHtml(ROOT);
+  if (stamped) console.log(`✅ stamped   theme.js?v=${JS_VERSION} into ${stamped} page(s)`);
 }
 
 console.log(`\nDone: ${all.length} published, ${scheduled.length} scheduled, ${byYear.size} year group(s).`);
