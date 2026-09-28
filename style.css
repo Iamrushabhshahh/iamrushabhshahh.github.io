@@ -1926,3 +1926,14 @@ summary:focus-visible,[tabindex]:focus-visible{
   .pick-result,.pick-card{opacity:1!important;animation:none!important;transform:none!important}
   .co-bundle.in{animation:none!important}
 }
+
+/* The scroll-fade above paints four gradient layers across .post-prose table,
+   which is display:block; width:100%. For a wide table that overflows, that is
+   exactly right. For a narrow one like the two-column "Quick facts" block on
+   every certification page, the block still fills the container while the rows
+   occupy a third of it, so the fade paints an empty panel to the right of the
+   content and reads as a rendering bug.
+
+   max-content sizes the table to its rows; max-width keeps a genuinely wide one
+   capped at the container so overflow-x and the fade still do their job. */
+.post-prose table{width:max-content;max-width:100%}
