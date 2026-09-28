@@ -1,7 +1,7 @@
 ---
 title: "A hostname that never existed took Redis and Postgres down with it"
 description: "A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN."
-date: 2026-09-03 09:00
+date: 2026-09-30 00:05
 tags:
   - incident
   - dns
@@ -322,7 +322,9 @@ I went into this thinking the interesting part would be the missing record. It i
 
 The interesting part is that **the failure had no dependency edge to travel along**. Everything we build to reason about blast radius, service maps, dependency graphs, tracing, ownership tags, assumes that if A breaks B then A and B are connected. Here they were not connected by anything except being scheduled onto the same virtual machine, and the resource they were fighting over was one nobody had written down as a resource at all.
 
-Shared, undeclared, unmetered, and silently rate limited. DNS is not the only thing on a host that fits that description, and I have started looking for the others: file descriptors, conntrack table entries, the local port range, inode pressure on the log volume. None of those show up on a service map either.
+Shared, undeclared, unmetered, and silently rate limited. DNS is not the only thing on a host that fits that description, and I have started looking for the others: file descriptors, conntrack table entries, the local port range, inode pressure on the log volume. None of those show up on a service map either, and none of them arrive for free with a tracing library, which is the gap between [instrumentation and observability](/blog/pca-otca-review/) that gets glossed over.
+
+If you want the general version of this argument rather than the DNS-shaped one, the [Kubernetes v1.37 release notes](/blog/kubernetes-v1-37-garhwal/) cover several changes aimed at exactly this class of shared-host resource.
 
 The other thing I would say, more bluntly than I would have a month ago: **an error that is caught and logged is not handled.** Every one of those 33,030 `ENOTFOUND` lines was in a `catch` block that somebody wrote on purpose to make sure logging could never take the app down. It worked. The app never went down because of logging. It went down because of DNS, which is where the failure went once the catch block promised to absorb it forever.
 
@@ -334,7 +336,7 @@ Three things, in ascending order of effort.
 
 **Grep your logs for `EAI_AGAIN`** across every service you run and count distinct hostnames. If the answer is more than one, you have a resolver problem wearing a service problem's clothes.
 
-**Put a DNS query rate panel on a dashboard.** Even without an alert, even just a graph. It is the cheapest possible insurance against a class of incident that is otherwise invisible until it takes something unrelated down at midnight.
+**Put a DNS query rate panel on a dashboard.** Even without an alert, even just a graph. It is the cheapest possible insurance against a class of incident that is otherwise invisible until it takes something unrelated down at midnight. If writing that query is the part you are unsure about, [PromQL is most of what the Prometheus associate exam tests](/blog/pca-otca-review/), and this is exactly the kind of panel it makes you practise.
 
 ## References
 
