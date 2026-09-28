@@ -42,6 +42,18 @@ const CSS_VERSION = crypto
   .digest('hex')
   .slice(0, 8);
 const CSS_HREF = `/style.css?v=${CSS_VERSION}`;
+
+/* theme.js gets the same treatment as style.css, and for a concrete reason: it
+   is served with max-age=14400 and sits behind Cloudflare, so without a
+   fingerprint a JavaScript change is invisible to returning visitors for four
+   hours. That was found the hard way, by shipping the chooser and watching the
+   markup arrive live with none of the behaviour attached. */
+const JS_VERSION = crypto
+  .createHash('sha1')
+  .update(fs.readFileSync(path.join(ROOT, 'assets', 'theme.js')))
+  .digest('hex')
+  .slice(0, 8);
+const JS_SRC = `/assets/theme.js?v=${JS_VERSION}`;
 const POSTS_DIR = path.join(ROOT, 'content', 'posts');
 const OUT_DIR = path.join(ROOT, 'blog');
 const SITE = 'https://rushabhshah.dev';
@@ -1352,7 +1364,7 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
-    <script defer src="/assets/theme.js"></script>
+    <script defer src="${JS_SRC}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">
@@ -2621,7 +2633,7 @@ function certPageHtml(c, siblings) {
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
-    <script defer src="/assets/theme.js"></script>
+    <script defer src="${JS_SRC}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">
@@ -2800,7 +2812,7 @@ const finopsHead = ({ title, description, url, ogImage = `${SITE}/assets/og-fino
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
-    <script defer src="/assets/theme.js"></script>
+    <script defer src="${JS_SRC}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">
