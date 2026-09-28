@@ -86,3 +86,81 @@
         });
     });
 })();
+
+/* ---------- cert chooser + savings calculator (coupon hub only) ----------
+   Both guard on their container existing, so this stays inert on every other
+   page that loads this file. No prices are hardcoded here: they are read from
+   data attributes the generator wrote out of CERT_PAGES, which the daily job
+   verifies against the live Linux Foundation pages. */
+(function () {
+  'use strict';
+
+  var chooser = document.getElementById('chooser');
+  if (chooser) {
+    var opts = [].slice.call(chooser.querySelectorAll('.ch-opt'));
+    var results = [].slice.call(chooser.querySelectorAll('.pick-result'));
+    opts.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+    opts.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var goal = b.dataset.goal;
+        var already = b.getAttribute('aria-pressed') === 'true';
+        opts.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        results.forEach(function (r) { r.hidden = true; });
+        if (already) return;            // second click clears, so it is not a trap
+        b.setAttribute('aria-pressed', 'true');
+        results.forEach(function (r) { if (r.dataset.goal === goal) r.hidden = false; });
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({ path: 'chooser-' + goal, title: 'Cert chooser: ' + goal, event: true });
+        }
+      });
+    });
+  }
+
+  var calc = document.getElementById('calc');
+  if (calc) {
+    var boxes = [].slice.call(calc.querySelectorAll('input[type=checkbox]'));
+    var money = function (n) { return '$' + n.toLocaleString('en-US'); };
+    var bundles = [];
+    try { bundles = JSON.parse(document.getElementById('bundleData').textContent); } catch (e) {}
+
+    var update = function () {
+      var picked = boxes.filter(function (b) { return b.checked; });
+      var list = 0, disc = 0, slugs = [];
+      picked.forEach(function (b) {
+        list += Number(b.dataset.list) || 0;
+        disc += Number(b.dataset.disc) || 0;
+        slugs.push(b.dataset.slug);
+      });
+      document.getElementById('cQty').textContent = picked.length;
+      document.getElementById('cList').textContent = money(list);
+      document.getElementById('cDisc').textContent = money(disc);
+      document.getElementById('cSave').textContent = money(list - disc);
+
+      /* Offer a bundle only when it genuinely covers everything ticked AND is
+         actually cheaper. Suggesting a bundle that costs more, or that misses
+         an exam the reader wants, would be the kind of upsell that loses the
+         trust the rest of this page is built on. */
+      var note = document.getElementById('cBundle');
+      var best = null;
+      bundles.forEach(function (bn) {
+        /* Exact match only. Prefix matching looks harmless and is not: 'ckad'
+           starts with 'cka', so ticking the CKA would match the CKA-to-
+           Kubestronaut upgrade, a bundle that deliberately excludes the CKA.
+           It would then recommend something cheaper that is missing the exam
+           the reader actually asked for. */
+        var covers = slugs.every(function (s) { return bn.covers.indexOf(s) !== -1; });
+        if (picked.length > 1 && covers && bn.disc < disc && (!best || bn.disc < best.disc)) best = bn;
+      });
+      if (best) {
+        note.hidden = false;
+        note.innerHTML = 'The <a href="/linux-foundation-coupon/' + best.slug + '/">' + best.name +
+          '</a> covers everything you ticked for about <strong>' + money(best.disc) +
+          '</strong> with the code, which is ' + money(disc - best.disc) + ' less than buying them separately.';
+      } else {
+        note.hidden = true;
+      }
+    };
+    boxes.forEach(function (b) { b.addEventListener('change', update); });
+    update();
+  }
+})();

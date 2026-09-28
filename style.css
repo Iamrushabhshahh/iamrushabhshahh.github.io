@@ -1742,3 +1742,46 @@ nav a { -webkit-tap-highlight-color: transparent; }
 .faq details[open] summary::after { content: '−'; }
 .faq details > div { padding: 0 1.1rem 1rem; color: var(--muted-color); font-size: 0.925rem; line-height: 1.65; }
 .faq details > div a { color: var(--primary-color); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- cert chooser + savings calculator ----------
+   Both sit above the 25-row pricing table. The table is thorough and that is
+   exactly why someone who has not already decided needs a shorter path to an
+   answer before they reach it. */
+.chooser,.calc{border:1px solid var(--border-color);background:var(--panel-color);
+  border-radius:8px;padding:20px 22px;margin:14px 0 30px}
+.ch-lead{font-size:0.95rem;color:var(--muted-color);margin:0 0 14px;max-width:62ch}
+.ch-opts{display:flex;flex-wrap:wrap;gap:8px}
+.ch-opt{font-family:'Fira Code',monospace;font-size:0.78rem;padding:8px 13px;cursor:pointer;
+  border:1px solid var(--border-color);background:var(--terminal-header);color:var(--text-color);
+  border-radius:6px;transition:border-color .15s,color .15s,background .15s}
+.ch-opt:hover{border-color:var(--primary-color);color:var(--primary-color)}
+.ch-opt[aria-pressed="true"]{background:var(--primary-color);border-color:var(--primary-color);color:#fff;font-weight:600}
+.ch-results{margin-top:16px}
+.pk-why{font-size:0.92rem;color:var(--text-color);margin:0 0 12px;max-width:70ch}
+.pk-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.pick-card{display:block;border:1px solid var(--border-color);border-left:3px solid var(--primary-color);
+  background:var(--bg-color);border-radius:0 6px 6px 0;padding:14px 16px;text-decoration:none;transition:.15s}
+.pick-card:hover{border-left-color:var(--green-color);transform:translateX(2px)}
+.pk-n{display:block;font-weight:700;font-size:1.15rem;color:var(--primary-color)}
+.pk-f{display:block;font-size:0.8rem;color:var(--muted-color);margin-top:2px}
+.pk-p{display:block;font-family:'Fira Code',monospace;font-size:0.8rem;color:var(--text-color);margin-top:8px}
+.pk-p s{color:var(--muted-color)}
+.pk-p strong{color:var(--green-color)}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;margin-bottom:16px}
+.calc-i{display:flex;align-items:center;gap:8px;font-size:0.85rem;padding:7px 10px;cursor:pointer;
+  border:1px solid transparent;border-radius:6px;transition:.12s}
+.calc-i:hover{background:var(--terminal-header);border-color:var(--border-color)}
+.calc-i input{accent-color:var(--primary-color);cursor:pointer;flex:0 0 auto}
+.calc-i span{flex:1;font-weight:600}
+.calc-i em{font-family:'Fira Code',monospace;font-style:normal;font-size:0.76rem;color:var(--muted-color)}
+.calc-out{border-top:1px solid var(--border-color);padding-top:14px}
+.co-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;font-size:0.9rem;color:var(--muted-color)}
+.co-row b{font-family:'Fira Code',monospace;font-size:1.05rem;color:var(--text-color)}
+.co-row.hi b{color:var(--primary-color);font-size:1.3rem}
+.co-row.save b{color:var(--green-color)}
+.co-bundle{margin:12px 0 0;padding:12px 14px;border-radius:6px;font-size:0.88rem;
+  background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--green-color);color:var(--text-color)}
+.co-bundle a{color:var(--primary-color);font-weight:600}
+@media (max-width:600px){.calc-grid{grid-template-columns:1fr 1fr}.ch-opt{font-size:0.72rem;padding:7px 10px}}
+@media (prefers-reduced-motion:reduce){.pick-card,.ch-opt,.calc-i{transition:none}.pick-card:hover{transform:none}}

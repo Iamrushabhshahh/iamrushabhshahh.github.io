@@ -2112,6 +2112,94 @@ const swapRegion = (html, marker, inner) => {
 
 const copyBtn = (code) => `<button type="button" class="chip copy-code" data-code="${code}" aria-label="Copy coupon code ${code}">Copy</button>`;
 
+/* ---------- cert chooser + savings calculator ----------
+   The hub now lists 24 certifications in a 25-row table. That is thorough and it
+   is also the conversion problem: someone who does not already know which exam
+   they want reads the whole thing and leaves. This renders two things from
+   CERT_PAGES, so there is no second copy of any price:
+
+   1. A chooser. Pick a goal, get one or two certifications and a direct link.
+      It answers the question the table cannot: "which of these is mine?"
+   2. A calculator. Tick the exams you plan to take, see list total against the
+      code total, and, when the selection is covered by a bundle, what the bundle
+      would cost instead. The bundle upsell is honest arithmetic rather than a
+      nudge: on five exams it genuinely is cheaper.
+
+   Everything is data attributes plus a small script. No prices are written here;
+   they come from CERT_PAGES, which the daily job verifies against the live
+   Linux Foundation pages. */
+
+const GOALS = [
+  { id: 'start', label: 'I am new to all of this', certs: ['kcna', 'lfca'],
+    why: 'Vocabulary first. KCNA is the cloud native entry point; LFCA if you are not yet comfortable in a shell.' },
+  { id: 'run', label: 'I run clusters, or want to', certs: ['cka'],
+    why: 'The CKA is the one hiring managers check, and it is performance-based, so passing it is evidence rather than recall.' },
+  { id: 'ship', label: 'I deploy apps to someone else\'s cluster', certs: ['ckad'],
+    why: 'CKAD is scoped to the application layer. Narrower than the CKA rather than easier.' },
+  { id: 'secure', label: 'I work on security', certs: ['cks', 'kcsa'],
+    why: 'CKS carries the strongest signal and needs an active CKA to sit. KCSA is the multiple-choice stepping stone.' },
+  { id: 'observe', label: 'I own dashboards and alerts', certs: ['pca', 'otca'],
+    why: 'PCA if you own alerting, OTCA if you own instrumentation. Both are multiple choice.' },
+  { id: 'platform', label: 'I build the platform other teams use', certs: ['cnpe', 'cnpa'],
+    why: 'CNPE is performance-based and senior. CNPA is the cheaper associate-level orientation.' },
+  { id: 'deliver', label: 'I own delivery and GitOps', certs: ['cgoa', 'capa'],
+    why: 'CGOA is tool-agnostic principles. CAPA is the Argo suite, and note Workflows is its largest domain.' },
+  { id: 'network', label: 'I own networking or a service mesh', certs: ['ica', 'cca'],
+    why: 'Pick the one you actually run. ICA is Istio and unusually is performance-based; CCA is Cilium and eBPF.' },
+  { id: 'linux', label: 'I want stronger Linux fundamentals', certs: ['lfcs'],
+    why: 'Performance-based, and the most transferable certification here because Linux does not churn.' },
+  { id: 'ai', label: 'I work on AI or agent infrastructure', certs: ['mcpa', 'ptca'],
+    why: 'MCPA is the first certification for the Model Context Protocol. PTCA leans to fundamentals and performance, which is closer to infrastructure than research.' },
+  { id: 'all', label: 'I want the full set', certs: ['kubestronaut', 'golden-kubestronaut'],
+    why: 'The bundles cost meaningfully less than buying the exams one at a time. Be honest about why you want it.' },
+];
+
+const chooserHtml = () => {
+  const byslug = Object.fromEntries(CERT_PAGES.map(c => [c.slug, c]));
+  const opts = GOALS.map(g => {
+    const cards = g.certs.filter(sl => byslug[sl]).map(sl => {
+      const c = byslug[sl];
+      return `<a class="pick-card" href="/linux-foundation-coupon/${c.slug}/">
+            <span class="pk-n">${escapeHtml(c.name)}</span>
+            <span class="pk-f">${escapeHtml(c.fullName)}</span>
+            <span class="pk-p"><s>$${c.priceList}</s> <strong>~$${c.priceDiscounted}</strong> with RUSHABH30</span>
+          </a>`;
+    }).join('');
+    return `<div class="pick-result" data-goal="${g.id}" hidden>
+          <p class="pk-why">${escapeHtml(g.why)}</p>
+          <div class="pk-cards">${cards}</div>
+        </div>`;
+  }).join('');
+  return `
+              <div class="chooser" id="chooser">
+                <p class="ch-lead">Twenty-four exams is a lot to read through. Say what you are trying to do and I will narrow it to one or two.</p>
+                <div class="ch-opts" role="group" aria-label="What are you trying to do?">
+                  ${GOALS.map(g => `<button type="button" class="ch-opt" data-goal="${g.id}">${escapeHtml(g.label)}</button>`).join('')}
+                </div>
+                <div class="ch-results" aria-live="polite">${opts}</div>
+              </div>`;
+};
+
+const calcHtml = () => {
+  const singles = CERT_PAGES.filter(c => !c.isBundle);
+  const bundles = CERT_PAGES.filter(c => c.isBundle);
+  return `
+              <div class="calc" id="calc">
+                <p class="ch-lead">Planning more than one? Tick them and the arithmetic updates, including whether a bundle beats buying separately.</p>
+                <div class="calc-grid">
+                  ${singles.map(c => `<label class="calc-i"><input type="checkbox" data-list="${c.priceList}" data-disc="${c.priceDiscounted}" data-slug="${c.slug}"> <span>${escapeHtml(c.name)}</span><em>$${c.priceList}</em></label>`).join('')}
+                </div>
+                <div class="calc-out" aria-live="polite">
+                  <div class="co-row"><span>Exams selected</span><b id="cQty">0</b></div>
+                  <div class="co-row"><span>List price</span><b id="cList">$0</b></div>
+                  <div class="co-row hi"><span>With RUSHABH30</span><b id="cDisc">$0</b></div>
+                  <div class="co-row save"><span>You save</span><b id="cSave">$0</b></div>
+                  <p id="cBundle" class="co-bundle" hidden></p>
+                </div>
+                <script type="application/json" id="bundleData">${JSON.stringify(bundles.map(b => ({ slug: b.slug, name: b.fullName, list: b.priceList, disc: b.priceDiscounted, covers: (b.topics || []).map(t => (t.split(':')[0] || '').trim().toLowerCase()) })))}</script>
+              </div>`;
+};
+
 /* The banner body, shared by the coupon page and every per-cert page. Empty
    string when no sale is live, which is what makes the region self-retiring. */
 const saleBannerHtml = () => {
@@ -2332,6 +2420,8 @@ if (fs.existsSync(couponPath)) {
     .replace(/last updated this page \([^)]*\)/, `last updated this page (${MONTH_YEAR})`)
     .replace(/("dateModified":\s*")[^"]*(")/, `$1${couponMod}$2`)
     .replace(/Last verified: [A-Za-z]+ \d{4}/g, `Last verified: ${MONTH_YEAR}`);
+  stamped = swapRegion(stamped, 'CERT-CHOOSER', chooserHtml());
+  stamped = swapRegion(stamped, 'CERT-CALC', calcHtml());
   stamped = swapRegion(stamped, 'SALE-BANNER', saleBannerHtml());
   stamped = swapRegion(stamped, 'SALE-INTRO', saleIntroHtml());
   stamped = swapRegion(stamped, 'SIGNUP-BOX', signupLF());
