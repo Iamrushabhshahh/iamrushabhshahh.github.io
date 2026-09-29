@@ -212,6 +212,14 @@ Blog Observability Linux DevOps
 
 Latest posts from the blog and recent community engagements.
 
+Sep 30, 2026 · 16 min read
+
+### A hostname that never existed took Redis and Postgres down with it
+
+A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the…
+
+(https://rushabhshah.dev/blog/dns-storm-eai-again/)
+
 Sep 1, 2026 · 19 min read
 
 ### India's first heritage city, Gujarat's first KCD
@@ -227,14 +235,6 @@ Aug 30, 2026 · 3 min read
 Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SD…
 
 (https://rushabhshah.dev/blog/pca-otca-review/)
-
-Aug 28, 2026 · 3 min read
-
-### CKA exam day: PSI bridge, terminal, kubectl aliases
-
-The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth mem…
-
-(https://rushabhshah.dev/blog/cka-exam-day-setup/)
 
 ### Speaking & Community
 

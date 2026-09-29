@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://rushabhshah.dev/blog/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -223,6 +223,11 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/blog/dns-storm-eai-again/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/</loc>
     <lastmod>2026-09-01</lastmod>
     <priority>0.8</priority>
@@ -291,6 +296,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/blog/tags/aws/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/blog/tags/blog/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -309,8 +320,26 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/blog/tags/dns/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/blog/tags/incident/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/blog/tags/kcd/</loc>
     <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://rushabhshah.dev/blog/tags/observability/</loc>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>

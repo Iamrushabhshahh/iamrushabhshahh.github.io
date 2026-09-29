@@ -5,8 +5,16 @@
     <link>https://rushabhshah.dev/blog/</link>
     <description>Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Sep 2026 03:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 18:35:00 GMT</lastBuildDate>
     <atom:link href="https://rushabhshah.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A hostname that never existed took Redis and Postgres down with it</title>
+      <link>https://rushabhshah.dev/blog/dns-storm-eai-again/</link>
+      <guid isPermaLink="true">https://rushabhshah.dev/blog/dns-storm-eai-again/</guid>
+      <pubDate>Tue, 29 Sep 2026 18:35:00 GMT</pubDate>
+      <description>A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.</description>
+      <category>incident</category><category>dns</category><category>aws</category><category>observability</category>
+    </item>
     <item>
       <title>India&#39;s first heritage city, Gujarat&#39;s first KCD</title>
       <link>https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/</link>

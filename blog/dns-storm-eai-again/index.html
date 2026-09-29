@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
+    <script defer src="/assets/theme.js?v=d0c0d819"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#010409">
+    <meta name="color-scheme" content="dark light">
+    <title>A hostname that never existed took Redis and Postgres down with it · Rushabh Shah</title>
+    <meta name="description" content="A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.">
+    <meta name="author" content="Rushabh Shah">
+    <link rel="canonical" href="https://rushabhshah.dev/blog/dns-storm-eai-again/">
+    <!-- Every page has a plain-markdown twin at the same URL with index.html.md
+         appended. This is the machine-readable pointer to it: llms.txt indexes the
+         site, but nothing told a crawler sitting on THIS page that a clean markdown
+         version of it exists. -->
+    <link rel="alternate" type="text/markdown" href="https://rushabhshah.dev/blog/dns-storm-eai-again.md">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://rushabhshah.dev/blog/dns-storm-eai-again/">
+    <meta property="og:title" content="A hostname that never existed took Redis and Postgres down with it · Rushabh Shah">
+    <meta property="og:description" content="A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.">
+    <meta property="og:image" content="https://rushabhshah.dev/assets/blog/dns-storm-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A hostname that never existed took Redis and Postgres down with it · Rushabh Shah">
+    <meta property="og:site_name" content="Rushabh Shah">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@iamrushabhshahh">
+    <meta name="twitter:title" content="A hostname that never existed took Redis and Postgres down with it · Rushabh Shah">
+    <meta name="twitter:description" content="A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.">
+    <meta name="twitter:image" content="https://rushabhshah.dev/assets/blog/dns-storm-og.jpg">
+    <meta property="article:published_time" content="2026-09-29T18:35:00.000Z">
+    <meta property="article:modified_time" content="2026-09-29T18:35:00.000Z">
+    <meta property="article:author" content="Rushabh Shah">
+    <meta property="article:tag" content="incident">
+    <meta property="article:tag" content="dns">
+    <meta property="article:tag" content="aws">
+    <meta property="article:tag" content="observability">
+    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
+    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css?v=9cd7acb6">
+    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <div id="reading-progress" aria-hidden="true"><div id="reading-progress-bar"></div></div>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
+            <a href="/" class="text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
+            <div class="hidden xl:flex items-center space-x-6 text-sm nav-links">
+                <a href="/#about" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
+                <a href="/#honors" class="text-gray-400 hover:text-primary-color transition-colors">./honors</a>
+                <a href="/#skills" class="text-gray-400 hover:text-primary-color transition-colors">./skills</a>
+                <a href="/#experience" class="text-gray-400 hover:text-primary-color transition-colors">./experience</a>
+                <a href="/#projects" class="text-gray-400 hover:text-primary-color transition-colors">./projects</a>
+                <a href="/blog/" class="text-primary-color transition-colors" aria-current="true">./blog</a>
+                <a href="/linux-foundation-coupon/" class="text-gray-400 hover:text-primary-color transition-colors">./deals</a>
+                <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
+            </div>
+            <div class="hidden xl:flex flex-shrink-0">
+                <div class="seg seg--compact" role="radiogroup" aria-label="Theme preference">
+                <button type="button" role="radio" data-value="light" aria-checked="false" tabindex="-1" title="Light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+                    <span class="seg-label sr-only">Light</span>
+                </button>
+                <button type="button" role="radio" data-value="system" aria-checked="true" tabindex="0" title="System">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <span class="seg-label sr-only">System</span>
+                </button>
+                <button type="button" role="radio" data-value="dark" aria-checked="false" tabindex="-1" title="Dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <span class="seg-label sr-only">Dark</span>
+                </button>
+            </div>
+            </div>
+            <button id="menu-btn" class="xl:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
+        </nav>
+        <div id="site-menu" class="hidden xl:hidden bg-terminal-header/90 font-fira">
+            <a href="/#about" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./about</a>
+            <a href="/#honors" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./honors</a>
+            <a href="/#skills" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./skills</a>
+            <a href="/#experience" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./experience</a>
+            <a href="/#projects" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./projects</a>
+            <a href="/blog/" class="block py-2 px-4 text-sm text-primary-color">./blog</a>
+            <a href="/linux-foundation-coupon/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./deals</a>
+            <a href="/#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
+            <div class="seg" role="radiogroup" aria-label="Theme preference">
+                <button type="button" role="radio" data-value="light" aria-checked="false" tabindex="-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+                    <span class="seg-label">Light</span>
+                </button>
+                <button type="button" role="radio" data-value="system" aria-checked="true" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <span class="seg-label">System</span>
+                </button>
+                <button type="button" role="radio" data-value="dark" aria-checked="false" tabindex="-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <span class="seg-label">Dark</span>
+                </button>
+            </div>
+        </div>
+        <a href="/linux-foundation-coupon/" class="block bg-primary-color/10 border-b border-border-color text-center font-fira text-xs py-2 px-4 text-gray-300 hover:text-primary-color transition-colors">
+            🎓 30% off all Linux Foundation certifications (CKA, CKAD, CKS…) with code <span class="text-primary-color font-bold">RUSHABH30</span> →
+        </a>
+    </header>
+    <main id="main" class="container mx-auto px-6 py-12">
+        <div class="post-layout">
+        <article class="post-article max-w-3xl">
+            <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
+            <header class="mb-10">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">A hostname that never existed took Redis and Postgres down with it</h1>
+                <div class="flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
+                    <time datetime="2026-09-29T18:35:00.000Z">Sep 30, 2026</time>
+                    <span aria-hidden="true">·</span>
+                    <span>16 min read</span>
+                    <span id="post-views"></span>
+                    <span aria-hidden="true">·</span> <a href="/blog/tags/incident/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">incident</a> <a href="/blog/tags/dns/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">dns</a> <a href="/blog/tags/aws/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">aws</a> <a href="/blog/tags/observability/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">observability</a>
+                </div>
+                <img src="/assets/blog/dns-storm-og.jpg" alt="" class="w-full rounded-xl border border-border-color mt-8" loading="eager" decoding="async">
+            </header>
+            
+            <div class="post-prose">
+<p>The report was &quot;Redis keeps dropping on the dev box.&quot;</p>
+<p>That sentence is a trap, and I walked into it for about twenty minutes. It points at Redis. It has a subject and a verb and a thing to go and look at, so you go and look at Redis, and Redis is fine. It answers on demand, twenty probes out of twenty, no packet loss, no memory pressure, no eviction. Then you look at the service doing the complaining and it is fine too. Then you notice the same error against Postgres, which is a completely different box, run by a completely different managed service, on a completely different port.</p>
+<p>Two unrelated dependencies failing the same way at the same time is not two problems. It is one problem, one layer down, and it is almost always the layer nobody drew on the architecture diagram.</p>
+<p>In this case the layer was DNS, and the thing breaking it was a hostname that has never existed. Not a hostname that stopped existing, or that pointed at a dead box. One that was never created, that no service needed, that resolved to nothing from the day the code shipped, and that two dozen processes had been asking for, several times a second each, for weeks.</p>
+<p>The two services that lost Redis and Postgres do not use Elasticsearch. They were never going to use Elasticsearch. They were collateral.</p>
+<p>This is the write-up. Names and hostnames are generalised, the numbers are exactly as measured.</p>
+<h2 id="the-shape-of-it-before-the-detail">The shape of it, before the detail</h2>
+<p>If you close this tab now, take these:</p>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Services asking for a hostname that does not exist</td>
+<td>24</td>
+</tr>
+<tr>
+<td>DNS lookups per second, sustained</td>
+<td>46</td>
+</tr>
+<tr>
+<td>Packets per second leaving the box for those lookups</td>
+<td>282</td>
+</tr>
+<tr>
+<td>Share of all DNS leaving the box that was for two dead names</td>
+<td>99.4%</td>
+</tr>
+<tr>
+<td>AWS per-ENI DNS limit, above which packets are silently dropped</td>
+<td>1,024 pps</td>
+</tr>
+<tr>
+<td>Share of that budget burnt on nothing</td>
+<td>~28%</td>
+</tr>
+<tr>
+<td><code>EAI_AGAIN</code> failures in the worst three-hour window</td>
+<td>~45,000</td>
+</tr>
+<tr>
+<td>Services affected that do not use the failing dependency</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Lines of code that were wrong</td>
+<td>roughly 1</td>
+</tr>
+</tbody></table>
+<p>The last row is the one worth sitting with. Nothing here is exotic. There is no kernel bug, no AWS incident, no clever exploit. A string was built from an environment variable, the resulting name was never registered, and the client retried forever instead of giving up.</p>
+<h2 id="where-a-dns-lookup-actually-goes">Where a DNS lookup actually goes</h2>
+<p>Most of us carry a mental model of DNS that stops at &quot;the app asks for a name and gets an address.&quot; That model has no failure modes in it, which is why it is useless during an incident. Here is the version with the failure mode in it.</p>
+<figure>
+  <a href="/assets/blog/dns-storm-resolution-path.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/dns-storm-resolution-path.svg" alt="Services A, B, C plus 21 more processes on the same host all feed into glibc getaddrinfo reading /etc/resolv.conf, which sends udp/53 out through one ENI to the VPC resolver. A callout marks the ENI: 1,024 packets per second, per ENI, over that they are dropped in silence with no error, no log line and no CloudWatch metric." width="900" height="500" loading="lazy" decoding="async"></a>
+  <figcaption>Every process on the host spends from one budget. DNS is the only dependency none of them declare.</figcaption>
+</figure><p>Three things in that picture matter and two of them are usually invisible.</p>
+<p><strong>The resolver is shared per host, not per process.</strong> Your service does not have its own DNS. It calls <code>getaddrinfo</code>, glibc reads <code>/etc/resolv.conf</code>, and the query goes out of the instance&#39;s network interface to the VPC resolver at the <code>.2</code> address of your VPC&#39;s CIDR. Every process on the box uses the same path.</p>
+<p><strong>That path has a hard limit.</strong> AWS enforces <strong>1,024 packets per second per network interface</strong> to the Route 53 Resolver. Not per process, not per account. Per ENI.</p>
+<p><strong>Above the limit, packets are dropped in silence.</strong> No error is returned. No log line is written. There is no CloudWatch metric for it, because the drop happens in the network fabric and not in anything you own. From inside the box, an exceeded DNS quota and a slow upstream look identical: your query goes out and nothing comes back.</p>
+<p>That last property is why this class of failure survives so long. The system has no way to tell you that it is throttling you, so the only symptom is other things failing for reasons that make no sense.</p>
+<h2 id="the-name-that-was-never-created">The name that was never created</h2>
+<p>The application logger built its endpoint out of the environment:</p>
+<pre><code class="language-js">// the shape of it, reduced to the part that mattered
+const host = `logs-${process.env.NODE_ENV}.example.internal`;
+</code></pre>
+<p><code>NODE_ENV</code> was <code>development</code> on 22 services and <code>dev</code> on two more, so this produced two hostnames. Neither had ever been registered.</p>
+<p>The equivalent name for the UAT environment resolved fine, which is the detail that tells you what actually happened: nobody deleted the record, and nothing regressed. When the environment was set up, a record was created for one environment and simply never created for the other. The code shipped, the logger failed, the failure was caught and logged, and everybody moved on for months.</p>
+<p>Confirming it takes one command, and the answer is more specific than &quot;it does not resolve&quot;:</p>
+<pre><code class="language-bash">dig logs-development.example.internal +noall +answer +authority
+
+# example.internal. 60 IN SOA ns-513.awsdns-00.net. ...
+</code></pre>
+<p>An answer section with nothing in it, and an authority section with the zone&#39;s SOA, is <strong>NODATA</strong>: the zone exists, the name does not have the record type you asked for. That is different from NXDOMAIN, where the name does not exist at all. Node surfaces both as <code>ENOTFOUND</code>, which is where the distinction usually gets lost.</p>
+<p>The name is also worth checking on disk before you believe any of this, because a hostname built at runtime will not appear in the config you would normally grep:</p>
+<pre><code class="language-bash"># nothing. the name never exists as a literal anywhere
+grep -r &quot;logs-&quot; /srv/services/*/.env
+
+# only the credentials for it do, which is its own smell:
+# ELASTIC_LOG_USERNAME=...
+# ELASTIC_LOG_PASSWORD=...
+</code></pre>
+<p>Credentials for an endpoint whose address is assembled from an environment variable at startup. That combination is worth a second look in any codebase, because it means no static analysis, no config review, and no infra plan will ever show you the thing being connected to.</p>
+<h2 id="every-lookup-left-the-box-twice">Every lookup left the box twice</h2>
+<p>Once I started capturing the actual traffic, the counts were strange in a specific way: every hostname appeared exactly twice, with identical query counts.</p>
+<figure>
+  <a href="/assets/blog/dns-storm-search-domain.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/dns-storm-search-domain.svg" alt="One app-level lookup fans into two queries. The first, logs.example.internal.ap-south-2.compute.internal, returns NXDOMAIN because the suffix does not exist. The second, logs.example.internal, returns NODATA because the name has no A record. A tcpdump capture shows 476 of each. The fix shown is options ndots:1." width="860" height="476" loading="lazy" decoding="async"></a>
+  <figcaption>The counts pair up exactly. That is the search domain, not the application.</figcaption>
+</figure><p><code>/etc/resolv.conf</code> on an EC2 instance carries a search domain:</p>
+<pre><code>search ap-south-2.compute.internal
+options timeout:2 attempts:5
+nameserver 172.31.0.2
+</code></pre>
+<p>glibc&#39;s <code>ndots</code> default is 1, which sounds like it should protect you, and for a dotted name it does exactly the wrong thing anyway: with fewer than <code>ndots</code> dots the search list is tried first, and even above the threshold glibc will fall back through the search list after the absolute query fails. Here the absolute name returned NODATA rather than a usable answer, so the resolver kept doing both.</p>
+<p>The result: <strong>one application-level lookup cost two upstream queries</strong>. Every retry loop in the system was quietly running at double the rate its author intended, which is worth knowing even when nothing is broken. It is also why <code>dig</code> &quot;looks fine&quot; while <code>tcpdump</code> looks insane. <code>dig</code> sends the absolute name once. Your application does not.</p>
+<h2 id="282-packets-a-second-forever">282 packets a second, forever</h2>
+<p>Thirty seconds of capture, filtered to queries leaving for the VPC resolver:</p>
+<pre><code class="language-bash">sudo timeout 30 tcpdump -i ens5 -nn \
+  &#39;udp port 53 and dst host 172.31.0.2&#39; &gt; /tmp/dns_up.txt
+
+grep -oE &#39;A\? [a-zA-Z0-9._-]+&#39; /tmp/dns_up.txt \
+  | sort | uniq -c | sort -rn
+</code></pre>
+<pre><code>total upstream queries in 30s: 1380
+
+476  A? logs-development.example.internal.ap-south-2.compute.internal.
+476  A? logs-development.example.internal.
+208  A? logs-dev.example.internal.ap-south-2.compute.internal.
+208  A? logs-dev.example.internal.
+  3  A? ssmmessages.ap-south-2.amazonaws.com.
+  3  A? secretsmanager.ap-south-2.amazonaws.com.
+  2  A? ip-172-31-43-112.ap-south-2.compute.internal.
+  1  A? android.clients.google.com.
+</code></pre>
+<p><strong>99.4% of all DNS leaving this machine was for two hostnames that do not exist.</strong> The remaining 0.6% is everything the box actually does.</p>
+<p>Packet rate, measured rather than inferred:</p>
+<pre><code class="language-bash">sudo timeout 10 tcpdump -i ens5 -nn &#39;udp port 53&#39; | wc -l
+# 2819   -&gt;  282 packets/sec
+</code></pre>
+<p>282 against a ceiling of 1,024. About 28% of the interface&#39;s entire DNS budget, permanently committed to failure, with no headroom for anything bursty. A deploy that restarts every service at once, a batch job that fans out, a health check that starts resolving a name it used to cache: any of those now lands on a box that has already spent a quarter of its allowance.</p>
+<h2 id="why-negative-caching-did-not-save-us">Why negative caching did not save us</h2>
+<p>The obvious objection is that DNS caches negative answers, so a name that does not resolve should be asked for once and then remembered.</p>
+<p>It does cache them. The zone&#39;s SOA record sets the negative TTL as <code>min(SOA TTL, MINIMUM field)</code>, which here worked out to 60 seconds. In theory each of these names should be queried once a minute and nothing else.</p>
+<p>In practice the traffic was sustained at 46 queries a second, and the reasons are worth naming because they generalise:</p>
+<ul>
+<li><strong>There was no cache on the box.</strong> glibc does not cache DNS. Unless something is running <code>nscd</code>, <code>systemd-resolved</code> with caching on, or a local <code>dnsmasq</code>, every single <code>getaddrinfo</code> call is a fresh query on the wire. Most Linux servers I meet have nothing in that slot, and nobody notices until it matters.</li>
+<li><strong>The retry loops were faster than the TTL.</strong> A client reconnecting every few seconds does not care that the last answer was 3 seconds old, because nothing is holding onto the last answer.</li>
+<li><strong>Two names, two failure types.</strong> The search-suffixed form returned NXDOMAIN and the absolute form returned NODATA. Both are negatively cacheable in principle, and neither was being cached by anything in this path.</li>
+</ul>
+<p>Negative caching is a property of a resolver. If there is no resolver on the host, there is no negative caching on the host, no matter what the TTL says.</p>
+<h2 id="the-part-that-actually-hurt">The part that actually hurt</h2>
+<p>Everything above is waste. Annoying, but survivable. Here is the part that produced an actual outage.</p>
+<figure>
+  <a href="/assets/blog/dns-storm-blast-radius.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/dns-storm-blast-radius.svg" alt="On the left, 24 services retrying a name that has never existed at 46 lookups per second and 282 packets per second, producing ENOTFOUND. In the middle, a gauge showing 28% of the shared resolver budget burnt with no headroom, and past 1,024 packets per second the rest is dropped. On the right, two other services that do not use Elasticsearch at all lose Redis and lose Postgres, producing EAI_AGAIN. A footer reads: about 45,000 failed lookups in a single three-hour window." width="860" height="522" loading="lazy" decoding="async"></a>
+  <figcaption>The services that failed and the service that caused it have no dependency between them at all.</figcaption>
+</figure><p>Every DNS failure recorded in the retained logs, grouped:</p>
+<pre><code class="language-bash">grep -rh &quot;getaddrinfo&quot; /home/*/.pm2/logs/*.log \
+  | sed &#39;s/^.*getaddrinfo/getaddrinfo/&#39; \
+  | sort | uniq -c | sort -rn
+</code></pre>
+<pre><code>49202  getaddrinfo EAI_AGAIN  redis.internal
+33030  getaddrinfo ENOTFOUND  logs-development.example.internal
+ 3624  getaddrinfo EAI_AGAIN  db-primary.internal
+   21  getaddrinfo EAI_AGAIN  slack.com
+</code></pre>
+<p>Read that ordering carefully, because it is the whole lesson. The thing that is broken is <strong>second</strong> on the list. The top line, by a wide margin, is a completely healthy dependency failing for a reason that has nothing to do with it. Even Slack shows up, which is how you know it is not about any one service.</p>
+<p>Bucketed by hour, the worst stretch:</p>
+<table>
+<thead>
+<tr>
+<th>Hour</th>
+<th><code>EAI_AGAIN</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>26 Aug 14:00</td>
+<td>4</td>
+</tr>
+<tr>
+<td>26 Aug 15:00</td>
+<td>268</td>
+</tr>
+<tr>
+<td>26 Aug 16:00</td>
+<td>75</td>
+</tr>
+<tr>
+<td><strong>26 Aug 22:00</strong></td>
+<td><strong>11,287</strong></td>
+</tr>
+<tr>
+<td><strong>26 Aug 23:00</strong></td>
+<td><strong>14,362</strong></td>
+</tr>
+<tr>
+<td><strong>27 Aug 00:00</strong></td>
+<td><strong>14,364</strong></td>
+</tr>
+<tr>
+<td>27 Aug 01:00</td>
+<td>5,711</td>
+</tr>
+<tr>
+<td>27 Aug 05:00</td>
+<td>3,063</td>
+</tr>
+</tbody></table>
+<p>About 45,000 failed lookups across three hours. The two services that absorbed nearly all of it were a job runner and a rendering worker. Neither of them has an Elasticsearch client. Neither of them was deployed that week. Neither of them changed at all. They lost Redis and Postgres because other processes on the same host had spent the interface&#39;s DNS budget on a name nobody needed.</p>
+<p>If you have ever been handed an incident where the service that broke has no recent commits, no config change and no dependency on anything that did change, this is the shape of thing to go looking for.</p>
+<h2 id="enotfound-eai-again-econnrefused">ENOTFOUND, EAI_AGAIN, ECONNREFUSED</h2>
+<p>The single most useful thing I took out of this is that these three are not variations on &quot;the network is bad.&quot; They are three different problems with three different owners, and the log line tells you which one you have if you read the code instead of the hostname.</p>
+<figure>
+  <a href="/assets/blog/dns-storm-error-codes.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/dns-storm-error-codes.svg" alt="Three panels. ENOTFOUND: DNS answered, and the answer was no; fix the record, or the config that builds the name. EAI_AGAIN: nothing answered in time; look at resolver load, not at the service that reported it. ECONNREFUSED: the name resolved, nothing is listening; DNS is fine, the process is down. Footer: one log file, three different problems, three different owners." width="860" height="444" loading="lazy" decoding="async"></a>
+  <figcaption>Read the code before you read the hostname. It tells you which layer to go to.</figcaption>
+</figure><p><strong><code>ENOTFOUND</code></strong> means DNS answered and the answer was no. The resolver worked. Somebody either did not create a record, or the code built the wrong name. This is a config bug, and it is honest: it fails immediately and says exactly what it was looking for.</p>
+<p><strong><code>EAI_AGAIN</code></strong> means nothing came back in time. It is a temporary failure. Crucially, <strong>it says nothing at all about the hostname in the message.</strong> The name in an <code>EAI_AGAIN</code> line is a victim, not a suspect. Chasing it sends you to Redis, or RDS, or Slack, which is exactly what happened here and exactly what it is designed to make you do. When you see <code>EAI_AGAIN</code> against several unrelated names at once, stop looking at the names and go and measure your resolver.</p>
+<p><strong><code>ECONNREFUSED</code></strong> means the name resolved fine and there is nothing listening on the other end. DNS is not your problem. A process is down, or a security group is wrong.</p>
+<p>One log file, three teams.</p>
+<h2 id="why-nginx-showed-nothing">Why nginx showed nothing</h2>
+<p>&quot;Did you check nginx?&quot; is the first question anybody asks, and it is worth answering properly because the answer is structural rather than incidental.</p>
+<p>nginx on this box is a reverse proxy for <strong>inbound</strong> HTTP, forwarding to <code>127.0.0.1:&lt;port&gt;</code>. The failing lookups are <strong>outbound</strong> DNS from application processes to Elasticsearch, Redis and Postgres. That traffic never touches nginx at any point, so nginx cannot see it, cannot log it, and would not have alerted on it. Confirmed rather than assumed:</p>
+<pre><code class="language-bash">grep -icE &quot;could not be resolved|Temporary failure|no live upstreams&quot; \
+  /var/log/nginx/error.log
+# 0
+</code></pre>
+<p>nginx only performs its own DNS resolution when a <code>proxy_pass</code> target is built from a variable and a <code>resolver</code> directive is set. Static upstreams are resolved once at config load.</p>
+<p>The errors that <em>were</em> in the nginx log turned out to be a completely different bug: 4,733 <code>connect() failed (111: Connection refused)</code>, 99.9% of them against a single upstream port, which was a service stuck in a crash loop on an unrelated IAM permission. Real, worth fixing, and nothing to do with any of this. Worth stating out loud so the two never get merged in someone&#39;s head: <strong>&quot;connection refused&quot; means the app is not listening. <code>EAI_AGAIN</code> means DNS did not answer.</strong></p>
+<p>The other thing the nginx logs were good for: 93% of all requests to that box were health checks. Which is its own post.</p>
+<h2 id="check-your-own-box-in-five-minutes">Check your own box in five minutes</h2>
+<p>None of this needs a maintenance window and all of it is read-only.</p>
+<p><strong>1. What is your box actually asking for?</strong></p>
+<pre><code class="language-bash">sudo timeout 30 tcpdump -i &quot;$(ip route get 1.1.1.1 \
+  | grep -oP &#39;dev \K\S+&#39;)&quot; -nn &#39;udp port 53&#39; &gt; /tmp/dns.txt
+
+grep -oE &#39;A+\? [a-zA-Z0-9._-]+&#39; /tmp/dns.txt \
+  | sort | uniq -c | sort -rn | head -20
+</code></pre>
+<p>If anything in the top five is a name you do not recognise, or the same name appears twice with matching counts, you have found something.</p>
+<p><strong>2. How close to the ceiling are you?</strong></p>
+<pre><code class="language-bash">sudo timeout 10 tcpdump -i ens5 -nn &#39;udp port 53&#39; | wc -l
+# divide by 10. The limit is 1,024 packets/sec per ENI.
+</code></pre>
+<p>Anything sustained above roughly 300 pps on an idle box deserves an explanation.</p>
+<p><strong>3. Is anything already failing this way?</strong></p>
+<pre><code class="language-bash">grep -rhoE &quot;getaddrinfo (EAI_AGAIN|ENOTFOUND) [a-zA-Z0-9._-]+&quot; \
+  /var/log /home/*/.pm2/logs 2&gt;/dev/null \
+  | sort | uniq -c | sort -rn | head
+</code></pre>
+<p><code>EAI_AGAIN</code> against two or more unrelated hostnames is the signature. One name is a coincidence. Three is a resolver.</p>
+<p><strong>4. Do you have a cache at all?</strong></p>
+<pre><code class="language-bash">grep -E &#39;^(nameserver|search|options)&#39; /etc/resolv.conf
+systemctl is-active nscd systemd-resolved 2&gt;/dev/null
+</code></pre>
+<p>If both come back inactive and <code>nameserver</code> points straight at the VPC resolver, every lookup on that host is going over the wire.</p>
+<h2 id="five-places-this-could-have-been-stopped">Five places this could have been stopped</h2>
+<figure>
+  <a href="/assets/blog/dns-storm-fix-order.svg" target="_blank" rel="noopener" aria-label="Open this diagram full size"><img src="/assets/blog/dns-storm-fix-order.svg" alt="A five-rung ladder. One: create the missing record, 99.4% of the traffic disappears. Two: make the logger fail closed after N failures, the actual defect. Three: standardise NODE_ENV, two spellings made two dead hostnames. Four: run a caching resolver on the host, it contains the next mistake. Five: alert on DNS queries per host, nobody has this on a dashboard. Footer: only number 2 is a bug, the other four are the reasons it stayed invisible." width="860" height="470" loading="lazy" decoding="async"></a>
+  <figcaption>Only number 2 is a bug. The other four are the reasons it stayed invisible for months.</figcaption>
+</figure><p><strong>1. Create the record.</strong> One DNS entry, and 99.4% of the traffic on that interface disappears. If the environment genuinely has no Elasticsearch, this is the wrong fix and number 2 is the right one.</p>
+<p><strong>2. Make the client fail closed.</strong> This is the actual defect, and it would have been a defect even with the record in place. A logging transport that cannot resolve its endpoint should give up after a handful of consecutive failures and stay given up, with one loud line about why. Instead it retried forever, silently, because &quot;logging must never crash the app&quot; got implemented as &quot;logging must never stop trying.&quot; Those are not the same requirement.</p>
+<pre><code class="language-js">// the shape of the fix, not the diff
+let strikes = 0;
+transport.on(&#39;error&#39;, (err) =&gt; {
+  if (err.code !== &#39;ENOTFOUND&#39; &amp;&amp; err.code !== &#39;EAI_AGAIN&#39;) return;
+  if (++strikes &lt; 5) return;
+  transport.disable();            // stop resolving, stop reconnecting
+  console.error(&#39;[logger] disabled after 5 resolution failures:&#39;, err.hostname);
+});
+</code></pre>
+<p><strong>3. Standardise the environment variable.</strong> <code>development</code> on 22 services and <code>dev</code> on two produced two dead hostnames instead of one, and doubled the traffic. Anything that builds a hostname out of an environment variable should validate that variable against a fixed list at boot, not string-concatenate whatever it finds.</p>
+<p><strong>4. Run a caching resolver on the host.</strong> <code>dnsmasq</code> or <code>unbound</code> in front of the VPC resolver, with negative caching on, turns &quot;46 queries a second forever&quot; into &quot;one query a minute.&quot; It does not fix the bug. It contains the next one, which is the point.</p>
+<p><strong>5. Alert on DNS queries per host.</strong> This is the one I want to argue for hardest, because it is the reason the other four were never needed until they were. Nobody I know graphs DNS query rate per instance. It is not in the default node exporter set, there is no CloudWatch metric, and the failure mode is silent by design. A single alert at, say, 400 packets per second per ENI would have caught this on day one, months before it produced an outage, and the same alert catches every future version of this that anyone will ever write.</p>
+<h2 id="what-i-changed-my-mind-about">What I changed my mind about</h2>
+<p>I went into this thinking the interesting part would be the missing record. It is not. The missing record is a ticket.</p>
+<p>The interesting part is that <strong>the failure had no dependency edge to travel along</strong>. Everything we build to reason about blast radius, service maps, dependency graphs, tracing, ownership tags, assumes that if A breaks B then A and B are connected. Here they were not connected by anything except being scheduled onto the same virtual machine, and the resource they were fighting over was one nobody had written down as a resource at all.</p>
+<p>Shared, undeclared, unmetered, and silently rate limited. DNS is not the only thing on a host that fits that description, and I have started looking for the others: file descriptors, conntrack table entries, the local port range, inode pressure on the log volume. None of those show up on a service map either, and none of them arrive for free with a tracing library, which is the gap between <a href="/blog/pca-otca-review/">instrumentation and observability</a> that gets glossed over.</p>
+<p>If you want the general version of this argument rather than the DNS-shaped one, the <a href="/blog/kubernetes-v1-37-garhwal/">Kubernetes v1.37 release notes</a> cover several changes aimed at exactly this class of shared-host resource.</p>
+<p>The other thing I would say, more bluntly than I would have a month ago: <strong>an error that is caught and logged is not handled.</strong> Every one of those 33,030 <code>ENOTFOUND</code> lines was in a <code>catch</code> block that somebody wrote on purpose to make sure logging could never take the app down. It worked. The app never went down because of logging. It went down because of DNS, which is where the failure went once the catch block promised to absorb it forever.</p>
+<h2 id="try-it-this-week">Try it this week</h2>
+<p>Three things, in ascending order of effort.</p>
+<p><strong>Run the tcpdump one-liner</strong> from section 3 against one busy box. It takes thirty seconds and you will either learn that your DNS is boring, which is worth knowing, or find something.</p>
+<p><strong>Grep your logs for <code>EAI_AGAIN</code></strong> across every service you run and count distinct hostnames. If the answer is more than one, you have a resolver problem wearing a service problem&#39;s clothes.</p>
+<p><strong>Put a DNS query rate panel on a dashboard.</strong> Even without an alert, even just a graph. It is the cheapest possible insurance against a class of incident that is otherwise invisible until it takes something unrelated down at midnight. If writing that query is the part you are unsure about, <a href="/blog/pca-otca-review/">PromQL is most of what the Prometheus associate exam tests</a>, and this is exactly the kind of panel it makes you practise.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-limits">DNS quotas for Amazon EC2</a>, where the 1,024 packets per second per network interface limit is documented</li>
+<li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html">Amazon Route 53 Resolver</a>, for what the <code>.2</code> address actually is</li>
+<li><a href="https://man7.org/linux/man-pages/man5/resolv.conf.5.html"><code>resolv.conf(5)</code></a>, for <code>search</code>, <code>ndots</code>, <code>timeout</code> and <code>attempts</code></li>
+<li><a href="https://man7.org/linux/man-pages/man3/getaddrinfo.3.html"><code>getaddrinfo(3)</code></a>, for the full list of <code>EAI_*</code> return codes</li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc2308">RFC 2308</a>, which defines negative caching and where the negative TTL comes from</li>
+<li><a href="https://nodejs.org/api/errors.html#common-system-errors">Node.js DNS error codes</a>, if you want the mapping from the C codes to what your application sees</li>
+</ul>
+<p><em>The diagrams in this post are hand-drawn and free to reuse with attribution.</em></p>
+<p>$ dig +short your-own-box</p>
+<p>Hopefully, you enjoyed the article! See you in the next one. Until then, happy podding.</p>
+
+            </div>
+            <footer class="mt-12 pt-6 border-t border-border-color">
+                <div class="flex flex-wrap items-center gap-3 font-fira text-sm">
+                    <span class="text-gray-400">Share:</span>
+                    <a href="https://twitter.com/intent/tweet?text=A%20hostname%20that%20never%20existed%20took%20Redis%20and%20Postgres%20down%20with%20it&url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fdns-storm-eai-again%2F" target="_blank" rel="noopener noreferrer" class="chip">X / Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Fblog%2Fdns-storm-eai-again%2F" target="_blank" rel="noopener noreferrer" class="chip">LinkedIn</a>
+                    <button type="button" id="copy-link" class="chip" data-url="https://rushabhshah.dev/blog/dns-storm-eai-again/">Copy link</button>
+                    <button type="button" id="native-share" class="chip hidden" data-title="A hostname that never existed took Redis and Postgres down with it" data-url="https://rushabhshah.dev/blog/dns-storm-eai-again/">Share…</button>
+                    <a href="/blog/rss.xml" class="chip">RSS</a>
+                </div>
+                <p class="font-fira text-sm text-gray-400 mt-5">Thanks for reading. <a href="/#contact" class="text-primary-color hover:underline">Say hi</a> if it was useful.</p>
+                
+            </footer>
+        </article>
+        
+        <aside class="post-toc" aria-label="Table of contents">
+            <div class="post-toc-sticky">
+                <p class="font-fira text-xs uppercase tracking-wider text-gray-500 mb-3"># on this page</p>
+                <nav class="post-toc-nav">
+                    <a href="#the-shape-of-it-before-the-detail" data-toc-link="the-shape-of-it-before-the-detail" class="post-toc-link">The shape of it, before the detail</a>
+                    <a href="#where-a-dns-lookup-actually-goes" data-toc-link="where-a-dns-lookup-actually-goes" class="post-toc-link">Where a DNS lookup actually goes</a>
+                    <a href="#the-name-that-was-never-created" data-toc-link="the-name-that-was-never-created" class="post-toc-link">The name that was never created</a>
+                    <a href="#every-lookup-left-the-box-twice" data-toc-link="every-lookup-left-the-box-twice" class="post-toc-link">Every lookup left the box twice</a>
+                    <a href="#282-packets-a-second-forever" data-toc-link="282-packets-a-second-forever" class="post-toc-link">282 packets a second, forever</a>
+                    <a href="#why-negative-caching-did-not-save-us" data-toc-link="why-negative-caching-did-not-save-us" class="post-toc-link">Why negative caching did not save us</a>
+                    <a href="#the-part-that-actually-hurt" data-toc-link="the-part-that-actually-hurt" class="post-toc-link">The part that actually hurt</a>
+                    <a href="#enotfound-eai-again-econnrefused" data-toc-link="enotfound-eai-again-econnrefused" class="post-toc-link">ENOTFOUND, EAI_AGAIN, ECONNREFUSED</a>
+                    <a href="#why-nginx-showed-nothing" data-toc-link="why-nginx-showed-nothing" class="post-toc-link">Why nginx showed nothing</a>
+                    <a href="#check-your-own-box-in-five-minutes" data-toc-link="check-your-own-box-in-five-minutes" class="post-toc-link">Check your own box in five minutes</a>
+                    <a href="#five-places-this-could-have-been-stopped" data-toc-link="five-places-this-could-have-been-stopped" class="post-toc-link">Five places this could have been stopped</a>
+                    <a href="#what-i-changed-my-mind-about" data-toc-link="what-i-changed-my-mind-about" class="post-toc-link">What I changed my mind about</a>
+                    <a href="#try-it-this-week" data-toc-link="try-it-this-week" class="post-toc-link">Try it this week</a>
+                    <a href="#references" data-toc-link="references" class="post-toc-link">References</a>
+                </nav>
+            </div>
+        </aside>
+        </div>
+
+        <section class="post-readnext" aria-labelledby="read-next-heading">
+            <h2 id="read-next-heading" class="font-fira text-sm uppercase tracking-wider text-gray-500 mb-5"># read next</h2>
+            <nav class="post-prevnext" aria-label="More posts">
+                <a href="/blog/kcd-gujarat-2026-ahmedabad-guide/" class="block prevnext-link prevnext-older">
+                        <span class="prevnext-label">← Older</span>
+                        <span class="prevnext-title">India&#39;s first heritage city, Gujarat&#39;s first KCD</span>
+                    </a>
+                
+            </nav>
+        </section>
+    </main>
+
+    <footer class="border-t border-border-color mt-10">
+        <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-fira text-gray-500">
+            <p>&copy; 2026 Rushabh Shah · Designed &amp; built with care.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://github.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">GitHub</a>
+                <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">LinkedIn</a>
+                <a href="https://twitter.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">Twitter</a>
+                <a href="/blog/rss.xml" class="hover:text-primary-color">RSS</a>
+                <a href="/privacy/" class="hover:text-primary-color">Privacy</a>
+                <a href="/linux-foundation-coupon/" class="hover:text-primary-color">30% off Linux Foundation ↗</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const b = document.getElementById('menu-btn');
+            const m = document.getElementById('site-menu');
+            if (b && m) {
+                b.addEventListener('click', () => {
+                    const open = m.classList.contains('hidden');
+                    m.classList.toggle('hidden', !open);
+                    b.setAttribute('aria-expanded', String(open));
+                });
+            }
+        });
+    </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"A hostname that never existed took Redis and Postgres down with it","description":"A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.","datePublished":"2026-09-29T18:35:00.000Z","dateModified":"2026-09-29T18:35:00.000Z","url":"https://rushabhshah.dev/blog/dns-storm-eai-again/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"incident, dns, aws, observability","image":"https://rushabhshah.dev/assets/blog/dns-storm-og.jpg"}</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const v = document.getElementById('post-views');
+        if (v) fetch('https://rushabhshah.goatcounter.com/counter/' + location.pathname + '.json')
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(d => {
+                const n = (d.count || '').toString().replace(/\s/g, ',');
+                if (n) v.textContent = '· ' + n + ' views';
+            })
+            .catch(() => {});
+        const c = document.getElementById('copy-link');
+        if (c) c.addEventListener('click', () => {
+            navigator.clipboard.writeText(c.dataset.url).then(() => {
+                c.classList.add('copied');
+                const t = c.textContent;
+                c.textContent = 'Copied!';
+                setTimeout(() => { c.textContent = t; c.classList.remove('copied'); }, 2000);
+            }).catch(() => {});
+        });
+        const progressBar = document.getElementById('reading-progress-bar');
+        if (progressBar) {
+            const article = document.querySelector('.post-article');
+            let ticking = false;
+            const update = () => {
+                ticking = false;
+                const total = article.offsetHeight - window.innerHeight;
+                const pct = total > 0 ? Math.min(1, Math.max(0, (window.scrollY - article.offsetTop + 200) / total)) : 0;
+                progressBar.style.transform = 'scaleX(' + pct + ')';
+            };
+            document.addEventListener('scroll', () => {
+                if (!ticking) { ticking = true; requestAnimationFrame(update); }
+            }, { passive: true });
+            update();
+        }
+        const s = document.getElementById('native-share');
+        if (s && navigator.share) {
+            s.classList.remove('hidden');
+            s.addEventListener('click', () => {
+                navigator.share({ title: s.dataset.title, url: s.dataset.url }).catch(() => {});
+            });
+        }
+        const tocLinks = document.querySelectorAll('.post-toc-link');
+        if (tocLinks.length) {
+            const byId = new Map();
+            tocLinks.forEach(a => {
+                const heading = document.getElementById(a.dataset.tocLink);
+                if (heading) byId.set(heading, a);
+            });
+            let current = null;
+            const setActive = (link) => {
+                tocLinks.forEach(a => a.classList.toggle('active', a === link));
+            };
+            // A thin band across the top ~30% of the viewport. Whichever heading
+            // most recently entered it stays "current" until the next one does,
+            // so the highlight doesn't reset while a heading scrolls past upward.
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) current = entry.target; });
+                if (current) setActive(byId.get(current));
+            }, { rootMargin: '0px 0px -70% 0px', threshold: 0 });
+            byId.forEach((_link, heading) => observer.observe(heading));
+
+            // Explicit smooth animation for in-page TOC clicks (heading ids are
+            // already in the static HTML, so the browser's own default jump
+            // works fine on its own — this just makes clicking one feel nicer).
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            tocLinks.forEach(a => {
+                a.addEventListener('click', (e) => {
+                    const heading = document.getElementById(a.dataset.tocLink);
+                    if (!heading) return;
+                    e.preventDefault();
+                    heading.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+                    history.pushState(null, '', '#' + a.dataset.tocLink);
+                });
+            });
+        }
+
+        // Horizontal photo rails (.rail in a post body). The track scrolls on
+        // its own with touch, trackpad and arrow keys; this only adds the
+        // desktop prev/next buttons and keeps the edge fades in sync with how
+        // far along the track is. The buttons stay hidden until 'ready' lands,
+        // so no-JS readers never see a control that does nothing.
+        const railReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        document.querySelectorAll('.rail').forEach(rail => {
+            const track = rail.querySelector('.rail-track');
+            const nav = rail.querySelector('.rail-nav');
+            if (!track || !nav) return;
+            const buttons = nav.querySelectorAll('button');
+            const prev = buttons[0], next = buttons[1];
+            if (!prev || !next) return;
+            const sync = () => {
+                const max = track.scrollWidth - track.clientWidth;
+                const atStart = track.scrollLeft <= 2;
+                const atEnd = track.scrollLeft >= max - 2;
+                rail.dataset.atStart = atStart ? 'true' : 'false';
+                rail.dataset.atEnd = atEnd ? 'true' : 'false';
+                prev.disabled = atStart;
+                next.disabled = atEnd;
+            };
+            const go = (dir) => {
+                const card = track.querySelector('li');
+                const step = card ? card.offsetWidth + 14 : 260;
+                track.scrollBy({ left: dir * step * 2, behavior: railReduced ? 'auto' : 'smooth' });
+            };
+            prev.addEventListener('click', () => go(-1));
+            next.addEventListener('click', () => go(1));
+            track.addEventListener('scroll', sync, { passive: true });
+            window.addEventListener('resize', sync);
+            nav.classList.add('ready');
+            sync();
+        });
+    });
+    </script>
+</body>
+</html>

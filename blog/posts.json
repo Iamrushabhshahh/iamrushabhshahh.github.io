@@ -1,5 +1,19 @@
 [
   {
+    "title": "A hostname that never existed took Redis and Postgres down with it",
+    "description": "A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.",
+    "url": "/blog/dns-storm-eai-again/",
+    "date": "2026-09-29T18:35:00.000Z",
+    "tags": [
+      "incident",
+      "dns",
+      "aws",
+      "observability"
+    ],
+    "minutes": 16,
+    "cover": "/assets/blog/dns-storm-og.jpg"
+  },
+  {
     "title": "India's first heritage city, Gujarat's first KCD",
     "description": "Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you about.",
     "url": "/blog/kcd-gujarat-2026-ahmedabad-guide/",
@@ -59,17 +73,5 @@
     ],
     "minutes": 3,
     "cover": "/assets/blog/og/cka-exam-guide.jpg"
-  },
-  {
-    "title": "Is KCNA worth $250 as a first certification",
-    "description": "KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.",
-    "url": "/blog/kcna-worth-it/",
-    "date": "2026-08-24T03:30:00.000Z",
-    "tags": [
-      "kubernetes",
-      "certification"
-    ],
-    "minutes": 3,
-    "cover": "/assets/blog/og/kcna-worth-it.jpg"
   }
 ]
