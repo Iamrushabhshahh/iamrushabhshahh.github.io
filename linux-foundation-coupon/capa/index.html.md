@@ -2,7 +2,7 @@
 
 # CAPA Discount Code: 30% Off with RUSHABH30
 
-Updated September 2026 · Certified Argo Project Associate
+Updated October 2026 · Certified Argo Project Associate
 
 RUSHABH30
 

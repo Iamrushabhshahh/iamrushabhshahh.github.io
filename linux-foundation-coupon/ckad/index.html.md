@@ -2,7 +2,7 @@
 
 # CKAD Discount Code: 30% Off with RUSHABH30
 
-Updated September 2026 · Certified Kubernetes Application Developer
+Updated October 2026 · Certified Kubernetes Application Developer
 
 RUSHABH30
 

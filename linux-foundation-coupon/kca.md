@@ -2,7 +2,7 @@
 
 # KCA Discount Code: 30% Off with RUSHABH30
 
-Updated September 2026 · Kyverno Certified Associate
+Updated October 2026 · Kyverno Certified Associate
 
 RUSHABH30
 

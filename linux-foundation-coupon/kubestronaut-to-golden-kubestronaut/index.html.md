@@ -2,7 +2,7 @@
 
 # Kubestronaut to Golden Discount Code: 30% Off with RUSHABH30
 
-Updated September 2026 · Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams)
+Updated October 2026 · Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams)
 
 RUSHABH30
 

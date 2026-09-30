@@ -2,7 +2,7 @@
 
 # LFCA Discount Code: 30% Off with RUSHABH30
 
-Updated September 2026 · Linux Foundation Certified IT Associate
+Updated October 2026 · Linux Foundation Certified IT Associate
 
 RUSHABH30
 

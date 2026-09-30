@@ -2,7 +2,7 @@
 
 # CBA Discount Code: 30% Off with RUSHABH30
 
-Updated September 2026 · Certified Backstage Associate
+Updated October 2026 · Certified Backstage Associate
 
 RUSHABH30
 
