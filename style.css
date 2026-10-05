@@ -1937,3 +1937,9 @@ summary:focus-visible,[tabindex]:focus-visible{
    max-content sizes the table to its rows; max-width keeps a genuinely wide one
    capped at the container so overflow-x and the fade still do their job. */
 .post-prose table{width:max-content;max-width:100%}
+
+/* Sale card: the codes a reader on this page doesn't need, folded away. */
+.sale-more summary { cursor: pointer; color: var(--primary-color); font-size: 0.875rem; list-style: none; }
+.sale-more summary::-webkit-details-marker { display: none; }
+.sale-more summary::before { content: '+ '; }
+.sale-more[open] summary::before { content: '\2212 '; }

@@ -8,25 +8,23 @@ Starts October 6, 9:30 AM IST · ends October 7
 
 Linux Foundation October Prime sale
 
-- [40% off certifications and e-learning courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26CC`
-- [50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B`
-- [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB`
-- [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO`
+From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
+
+OCTPRIME26CC
+[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
 
 What the exams cost with the sale on:
 
 - CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
 - KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
 
+**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
+
+[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
+
 These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
 
 Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
-OCTPRIME26CC
-OCTPRIME26B
-OCTPRIME26SB
-OCTPRIME26TO
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
 
 RUSHABH30
 

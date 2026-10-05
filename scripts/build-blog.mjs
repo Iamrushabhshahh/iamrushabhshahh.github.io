@@ -1236,9 +1236,12 @@ const SALE = {
   // whether they sit under the 50% bundles code can only be read off that grid.
   // Last time guessing a bundle price got it wrong by $164.
   tiers: [
-    { label: 'CKA, CKAD, CKS or LFCS', list: 445, sale: 267, code: 'OCTPRIME26CC', slugs: ['cka', 'ckad', 'cks', 'lfcs'] },
-    { label: 'KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams', list: 250, sale: 150, code: 'OCTPRIME26CC', slugs: ['kcna', 'kcsa', 'pca', 'otca', 'lfca', 'mcpa'] },
+    { label: 'CKA, CKAD, CKS or LFCS', short: 'CKA, CKAD and CKS are', list: 445, sale: 267, code: 'OCTPRIME26CC', slugs: ['cka', 'ckad', 'cks', 'lfcs'] },
+    { label: 'KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams', short: 'the associate exams', list: 250, sale: 150, code: 'OCTPRIME26CC', slugs: ['kcna', 'kcsa', 'pca', 'otca', 'lfca', 'mcpa'] },
   ],
+  // Code a bundle page leads with, since those buyers need this one, not the
+  // certification code.
+  bundleCode: 'OCTPRIME26B',
   beatsEveryday: true,
   compare: "These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.",
   // One-line record for the archive once the window closes.
@@ -2222,47 +2225,66 @@ const calcHtml = () => {
 
 /* The banner body, shared by the coupon page and every per-cert page. Empty
    string when no sale is live, which is what makes the region self-retiring. */
-const saleBannerHtml = () => {
+const saleBannerHtml = (cert) => {
   if (!saleLive) return '';
-  const { name, advertisedEnd, codes, offers, tiers, banner, dateNote } = SALE;
-  const offerList = offers.map((o, i) => `${i === 0 ? '' : 'plus '}<strong class="text-white">${o.pct}% off</strong> ${escapeHtml(o.what)}`).join(', ');
-  const codeBoxes = codes.length
-    ? codes.map(c => `<span class="code-box">${c.code}${copyBtn(c.code)}</span>`).join('\n                        ')
-    : `<span class="font-fira text-xs text-gray-400">No code for this one. The bundle price is already cut.</span>`;
-  const tierRows = tiers?.length
-    ? `<ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${tiers.map(t => `<li>${escapeHtml(t.label)}: <s class="text-gray-500">$${t.list}</s> <strong class="text-white">$${t.sale}</strong>${t.code ? ` with <code>${escapeHtml(t.code)}</code>` : ''}</li>`).join('')}</ul>`
+  const { name, advertisedEnd, codes, tiers, banner, dateNote } = SALE;
+  /* Layout is ordered by what the reader needs, not by what the announcement
+     contains: price, the one code, the button. A reader on the CKA page needs
+     OCTPRIME26CC and nothing else, and on a phone the old order (image, four
+     offers, tiers, fine print, then four equal code boxes) put that code two
+     full screens down. Everything else is still here, just after it. */
+  const tier = cert ? (tiers || []).find(t => (t.slugs || []).includes(cert.slug)) : null;
+  const primary = (tier && codes.find(c => c.code === tier.code))
+    || (cert?.isBundle && SALE.bundleCode && codes.find(c => c.code === SALE.bundleCode))
+    || codes[0];
+  const others = codes.filter(c => c !== primary);
+  const when = saleStarted ? '' : `From ${escapeHtml(SALE.startLabel)}, `;
+  const lead = tier
+    ? `${when}${escapeHtml(cert.name)} is <strong class="text-white">$${tier.sale}</strong> with this code, down from <s class="text-gray-500">$${tier.list}</s>. That beats the $${cert.priceDiscounted} you'd pay with RUSHABH30, so use this one until ${escapeHtml(advertisedEnd)}.`
+    : primary
+      ? `${when}<strong class="text-white">${primary.pct}% off</strong> ${escapeHtml(primary.what)} with this code${primary === codes[0] && tiers?.some(t => t.short) ? `. ${tiers.filter(t => t.short).map((t, i) => `${i === 0 ? escapeHtml(t.short.charAt(0).toUpperCase() + t.short.slice(1)) : escapeHtml(t.short)} <strong class="text-white">$${t.sale}</strong>`).join(', ')}` : ''}.`
+      : `${when}${SALE.offers.map(o => `<strong class="text-white">${o.pct}% off</strong> ${escapeHtml(o.what)}`).join(', ')}.`;
+  const ctaLabel = !saleStarted
+    ? `Sale page (opens ${escapeHtml(SALE.startLabel)}) &rarr;`
+    : tier ? `Get ${escapeHtml(cert.name)} for $${tier.sale} &rarr;` : 'Go to the sale &rarr;';
+  const primaryRow = `
+                    <div class="flex flex-wrap items-center gap-4 mb-5">
+                        ${primary
+                          ? `<span class="code-box">${primary.code}${copyBtn(primary.code)}</span>`
+                          : `<span class="font-fira text-xs text-gray-400">No code for this one. The bundle price is already cut.</span>`}
+                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">${ctaLabel}</a>
+                    </div>`;
+  const tierRows = !tier && primary === codes[0] && tiers?.length
+    ? `<p class="text-gray-400 text-sm leading-relaxed mb-2">${escapeHtml(SALE.tiersLead || 'What the bundles cost:')}</p><ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${tiers.map(t => `<li>${escapeHtml(t.label)}: <s class="text-gray-500">$${t.list}</s> <strong class="text-white">$${t.sale}</strong>${t.code ? ` with <code>${escapeHtml(t.code)}</code>` : ''}</li>`).join('')}</ul>`
     : '';
-  /* When a sale ships more than one code, each covering a different part of the
-     catalog, one run-on sentence leaves the reader guessing which code to paste.
-     So the offers render as a labelled list pairing each discount with its code.
-     A single-code or code-less sale keeps the original inline phrasing. */
-  const pairedCodes = codes.length > 1 && codes.every(c => c.pct && c.what);
-  const offerBlock = pairedCodes
-    ? `<ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${codes.map(c => `<li>${c.go ? `<a href="${awinLink(SALE.dest, `site-${c.go}`)}" target="_blank" rel="noopener sponsored" data-goatcounter-click="cta-sale-${c.go}" data-goatcounter-title="Sale code row ${c.code}">` : ''}<strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)}${c.go ? '</a>' : ''} with <code>${escapeHtml(c.code)}</code></li>`).join('')}</ul>`
-    : `<p class="text-gray-400 text-sm leading-relaxed mb-4">${offerList}${SALE.condition ? `, ${escapeHtml(SALE.condition)}` : ''}.${tiers?.length ? ` ${escapeHtml(SALE.tiersLead || 'What the bundles cost:')}` : ''}</p>`;
-  const tiersLeadHtml = tiers?.length && pairedCodes
-    ? `<p class="text-gray-400 text-sm leading-relaxed mb-2">${escapeHtml(SALE.tiersLead || 'What the bundles cost:')}</p>`
+  const codeLink = (c) => c.go
+    ? `<a href="${awinLink(SALE.dest, `site-${c.go}`)}" target="_blank" rel="noopener sponsored" data-goatcounter-click="cta-sale-${c.go}" data-goatcounter-title="Sale code row ${c.code}"><strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)}</a>`
+    : `<strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)}`;
+  const moreCodes = others.length
+    ? `
+                    <details class="sale-more mb-4">
+                        <summary>${others.length === 1 ? 'One more code' : `${others.length} more codes`}: ${others.map(c => `${c.pct}% off ${escapeHtml(c.what.split(' (')[0].replace(/^(a new |the three )/, ''))}`).join(', ')}</summary>
+                        <ul class="text-gray-400 text-sm leading-relaxed mt-3 mb-3 list-disc pl-5">${others.map(c => `<li>${codeLink(c)} with <code>${escapeHtml(c.code)}</code></li>`).join('')}</ul>
+                        <div class="flex flex-wrap items-center gap-3">${others.map(c => `<span class="code-box">${c.code}${copyBtn(c.code)}</span>`).join('')}</div>
+                    </details>`
     : '';
-  const compare = SALE.compare ? escapeHtml(SALE.compare) : SALE.beatsEveryday
-    ? `These codes don't stack with RUSHABH30, and they beat it on everything here: 35% on a single exam, 40% on the bundles, against the code's 30%. RUSHABH30 goes back to being the best price the day the sale closes.`
-    : `Honest take: good deal if you actually want THRIVE-ONE (every course and every SkillCred exam for a year). If you just want the exam, skip it. CKA with <code>RUSHABH30</code> is $311. The CKA bundle is $553. You can't use the code on top of the sale.`;
+  const compare = tier ? '' : SALE.compare ? escapeHtml(SALE.compare) : SALE.beatsEveryday
+    ? `These codes don't stack with RUSHABH30, and they beat it. RUSHABH30 goes back to being the best price the day the sale closes.`
+    : `Honest take: good deal if you actually want THRIVE-ONE (every course and every SkillCred exam for a year). If you just want the exam, skip it. CKA with <code>RUSHABH30</code> is $311. You can't use the code on top of the sale.`;
   const img = banner
-    ? `<a href="${saleLink}" target="_blank" rel="noopener sponsored" class="block mb-4" data-goatcounter-click="cta-sale-banner-image" data-goatcounter-title="Live sale banner image"><img src="${banner.src}" width="${banner.width}" height="${banner.height}" alt="${escapeHtml(banner.alt)}" class="w-full h-auto rounded-md" decoding="async"></a>`
+    ? `<a href="${saleLink}" target="_blank" rel="noopener sponsored" class="block mt-4" data-goatcounter-click="cta-sale-banner-image" data-goatcounter-title="Live sale banner image"><img src="${banner.src}" width="${banner.width}" height="${banner.height}" alt="${escapeHtml(banner.alt)}" class="w-full h-auto rounded-md" loading="lazy" decoding="async"></a>`
     : '';
   return `
                 <div id="current-sale" class="tech-card tech-card-sale p-5 rounded-md mb-8">
                     <p class="status-pill mb-3"><span class="dot"></span> ${saleStarted ? `Sale live now &middot; ends ${escapeHtml(advertisedEnd)}` : `Starts ${escapeHtml(SALE.startLabel)} &middot; ends ${escapeHtml(advertisedEnd)}`}</p>
-                    ${img}
                     <p class="text-white font-bold text-lg mb-2">Linux Foundation ${escapeHtml(name)}</p>
-                    ${offerBlock}
-                    ${tiersLeadHtml}
+                    <p class="text-gray-300 text-base leading-relaxed mb-4">${lead}</p>
+                    ${primaryRow}
                     ${tierRows}
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">${compare}</p>
-                    ${dateNote ? `<p class="text-gray-500 text-xs leading-relaxed mb-4">${escapeHtml(dateNote)}</p>` : ''}
-                    <div class="flex flex-wrap items-center gap-4">
-                        ${codeBoxes}
-                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">${saleStarted ? 'Go to the sale &rarr;' : `Sale page (opens ${escapeHtml(SALE.startLabel)}) &rarr;`}</a>
-                    </div>
+                    ${moreCodes}
+                    ${compare ? `<p class="text-gray-400 text-sm leading-relaxed mb-4">${compare}</p>` : ''}
+                    ${dateNote ? `<p class="text-gray-500 text-xs leading-relaxed">${escapeHtml(dateNote)}</p>` : ''}
+                    ${img}
                 </div>`;
 };
 
@@ -2690,13 +2712,13 @@ function certPageHtml(c, siblings) {
                     ${escapeHtml(c.name)} Discount Code: <span class="gradient-text">30% Off</span> with RUSHABH30
                 </h1>
                 <p class="font-fira text-sm text-gray-400 mb-8">Updated ${MONTH_YEAR} &middot; ${escapeHtml(c.fullName)}</p>
-${saleBannerHtml()}
+${saleBannerHtml(c)}
                 <div class="flex flex-wrap items-center gap-5">
                     <span class="code-box">
                         RUSHABH30
                         <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                     </span>
-                    <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-lf-${c.slug}-hero" data-goatcounter-title="LF ${c.name} hero CTA">Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted} &rarr;</a>
+                    <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn ${saleCertPrice.has(c.slug) || (saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug))) ? 'btn-ghost' : 'btn-primary'}" data-goatcounter-click="cta-lf-${c.slug}-hero" data-goatcounter-title="LF ${c.name} hero CTA">${saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug)) ? `After the sale: ${escapeHtml(c.name)} for ~$${c.priceDiscounted}` : `Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted}`} &rarr;</a>
                 </div>
             </header>
 
