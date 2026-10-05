@@ -24,7 +24,7 @@ OCTPRIME26CC
 OCTPRIME26B
 OCTPRIME26SB
 OCTPRIME26TO
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
+[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
 
 A sale starts October 6, 9:30 AM IST (see above). This is the everyday code, works year-round:
 

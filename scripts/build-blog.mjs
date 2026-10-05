@@ -2261,7 +2261,7 @@ const saleBannerHtml = () => {
                     ${dateNote ? `<p class="text-gray-500 text-xs leading-relaxed mb-4">${escapeHtml(dateNote)}</p>` : ''}
                     <div class="flex flex-wrap items-center gap-4">
                         ${codeBoxes}
-                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">Go to the sale &rarr;</a>
+                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">${saleStarted ? 'Go to the sale &rarr;' : `Sale page (opens ${escapeHtml(SALE.startLabel)}) &rarr;`}</a>
                     </div>
                 </div>`;
 };
