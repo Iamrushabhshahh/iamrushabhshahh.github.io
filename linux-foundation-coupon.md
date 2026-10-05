@@ -1,14 +1,38 @@
 # Linux Foundation Coupon Code: 30% Off Everything, All Year
 
-Updated September 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
+Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-No sale running right now. This is the everyday code, works year-round:
+Starts October 6, 9:30 AM IST · ends October 7
+
+Linux Foundation October Prime sale
+
+- **40% off** certifications and e-learning courses with `OCTPRIME26CC`
+- **50% off** bundles with `OCTPRIME26B`
+- **75% off** the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native) with `OCTPRIME26SB`
+- **20% off** a new THRIVE-ONE Annual subscription with `OCTPRIME26TO`
+
+What the exams cost with the sale on:
+
+- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
+- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
+
+These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
+
+Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
+OCTPRIME26CC
+OCTPRIME26B
+OCTPRIME26SB
+OCTPRIME26TO
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
+
+A sale starts October 6, 9:30 AM IST (see above). This is the everyday code, works year-round:
 
 RUSHABH30
 
 [Open the catalog →](https://rushabhshah.dev/go/catalog/)
 
-Last verified: September 2026
+Last verified: October 2026
 
 The short version: put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://rushabhshah.dev/go/catalog/) and the total drops by 30%. It works on the whole training catalog, every day of the year. The rest of this page is context: where the code comes from, what the popular certifications actually cost with it, and the advice I give people at meetups about which one is worth their money.
 
@@ -103,7 +127,7 @@ These are the certifications people ask me about most, with the math already don
 | **[PCA](#pca-discount)** (Prometheus Certified Associate) | Engineers focused on monitoring | $250 | ~$175 | **~$75** |
 | **[OTCA](#otca-discount)** (OpenTelemetry Certified Associate) | DevOps & platform engineers standardizing on OTel | $250 | ~$175 | **~$75** |
 
-**List prices when I last updated this page (September 2026), so check the [official catalog](https://rushabhshah.dev/go/catalog/) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
+**List prices when I last updated this page (October 2026), so check the [official catalog](https://rushabhshah.dev/go/catalog/) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
 
 ### Bundle savings, in dollars
 

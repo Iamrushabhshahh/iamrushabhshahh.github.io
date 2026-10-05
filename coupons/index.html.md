@@ -2,6 +2,8 @@
 
 Updated October 2026 · Two official partner codes, one page
 
+**A Linux Foundation sale starts October 6, 9:30 AM IST** that beats RUSHABH30: 40% off certifications and e-learning courses with `OCTPRIME26CC`, plus 50% off bundles with `OCTPRIME26B`, plus 75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native) with `OCTPRIME26SB`, plus 20% off a new THRIVE-ONE Annual subscription with `OCTPRIME26TO`, ends October 7. It does not apply to any FinOps course or certification, so the FinOps code below is unaffected. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
+
 RUSHABH30
 
 RUSHABH_20

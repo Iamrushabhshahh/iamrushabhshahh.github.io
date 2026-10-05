@@ -2,7 +2,31 @@
 
 Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-No sale running right now. This is the everyday code, works year-round:
+Starts October 6, 9:30 AM IST · ends October 7
+
+Linux Foundation October Prime sale
+
+- **40% off** certifications and e-learning courses with `OCTPRIME26CC`
+- **50% off** bundles with `OCTPRIME26B`
+- **75% off** the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native) with `OCTPRIME26SB`
+- **20% off** a new THRIVE-ONE Annual subscription with `OCTPRIME26TO`
+
+What the exams cost with the sale on:
+
+- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
+- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
+
+These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
+
+Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
+OCTPRIME26CC
+OCTPRIME26B
+OCTPRIME26SB
+OCTPRIME26TO
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
+
+A sale starts October 6, 9:30 AM IST (see above). This is the everyday code, works year-round:
 
 RUSHABH30
 
