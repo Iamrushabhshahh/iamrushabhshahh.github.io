@@ -8,10 +8,10 @@ Starts October 6, 9:30 AM IST · ends October 7
 
 Linux Foundation October Prime sale
 
-- **40% off** certifications and e-learning courses with `OCTPRIME26CC`
-- **50% off** bundles with `OCTPRIME26B`
-- **75% off** the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native) with `OCTPRIME26SB`
-- **20% off** a new THRIVE-ONE Annual subscription with `OCTPRIME26TO`
+- [40% off certifications and e-learning courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26CC`
+- [50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B`
+- [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB`
+- [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO`
 
 What the exams cost with the sale on:
 
@@ -26,7 +26,7 @@ OCTPRIME26CC
 OCTPRIME26B
 OCTPRIME26SB
 OCTPRIME26TO
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
 
 RUSHABH30
 

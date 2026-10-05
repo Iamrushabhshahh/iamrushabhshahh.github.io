@@ -75,7 +75,10 @@ const AUTHOR = 'Rushabh Shah';
 // params (verified against AWIN's own Link Builder output byte-for-byte),
 // so each cert page can send its "Get X" button straight to that exam's own
 // page instead of the generic catalog.
-const awinLink = (dest) => `https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=${encodeURIComponent(dest)}`;
+/* `ref` becomes Awin's clickref, which shows up per transaction in the Awin
+   reports. It is how a sale gets traced back to the code row, page or social
+   post it came from, since the commission itself only knows the publisher ID. */
+const awinLink = (dest, ref) => `https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265${ref ? `&clickref=${encodeURIComponent(ref)}` : ''}&ued=${encodeURIComponent(dest)}`;
 const BLOG_TITLE = 'Rushabh Shah · Blog';
 const BLOG_DESC = 'Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.';
 
@@ -1211,10 +1214,12 @@ const SALE = {
   excludes: 'any FinOps course or certification',
   // Certifications first: that is what this site's readers are buying.
   codes: [
-    { code: 'OCTPRIME26CC', pct: 40, what: 'certifications and e-learning courses' },
-    { code: 'OCTPRIME26B', pct: 50, what: 'bundles' },
-    { code: 'OCTPRIME26SB', pct: 75, what: 'the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)' },
-    { code: 'OCTPRIME26TO', pct: 20, what: 'a new THRIVE-ONE Annual subscription' },
+    // `go` names the tracked link for that code: /go/<go>/ off-site, and the
+    // same string as Awin clickref (prefixed site-) on the banner row itself.
+    { code: 'OCTPRIME26CC', pct: 40, what: 'certifications and e-learning courses', go: 'sale-certs' },
+    { code: 'OCTPRIME26B', pct: 50, what: 'bundles', go: 'sale-bundles' },
+    { code: 'OCTPRIME26SB', pct: 75, what: 'the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)', go: 'sale-superbundles' },
+    { code: 'OCTPRIME26TO', pct: 20, what: 'a new THRIVE-ONE Annual subscription', go: 'sale-thrive' },
   ],
   offers: [
     { pct: 75, what: 'Super Bundles' },
@@ -1288,7 +1293,7 @@ const SIGNUP = {
 };
 const signupLive = SIGNUP.keyParts.length > 0;
 
-const saleLink = SALE ? awinLink(SALE.dest) : null;
+const saleLink = SALE ? awinLink(SALE.dest, 'site-sale-banner') : null;
 
 const all = [];
 const scheduled = [];
@@ -2233,7 +2238,7 @@ const saleBannerHtml = () => {
      A single-code or code-less sale keeps the original inline phrasing. */
   const pairedCodes = codes.length > 1 && codes.every(c => c.pct && c.what);
   const offerBlock = pairedCodes
-    ? `<ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${codes.map(c => `<li><strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)} with <code>${escapeHtml(c.code)}</code></li>`).join('')}</ul>`
+    ? `<ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${codes.map(c => `<li>${c.go ? `<a href="${awinLink(SALE.dest, `site-${c.go}`)}" target="_blank" rel="noopener sponsored" data-goatcounter-click="cta-sale-${c.go}" data-goatcounter-title="Sale code row ${c.code}">` : ''}<strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)}${c.go ? '</a>' : ''} with <code>${escapeHtml(c.code)}</code></li>`).join('')}</ul>`
     : `<p class="text-gray-400 text-sm leading-relaxed mb-4">${offerList}${SALE.condition ? `, ${escapeHtml(SALE.condition)}` : ''}.${tiers?.length ? ` ${escapeHtml(SALE.tiersLead || 'What the bundles cost:')}` : ''}</p>`;
   const tiersLeadHtml = tiers?.length && pairedCodes
     ? `<p class="text-gray-400 text-sm leading-relaxed mb-2">${escapeHtml(SALE.tiersLead || 'What the bundles cost:')}</p>`
@@ -3429,9 +3434,17 @@ ${signupHub()}
 const GO_LINKS = () => {
   const map = {
     catalog: awinLink('https://training.linuxfoundation.org/'),
-    sale: SALE ? awinLink(SALE.dest) : awinLink('https://training.linuxfoundation.org/'),
+    sale: SALE ? awinLink(SALE.dest, 'sale') : awinLink('https://training.linuxfoundation.org/'),
     finops: 'https://learn.finops.org/',
   };
+  /* Tracked variants of the sale link, one per place it gets shared and one per
+     code, each tagged with its own Awin clickref so the report says where the
+     buyer came from. Only generated while a sale is set; the pruning below
+     removes them once SALE goes back to null. */
+  if (SALE) {
+    for (const ch of ['linkedin', 'x', 'github', 'telegram', 'whatsapp']) map[`sale-${ch}`] = awinLink(SALE.dest, `sale-${ch}`);
+    for (const c of SALE.codes) if (c.go) map[c.go] = awinLink(SALE.dest, c.go);
+  }
   // Every cert that has a page gets a matching short link, generated from the
   // same dest the page's own CTA uses so the two can never disagree.
   for (const c of CERT_PAGES) map[c.slug] = awinLink(c.dest);
