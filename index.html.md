@@ -58,9 +58,9 @@ Hard-deadline cutover
 
 Two partner codes, [compared side by side →](https://rushabhshah.dev/coupons/)
 
-Starts October 6, 9:30 AM IST · ends October 7
+Sale live · ends October 7
 
-The Linux Foundation **October Prime sale** is coming: **40% off** certifications and e-learning courses with OCTPRIME26CC, plus **50% off** bundles with OCTPRIME26B, plus **75% off** the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native) with OCTPRIME26SB, plus **20% off** a new THRIVE-ONE Annual subscription with OCTPRIME26TO. My evergreen RUSHABH30 code takes over at 30% when it ends.
+The Linux Foundation **October Prime sale** is live: **40% off** certifications and e-learning courses with OCTPRIME26CC, plus **50% off** bundles with OCTPRIME26B, plus **75% off** the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native) with OCTPRIME26SB, plus **20% off** a new THRIVE-ONE Annual subscription with OCTPRIME26TO. My evergreen RUSHABH30 code takes over at 30% when it ends.
 
 Get the coupon code →
 

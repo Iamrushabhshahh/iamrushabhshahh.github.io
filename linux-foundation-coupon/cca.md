@@ -4,14 +4,14 @@
 
 Updated October 2026 · Cilium Certified Associate
 
-Starts October 6, 9:30 AM IST · ends October 7
+Sale live now · ends October 7
 
 Linux Foundation October Prime sale
 
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
+**40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
 
 OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
 
 What the exams cost with the sale on:
 

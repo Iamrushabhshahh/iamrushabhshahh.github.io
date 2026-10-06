@@ -4,14 +4,14 @@
 
 Updated October 2026 · Kubernetes and Cloud Native Security Associate
 
-Starts October 6, 9:30 AM IST · ends October 7
+Sale live now · ends October 7
 
 Linux Foundation October Prime sale
 
-From October 6, 9:30 AM IST, KCSA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
+KCSA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
 
 OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
+[Get KCSA for $150 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
 
 **3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
 

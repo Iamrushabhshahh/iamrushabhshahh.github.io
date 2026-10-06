@@ -4,14 +4,14 @@
 
 Updated October 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
 
-Starts October 6, 9:30 AM IST · ends October 7
+Sale live now · ends October 7
 
 Linux Foundation October Prime sale
 
-From October 6, 9:30 AM IST, **50% off** bundles with this code.
+**50% off** bundles with this code.
 
 OCTPRIME26B
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
 
 **3 more codes: 40% off certifications and e-learning courses, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
 
