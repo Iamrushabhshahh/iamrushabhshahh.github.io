@@ -4,24 +4,9 @@
 
 Updated October 2026 · Kubernetes and Cloud Native Associate
 
-Sale live now · ends October 7
-
-Linux Foundation October Prime sale
-
-KCNA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Get KCNA for $150 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: KCNA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F)
+[Get KCNA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F) and the Kubernetes and Cloud Native Associate (KCNA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 

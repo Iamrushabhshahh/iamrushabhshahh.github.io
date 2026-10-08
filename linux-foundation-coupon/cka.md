@@ -4,24 +4,9 @@
 
 Updated October 2026 · Certified Kubernetes Administrator
 
-Sale live now · ends October 7
-
-Linux Foundation October Prime sale
-
-CKA is **$267** with this code, down from $445. That beats the $311 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Get CKA for $267 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: CKA for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
+[Get CKA for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F) and the Certified Kubernetes Administrator (CKA) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
