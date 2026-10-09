@@ -2,6 +2,7 @@
 
 > Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.
 
+- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
 - [India's first heritage city, Gujarat's first KCD](https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/) (2026-09-01): Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you about.
 - [Prometheus PCA and OpenTelemetry OTCA, reviewed](https://rushabhshah.dev/blog/pca-otca-review/) (2026-08-30): Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.
 - [CKA exam day: PSI bridge, terminal, kubectl aliases](https://rushabhshah.dev/blog/cka-exam-day-setup/) (2026-08-28): The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.

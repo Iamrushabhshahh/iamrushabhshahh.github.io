@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
-    <script defer src="/assets/theme.js"></script>
+    <script defer src="/assets/theme.js?v=d0c0d819"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">
@@ -11,6 +11,11 @@
     <meta name="description" content="A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.">
     <meta name="author" content="Rushabh Shah">
     <link rel="canonical" href="https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/">
+    <!-- Every page has a plain-markdown twin at the same URL with index.html.md
+         appended. This is the machine-readable pointer to it: llms.txt indexes the
+         site, but nothing told a crawler sitting on THIS page that a clean markdown
+         version of it exists. -->
+    <link rel="alternate" type="text/markdown" href="https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal.md">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
@@ -37,7 +42,7 @@
     <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/style.css?v=2658f18d">
+    <link rel="stylesheet" href="/style.css?v=a3b0e5e8">
     <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -752,7 +757,7 @@ kubectl get --raw /apis/scheduling.k8s.io/v1alpha2 2&gt;/dev/null
                     <a href="/blog/rss.xml" class="chip">RSS</a>
                 </div>
                 <p class="font-fira text-sm text-gray-400 mt-5">Thanks for reading. <a href="/#contact" class="text-primary-color hover:underline">Say hi</a> if it was useful.</p>
-                <p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">30% off the CKA, CKAD and CKS with code RUSHABH30</a>.</p>
+                <p class="font-fira text-sm text-gray-400 mt-5">Also: <a href="/linux-foundation-coupon/" class="text-primary-color hover:underline">a 30% discount code for Linux Foundation certifications</a>.</p>
             </footer>
         </article>
         

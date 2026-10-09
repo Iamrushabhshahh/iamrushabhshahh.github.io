@@ -2,7 +2,7 @@
 
 # Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated September 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
+Updated October 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
 
 RUSHABH30
 
@@ -86,6 +86,19 @@ RUSHABH30 works on every Linux Foundation and CNCF course and certification, not
 - [KCSA discount code](https://rushabhshah.dev/linux-foundation-coupon/kcsa/)
 - [LFCS discount code](https://rushabhshah.dev/linux-foundation-coupon/lfcs/)
 - [Golden Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/)
+- [CKA to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/)
+- [CKAD to Kubestronaut discount code](https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/)
+- [Kubestronaut to Golden discount code](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/)
+- [MCPA discount code](https://rushabhshah.dev/linux-foundation-coupon/mcpa/)
+- [CNPE discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpe/)
+- [CNPA discount code](https://rushabhshah.dev/linux-foundation-coupon/cnpa/)
+- [ICA discount code](https://rushabhshah.dev/linux-foundation-coupon/ica/)
+- [CCA discount code](https://rushabhshah.dev/linux-foundation-coupon/cca/)
+- [CAPA discount code](https://rushabhshah.dev/linux-foundation-coupon/capa/)
+- [CGOA discount code](https://rushabhshah.dev/linux-foundation-coupon/cgoa/)
+- [KCA discount code](https://rushabhshah.dev/linux-foundation-coupon/kca/)
+- [CBA discount code](https://rushabhshah.dev/linux-foundation-coupon/cba/)
+- [PTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/ptca/)
 - [LFCA discount code](https://rushabhshah.dev/linux-foundation-coupon/lfca/)
 - [PCA discount code](https://rushabhshah.dev/linux-foundation-coupon/pca/)
 - [OTCA discount code](https://rushabhshah.dev/linux-foundation-coupon/otca/)

@@ -59,7 +59,7 @@ function arrowHead(x1, y1, x2, y2, el) {
   ));
 }
 
-export function renderScene(elements, { width, height, title = 'Diagram', bg = '#fdfcfa' }) {
+export function renderScene(elements, { width, height, title = 'Diagram', bg = '#fdfcfa', mark = 'Kubernetes v1.37 \u00b7 Garhwal' }) {
   const body = [];
   for (const el of elements) {
     const { x = 0, y = 0, width: w = 0, height: h = 0 } = el;
@@ -96,13 +96,13 @@ export function renderScene(elements, { width, height, title = 'Diagram', bg = '
   }
   /* Footer. These diagrams get screenshotted and forwarded on their own, so each
      one carries enough context to stand up without the post around it: what
-     release it describes on the left, where it came from on the right. Both are
+     subject it describes on the left, where it came from on the right. Both are
      faint enough not to compete with the diagram itself. */
-  const mark = [
-    `<text x="20" y="${height - 13}" font-family=${JSON.stringify(FONT)} font-size="11.5" letter-spacing="0.3" fill="#1b1f23" fill-opacity="0.34">Kubernetes v1.37 &#183; Garhwal</text>`,
+  const footer = [
+    `<text x="20" y="${height - 13}" font-family=${JSON.stringify(FONT)} font-size="11.5" letter-spacing="0.3" fill="#1b1f23" fill-opacity="0.34">${esc(mark)}</text>`,
     `<text x="${width - 20}" y="${height - 13}" font-family=${JSON.stringify(FONT)} font-size="11.5" letter-spacing="0.3" fill="#1b1f23" fill-opacity="0.22" text-anchor="end">rushabhshah.dev</text>`,
   ].join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-labelledby="t"><title id="t">${esc(title)}</title><rect width="${width}" height="${height}" rx="14" fill="${bg}"/>${body.join('')}${mark}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-labelledby="t"><title id="t">${esc(title)}</title><rect width="${width}" height="${height}" rx="14" fill="${bg}"/>${body.join('')}${footer}</svg>`;
 }
 
 function roundRectPath(x, y, w, h, r) {

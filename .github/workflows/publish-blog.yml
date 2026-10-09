@@ -23,6 +23,11 @@ on:
       - ".github/workflows/publish-blog.yml"
   schedule:
     - cron: "40 18 * * *" # daily at 00:10 IST (18:40 UTC previous day)
+    # One-offs for the October Prime sale, so the banner flips to "live" soon
+    # after the 04:00 UTC open and comes down soon after the 23:59 UTC close,
+    # instead of waiting most of a day for the daily run. Safe to delete after.
+    - cron: "5 4 6 10 *"
+    - cron: "5 0 8 10 *"
   workflow_dispatch:
 
 permissions:

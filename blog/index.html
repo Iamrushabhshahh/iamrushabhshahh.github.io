@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
-    <script defer src="/assets/theme.js"></script>
+    <script defer src="/assets/theme.js?v=d0c0d819"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#010409">
     <meta name="color-scheme" content="dark light">
@@ -11,6 +11,11 @@
     <meta name="description" content="Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.">
     <meta name="author" content="Rushabh Shah">
     <link rel="canonical" href="https://rushabhshah.dev/blog/">
+    <!-- Every page has a plain-markdown twin at the same URL with index.html.md
+         appended. This is the machine-readable pointer to it: llms.txt indexes the
+         site, but nothing told a crawler sitting on THIS page that a clean markdown
+         version of it exists. -->
+    <link rel="alternate" type="text/markdown" href="https://rushabhshah.dev/blog.md">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23010409'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='38' font-weight='700' fill='%2358a6ff'%3ER%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
@@ -33,7 +38,7 @@
     <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/style.css?v=2658f18d">
+    <link rel="stylesheet" href="/style.css?v=a3b0e5e8">
     <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -119,6 +124,22 @@
                 <h2 class="font-fira text-sm uppercase tracking-wider text-gray-500 mb-5"># 2026</h2>
                 <div class="space-y-4">
                 
+                    <a href="/blog/dns-storm-eai-again/" class="tech-card p-6 rounded-md group block">
+                        <div class="post-card-row flex flex-col sm:flex-row gap-5">
+                            <div class="post-card-media"><img src="/assets/blog/dns-storm-og.jpg" alt="" loading="lazy" decoding="async"></div>
+                            <div class="flex flex-col min-w-0">
+                                <div class="flex flex-wrap items-center gap-3 font-fira text-xs text-gray-400 mb-2">
+                                    
+                                    <time datetime="2026-09-29T18:35:00.000Z">Sep 30, 2026</time>
+                                    <span aria-hidden="true">·</span>
+                                    <span>16 min read</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary-color transition-colors">A hostname that never existed took Redis and Postgres down with it</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mb-3">A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.</p>
+                                <div class="flex flex-wrap gap-2 mt-auto"><span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">incident</span> <span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">dns</span> <span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">aws</span> <span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">observability</span></div>
+                            </div>
+                        </div>
+                    </a>
                     <a href="/blog/kcd-gujarat-2026-ahmedabad-guide/" class="tech-card p-6 rounded-md group block">
                         <div class="post-card-row flex flex-col sm:flex-row gap-5">
                             <div class="post-card-media"><img src="/assets/blog/kcd-gujarat-og.jpg" alt="" loading="lazy" decoding="async"></div>
@@ -287,10 +308,14 @@
                     <a href="/blog/tags/kubernetes/" class="chip">kubernetes <span class="text-gray-500">8</span></a>
                     <a href="/blog/tags/certification/" class="chip">certification <span class="text-gray-500">6</span></a>
                     <a href="/blog/tags/meta/" class="chip">meta <span class="text-gray-500">2</span></a>
+                    <a href="/blog/tags/aws/" class="chip">aws <span class="text-gray-500">1</span></a>
                     <a href="/blog/tags/blog/" class="chip">blog <span class="text-gray-500">1</span></a>
                     <a href="/blog/tags/cncf/" class="chip">cncf <span class="text-gray-500">1</span></a>
                     <a href="/blog/tags/community/" class="chip">community <span class="text-gray-500">1</span></a>
+                    <a href="/blog/tags/dns/" class="chip">dns <span class="text-gray-500">1</span></a>
+                    <a href="/blog/tags/incident/" class="chip">incident <span class="text-gray-500">1</span></a>
                     <a href="/blog/tags/kcd/" class="chip">kcd <span class="text-gray-500">1</span></a>
+                    <a href="/blog/tags/observability/" class="chip">observability <span class="text-gray-500">1</span></a>
                     <a href="/blog/tags/open-source/" class="chip">open-source <span class="text-gray-500">1</span></a>
                     <a href="/blog/tags/releases/" class="chip">releases <span class="text-gray-500">1</span></a>
                 </div>

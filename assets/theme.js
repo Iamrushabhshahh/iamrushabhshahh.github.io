@@ -86,3 +86,116 @@
         });
     });
 })();
+
+/* ---------- cert chooser + savings calculator (coupon hub only) ----------
+   Both guard on their container existing, so this stays inert on every other
+   page that loads this file. No prices are hardcoded here: they are read from
+   data attributes the generator wrote out of CERT_PAGES, which the daily job
+   verifies against the live Linux Foundation pages. */
+(function () {
+  'use strict';
+
+  var chooser = document.getElementById('chooser');
+  if (chooser) {
+    var opts = [].slice.call(chooser.querySelectorAll('.ch-opt'));
+    var results = [].slice.call(chooser.querySelectorAll('.pick-result'));
+    opts.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+    opts.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var goal = b.dataset.goal;
+        var already = b.getAttribute('aria-pressed') === 'true';
+        opts.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        results.forEach(function (r) { r.hidden = true; });
+        if (already) return;            // second click clears, so it is not a trap
+        b.setAttribute('aria-pressed', 'true');
+        results.forEach(function (r) {
+          if (r.dataset.goal !== goal) return;
+          r.hidden = false;
+          var cards = r.querySelectorAll('.pick-card');
+          [].forEach.call(cards, function (c, i) {
+            c.classList.remove('in'); void c.offsetWidth;
+            c.style.setProperty('--i', i);
+            c.classList.add('in');
+          });
+          r.classList.remove('in'); void r.offsetWidth; r.classList.add('in');
+        });
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({ path: 'chooser-' + goal, title: 'Cert chooser: ' + goal, event: true });
+        }
+      });
+    });
+  }
+
+  var calc = document.getElementById('calc');
+  if (calc) {
+    var boxes = [].slice.call(calc.querySelectorAll('input[type=checkbox]'));
+    var money = function (n) { return '$' + n.toLocaleString('en-US'); };
+    var bundles = [];
+    try { bundles = JSON.parse(document.getElementById('bundleData').textContent); } catch (e) {}
+
+    /* Count a number up to its new value. Only worth doing because the totals
+       are already set in tabular figures: with proportional ones the digits
+       change width mid-animation and the row jitters, which is why animated
+       counters usually look cheap. Reduced-motion users get the final value
+       immediately, and so does anyone whose browser lacks rAF. */
+    var REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var tweens = {};
+    var countTo = function (el, to, fmt) {
+      var from = Number(el.dataset.v || 0);
+      el.dataset.v = to;
+      if (REDUCED || !window.requestAnimationFrame || from === to) { el.textContent = fmt(to); return; }
+      if (tweens[el.id]) cancelAnimationFrame(tweens[el.id]);
+      var t0 = performance.now(), dur = 340;
+      var step = function (now) {
+        var p = Math.min(1, (now - t0) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);          // easeOutCubic, matches --ease
+        el.textContent = fmt(Math.round(from + (to - from) * eased));
+        if (p < 1) tweens[el.id] = requestAnimationFrame(step);
+      };
+      tweens[el.id] = requestAnimationFrame(step);
+    };
+
+    var update = function () {
+      var picked = boxes.filter(function (b) { return b.checked; });
+      var list = 0, disc = 0, slugs = [];
+      picked.forEach(function (b) {
+        list += Number(b.dataset.list) || 0;
+        disc += Number(b.dataset.disc) || 0;
+        slugs.push(b.dataset.slug);
+      });
+      var plain = function (n) { return String(n); };
+      countTo(document.getElementById('cQty'), picked.length, plain);
+      countTo(document.getElementById('cList'), list, money);
+      countTo(document.getElementById('cDisc'), disc, money);
+      countTo(document.getElementById('cSave'), list - disc, money);
+
+      /* Offer a bundle only when it genuinely covers everything ticked AND is
+         actually cheaper. Suggesting a bundle that costs more, or that misses
+         an exam the reader wants, would be the kind of upsell that loses the
+         trust the rest of this page is built on. */
+      var note = document.getElementById('cBundle');
+      var best = null;
+      bundles.forEach(function (bn) {
+        /* Exact match only. Prefix matching looks harmless and is not: 'ckad'
+           starts with 'cka', so ticking the CKA would match the CKA-to-
+           Kubestronaut upgrade, a bundle that deliberately excludes the CKA.
+           It would then recommend something cheaper that is missing the exam
+           the reader actually asked for. */
+        var covers = slugs.every(function (s) { return bn.covers.indexOf(s) !== -1; });
+        if (picked.length > 1 && covers && bn.disc < disc && (!best || bn.disc < best.disc)) best = bn;
+      });
+      if (best) {
+        var wasHidden = note.hidden;
+        note.hidden = false;
+        if (wasHidden) { note.classList.remove('in'); void note.offsetWidth; note.classList.add('in'); }
+        note.innerHTML = 'The <a href="/linux-foundation-coupon/' + best.slug + '/">' + best.name +
+          '</a> covers everything you ticked for about <strong>' + money(best.disc) +
+          '</strong> with the code, which is ' + money(disc - best.disc) + ' less than buying them separately.';
+      } else {
+        note.hidden = true;
+      }
+    };
+    boxes.forEach(function (b) { b.addEventListener('change', update); });
+    update();
+  }
+})();

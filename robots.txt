@@ -14,3 +14,9 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://rushabhshah.dev/sitemap.xml
+
+# Curated index and full-text bundle for LLM ingestion (https://llmstxt.org).
+# Every page also has a markdown twin at <url>index.html.md, linked from each
+# page with <link rel="alternate" type="text/markdown">.
+# llms.txt: https://rushabhshah.dev/llms.txt
+# llms-full.txt: https://rushabhshah.dev/llms-full.txt
