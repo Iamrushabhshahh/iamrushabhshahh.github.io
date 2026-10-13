@@ -2577,6 +2577,23 @@ Contact
 
 I read every message myself and usually reply within 24 to 48 hours. I am in Ahmedabad (IST).
 
+**Rushabh Shah** Replies within 48 hours
+
+People write to me about
+
+- **Talks and workshops** Conferences, meetups, college events, internal tech talks.
+- **Team training** Kubernetes, containers and observability, hands-on.
+- **Platform or cost review** GitOps setup, Grafana stack, a cloud bill that grew too fast.
+- **Courses and questions** The course waitlist, a post you read, an exam you are planning.
+
+What happens next
+
+- I read it myself, no assistant or auto-reply.
+- I reply within 48 hours with questions or dates.
+- If it helps, we book a free 20 minute call.
+
+What is this about?
+
 ---
 
 <!-- https://rushabhshah.dev/links/ -->

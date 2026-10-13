@@ -1459,7 +1459,7 @@ const NAV_ITEMS = (dealsHref) => [
   ['/speaking/', 'Speaking', 'speaking'],
   ['/til/', 'TIL', 'til'],
   ['/now/', 'Now', 'now'],
-  ['/#about', 'About', null],
+  ['/about/', 'About', 'about'],
 ];
 const navDesktop = (active, dealsHref = '/linux-foundation-coupon/') =>
   NAV_ITEMS(dealsHref).map(([h, l, k]) => `                ${navLink(h, l, k, active)}`).join('\n');
@@ -1495,7 +1495,7 @@ const rsHeader = ({ active = null, dealsHref = '/linux-foundation-coupon/', prom
         <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#work">Work with me</a>
         <h4>Learn</h4><a href="/til/">Today I learned</a><a href="/now/">Now</a><a href="/reading/">Reading</a><a href="/certs/">My certifications</a>
         <h4>Save</h4><a href="/linux-foundation-coupon/">Linux Foundation coupon</a><a href="/finops-coupon/">FinOps coupon</a><a href="/coupons/">All coupons</a>
-        <h4>Me</h4><a href="/#about">About</a><a href="/games/">Games</a><a href="/links/">Links</a><a href="/#contact">Contact</a>
+        <h4>Me</h4><a href="/about/">About</a><a href="/games/">Games</a><a href="/links/">Links</a><a href="/#contact">Contact</a>
         <div style="margin-top:24px">${segControl(false)}</div>
     </nav>`;
 const rsFooter = () => `
@@ -1507,7 +1507,7 @@ const rsFooter = () => `
             <div><p class="rs-fh">Read</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/til/">Today I learned</a></li><li><a href="/now/">Now</a></li><li><a href="/reading/">Reading</a></li><li><a href="/blog/rss.xml">RSS</a></li></ul></div>
             <div><p class="rs-fh">Save</p><ul><li><a href="/linux-foundation-coupon/">Linux Foundation</a></li><li><a href="/finops-coupon/">FinOps</a></li><li><a href="/coupons/">All coupons</a></li><li><a href="/linux-foundation-coupon/kubestronaut/">Kubestronaut</a></li></ul></div>
             <div><p class="rs-fh">Work</p><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#work">Hire me</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
-            <div><p class="rs-fh">Me</p><ul><li><a href="/#about">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
+            <div><p class="rs-fh">Me</p><ul><li><a href="/about/">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
         </div>
         <div class="rs-wordbox"><div class="rs-word" aria-hidden="true">RUSHABH SHAH</div></div>
         <div class="rs-fine"><span>&copy; ${now.getFullYear()} ${AUTHOR}. Affiliate links pay me a commission at no cost to you.</span><span><a href="/privacy/">Privacy</a><a href="/blog/rss.xml">RSS</a><a href="/llms.txt">AI-readable bio</a></span></div>
@@ -1532,7 +1532,7 @@ const footer = `${footerBody}
     fs.writeFileSync(chromePath, JSON.stringify({
       cssHref: CSS_HREF,
       jsSrc: JS_SRC,
-      headers: Object.fromEntries(['', 'speaking', 'til', 'now'].map(k => [k || 'none', makeHeader(k)])),
+      headers: Object.fromEntries(['', 'speaking', 'til', 'now', 'about'].map(k => [k || 'none', makeHeader(k)])),
       footer: footerBody,
     }));
   }
@@ -2127,6 +2127,7 @@ const NEXT_ROUTES = [
   ['/reading/', '0.4', 'monthly', 'next/content/reading'],
   ['/games/', '0.3', 'monthly', 'next/content/games'],
   ['/certs/', '0.5', 'monthly', 'next/content/certs.json'],
+  ['/about/', '0.7', 'monthly', 'next/app/about'],
 ];
 const TIL_DIR = path.join(ROOT, 'next', 'content', 'til');
 const NEXT_SITEMAP = fs.existsSync(TIL_DIR) ? [

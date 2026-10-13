@@ -225,7 +225,25 @@
     .rs-socials { display:grid; grid-template-columns:repeat(6, 1fr); gap:10px; margin-top:44px; }
     .rs-socials a { border:1px solid var(--rs-line); border-radius:14px; padding:14px; text-decoration:none; font-weight:700; display:flex; flex-direction:column; gap:3px; color:var(--rs-text); transition:border-color .2s, transform .3s var(--rs-ease); }
     .rs-socials a span { font:400 11px var(--rs-mono); color:var(--rs-text-3); } .rs-socials a:hover { border-color:var(--rs-sig); transform:translateY(-3px); }
-    #contact .max-w-xl { max-width:640px; }
+    .rs-contact { display:grid; grid-template-columns:1fr 1.05fr; gap:clamp(32px, 5vw, 72px); align-items:start; }
+    .rs-contact .rs-sub { margin-bottom:28px; }
+    .rs-me-card { display:flex; gap:14px; align-items:center; padding:14px 16px; border:1px solid var(--rs-line); border-radius:16px; background:var(--rs-bg-2); max-width:400px; }
+    .rs-me-card img { width:56px; height:56px; border-radius:50%; object-fit:cover; }
+    .rs-me-card b { display:block; font:600 17px/1.2 var(--rs-display); color:var(--rs-text); }
+    .rs-me-card span { display:flex; align-items:center; gap:8px; font:400 12px var(--rs-mono); color:var(--rs-text-3); margin-top:4px; }
+    .rs-me-card i { width:8px; height:8px; border-radius:50%; background:var(--rs-ok); box-shadow:0 0 0 4px rgba(var(--green-rgb), .18); }
+    .rs-contact__h { font:400 11px var(--rs-mono); letter-spacing:.14em; text-transform:uppercase; color:var(--rs-text-3); margin:32px 0 12px; }
+    .rs-topics { display:grid; gap:10px; }
+    .rs-topics li { padding:12px 0; border-top:1px solid var(--rs-line); } .rs-topics b { display:block; color:var(--rs-text); font-weight:600; } .rs-topics span { color:var(--rs-text-2); font-size:15px; }
+    .rs-next-steps { counter-reset:s; display:grid; gap:10px; padding:0; margin:0; list-style:none; }
+    .rs-next-steps li { counter-increment:s; display:flex; gap:12px; align-items:baseline; color:var(--rs-text-2); font-size:15px; }
+    .rs-next-steps li::before { content:counter(s); flex:none; width:24px; height:24px; border-radius:50%; display:grid; place-items:center; font:500 12px var(--rs-mono); color:var(--rs-on-sig); background:var(--rs-sig-fill); }
+    .rs-contact__form { position:sticky; top:96px; padding:clamp(22px, 3vw, 32px); border:1px solid var(--rs-line); border-radius:24px; background:var(--rs-bg-2); box-shadow:0 40px 90px -40px var(--rs-glow); }
+    .rs-contact__form .rs-contact__h { margin-top:0; }
+    .rs-topic-pick { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+    .rs-topic-pick button { font:500 14px var(--rs-font); padding:9px 14px; border-radius:999px; border:1px solid var(--rs-line-2); color:var(--rs-text-2); transition:border-color .2s, color .2s, background .2s; }
+    .rs-topic-pick button:hover, .rs-topic-pick button[aria-pressed="true"] { border-color:var(--rs-sig); color:var(--rs-text); background:rgba(var(--primary-rgb), .1); }
+    @media (max-width:900px) { .rs-contact { grid-template-columns:1fr; } .rs-contact__why { display:contents; } .rs-contact__form { position:static; order:1; } .rs-contact__more { order:2; } }
     @media (max-width:1000px) { .rs-os { grid-template-columns:1fr 1fr; } .rs-nums { grid-template-columns:repeat(3, 1fr); } .rs-socials { grid-template-columns:repeat(3, 1fr); } }
     @media (max-width:860px) {
       .rs-home-hero .rs-wrap { grid-template-columns:1fr; } .rs-home-copy { padding:110px 0 10px; } .rs-me { height:440px; } .rs-hint { display:none; }
@@ -241,7 +259,7 @@
     <header class="rs-hdr rs-hdr--overlay" id="rs-hdr">
         <div class="rs-wrap rs-hdr__in">
             <a class="rs-logo" href="/"><i aria-hidden="true"></i>Rushabh Shah</a>
-            <nav class="rs-nav" aria-label="Main"><a href="/blog/">Blog</a><a href="/linux-foundation-coupon/">Certifications</a><a href="/speaking/">Speaking</a><a href="/til/">TIL</a><a href="/now/">Now</a><a href="/#about">About</a></nav>
+            <nav class="rs-nav" aria-label="Main"><a href="/blog/">Blog</a><a href="/linux-foundation-coupon/">Certifications</a><a href="/speaking/">Speaking</a><a href="/til/">TIL</a><a href="/now/">Now</a><a href="/about/">About</a></nav>
             <div class="rs-hdr__r">
                 <div class="rs-hide-sm"><div class="seg seg--compact" role="radiogroup" aria-label="Theme preference">
                 <button type="button" role="radio" data-value="light" aria-checked="false" tabindex="-1" title="Light">
@@ -266,7 +284,7 @@
         <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#work">Work with me</a>
         <h4>Learn</h4><a href="/til/">Today I learned</a><a href="/now/">Now</a><a href="/reading/">Reading</a><a href="/certs/">My certifications</a>
         <h4>Save</h4><a href="/linux-foundation-coupon/">Linux Foundation coupon</a><a href="/finops-coupon/">FinOps coupon</a><a href="/coupons/">All coupons</a>
-        <h4>Me</h4><a href="/#about">About</a><a href="/games/">Games</a><a href="/links/">Links</a><a href="/#contact">Contact</a>
+        <h4>Me</h4><a href="/about/">About</a><a href="/games/">Games</a><a href="/links/">Links</a><a href="/#contact">Contact</a>
         <div style="margin-top:24px"><div class="seg" role="radiogroup" aria-label="Theme preference">
                 <button type="button" role="radio" data-value="light" aria-checked="false" tabindex="-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
@@ -405,11 +423,30 @@
 
     <div class="rs-wrap"><section id="contact" class="rs-sec" style="padding-top:0">
         <div class="section-reveal">
+            <div class="rs-contact">
+            <div class="rs-contact__why">
             <span class="rs-kicker">Contact</span><h2 class="rs-h2 rs-split">Say hi.</h2><p class="rs-sub">I read every message myself and usually reply within 24 to 48 hours. I am in Ahmedabad (IST).</p>
-            <div class="max-w-xl" style="margin-top:32px">
-                <!-- No action attribute on purpose: spam bots harvest form action URLs from the
-                     HTML and POST to them directly, bypassing all client-side checks. The endpoint
-                     is assembled in JS at submit time instead. -->
+            <div class="rs-me-card"><img src="/assets/photos/rushabh-avatar.webp" alt="" width="56" height="56" loading="lazy"><div><b>Rushabh Shah</b><span><i aria-hidden="true"></i>Replies within 48 hours</span></div></div>
+            <div class="rs-contact__more">
+            <p class="rs-contact__h">People write to me about</p>
+            <ul class="rs-topics">
+                <li><b>Talks and workshops</b><span>Conferences, meetups, college events, internal tech talks.</span></li>
+                <li><b>Team training</b><span>Kubernetes, containers and observability, hands-on.</span></li>
+                <li><b>Platform or cost review</b><span>GitOps setup, Grafana stack, a cloud bill that grew too fast.</span></li>
+                <li><b>Courses and questions</b><span>The course waitlist, a post you read, an exam you are planning.</span></li>
+            </ul>
+            <p class="rs-contact__h">What happens next</p>
+            <ol class="rs-next-steps"><li>I read it myself, no assistant or auto-reply.</li><li>I reply within 48 hours with questions or dates.</li><li>If it helps, we book a free 20 minute call.</li></ol>
+            </div>
+            </div>
+            <div class="rs-contact__form">
+                <p class="rs-contact__h" id="topic-label">What is this about?</p>
+                <div class="rs-topic-pick" role="group" aria-labelledby="topic-label">
+                    <button type="button" data-start="Hi Rushabh, I would like to invite you to speak at ">A talk</button>
+                    <button type="button" data-start="Hi Rushabh, our team would like a workshop on ">Workshop</button>
+                    <button type="button" data-start="Hi Rushabh, I would like your help with ">Hire you</button>
+                    <button type="button" data-start="Hi Rushabh, ">Just saying hi</button>
+                </div>
                 <form id="contact-form" class="space-y-4" method="post" novalidate>
                     <!-- Multiple honeypot fields. Bot form-fillers target attractive field names
                          (website, url, phone, company). Hidden visually + tabindex=-1 + autocomplete=off
@@ -450,6 +487,7 @@
                     </div>
                 </form>
             </div>
+            </div>
         </div>
     </section></div>
     </main>
@@ -461,7 +499,7 @@
             <div><p class="rs-fh">Read</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/til/">Today I learned</a></li><li><a href="/now/">Now</a></li><li><a href="/reading/">Reading</a></li><li><a href="/blog/rss.xml">RSS</a></li></ul></div>
             <div><p class="rs-fh">Save</p><ul><li><a href="/linux-foundation-coupon/">Linux Foundation</a></li><li><a href="/finops-coupon/">FinOps</a></li><li><a href="/coupons/">All coupons</a></li><li><a href="/linux-foundation-coupon/kubestronaut/">Kubestronaut</a></li></ul></div>
             <div><p class="rs-fh">Work</p><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#work">Hire me</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
-            <div><p class="rs-fh">Me</p><ul><li><a href="/#about">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
+            <div><p class="rs-fh">Me</p><ul><li><a href="/about/">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
         </div>
         <div class="rs-wordbox"><div class="rs-word" aria-hidden="true">RUSHABH SHAH</div></div>
         <div class="rs-fine"><span>&copy; 2026 Rushabh Shah. Affiliate links pay me a commission at no cost to you.</span><span><a href="/privacy/">Privacy</a><a href="/blog/rss.xml">RSS</a><a href="/llms.txt">AI-readable bio</a></span></div>
@@ -726,6 +764,15 @@ const ICONS = {"argo": "M12.581 0c.436.037.871.1 1.299.186 1.679.383 3.121 1.213
   new IntersectionObserver(([en]) => { if (en.isIntersecting) { if (!raf) raf = requestAnimationFrame(frame); } else { cancelAnimationFrame(raf); raf = 0; } }).observe(hero);
 })();
 
+    </script>
+    <script>
+    document.querySelectorAll('.rs-topic-pick button').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('.rs-topic-pick button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      const m = document.getElementById('contact_message'); if (!m) return;
+      const starts = [...document.querySelectorAll('.rs-topic-pick button')].map(x => x.dataset.start);
+      if (!m.value || starts.includes(m.value)) m.value = b.dataset.start;
+      m.focus(); m.setSelectionRange(m.value.length, m.value.length);
+    }));
     </script>
 </body>
 </html>

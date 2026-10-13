@@ -12,7 +12,7 @@ import path from 'node:path';
  *
  * Build order is therefore load-bearing: build-blog.mjs, then `next build`.
  */
-export type NavKey = 'none' | 'speaking' | 'til' | 'now';
+export type NavKey = 'none' | 'speaking' | 'til' | 'now' | 'about';
 
 interface Chrome {
   cssHref: string;
