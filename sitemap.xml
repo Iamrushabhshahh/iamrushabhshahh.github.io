@@ -253,6 +253,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://rushabhshah.dev/speaker-kit/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://rushabhshah.dev/til/kubectl-events-sorted/</loc>
     <lastmod>2026-09-16</lastmod>
     <priority>0.4</priority>

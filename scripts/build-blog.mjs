@@ -2128,6 +2128,7 @@ const NEXT_ROUTES = [
   ['/games/', '0.3', 'monthly', 'next/content/games'],
   ['/certs/', '0.5', 'monthly', 'next/content/certs.json'],
   ['/about/', '0.7', 'monthly', 'next/app/about'],
+  ['/speaker-kit/', '0.6', 'monthly', 'next/app/speaker-kit'],
 ];
 const TIL_DIR = path.join(ROOT, 'next', 'content', 'til');
 const NEXT_SITEMAP = fs.existsSync(TIL_DIR) ? [

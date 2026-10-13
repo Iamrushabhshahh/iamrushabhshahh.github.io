@@ -73,7 +73,7 @@ jobs:
       # chunks so HTML still cached at the CDN can load its scripts.
       - name: Copy Next routes into the site
         run: |
-          for r in speaking now til reading games certs about; do
+          for r in speaking now til reading games certs about speaker-kit; do
             rsync -a --delete "next/out/$r/" "$r/"
           done
           rsync -a next/out/_next/ _next/
@@ -90,7 +90,7 @@ jobs:
           # Next routes, plus the markdown twins and llms files, which the
           # generator rewrites on every run but were never committed, so the
           # .md copies kept advertising a sale days after it ended.
-          git add speaking now til reading games certs about _next llms.txt llms-full.txt '*.md'
+          git add speaking now til reading games certs about speaker-kit _next llms.txt llms-full.txt '*.md'
           if git diff --cached --quiet; then
             echo "Nothing new to publish."
           else

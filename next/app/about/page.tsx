@@ -360,7 +360,7 @@ export default function AboutPage() {
             <a className="rs-btn rs-btn--hot rs-btn--sm" href="mailto:hello@rushabhshah.dev?subject=Speaking%20invitation">
               Request me to speak
             </a>
-            <a className="rs-btn rs-btn--sm" href="/speaking/#kit">
+            <a className="rs-btn rs-btn--sm" href="/speaker-kit/">
               Speaker kit
             </a>
             <a className="rs-btn rs-btn--sm" href="/#contact">
