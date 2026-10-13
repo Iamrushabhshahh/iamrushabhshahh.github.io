@@ -42,7 +42,7 @@ export const person = {
 export const bios = {
   50: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India, and a Docker Captain and Grafana Champion selected in 2026. He runs Kubernetes in production, builds observability on the Grafana LGTM stack and OpenTelemetry, and organizes Grafana & Friends Ahmedabad, a community meetup for engineers working on observability.`,
 
-  100: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India. He is a Docker Captain and a Grafana Champion, both selected in 2026, in the community programmes run by Docker and Grafana Labs. His day job is Kubernetes in production: Helm and Argo CD for delivery, Terraform for infrastructure, and the Grafana LGTM stack with OpenTelemetry for observability. He has cut cloud spend by 59 percent and led a zero downtime cloud migration under a fixed deadline. He organizes Grafana & Friends Ahmedabad, and translates Kubernetes and eBPF documentation into Hindi so the material reaches engineers who do not read English first.`,
+  100: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India. He is a Docker Captain and a Grafana Champion, both selected in 2026, in the community programmes run by Docker and Grafana Labs. His day job is Kubernetes in production: Helm and Argo CD for delivery, Terraform for infrastructure, and the Grafana LGTM stack with OpenTelemetry for observability. He has cut cloud spend by 59 percent and led a zero downtime cloud migration. He organizes Grafana & Friends Ahmedabad, translated ebpf.io into Hindi, and has Hindi translations of the Kubernetes docs in review.`,
 
   250: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India, where he runs Kubernetes workloads for a lending business: Helm charts and GitOps delivery through Argo CD, infrastructure as code in Terraform, CI/CD on GitHub Actions, and observability built on Prometheus, Grafana, Loki, Tempo and OpenTelemetry.
 
@@ -105,7 +105,7 @@ export const credentials: Credential[] = [
   {
     id: 'devstats',
     label: 'CNCF DevStats 178',
-    issuer: 'CNCF',
+    issuer: 'CNCF DevStats',
     year: 2026,
     detail: 'Weighted contribution score across CNCF projects',
     proofUrl: 'https://devstats.cluster.fun/',
@@ -130,6 +130,15 @@ export const credentials: Credential[] = [
     detail: 'Certified Kubernetes Application Developer',
     proofUrl: 'https://www.credly.com/badges/403326fb-ec23-479e-a04b-d70dc73428a5',
     internalUrl: '/certs/',
+    tint: 'var(--primary-color)',
+  },
+  {
+    id: 'kcsa',
+    label: 'KCSA',
+    issuer: 'The Linux Foundation',
+    year: 2026,
+    detail: 'Kubernetes and Cloud Native Security Associate',
+    proofUrl: 'https://www.credly.com/badges/16538648-bf8b-4dfe-86cb-6f8d279b5742',
     tint: 'var(--primary-color)',
   },
   {

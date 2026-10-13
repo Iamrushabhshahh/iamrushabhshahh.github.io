@@ -32,7 +32,7 @@ export default function TilPage() {
         <header className="mb-10 max-w-3xl">
           <p className="mb-3 font-fira text-sm">
             <a href="/" className="text-muted hover:text-primary">
-              <span className="text-green">$</span> cd ~
+              &larr; Home
             </a>
           </p>
           <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight text-strong md:text-5xl">{TITLE}</h1>

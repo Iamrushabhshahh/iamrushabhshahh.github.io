@@ -2351,11 +2351,11 @@ every star is a project I've contributed to. hover one.
 
 **●** Docker Captain · Grafana Champion · Ahmedabad
 
-# Rushabh Shah is **an open source contributor**
+# Rushabh Shah is **an open source educator**
 
 I build, teach and speak about **open source infrastructure**. I translated ebpf.io into Hindi, I co-organize meetups in Ahmedabad, and my next talks are at FluxCon in Salt Lake City and two events in Tokyo.
 
-[Read the blog](https://rushabhshah.dev/blog/)[Speaking](https://rushabhshah.dev/speaking/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
+[Invite me to speak](https://rushabhshah.dev/speaking/)[Read the blog](https://rushabhshah.dev/blog/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
 
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
@@ -2395,7 +2395,7 @@ ebpf.io/hi-in 59% cost cut AWS to OCI
 2026
 ### Docker Captain, Grafana Champion, more talks
 
-Selected into both programs. Passed KCNA, KCSA and CKAD in a month. Spoke in Vadodara and at PromCon EU, with FluxCon in Salt Lake City and two talks in Tokyo next. And started building courses.
+Selected into both programs. Passed KCNA, KCSA and CKAD in a month. Spoke in Vadodara, co-presented a pre-recorded segment at PromCon EU, with FluxCon in Salt Lake City and two talks in Tokyo next. And started building courses.
 Docker Captain Grafana Champion Tokyo &times; 2
 
 Open source
@@ -2511,7 +2511,7 @@ Courses and consulting
 
 ### Courses
 
-I am recording video courses on Kubernetes and observability. Nothing is out yet. Join the list to hear when the first one is.
+I am recording video courses on Kubernetes and observability. Nothing is out yet. Email me and I will tell you when the first one is.
 
 - CKAD first
 - KCNA and KCSA next
@@ -2534,34 +2534,34 @@ Writing
 
 ## Notes from the on-call side.
 
-**incident** 29 Sept 2026 16 min
+**incident** Sep 30, 2026 16 min
 ### A hostname that never existed took Redis and Postgres down with it
 
 A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
 
 (https://rushabhshah.dev/blog/dns-storm-eai-again/)
 
-**kubernetes** 1 Sept 2026 19 min
+**kubernetes** Sep 1, 2026 19 min
 ### India's first heritage city, Gujarat's first KCD
 
 (https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/)
 
-**kubernetes** 30 Aug 2026 3 min
+**kubernetes** Aug 30, 2026 3 min
 ### Prometheus PCA and OpenTelemetry OTCA, reviewed
 
 (https://rushabhshah.dev/blog/pca-otca-review/)
 
-**kubernetes** 28 Aug 2026 3 min
+**kubernetes** Aug 28, 2026 3 min
 ### CKA exam day: PSI bridge, terminal, kubectl aliases
 
 (https://rushabhshah.dev/blog/cka-exam-day-setup/)
 
-**kubernetes** 26 Aug 2026 11 min
+**kubernetes** Aug 27, 2026 11 min
 ### Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks
 
 (https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/)
 
-**kubernetes** 26 Aug 2026 3 min
+**kubernetes** Aug 26, 2026 3 min
 ### What the CKA actually tests in 2026
 
 (https://rushabhshah.dev/blog/cka-exam-guide/)
@@ -2575,7 +2575,7 @@ I&rsquo;m a **DevOps engineer at Orocorp Technologies Private Limited** in Ahmed
 Contact
 ## Say hi.
 
-I read every message myself and usually reply within 24 to 48 hours. I am in Ahmedabad (IST).
+I read every message myself and usually reply within 48 hours. I am in Ahmedabad (IST).
 
 **Rushabh Shah** Replies within 48 hours
 

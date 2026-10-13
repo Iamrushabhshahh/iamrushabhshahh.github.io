@@ -3,7 +3,7 @@ import upstream from '@/content/contributions/upstream.json';
 import k8sHindi from '@/content/contributions/kubernetes-hindi.json';
 import { SITE_URL, bios, credentials, person } from '@/lib/site';
 import { certs } from '@/lib/certs';
-import { speaking } from '@/lib/speaking';
+import { speaking, stats as speakingStats } from '@/lib/speaking';
 import { SiteShell } from '@/components/site/SiteShell';
 import { ItemPageSchema } from '@/components/SEO/StructuredData';
 
@@ -102,7 +102,7 @@ export default function AboutPage() {
   const count = (kinds: string[]) => speaking.engagements.filter((e) => kinds.includes(e.kind)).length;
   const stats = [
     { n: count(['talk', 'lightning', 'workshop']), label: 'talks given or booked' },
-    { n: count(['hosting']), label: 'meetups hosted' },
+    { n: speakingStats(Date.now()).hosted, label: 'meetups hosted' },
     { n: count(['jury', 'organizing']), label: 'hackathons judged or run' },
     { n: count(['volunteer', 'booth']), label: 'volunteer roles' },
   ];

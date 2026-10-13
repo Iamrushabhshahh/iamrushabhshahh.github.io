@@ -1455,7 +1455,7 @@ const mobileLink = (href, label, key, active) => key && key === active
    hand-authored pages). `dealsHref` lets a FinOps page point ./deals home. */
 const NAV_ITEMS = (dealsHref) => [
   ['/blog/', 'Blog', 'blog'],
-  [dealsHref, 'Certifications', 'deals'],
+  [dealsHref, 'Coupons', 'deals'],
   ['/speaking/', 'Speaking', 'speaking'],
   ['/til/', 'TIL', 'til'],
   ['/now/', 'Now', 'now'],
@@ -3781,7 +3781,7 @@ const renderHomeTalks = () => {
                 <a class="rs-home-talk rs-reveal" href="/speaking/#${e.slug}" data-city="${escapeHtml(e.city)}"><time>${fmtShort(e.start)} · ${escapeHtml(e.event.split(',')[0])}</time><h3>${escapeHtml(e.title)}</h3><p>${escapeHtml(e.abstract ? e.abstract.split('. ')[0].replace(/\.$/, '') + '.' : e.city)}</p></a>`).join('');
 };
 const renderHomePosts = () => all.slice(0, 6).map((p, i) => `
-                <a class="rs-post${i === 0 ? ' rs-post--feature' : ''} rs-reveal" href="/blog/${p.slug}/"><span class="rs-post__img">${p.cover ? cardImg(p.cover, { feature: i === 0 }) : ''}</span><span class="rs-post__meta"><b>${escapeHtml((p.tags[0] || 'post').replace(/-/g, ' '))}</b><span>${fmtShort(isoDate(p.date))}</span><span>${p.minutes} min</span></span><h3 class="rs-post__t">${escapeHtml(p.title)}</h3>${i === 0 && p.description ? `<p class="rs-post__p">${escapeHtml(p.description)}</p>` : ''}</a>`).join('');
+                <a class="rs-post${i === 0 ? ' rs-post--feature' : ''} rs-reveal" href="/blog/${p.slug}/"><span class="rs-post__img">${p.cover ? cardImg(p.cover, { feature: i === 0 }) : ''}</span><span class="rs-post__meta"><b>${escapeHtml((p.tags[0] || 'post').replace(/-/g, ' '))}</b><span>${fmtDate(p.date)}</span><span>${p.minutes} min</span></span><h3 class="rs-post__t">${escapeHtml(p.title)}</h3>${i === 0 && p.description ? `<p class="rs-post__p">${escapeHtml(p.description)}</p>` : ''}</a>`).join('');
 /* Home proof blocks (programmes + certifications, experience, stack). They
    bring back what the pre-redesign home showed, from the same data. */
 const fmtMonthYear = (d) => new Date(d + "T00:00:00Z").toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });

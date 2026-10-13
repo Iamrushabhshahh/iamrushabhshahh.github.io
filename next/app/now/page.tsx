@@ -168,7 +168,7 @@ export default function NowPage() {
 
         <p className="mt-12 max-w-3xl text-sm text-muted">
           A <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">now page</a>{' '}
-          answers what I would tell a friend I had not seen in a year.
+          lists what I am working on this month. It is updated by hand, so the date at the top tells you how fresh it is.
         </p>
       </main>
     </SiteShell>

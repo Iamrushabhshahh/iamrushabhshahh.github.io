@@ -24,7 +24,7 @@ export function ShelfHeader({ title, intro }: { title: string; intro: React.Reac
     <header className="mb-12 max-w-3xl">
       <p className="mb-3 font-fira text-sm">
         <a href="/now/" className="text-muted hover:text-primary">
-          <span className="text-green">$</span> cd ../now
+          &larr; Now
         </a>
       </p>
       <h1 className="mb-4 text-4xl font-bold leading-tight tracking-tight text-strong md:text-5xl">{title}</h1>
