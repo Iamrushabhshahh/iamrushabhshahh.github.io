@@ -48,7 +48,7 @@ export const bios = {
 
 He is a Docker Captain and a Grafana Champion, both selected in 2026, in the community programmes run by Docker and Grafana Labs. He organizes Grafana & Friends Ahmedabad, a community meetup focused on observability and the LGTM stack, and he represented KodeKloud at the inaugural KubeCon India in Delhi in 2024.
 
-Before Orocorp he drove a 59 percent reduction in AWS spend at Genuin, built delivery pipelines that brought release time to about ten minutes, and led a zero downtime migration from AWS to Oracle Cloud Infrastructure against a fixed deadline. Earlier he built hands on cloud labs at KodeKloud and delivered Azure certification training to enterprise teams at Koenig Solutions.
+Before Orocorp he cut AWS spend by 59 percent, built delivery pipelines that brought release time to about ten minutes, and led a zero downtime migration from AWS to Oracle Cloud Infrastructure against a fixed deadline. Earlier he built hands on cloud labs at KodeKloud and delivered Azure certification training to enterprise teams at Koenig Solutions.
 
 A large part of his open source work is localization. He contributed the Hindi localization of ebpf.io, translated the Kusion README into Hindi, and has an ongoing series of Hindi localization pull requests against the Kubernetes documentation. The reasoning is simple: most cloud native documentation assumes fluent English, which quietly excludes a large share of the engineers who most need it.
 
