@@ -6,7 +6,14 @@ I build, teach and speak about **open source infrastructure**. From the Hindi ed
 
 [Learn with me](#courses)[Book a talk](https://rushabhshah.dev/speaking/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
 
-Agents in the Dark · Cloud Native Vadodara · Sep 2026 [Next on stage FluxCon North America 9 Nov 2026 · Salt Lake City](https://rushabhshah.dev/speaking/#fluxcon-na-2026) Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara 10 talks given or booked, in 4 countries
+KubeCon India 2026 · Mumbai
+[Next on stage FluxCon North America 9 Nov 2026 · Salt Lake City](https://rushabhshah.dev/speaking/#fluxcon-na-2026)
+
+Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
+Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
+
+10
+talks given or booked, in 4 countries
 612
 RSVPs across the meetups I host
 14

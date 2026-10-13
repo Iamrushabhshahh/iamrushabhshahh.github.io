@@ -148,9 +148,8 @@
     .rs-home-hero::before { content:''; position:absolute; z-index:-3; inset:0; background:radial-gradient(50% 60% at 72% 62%, rgba(var(--primary-rgb), .24), transparent 70%), radial-gradient(40% 50% at 12% 18%, rgba(var(--purple-rgb), .16), transparent 70%), var(--rs-bg); }
     .rs-home-hero .rs-wrap { display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; width:100%; padding-top:124px; padding-bottom:110px; }
     .rs-name { display:flex; flex-wrap:wrap; align-items:center; column-gap:.22em; }
-    .rs-ava { display:none; width:.78em; height:.78em; border-radius:50%; object-fit:cover; object-position:50% 12%; outline:3px solid var(--rs-sig); outline-offset:3px; background:var(--rs-bg-3); }
     .rs-stage { position:relative; margin:0; }
-    .rs-stage img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:28px; outline:1px solid var(--rs-line-2); outline-offset:-1px; box-shadow:0 40px 90px -30px var(--rs-glow); background:var(--rs-bg-3); }
+    .rs-stage img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; object-position:50% 30%; border-radius:28px; outline:1px solid var(--rs-line-2); outline-offset:-1px; box-shadow:0 40px 90px -30px var(--rs-glow); background:var(--rs-bg-3); }
     .rs-stage figcaption { position:absolute; left:18px; top:18px; font:400 12px var(--rs-mono); color:#fff; background:rgba(5,10,28,.55); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); padding:8px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.2); }
     .rs-nexttalk { position:absolute; right:-18px; bottom:-34px; }
     .rs-nexttalk a { display:flex; flex-direction:column; gap:4px; padding:16px 18px; border-radius:18px; background:var(--rs-bg-2); border:1px solid var(--rs-line); box-shadow:var(--e-3); text-decoration:none; color:inherit; transition:transform .3s var(--rs-ease), border-color .2s; }
@@ -218,7 +217,7 @@
     #contact .max-w-xl { max-width:640px; }
     @media (max-width:1000px) { .rs-os { grid-template-columns:1fr 1fr; } .rs-nums { grid-template-columns:repeat(3, 1fr); } .rs-socials { grid-template-columns:repeat(3, 1fr); } }
     @media (max-width:860px) {
-      .rs-home-hero .rs-wrap { grid-template-columns:1fr; padding-top:104px; padding-bottom:56px; text-align:center; } .rs-stage { display:none; } .rs-ava { display:inline-block; } .rs-name, .rs-ctas { justify-content:center; } .rs-lede { margin-inline:auto; }
+      .rs-home-hero .rs-wrap { grid-template-columns:1fr; gap:28px; padding-top:88px; padding-bottom:56px; text-align:center; } .rs-stage { order:-1; text-align:left; } .rs-stage img { max-height:46svh; } .rs-home-hero h1 { margin-top:18px; } .rs-nexttalk { position:relative; right:auto; bottom:auto; margin:-30px 14px 0 auto; width:fit-content; } .rs-name, .rs-ctas { justify-content:center; } .rs-lede { margin-inline:auto; }
       .rs-journey .rail, .rs-journey .fill { left:8px; } .rs-step { grid-template-columns:1fr; gap:6px; padding-left:36px; } .rs-step::before { left:2px; } .rs-step .yr { font-size:24px; }
       .rs-talks, .rs-offers { grid-template-columns:1fr; } .rs-about { grid-template-columns:1fr; } .rs-strip img { height:150px; }
     }
@@ -277,13 +276,13 @@
         <div class="rs-wrap">
             <div class="rs-home-copy">
                 <span class="rs-eyebrow rs-fadeup" style="animation-delay:.1s"><b>&#9679;</b> Docker Captain &middot; Grafana Champion &middot; Ahmedabad</span>
-                <h1 id="h"><span class="rs-name">Rushabh<img class="rs-ava" src="/assets/rushabh-shah-240.webp" alt="" width="240" height="240" loading="lazy"> Shah</span><span class="is">is <b id="rs-typed">an open source contributor</b><i class="rs-caret" aria-hidden="true"></i></span></h1>
+                <h1 id="h"><span class="rs-name">Rushabh Shah</span><span class="is">is <b id="rs-typed">an open source contributor</b><i class="rs-caret" aria-hidden="true"></i></span></h1>
                 <p class="rs-lede rs-fadeup" style="animation-delay:.2s">I build, teach and speak about <b>open source infrastructure</b>. From the Hindi edition of ebpf.io to stages in Tokyo and Salt Lake City, I make the cloud native world easier to learn.</p>
                 <div class="rs-ctas rs-fadeup" style="animation-delay:.3s"><a class="rs-btn rs-btn--hot rs-magnet" href="#courses">Learn with me</a><a class="rs-btn rs-magnet" href="/speaking/">Book a talk</a><a class="rs-btn rs-btn--quiet" href="/assets/rushabh-shah-resume.pdf" download><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>R&eacute;sum&eacute;</a></div>
             </div>
             <figure class="rs-stage">
-                <picture><source media="(max-width: 860px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><img src="/assets/photos/20260913-111550.webp" alt="Rushabh Shah presenting Agents in the Dark at Cloud Native Vadodara, September 2026" width="900" height="675" fetchpriority="high"></picture>
-                <figcaption>Agents in the Dark &middot; Cloud Native Vadodara &middot; Sep 2026</figcaption>
+                <img src="/assets/photos/kubecon-india-day2-125.webp" alt="Rushabh Shah in his Docker Captain jacket at KubeCon + CloudNativeCon India 2026 in Mumbai" width="900" height="600" fetchpriority="high">
+                <figcaption>KubeCon India 2026 &middot; Mumbai</figcaption>
                 <div class="rs-nexttalk"><!-- Next talk injected here --><a href="/speaking/#fluxcon-na-2026"><small>Next on stage</small><b>FluxCon North America</b><span>9 Nov 2026 &middot; Salt Lake City</span></a></div>
             </figure>
         </div>
