@@ -1540,10 +1540,10 @@ const footer = `${footerBody}
 
 /* ---------- post pages ---------- */
 
-const tagChip = (t) => `<span class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">${escapeHtml(t)}</span>`;
+const tagChip = (t) => `<span class="rs-pill text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full">${escapeHtml(t)}</span>`;
 
 // Linked variant — only for places NOT already wrapped in an <a> (post pages, tag cloud).
-const tagLink = (t) => `<a href="/blog/tags/${slugify(t)}/" class="text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">${escapeHtml(t)}</a>`;
+const tagLink = (t) => `<a href="/blog/tags/${slugify(t)}/" class="rs-pill text-xs font-fira bg-primary-color/10 text-primary-color py-1 px-2 rounded-full hover:bg-primary-color/20 transition-colors">${escapeHtml(t)}</a>`;
 
 // Discreet coupon-page footer link — only on posts tagged kubernetes,
 // certification or docker, so it doesn't read as doorway behaviour on
@@ -1822,13 +1822,13 @@ ${header}
             <a href="/blog/" class="rs-back">&larr; All posts</a>
             <header class="mb-10">
                 <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">${escapeHtml(post.title)}</h1>
-                <div class="flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
+                <div class="post-meta flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
                     <time datetime="${isoDate(post.date)}">${fmtDate(post.date)}</time>
                     <span aria-hidden="true">·</span>
                     <span>${post.minutes} min read</span>
                     <span id="post-views"></span>
-                    ${post.tags.length ? `<span aria-hidden="true">·</span> ${post.tags.map(tagLink).join(' ')}` : ''}
                 </div>
+                ${post.tags.length ? `<div class="post-tags flex flex-wrap gap-2 mt-3">${post.tags.map(tagLink).join('')}</div>` : ''}
                 ${post.cover ? `<img src="${post.cover}" alt="" width="1200" height="630" class="w-full rounded-xl border border-border-color mt-8" loading="eager" fetchpriority="high" decoding="async" style="height:auto">` : ''}
             </header>
             ${seriesBox(post)}

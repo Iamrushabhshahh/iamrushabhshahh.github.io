@@ -2160,3 +2160,8 @@ a.rs-cert:hover { border-color: var(--rs-sig); transform: translateY(-2px); }
 :root { --rs-sig-fill: #2563eb; --rs-sig-text: #6b9bff; }
 :root[data-theme="light"] { --rs-sig-fill: #2456e6; --rs-sig-text: #2456e6; }
 /* --rs-sig-text: brand blue for small text on panels, AA in both themes. */
+/* Blog post meta row: pills are inline-blocks with a fixed line box, so the
+   mono font swapping in cannot change the row height and shift the cover. */
+.rs-pill { display: inline-block; line-height: 16px; }
+.post-meta { line-height: 24px; min-height: 24px; white-space: nowrap; overflow: hidden; }
+.post-tags { min-height: 24px; }
