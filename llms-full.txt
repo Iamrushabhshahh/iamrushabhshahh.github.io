@@ -2602,19 +2602,25 @@ What is this about?
 
 DevOps Engineer · Docker Captain · Grafana Champion
 
+[About](https://rushabhshah.dev/about/)
+
 [Blog](https://rushabhshah.dev/blog/)
+
+[Speaking](https://rushabhshah.dev/speaking/)
+
+[Speaker kit (bios and photos)](https://rushabhshah.dev/speaker-kit/)
 
 [LinkedIn](https://in.linkedin.com/in/iamrushabhshahh)
 
 [GitHub](https://github.com/iamrushabhshahh)
 
-[Twitter / X](https://twitter.com/iamrushabhshahh)
+[X](https://twitter.com/iamrushabhshahh)
 
 [Docker Captain profile](https://www.docker.com/contributors/rushabh-shah/)
 
-[Grafana Champion profile](https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn)
+[Grafana Champions list](https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn)
 
-[30% off Linux Foundation certs](https://rushabhshah.dev/linux-foundation-coupon/)
+[Linux Foundation code RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/)
 
 [Contact](https://rushabhshah.dev/#contact)
 

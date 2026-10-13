@@ -2165,3 +2165,9 @@ a.rs-cert:hover { border-color: var(--rs-sig); transform: translateY(-2px); }
 .rs-pill { display: inline-block; line-height: 16px; }
 .post-meta { line-height: 24px; min-height: 24px; white-space: nowrap; overflow: hidden; }
 .post-tags { min-height: 24px; }
+/* /links/ (link-in-bio): cards in the RS style. */
+.rs-links .tech-card { border-radius: 16px; background: var(--rs-bg-2); border: 1px solid var(--rs-line); -webkit-backdrop-filter: none; backdrop-filter: none; transition: transform .25s var(--rs-ease), border-color .2s; }
+.rs-links .tech-card:hover { transform: translateY(-2px); border-color: var(--rs-sig); }
+.rs-links .tech-card::after { display: none; }
+.rs-links h1 { font: 600 32px/1.1 var(--rs-display); letter-spacing: -.02em; color: var(--rs-text); }
+.rs-links .tech-card .text-white { color: var(--rs-text); }
