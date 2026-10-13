@@ -208,13 +208,13 @@ export default function SpeakingPage() {
             ].map(({ k, v }) => (
               <div
                 key={k}
-                className="flex items-center justify-between gap-4 rounded-md border border-[var(--border-color)] bg-[var(--panel-color)] p-4"
+                className="rounded-md border border-[var(--border-color)] bg-[var(--panel-color)] p-4"
               >
-                <div>
-                  <dt className="font-fira text-xs uppercase tracking-wider text-muted">{k}</dt>
-                  <dd className="mt-1 text-sm text-strong">{v}</dd>
-                </div>
-                <CopyButton value={v} label="Copy" />
+                <dt className="font-fira text-xs uppercase tracking-wider text-muted">{k}</dt>
+                <dd className="mt-1 flex items-center justify-between gap-4 text-sm text-strong">
+                  <span>{v}</span>
+                  <CopyButton value={v} label="Copy" />
+                </dd>
               </div>
             ))}
           </dl>
@@ -237,7 +237,7 @@ export default function SpeakingPage() {
           <dl className="mb-12 divide-y divide-[var(--border-color)] rounded-md border border-[var(--border-color)] bg-[var(--panel-color)]">
             {AV_REQUIREMENTS.map(({ label, value }) => (
               <div key={label} className="grid gap-1 p-4 sm:grid-cols-[160px_1fr] sm:gap-4">
-                <dt className="font-fira text-xs uppercase tracking-wider text-primary">{label}</dt>
+                <dt className="font-fira text-xs uppercase tracking-wider text-[var(--accent-orange)]">{label}</dt>
                 <dd className="text-sm leading-relaxed text-body">{value}</dd>
               </div>
             ))}

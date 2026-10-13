@@ -28,7 +28,7 @@ import { cn } from '@/lib/utils';
  */
 
 const KIND_TONE: Record<Engagement['kind'], string> = {
-  talk: 'var(--primary-color)',
+  talk: 'var(--rs-sig-text)',
   lightning: 'var(--accent-orange)',
   workshop: 'var(--green-color)',
   jury: 'var(--accent-purple)',

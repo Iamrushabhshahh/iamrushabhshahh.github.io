@@ -1504,10 +1504,10 @@ const rsFooter = () => `
             <div><a class="rs-logo" href="/"><i aria-hidden="true"></i>Rushabh Shah</a>
                 <p>Open source, explained in public. Docker Captain and Grafana Champion in Ahmedabad, India.</p>
                 <div class="rs-socials-row">${SOCIALS.map(([n, u]) => `<a href="${u}" rel="me noopener" target="_blank">${n}</a>`).join('')}</div></div>
-            <div><h4>Read</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/til/">Today I learned</a></li><li><a href="/now/">Now</a></li><li><a href="/reading/">Reading</a></li><li><a href="/blog/rss.xml">RSS</a></li></ul></div>
-            <div><h4>Save</h4><ul><li><a href="/linux-foundation-coupon/">Linux Foundation</a></li><li><a href="/finops-coupon/">FinOps</a></li><li><a href="/coupons/">All coupons</a></li><li><a href="/linux-foundation-coupon/kubestronaut/">Kubestronaut</a></li></ul></div>
-            <div><h4>Work</h4><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#work">Hire me</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
-            <div><h4>Me</h4><ul><li><a href="/#about">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
+            <div><p class="rs-fh">Read</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/til/">Today I learned</a></li><li><a href="/now/">Now</a></li><li><a href="/reading/">Reading</a></li><li><a href="/blog/rss.xml">RSS</a></li></ul></div>
+            <div><p class="rs-fh">Save</p><ul><li><a href="/linux-foundation-coupon/">Linux Foundation</a></li><li><a href="/finops-coupon/">FinOps</a></li><li><a href="/coupons/">All coupons</a></li><li><a href="/linux-foundation-coupon/kubestronaut/">Kubestronaut</a></li></ul></div>
+            <div><p class="rs-fh">Work</p><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#work">Hire me</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
+            <div><p class="rs-fh">Me</p><ul><li><a href="/#about">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
         </div>
         <div class="rs-wordbox"><div class="rs-word" aria-hidden="true">RUSHABH SHAH</div></div>
         <div class="rs-fine"><span>&copy; ${now.getFullYear()} ${AUTHOR}. Affiliate links pay me a commission at no cost to you.</span><span><a href="/privacy/">Privacy</a><a href="/blog/rss.xml">RSS</a><a href="/llms.txt">AI-readable bio</a></span></div>
@@ -1829,7 +1829,7 @@ ${header}
                     <span id="post-views"></span>
                     ${post.tags.length ? `<span aria-hidden="true">·</span> ${post.tags.map(tagLink).join(' ')}` : ''}
                 </div>
-                ${post.cover ? `<img src="${post.cover}" alt="" class="w-full rounded-xl border border-border-color mt-8" loading="eager" decoding="async">` : ''}
+                ${post.cover ? `<img src="${post.cover}" alt="" width="1200" height="630" class="w-full rounded-xl border border-border-color mt-8" loading="eager" fetchpriority="high" decoding="async" style="height:auto">` : ''}
             </header>
             ${seriesBox(post)}
             <div class="post-prose">
@@ -1898,9 +1898,34 @@ const cardMedia = (p, extraClass = '') => {
   return `<div class="${cls} post-card-media-blank" style="--card-tint: ${cardTint(p.slug)}" aria-hidden="true"><span>${escapeHtml(label)}</span></div>`;
 };
 
+/* Card thumbnails: an 800px WebP next to every local cover, made once with
+   sharp and committed by the publish workflow. Cards load the thumb and only
+   wide screens pull the full 1200px cover; a missing thumb falls back to it. */
+const THUMBS = path.join(ROOT, 'assets', 'blog', 'thumbs');
+let sharp = null; try { sharp = (await import('sharp')).default; } catch { /* optional */ }
+const thumbOf = (cover) => {
+  if (!cover || !cover.startsWith('/assets/')) return null;
+  const out = path.join(THUMBS, path.basename(cover).replace(/\.[a-z]+$/i, '.webp'));
+  return fs.existsSync(out) ? '/' + path.relative(ROOT, out).split(path.sep).join('/') : null;
+};
+if (sharp) {
+  fs.mkdirSync(THUMBS, { recursive: true });
+  for (const p of all) {
+    if (!p.cover || !p.cover.startsWith('/assets/')) continue;
+    const src = path.join(ROOT, p.cover), out = path.join(THUMBS, path.basename(p.cover).replace(/\.[a-z]+$/i, '.webp'));
+    if (fs.existsSync(src) && !fs.existsSync(out)) await sharp(src).resize({ width: 800 }).webp({ quality: 70 }).toFile(out);
+  }
+}
+const cardImg = (cover, { feature = false, eager = false } = {}) => {
+  const t = thumbOf(cover);
+  const sizes = feature ? '(max-width: 860px) 100vw, 66vw' : '(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw';
+  const src = t ? `src="${t}" srcset="${t} 800w, ${cover} 1200w" sizes="${sizes}"` : `src="${cover}"`;
+  return `<img ${src} alt="" width="1200" height="630" ${eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+};
+
 const postCard = (p, { pinned = false, feature = false } = {}) => `
                     <a href="/blog/${p.slug}/" class="rs-post rs-reveal${feature ? ' rs-post--feature' : ''}">
-                        <span class="rs-post__img">${p.cover ? `<img src="${p.cover}" alt="" width="1200" height="630" loading="lazy" decoding="async">` : `<span class="rs-post__ph" aria-hidden="true">${escapeHtml(p.title)}</span>`}</span>
+                        <span class="rs-post__img">${p.cover ? cardImg(p.cover, { feature, eager: feature }) : `<span class="rs-post__ph" aria-hidden="true">${escapeHtml(p.title)}</span>`}</span>
                         <span class="rs-post__meta">${pinned ? '<b>Pinned</b>' : (p.tags[0] ? `<b>${escapeHtml(p.tags[0].replace(/-/g, ' '))}</b>` : '')}<time datetime="${isoDate(p.date)}">${fmtDate(p.date)}</time><span>${p.minutes} min read</span></span>
                         <h3 class="rs-post__t">${escapeHtml(p.title)}</h3>
                         ${p.description ? `<p class="rs-post__p">${escapeHtml(p.description)}</p>` : ''}
@@ -3754,7 +3779,7 @@ const renderHomeTalks = () => {
                 <a class="rs-home-talk rs-reveal" href="/speaking/#${e.slug}" data-city="${escapeHtml(e.city)}"><time>${fmtShort(e.start)} · ${escapeHtml(e.event.split(',')[0])}</time><h3>${escapeHtml(e.title)}</h3><p>${escapeHtml(e.abstract ? e.abstract.split('. ')[0].replace(/\.$/, '') + '.' : e.city)}</p></a>`).join('');
 };
 const renderHomePosts = () => all.slice(0, 6).map((p, i) => `
-                <a class="rs-post${i === 0 ? ' rs-post--feature' : ''} rs-reveal" href="/blog/${p.slug}/"><span class="rs-post__img">${p.cover ? `<img src="${p.cover}" alt="" width="1200" height="630" loading="lazy" decoding="async">` : ''}</span><span class="rs-post__meta"><b>${escapeHtml((p.tags[0] || 'post').replace(/-/g, ' '))}</b><span>${fmtShort(isoDate(p.date))}</span><span>${p.minutes} min</span></span><h3 class="rs-post__t">${escapeHtml(p.title)}</h3>${i === 0 && p.description ? `<p class="rs-post__p">${escapeHtml(p.description)}</p>` : ''}</a>`).join('');
+                <a class="rs-post${i === 0 ? ' rs-post--feature' : ''} rs-reveal" href="/blog/${p.slug}/"><span class="rs-post__img">${p.cover ? cardImg(p.cover, { feature: i === 0 }) : ''}</span><span class="rs-post__meta"><b>${escapeHtml((p.tags[0] || 'post').replace(/-/g, ' '))}</b><span>${fmtShort(isoDate(p.date))}</span><span>${p.minutes} min</span></span><h3 class="rs-post__t">${escapeHtml(p.title)}</h3>${i === 0 && p.description ? `<p class="rs-post__p">${escapeHtml(p.description)}</p>` : ''}</a>`).join('');
 /* Home proof blocks (programmes + certifications, experience, stack). They
    bring back what the pre-redesign home showed, from the same data. */
 const fmtMonthYear = (d) => new Date(d + "T00:00:00Z").toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
@@ -3917,7 +3942,19 @@ function swapMarker(html, marker, inner) {
 {
   const indexPath = path.join(ROOT, 'index.html');
   let homeHtml = fs.readFileSync(indexPath, 'utf8');
+/* Home hero "Next on stage" card: the next confirmed stage talk from
+     speaking.json, or the latest one given once nothing is booked. */
+  const renderHomeNextTalk = () => {
+    const today = now.toISOString().slice(0, 10);
+    const stage = SPEAKING.engagements.filter(e => STAGE.has(e.kind));
+    const next = stage.filter(e => lastDay(e) >= today).sort((a, b) => a.start.localeCompare(b.start))[0];
+    const last = stage.filter(e => lastDay(e) < today).sort((a, b) => b.start.localeCompare(a.start))[0];
+    const e = next ?? last;
+    if (!e) return '';
+    return `<a href="/speaking/#${e.slug}"><small>${next ? 'Next on stage' : 'Latest talk'}</small><b>${escapeHtml(e.event.split(',')[0].replace(/\s+20\d\d$/, ''))}</b><span>${fmtDay(e.start.slice(0, 10))} &middot; ${escapeHtml(e.city)}</span></a>`;
+  };
   homeHtml = swapMarker(homeHtml, 'Talks injected here', renderHomeTalks());
+  homeHtml = swapMarker(homeHtml, 'Next talk injected here', renderHomeNextTalk());
   homeHtml = swapMarker(homeHtml, 'Posts injected here', renderHomePosts());
   homeHtml = swapMarker(homeHtml, 'Numbers injected here', renderHomeNumbers());
   homeHtml = swapMarker(homeHtml, 'Honors injected here', renderHomeHonors());

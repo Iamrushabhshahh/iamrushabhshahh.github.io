@@ -55,7 +55,7 @@ function CredentialChip({ credential }: { credential: Credential }) {
                 className="h-5 w-5"
               />
             )}
-            <span className="font-fira text-sm font-bold text-[color:var(--accent)]">
+            <span className="font-fira text-sm font-bold text-strong">
               {credential.label}
             </span>
           </span>
