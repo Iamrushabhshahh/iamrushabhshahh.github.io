@@ -10,15 +10,15 @@ Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
 
 10
-talks given or booked, in 4 countries
-612
+talks at conferences and meetups
+4
+countries I have spoken in
+1000+
 RSVPs across the meetups I host
-14
-upstream pull requests in open source
-3
-Linux Foundation exams passed in 31 days
+40+
+pull requests to open source projects
 59%
-AWS spend cut at Genuin, no downtime
+AWS spend cut in a cloud migration, no downtime
 
 The story so far
 
@@ -27,9 +27,9 @@ The story so far
 Three years, five teams.
 
 2023
-### First DevOps job, first talk
+### From Laravel to DevOps
 
-Joined Tridhya Tech as a junior DevOps engineer. Built Docker images, Kubernetes workloads and pipelines, passed AZ-900 and AZ-104, and gave my first tech talk to the team.
+Joined Tridhya Tech as a Laravel trainee, then moved to the DevOps team. Built Docker images, Kubernetes workloads and pipelines, passed AZ-900 and AZ-104, and gave my first tech talk to the team.
 
 2024
 ### Building labs at KodeKloud
@@ -37,14 +37,14 @@ Joined Tridhya Tech as a junior DevOps engineer. Built Docker images, Kubernetes
 Built hands-on cloud labs used to teach Azure, AWS and GCP. Gave my first community talk, Grafana 101, in May, represented KodeKloud at the [first KubeCon India](https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-india/) in December, and started hosting [Grafana & Friends Ahmedabad](https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/).
 KubeCon India 2024 first meetup talk Grafana & Friends
 2025
-### Hindi docs and a cloud migration
+### Teaching, then fintech
 
-Cut AWS spend 59% at Genuin and moved it to Oracle Cloud with zero downtime. Taught Azure to enterprise teams at Koenig. Got the **Hindi edition of ebpf.io** merged, then joined Orocorp Technologies Private Limited.
-ebpf.io/hi-in 59% cost cut AWS to OCI
+Cut AWS spend 59% and moved a platform to Oracle Cloud with zero downtime. Spent a while as an Azure corporate trainer at [Koenig Solutions](https://www.koenig-solutions.com/), and learned that I only want to teach where the learner comes first. Got the **Hindi edition of ebpf.io** merged. Then joined Orocorp Technologies, a gold-loan platform working with Federal Bank and other banks as lenders, alongside its sister NBFC, Tenmark Capital. My work there sits where infrastructure meets fintech compliance.
+ebpf.io/hi-in 59% cost cut fintech compliance
 2026
-### Docker Captain, Grafana Champion, more talks
+### Docker Captain, Grafana Champion, a global stage
 
-Selected into both programs. Passed KCNA, KCSA and CKAD in a month. Spoke in Vadodara, co-presented a pre-recorded segment at PromCon EU, with FluxCon in Salt Lake City and two talks in Tokyo next. And started building courses.
+Selected as a Docker Captain and a Grafana Champion. My talks started getting accepted outside India: a co-presented, pre-recorded segment at PromCon EU, then FluxCon in Salt Lake City and two talks in Tokyo. Spoke in Vadodara, and started building courses.
 Docker Captain Grafana Champion Tokyo &times; 2
 
 Open source
@@ -145,11 +145,11 @@ Experience
 
 Five teams in three years: product startups, a learning platform, and enterprise classrooms. [Download the r&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf).
 
-- Jun 2025 to Present DevOps Engineer *at Orocorp Technologies Private Limited* Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.
-- Jun 2025 to Jul 2025 Corporate Trainer *at Koenig Solutions Pvt. Ltd.* Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.
+- Jun 2025 to Present DevOps Engineer *at Orocorp Technologies Private Limited* Orocorp runs a gold-loan platform with Federal Bank and other banks as lenders, alongside its sister NBFC, Tenmark Capital. I work where infrastructure meets fintech compliance: operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.
+- Jun 2025 to Jul 2025 Corporate Trainer *at Koenig Solutions Pvt. Ltd.* Azure corporate trainer at an IT education provider. Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.
 - Jan 2025 to May 2025 DevOps Engineer *at Genuin* Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS to Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.
 - Jul 2024 to Dec 2024 Jr DevOps Engineer *at KodeKloud* Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.
-- Jun 2023 to Jun 2024 Jr DevOps Engineer *at Tridhya Tech Limited* Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.
+- Jun 2023 to Jun 2024 Laravel Trainee, then Jr DevOps Engineer *at Tridhya Tech Limited* Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.
 
 ### Tools I reach for
 Containers & Orchestration Kubernetes Docker Helm Argo CD IaC & Automation Terraform Ansible GitHub Actions Cloud Platforms AWS Azure GCP OCI Observability Prometheus Grafana Loki / Tempo / Mimir OpenTelemetry Languages & Tooling Linux Bash Python Git CI/CD
@@ -219,14 +219,10 @@ A logging misconfiguration pointed two dozen services at a DNS name nobody ever 
 
 I&rsquo;m a **DevOps engineer at Orocorp Technologies Private Limited** in Ahmedabad. I answer every message, and I&rsquo;m happiest when someone learns something because of a talk, a post or a pull request I made.
 
-[GitHub iamrushabhshahh](https://github.com/iamrushabhshahh)[LinkedIn iamrushabhshahh](https://www.linkedin.com/in/iamrushabhshahh/)[X @iamrushabhshahh](https://x.com/iamrushabhshahh)[YouTube @iamrushabhshahh](https://www.youtube.com/@iamrushabhshahh)[Instagram iamrushabhshahh](https://www.instagram.com/iamrushabhshahh/)[Sessionize speaker profile](https://sessionize.com/iamrushabhshahh/)[Credly verified badges](https://www.credly.com/users/iamrushabhshahh)[Docker Captain profile](https://www.docker.com/captains/rushabh-shah/)[Grafana Champions](https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn)[Substack newsletter](https://substack.com/@rushabhshah124804)[dev.to articles](https://dev.to/iamrushabhshahh)[Hashnode articles](https://iamrushabhshahh.hashnode.dev/)
-
 Contact
 ## Say hi.
 
 I read every message myself and usually reply within 48 hours. I am in Ahmedabad (IST).
-
-**Rushabh Shah** Replies within 48 hours
 
 People write to me about
 

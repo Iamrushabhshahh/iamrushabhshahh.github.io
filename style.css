@@ -2050,7 +2050,7 @@ summary:focus-visible,[tabindex]:focus-visible{
 .rs-split .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .06em; }
 .rs-js .rs-split .w > span { display: inline-block; transform: translateY(105%); transition: transform .9s var(--rs-ease); }
 .rs-js .rs-split.is-in .w > span { transform: none; }
-.rs-odo { display: flex; font: 600 clamp(48px, 5vw, 76px)/1 var(--rs-display); letter-spacing: -.04em; height: 1em; overflow: hidden; color: var(--rs-text); }
+.rs-odo { display: flex; font: 600 clamp(44px, 4.6vw, 70px)/1 var(--rs-display); letter-spacing: -.04em; height: 1em; overflow: hidden; color: var(--rs-text); }
 .rs-odo .col { display: flex; flex-direction: column; align-items: center; transition: transform 1.6s var(--rs-ease), width 1.6s var(--rs-ease); }
 .rs-odo .col span { height: 1em; display: block; }
 .rs-odo sup { font-size: .4em; color: var(--rs-sig); align-self: flex-start; margin-left: 3px; line-height: 1.4; }

@@ -3609,14 +3609,14 @@ const CERTS = CERT_DATA.filter(c => c.status === 'earned')
 
 const EXPERIENCE = [
   { company: 'Orocorp Technologies Private Limited', role: 'DevOps Engineer', date: 'Jun 2025 - Present', current: true,
-    desc: 'Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.' },
+    desc: 'Orocorp runs a gold-loan platform with Federal Bank and other banks as lenders, alongside its sister NBFC, Tenmark Capital. I work where infrastructure meets fintech compliance: operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.' },
   { company: 'Koenig Solutions Pvt. Ltd.', role: 'Corporate Trainer', date: 'Jun 2025 - Jul 2025',
-    desc: 'Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.' },
+    desc: 'Azure corporate trainer at an IT education provider. Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.' },
   { company: 'Genuin', role: 'DevOps Engineer', date: 'Jan 2025 - May 2025',
     desc: 'Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.' },
   { company: 'KodeKloud', role: 'Jr DevOps Engineer', date: 'Jul 2024 - Dec 2024',
     desc: 'Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.' },
-  { company: 'Tridhya Tech Limited', role: 'Jr DevOps Engineer', date: 'Jun 2023 - Jun 2024',
+  { company: 'Tridhya Tech Limited', role: 'Laravel Trainee, then Jr DevOps Engineer', date: 'Jun 2023 - Jun 2024',
     desc: 'Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.' },
 ];
 
@@ -3814,14 +3814,13 @@ const renderHomeNumbers = () => {
   const today = now.toISOString().slice(0, 10);
   const stage = SPEAKING.engagements.filter(e => STAGE.has(e.kind));
   const countries = new Set(stage.map(e => e.country)).size;
-  const rsvps = SPEAKING.engagements.filter(e => e.organizer === 'Grafana & Friends Ahmedabad' && e.rsvps).reduce((s, e) => s + e.rsvps, 0);
   const cell = (n, label, sup = '') => `<div class="rs-reveal"><div class="rs-odo" data-n="${n}"${sup ? ` data-sup="${sup}"` : ''}>${n}${sup}</div><p>${label}</p></div>`;
   return [
-    cell(stage.length, `talks given or booked, in ${countries} countries`),
-    cell(rsvps, 'RSVPs across the meetups I host'),
-    cell(14, 'upstream pull requests in open source'),
-    cell(3, 'Linux Foundation exams passed in 31 days'),
-    cell(59, 'AWS spend cut at Genuin, no downtime', '%'),
+    cell(stage.length, 'talks at conferences and meetups'),
+    cell(countries, 'countries I have spoken in'),
+    cell(1000, 'RSVPs across the meetups I host', '+'),
+    cell(40, 'pull requests to open source projects', '+'),
+    cell(59, 'AWS spend cut in a cloud migration, no downtime', '%'),
   ].join('');
 };
 

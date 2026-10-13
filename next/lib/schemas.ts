@@ -172,6 +172,8 @@ export const roleSchema = z.object({
   title: prose(80),
   org: prose(120),
   since: z.string().regex(/^\d{4}(-\d{2})?$/, 'Expected YYYY or YYYY-MM'),
+  /** Set when the role has ended; ongoing roles leave it out. */
+  until: z.string().regex(/^\d{4}(-\d{2})?$/, 'Expected YYYY or YYYY-MM').optional(),
   summary: prose(300),
   url: linkUrl.optional(),
 });

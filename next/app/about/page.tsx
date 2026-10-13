@@ -182,7 +182,7 @@ export default function AboutPage() {
             <ul>
               {roles.map((r) => (
                 <li key={r.org} className={row}>
-                  <span className={when}>since {month(r.since)}</span>
+                  <span className={when}>{r.until ? `${month(r.since)} to ${month(r.until)}` : `since ${month(r.since)}`}</span>
                   <span>
                     {r.url ? (
                       <a href={r.url} target="_blank" rel="noopener" className={link}>

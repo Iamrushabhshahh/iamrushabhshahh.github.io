@@ -109,7 +109,7 @@ export default function SpeakingPage() {
           </h2>
           <p className="mb-6 text-sm text-muted">The work between events.</p>
           <ul className="grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-3">
-            {speaking.roles.map((r) => (
+            {speaking.roles.filter((r) => !r.until).map((r) => (
               <li key={r.org} className="rounded-lg border border-[var(--border-color)] bg-[var(--panel-color)] p-5">
                 <p className="font-fira text-xs text-primary">
                   {r.title} · since {sinceLabel(r.since)}
