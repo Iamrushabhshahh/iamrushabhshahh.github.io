@@ -38,3 +38,6 @@ export const AV_REQUIREMENTS = [
   { label: 'Network', value: 'Live demos hit a real cluster. If the venue network is unreliable, tell me in advance and I will switch to a recorded fallback rather than risk dead air.' },
   { label: 'Remote', value: 'Can present live by video call or send a pre-recorded segment when travel is not possible.' },
 ];
+
+/** Google Calendar booking page for a free 20 minute call. */
+export const BOOKING_URL = 'https://calendar.app.google/fFL7eubAdig7KZJo9';
