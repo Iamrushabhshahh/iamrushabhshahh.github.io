@@ -4,9 +4,9 @@ every star is a project I've contributed to. hover one.
 
 # Rushabh Shah is **an open source contributor**
 
-I build, teach and speak about **open source infrastructure**. From the Hindi edition of ebpf.io to stages in Tokyo and Salt Lake City, I make the cloud native world easier to learn.
+I build, teach and speak about **open source infrastructure**. I translated ebpf.io into Hindi, I co-organize meetups in Ahmedabad, and my next talks are at FluxCon in Salt Lake City and two events in Tokyo.
 
-[Learn with me](#courses)[Book a talk](https://rushabhshah.dev/speaking/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
+[Read the blog](https://rushabhshah.dev/blog/)[Speaking](https://rushabhshah.dev/speaking/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
 
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
@@ -24,9 +24,9 @@ AWS spend cut at Genuin, no downtime
 
 The story so far
 
-## From first terminal to stages abroad.
+## How I got here.
 
-Three years, five teams, and a habit of learning in public.
+Three years, five teams.
 
 2023
 ### First DevOps job, first talk
@@ -34,26 +34,26 @@ Three years, five teams, and a habit of learning in public.
 Joined Tridhya Tech as a junior DevOps engineer. Built Docker images, Kubernetes workloads and pipelines, passed AZ-900 and AZ-104, and gave my first tech talk to the team.
 
 2024
-### Teaching at scale with KodeKloud
+### Building labs at KodeKloud
 
 Built hands-on cloud labs used to teach Azure, AWS and GCP. Gave my first community talk, Grafana 101, in May, represented KodeKloud at the first KubeCon India in December, and started hosting Grafana & Friends Ahmedabad.
 KubeCon India 2024 first meetup talk Grafana & Friends
 2025
-### Open source in Hindi, production at scale
+### Hindi docs and a cloud migration
 
 Cut AWS spend 59% at Genuin and moved it to Oracle Cloud with zero downtime. Taught Azure to enterprise teams at Koenig. Got the **Hindi edition of ebpf.io** merged, then joined Orocorp Technologies Private Limited.
 ebpf.io/hi-in 59% cost cut AWS to OCI
 2026
-### Docker Captain, Grafana Champion, on tour
+### Docker Captain, Grafana Champion, more talks
 
 Selected into both programs. Passed KCNA, KCSA and CKAD in a month. Spoke in Vadodara and at PromCon EU, with FluxCon in Salt Lake City and two talks in Tokyo next. And started building courses.
 Docker Captain Grafana Champion Tokyo &times; 2
 
 Open source
 
-## Merged upstream, in public.
+## Open source work.
 
-Small, real contributions to projects millions of engineers depend on. CNCF DevStats score: 178.
+Small contributions, merged upstream. CNCF DevStats score: 178.
 
 MERGED · 2025
 ### ebpf.io
@@ -85,21 +85,21 @@ Hindi translations of the Kubernetes documentation.
 
 Recognition
 
-## Picked by the projects I build on.
+## Programmes and certifications.
 
-Two community programmes, and certifications you can verify yourself.
+Each one links to the issuer, so you can check it there.
 
 Docker, Inc. · Selected 2026
 ### Docker Captain
 
-Recognised by Docker for container and Kubernetes expertise, production experience and steady community contribution.
+Docker's community programme for people who teach, write and speak about containers. Selected in 2026.
 
 (https://rushabhshah.dev/docker-captain/)
 
 Grafana Labs · Selected 2026
 ### Grafana Champion
 
-Invitation-only programme for people who grow the observability community. I run Grafana & Friends Ahmedabad and LGTM workshops.
+Grafana Labs' community programme. I co-organize Grafana & Friends Ahmedabad. Selected in 2026.
 
 (https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn)
 
@@ -109,7 +109,7 @@ Studying for next: CKA, CKS, OTCA. [All certifications →](https://rushabhshah.
 
 On stage
 
-## Coming to a stage near you.
+## Upcoming talks.
 
 9 Nov 2026 · FluxCon North America 2026
 ### Your Git Repo Is Not a Backup: Kubernetes Disaster Recovery with Flux and Velero
@@ -132,18 +132,18 @@ Approving a container image by tag approves something that can change after you 
 
 (https://rushabhshah.dev/speaking/#open-compliance-summit-2026)
 
-**#RUSHABHONTOUR** 🇮🇳 🇩🇪 🇺🇸 🇯🇵 Ahmedabad · Vadodara · Munich · Salt Lake City · Tokyo [Every talk and the speaker kit](https://rushabhshah.dev/speaking/)
+**Cities this year** 🇮🇳 🇩🇪 🇺🇸 🇯🇵 Ahmedabad · Vadodara · Munich · Salt Lake City · Tokyo [Every talk and the speaker kit](https://rushabhshah.dev/speaking/)
 
 LINUX FOUNDATION EDUCATION PARTNER
-## 30% off. Every exam. All year.
+## RUSHABH30: 30% off Linux Foundation exams
 
-RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
+RUSHABH30: 30% off Linux Foundation certifications and courses on training.linuxfoundation.org. I am a Linux Foundation Education partner and earn a commission when you use it.
 
-RUSHABH30 [Prices and the fine print →](https://rushabhshah.dev/linux-foundation-coupon/)[Also: 20% off FinOps certifications](https://rushabhshah.dev/coupons/)
+RUSHABH30 [Prices per exam →](https://rushabhshah.dev/linux-foundation-coupon/)[Also: 20% off FinOps certifications](https://rushabhshah.dev/coupons/)
 
 Experience
 
-## Where I've done the work.
+## Experience.
 
 Five teams in three years: product startups, a learning platform, and enterprise classrooms. [Download the r&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf).
 
@@ -156,13 +156,13 @@ Five teams in three years: product startups, a learning platform, and enterprise
 ### Tools I reach for
 Containers & Orchestration Kubernetes Docker Helm Argo CD IaC & Automation Terraform Ansible GitHub Actions Cloud Platforms AWS Azure GCP OCI Observability Prometheus Grafana Loki / Tempo / Mimir OpenTelemetry Languages & Tooling Linux Bash Python Git CI/CD
 
-Work with me
+Courses and consulting
 
-## Learn it with me, or hire me to do it.
+## What I can help with.
 
 ### Courses
 
-Video courses on containers, Kubernetes and observability, built on the exams I passed this year.
+I am recording video courses on Kubernetes and observability. Nothing is out yet. Join the list to hear when the first one is.
 
 - CKAD first
 - KCNA and KCSA next
@@ -177,9 +177,9 @@ Talks, workshops and hands-on help for teams.
 - Talks and workshops conferences, companies, colleges
 - Kubernetes and GitOps setup or review
 - Observability Prometheus, Grafana, OTel
-- Cloud cost audit cut one bill 59%
+- Cloud cost review AWS, Azure, GCP, OCI
 
-[Book a free 20 minute call](#contact)
+[Email me](#contact)
 
 Writing
 

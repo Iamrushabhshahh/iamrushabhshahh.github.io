@@ -354,7 +354,7 @@ export default function AboutPage() {
 
         <section className="mt-20 rounded-md border border-[var(--border-color)] bg-[var(--panel-color)] p-8 text-center">
           <p className="rs-h3" style={{ margin: 0 }}>
-            Running an event or a team that needs this?
+            Get in touch
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <a className="rs-btn rs-btn--hot rs-btn--sm" href="mailto:hello@rushabhshah.dev?subject=Speaking%20invitation">

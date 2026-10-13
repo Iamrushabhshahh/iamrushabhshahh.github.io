@@ -1489,7 +1489,7 @@ const rsHeader = ({ active = null, dealsHref = '/linux-foundation-coupon/', prom
                 <button type="button" class="rs-tool rs-menu-btn" id="rs-menu" aria-controls="rs-sheet" aria-expanded="false">Menu</button>
             </div>
         </div>${promo ? `
-        <a class="rs-promo" href="/linux-foundation-coupon/">30% off every Linux Foundation certification with code <b>RUSHABH30</b> &rarr;</a>` : ''}
+        <a class="rs-promo" href="/linux-foundation-coupon/">Linux Foundation code <b>RUSHABH30</b>: 30% off certifications &rarr;</a>` : ''}
     </header>
     <nav class="rs-sheet" id="rs-sheet" aria-label="All pages" hidden>
         <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#work">Work with me</a>
@@ -1989,8 +1989,8 @@ const yearSections = [...byYear.entries()].map(([year, posts], yi) => `
 const couponPromoSection = `
             <section class="rs-blog-sec">
                 <a href="/linux-foundation-coupon/" class="rs-strip-promo">
-                    <span class="text-sm text-gray-300">🎓 Prepping for the CKA, CKAD or CKS? Code <span class="text-primary-color font-bold">RUSHABH30</span> takes 30% off every Linux Foundation certification, all year.</span>
-                    <span class="rs-btn rs-btn--hot rs-btn--sm">Get the discount →</span>
+                    <span class="text-sm text-gray-300">Studying for a Linux Foundation exam? Code <span class="text-primary-color font-bold">RUSHABH30</span> takes 30% off. I earn a commission when you use it.</span>
+                    <span class="rs-btn rs-btn--sm">Prices per exam →</span>
                 </a>
             </section>`;
 
@@ -2397,7 +2397,7 @@ const saleHomeCardHtml = () => saleLive
                 </p>`
   : `
                 <p class="text-sm text-gray-300 leading-relaxed">
-                    <span class="font-fira font-bold text-primary-color">RUSHABH30</span>: as a Linux Foundation Education partner, my community gets <strong class="text-white">30% off all Linux Foundation certifications</strong> (CKA, CKAD, CKS, KCNA) and courses, all year round.
+                    <span class="font-fira font-bold text-primary-color">RUSHABH30</span>: 30% off Linux Foundation certifications and courses on training.linuxfoundation.org. I am a Linux Foundation Education partner and earn a commission when you use it.
                 </p>`;
 
 if (saleLive) {
@@ -3788,9 +3788,9 @@ const fmtMonthYear = (d) => new Date(d + "T00:00:00Z").toLocaleDateString('en-US
 const renderHomeHonors = () => {
   const progs = [
     { href: '/docker-captain/', icon: 'docker', org: 'Docker, Inc.', name: 'Docker Captain', ext: false,
-      desc: 'Recognised by Docker for container and Kubernetes expertise, production experience and steady community contribution.' },
+      desc: 'Docker\'s community programme for people who teach, write and speak about containers. Selected in 2026.' },
     { href: 'https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn', icon: 'grafana', org: 'Grafana Labs', name: 'Grafana Champion', ext: true,
-      desc: 'Invitation-only programme for people who grow the observability community. I run Grafana &amp; Friends Ahmedabad and LGTM workshops.' },
+      desc: 'Grafana Labs\' community programme. I co-organize Grafana &amp; Friends Ahmedabad. Selected in 2026.' },
   ].map(g => `<a class="rs-prog rs-reveal" href="${g.href}"${g.ext ? ' target="_blank" rel="noopener"' : ''}><span class="rs-prog__top"><img class="mono-icon" src="/assets/icons/mono/${g.icon}.svg" alt="" width="28" height="28"><small>${g.org} &middot; Selected 2026</small></span><h3>${g.name}</h3><p>${g.desc}</p></a>`).join('');
   const earned = CERT_DATA.filter(c => c.status === 'earned').map(c => {
     const tag = c.proofUrl ? 'a' : 'div';
