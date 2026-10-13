@@ -101,7 +101,7 @@ Grafana Labs · Selected 2026
 
 Invitation-only programme for people who grow the observability community. I run Grafana & Friends Ahmedabad and LGTM workshops.
 
-(https://grafana.com/community/champions/)
+(https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn)
 
 [CKAD Certified Kubernetes Application Developer The Linux Foundation · Sep 2026 · verify ↗](https://www.credly.com/badges/403326fb-ec23-479e-a04b-d70dc73428a5)[KCSA Kubernetes and Cloud Native Security Associate The Linux Foundation · Sep 2026 · verify ↗](https://www.credly.com/badges/16538648-bf8b-4dfe-86cb-6f8d279b5742)[KCNA Kubernetes and Cloud Native Associate The Linux Foundation · Aug 2026 · verify ↗](https://www.credly.com/badges/fed261d0-7cd0-4ae7-89c1-a7437a4cc964) **AZ-104** Azure Administrator Associate Microsoft **AZ-900** Azure Fundamentals Microsoft
 
@@ -221,7 +221,7 @@ A logging misconfiguration pointed two dozen services at a DNS name nobody ever 
 
 I&rsquo;m a **DevOps engineer at Orocorp Technologies Private Limited** in Ahmedabad. I answer every message, and I&rsquo;m happiest when someone learns something because of a talk, a post or a pull request I made.
 
-[GitHub iamrushabhshahh](https://github.com/iamrushabhshahh)[LinkedIn iamrushabhshahh](https://www.linkedin.com/in/iamrushabhshahh/)[X @iamrushabhshahh](https://x.com/iamrushabhshahh)[YouTube @iamrushabhshahh](https://www.youtube.com/@iamrushabhshahh)[Instagram iamrushabhshahh](https://www.instagram.com/iamrushabhshahh/)[Sessionize speaker profile](https://sessionize.com/iamrushabhshahh/)[Credly verified badges](https://www.credly.com/users/iamrushabhshahh)[Docker Captain profile](https://www.docker.com/captains/rushabh-shah/)[Grafana Champions](https://grafana.com/community/champions/)[Substack newsletter](https://substack.com/@rushabhshah124804)[dev.to articles](https://dev.to/iamrushabhshahh)[Hashnode articles](https://iamrushabhshahh.hashnode.dev/)
+[GitHub iamrushabhshahh](https://github.com/iamrushabhshahh)[LinkedIn iamrushabhshahh](https://www.linkedin.com/in/iamrushabhshahh/)[X @iamrushabhshahh](https://x.com/iamrushabhshahh)[YouTube @iamrushabhshahh](https://www.youtube.com/@iamrushabhshahh)[Instagram iamrushabhshahh](https://www.instagram.com/iamrushabhshahh/)[Sessionize speaker profile](https://sessionize.com/iamrushabhshahh/)[Credly verified badges](https://www.credly.com/users/iamrushabhshahh)[Docker Captain profile](https://www.docker.com/captains/rushabh-shah/)[Grafana Champions](https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn)[Substack newsletter](https://substack.com/@rushabhshah124804)[dev.to articles](https://dev.to/iamrushabhshahh)[Hashnode articles](https://iamrushabhshahh.hashnode.dev/)
 
 Contact
 ## Say hi.

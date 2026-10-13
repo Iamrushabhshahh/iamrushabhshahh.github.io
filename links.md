@@ -12,7 +12,7 @@ DevOps Engineer · Docker Captain · Grafana Champion
 
 [Docker Captain profile](https://www.docker.com/contributors/rushabh-shah/)
 
-[Grafana Champion profile](https://grafana.com/community/champions/)
+[Grafana Champion profile](https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn)
 
 [30% off Linux Foundation certs](https://rushabhshah.dev/linux-foundation-coupon/)
 

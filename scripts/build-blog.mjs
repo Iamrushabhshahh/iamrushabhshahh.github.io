@@ -3787,7 +3787,7 @@ const renderHomeHonors = () => {
   const progs = [
     { href: '/docker-captain/', icon: 'docker', org: 'Docker, Inc.', name: 'Docker Captain', ext: false,
       desc: 'Recognised by Docker for container and Kubernetes expertise, production experience and steady community contribution.' },
-    { href: 'https://grafana.com/community/champions/', icon: 'grafana', org: 'Grafana Labs', name: 'Grafana Champion', ext: true,
+    { href: 'https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn', icon: 'grafana', org: 'Grafana Labs', name: 'Grafana Champion', ext: true,
       desc: 'Invitation-only programme for people who grow the observability community. I run Grafana &amp; Friends Ahmedabad and LGTM workshops.' },
   ].map(g => `<a class="rs-prog rs-reveal" href="${g.href}"${g.ext ? ' target="_blank" rel="noopener"' : ''}><span class="rs-prog__top"><img class="mono-icon" src="/assets/icons/mono/${g.icon}.svg" alt="" width="28" height="28"><small>${g.org} &middot; Selected 2026</small></span><h3>${g.name}</h3><p>${g.desc}</p></a>`).join('');
   const earned = CERT_DATA.filter(c => c.status === 'earned').map(c => {
