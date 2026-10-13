@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "sharp": "^0.34.4"
+  },
+  "overrides": {
+    "js-yaml": "^3.15.2"
   }
 }
