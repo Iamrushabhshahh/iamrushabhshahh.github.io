@@ -1,7 +1,5 @@
 every star is a project I've contributed to. hover one.
 
-**●** Rushabh Shah
-
 # Rushabh Shah is **an open source educator**
 
 I build, teach and speak about **open source infrastructure**. I translated ebpf.io into Hindi, I co-organize meetups in Ahmedabad, and my next talks are at FluxCon in Salt Lake City and two events in Tokyo.
