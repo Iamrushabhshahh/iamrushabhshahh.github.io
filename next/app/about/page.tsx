@@ -70,7 +70,9 @@ const profiles = person.sameAs.map((url) => ({
   label: PROFILE_LABEL.find(([re]) => re.test(url))?.[1] ?? new URL(url).hostname,
 }));
 
-const RECOGNITION_IDS = ['docker-captain', 'grafana-champion', 'devstats', 'ebpf-translator'];
+/** Programmes I was selected into. Contribution metrics sit under open source. */
+const RECOGNITION_IDS = ['docker-captain', 'grafana-champion'];
+const OSS_IDS = ['ebpf-translator', 'devstats'];
 
 const BADGES = [
   { label: 'Docker Captain', img: '/assets/icons/color/docker-1d63ed.svg', href: 'https://www.docker.com/contributors/rushabh-shah/' },
@@ -89,6 +91,7 @@ const tile =
   'flex h-full flex-col items-center gap-3 rounded-md border border-[var(--border-color)] bg-[var(--panel-color)] p-5 text-center transition-colors hover:border-[var(--primary-color)]';
 
 export default function AboutPage() {
+  const ossCreds = OSS_IDS.map((id) => credentials.find((c) => c.id === id)).filter((c) => c !== undefined);
   const recognition = credentials.filter((c) => RECOGNITION_IDS.includes(c.id)).sort((a, b) => b.year - a.year);
   const earned = certs
     .filter((c) => c.status === 'earned')
@@ -196,8 +199,19 @@ export default function AboutPage() {
           </section>
 
           <section aria-labelledby="oss">
-            <h2 id="oss" className={h2}>Open source, merged upstream</h2>
+            <h2 id="oss" className={h2}>Open source</h2>
             <ul>
+              {ossCreds.map((c) => (
+                <li key={c.id} className={row}>
+                  <span className={when}>{c.year}</span>
+                  <span>
+                    <a href={c.proofUrl} target="_blank" rel="noopener" className={link}>
+                      {c.id === 'devstats' ? 'CNCF DevStats score: 178' : 'ebpf.io in Hindi'}
+                    </a>
+                    <span className="block text-sm text-muted">{c.detail}.</span>
+                  </span>
+                </li>
+              ))}
               {merged.map((c) => (
                 <li key={c.prUrl} className={row}>
                   <span className={when}>{month(c.mergedAt as string)}</span>

@@ -36,7 +36,7 @@ Joined Tridhya Tech as a junior DevOps engineer. Built Docker images, Kubernetes
 2024
 ### Building labs at KodeKloud
 
-Built hands-on cloud labs used to teach Azure, AWS and GCP. Gave my first community talk, Grafana 101, in May, represented KodeKloud at the first KubeCon India in December, and started hosting Grafana & Friends Ahmedabad.
+Built hands-on cloud labs used to teach Azure, AWS and GCP. Gave my first community talk, Grafana 101, in May, represented KodeKloud at the [first KubeCon India](https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-india/) in December, and started hosting [Grafana & Friends Ahmedabad](https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/).
 KubeCon India 2024 first meetup talk Grafana & Friends
 2025
 ### Hindi docs and a cloud migration

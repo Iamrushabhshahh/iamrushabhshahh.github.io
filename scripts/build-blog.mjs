@@ -4000,6 +4000,54 @@ syncChrome('privacy/index.html');
 syncChrome('404.html');
 syncChrome('index.html', { promo: false, overlay: true });
 
+/* Tables get structure the CSS can use: a class per table shape, a class per
+   price column (list, with code, saving), and each cell's column name in
+   data-label so phones can show a row as a labelled card instead of making
+   readers scroll sideways to reach the price. Runs in the final pass over
+   every page and skips tables it has already done, so it is idempotent. */
+const plainText = (h) => decodeEntities(h.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+const unpolishTable = (t) => t
+  .replace(/ class="rs-tbl[^"]*"/, '')
+  .replace(/<(t[dh])((?:\s[^>]*)?)>/g, (m, tag, a) => `<${tag}${a
+    .replace(/ data-label="[^"]*"/, '')
+    .replace(/ class="((?:list|deal|save|num|lead)(?: (?:list|deal|save|num|lead))*)"/, '')}>`)
+  .replace(/<span class="rs-tbl__sub">([\s\S]*?)<\/span>/g, ' ($1)');
+const polishTables = (html) => html.replace(/<table(\s[^>]*)?>[\s\S]*?<\/table>/g, (whole0) => {
+  const whole = unpolishTable(whole0);
+  const [, attrs = '', body] = whole.match(/^<table(\s[^>]*)?>([\s\S]*)<\/table>$/);
+  const open = (c) => /class="/.test(attrs) ? `<table${attrs.replace(/class="/, `class="${c} `)}>` : `<table${attrs} class="${c}">`;
+  const head = (body.match(/<thead[\s\S]*?<\/thead>/) || [''])[0];
+  const heads = [...head.matchAll(/<th(?:\s[^>]*)?>([\s\S]*?)<\/th>/g)].map((m) => plainText(m[1]));
+  const kind = (h = '') => /save/i.test(h) ? 'save' : /^with /i.test(h) ? 'deal' : /list price|^price/i.test(h) ? 'list' : '';
+  const isNum = (t) => /^(~|≈)?\s*\$[\d,.]+|^varies$|^free$|^n\/a$|^[–—-]$/i.test(t);
+  if (heads.length) {
+    const cols = heads.map(kind);
+    const numCol = heads.map((_, i) => ['list', 'deal', 'save'].includes(cols[i]) || [...body.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)]
+      .map((r) => [...r[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)][i]).filter(Boolean)
+      .every((c) => isNum(plainText(c[1]))));
+    let ci = 0;
+    const newHead = head.replace(/<th(\s[^>]*)?>/g, (m, a) => {
+      const i = ci++; const cls = [cols[i], numCol[i] && 'num'].filter(Boolean).join(' ');
+      return cls ? `<th${a || ''} class="${cls}">` : m;
+    });
+    const tbody = body.replace(head, '').replace(/<tr([^>]*)>([\s\S]*?)<\/tr>/g, (m, ta, row) => {
+      let i = 0;
+      return `<tr${ta}>` + row.replace(/<td([^>]*)>([\s\S]*?)<\/td>/g, (_, a, cell) => {
+        const k = i++;
+        const strike = cols[k] !== 'list' || /\$/.test(plainText(cell));
+        const cls = [strike && cols[k], numCol[k] && 'num', k === 0 && 'lead'].filter(Boolean).join(' ');
+        const lab = heads[k] ? ` data-label="${heads[k].replace(/"/g, '&quot;')}"` : '';
+        if (k === 0) cell = cell.replace(/^(\s*<strong>[\s\S]*?<\/strong>)\s*\(([^()]*(?:\([^()]*\))?[^()]*)\)\s*$/, '$1<span class="rs-tbl__sub">$2</span>');
+        return `<td${a}${cls ? ` class="${cls}"` : ''}${lab}>${cell}</td>`;
+      }) + '</tr>';
+    });
+    return `${open('rs-tbl rs-tbl--data')}${newHead}${tbody}</table>`;
+  }
+  const rows = [...body.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)];
+  const kv = rows.length && rows.every((r) => (r[1].match(/<td/g) || []).length === 2);
+  return `${open(kv ? 'rs-tbl rs-tbl--kv' : 'rs-tbl')}${body}</table>`;
+});
+
 /* Final pass: stamp the asset fingerprint into every page on disk, generated or
    hand-authored. Doing it per-write-path missed the pages the build does not
    otherwise touch (/links/, /privacy/, /docker-captain/), which then served an
@@ -4015,7 +4063,7 @@ syncChrome('index.html', { promo: false, overlay: true });
         walkHtml(full);
       } else if (e.name.endsWith('.html')) {
         const before = fs.readFileSync(full, 'utf8');
-        const after = stampAssets(before);
+        const after = polishTables(stampAssets(before));
         if (after !== before) { fs.writeFileSync(full, after); stamped++; }
       }
     }

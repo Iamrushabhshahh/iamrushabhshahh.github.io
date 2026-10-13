@@ -2173,3 +2173,76 @@ a.rs-cert:hover { border-color: var(--rs-sig); transform: translateY(-2px); }
 .rs-links .tech-card::after { display: none; }
 .rs-links h1 { font: 600 32px/1.1 var(--rs-display); letter-spacing: -.02em; color: var(--rs-text); }
 .rs-links .tech-card .text-white { color: var(--rs-text); }
+
+/* ---------- tables (rs-tbl) ----------
+   Classes come from polishTables() in build-blog.mjs. One quiet panel with
+   horizontal rules only: no cell grid, no filled header. Price columns are
+   right-aligned in tabular figures; the list price is struck through so the
+   eye lands on the price with the code, and the saving reads as a badge.
+   Specificity beats the older .post-prose table rules on purpose. */
+.post-prose table.rs-tbl, table.rs-tbl {
+  display: table; width: 100%; max-width: 100%; margin: 1.6em 0 2em;
+  border-collapse: separate; border-spacing: 0; background: rgba(var(--neutral-rgb), .02);
+  border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden;
+  font-size: .94rem; line-height: 1.5;
+}
+.post-prose table.rs-tbl th, table.rs-tbl th {
+  background: none; border: 0; border-bottom: 1px solid var(--border-color);
+  padding: 14px 18px 12px; text-align: left; vertical-align: bottom;
+  font: 500 11px/1.4 'Martian Mono', 'Martian-Mono-fallback', monospace; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted-color); white-space: nowrap;
+}
+.post-prose table.rs-tbl td, table.rs-tbl td {
+  border: 0; border-bottom: 1px solid rgba(var(--neutral-rgb), .07);
+  padding: 16px 18px; text-align: left; vertical-align: middle; color: var(--text-color);
+}
+table.rs-tbl tbody tr:last-child td { border-bottom: 0; }
+table.rs-tbl tbody tr { transition: background-color .2s; }
+table.rs-tbl tbody tr:hover { background: rgba(var(--neutral-rgb), .035); }
+table.rs-tbl th.num, table.rs-tbl td.num { text-align: right; white-space: nowrap; width: 1%; }
+table.rs-tbl--data td:nth-child(2):not(.num) { min-width: 12em; }
+table.rs-tbl td.lead { color: var(--fg-strong); min-width: 13em; }
+table.rs-tbl td.lead strong { font-weight: 700; }
+table.rs-tbl td.lead a { color: var(--fg-strong); text-decoration: underline; text-decoration-color: rgba(var(--primary-rgb), .45); text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+table.rs-tbl td.lead a:hover { text-decoration-color: var(--primary-color); }
+.rs-tbl__sub { display: block; margin-top: 3px; font-size: .86em; color: var(--muted-color); font-weight: 400; }
+table.rs-tbl td.list { color: var(--muted-color); text-decoration: line-through; text-decoration-color: rgba(var(--neutral-rgb), .35); }
+table.rs-tbl td.deal { color: var(--fg-strong); font-weight: 600; }
+table.rs-tbl td.save strong, table.rs-tbl td.save { color: var(--green-color); font-weight: 700; }
+table.rs-tbl td.save strong { display: inline-block; padding: 4px 10px; border-radius: 999px; background: rgba(var(--green-rgb), .12); }
+
+/* Two-column fact tables ("Quick facts") read as a spec sheet. */
+.post-prose table.rs-tbl--kv, table.rs-tbl--kv { width: auto; min-width: min(100%, 460px); }
+table.rs-tbl--kv td:first-child { width: 12.5em; white-space: nowrap; color: var(--muted-color); font-size: .88em; }
+table.rs-tbl--kv td:first-child strong { font-weight: 500; }
+table.rs-tbl--kv td:last-child { color: var(--fg-strong); }
+
+/* Phones: each row becomes a card. Name and "best for" span the width; the
+   price columns sit side by side with their column name above them. */
+@media (max-width: 640px) {
+  .post-prose table.rs-tbl--data, table.rs-tbl--data { font-size: .92rem; }
+  table.rs-tbl--data thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  table.rs-tbl--data, table.rs-tbl--data tbody { display: block; }
+  table.rs-tbl--data tbody tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 12px; padding: 16px; border-bottom: 1px solid rgba(var(--neutral-rgb), .08); }
+  table.rs-tbl--data tbody tr:last-child { border-bottom: 0; }
+  .post-prose table.rs-tbl--data td, table.rs-tbl--data td { display: block; padding: 0; border: 0; min-width: 0; text-align: left; }
+  table.rs-tbl--data td:not(.num) { grid-column: 1 / -1; }
+  table.rs-tbl--data td:not(.num):not(.lead) { color: var(--muted-color); font-size: .9em; margin-top: -4px; }
+  table.rs-tbl--data td.num { text-align: left; white-space: normal; width: auto; }
+  table.rs-tbl--data td.num::before { content: attr(data-label); display: block; margin-bottom: 4px; font: 500 9.5px/1.3 'Martian Mono', 'Martian-Mono-fallback', monospace; letter-spacing: .02em; text-transform: uppercase; color: var(--muted-color); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  table.rs-tbl--data td.list { text-decoration: none; }
+  table.rs-tbl--data td.list > * , table.rs-tbl--data td.list { text-decoration-line: none; }
+  table.rs-tbl--data td.save strong { padding: 2px 8px; }
+  table.rs-tbl td.lead { min-width: 0; }
+  table.rs-tbl--kv td:first-child { width: 9em; white-space: normal; }
+  .post-prose table.rs-tbl--kv, table.rs-tbl--kv { width: 100%; }
+}
+
+/* Share row at the end of the coupon hub. */
+.rs-share { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-color); font-size: 14px; color: var(--muted-color); }
+.rs-share span { flex-basis: 100%; margin-bottom: 2px; }
+button.rs-chip { cursor: pointer; font: inherit; font-size: 13px; }
+.rs-chip:hover { border-color: var(--primary-color); }
+/* Links inside the home timeline steps. */
+.rs-step p a { color: var(--rs-text); text-decoration: underline; text-decoration-color: rgba(var(--primary-rgb), .45); text-underline-offset: 3px; }
+.rs-step p a:hover { text-decoration-color: var(--primary-color); }

@@ -41,7 +41,7 @@
     <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/clash-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/style.css?v=9bcabb44">
+    <link rel="stylesheet" href="/style.css?v=2f065a29">
     <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -137,78 +137,78 @@
 <p>Anyway. On to the release notes, and the postmortem ☺️</p>
 <h2 id="the-short-version">The short version</h2>
 <p>If you close this tab now, take these:</p>
-<table>
-<thead>
+<table class="rs-tbl rs-tbl--data"><thead>
 <tr>
 <th>What changed</th>
 <th>Stage</th>
 <th>Why you care</th>
 </tr>
 </thead>
+
 <tbody><tr>
-<td>HPA can scale to zero</td>
-<td>Beta, <strong>on</strong></td>
-<td>Idle GPU and queue workloads can go to nothing. Needs an external metric.</td>
+<td class="lead" data-label="What changed">HPA can scale to zero</td>
+<td data-label="Stage">Beta, <strong>on</strong></td>
+<td data-label="Why you care">Idle GPU and queue workloads can go to nothing. Needs an external metric.</td>
 </tr>
 <tr>
-<td>Gang scheduling</td>
-<td>Beta</td>
-<td>All-or-nothing placement for training jobs. No more 40-of-64 deadlocks.</td>
+<td class="lead" data-label="What changed">Gang scheduling</td>
+<td data-label="Stage">Beta</td>
+<td data-label="Why you care">All-or-nothing placement for training jobs. No more 40-of-64 deadlocks.</td>
 </tr>
 <tr>
-<td>API server cache warms ~55% faster</td>
-<td>Stable + Beta, on</td>
-<td>Large clusters recover far quicker. Handle HTTP 429 in your controllers.</td>
+<td class="lead" data-label="What changed">API server cache warms ~55% faster</td>
+<td data-label="Stage">Stable + Beta, on</td>
+<td data-label="Why you care">Large clusters recover far quicker. Handle HTTP 429 in your controllers.</td>
 </tr>
 <tr>
-<td>Memory QoS</td>
-<td>Beta, <strong>on</strong></td>
-<td>cgroups v2 memory protection and throttling. Defaults are safe.</td>
+<td class="lead" data-label="What changed">Memory QoS</td>
+<td data-label="Stage">Beta, <strong>on</strong></td>
+<td data-label="Why you care">cgroups v2 memory protection and throttling. Defaults are safe.</td>
 </tr>
 <tr>
-<td>PVC &quot;unused since&quot;</td>
-<td>Beta, <strong>on</strong></td>
-<td>Finally find the disks nobody has mounted since March.</td>
+<td class="lead" data-label="What changed">PVC &quot;unused since&quot;</td>
+<td data-label="Stage">Beta, <strong>on</strong></td>
+<td data-label="Why you care">Finally find the disks nobody has mounted since March.</td>
 </tr>
 <tr>
-<td>Pod certificates</td>
-<td>Stable</td>
-<td>Built-in workload identity without a mesh.</td>
+<td class="lead" data-label="What changed">Pod certificates</td>
+<td data-label="Stage">Stable</td>
+<td data-label="Why you care">Built-in workload identity without a mesh.</td>
 </tr>
 <tr>
-<td>KYAML</td>
-<td>Stable</td>
-<td>YAML without the foot-guns. Nothing to migrate.</td>
+<td class="lead" data-label="What changed">KYAML</td>
+<td data-label="Stage">Stable</td>
+<td data-label="Why you care">YAML without the foot-guns. Nothing to migrate.</td>
 </tr>
 <tr>
-<td><code>metrics.k8s.io</code> v1</td>
-<td>Stable</td>
-<td>Nine years in Beta. <code>kubectl top</code> sits on a stable API.</td>
+<td class="lead" data-label="What changed"><code>metrics.k8s.io</code> v1</td>
+<td data-label="Stage">Stable</td>
+<td data-label="Why you care">Nine years in Beta. <code>kubectl top</code> sits on a stable API.</td>
 </tr>
 <tr>
-<td><strong>SELinux volume mounting</strong></td>
-<td>Stable, <strong>on</strong></td>
-<td><strong>Can stop pods starting.</strong> The one that ruins upgrades.</td>
+<td class="lead" data-label="What changed"><strong>SELinux volume mounting</strong></td>
+<td data-label="Stage">Stable, <strong>on</strong></td>
+<td data-label="Why you care"><strong>Can stop pods starting.</strong> The one that ruins upgrades.</td>
 </tr>
 <tr>
-<td><strong>Old cAdvisor kubelet flags</strong></td>
-<td>Removed</td>
-<td><strong>Kubelet refuses to start.</strong> Grep your config first.</td>
+<td class="lead" data-label="What changed"><strong>Old cAdvisor kubelet flags</strong></td>
+<td data-label="Stage">Removed</td>
+<td data-label="Why you care"><strong>Kubelet refuses to start.</strong> Grep your config first.</td>
 </tr>
 <tr>
-<td><code>eventRecordQPS: 0</code></td>
-<td>Changed</td>
-<td>Now means unlimited, not default. Set 50 if you meant the old thing.</td>
+<td class="lead" data-label="What changed"><code>eventRecordQPS: 0</code></td>
+<td data-label="Stage">Changed</td>
+<td data-label="Why you care">Now means unlimited, not default. Set 50 if you meant the old thing.</td>
 </tr>
 <tr>
-<td><code>scheduling.k8s.io/v1alpha2</code></td>
-<td>Removed</td>
-<td>Delete those objects <em>before</em> upgrading, not after.</td>
+<td class="lead" data-label="What changed"><code>scheduling.k8s.io/v1alpha2</code></td>
+<td data-label="Stage">Removed</td>
+<td data-label="Why you care">Delete those objects <em>before</em> upgrading, not after.</td>
 </tr>
 <tr>
-<td>kube-dns, ipvs, cgroups v1</td>
-<td>Deprecated</td>
-<td>Nothing breaks today. All of it breaks eventually.</td>
+<td class="lead" data-label="What changed">kube-dns, ipvs, cgroups v1</td>
+<td data-label="Stage">Deprecated</td>
+<td data-label="Why you care">Nothing breaks today. All of it breaks eventually.</td>
 </tr>
 </tbody></table>
 <p>The bold rows are the ones that can bite you. They&#39;re covered in full further down.</p>
@@ -451,233 +451,233 @@ grep -rE -- &quot;--($DEAD)&quot; \
 <p><strong><code>kubectl run --filename</code>.</strong> Deprecated. The flag was ignored anyway, since <code>kubectl run</code> builds the pod purely from command-line arguments.</p>
 <h2 id="everything-that-graduated-in-one-place">Everything that graduated, in one place</h2>
 <p>Most write-ups either list all 67 changes or list four. Here&#39;s the complete Stable set, which is the part with the longest half-life, plus what each one actually gives you.</p>
-<table>
-<thead>
+<table class="rs-tbl rs-tbl--data"><thead>
 <tr>
 <th>Graduated to Stable</th>
 <th>What it means</th>
 </tr>
 </thead>
+
 <tbody><tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5295">KYAML</a></td>
-<td>YAML subset without the foot-guns, <code>kubectl get -o kyaml</code></td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/5295">KYAML</a></td>
+<td data-label="What it means">YAML subset without the foot-guns, <code>kubectl get -o kyaml</code></td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5207"><code>metrics.k8s.io</code> API</a></td>
-<td><code>kubectl top</code> and HPA finally on a v1 API after nine years</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/5207"><code>metrics.k8s.io</code> API</a></td>
+<td data-label="What it means"><code>kubectl top</code> and HPA finally on a v1 API after nine years</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/4568">Resilient watchcache initialization</a></td>
-<td>API server stops overloading etcd at startup</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/4568">Resilient watchcache initialization</a></td>
+<td data-label="What it means">API server stops overloading etcd at startup</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/4317">Pod Certificates</a></td>
-<td>Per-pod key and X.509 cert via projected volume</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/4317">Pod Certificates</a></td>
+<td data-label="What it means">Per-pod key and X.509 cert via projected volume</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/3257">ClusterTrustBundles</a></td>
-<td>Distributing the trust anchors that verify them</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/3257">ClusterTrustBundles</a></td>
+<td data-label="What it means">Distributing the trust anchors that verify them</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5328">Node Declared Features</a></td>
-<td>Nodes publish which gated features they support, for version skew</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/5328">Node Declared Features</a></td>
+<td data-label="What it means">Nodes publish which gated features they support, for version skew</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/4192">Storage Version Migrator in-tree</a></td>
-<td>Rewrite stored objects after an API or encryption change, declaratively</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/4192">Storage Version Migrator in-tree</a></td>
+<td data-label="What it means">Rewrite stored objects after an API or encryption change, declaratively</td>
 </tr>
 <tr>
-<td>Speed up recursive SELinux label change</td>
-<td>The mount-context behaviour described above</td>
+<td class="lead" data-label="Graduated to Stable">Speed up recursive SELinux label change</td>
+<td data-label="What it means">The mount-context behaviour described above</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5055">DRA: device taints and tolerations</a></td>
-<td>Mark individual devices unschedulable, or taint by rule</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/5055">DRA: device taints and tolerations</a></td>
+<td data-label="What it means">Mark individual devices unschedulable, or taint by rule</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5004">DRA: extended resource requests via DRA driver</a></td>
-<td><code>example.com/gpu: 3</code> served by DRA, no device plugin needed</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/5004">DRA: extended resource requests via DRA driver</a></td>
+<td data-label="What it means"><code>example.com/gpu: 3</code> served by DRA, no device plugin needed</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/4817">DRA: ResourceClaim device status</a></td>
-<td>Drivers report per-device state, including assigned IPs</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/4817">DRA: ResourceClaim device status</a></td>
+<td data-label="What it means">Drivers report per-device state, including assigned IPs</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/enhancements/issues/6072">DRA: standard <code>numaNode</code> attribute</a></td>
-<td>One attribute name for NUMA placement across every driver</td>
+<td class="lead" data-label="Graduated to Stable"><a href="https://github.com/kubernetes/enhancements/issues/6072">DRA: standard <code>numaNode</code> attribute</a></td>
+<td data-label="What it means">One attribute name for NUMA placement across every driver</td>
 </tr>
 <tr>
-<td>Configurable tolerance for HPAs</td>
-<td>Per-HPA tolerance instead of one cluster-wide value</td>
+<td class="lead" data-label="Graduated to Stable">Configurable tolerance for HPAs</td>
+<td data-label="What it means">Per-HPA tolerance instead of one cluster-wide value</td>
 </tr>
 <tr>
-<td>Resource health status in Pod status</td>
-<td>Device failures visible on the pod, not just in node logs</td>
+<td class="lead" data-label="Graduated to Stable">Resource health status in Pod status</td>
+<td data-label="What it means">Device failures visible on the pod, not just in node logs</td>
 </tr>
 <tr>
-<td>Arbitrary FQDN as a pod&#39;s hostname</td>
-<td>Set the fully qualified hostname a workload sees</td>
+<td class="lead" data-label="Graduated to Stable">Arbitrary FQDN as a pod&#39;s hostname</td>
+<td data-label="What it means">Set the fully qualified hostname a workload sees</td>
 </tr>
 <tr>
-<td>Relaxed validation for Service names</td>
-<td>Fewer names rejected for no good reason</td>
+<td class="lead" data-label="Graduated to Stable">Relaxed validation for Service names</td>
+<td data-label="What it means">Fewer names rejected for no good reason</td>
 </tr>
 <tr>
-<td>Condition for sandbox creation</td>
-<td>A real signal for &quot;the sandbox came up&quot;</td>
+<td class="lead" data-label="Graduated to Stable">Condition for sandbox creation</td>
+<td data-label="What it means">A real signal for &quot;the sandbox came up&quot;</td>
 </tr>
 </tbody></table>
 <p>Beta this cycle, roughly in the order you&#39;re likely to feel them. The last column is the one that matters: a Beta feature that is <strong>on</strong> changes your cluster whether you asked for it or not.</p>
-<table>
-<thead>
+<table class="rs-tbl rs-tbl--data"><thead>
 <tr>
 <th>Beta in v1.37</th>
 <th>KEP</th>
 <th>Default</th>
 </tr>
 </thead>
+
 <tbody><tr>
-<td>HPA scale to zero</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/2021">2021</a></td>
-<td><strong>on</strong></td>
+<td class="lead" data-label="Beta in v1.37">HPA scale to zero</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/2021">2021</a></td>
+<td data-label="Default"><strong>on</strong></td>
 </tr>
 <tr>
-<td>Memory QoS</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/2570">2570</a></td>
-<td><strong>on</strong></td>
+<td class="lead" data-label="Beta in v1.37">Memory QoS</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/2570">2570</a></td>
+<td data-label="Default"><strong>on</strong></td>
 </tr>
 <tr>
-<td>PVC unused tracking</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5541">5541</a></td>
-<td><strong>on</strong></td>
+<td class="lead" data-label="Beta in v1.37">PVC unused tracking</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5541">5541</a></td>
+<td data-label="Default"><strong>on</strong></td>
 </tr>
 <tr>
-<td>etcd RangeStream</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5966">5966</a></td>
-<td><strong>on</strong></td>
+<td class="lead" data-label="Beta in v1.37">etcd RangeStream</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5966">5966</a></td>
+<td data-label="Default"><strong>on</strong></td>
 </tr>
 <tr>
-<td>Concurrent watch decode</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/6178">6178</a></td>
-<td><strong>on</strong></td>
+<td class="lead" data-label="Beta in v1.37">Concurrent watch decode</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/6178">6178</a></td>
+<td data-label="Default"><strong>on</strong></td>
 </tr>
 <tr>
-<td>Stale controller mitigation</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5647">5647</a></td>
-<td><strong>on</strong>, per controller</td>
+<td class="lead" data-label="Beta in v1.37">Stale controller mitigation</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5647">5647</a></td>
+<td data-label="Default"><strong>on</strong>, per controller</td>
 </tr>
 <tr>
-<td>Gang scheduling</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/4671">4671</a></td>
-<td>gate</td>
+<td class="lead" data-label="Beta in v1.37">Gang scheduling</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/4671">4671</a></td>
+<td data-label="Default">gate</td>
 </tr>
 <tr>
-<td>Workload-aware preemption</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5710">5710</a></td>
-<td>gate</td>
+<td class="lead" data-label="Beta in v1.37">Workload-aware preemption</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5710">5710</a></td>
+<td data-label="Default">gate</td>
 </tr>
 <tr>
-<td>DRA ResourceClaims for workloads</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5729">5729</a></td>
-<td>gate</td>
+<td class="lead" data-label="Beta in v1.37">DRA ResourceClaims for workloads</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5729">5729</a></td>
+<td data-label="Default">gate</td>
 </tr>
 <tr>
-<td>Native histograms for metrics</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5808">5808</a></td>
-<td>gate</td>
+<td class="lead" data-label="Beta in v1.37">Native histograms for metrics</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5808">5808</a></td>
+<td data-label="Default">gate</td>
 </tr>
 <tr>
-<td>Manifest-based admission control</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5793">5793</a></td>
-<td>gate</td>
+<td class="lead" data-label="Beta in v1.37">Manifest-based admission control</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5793">5793</a></td>
+<td data-label="Default">gate</td>
 </tr>
 <tr>
-<td>Removing undecryptable resources</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/3926">3926</a></td>
-<td>gate</td>
+<td class="lead" data-label="Beta in v1.37">Removing undecryptable resources</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/3926">3926</a></td>
+<td data-label="Default">gate</td>
 </tr>
 <tr>
-<td>Storage capacity scoring</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/4049">4049</a></td>
-<td>off</td>
+<td class="lead" data-label="Beta in v1.37">Storage capacity scoring</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/4049">4049</a></td>
+<td data-label="Default">off</td>
 </tr>
 <tr>
-<td>CSI attach limits for Cluster Autoscaler</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5030">5030</a></td>
-<td>off</td>
+<td class="lead" data-label="Beta in v1.37">CSI attach limits for Cluster Autoscaler</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5030">5030</a></td>
+<td data-label="Default">off</td>
 </tr>
 <tr>
-<td>Watch-based route reconciliation</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5237">5237</a></td>
-<td>off</td>
+<td class="lead" data-label="Beta in v1.37">Watch-based route reconciliation</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5237">5237</a></td>
+<td data-label="Default">off</td>
 </tr>
 <tr>
-<td>Pod-level resource managers</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5526">5526</a></td>
-<td>off</td>
+<td class="lead" data-label="Beta in v1.37">Pod-level resource managers</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5526">5526</a></td>
+<td data-label="Default">off</td>
 </tr>
 <tr>
-<td>CRI-only container stats</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/2371">2371</a></td>
-<td>off</td>
+<td class="lead" data-label="Beta in v1.37">CRI-only container stats</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/2371">2371</a></td>
+<td data-label="Default">off</td>
 </tr>
 </tbody></table>
 <p>&quot;gate&quot; means the release notes don&#39;t state a default either way, so check the feature gate reference before assuming. I&#39;d rather say that than guess on your behalf.</p>
 <p>Alpha is where v1.38 and v1.39 come from, so this is a watch list rather than a to-do list. All of it is off by default.</p>
-<table>
-<thead>
+<table class="rs-tbl rs-tbl--data"><thead>
 <tr>
 <th>New in Alpha</th>
 <th>KEP</th>
 </tr>
 </thead>
+
 <tbody><tr>
-<td>Pod-level checkpoint and restore</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5823">5823</a></td>
+<td class="lead" data-label="New in Alpha">Pod-level checkpoint and restore</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5823">5823</a></td>
 </tr>
 <tr>
-<td><code>CompositePodGroup</code> for hierarchical workloads</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/6012">6012</a></td>
+<td class="lead" data-label="New in Alpha"><code>CompositePodGroup</code> for hierarchical workloads</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/6012">6012</a></td>
 </tr>
 <tr>
-<td>Job <code>spec.scheduling</code></td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5547">5547</a></td>
+<td class="lead" data-label="New in Alpha">Job <code>spec.scheduling</code></td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5547">5547</a></td>
 </tr>
 <tr>
-<td>Workload-aware scheduling controller APIs</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/6089">6089</a></td>
+<td class="lead" data-label="New in Alpha">Workload-aware scheduling controller APIs</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/6089">6089</a></td>
 </tr>
 <tr>
-<td>DRA derived attributes</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/6080">6080</a></td>
+<td class="lead" data-label="New in Alpha">DRA derived attributes</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/6080">6080</a></td>
 </tr>
 <tr>
-<td>DRA device compatibility groups</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5963">5963</a></td>
+<td class="lead" data-label="New in Alpha">DRA device compatibility groups</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5963">5963</a></td>
 </tr>
 <tr>
-<td>DRA node-allocatable resource requests</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5517">5517</a></td>
+<td class="lead" data-label="New in Alpha">DRA node-allocatable resource requests</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5517">5517</a></td>
 </tr>
 <tr>
-<td>Scheduler preemption for in-place pod resize</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5836">5836</a></td>
+<td class="lead" data-label="New in Alpha">Scheduler preemption for in-place pod resize</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5836">5836</a></td>
 </tr>
 <tr>
-<td>Resizing memory-backed volumes in place</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/6030">6030</a></td>
+<td class="lead" data-label="New in Alpha">Resizing memory-backed volumes in place</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/6030">6030</a></td>
 </tr>
 <tr>
-<td>Node lifecycle conditions</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/5683">5683</a></td>
+<td class="lead" data-label="New in Alpha">Node lifecycle conditions</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/5683">5683</a></td>
 </tr>
 <tr>
-<td><code>Recreate</code> update strategy for StatefulSets</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/3541">3541</a></td>
+<td class="lead" data-label="New in Alpha"><code>Recreate</code> update strategy for StatefulSets</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/3541">3541</a></td>
 </tr>
 <tr>
-<td>localhost NodePort proxy for nftables</td>
-<td><a href="https://github.com/kubernetes/enhancements/issues/6032">6032</a></td>
+<td class="lead" data-label="New in Alpha">localhost NodePort proxy for nftables</td>
+<td data-label="KEP"><a href="https://github.com/kubernetes/enhancements/issues/6032">6032</a></td>
 </tr>
 </tbody></table>
 <p>For the full 67 with every PR link, the <a href="https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.37.md#changelog-since-v1360">v1.37 changelog</a> is the source of truth.</p>

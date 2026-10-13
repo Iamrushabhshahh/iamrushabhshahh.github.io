@@ -43,7 +43,7 @@
     <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/clash-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/style.css?v=9bcabb44">
+    <link rel="stylesheet" href="/style.css?v=2f065a29">
     <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -120,48 +120,48 @@
 <p>This is the write-up. Names and hostnames are generalised, the numbers are exactly as measured.</p>
 <h2 id="the-shape-of-it-before-the-detail">The shape of it, before the detail</h2>
 <p>If you close this tab now, take these:</p>
-<table>
-<thead>
+<table class="rs-tbl rs-tbl--data"><thead>
 <tr>
 <th>What</th>
 <th>Number</th>
 </tr>
 </thead>
+
 <tbody><tr>
-<td>Services asking for a hostname that does not exist</td>
-<td>24</td>
+<td class="lead" data-label="What">Services asking for a hostname that does not exist</td>
+<td data-label="Number">24</td>
 </tr>
 <tr>
-<td>DNS lookups per second, sustained</td>
-<td>46</td>
+<td class="lead" data-label="What">DNS lookups per second, sustained</td>
+<td data-label="Number">46</td>
 </tr>
 <tr>
-<td>Packets per second leaving the box for those lookups</td>
-<td>282</td>
+<td class="lead" data-label="What">Packets per second leaving the box for those lookups</td>
+<td data-label="Number">282</td>
 </tr>
 <tr>
-<td>Share of all DNS leaving the box that was for two dead names</td>
-<td>99.4%</td>
+<td class="lead" data-label="What">Share of all DNS leaving the box that was for two dead names</td>
+<td data-label="Number">99.4%</td>
 </tr>
 <tr>
-<td>AWS per-ENI DNS limit, above which packets are silently dropped</td>
-<td>1,024 pps</td>
+<td class="lead" data-label="What">AWS per-ENI DNS limit, above which packets are silently dropped</td>
+<td data-label="Number">1,024 pps</td>
 </tr>
 <tr>
-<td>Share of that budget burnt on nothing</td>
-<td>~28%</td>
+<td class="lead" data-label="What">Share of that budget burnt on nothing</td>
+<td data-label="Number">~28%</td>
 </tr>
 <tr>
-<td><code>EAI_AGAIN</code> failures in the worst three-hour window</td>
-<td>~45,000</td>
+<td class="lead" data-label="What"><code>EAI_AGAIN</code> failures in the worst three-hour window</td>
+<td data-label="Number">~45,000</td>
 </tr>
 <tr>
-<td>Services affected that do not use the failing dependency</td>
-<td>2</td>
+<td class="lead" data-label="What">Services affected that do not use the failing dependency</td>
+<td data-label="Number">2</td>
 </tr>
 <tr>
-<td>Lines of code that were wrong</td>
-<td>roughly 1</td>
+<td class="lead" data-label="What">Lines of code that were wrong</td>
+<td data-label="Number">roughly 1</td>
 </tr>
 </tbody></table>
 <p>The last row is the one worth sitting with. Nothing here is exotic. There is no kernel bug, no AWS incident, no clever exploit. A string was built from an environment variable, the resulting name was never registered, and the client retried forever instead of giving up.</p>
@@ -261,44 +261,44 @@ grep -oE &#39;A\? [a-zA-Z0-9._-]+&#39; /tmp/dns_up.txt \
 </code></pre>
 <p>Read that ordering carefully, because it is the whole lesson. The thing that is broken is <strong>second</strong> on the list. The top line, by a wide margin, is a completely healthy dependency failing for a reason that has nothing to do with it. Even Slack shows up, which is how you know it is not about any one service.</p>
 <p>Bucketed by hour, the worst stretch:</p>
-<table>
-<thead>
+<table class="rs-tbl rs-tbl--data"><thead>
 <tr>
 <th>Hour</th>
 <th><code>EAI_AGAIN</code></th>
 </tr>
 </thead>
+
 <tbody><tr>
-<td>26 Aug 14:00</td>
-<td>4</td>
+<td class="lead" data-label="Hour">26 Aug 14:00</td>
+<td data-label="EAI_AGAIN">4</td>
 </tr>
 <tr>
-<td>26 Aug 15:00</td>
-<td>268</td>
+<td class="lead" data-label="Hour">26 Aug 15:00</td>
+<td data-label="EAI_AGAIN">268</td>
 </tr>
 <tr>
-<td>26 Aug 16:00</td>
-<td>75</td>
+<td class="lead" data-label="Hour">26 Aug 16:00</td>
+<td data-label="EAI_AGAIN">75</td>
 </tr>
 <tr>
-<td><strong>26 Aug 22:00</strong></td>
-<td><strong>11,287</strong></td>
+<td class="lead" data-label="Hour"><strong>26 Aug 22:00</strong></td>
+<td data-label="EAI_AGAIN"><strong>11,287</strong></td>
 </tr>
 <tr>
-<td><strong>26 Aug 23:00</strong></td>
-<td><strong>14,362</strong></td>
+<td class="lead" data-label="Hour"><strong>26 Aug 23:00</strong></td>
+<td data-label="EAI_AGAIN"><strong>14,362</strong></td>
 </tr>
 <tr>
-<td><strong>27 Aug 00:00</strong></td>
-<td><strong>14,364</strong></td>
+<td class="lead" data-label="Hour"><strong>27 Aug 00:00</strong></td>
+<td data-label="EAI_AGAIN"><strong>14,364</strong></td>
 </tr>
 <tr>
-<td>27 Aug 01:00</td>
-<td>5,711</td>
+<td class="lead" data-label="Hour">27 Aug 01:00</td>
+<td data-label="EAI_AGAIN">5,711</td>
 </tr>
 <tr>
-<td>27 Aug 05:00</td>
-<td>3,063</td>
+<td class="lead" data-label="Hour">27 Aug 05:00</td>
+<td data-label="EAI_AGAIN">3,063</td>
 </tr>
 </tbody></table>
 <p>About 45,000 failed lookups across three hours. The two services that absorbed nearly all of it were a job runner and a rendering worker. Neither of them has an Elasticsearch client. Neither of them was deployed that week. Neither of them changed at all. They lost Redis and Postgres because other processes on the same host had spent the interface&#39;s DNS budget on a name nobody needed.</p>
