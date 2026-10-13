@@ -673,7 +673,12 @@
       if (!reduce) { const go = () => { ['pointermove','pointerdown','keydown','scroll','touchstart'].forEach(t => removeEventListener(t, go)); setTimeout(tick0, 1200); }; ['pointermove','pointerdown','keydown','scroll','touchstart'].forEach(t => addEventListener(t, go, { passive: true, once: true })); }
       // journey line and film strip follow the scroll
       const jr = $('#rs-journey'), strip = $('#rs-strip');
-      const onScroll = () => { const b = jr.getBoundingClientRect(), p = Math.min(Math.max((innerHeight * .6 - b.top) / b.height, 0), 1); jr.style.setProperty('--p', p.toFixed(3)); if (!reduce) strip.style.transform = `translateX(${-(scrollY * .35) % (strip.scrollWidth / 2)}px)`; };
+      // repeat the photo set until it covers the widest screen, so the strip never runs out
+      const orig = [...strip.children]; let copies = 1;
+      const setW = () => strip.scrollWidth / copies;
+      const fill = () => { while (strip.scrollWidth - setW() < innerWidth * 1.2 + 120) { orig.forEach(n => { const c = n.cloneNode(); c.alt = ''; c.setAttribute('aria-hidden', 'true'); strip.appendChild(c); }); copies++; } };
+      fill(); addEventListener('resize', fill, { passive: true });
+      const onScroll = () => { const b = jr.getBoundingClientRect(), p = Math.min(Math.max((innerHeight * .6 - b.top) / b.height, 0), 1); jr.style.setProperty('--p', p.toFixed(3)); if (!reduce) strip.style.transform = `translateX(${-(scrollY * .35) % setW()}px)`; };
       addEventListener('scroll', onScroll, { passive: true }); onScroll();
       // light on the photo follows the cursor
       if (fine && !reduce) { const photo = $('#rs-photo'), lit = $('#rs-lit'); addEventListener('pointermove', e => { const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5; photo.style.setProperty('--px', x * -14 + 'px'); photo.style.setProperty('--py', y * -8 + 'px'); const q = photo.getBoundingClientRect(); lit.style.setProperty('--lx', ((e.clientX - q.left) / q.width * 100) + '%'); lit.style.setProperty('--ly', ((e.clientY - q.top) / q.height * 100) + '%'); }); }
