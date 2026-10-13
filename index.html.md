@@ -1,6 +1,6 @@
 every star is a project I've contributed to. hover one.
 
-**●** Docker Captain · Grafana Champion · Ahmedabad
+**●** Rushabh Shah
 
 # Rushabh Shah is **an open source educator**
 
