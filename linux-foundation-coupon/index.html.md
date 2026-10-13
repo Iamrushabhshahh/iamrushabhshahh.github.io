@@ -282,10 +282,44 @@ No. You pay 30% less than list price; the Linux Foundation pays my commission ou
 
 Sometimes. Seasonal promos can beat 30%, so watch my socials for advance notice. Also consider KCNA or KCSA: they're roughly half the price of the professional certs and a genuinely good starting point.
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way). I was recommending Linux Foundation certifications to my community long before this partnership existed, and I only promote things I'd recommend anyway.
 
-Know someone prepping for the CKA? Share this:
-[X / Twitter](https://twitter.com/intent/tweet?text=30%25%20off%20all%20Linux%20Foundation%20certifications%20with%20code%20RUSHABH30&url=https%3A%2F%2Frushabhshah.dev%2Flinux-foundation-coupon%2F)
-[LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Flinux-foundation-coupon%2F)
+[Rushabh Shah](https://rushabhshah.dev/)
+
+Open source, explained in public. Docker Captain and Grafana Champion in Ahmedabad, India.
+
+[GitHub](https://github.com/iamrushabhshahh)[LinkedIn](https://www.linkedin.com/in/iamrushabhshahh/)[X](https://x.com/iamrushabhshahh)[YouTube](https://www.youtube.com/@iamrushabhshahh)[Instagram](https://www.instagram.com/iamrushabhshahh/)[Credly](https://www.credly.com/users/iamrushabhshahh)[Sessionize](https://sessionize.com/iamrushabhshahh/)[dev.to](https://dev.to/iamrushabhshahh)
+
+#### Read
+
+- [Blog](https://rushabhshah.dev/blog/)
+- [Today I learned](https://rushabhshah.dev/til/)
+- [Now](https://rushabhshah.dev/now/)
+- [Reading](https://rushabhshah.dev/reading/)
+- [RSS](https://rushabhshah.dev/blog/rss.xml)
+
+#### Save
+
+- [Linux Foundation](https://rushabhshah.dev/linux-foundation-coupon/)
+- [FinOps](https://rushabhshah.dev/finops-coupon/)
+- [All coupons](https://rushabhshah.dev/coupons/)
+- [Kubestronaut](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+
+#### Work
+
+- [Speaking](https://rushabhshah.dev/speaking/)
+- [Courses](https://rushabhshah.dev/#courses)
+- [Hire me](https://rushabhshah.dev/#work)
+- [Docker Captain](https://rushabhshah.dev/docker-captain/)
+
+#### Me
+
+- [About](https://rushabhshah.dev/#about)
+- [My certifications](https://rushabhshah.dev/certs/)
+- [Games](https://rushabhshah.dev/games/)
+- [Links](https://rushabhshah.dev/links/)
+
+RUSHABH SHAH
+© 2026 Rushabh Shah. Affiliate links pay me a commission at no cost to you. [Privacy](https://rushabhshah.dev/privacy/)[RSS](https://rushabhshah.dev/blog/rss.xml)[AI-readable bio](https://rushabhshah.dev/llms.txt)

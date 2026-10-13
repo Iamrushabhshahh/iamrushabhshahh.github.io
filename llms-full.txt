@@ -1,6 +1,6 @@
 # Rushabh Shah: full site content
 
-> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-10-05. The curated index is at https://rushabhshah.dev/llms.txt.
+> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-10-10. The curated index is at https://rushabhshah.dev/llms.txt.
 
 <!-- https://rushabhshah.dev/blog/cka-exam-day-setup/ -->
 
@@ -1613,8 +1613,6 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 Updated October 2026 · Two official partner codes, one page
 
-**A Linux Foundation sale starts October 6, 9:30 AM IST** that beats RUSHABH30: 40% off certifications and e-learning courses with `OCTPRIME26CC`, plus 50% off bundles with `OCTPRIME26B`, plus 75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native) with `OCTPRIME26SB`, plus 20% off a new THRIVE-ONE Annual subscription with `OCTPRIME26TO`, ends October 7. It does not apply to any FinOps course or certification, so the FinOps code below is unaffected. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
-
 RUSHABH30
 
 RUSHABH_20
@@ -1678,7 +1676,7 @@ Take the sale. The codes never stack with official sales, so always use the sing
 
 You don't have to take my word for it. I'm a named person with a checkable track record (Docker Captain, Grafana Champion, a public GitHub history), every price here is checkable against the official catalog, and I tell you when a sale beats my own code rather than hiding it.
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 Both codes are partner codes and I earn a commission when someone uses one, at no extra cost to you. That's also why you'll see me point at official sales that beat my own codes: the discount you get doesn't depend on which is better for me.
 
@@ -1686,15 +1684,15 @@ Both codes are partner codes and I earn a commission when someone uses one, at n
 
 <!-- https://rushabhshah.dev/docker-captain/ -->
 
-[$ cd..](https://rushabhshah.dev/)
+[&larr; Home](https://rushabhshah.dev/)
 
 # Rushabh Shah, Docker Captain
 
 Docker, Inc · Selected 2026
 
-· DevOps Engineer @ Oro · Ahmedabad, India
+· DevOps Engineer @ Orocorp Technologies Private Limited · Ahmedabad, India
 
-I'm a [Docker Captain](https://www.docker.com/contributors/rushabh-shah/), selected in 2026 as one of roughly 220 members worldwide in Docker's global program for community leaders and technical experts in the container ecosystem. I'm a DevOps Engineer based in Ahmedabad, India, currently building cloud-native infrastructure on Kubernetes at [Oro](https://rushabhshah.dev/#experience).
+I'm a [Docker Captain](https://www.docker.com/contributors/rushabh-shah/), selected in 2026 as one of roughly 220 members worldwide in Docker's global program for community leaders and technical experts in the container ecosystem. I'm a DevOps Engineer based in Ahmedabad, India, currently building cloud-native infrastructure on Kubernetes at [Orocorp Technologies Private Limited](https://rushabhshah.dev/#experience).
 
 ## What is a Docker Captain?
 
@@ -1704,7 +1702,7 @@ Docker Captains are an invitation-only group of experts recognized by Docker, In
 
 Docker's own program criteria are technical expertise in containers and Kubernetes, hands-on production experience, and consistent community contribution. In my case, that's backed by:
 
-- **Production experience**: running Kubernetes workloads with Helm and GitOps (Argo CD), building CI/CD on GitHub Actions, and managing infrastructure as code with Terraform, across roles at [Oro, Genuin, KodeKloud, and Tridhya Tech](https://rushabhshah.dev/#experience), including a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline and a 59% AWS cost reduction.
+- **Production experience**: running Kubernetes workloads with Helm and GitOps (Argo CD), building CI/CD on GitHub Actions, and managing infrastructure as code with Terraform, across roles at [Orocorp Technologies Private Limited, Genuin, KodeKloud, and Tridhya Tech](https://rushabhshah.dev/#experience), including a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline and a 59% AWS cost reduction.
 - **Community involvement**: I organize [Grafana & Friends Ahmedabad](https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/), a quarterly observability meetup; I represented KodeKloud at [KubeCon + CloudNativeCon India 2024](https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-india/); and I translated [eBPF.io into Hindi](https://ebpf.io/hi-in/) so Hindi-speaking engineers have a way in to eBPF, container networking, and observability.
 - **Teaching**: I've delivered corporate training on Azure and cloud infrastructure certifications, and I built hands-on multi-cloud lab environments used by working engineers preparing for real certification exams.
 
@@ -1720,7 +1718,7 @@ I write about Kubernetes, Docker, and observability on [my blog](https://rushabh
 
 <!-- https://rushabhshah.dev/finops-coupon/ai-value/ -->
 
-[$ cd../finops-coupon](https://rushabhshah.dev/finops-coupon/)
+[&larr; All FinOps codes](https://rushabhshah.dev/finops-coupon/)
 
 # FinOps Certified: AI Value Discount Code: 20% Off with RUSHABH_20
 
@@ -1814,7 +1812,7 @@ Doing Kubernetes or CNCF certifications too? Those are a different checkout and 
 
 Both codes side by side, and which one applies to what: [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.
 
@@ -1822,7 +1820,7 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 <!-- https://rushabhshah.dev/finops-coupon/engineer/ -->
 
-[$ cd../finops-coupon](https://rushabhshah.dev/finops-coupon/)
+[&larr; All FinOps codes](https://rushabhshah.dev/finops-coupon/)
 
 # FinOps Certified Engineer Discount Code: 20% Off with RUSHABH_20
 
@@ -1916,7 +1914,7 @@ Doing Kubernetes or CNCF certifications too? Those are a different checkout and 
 
 Both codes side by side, and which one applies to what: [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.
 
@@ -1924,7 +1922,7 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 <!-- https://rushabhshah.dev/finops-coupon/focus-analyst/ -->
 
-[$ cd../finops-coupon](https://rushabhshah.dev/finops-coupon/)
+[&larr; All FinOps codes](https://rushabhshah.dev/finops-coupon/)
 
 # FinOps Certified FOCUS Analyst Discount Code: 20% Off with RUSHABH_20
 
@@ -2018,7 +2016,7 @@ Doing Kubernetes or CNCF certifications too? Those are a different checkout and 
 
 Both codes side by side, and which one applies to what: [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.
 
@@ -2131,7 +2129,7 @@ Not on learn.finops.org, which is where these five certifications are sold. They
 
 It depends what you want from it. It won't teach an experienced engineer new ways to cut a bill. What it gives you is a framework and a shared language for defending cost decisions to finance and leadership, which is usually the harder half of the work, plus a credential that's increasingly named in cloud cost job descriptions.
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.
 
@@ -2139,7 +2137,7 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 <!-- https://rushabhshah.dev/finops-coupon/practitioner/ -->
 
-[$ cd../finops-coupon](https://rushabhshah.dev/finops-coupon/)
+[&larr; All FinOps codes](https://rushabhshah.dev/finops-coupon/)
 
 # FinOps Certified Practitioner Discount Code: 20% Off with RUSHABH_20
 
@@ -2238,7 +2236,7 @@ Doing Kubernetes or CNCF certifications too? Those are a different checkout and 
 
 Both codes side by side, and which one applies to what: [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.
 
@@ -2246,7 +2244,7 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 <!-- https://rushabhshah.dev/finops-coupon/technology-value/ -->
 
-[$ cd../finops-coupon](https://rushabhshah.dev/finops-coupon/)
+[&larr; All FinOps codes](https://rushabhshah.dev/finops-coupon/)
 
 # FinOps Certified: Technology Value Discount Code: 20% Off with RUSHABH_20
 
@@ -2341,7 +2339,7 @@ Doing Kubernetes or CNCF certifications too? Those are a different checkout and 
 
 Both codes side by side, and which one applies to what: [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.
 
@@ -2349,269 +2347,235 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 <!-- https://rushabhshah.dev/ -->
 
-Currently DevOps Engineer @ Oro · Ahmedabad, India
+every star is a project I've contributed to. hover one.
 
-# Hi, I'm Rushabh Shah.
+**●** Docker Captain · Grafana Champion · Ahmedabad
 
-$ DevOps Engineer, Docker Captain, Grafana Champion, SRE Enthusiast, and Community Organizer.
+# Rushabh Shah is **an open source contributor**
 
-[Docker Captain](https://rushabhshah.dev/docker-captain/) & Grafana Champion. I build and automate cloud-native infrastructure on Kubernetes, ship reliable observability, and simplify complex cloud concepts for the community.
+I build, teach and speak about **open source infrastructure**. From the Hindi edition of ebpf.io to stages in Tokyo and Salt Lake City, I make the cloud native world easier to learn.
 
-[Get in touch](#contact)
-[Download résumé](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf?v=34823de89f1e)
-[Read my writing](#writing)
-[GitHub](https://github.com/iamrushabhshahh)
+[Learn with me](#courses)[Book a talk](https://rushabhshah.dev/speaking/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
 
-~/whoami.sh
+Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
+Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
 
-```
-$ cat whoami.json
-{
-  "role": "DevOps Engineer",
-  "company": "Oro",
-  "location": "Ahmedabad, IN",
-  "honors": [
-    "Docker Captain",
-    "Grafana Champion"
-  ],
-  "focus": [
-    "Kubernetes",
-    "Observability",
-    "Cloud Cost"
-  ]
-}
-$
-```
-
-~220
-
-\# Docker Captains worldwide
-
-Selected 2026
-
-~110
-
-\# Grafana Champions worldwide
-
-Selected 2026
-
+10
+talks given or booked, in 4 countries
+612
+RSVPs across the meetups I host
+14
+upstream pull requests in open source
+3
+Linux Foundation exams passed in 31 days
 59%
+AWS spend cut at Genuin, no downtime
 
-AWS spend reduction
+The story so far
 
-Delivered at Genuin
+## From first terminal to stages abroad.
 
-0
+Three years, five teams, and a habit of learning in public.
 
-Downtime · AWS → OCI migration
+2023
+### First DevOps job, first talk
 
-Hard-deadline cutover
+Joined Tridhya Tech as a junior DevOps engineer. Built Docker images, Kubernetes workloads and pipelines, passed AZ-900 and AZ-104, and gave my first tech talk to the team.
 
-Two partner codes, [compared side by side →](https://rushabhshah.dev/coupons/)
+2024
+### Teaching at scale with KodeKloud
 
-Starts October 6, 9:30 AM IST · ends October 7
+Built hands-on cloud labs used to teach Azure, AWS and GCP. Gave my first community talk, Grafana 101, in May, represented KodeKloud at the first KubeCon India in December, and started hosting Grafana & Friends Ahmedabad.
+KubeCon India 2024 first meetup talk Grafana & Friends
+2025
+### Open source in Hindi, production at scale
 
-The Linux Foundation **October Prime sale** is coming: **40% off** certifications and e-learning courses with OCTPRIME26CC, plus **50% off** bundles with OCTPRIME26B, plus **75% off** the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native) with OCTPRIME26SB, plus **20% off** a new THRIVE-ONE Annual subscription with OCTPRIME26TO. My evergreen RUSHABH30 code takes over at 30% when it ends.
+Cut AWS spend 59% at Genuin and moved it to Oracle Cloud with zero downtime. Taught Azure to enterprise teams at Koenig. Got the **Hindi edition of ebpf.io** merged, then joined Orocorp Technologies Private Limited.
+ebpf.io/hi-in 59% cost cut AWS to OCI
+2026
+### Docker Captain, Grafana Champion, on tour
 
-Get the coupon code →
+Selected into both programs. Passed KCNA, KCSA and CKAD in a month. Spoke in Vadodara and at PromCon EU, with FluxCon in Salt Lake City and two talks in Tokyo next. And started building courses.
+Docker Captain Grafana Champion Tokyo &times; 2
 
-(https://rushabhshah.dev/linux-foundation-coupon/)
+Open source
 
-RUSHABH_20: I'm also a FinOps Foundation partner, so my community gets **20% off FinOps certifications** (Practitioner, Engineer, FOCUS Analyst, AI Value, Technology Value).
+## Merged upstream, in public.
 
-Get the FinOps code →
+Small, real contributions to projects millions of engineers depend on. CNCF DevStats score: 178.
 
-(https://rushabhshah.dev/finops-coupon/)
+MERGED · 2025
+### ebpf.io
 
-## 01. About Me
+The whole Hindi edition, so engineers can learn eBPF in Hindi.
 
-Hi, I'm Rushabh, a DevOps Engineer based in Ahmedabad, India, currently at Oro, building reliable cloud infrastructure on Kubernetes with Helm, Argo CD, Terraform, and GitHub Actions. I'm a [Docker Captain](https://rushabhshah.dev/docker-captain/) (selected 2026, ~220 members worldwide) and a Grafana Champion (selected 2026, ~110 worldwide).
+(https://ebpf.io/hi-in/)
 
-My focus areas are Kubernetes, CI/CD, IaC, observability with the Grafana LGTM stack (Loki, Grafana, Tempo, Mimir) and OpenTelemetry, and cloud cost optimization. Before Oro, I drove a 59% AWS spend reduction at Genuin, led a zero-downtime AWS→OCI migration under a hard deadline, and built ISO / SOC Type 1 readiness controls. I started out as a Laravel/PHP developer, then moved into DevOps via Tridhya Tech and KodeKloud, where I represented the team at KubeCon India 2024. I organize Grafana & Friends Ahmedabad, run workshops on Prometheus and the LGTM stack, and contribute to open source, including translating eBPF.io into Hindi. I'm also a Linux Foundation Education partner, so my community gets [30% off CKA, CKAD and CKS certifications](https://rushabhshah.dev/linux-foundation-coupon/) year-round.
+MERGED · 2025
+### Helm
 
-$ now > deep in eBPF, OpenTelemetry, and tuning Grafana LGTM stacks for production reliability.
+Docs fix for uninstalling releases with a namespace.
 
-## 02. Honors & Certifications
+(https://github.com/helm/helm-www/pull/1748)
 
-Recognised programs I'm part of and certifications I hold.
+MERGED · 2026
+### Docker
 
-Docker, Inc · Selected 2026
+A Playwright mixin kit for Docker&rsquo;s sandbox kits.
 
+(https://github.com/docker/sbx-kits-contrib/pull/138)
+
+9 IN REVIEW
+### Kubernetes
+
+Hindi translations of the Kubernetes documentation.
+
+(https://github.com/kubernetes/website/pulls?q=author%3Aiamrushabhshahh)
+
+Recognition
+
+## Picked by the projects I build on.
+
+Two community programmes, and certifications you can verify yourself.
+
+Docker, Inc. · Selected 2026
 ### Docker Captain
 
-Recognised by Docker, Inc. for technical expertise in containers and Kubernetes, real-world production experience, and consistent contribution to the global container community. The program includes ~220 members worldwide.
+Recognised by Docker for container and Kubernetes expertise, production experience and steady community contribution.
 
 (https://rushabhshah.dev/docker-captain/)
 
 Grafana Labs · Selected 2026
-
 ### Grafana Champion
 
-Grafana Labs' invitation-only program for contributors who advance the observability community. One of ~110 members worldwide. I organize Grafana & Friends Ahmedabad and run workshops on the LGTM stack and OpenTelemetry.
+Invitation-only programme for people who grow the observability community. I run Grafana & Friends Ahmedabad and LGTM workshops.
 
 (https://grafana.com/community/champions/)
 
-### Certifications
+[CKAD Certified Kubernetes Application Developer The Linux Foundation · Sep 2026 · verify ↗](https://www.credly.com/badges/403326fb-ec23-479e-a04b-d70dc73428a5)[KCSA Kubernetes and Cloud Native Security Associate The Linux Foundation · Sep 2026 · verify ↗](https://www.credly.com/badges/16538648-bf8b-4dfe-86cb-6f8d279b5742)[KCNA Kubernetes and Cloud Native Associate The Linux Foundation · Aug 2026 · verify ↗](https://www.credly.com/badges/fed261d0-7cd0-4ae7-89c1-a7437a4cc964) **AZ-104** Azure Administrator Associate Microsoft **AZ-900** Azure Fundamentals Microsoft
 
-CKAD: Certified Kubernetes Application Developer
+Studying for next: CKA, CKS, OTCA. [All certifications →](https://rushabhshah.dev/certs/)
 
-The Linux Foundation
+On stage
 
-KCSA: Kubernetes and Cloud Native Security Associate
+## Coming to a stage near you.
 
-The Linux Foundation
+9 Nov 2026 · FluxCon North America 2026
+### Your Git Repo Is Not a Backup: Kubernetes Disaster Recovery with Flux and Velero
 
-KCNA: Kubernetes and Cloud Native Associate
+A cluster gets broken on purpose and brought back live with Flux and Velero.
 
-The Linux Foundation
+(https://rushabhshah.dev/speaking/#fluxcon-na-2026)
 
-Microsoft Certified: Azure Administrator Associate
+8 Dec 2026 · Open Source Summit Japan 2026
+### Closing the Ma (間): Filling the Gaps in Kubernetes Visibility with Headlamp
 
-AZ-104
+Headlamp plugins that put Flux reconciliation state and OpenCost spend in the same view as the workloads they describe.
 
-Microsoft Certified: Azure Fundamentals
+(https://rushabhshah.dev/speaking/#oss-japan-2026)
 
-AZ-900
+11 Dec 2026 · Open Compliance Summit 2026
+### A Tag Is a Lie
 
-## 03. Tech Stack
+Approving a container image by tag approves something that can change after you approved it.
 
-The tools I reach for when building, shipping, and operating cloud infrastructure.
+(https://rushabhshah.dev/speaking/#open-compliance-summit-2026)
 
-\# Containers & Orchestration
+**#RUSHABHONTOUR** 🇮🇳 🇩🇪 🇺🇸 🇯🇵 Ahmedabad · Vadodara · Munich · Salt Lake City · Tokyo [Every talk and the speaker kit](https://rushabhshah.dev/speaking/)
 
-Kubernetes Docker Helm Argo CD
+LINUX FOUNDATION EDUCATION PARTNER
+## 30% off. Every exam. All year.
 
-\# IaC & Automation
+RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
 
-Terraform Ansible GitHub Actions
+RUSHABH30 [Prices and the fine print →](https://rushabhshah.dev/linux-foundation-coupon/)[Also: 20% off FinOps certifications](https://rushabhshah.dev/coupons/)
 
-\# Cloud Platforms
+Experience
 
-AWS Azure GCP OCI
+## Where I've done the work.
 
-\# Observability
+Five teams in three years: product startups, a learning platform, and enterprise classrooms. [Download the r&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf).
 
-Prometheus Grafana Loki / Tempo / Mimir OpenTelemetry
+- Jun 2025 to Present DevOps Engineer *at Orocorp Technologies Private Limited* Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.
+- Jun 2025 to Jul 2025 Corporate Trainer *at Koenig Solutions Pvt. Ltd.* Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.
+- Jan 2025 to May 2025 DevOps Engineer *at Genuin* Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS to Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.
+- Jul 2024 to Dec 2024 Jr DevOps Engineer *at KodeKloud* Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.
+- Jun 2023 to Jun 2024 Jr DevOps Engineer *at Tridhya Tech Limited* Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.
 
-\# Languages & Tooling
+### Tools I reach for
+Containers & Orchestration Kubernetes Docker Helm Argo CD IaC & Automation Terraform Ansible GitHub Actions Cloud Platforms AWS Azure GCP OCI Observability Prometheus Grafana Loki / Tempo / Mimir OpenTelemetry Languages & Tooling Linux Bash Python Git CI/CD
 
-Linux Bash Python Git CI/CD
+Work with me
 
-## 04. Where I've Worked
+## Learn it with me, or hire me to do it.
 
-### DevOps Engineer
+### Courses
 
-Current
+Video courses on containers, Kubernetes and observability, built on the exams I passed this year.
 
-Oro
+- CKAD first
+- KCNA and KCSA next
+- Observability with Grafana planned
 
-Jun 2025 - Present
+[Join the course waitlist](mailto:hello@rushabhshah.dev?subject=Course%20waitlist)
 
-Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.
+### Hire me
 
-### Corporate Trainer
+Talks, workshops and hands-on help for teams.
 
-Koenig Solutions Pvt. Ltd.
+- Talks and workshops conferences, companies, colleges
+- Kubernetes and GitOps setup or review
+- Observability Prometheus, Grafana, OTel
+- Cloud cost audit cut one bill 59%
 
-Jun 2025 - Jul 2025
+[Book a free 20 minute call](#contact)
 
-Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.
+Writing
 
-### DevOps Engineer
+## Notes from the on-call side.
 
-Genuin
-
-Jan 2025 - May 2025
-
-Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.
-
-### Jr DevOps Engineer
-
-KodeKloud
-
-Jul 2024 - Dec 2024
-
-Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.
-
-### Jr DevOps Engineer
-
-Tridhya Tech Limited
-
-Jun 2023 - Jun 2024
-
-Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.
-
-## 05. Things I've Built
-
-A small selection of open-source contributions, study material, and writing.
-
-### eBPF.io: Hindi Translation
-
-Translated the eBPF.io website into Hindi so Hindi-speaking engineers can learn about eBPF for networking, observability, and security on Linux.
-
-eBPF Open Source Linux i18n
-
-(https://ebpf.io/hi-in/)
-
-### Personal Tech Blog
-
-My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux.
-
-Blog Observability Linux DevOps
-
-(https://rushabhshah.dev/blog/)
-
-## 06. Writing & Talks
-
-Latest posts from the blog and recent community engagements.
-
-Sep 30, 2026 · 16 min read
-
+**incident** 29 Sept 2026 16 min
 ### A hostname that never existed took Redis and Postgres down with it
 
-A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the…
+A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
 
 (https://rushabhshah.dev/blog/dns-storm-eai-again/)
 
-Sep 1, 2026 · 19 min read
-
+**kubernetes** 1 Sept 2026 19 min
 ### India's first heritage city, Gujarat's first KCD
-
-Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you a…
 
 (https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/)
 
-Aug 30, 2026 · 3 min read
-
+**kubernetes** 30 Aug 2026 3 min
 ### Prometheus PCA and OpenTelemetry OTCA, reviewed
-
-Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SD…
 
 (https://rushabhshah.dev/blog/pca-otca-review/)
 
-### Speaking & Community
+**kubernetes** 28 Aug 2026 3 min
+### CKA exam day: PSI bridge, terminal, kubectl aliases
 
-Dec 2024 · Delhi
+(https://rushabhshah.dev/blog/cka-exam-day-setup/)
 
-### KubeCon + CloudNativeCon India 2024
+**kubernetes** 26 Aug 2026 11 min
+### Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks
 
-Represented KodeKloud at the inaugural KubeCon India, engaging with the CNCF community across container, observability, and platform-engineering tracks.
+(https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/)
 
-(https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-india/)
+**kubernetes** 26 Aug 2026 3 min
+### What the CKA actually tests in 2026
 
-Quarterly · Ahmedabad
+(https://rushabhshah.dev/blog/cka-exam-guide/)
 
-### Grafana & Friends Ahmedabad
+[All posts](https://rushabhshah.dev/blog/)[Today I learned](https://rushabhshah.dev/til/)
 
-Organize and host the Ahmedabad chapter, a quarterly community meetup focused on observability, OpenTelemetry, and the Grafana LGTM stack.
+I&rsquo;m a **DevOps engineer at Orocorp Technologies Private Limited** in Ahmedabad. I answer every message, and I&rsquo;m happiest when someone learns something because of a talk, a post or a pull request I made.
 
-(https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/)
+[GitHub iamrushabhshahh](https://github.com/iamrushabhshahh)[LinkedIn iamrushabhshahh](https://www.linkedin.com/in/iamrushabhshahh/)[X @iamrushabhshahh](https://x.com/iamrushabhshahh)[YouTube @iamrushabhshahh](https://www.youtube.com/@iamrushabhshahh)[Instagram iamrushabhshahh](https://www.instagram.com/iamrushabhshahh/)[Sessionize speaker profile](https://sessionize.com/iamrushabhshahh/)[Credly verified badges](https://www.credly.com/users/iamrushabhshahh)[Docker Captain profile](https://www.docker.com/captains/rushabh-shah/)[Grafana Champions](https://grafana.com/community/champions/)[Substack newsletter](https://substack.com/@rushabhshah124804)[dev.to articles](https://dev.to/iamrushabhshahh)[Hashnode articles](https://iamrushabhshahh.hashnode.dev/)
 
-[Read the blog](https://rushabhshah.dev/blog/)
+Contact
+## Say hi.
 
-## 07. Get In Touch
-
-My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you. Every message is read personally, and I usually reply within 24 to 48 hours.
+I read every message myself and usually reply within 24 to 48 hours. I am in Ahmedabad (IST).
 
 ---
 
@@ -2645,33 +2609,11 @@ DevOps Engineer · Docker Captain · Grafana Champion
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/capa/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CAPA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Argo Project Associate
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -2771,7 +2713,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -2779,33 +2721,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cba/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CBA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Backstage Associate
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -2905,7 +2825,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -2913,33 +2833,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cca/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Cilium Certified Associate
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3043,7 +2941,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -3051,33 +2949,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cgoa/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CGOA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified GitOps Associate
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3178,7 +3054,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -3186,28 +3062,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CKA to Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **50% off** bundles with this code.
-
-OCTPRIME26B
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 40% off certifications and e-learning courses, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[40% off certifications and e-learning courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26CC` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26CC OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3307,7 +3166,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -3315,30 +3174,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cka/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CKA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Kubernetes Administrator
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, CKA is **$267** with this code, down from $445. That beats the $311 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: CKA for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
+[Get CKA for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F) and the Certified Kubernetes Administrator (CKA) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -3443,7 +3287,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -3451,28 +3295,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CKAD to Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS)
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **50% off** bundles with this code.
-
-OCTPRIME26B
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 40% off certifications and e-learning courses, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[40% off certifications and e-learning courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26CC` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26CC OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3572,7 +3399,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -3580,30 +3407,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/ckad/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CKAD Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Kubernetes Application Developer
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, CKAD is **$267** with this code, down from $445. That beats the $311 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: CKAD for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F)
+[Get CKAD for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F) and the Certified Kubernetes Application Developer (CKAD) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -3704,7 +3516,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -3712,30 +3524,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cks/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CKS Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Kubernetes Security Specialist
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, CKS is **$267** with this code, down from $445. That beats the $311 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
+[Get CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F) and the Certified Kubernetes Security Specialist (CKS) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -3836,7 +3633,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -3844,33 +3641,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cnpa/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CNPA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Cloud Native Platform Engineering Associate
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3972,7 +3747,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -3980,33 +3755,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/cnpe/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # CNPE Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Cloud Native Platform Engineer
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4111,7 +3864,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -4119,28 +3872,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # Golden Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Golden Kubestronaut bundle (16 CNCF certs)
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **50% off** bundles with this code.
-
-OCTPRIME26B
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 40% off certifications and e-learning courses, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[40% off certifications and e-learning courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26CC` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26CC OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4256,7 +3992,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -4264,33 +4000,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/ica/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # ICA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Istio Certified Associate
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4390,7 +4104,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -4402,29 +4116,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
-A sale starts October 6, 9:30 AM IST (see above). This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -4656,6 +4348,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **October Prime sale, October 2026**: 40% off certifications with OCTPRIME26CC (CKA went to $267, associate exams to $150), 50% off bundles with OCTPRIME26B, 75% off the three Super Bundles with OCTPRIME26SB, 20% off THRIVE-ONE Annual with OCTPRIME26TO. Two days only, ended October 7.
 - **Back to School sale, September 2026**: 40% off bundles and instructor-led training with SEPT26BTS40, 35% off courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163, the Kubestronaut bundle to $987 and Golden Kubestronaut to $2538). Beat RUSHABH30 on everything in the catalog, ended September 22.
 - **Switch & Save sale, September 2026**: 40% off a certification and 20% off THRIVE-ONE Annual, bundle only, no code ($805 bundles went to $553, $610 to $423). Only cheaper than RUSHABH30 if you wanted the subscription, ended September 11.
 - **End-of-Season Flash Sale, August 2026**: up to 40% off (35% on courses and certifications with AUG26F35, 40% on bundles with AUG26F40), ended August 28.
@@ -4703,45 +4396,57 @@ No. You pay 30% less than list price; the Linux Foundation pays my commission ou
 
 Sometimes. Seasonal promos can beat 30%, so watch my socials for advance notice. Also consider KCNA or KCSA: they're roughly half the price of the professional certs and a genuinely good starting point.
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way). I was recommending Linux Foundation certifications to my community long before this partnership existed, and I only promote things I'd recommend anyway.
 
-Know someone prepping for the CKA? Share this:
-[X / Twitter](https://twitter.com/intent/tweet?text=30%25%20off%20all%20Linux%20Foundation%20certifications%20with%20code%20RUSHABH30&url=https%3A%2F%2Frushabhshah.dev%2Flinux-foundation-coupon%2F)
-[LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Flinux-foundation-coupon%2F)
+[Rushabh Shah](https://rushabhshah.dev/)
+
+Open source, explained in public. Docker Captain and Grafana Champion in Ahmedabad, India.
+
+[GitHub](https://github.com/iamrushabhshahh)[LinkedIn](https://www.linkedin.com/in/iamrushabhshahh/)[X](https://x.com/iamrushabhshahh)[YouTube](https://www.youtube.com/@iamrushabhshahh)[Instagram](https://www.instagram.com/iamrushabhshahh/)[Credly](https://www.credly.com/users/iamrushabhshahh)[Sessionize](https://sessionize.com/iamrushabhshahh/)[dev.to](https://dev.to/iamrushabhshahh)
+
+#### Read
+
+- [Blog](https://rushabhshah.dev/blog/)
+- [Today I learned](https://rushabhshah.dev/til/)
+- [Now](https://rushabhshah.dev/now/)
+- [Reading](https://rushabhshah.dev/reading/)
+- [RSS](https://rushabhshah.dev/blog/rss.xml)
+
+#### Save
+
+- [Linux Foundation](https://rushabhshah.dev/linux-foundation-coupon/)
+- [FinOps](https://rushabhshah.dev/finops-coupon/)
+- [All coupons](https://rushabhshah.dev/coupons/)
+- [Kubestronaut](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+
+#### Work
+
+- [Speaking](https://rushabhshah.dev/speaking/)
+- [Courses](https://rushabhshah.dev/#courses)
+- [Hire me](https://rushabhshah.dev/#work)
+- [Docker Captain](https://rushabhshah.dev/docker-captain/)
+
+#### Me
+
+- [About](https://rushabhshah.dev/#about)
+- [My certifications](https://rushabhshah.dev/certs/)
+- [Games](https://rushabhshah.dev/games/)
+- [Links](https://rushabhshah.dev/links/)
+
+RUSHABH SHAH
+© 2026 Rushabh Shah. Affiliate links pay me a commission at no cost to you. [Privacy](https://rushabhshah.dev/privacy/)[RSS](https://rushabhshah.dev/blog/rss.xml)[AI-readable bio](https://rushabhshah.dev/llms.txt)
 
 ---
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/kca/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # KCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kyverno Certified Associate
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4843,7 +4548,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -4851,30 +4556,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/kcna/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # KCNA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kubernetes and Cloud Native Associate
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, KCNA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: KCNA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F)
+[Get KCNA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F) and the Kubernetes and Cloud Native Associate (KCNA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -4975,7 +4665,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -4983,30 +4673,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/kcsa/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # KCSA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kubernetes and Cloud Native Security Associate
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, KCSA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: KCSA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F)
+[Get KCSA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F) and the Kubernetes and Cloud Native Security Associate (KCSA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -5107,7 +4782,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -5115,28 +4790,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # Kubestronaut to Golden Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams)
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **50% off** bundles with this code.
-
-OCTPRIME26B
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 40% off certifications and e-learning courses, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[40% off certifications and e-learning courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26CC` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26CC OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5243,7 +4901,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -5251,28 +4909,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **50% off** bundles with this code.
-
-OCTPRIME26B
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 40% off certifications and e-learning courses, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[40% off certifications and e-learning courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26CC` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26CC OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5377,7 +5018,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -5385,30 +5026,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/lfca/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # LFCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Linux Foundation Certified IT Associate
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, LFCA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: LFCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F)
+[Get LFCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F) and the Linux Foundation Certified IT Associate (LFCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -5510,7 +5136,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -5518,30 +5144,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/lfcs/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # LFCS Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Linux Foundation Certified System Administrator
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, LFCS is **$267** with this code, down from $445. That beats the $311 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: LFCS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F)
+[Get LFCS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F) and the Linux Foundation Certified System Administrator (LFCS) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -5644,7 +5255,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -5652,30 +5263,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/mcpa/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # MCPA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Model Context Protocol Associate
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, MCPA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: MCPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F)
+[Get MCPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F) and the Model Context Protocol Associate (MCPA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -5780,7 +5376,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -5788,30 +5384,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/otca/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # OTCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · OpenTelemetry Certified Associate
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, OTCA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: OTCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
+[Get OTCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F) and the OpenTelemetry Certified Associate (OTCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -5911,7 +5492,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -5919,30 +5500,15 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/pca/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # PCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Prometheus Certified Associate
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, PCA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 7.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
-[After the sale: PCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F)
+[Get PCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F) and the Prometheus Certified Associate (PCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -6043,7 +5609,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -6051,33 +5617,11 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 <!-- https://rushabhshah.dev/linux-foundation-coupon/ptca/ -->
 
-[$ cd../linux-foundation-coupon](https://rushabhshah.dev/linux-foundation-coupon/)
+[&larr; All Linux Foundation codes](https://rushabhshah.dev/linux-foundation-coupon/)
 
 # PTCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · PyTorch Certified Associate
-
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -6177,7 +5721,7 @@ Or see the [full Linux Foundation coupon overview](https://rushabhshah.dev/linux
 
 Buying FinOps certifications too? Both partner codes are compared side by side on the [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way).
 
@@ -6189,7 +5733,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Effective July 10, 2026 · rushabhshah.dev
 
-\# TL;DR
+TL;DR
 
 No ads. No creepy tracking. No cookies from me. I count page views without knowing who you are, I read the messages you send me, and that's about it. If you click a coupon link, the store's own cookies take over, not mine.
 

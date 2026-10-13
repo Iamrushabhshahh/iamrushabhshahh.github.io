@@ -1,5 +1,23 @@
 /* Tailwind utilities only. No @tailwind base: preflight is disabled in
    tailwind.config.ts because ../style.css owns the reset and the base element
    styles for the whole site. Adding base here would restyle every page. */
+/* The one slice of preflight these pages need. Without it `border` sets a
+   width but no style, so every bordered card and chip renders borderless.
+   :where() keeps this at zero specificity, so any utility still wins, and
+   the scope is main#main on the Next pages only. Nothing the generator
+   builds loads this file. */
+:where(main#main *, main#main ::before, main#main ::after) {
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+/* style.css resets `button { border: 0 }`, and that shorthand also sets the
+   style to none, which `.border` (width only) cannot undo. Width stays 0
+   unless a utility sets it, so unbordered buttons are unaffected. */
+main#main button {
+  border-style: solid;
+}
+
 @tailwind components;
 @tailwind utilities;

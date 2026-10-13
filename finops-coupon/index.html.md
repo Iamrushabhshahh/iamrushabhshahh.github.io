@@ -103,6 +103,6 @@ Not on learn.finops.org, which is where these five certifications are sold. They
 
 It depends what you want from it. It won't teach an experienced engineer new ways to cut a bill. What it gives you is a framework and a shared language for defending cost decisions to finance and leadership, which is usually the harder half of the work, plus a credential that's increasingly named in cloud cost job descriptions.
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.

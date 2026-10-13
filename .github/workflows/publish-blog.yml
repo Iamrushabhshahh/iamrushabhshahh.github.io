@@ -20,6 +20,7 @@ on:
       - "docker-captain/**"
       - "privacy/**"
       - "package.json"
+      - "next/**"
       - ".github/workflows/publish-blog.yml"
   schedule:
     - cron: "40 18 * * *" # daily at 00:10 IST (18:40 UTC previous day)
@@ -49,16 +50,47 @@ jobs:
         with:
           node-version: '24'
           cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            next/package-lock.json
 
       - run: npm ci
 
       - run: node scripts/build-blog.mjs
+
+      # The Next routes (/speaking/, /now/, /til/, /reading/, /games/,
+      # /certs/). Must run after build-blog.mjs, which writes the shared
+      # header, footer and asset fingerprints to next/.chrome.json. The daily
+      # cron rebuilding these is also what moves a talk from "Next up" to the
+      # archive once it has happened.
+      - run: npm ci --prefix next
+      - run: npm run build --prefix next
+      - run: node scripts/verify-url-parity.mjs
+
+      # Only the routes listed here go live. next/ also builds /about/,
+      # /contributions/, /discounts/ and /research/, which are not published
+      # yet. --delete per route so a removed TIL disappears; _next/ keeps old
+      # chunks so HTML still cached at the CDN can load its scripts.
+      - name: Copy Next routes into the site
+        run: |
+          for r in speaking now til reading games certs; do
+            rsync -a --delete "next/out/$r/" "$r/"
+          done
+          rsync -a next/out/_next/ _next/
+
+      # Runs on the assembled site: fails if a URL, canonical, robots value,
+      # /go/ target or JSON-LD type that was live has gone missing.
+      - run: node scripts/url-snapshot.mjs
 
       - name: Commit generated pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add blog sitemap.xml linux-foundation-coupon finops-coupon coupons go links privacy docker-captain index.html index.html.md
+          # Next routes, plus the markdown twins and llms files, which the
+          # generator rewrites on every run but were never committed, so the
+          # .md copies kept advertising a sale days after it ended.
+          git add speaking now til reading games certs _next llms.txt llms-full.txt '*.md'
           if git diff --cached --quiet; then
             echo "Nothing new to publish."
           else

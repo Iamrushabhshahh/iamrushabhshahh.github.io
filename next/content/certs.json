@@ -1,0 +1,74 @@
+{
+  "certs": [
+    {
+      "slug": "ckad",
+      "code": "CKAD",
+      "title": "CKAD: Certified Kubernetes Application Developer",
+      "subtitle": "The Linux Foundation",
+      "issuer": "The Linux Foundation",
+      "status": "earned",
+      "earnedOn": "2026-09-20",
+      "proofUrl": "https://www.credly.com/badges/403326fb-ec23-479e-a04b-d70dc73428a5"
+    },
+    {
+      "slug": "kcsa",
+      "code": "KCSA",
+      "title": "KCSA: Kubernetes and Cloud Native Security Associate",
+      "subtitle": "The Linux Foundation",
+      "issuer": "The Linux Foundation",
+      "status": "earned",
+      "earnedOn": "2026-09-19",
+      "proofUrl": "https://www.credly.com/badges/16538648-bf8b-4dfe-86cb-6f8d279b5742"
+    },
+    {
+      "slug": "kcna",
+      "code": "KCNA",
+      "title": "KCNA: Kubernetes and Cloud Native Associate",
+      "subtitle": "The Linux Foundation",
+      "issuer": "The Linux Foundation",
+      "status": "earned",
+      "earnedOn": "2026-08-20",
+      "proofUrl": "https://www.credly.com/badges/fed261d0-7cd0-4ae7-89c1-a7437a4cc964"
+    },
+    {
+      "slug": "az-104",
+      "code": "AZ-104",
+      "title": "Microsoft Certified: Azure Administrator Associate",
+      "subtitle": "AZ-104",
+      "issuer": "Microsoft",
+      "status": "earned"
+    },
+    {
+      "slug": "az-900",
+      "code": "AZ-900",
+      "title": "Microsoft Certified: Azure Fundamentals",
+      "subtitle": "AZ-900",
+      "issuer": "Microsoft",
+      "status": "earned"
+    },
+    {
+      "slug": "cka",
+      "code": "CKA",
+      "title": "CKA: Certified Kubernetes Administrator",
+      "subtitle": "The Linux Foundation",
+      "issuer": "The Linux Foundation",
+      "status": "planned"
+    },
+    {
+      "slug": "cks",
+      "code": "CKS",
+      "title": "CKS: Certified Kubernetes Security Specialist",
+      "subtitle": "The Linux Foundation",
+      "issuer": "The Linux Foundation",
+      "status": "planned"
+    },
+    {
+      "slug": "otca",
+      "code": "OTCA",
+      "title": "OTCA: OpenTelemetry Certified Associate",
+      "subtitle": "The Linux Foundation",
+      "issuer": "The Linux Foundation",
+      "status": "planned"
+    }
+  ]
+}

@@ -199,3 +199,59 @@
     update();
   }
 })();
+
+/* ===================================================================
+   RS design system interactions. Every block is opt-in by class, so a
+   page only pays for what it uses, and everything degrades to static
+   content without JS or with reduced motion.
+   =================================================================== */
+(function () {
+  const $$ = (s, r) => Array.prototype.slice.call((r || document).querySelectorAll(s));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const ready = fn => document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn) : fn();
+  ready(function () {
+    // header turns solid once the page scrolls
+    const hdr = document.getElementById('rs-hdr');
+    if (hdr) { const f = () => hdr.classList.toggle('is-solid', scrollY > 24); addEventListener('scroll', f, { passive: true }); f(); }
+    // mobile sheet with every page
+    const btn = document.getElementById('rs-menu'), sheet = document.getElementById('rs-sheet');
+    if (btn && sheet) {
+      const set = open => { sheet.hidden = !open; btn.setAttribute('aria-expanded', String(open)); btn.textContent = open ? 'Close' : 'Menu'; document.documentElement.style.overflow = open ? 'hidden' : ''; };
+      btn.addEventListener('click', () => set(sheet.hidden));
+      sheet.addEventListener('click', e => { if (e.target.closest('a')) set(false); });
+      addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) set(false); });
+    }
+    // headings that reveal word by word
+    $$('.rs-split').forEach(h => { if (h.dataset.split) return; h.dataset.split = '1'; h.innerHTML = h.textContent.trim().split(/\s+/).map((w, n) => '<span class="w"><span style="transition-delay:' + n * 60 + 'ms">' + w + '</span></span>').join(' '); });
+    // odometers
+    $$('.rs-odo').forEach(o => { const s = o.dataset.n || ''; o.setAttribute('aria-label', s + (o.dataset.sup || '')); o.innerHTML = s.split('').map(() => '<span class="col">' + '0123456789'.split('').map(d => '<span>' + d + '</span>').join('') + '</span>').join('') + (o.dataset.sup ? '<sup>' + o.dataset.sup + '</sup>' : ''); });
+    const roll = o => $$('.col', o).forEach((c, n) => { const d = +o.dataset.n[n], w = c.children[d].getBoundingClientRect().width; c.style.transitionDelay = n * 120 + 'ms'; c.style.width = w + 'px'; c.style.transform = 'translateY(-' + d + 'em)'; });
+    // reveal on scroll (stagger siblings inside .rs-stagger)
+    $$('.rs-stagger').forEach(g => Array.prototype.forEach.call(g.children, (c, n) => { c.style.transitionDelay = n * 80 + 'ms'; }));
+    // .section-reveal is the pre-redesign class still used on the coupon and
+    // privacy pages; it reveals with .visible instead of .is-in.
+    const els = $$('.rs-reveal, .rs-split, .rs-odo, .section-reveal');
+    const show = el => el.classList.add('is-in', 'visible');
+    if ('IntersectionObserver' in window && !reduce) {
+      // threshold 0 plus a bottom margin, so sections taller than the screen still reveal
+      const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; show(e.target); io.unobserve(e.target); if (e.target.classList.contains('rs-odo')) roll(e.target); $$('.rs-odo', e.target).forEach(roll); }), { rootMargin: '0px 0px -12% 0px' });
+      els.forEach(el => io.observe(el));
+    } else { els.forEach(show); $$('.rs-odo').forEach(roll); }
+    if (fine && !reduce) {
+      // magnetic buttons
+      $$('.rs-magnet').forEach(b => { b.addEventListener('pointermove', e => { const q = b.getBoundingClientRect(); b.style.setProperty('--mx', (e.clientX - q.left - q.width / 2) * .25 + 'px'); b.style.setProperty('--my', (e.clientY - q.top - q.height / 2) * .35 + 'px'); }); b.addEventListener('pointerleave', () => { b.style.setProperty('--mx', '0px'); b.style.setProperty('--my', '0px'); }); });
+      // ticket tilt
+      $$('.rs-ticket').forEach(t => { t.addEventListener('pointermove', e => { const q = t.getBoundingClientRect(), x = (e.clientX - q.left) / q.width, y = (e.clientY - q.top) / q.height; t.style.setProperty('--ry', (x - .5) * 10 + 'deg'); t.style.setProperty('--rx', (.5 - y) * 8 + 'deg'); t.style.setProperty('--gx', x * 100 + '%'); t.style.setProperty('--gy', y * 100 + '%'); }); t.addEventListener('pointerleave', () => { t.style.setProperty('--rx', '0deg'); t.style.setProperty('--ry', '0deg'); }); });
+      // footer wordmark glow
+      $$('.rs-word').forEach(w => w.parentElement.parentElement.addEventListener('pointermove', e => { const q = w.getBoundingClientRect(); w.style.setProperty('--wx', e.clientX - q.left + 'px'); }));
+    }
+    // copy buttons with a burst: <button data-rs-copy="RUSHABH30">
+    $$('[data-rs-copy]').forEach(b => b.addEventListener('click', () => {
+      const label = b.textContent;
+      (navigator.clipboard ? navigator.clipboard.writeText(b.dataset.rsCopy) : Promise.reject()).then(() => { b.textContent = 'Copied. Go save 30%'; }, () => { b.textContent = 'Select the code'; });
+      if (!reduce) { const q = b.getBoundingClientRect(); for (let n = 0; n < 26; n++) { const p = document.createElement('i'); p.className = 'rs-burst'; p.style.background = ['#3d7bff', '#9cc9ff', '#ffffff'][n % 3]; p.style.left = q.left + q.width / 2 + 'px'; p.style.top = q.top + 'px'; document.body.appendChild(p); const a = Math.random() * 6.28, d = 70 + Math.random() * 130; p.animate([{ transform: 'translate(0,0)', opacity: 1 }, { transform: 'translate(' + Math.cos(a) * d + 'px,' + (Math.sin(a) * d - 70) + 'px) rotate(' + Math.random() * 600 + 'deg)', opacity: 0 }], { duration: 1100 + Math.random() * 400, easing: 'cubic-bezier(.22,1,.36,1)' }).onfinish = () => p.remove(); } }
+      setTimeout(() => { b.textContent = label; }, 2400);
+    }));
+  });
+})();

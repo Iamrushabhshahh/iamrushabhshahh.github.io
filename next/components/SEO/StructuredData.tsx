@@ -1,5 +1,7 @@
 import { person, PERSON_ID, SITE_URL, credentials } from '@/lib/site';
-import type { Talk } from '@/lib/schemas';
+import type { Engagement } from '@/lib/schemas';
+import { isStage } from '@/lib/engagement';
+import { abs } from '@/lib/utils';
 
 /**
  * JSON-LD emitters.
@@ -60,7 +62,7 @@ export function PersonSchema() {
         sameAs: [...person.sameAs],
         award: ['Docker Captain (2026)', 'Grafana Champion (2026)'],
         hasCredential: credentials
-          .filter((c) => ['kcna', 'az-104'].includes(c.id))
+          .filter((c) => ['ckad', 'kcna', 'az-104'].includes(c.id))
           .map((c) => ({
             '@type': 'EducationalOccupationalCredential',
             name: `${c.label}: ${c.detail}`,
@@ -73,30 +75,47 @@ export function PersonSchema() {
 }
 
 /**
- * Speaker kit page. There is no `SpeakerProfile` type in schema.org, so the
- * correct encoding is a ProfilePage whose mainEntity is the existing Person,
- * with talks attached as `performerIn` Event nodes. Inventing a non-existent
- * type would be ignored by every consumer.
+ * /speaking/. There is no `SpeakerProfile` type in schema.org, so the correct
+ * encoding is a ProfilePage whose mainEntity is the existing Person (by @id,
+ * never redefined), with each stage appearance attached as a `performerIn`
+ * Event. Organising, jury and booth work are left out of the Event list: the
+ * person was not a performer there, and saying so to a parser is the same
+ * misrepresentation as saying it to a reader.
  */
-export function SpeakerProfileSchema({ talks }: { talks: Talk[] }) {
+export function SpeakingSchema({ engagements, path }: { engagements: Engagement[]; path: string }) {
+  const url = `${SITE_URL}${path}`;
   return (
     <JsonLd
-      id="ld-speaker"
+      id="ld-speaking"
       data={{
         '@context': 'https://schema.org',
         '@type': 'ProfilePage',
-        '@id': `${SITE_URL}/speaker/#profilepage`,
-        url: `${SITE_URL}/speaker/`,
-        name: `${person.name}, speaker kit`,
+        '@id': `${url}#profilepage`,
+        url,
+        name: `${person.name}, speaking`,
+        isPartOf: { '@id': `${SITE_URL}/#website` },
         about: { '@id': PERSON_ID },
         mainEntity: {
           '@id': PERSON_ID,
-          performerIn: talks.map((t) => ({
+          performerIn: engagements.filter(isStage).map((e) => ({
             '@type': 'Event',
-            name: t.eventName,
-            startDate: t.date,
-            location: { '@type': 'Place', name: t.location },
-            ...(t.videoUrl ? { recordedIn: t.videoUrl } : {}),
+            '@id': `${url}#${e.slug}`,
+            name: e.title,
+            startDate: e.start,
+            ...(e.endDate ? { endDate: e.endDate } : {}),
+            ...(e.abstract ? { description: e.abstract } : {}),
+            eventStatus: 'https://schema.org/EventScheduled',
+            eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+            location: {
+              '@type': 'Place',
+              name: e.venue ?? e.event,
+              address: { '@type': 'PostalAddress', addressLocality: e.city, addressCountry: e.country },
+            },
+            ...(e.organizer ? { organizer: { '@type': 'Organization', name: e.organizer } } : {}),
+            superEvent: { '@type': 'Event', name: e.event },
+            performer: { '@id': PERSON_ID },
+            ...(e.links.session || e.links.event ? { url: abs((e.links.session ?? e.links.event)!) } : {}),
+            ...(e.links.video ? { recordedIn: { '@type': 'VideoObject', contentUrl: e.links.video } } : {}),
           })),
         },
       }}

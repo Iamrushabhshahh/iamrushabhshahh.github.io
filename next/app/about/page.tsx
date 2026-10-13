@@ -5,7 +5,7 @@ import { ItemPageSchema } from '@/components/SEO/StructuredData';
 
 const TITLE = 'About · Rushabh Shah';
 const DESCRIPTION =
-  'Rushabh Shah, DevOps engineer at Oro, Docker Captain and Grafana Champion. Career timeline, what I work on, and the community work behind it.';
+  'Rushabh Shah, DevOps engineer at Orocorp Technologies Private Limited, Docker Captain and Grafana Champion. Career timeline, what I work on, and the community work behind it.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const TIMELINE = [
   {
     role: 'DevOps Engineer',
-    org: 'Oro',
+    org: 'Orocorp Technologies Private Limited',
     period: 'Jun 2025 - Present',
     current: true,
     detail:

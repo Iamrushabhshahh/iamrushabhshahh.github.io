@@ -2,7 +2,7 @@
 
 Effective July 10, 2026 · rushabhshah.dev
 
-\# TL;DR
+TL;DR
 
 No ads. No creepy tracking. No cookies from me. I count page views without knowing who you are, I read the messages you send me, and that's about it. If you click a coupon link, the store's own cookies take over, not mine.
 

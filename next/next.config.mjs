@@ -1,6 +1,7 @@
 /**
  * Hybrid build. This app owns the proof-of-work routes only:
- *   /speaker /til /talks /contributions /research /about
+ *   /speaking /now /til /reading /games /certs (published)
+ *   /contributions /research /about /discounts (built, not yet published)
  *
  * It must NOT emit /, /blog/**, /linux-foundation-coupon/**, /finops-coupon/**,
  * /coupons/ or /go/** — those stay owned by ../scripts/build-blog.mjs, which is

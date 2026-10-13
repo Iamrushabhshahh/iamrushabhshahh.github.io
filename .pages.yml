@@ -52,3 +52,217 @@ content:
       - name: body
         label: Body
         type: rich-text
+
+  # ---- Journal: /til/, /now/, /reading/, /games/ (built by next/) ----------
+  # Saving any of these commits to main, and the publish workflow rebuilds the
+  # site. Text fields reject em-dashes and en-dashes at build time, so if a
+  # save never shows up live, check the Actions tab for the validation error.
+
+  - name: til
+    label: Today I learned
+    type: collection
+    path: next/content/til
+    filename: "{fields.slug}.md"
+    view:
+      fields: [title, date, area]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: What you learned, in one line
+        type: string
+        required: true
+      - name: slug
+        label: URL slug (lowercase-with-dashes, becomes /til/<slug>/)
+        type: string
+        required: true
+      - name: date
+        label: Date (a future date stays hidden until that day)
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: area
+        label: Area
+        type: select
+        default: tech
+        options:
+          values: [tech, life]
+      - name: tags
+        label: Tags (lowercase-with-dashes, 1 to 5)
+        type: string
+        list: true
+        required: true
+      - name: takeaways
+        label: Takeaways (optional, up to 3 one-liners; `backticks` become code)
+        type: string
+        list: true
+      - name: draft
+        label: Draft (hidden while checked)
+        type: boolean
+        default: false
+      - name: body
+        label: Notes
+        type: rich-text
+
+  - name: now
+    label: Now page
+    type: file
+    path: next/content/now.md
+    fields:
+      - name: updated
+        label: Last updated
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: focus
+        label: What you are focused on (one line each, up to 6)
+        type: string
+        list: true
+      - name: body
+        label: Anything else (optional)
+        type: rich-text
+
+  - name: reading
+    label: Books
+    type: collection
+    path: next/content/reading
+    filename: "{fields.slug}.md"
+    view:
+      fields: [title, author, status]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: slug, label: Slug (lowercase-with-dashes), type: string, required: true }
+      - { name: author, label: Author, type: string, required: true }
+      - name: status
+        label: Status
+        type: select
+        default: reading
+        options:
+          values: [reading, finished, queued, dropped]
+      - { name: started, label: Started, type: date, options: { format: yyyy-MM-dd } }
+      - { name: finished, label: Finished, type: date, options: { format: yyyy-MM-dd } }
+      - { name: rating, label: Rating (1 to 5), type: number }
+      - { name: link, label: Link (https), type: string }
+      - { name: body, label: Notes, type: rich-text }
+
+  - name: games
+    label: Games
+    type: collection
+    path: next/content/games
+    filename: "{fields.slug}.md"
+    view:
+      fields: [title, platform, status]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: slug, label: Slug (lowercase-with-dashes), type: string, required: true }
+      - { name: platform, label: Platform, type: string, required: true }
+      - name: status
+        label: Status
+        type: select
+        default: playing
+        options:
+          values: [playing, finished, backlog, dropped]
+      - { name: started, label: Started, type: date, options: { format: yyyy-MM-dd } }
+      - { name: finished, label: Finished, type: date, options: { format: yyyy-MM-dd } }
+      - { name: hours, label: Hours played, type: number }
+      - { name: rating, label: Rating (1 to 5), type: number }
+      - { name: link, label: Link (https), type: string }
+      - { name: body, label: Notes, type: rich-text }
+
+  - name: certs
+    label: Certifications
+    type: file
+    path: next/content/certs.json
+    format: json
+    fields:
+      - name: certs
+        label: Certifications (earned ones also appear on the home page)
+        type: object
+        list: true
+        fields:
+          - { name: slug, label: Slug, type: string, required: true }
+          - { name: code, label: Short code (CKA, AZ-104), type: string, required: true }
+          - { name: title, label: Full title, type: string, required: true }
+          - { name: subtitle, label: Card subtitle (issuer or exam code), type: string, required: true }
+          - { name: issuer, label: Issuer, type: string, required: true }
+          - name: status
+            label: Status
+            type: select
+            options:
+              values: [earned, in-progress, planned]
+          - { name: earnedOn, label: Earned on, type: date, options: { format: yyyy-MM-dd } }
+          - { name: target, label: Target month (YYYY-MM), type: string }
+          - { name: proofUrl, label: Proof URL (Credly badge), type: string }
+          - { name: why, label: Why this one (planned only), type: text }
+
+  - name: speaking
+    label: Speaking
+    type: file
+    path: next/content/speaking/speaking.json
+    format: json
+    fields:
+      - name: engagements
+        label: Talks, hackathons, meetups, volunteering
+        type: object
+        list: true
+        fields:
+          - { name: slug, label: Slug, type: string, required: true }
+          - { name: title, label: Title (talk title, or your role), type: string, required: true }
+          - name: kind
+            label: Kind
+            type: select
+            options:
+              values: [talk, lightning, workshop, jury, organizing, hosting, volunteer, booth]
+          - { name: role, label: Role note (e.g. Co-speaker), type: string }
+          - { name: event, label: Event, type: string, required: true }
+          - { name: organizer, label: Organizer, type: string }
+          - { name: start, label: "Start (2026-11-09, or 2026-11-09T12:25:00-07:00 with the venue's UTC offset)", type: string, required: true }
+          - { name: endDate, label: Last day (multi-day events), type: string }
+          - { name: durationMinutes, label: Length in minutes, type: number }
+          - { name: venue, label: Venue, type: string }
+          - { name: city, label: City, type: string, required: true }
+          - { name: country, label: Country, type: string, required: true }
+          - { name: coSpeakers, label: Co-speakers, type: string, list: true }
+          - { name: abstract, label: Abstract (2 to 3 sentences), type: text }
+          - name: links
+            label: Links
+            type: object
+            fields:
+              - { name: event, label: Event page, type: string }
+              - { name: session, label: Session page, type: string }
+              - { name: slides, label: Slides, type: string }
+              - { name: video, label: Recording (https), type: string }
+              - { name: repo, label: Demo code (https), type: string }
+              - { name: post, label: Write-up (/blog/... or https), type: string }
+          - { name: rsvps, label: Meetup RSVPs, type: number }
+          - { name: attendees, label: Counted attendance, type: number }
+      - name: roles
+        label: Ongoing community roles
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Role, type: string, required: true }
+          - { name: org, label: Organization, type: string, required: true }
+          - { name: since, label: Since (YYYY or YYYY-MM), type: string, required: true }
+          - { name: summary, label: Summary, type: text, required: true }
+          - { name: url, label: Link, type: string }
+      - name: topics
+        label: Talks I can give
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Topic, type: string, required: true }
+          - { name: summary, label: Summary, type: text, required: true }
+          - { name: basedOn, label: Engagement slug it was given at, type: string }
+      - name: testimonials
+        label: Testimonials (only with the person's permission)
+        type: object
+        list: true
+        fields:
+          - { name: quote, label: Quote, type: text, required: true }
+          - { name: name, label: Name, type: string, required: true }
+          - { name: context, label: Context (role, event), type: string, required: true }
+          - { name: url, label: Source link (https), type: string }

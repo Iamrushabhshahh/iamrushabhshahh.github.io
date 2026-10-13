@@ -1,0 +1,401 @@
+{
+  "engagements": [
+    {
+      "slug": "fluxcon-na-2026",
+      "title": "Your Git Repo Is Not a Backup: Kubernetes Disaster Recovery with Flux and Velero",
+      "kind": "talk",
+      "event": "FluxCon North America 2026",
+      "organizer": "CNCF, co-located with KubeCon + CloudNativeCon North America",
+      "start": "2026-11-09T12:25:00-07:00",
+      "durationMinutes": 25,
+      "venue": "Salt Palace Convention Center, Grand Ballroom H",
+      "city": "Salt Lake City",
+      "country": "United States",
+      "coSpeakers": [
+        "Shivani Rathod"
+      ],
+      "abstract": "A cluster gets broken on purpose and brought back live with Flux and Velero. Git gives you your manifests back. It does not give you your database volumes or your secrets, and that gap is where most recovery plans quietly fail.",
+      "links": {
+        "session": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1269417"
+      }
+    },
+    {
+      "slug": "oss-japan-2026",
+      "title": "Closing the Ma (間): Filling the Gaps in Kubernetes Visibility with Headlamp",
+      "kind": "talk",
+      "event": "Open Source Summit Japan 2026",
+      "organizer": "The Linux Foundation",
+      "start": "2026-12-08T14:50:00+09:00",
+      "durationMinutes": 40,
+      "venue": "Hall B4",
+      "city": "Tokyo",
+      "country": "Japan",
+      "coSpeakers": [
+        "Shivani Rathod"
+      ],
+      "abstract": "Headlamp plugins that put Flux reconciliation state and OpenCost spend in the same view as the workloads they describe. Presented in English with Japanese slides.",
+      "links": {
+        "session": "https://ossjapan2026.sched.com/event/2YNR6"
+      }
+    },
+    {
+      "slug": "open-compliance-summit-2026",
+      "title": "A Tag Is a Lie",
+      "kind": "lightning",
+      "event": "Open Compliance Summit 2026",
+      "organizer": "The Linux Foundation",
+      "start": "2026-12-11T16:50:00+09:00",
+      "durationMinutes": 5,
+      "venue": "Hall A4",
+      "city": "Tokyo",
+      "country": "Japan",
+      "abstract": "Approving a container image by tag approves something that can change after you approved it. Pinning by digest belongs in policy, as an evidence control, not in a style guide.",
+      "links": {
+        "session": "https://events.linuxfoundation.org/open-compliance-summit/program/schedule/?id=1321416"
+      }
+    },
+    {
+      "slug": "promcon-eu-2026",
+      "title": "From Buckets to Native Histograms: Lessons from a Production Migration",
+      "kind": "talk",
+      "role": "Co-speaker, pre-recorded segment",
+      "event": "PromCon EU 2026",
+      "organizer": "Prometheus project",
+      "start": "2026-10-08T14:15:00+02:00",
+      "durationMinutes": 30,
+      "city": "Munich",
+      "country": "Germany",
+      "coSpeakers": [
+        "Shivani Rathod"
+      ],
+      "abstract": "A phased move from classic to native histograms on Prometheus 3.x: running both side by side, checking PromQL results against each other, what changes in the WAL and TSDB, and the Grafana dashboards and exporters that break along the way.",
+      "links": {
+        "session": "https://promcon.io/2026-munich/talks/from-buckets-to-native-histograms-lessons-from-a-production-migration/"
+      }
+    },
+    {
+      "slug": "kcd-gujarat-2026",
+      "title": "Speaker buddy and city guide",
+      "kind": "volunteer",
+      "event": "KCD Gujarat 2026",
+      "organizer": "CNCG Ahmedabad, Gandhinagar, Rajkot and Vadodara",
+      "start": "2026-09-19",
+      "city": "Ahmedabad",
+      "country": "India",
+      "abstract": "Looked after speakers on the day, and wrote the Ahmedabad guide the organizers sent to every speaker with their pass.",
+      "links": {
+        "event": "https://www.kcdgujarat.com/",
+        "post": "/blog/kcd-gujarat-2026-ahmedabad-guide/"
+      }
+    },
+    {
+      "slug": "cncg-vadodara-2026-09",
+      "title": "Agents in the Dark",
+      "kind": "talk",
+      "event": "Cloud Native Vadodara September Meetup, KCD Gujarat pre-event",
+      "organizer": "CNCG Vadodara",
+      "start": "2026-09-13",
+      "venue": "Sunflower Lab",
+      "city": "Vadodara",
+      "country": "India",
+      "abstract": "An incident-investigation agent built on the Claude Agent SDK, with an OpenTelemetry span for every model turn and tool call, traced through Prometheus, Loki, Tempo and Grafana while it chases a database connection-pool incident.",
+      "links": {
+        "event": "https://ocgroups.dev/cncf/group/cloud-native-vadodara/event/j7yxbb9"
+      }
+    },
+    {
+      "slug": "codearena-3",
+      "title": "Jury member, industry expert evaluator",
+      "kind": "jury",
+      "event": "CODEARENA 3.0, internal Smart India Hackathon",
+      "organizer": "SITAICS, Rashtriya Raksha University",
+      "start": "2026-09-09",
+      "endDate": "2026-09-10",
+      "city": "Gandhinagar",
+      "country": "India"
+    },
+    {
+      "slug": "cloudscape-parul-2026",
+      "title": "Build, Containerize and Deploy",
+      "kind": "talk",
+      "event": "Cloudscape: Kickstart with Cloud Native",
+      "organizer": "AWS Student Builder Group at Parul University, with KCD Gujarat and CNCG Ahmedabad",
+      "start": "2026-08-08",
+      "venue": "Medical Auditorium, Parul University",
+      "city": "Vadodara",
+      "country": "India",
+      "abstract": "A small Node.js app taken the whole cloud-native path live on stage: build it, put it in a container, deploy it to Kubernetes, then watch Kubernetes scale it under load and bring it back after a crash.",
+      "links": {
+        "event": "https://www.linkedin.com/posts/aws-student-builder-group-parul-university_cloudscape-activity-7491008159411695616-LSY3"
+      }
+    },
+    {
+      "slug": "finspark-26",
+      "title": "Organizing team, RRU campus round",
+      "kind": "organizing",
+      "event": "FinSpark'26, Bank of Maharashtra national cybersecurity hackathon",
+      "organizer": "id8nxt with SITAICS, Rashtriya Raksha University",
+      "start": "2026-07",
+      "city": "Gandhinagar",
+      "country": "India"
+    },
+    {
+      "slug": "pu-hackathon-2026",
+      "title": "Organizing team",
+      "kind": "organizing",
+      "event": "PU Hackathon 2026",
+      "organizer": "Parul Polytechnic Institute",
+      "start": "2026-07-08",
+      "city": "Vadodara",
+      "country": "India"
+    },
+    {
+      "slug": "kubecon-india-2026",
+      "title": "Linux Foundation booth volunteer",
+      "kind": "volunteer",
+      "event": "KubeCon + CloudNativeCon India 2026",
+      "organizer": "CNCF and The Linux Foundation",
+      "start": "2026-06-18",
+      "endDate": "2026-06-19",
+      "venue": "Jio World Convention Centre",
+      "city": "Mumbai",
+      "country": "India",
+      "links": {
+        "event": "https://events.linuxfoundation.org/kubecon-cloudnativecon-india/"
+      }
+    },
+    {
+      "slug": "docker-ahmedabad-2026-06",
+      "title": "Docker's AI Revolution: From Containers to Agents, What's Next in 2026?",
+      "kind": "talk",
+      "event": "Docker Ahmedabad Meetup, June edition",
+      "organizer": "Docker Ahmedabad",
+      "start": "2026-06-06",
+      "venue": "Crest Data Systems",
+      "city": "Ahmedabad",
+      "country": "India",
+      "abstract": "A live demo of Compose for agents, MCP, cagent and microVM sandboxes, and what they change about how agents get built and run.",
+      "rsvps": 157,
+      "links": {
+        "event": "https://www.meetup.com/docker-ahmedabad/events/315059592/"
+      }
+    },
+    {
+      "slug": "opensearch-ahmedabad-2026-05",
+      "title": "OpenSearch: From Zero to Dashboards in 30 Minutes",
+      "kind": "talk",
+      "event": "OpenSearch Meetup Ahmedabad, May",
+      "organizer": "OpenSearch Project Ahmedabad",
+      "start": "2026-05-02",
+      "durationMinutes": 30,
+      "venue": "iFour Technolab",
+      "city": "Ahmedabad",
+      "country": "India",
+      "abstract": "From an empty cluster to working dashboards in one sitting.",
+      "rsvps": 44,
+      "links": {
+        "event": "https://www.meetup.com/opensearch-project-ahmedabad/events/314487343/"
+      }
+    },
+    {
+      "slug": "grafana-ahmedabad-2026-03",
+      "title": "How Not to Become a Grafana Champion",
+      "kind": "talk",
+      "role": "Co-host and speaker",
+      "event": "Beyond Dashboards: A Grafana Meetup",
+      "organizer": "Grafana & Friends Ahmedabad",
+      "start": "2026-03-22",
+      "city": "Ahmedabad",
+      "country": "India",
+      "rsvps": 162,
+      "attendees": 46,
+      "links": {
+        "event": "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/events/313587731/"
+      }
+    },
+    {
+      "slug": "grafana-ahmedabad-2026-01",
+      "title": "Happy Hours #7",
+      "kind": "hosting",
+      "role": "Co-host",
+      "event": "Grafana & Friends Ahmedabad",
+      "organizer": "Grafana & Friends Ahmedabad",
+      "start": "2026-01-25",
+      "venue": "Kenex AI",
+      "city": "Ahmedabad",
+      "country": "India",
+      "rsvps": 40,
+      "links": {
+        "event": "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/events/312942205/"
+      }
+    },
+    {
+      "slug": "grafana-ahmedabad-2025-12",
+      "title": "Happy Hours #6",
+      "kind": "hosting",
+      "role": "Co-host",
+      "event": "Grafana & Friends Ahmedabad",
+      "organizer": "Grafana & Friends Ahmedabad",
+      "start": "2025-12-06",
+      "venue": "Lucent Innovation",
+      "city": "Ahmedabad",
+      "country": "India",
+      "rsvps": 119,
+      "links": {
+        "event": "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/events/311918044/"
+      }
+    },
+    {
+      "slug": "grafana-ahmedabad-2025-10",
+      "title": "Happy Hours #4",
+      "kind": "hosting",
+      "role": "Co-host and speaker",
+      "event": "Grafana & Friends Ahmedabad",
+      "organizer": "Grafana & Friends Ahmedabad",
+      "start": "2025-10-04",
+      "venue": "IQM Corporation",
+      "city": "Ahmedabad",
+      "country": "India",
+      "rsvps": 44,
+      "links": {
+        "event": "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/events/311081125/"
+      }
+    },
+    {
+      "slug": "grafanacon-recap-ahmedabad-2025",
+      "title": "GrafanaCON Recap Meetup",
+      "kind": "hosting",
+      "role": "Co-host",
+      "event": "Grafana & Friends Ahmedabad",
+      "organizer": "Grafana & Friends Ahmedabad",
+      "start": "2025-06-22",
+      "city": "Ahmedabad",
+      "country": "India",
+      "rsvps": 52,
+      "links": {
+        "event": "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/events/308457705/"
+      }
+    },
+    {
+      "slug": "grafana-ahmedabad-2025-04",
+      "title": "Happy Hours #3",
+      "kind": "hosting",
+      "role": "Host",
+      "event": "Grafana & Friends Ahmedabad",
+      "organizer": "Grafana & Friends Ahmedabad",
+      "start": "2025-04-26",
+      "venue": "E2M Solutions",
+      "city": "Ahmedabad",
+      "country": "India",
+      "rsvps": 139,
+      "links": {
+        "event": "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/events/306950704/"
+      }
+    },
+    {
+      "slug": "kubecon-india-2024",
+      "title": "Booth, representing KodeKloud",
+      "kind": "booth",
+      "event": "KubeCon + CloudNativeCon India 2024",
+      "organizer": "CNCF and The Linux Foundation",
+      "start": "2024-12-11",
+      "endDate": "2024-12-12",
+      "venue": "Yashobhoomi",
+      "city": "New Delhi",
+      "country": "India",
+      "links": {
+        "event": "https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-india/"
+      }
+    },
+    {
+      "slug": "grafana-ahmedabad-2024-11",
+      "title": "Happy Hours #2",
+      "kind": "hosting",
+      "role": "Host",
+      "event": "Grafana & Friends Ahmedabad",
+      "organizer": "Grafana & Friends Ahmedabad",
+      "start": "2024-11-09",
+      "city": "Ahmedabad",
+      "country": "India",
+      "rsvps": 56,
+      "links": {
+        "event": "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/events/304402473/"
+      }
+    },
+    {
+      "slug": "cncg-ahmedabad-grafana-2024-05",
+      "title": "Level Up Your Monitoring: Grafana 101 for Everyone",
+      "kind": "talk",
+      "event": "Cloud Native Ahmedabad x Grafana Ahmedabad cross meetup",
+      "organizer": "CNCG Ahmedabad and Grafana & Friends Ahmedabad",
+      "start": "2024-05-04",
+      "venue": "Aubergine Solutions",
+      "city": "Ahmedabad",
+      "country": "India",
+      "rsvps": 114,
+      "links": {
+        "event": "https://community.cncf.io/events/details/cncf-ahmedabad-presents-cloud-native-ahmedabad-x-grafana-ahmedabad-cross-meetup/"
+      }
+    }
+  ],
+  "roles": [
+    {
+      "title": "Co-organizer",
+      "org": "Grafana & Friends Ahmedabad",
+      "since": "2024-11",
+      "summary": "Runs the Ahmedabad chapter of Grafana's community meetup with Viral Parmar. Talks on observability, OpenTelemetry and the LGTM stack, hosted by a different local company each time.",
+      "url": "https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/"
+    },
+    {
+      "title": "Community team",
+      "org": "Cloud Native Community Group Gandhinagar",
+      "since": "2025-01",
+      "summary": "Part of the volunteer team behind the CNCF community group in Gandhinagar."
+    },
+    {
+      "title": "Chapter team",
+      "org": "Docker Ahmedabad",
+      "since": "2026-06",
+      "summary": "Helps the core team run Docker Ahmedabad meetups.",
+      "url": "https://www.meetup.com/docker-ahmedabad/"
+    }
+  ],
+  "topics": [
+    {
+      "title": "Kubernetes disaster recovery that survives a real restore",
+      "summary": "What Git can and cannot bring back, and how Flux and Velero cover the rest. Live failure, live recovery.",
+      "basedOn": "fluxcon-na-2026"
+    },
+    {
+      "title": "Migrating to Prometheus native histograms",
+      "summary": "Running classic and native histograms side by side, proving the queries agree, and the dashboards that break on the way.",
+      "basedOn": "promcon-eu-2026"
+    },
+    {
+      "title": "Observability for AI agents",
+      "summary": "Tracing every model turn and tool call with OpenTelemetry so an agent's decisions can be debugged like any other service.",
+      "basedOn": "cncg-vadodara-2026-09"
+    },
+    {
+      "title": "Containers for agents",
+      "summary": "Compose for agents, MCP and sandboxed runtimes, shown as a working demo rather than a roadmap slide.",
+      "basedOn": "docker-ahmedabad-2026-06"
+    },
+    {
+      "title": "Supply chain evidence an auditor can trust",
+      "summary": "Why a mutable tag is not an approval, and what to enforce in policy instead.",
+      "basedOn": "open-compliance-summit-2026"
+    },
+    {
+      "title": "Cloud native from zero, for students",
+      "summary": "One app from laptop to container to Kubernetes, with the failure each step fixes shown live.",
+      "basedOn": "cloudscape-parul-2026"
+    },
+    {
+      "title": "Observability from zero, for beginners",
+      "summary": "Grafana or OpenSearch, from an empty install to a dashboard people actually use, in one session.",
+      "basedOn": "cncg-ahmedabad-grafana-2024-05"
+    }
+  ],
+  "testimonials": []
+}

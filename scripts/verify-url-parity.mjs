@@ -5,8 +5,9 @@
  * Two generators write into one output tree:
  *   - scripts/build-blog.mjs  owns /, /blog/**, /linux-foundation-coupon/**,
  *                             /finops-coupon/**, /coupons/, /go/**, /privacy/
- *   - next/                   owns /speaker/, /til/, /talks/, /contributions/,
- *                             /research/, /about/
+ *   - next/                   owns /speaking/, /now/, /til/, /reading/,
+ *                             /games/, /certs/, /contributions/, /research/,
+ *                             /about/, /discounts/
  *
  * If those sets ever overlap, one generator silently overwrites the other's
  * output on deploy, and the page that disappears is whichever ran first. On the
@@ -27,9 +28,12 @@ const NEXT_OUT = path.join(ROOT, 'next', 'out');
 
 /** Routes the Next app is allowed to own. Anything else it emits is a collision. */
 const NEXT_OWNED = [
-  '/speaker/',
+  '/speaking/',
+  '/now/',
   '/til/',
-  '/talks/',
+  '/reading/',
+  '/games/',
+  '/certs/',
   '/contributions/',
   '/research/',
   '/about/',

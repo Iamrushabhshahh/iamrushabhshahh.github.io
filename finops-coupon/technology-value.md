@@ -1,4 +1,4 @@
-[$ cd../finops-coupon](https://rushabhshah.dev/finops-coupon/)
+[&larr; All FinOps codes](https://rushabhshah.dev/finops-coupon/)
 
 # FinOps Certified: Technology Value Discount Code: 20% Off with RUSHABH_20
 
@@ -93,6 +93,6 @@ Doing Kubernetes or CNCF certifications too? Those are a different checkout and 
 
 Both codes side by side, and which one applies to what: [certification discount codes hub](https://rushabhshah.dev/coupons/).
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_20** I earn a commission, at no extra cost to you (you save 20% either way). The code covers the five self-paced offerings listed on this site and not the rest of the FinOps catalog, so I've said plainly on every page which is which rather than implying it works on everything. This is a separate programme from my Linux Foundation partnership, and the two run on different checkouts: [RUSHABH30](https://rushabhshah.dev/linux-foundation-coupon/) applies at training.linuxfoundation.org, RUSHABH_20 applies at learn.finops.org, and neither is accepted by the other.

@@ -1,261 +1,229 @@
-Currently DevOps Engineer @ Oro · Ahmedabad, India
+every star is a project I've contributed to. hover one.
 
-# Hi, I'm Rushabh Shah.
+**●** Docker Captain · Grafana Champion · Ahmedabad
 
-$ DevOps Engineer, Docker Captain, Grafana Champion, SRE Enthusiast, and Community Organizer.
+# Rushabh Shah is **an open source contributor**
 
-[Docker Captain](https://rushabhshah.dev/docker-captain/) & Grafana Champion. I build and automate cloud-native infrastructure on Kubernetes, ship reliable observability, and simplify complex cloud concepts for the community.
+I build, teach and speak about **open source infrastructure**. From the Hindi edition of ebpf.io to stages in Tokyo and Salt Lake City, I make the cloud native world easier to learn.
 
-[Get in touch](#contact)
-[Download résumé](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf?v=34823de89f1e)
-[Read my writing](#writing)
-[GitHub](https://github.com/iamrushabhshahh)
+[Learn with me](#courses)[Book a talk](https://rushabhshah.dev/speaking/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
 
-~/whoami.sh
+Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
+Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
 
-```
-$ cat whoami.json
-{
-  "role": "DevOps Engineer",
-  "company": "Oro",
-  "location": "Ahmedabad, IN",
-  "honors": [
-    "Docker Captain",
-    "Grafana Champion"
-  ],
-  "focus": [
-    "Kubernetes",
-    "Observability",
-    "Cloud Cost"
-  ]
-}
-$
-```
-
-~220
-
-\# Docker Captains worldwide
-
-Selected 2026
-
-~110
-
-\# Grafana Champions worldwide
-
-Selected 2026
-
+10
+talks given or booked, in 4 countries
+612
+RSVPs across the meetups I host
+14
+upstream pull requests in open source
+3
+Linux Foundation exams passed in 31 days
 59%
+AWS spend cut at Genuin, no downtime
 
-AWS spend reduction
+The story so far
 
-Delivered at Genuin
+## From first terminal to stages abroad.
 
-0
+Three years, five teams, and a habit of learning in public.
 
-Downtime · AWS → OCI migration
+2023
+### First DevOps job, first talk
 
-Hard-deadline cutover
+Joined Tridhya Tech as a junior DevOps engineer. Built Docker images, Kubernetes workloads and pipelines, passed AZ-900 and AZ-104, and gave my first tech talk to the team.
 
-Two partner codes, [compared side by side →](https://rushabhshah.dev/coupons/)
+2024
+### Teaching at scale with KodeKloud
 
-RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
+Built hands-on cloud labs used to teach Azure, AWS and GCP. Gave my first community talk, Grafana 101, in May, represented KodeKloud at the first KubeCon India in December, and started hosting Grafana & Friends Ahmedabad.
+KubeCon India 2024 first meetup talk Grafana & Friends
+2025
+### Open source in Hindi, production at scale
 
-Get the coupon code →
+Cut AWS spend 59% at Genuin and moved it to Oracle Cloud with zero downtime. Taught Azure to enterprise teams at Koenig. Got the **Hindi edition of ebpf.io** merged, then joined Orocorp Technologies Private Limited.
+ebpf.io/hi-in 59% cost cut AWS to OCI
+2026
+### Docker Captain, Grafana Champion, on tour
 
-(https://rushabhshah.dev/linux-foundation-coupon/)
+Selected into both programs. Passed KCNA, KCSA and CKAD in a month. Spoke in Vadodara and at PromCon EU, with FluxCon in Salt Lake City and two talks in Tokyo next. And started building courses.
+Docker Captain Grafana Champion Tokyo &times; 2
 
-RUSHABH_20: I'm also a FinOps Foundation partner, so my community gets **20% off FinOps certifications** (Practitioner, Engineer, FOCUS Analyst, AI Value, Technology Value).
+Open source
 
-Get the FinOps code →
+## Merged upstream, in public.
 
-(https://rushabhshah.dev/finops-coupon/)
+Small, real contributions to projects millions of engineers depend on. CNCF DevStats score: 178.
 
-## 01. About Me
+MERGED · 2025
+### ebpf.io
 
-Hi, I'm Rushabh, a DevOps Engineer based in Ahmedabad, India, currently at Oro, building reliable cloud infrastructure on Kubernetes with Helm, Argo CD, Terraform, and GitHub Actions. I'm a [Docker Captain](https://rushabhshah.dev/docker-captain/) (selected 2026, ~220 members worldwide) and a Grafana Champion (selected 2026, ~110 worldwide).
+The whole Hindi edition, so engineers can learn eBPF in Hindi.
 
-My focus areas are Kubernetes, CI/CD, IaC, observability with the Grafana LGTM stack (Loki, Grafana, Tempo, Mimir) and OpenTelemetry, and cloud cost optimization. Before Oro, I drove a 59% AWS spend reduction at Genuin, led a zero-downtime AWS→OCI migration under a hard deadline, and built ISO / SOC Type 1 readiness controls. I started out as a Laravel/PHP developer, then moved into DevOps via Tridhya Tech and KodeKloud, where I represented the team at KubeCon India 2024. I organize Grafana & Friends Ahmedabad, run workshops on Prometheus and the LGTM stack, and contribute to open source, including translating eBPF.io into Hindi. I'm also a Linux Foundation Education partner, so my community gets [30% off CKA, CKAD and CKS certifications](https://rushabhshah.dev/linux-foundation-coupon/) year-round.
+(https://ebpf.io/hi-in/)
 
-$ now > deep in eBPF, OpenTelemetry, and tuning Grafana LGTM stacks for production reliability.
+MERGED · 2025
+### Helm
 
-## 02. Honors & Certifications
+Docs fix for uninstalling releases with a namespace.
 
-Recognised programs I'm part of and certifications I hold.
+(https://github.com/helm/helm-www/pull/1748)
 
-Docker, Inc · Selected 2026
+MERGED · 2026
+### Docker
 
+A Playwright mixin kit for Docker&rsquo;s sandbox kits.
+
+(https://github.com/docker/sbx-kits-contrib/pull/138)
+
+9 IN REVIEW
+### Kubernetes
+
+Hindi translations of the Kubernetes documentation.
+
+(https://github.com/kubernetes/website/pulls?q=author%3Aiamrushabhshahh)
+
+Recognition
+
+## Picked by the projects I build on.
+
+Two community programmes, and certifications you can verify yourself.
+
+Docker, Inc. · Selected 2026
 ### Docker Captain
 
-Recognised by Docker, Inc. for technical expertise in containers and Kubernetes, real-world production experience, and consistent contribution to the global container community. The program includes ~220 members worldwide.
+Recognised by Docker for container and Kubernetes expertise, production experience and steady community contribution.
 
 (https://rushabhshah.dev/docker-captain/)
 
 Grafana Labs · Selected 2026
-
 ### Grafana Champion
 
-Grafana Labs' invitation-only program for contributors who advance the observability community. One of ~110 members worldwide. I organize Grafana & Friends Ahmedabad and run workshops on the LGTM stack and OpenTelemetry.
+Invitation-only programme for people who grow the observability community. I run Grafana & Friends Ahmedabad and LGTM workshops.
 
 (https://grafana.com/community/champions/)
 
-### Certifications
+[CKAD Certified Kubernetes Application Developer The Linux Foundation · Sep 2026 · verify ↗](https://www.credly.com/badges/403326fb-ec23-479e-a04b-d70dc73428a5)[KCSA Kubernetes and Cloud Native Security Associate The Linux Foundation · Sep 2026 · verify ↗](https://www.credly.com/badges/16538648-bf8b-4dfe-86cb-6f8d279b5742)[KCNA Kubernetes and Cloud Native Associate The Linux Foundation · Aug 2026 · verify ↗](https://www.credly.com/badges/fed261d0-7cd0-4ae7-89c1-a7437a4cc964) **AZ-104** Azure Administrator Associate Microsoft **AZ-900** Azure Fundamentals Microsoft
 
-CKAD: Certified Kubernetes Application Developer
+Studying for next: CKA, CKS, OTCA. [All certifications →](https://rushabhshah.dev/certs/)
 
-The Linux Foundation
+On stage
 
-KCSA: Kubernetes and Cloud Native Security Associate
+## Coming to a stage near you.
 
-The Linux Foundation
+9 Nov 2026 · FluxCon North America 2026
+### Your Git Repo Is Not a Backup: Kubernetes Disaster Recovery with Flux and Velero
 
-KCNA: Kubernetes and Cloud Native Associate
+A cluster gets broken on purpose and brought back live with Flux and Velero.
 
-The Linux Foundation
+(https://rushabhshah.dev/speaking/#fluxcon-na-2026)
 
-Microsoft Certified: Azure Administrator Associate
+8 Dec 2026 · Open Source Summit Japan 2026
+### Closing the Ma (間): Filling the Gaps in Kubernetes Visibility with Headlamp
 
-AZ-104
+Headlamp plugins that put Flux reconciliation state and OpenCost spend in the same view as the workloads they describe.
 
-Microsoft Certified: Azure Fundamentals
+(https://rushabhshah.dev/speaking/#oss-japan-2026)
 
-AZ-900
+11 Dec 2026 · Open Compliance Summit 2026
+### A Tag Is a Lie
 
-## 03. Tech Stack
+Approving a container image by tag approves something that can change after you approved it.
 
-The tools I reach for when building, shipping, and operating cloud infrastructure.
+(https://rushabhshah.dev/speaking/#open-compliance-summit-2026)
 
-\# Containers & Orchestration
+**#RUSHABHONTOUR** 🇮🇳 🇩🇪 🇺🇸 🇯🇵 Ahmedabad · Vadodara · Munich · Salt Lake City · Tokyo [Every talk and the speaker kit](https://rushabhshah.dev/speaking/)
 
-Kubernetes Docker Helm Argo CD
+LINUX FOUNDATION EDUCATION PARTNER
+## 30% off. Every exam. All year.
 
-\# IaC & Automation
+RUSHABH30: as a Linux Foundation Education partner, my community gets **30% off all Linux Foundation certifications** (CKA, CKAD, CKS, KCNA) and courses, all year round.
 
-Terraform Ansible GitHub Actions
+RUSHABH30 [Prices and the fine print →](https://rushabhshah.dev/linux-foundation-coupon/)[Also: 20% off FinOps certifications](https://rushabhshah.dev/coupons/)
 
-\# Cloud Platforms
+Experience
 
-AWS Azure GCP OCI
+## Where I've done the work.
 
-\# Observability
+Five teams in three years: product startups, a learning platform, and enterprise classrooms. [Download the r&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf).
 
-Prometheus Grafana Loki / Tempo / Mimir OpenTelemetry
+- Jun 2025 to Present DevOps Engineer *at Orocorp Technologies Private Limited* Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.
+- Jun 2025 to Jul 2025 Corporate Trainer *at Koenig Solutions Pvt. Ltd.* Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.
+- Jan 2025 to May 2025 DevOps Engineer *at Genuin* Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS to Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.
+- Jul 2024 to Dec 2024 Jr DevOps Engineer *at KodeKloud* Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.
+- Jun 2023 to Jun 2024 Jr DevOps Engineer *at Tridhya Tech Limited* Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.
 
-\# Languages & Tooling
+### Tools I reach for
+Containers & Orchestration Kubernetes Docker Helm Argo CD IaC & Automation Terraform Ansible GitHub Actions Cloud Platforms AWS Azure GCP OCI Observability Prometheus Grafana Loki / Tempo / Mimir OpenTelemetry Languages & Tooling Linux Bash Python Git CI/CD
 
-Linux Bash Python Git CI/CD
+Work with me
 
-## 04. Where I've Worked
+## Learn it with me, or hire me to do it.
 
-### DevOps Engineer
+### Courses
 
-Current
+Video courses on containers, Kubernetes and observability, built on the exams I passed this year.
 
-Oro
+- CKAD first
+- KCNA and KCSA next
+- Observability with Grafana planned
 
-Jun 2025 - Present
+[Join the course waitlist](mailto:hello@rushabhshah.dev?subject=Course%20waitlist)
 
-Operating Kubernetes workloads with Helm and GitOps via Argo CD; CI/CD on GitHub Actions; IaC with Terraform; observability with Prometheus, Grafana, Loki, Tempo and OpenTelemetry; cloud cost optimization and security hardening across the platform.
+### Hire me
 
-### Corporate Trainer
+Talks, workshops and hands-on help for teams.
 
-Koenig Solutions Pvt. Ltd.
+- Talks and workshops conferences, companies, colleges
+- Kubernetes and GitOps setup or review
+- Observability Prometheus, Grafana, OTel
+- Cloud cost audit cut one bill 59%
 
-Jun 2025 - Jul 2025
+[Book a free 20 minute call](#contact)
 
-Delivered live virtual and classroom training on Azure role-based certifications (AZ-900, AZ-104, AZ-305, AZ-400) to working IT professionals and enterprise teams across regions.
+Writing
 
-### DevOps Engineer
+## Notes from the on-call side.
 
-Genuin
-
-Jan 2025 - May 2025
-
-Drove a 59% AWS cost reduction; built end-to-end CI/CD pipelines bringing release time to ~10 minutes; led a zero-downtime AWS → Oracle Cloud Infrastructure migration under a fixed deadline; implemented controls for ISO and SOC Type 1 readiness.
-
-### Jr DevOps Engineer
-
-KodeKloud
-
-Jul 2024 - Dec 2024
-
-Built hands-on Azure labs (AZ-900, AZ-104, AZ-204, AZ-400) and multi-cloud lab environments on AWS, Azure and GCP. Automated provisioning with Terraform, Ansible and Bash. Represented KodeKloud at KubeCon India 2024.
-
-### Jr DevOps Engineer
-
-Tridhya Tech Limited
-
-Jun 2023 - Jun 2024
-
-Built and maintained Docker images and Kubernetes workloads, designed CI/CD pipelines on Jenkins and GitHub Actions, provisioned infra with Terraform/Ansible across Azure and AWS. Earned AZ-900 and AZ-104; ran an internal TechTalk on Kubernetes.
-
-## 05. Things I've Built
-
-A small selection of open-source contributions, study material, and writing.
-
-### eBPF.io: Hindi Translation
-
-Translated the eBPF.io website into Hindi so Hindi-speaking engineers can learn about eBPF for networking, observability, and security on Linux.
-
-eBPF Open Source Linux i18n
-
-(https://ebpf.io/hi-in/)
-
-### Personal Tech Blog
-
-My blog, right here on rushabhshah.dev: DevOps, Kubernetes, observability, cloud cost, and Linux.
-
-Blog Observability Linux DevOps
-
-(https://rushabhshah.dev/blog/)
-
-## 06. Writing & Talks
-
-Latest posts from the blog and recent community engagements.
-
-Sep 30, 2026 · 16 min read
-
+**incident** 29 Sept 2026 16 min
 ### A hostname that never existed took Redis and Postgres down with it
 
-A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the…
+A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
 
 (https://rushabhshah.dev/blog/dns-storm-eai-again/)
 
-Sep 1, 2026 · 19 min read
-
+**kubernetes** 1 Sept 2026 19 min
 ### India's first heritage city, Gujarat's first KCD
-
-Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you a…
 
 (https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/)
 
-Aug 30, 2026 · 3 min read
-
+**kubernetes** 30 Aug 2026 3 min
 ### Prometheus PCA and OpenTelemetry OTCA, reviewed
-
-Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SD…
 
 (https://rushabhshah.dev/blog/pca-otca-review/)
 
-### Speaking & Community
+**kubernetes** 28 Aug 2026 3 min
+### CKA exam day: PSI bridge, terminal, kubectl aliases
 
-Dec 2024 · Delhi
+(https://rushabhshah.dev/blog/cka-exam-day-setup/)
 
-### KubeCon + CloudNativeCon India 2024
+**kubernetes** 26 Aug 2026 11 min
+### Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks
 
-Represented KodeKloud at the inaugural KubeCon India, engaging with the CNCF community across container, observability, and platform-engineering tracks.
+(https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/)
 
-(https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-india/)
+**kubernetes** 26 Aug 2026 3 min
+### What the CKA actually tests in 2026
 
-Quarterly · Ahmedabad
+(https://rushabhshah.dev/blog/cka-exam-guide/)
 
-### Grafana & Friends Ahmedabad
+[All posts](https://rushabhshah.dev/blog/)[Today I learned](https://rushabhshah.dev/til/)
 
-Organize and host the Ahmedabad chapter, a quarterly community meetup focused on observability, OpenTelemetry, and the Grafana LGTM stack.
+I&rsquo;m a **DevOps engineer at Orocorp Technologies Private Limited** in Ahmedabad. I answer every message, and I&rsquo;m happiest when someone learns something because of a talk, a post or a pull request I made.
 
-(https://www.meetup.com/grafana-and-friends-ahmedabad-happy-hour/)
+[GitHub iamrushabhshahh](https://github.com/iamrushabhshahh)[LinkedIn iamrushabhshahh](https://www.linkedin.com/in/iamrushabhshahh/)[X @iamrushabhshahh](https://x.com/iamrushabhshahh)[YouTube @iamrushabhshahh](https://www.youtube.com/@iamrushabhshahh)[Instagram iamrushabhshahh](https://www.instagram.com/iamrushabhshahh/)[Sessionize speaker profile](https://sessionize.com/iamrushabhshahh/)[Credly verified badges](https://www.credly.com/users/iamrushabhshahh)[Docker Captain profile](https://www.docker.com/captains/rushabh-shah/)[Grafana Champions](https://grafana.com/community/champions/)[Substack newsletter](https://substack.com/@rushabhshah124804)[dev.to articles](https://dev.to/iamrushabhshahh)[Hashnode articles](https://iamrushabhshahh.hashnode.dev/)
 
-[Read the blog](https://rushabhshah.dev/blog/)
+Contact
+## Say hi.
 
-## 07. Get In Touch
-
-My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you. Every message is read personally, and I usually reply within 24 to 48 hours.
+I read every message myself and usually reply within 24 to 48 hours. I am in Ahmedabad (IST).

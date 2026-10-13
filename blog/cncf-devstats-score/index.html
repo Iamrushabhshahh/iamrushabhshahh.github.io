@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;}catch(e){}})();</script>
-    <script defer src="/assets/theme.js?v=d0c0d819"></script>
+    <script>(function(){try{var p=localStorage.getItem('theme');if(p!=='light'&&p!=='dark')p='system';var r=p==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):p;var h=document.documentElement;h.dataset.theme=r;h.dataset.pref=p;h.style.colorScheme=r;h.classList.add('rs-js');}catch(e){}})();</script>
+    <script defer src="/assets/theme.js?v=9165d2d4"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#010409">
+    <meta name="theme-color" content="#050a1c">
     <meta name="color-scheme" content="dark light">
     <title>My CNCF DevStats score is 178, and now I can&#39;t stop checking it · Rushabh Shah</title>
     <meta name="description" content="A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here&#39;s what that number is actually made of, and how to check yours.">
@@ -40,31 +40,21 @@
     <meta property="article:tag" content="cncf">
     <meta property="article:tag" content="meta">
     <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
-    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/fira-code-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/style.css?v=a3b0e5e8">
+    <link rel="preload" href="/assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/clash-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css?v=6af503f8">
     <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
     <div id="reading-progress" aria-hidden="true"><div id="reading-progress-bar"></div></div>
 
     <a href="#main" class="skip-link">Skip to content</a>
-    <header class="sticky top-0 z-40 bg-bg-color/80 backdrop-blur-md border-b border-border-color">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center font-fira" aria-label="Primary">
-            <a href="/" class="text-lg font-bold text-white">RUSHABHSHAH.DEV</a>
-            <div class="hidden xl:flex items-center space-x-6 text-sm nav-links">
-                <a href="/#about" class="text-gray-400 hover:text-primary-color transition-colors">./about</a>
-                <a href="/#honors" class="text-gray-400 hover:text-primary-color transition-colors">./honors</a>
-                <a href="/#skills" class="text-gray-400 hover:text-primary-color transition-colors">./skills</a>
-                <a href="/#experience" class="text-gray-400 hover:text-primary-color transition-colors">./experience</a>
-                <a href="/#projects" class="text-gray-400 hover:text-primary-color transition-colors">./projects</a>
-                <a href="/blog/" class="text-primary-color transition-colors" aria-current="true">./blog</a>
-                <a href="/linux-foundation-coupon/" class="text-gray-400 hover:text-primary-color transition-colors">./deals</a>
-                <a href="/#contact" class="text-gray-400 hover:text-primary-color transition-colors">./contact</a>
-            </div>
-            <div class="hidden xl:flex flex-shrink-0">
-                <div class="seg seg--compact" role="radiogroup" aria-label="Theme preference">
+    <header class="rs-hdr" id="rs-hdr">
+        <div class="rs-wrap rs-hdr__in">
+            <a class="rs-logo" href="/"><i aria-hidden="true"></i>Rushabh Shah</a>
+            <nav class="rs-nav" aria-label="Main"><a href="/blog/" aria-current="page">Blog</a><a href="/linux-foundation-coupon/">Certifications</a><a href="/speaking/">Speaking</a><a href="/til/">TIL</a><a href="/now/">Now</a><a href="/#about">About</a></nav>
+            <div class="rs-hdr__r">
+                <div class="rs-hide-sm"><div class="seg seg--compact" role="radiogroup" aria-label="Theme preference">
                 <button type="button" role="radio" data-value="light" aria-checked="false" tabindex="-1" title="Light">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
                     <span class="seg-label sr-only">Light</span>
@@ -77,22 +67,19 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     <span class="seg-label sr-only">Dark</span>
                 </button>
+            </div></div>
+                <a class="rs-tool rs-tool--hot rs-hide-sm" href="/#work">Work with me</a>
+                <button type="button" class="rs-tool rs-menu-btn" id="rs-menu" aria-controls="rs-sheet" aria-expanded="false">Menu</button>
             </div>
-            </div>
-            <button id="menu-btn" class="xl:hidden" aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation menu">
-                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-            </button>
-        </nav>
-        <div id="site-menu" class="hidden xl:hidden bg-terminal-header/90 font-fira">
-            <a href="/#about" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./about</a>
-            <a href="/#honors" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./honors</a>
-            <a href="/#skills" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./skills</a>
-            <a href="/#experience" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./experience</a>
-            <a href="/#projects" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./projects</a>
-            <a href="/blog/" class="block py-2 px-4 text-sm text-primary-color">./blog</a>
-            <a href="/linux-foundation-coupon/" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./deals</a>
-            <a href="/#contact" class="block py-2 px-4 text-sm hover:bg-primary-color/10">./contact</a>
-            <div class="seg" role="radiogroup" aria-label="Theme preference">
+        </div>
+        <a class="rs-promo" href="/linux-foundation-coupon/">30% off every Linux Foundation certification with code <b>RUSHABH30</b> &rarr;</a>
+    </header>
+    <nav class="rs-sheet" id="rs-sheet" aria-label="All pages" hidden>
+        <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#work">Work with me</a>
+        <h4>Learn</h4><a href="/til/">Today I learned</a><a href="/now/">Now</a><a href="/reading/">Reading</a><a href="/certs/">My certifications</a>
+        <h4>Save</h4><a href="/linux-foundation-coupon/">Linux Foundation coupon</a><a href="/finops-coupon/">FinOps coupon</a><a href="/coupons/">All coupons</a>
+        <h4>Me</h4><a href="/#about">About</a><a href="/games/">Games</a><a href="/links/">Links</a><a href="/#contact">Contact</a>
+        <div style="margin-top:24px"><div class="seg" role="radiogroup" aria-label="Theme preference">
                 <button type="button" role="radio" data-value="light" aria-checked="false" tabindex="-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
                     <span class="seg-label">Light</span>
@@ -105,16 +92,12 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     <span class="seg-label">Dark</span>
                 </button>
-            </div>
-        </div>
-        <a href="/linux-foundation-coupon/" class="block bg-primary-color/10 border-b border-border-color text-center font-fira text-xs py-2 px-4 text-gray-300 hover:text-primary-color transition-colors">
-            🎓 30% off all Linux Foundation certifications (CKA, CKAD, CKS…) with code <span class="text-primary-color font-bold">RUSHABH30</span> →
-        </a>
-    </header>
+            </div></div>
+    </nav>
     <main id="main" class="container mx-auto px-6 py-12">
         <div class="post-layout">
         <article class="post-article max-w-3xl">
-            <p class="font-fira text-sm mb-8"><a href="/blog/" class="text-gray-400 hover:text-primary-color"><span class="text-green-color">$</span> cd ../blog</a></p>
+            <a href="/blog/" class="rs-back">&larr; All posts</a>
             <header class="mb-10">
                 <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">My CNCF DevStats score is 178, and now I can&#39;t stop checking it</h1>
                 <div class="flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
@@ -160,7 +143,7 @@
         </div>
 
         <section class="post-readnext" aria-labelledby="read-next-heading">
-            <h2 id="read-next-heading" class="font-fira text-sm uppercase tracking-wider text-gray-500 mb-5"># read next</h2>
+            <h2 id="read-next-heading" class="rs-kicker mb-5">read next</h2>
             <div class="read-next-grid">
                 
                     <a href="/blog/hello-world/" class="tech-card p-5 rounded-md block read-next-card">
@@ -181,32 +164,19 @@
         </section>
     </main>
 
-    <footer class="border-t border-border-color mt-10">
-        <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-fira text-gray-500">
-            <p>&copy; 2026 Rushabh Shah · Designed &amp; built with care.</p>
-            <div class="flex flex-wrap gap-4">
-                <a href="https://github.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">GitHub</a>
-                <a href="https://in.linkedin.com/in/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">LinkedIn</a>
-                <a href="https://twitter.com/iamrushabhshahh" target="_blank" rel="noopener noreferrer" class="hover:text-primary-color">Twitter</a>
-                <a href="/blog/rss.xml" class="hover:text-primary-color">RSS</a>
-                <a href="/privacy/" class="hover:text-primary-color">Privacy</a>
-                <a href="/linux-foundation-coupon/" class="hover:text-primary-color">30% off Linux Foundation ↗</a>
-            </div>
+    <footer class="rs-footer"><div class="rs-wrap">
+        <div class="rs-fgrid">
+            <div><a class="rs-logo" href="/"><i aria-hidden="true"></i>Rushabh Shah</a>
+                <p>Open source, explained in public. Docker Captain and Grafana Champion in Ahmedabad, India.</p>
+                <div class="rs-socials-row"><a href="https://github.com/iamrushabhshahh" rel="me noopener" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/iamrushabhshahh/" rel="me noopener" target="_blank">LinkedIn</a><a href="https://x.com/iamrushabhshahh" rel="me noopener" target="_blank">X</a><a href="https://www.youtube.com/@iamrushabhshahh" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/iamrushabhshahh/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.credly.com/users/iamrushabhshahh" rel="me noopener" target="_blank">Credly</a><a href="https://sessionize.com/iamrushabhshahh/" rel="me noopener" target="_blank">Sessionize</a><a href="https://dev.to/iamrushabhshahh" rel="me noopener" target="_blank">dev.to</a></div></div>
+            <div><h4>Read</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/til/">Today I learned</a></li><li><a href="/now/">Now</a></li><li><a href="/reading/">Reading</a></li><li><a href="/blog/rss.xml">RSS</a></li></ul></div>
+            <div><h4>Save</h4><ul><li><a href="/linux-foundation-coupon/">Linux Foundation</a></li><li><a href="/finops-coupon/">FinOps</a></li><li><a href="/coupons/">All coupons</a></li><li><a href="/linux-foundation-coupon/kubestronaut/">Kubestronaut</a></li></ul></div>
+            <div><h4>Work</h4><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#work">Hire me</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
+            <div><h4>Me</h4><ul><li><a href="/#about">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
         </div>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const b = document.getElementById('menu-btn');
-            const m = document.getElementById('site-menu');
-            if (b && m) {
-                b.addEventListener('click', () => {
-                    const open = m.classList.contains('hidden');
-                    m.classList.toggle('hidden', !open);
-                    b.setAttribute('aria-expanded', String(open));
-                });
-            }
-        });
-    </script>
+        <div class="rs-wordbox"><div class="rs-word" aria-hidden="true">RUSHABH SHAH</div></div>
+        <div class="rs-fine"><span>&copy; 2026 Rushabh Shah. Affiliate links pay me a commission at no cost to you.</span><span><a href="/privacy/">Privacy</a><a href="/blog/rss.xml">RSS</a><a href="/llms.txt">AI-readable bio</a></span></div>
+    </div></footer>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"My CNCF DevStats score is 178, and now I can't stop checking it","description":"A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here's what that number is actually made of, and how to check yours.","datePublished":"2026-08-20T17:30:00.000Z","dateModified":"2026-08-20T17:30:00.000Z","url":"https://rushabhshah.dev/blog/cncf-devstats-score/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"open-source, cncf, meta","image":"https://rushabhshah.dev/assets/blog/og/cncf-devstats-score.jpg"}</script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {

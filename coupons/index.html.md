@@ -65,6 +65,6 @@ Take the sale. The codes never stack with official sales, so always use the sing
 
 You don't have to take my word for it. I'm a named person with a checkable track record (Docker Captain, Grafana Champion, a public GitHub history), every price here is checkable against the official catalog, and I tell you when a sale beats my own code rather than hiding it.
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 Both codes are partner codes and I earn a commission when someone uses one, at no extra cost to you. That's also why you'll see me point at official sales that beat my own codes: the discount you get doesn't depend on which is better for me.

@@ -82,66 +82,146 @@ export const postSchema = z.object({
   series: z.string().optional(),
 });
 
+/**
+ * Pages CMS writes a blank optional field as "" or null, and `.optional()`
+ * accepts neither, so one empty box in the editor would fail the whole build.
+ * Strip those before validating. Empty arrays go too, for the same reason.
+ */
+export function stripEmpty<T>(value: T): T {
+  if (Array.isArray(value)) return value.map(stripEmpty) as T;
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(
+      Object.entries(value)
+        .filter(([, v]) => v !== null && v !== '' && !(Array.isArray(v) && v.length === 0))
+        .map(([k, v]) => [k, stripEmpty(v)]),
+    ) as T;
+  }
+  return value;
+}
+
 /* ------------------------------------------------------------------ *
- * TIL
+ * Speaking: engagements, ongoing roles, topics
  * ------------------------------------------------------------------ */
 
-export const tilCategory = z.enum(['k8s', 'docker', 'grafana', 'ebpf', 'linux']);
+/**
+ * What the person actually did at an event. The kinds are kept apart on
+ * purpose: a reviewer who checks a schedule and finds a booth shift listed as a
+ * talk discards the whole page, so organising, jury work and booth duty are
+ * never rounded up into "talks".
+ */
+export const engagementKind = z.enum([
+  'talk',
+  'lightning',
+  'workshop',
+  'jury',
+  'organizing',
+  'hosting',
+  'volunteer',
+  'booth',
+]);
 
-export const tilSchema = z.object({
-  title: prose(100),
+/**
+ * `2026-07` when only the month is known, `2026-11-09`, or
+ * `2026-11-09T12:25:00-07:00`. The offset is required with a time, so an
+ * add-to-calendar link can never land an hour off.
+ */
+const eventStart = z
+  .string()
+  .regex(
+    /^\d{4}-\d{2}(-\d{2}(T\d{2}:\d{2}(:\d{2})?[+-]\d{2}:\d{2})?)?$/,
+    'Expected YYYY-MM, YYYY-MM-DD, or a full timestamp with a UTC offset',
+  );
+
+/** Internal links stay root-relative so they never fork the canonical host. */
+const linkUrl = z.union([httpsUrl, sitePath]);
+
+export const engagementSchema = z.object({
   slug,
-  date: publishDate,
-  category: tilCategory,
-  codeSnippet: z
+  title: prose(160),
+  kind: engagementKind,
+  /** Qualifies the kind when it needs it, e.g. "Co-speaker, pre-recorded segment". */
+  role: prose(80).optional(),
+  event: prose(140),
+  organizer: prose(120).optional(),
+  start: eventStart,
+  /** Last day, for multi-day events. */
+  endDate: isoDate.optional(),
+  durationMinutes: z.number().int().positive().max(600).optional(),
+  venue: prose(120).optional(),
+  city: prose(60),
+  country: prose(40),
+  coSpeakers: z.array(prose(80)).max(6).default([]),
+  abstract: prose(700).optional(),
+  links: z
     .object({
-      lang: z.enum(['bash', 'yaml', 'go', 'promql', 'hcl', 'dockerfile', 'sql', 'json']),
-      code: z.string().min(1).max(2000),
-      /** Shown above the block. Not prose-checked: it is a filename or command. */
-      caption: z.string().max(120).optional(),
+      event: linkUrl.optional(),
+      session: linkUrl.optional(),
+      slides: linkUrl.optional(),
+      video: httpsUrl.optional(),
+      repo: httpsUrl.optional(),
+      post: linkUrl.optional(),
     })
-    .optional(),
-  /**
-   * The payload of a TIL. Kept to 1..3 so an entry stays a snippet rather than
-   * drifting into a blog post that belongs in /blog/.
-   */
-  takeaways: z.array(prose(240)).min(1).max(3),
+    .default({}),
+  /** Meetup RSVPs. Shown as RSVPs, never as attendance. */
+  rsvps: z.number().int().positive().optional(),
+  /** Counted attendance, only when someone in the room counted. */
+  attendees: z.number().int().positive().optional(),
+});
+
+export const roleSchema = z.object({
+  title: prose(80),
+  org: prose(120),
+  since: z.string().regex(/^\d{4}(-\d{2})?$/, 'Expected YYYY or YYYY-MM'),
+  summary: prose(300),
+  url: linkUrl.optional(),
+});
+
+export const topicSchema = z.object({
+  title: prose(100),
+  summary: prose(300),
+  /** Engagement slug this topic has already been given as. */
+  basedOn: slug.optional(),
+});
+
+/** Organiser or attendee quote. Only published with the person's permission. */
+export const testimonialSchema = z.object({
+  quote: prose(400),
+  name: prose(80),
+  context: prose(120),
+  url: httpsUrl.optional(),
+});
+
+export const speakingSchema = z.object({
+  engagements: z.array(engagementSchema),
+  roles: z.array(roleSchema),
+  topics: z.array(topicSchema),
+  testimonials: z.array(testimonialSchema).default([]),
 });
 
 /* ------------------------------------------------------------------ *
- * Talk
+ * Certifications (shared with ../scripts/build-blog.mjs)
  * ------------------------------------------------------------------ */
 
-export const talkBadge = z.enum([
-  'keynote',
-  'lightning',
-  'workshop',
-  'panel',
-  'meetup',
-  'conference',
-  'upcoming',
-  'cfp-submitted',
-]);
-
-export const talkSchema = z
+export const certSchema = z
   .object({
-    title: prose(160),
     slug,
-    eventName: prose(120),
-    date: isoDate,
-    location: prose(80),
-    slideUrl: httpsUrl.optional(),
-    videoUrl: httpsUrl.optional(),
-    repoUrl: httpsUrl.optional(),
-    /** Organiser-reported headcount. Omit rather than estimate. */
-    audienceSize: z.number().int().positive().optional(),
-    badges: z.array(talkBadge).min(1),
-    abstract: prose(600).optional(),
+    code: z.string().min(2).max(20),
+    /** Exact text of the home-page card. build-blog.mjs renders it verbatim. */
+    title: prose(120),
+    subtitle: prose(60),
+    issuer: prose(60),
+    status: z.enum(['earned', 'in-progress', 'planned']),
+    earnedOn: isoDate.optional(),
+    target: z.string().regex(/^\d{4}-\d{2}(-\d{2})?$/).optional(),
+    proofUrl: httpsUrl.optional(),
+    why: prose(300).optional(),
   })
-  .refine(
-    (t) => !t.badges.includes('cfp-submitted') || (!t.videoUrl && !t.slideUrl),
-    { message: 'A cfp-submitted talk cannot carry slides or a recording yet.' },
-  );
+  .refine((c) => c.status === 'earned' || !c.earnedOn, {
+    message: 'Only an earned cert has an earnedOn date.',
+    path: ['earnedOn'],
+  });
+
+export const certsFileSchema = z.object({ certs: z.array(certSchema) });
 
 /* ------------------------------------------------------------------ *
  * Contribution
@@ -235,8 +315,9 @@ export const socialProofSchema = z.object({
  * ------------------------------------------------------------------ */
 
 export type Post = z.infer<typeof postSchema>;
-export type TIL = z.infer<typeof tilSchema>;
-export type Talk = z.infer<typeof talkSchema>;
+export type Engagement = z.infer<typeof engagementSchema>;
+export type Speaking = z.infer<typeof speakingSchema>;
+export type Cert = z.infer<typeof certSchema>;
 export type Contribution = z.infer<typeof contributionSchema>;
 export type Deal = z.infer<typeof dealSchema>;
 export type SocialProof = z.infer<typeof socialProofSchema>;

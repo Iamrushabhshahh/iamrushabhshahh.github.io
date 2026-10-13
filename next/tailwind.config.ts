@@ -50,8 +50,8 @@ export default {
         'orange-tint': 'rgb(var(--orange-rgb) / <alpha-value>)',
       },
       fontFamily: {
-        sans: ["'Inter'", "'Inter-fallback'", 'sans-serif'],
-        fira: ["'Fira Code'", "'Fira-Code-fallback'", 'monospace'],
+        sans: ["'Satoshi'", "'Satoshi-fallback'", 'sans-serif'],
+        fira: ["'Martian Mono'", "'Martian-Mono-fallback'", 'monospace'],
       },
     },
   },

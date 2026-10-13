@@ -1,0 +1,1149 @@
+{
+ "/": {
+  "canonical": "https://rushabhshah.dev/",
+  "robots": "",
+  "title": "Rushabh Shah | Docker Captain · Grafana Champion · DevOps Engineer",
+  "description": "Rushabh Shah: Docker Captain, Grafana Champion, and DevOps Engineer in India, building cloud infrastructure and writing about Kubernetes.",
+  "ldTypes": [
+   "EducationalOccupationalCredential",
+   "Organization",
+   "Person",
+   "PostalAddress",
+   "WebSite"
+  ]
+ },
+ "/blog/": {
+  "canonical": "https://rushabhshah.dev/blog/",
+  "robots": "",
+  "title": "Blog · Rushabh Shah",
+  "description": "Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "Blog"
+  ]
+ },
+ "/blog/cka-exam-day-setup/": {
+  "canonical": "https://rushabhshah.dev/blog/cka-exam-day-setup/",
+  "robots": "",
+  "title": "CKA exam day: PSI bridge, terminal, kubectl aliases · Rushabh Shah",
+  "description": "The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/cka-exam-guide/": {
+  "canonical": "https://rushabhshah.dev/blog/cka-exam-guide/",
+  "robots": "",
+  "title": "What the CKA actually tests in 2026 · Rushabh Shah",
+  "description": "The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/cka-vs-ckad-vs-cks/": {
+  "canonical": "https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/",
+  "robots": "",
+  "title": "CKA vs CKAD vs CKS: which to take first · Rushabh Shah",
+  "description": "CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who each one is for and what order makes sense.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/cncf-devstats-score/": {
+  "canonical": "https://rushabhshah.dev/blog/cncf-devstats-score/",
+  "robots": "",
+  "title": "My CNCF DevStats score is 178, and now I can't stop checking it · Rushabh Shah",
+  "description": "A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here's what that number is actually made of, and how to check yours.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/dns-storm-eai-again/": {
+  "canonical": "https://rushabhshah.dev/blog/dns-storm-eai-again/",
+  "robots": "",
+  "title": "A hostname that never existed took Redis and Postgres down with it · Rushabh Shah",
+  "description": "A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/hello-world/": {
+  "canonical": "https://rushabhshah.dev/blog/hello-world/",
+  "robots": "",
+  "title": "Hello, world: the blog now lives on rushabhshah.dev · Rushabh Shah",
+  "description": "Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/kcd-gujarat-2026-ahmedabad-guide/": {
+  "canonical": "https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/",
+  "robots": "",
+  "title": "India's first heritage city, Gujarat's first KCD · Rushabh Shah",
+  "description": "Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you about.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/kcna-worth-it/": {
+  "canonical": "https://rushabhshah.dev/blog/kcna-worth-it/",
+  "robots": "",
+  "title": "Is KCNA worth $250 as a first certification · Rushabh Shah",
+  "description": "KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/kubernetes-v1-37-garhwal/": {
+  "canonical": "https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/",
+  "robots": "",
+  "title": "Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah",
+  "description": "A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/kubestronaut-path-cost/": {
+  "canonical": "https://rushabhshah.dev/blog/kubestronaut-path-cost/",
+  "robots": "",
+  "title": "The Kubestronaut path and what it really costs · Rushabh Shah",
+  "description": "Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here's the real cost breakdown, a realistic study timeline, and who it's actually for.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/pca-otca-review/": {
+  "canonical": "https://rushabhshah.dev/blog/pca-otca-review/",
+  "robots": "",
+  "title": "Prometheus PCA and OpenTelemetry OTCA, reviewed · Rushabh Shah",
+  "description": "Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.",
+  "ldTypes": [
+   "BlogPosting"
+  ]
+ },
+ "/blog/tags/aws/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/aws/",
+  "robots": "",
+  "title": "Posts tagged “aws” · Rushabh Shah",
+  "description": "All posts tagged aws. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/blog/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/blog/",
+  "robots": "",
+  "title": "Posts tagged “blog” · Rushabh Shah",
+  "description": "All posts tagged blog. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/certification/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/certification/",
+  "robots": "",
+  "title": "Posts tagged “certification” · Rushabh Shah",
+  "description": "All posts tagged certification. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/cncf/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/cncf/",
+  "robots": "",
+  "title": "Posts tagged “cncf” · Rushabh Shah",
+  "description": "All posts tagged cncf. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/community/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/community/",
+  "robots": "",
+  "title": "Posts tagged “community” · Rushabh Shah",
+  "description": "All posts tagged community. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/dns/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/dns/",
+  "robots": "",
+  "title": "Posts tagged “dns” · Rushabh Shah",
+  "description": "All posts tagged dns. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/incident/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/incident/",
+  "robots": "",
+  "title": "Posts tagged “incident” · Rushabh Shah",
+  "description": "All posts tagged incident. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/kcd/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/kcd/",
+  "robots": "",
+  "title": "Posts tagged “kcd” · Rushabh Shah",
+  "description": "All posts tagged kcd. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/kubernetes/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/kubernetes/",
+  "robots": "",
+  "title": "Posts tagged “kubernetes” · Rushabh Shah",
+  "description": "All posts tagged kubernetes. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/meta/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/meta/",
+  "robots": "",
+  "title": "Posts tagged “meta” · Rushabh Shah",
+  "description": "All posts tagged meta. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/observability/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/observability/",
+  "robots": "",
+  "title": "Posts tagged “observability” · Rushabh Shah",
+  "description": "All posts tagged observability. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/open-source/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/open-source/",
+  "robots": "",
+  "title": "Posts tagged “open-source” · Rushabh Shah",
+  "description": "All posts tagged open-source. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/blog/tags/releases/": {
+  "canonical": "https://rushabhshah.dev/blog/tags/releases/",
+  "robots": "",
+  "title": "Posts tagged “releases” · Rushabh Shah",
+  "description": "All posts tagged releases. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
+  "ldTypes": [
+   "CollectionPage"
+  ]
+ },
+ "/coupons/": {
+  "canonical": "https://rushabhshah.dev/coupons/",
+  "robots": "",
+  "title": "Certification Discount Codes (October 2026): 30% Off Linux Foundation, 20% Off FinOps · Rushabh Shah",
+  "description": "Two official partner codes: RUSHABH30 for 30% off every Linux Foundation and CNCF certification, RUSHABH_20 for 20% off FinOps Foundation certifications. Which one you need, and what each covers.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/docker-captain/": {
+  "canonical": "https://rushabhshah.dev/docker-captain/",
+  "robots": "",
+  "title": "Rushabh Shah, Docker Captain",
+  "description": "Rushabh Shah, Docker Captain (2026), one of ~220 worldwide. DevOps Engineer in Ahmedabad, India, working in containers and Kubernetes.",
+  "ldTypes": [
+   "BreadcrumbList",
+   "ListItem",
+   "ProfilePage",
+   "WebSite"
+  ]
+ },
+ "/finops-coupon/": {
+  "canonical": "https://rushabhshah.dev/finops-coupon/",
+  "robots": "",
+  "title": "FinOps Certification Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "description": "Official FinOps Foundation partner code RUSHABH_20 takes 20% off FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value, and Technology Value. Prices, comparison, and which one to take first.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/finops-coupon/ai-value/": {
+  "canonical": "https://rushabhshah.dev/finops-coupon/ai-value/",
+  "robots": "",
+  "title": "FinOps Certified: AI Value Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified: AI Value Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/finops-coupon/engineer/": {
+  "canonical": "https://rushabhshah.dev/finops-coupon/engineer/",
+  "robots": "",
+  "title": "FinOps Certified Engineer Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified Engineer Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/finops-coupon/focus-analyst/": {
+  "canonical": "https://rushabhshah.dev/finops-coupon/focus-analyst/",
+  "robots": "",
+  "title": "FinOps Certified FOCUS Analyst Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified FOCUS Analyst Self-Paced Course + Certification Exam: about $320 instead of $400. Official FinOps Foundation partner code.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/finops-coupon/practitioner/": {
+  "canonical": "https://rushabhshah.dev/finops-coupon/practitioner/",
+  "robots": "",
+  "title": "FinOps Certified Practitioner Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified Practitioner Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/finops-coupon/technology-value/": {
+  "canonical": "https://rushabhshah.dev/finops-coupon/technology-value/",
+  "robots": "",
+  "title": "FinOps Certified: Technology Value Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified: Technology Value Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/go/capa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F"
+ },
+ "/go/catalog/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F"
+ },
+ "/go/cba/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F"
+ },
+ "/go/cca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcilium-certified-associate-cca%2F"
+ },
+ "/go/cgoa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F"
+ },
+ "/go/cka-ckad-cks/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-ckad-cks-exam-bundle%2F"
+ },
+ "/go/cka-cks/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-cks-exam-bundle%2F"
+ },
+ "/go/cka-to-kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-to-kubestronaut-upgrade-bundle%2F"
+ },
+ "/go/cka/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F"
+ },
+ "/go/ckad-to-kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F"
+ },
+ "/go/ckad/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F"
+ },
+ "/go/cks/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F"
+ },
+ "/go/cnpa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F"
+ },
+ "/go/cnpe/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineer-cnpe%2F"
+ },
+ "/go/finops/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://learn.finops.org/"
+ },
+ "/go/golden-kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fgolden-kubestronaut-bundle%2F"
+ },
+ "/go/ica/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F"
+ },
+ "/go/kca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkyverno-certified-associate-kca%2F"
+ },
+ "/go/kcna-cka/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkcna-cka-exam-bundle%2F"
+ },
+ "/go/kcna/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F"
+ },
+ "/go/kcsa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F"
+ },
+ "/go/kubestronaut-to-golden-kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F"
+ },
+ "/go/kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F"
+ },
+ "/go/lfca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F"
+ },
+ "/go/lfcs/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F"
+ },
+ "/go/mcpa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F"
+ },
+ "/go/otca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F"
+ },
+ "/go/pca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F"
+ },
+ "/go/ptca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fpytorch-certified-associate-ptca%2F"
+ },
+ "/go/sale-bundles/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale-certs/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale-github/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-github&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale-linkedin/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-linkedin&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale-superbundles/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale-telegram/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-telegram&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale-thrive/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale-whatsapp/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-whatsapp&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale-x/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-x&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/go/sale/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+ },
+ "/links/": {
+  "canonical": "https://rushabhshah.dev/links/",
+  "robots": "",
+  "title": "Links · Rushabh Shah",
+  "description": "All of Rushabh Shah's links in one place: blog, GitHub, LinkedIn, résumé, and the 30% off Linux Foundation certification code.",
+  "ldTypes": []
+ },
+ "/linux-foundation-coupon/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "",
+  "title": "Linux Foundation Coupon (October 2026): 30% Off CKA, CKAD, CKS · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off every Linux Foundation & CNCF certification and course: CKA, CKAD, CKS, KCNA, LFCS. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "EducationalOccupationalCredential",
+   "FAQPage",
+   "ListItem",
+   "Organization",
+   "Person",
+   "PostalAddress",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/capa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/capa/",
+  "robots": "",
+  "title": "CAPA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Certified Argo Project Associate (CAPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/cba/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cba/",
+  "robots": "",
+  "title": "CBA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Certified Backstage Associate (CBA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/cca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cca/",
+  "robots": "",
+  "title": "CCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Cilium Certified Associate (CCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/cgoa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cgoa/",
+  "robots": "",
+  "title": "CGOA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Certified GitOps Associate (CGOA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/cka-to-kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/",
+  "robots": "",
+  "title": "CKA to Kubestronaut Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS): ~$864 instead of $1235. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/cka/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cka/",
+  "robots": "",
+  "title": "CKA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Administrator (CKA) exam: ~$311 instead of $445. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/ckad-to-kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/",
+  "robots": "",
+  "title": "CKAD to Kubestronaut Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS): ~$864 instead of $1235. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/ckad/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ckad/",
+  "robots": "",
+  "title": "CKAD Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Application Developer (CKAD) exam: ~$311 instead of $445. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/cks/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cks/",
+  "robots": "",
+  "title": "CKS Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Security Specialist (CKS) exam: ~$311 instead of $445. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/cnpa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cnpa/",
+  "robots": "",
+  "title": "CNPA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Certified Cloud Native Platform Engineering Associate (CNPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/cnpe/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cnpe/",
+  "robots": "",
+  "title": "CNPE Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Certified Cloud Native Platform Engineer (CNPE) exam: ~$311 instead of $445. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/golden-kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/",
+  "robots": "",
+  "title": "Golden Kubestronaut Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Golden Kubestronaut bundle (16 CNCF certs): ~$2960 instead of $4229. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/ica/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ica/",
+  "robots": "",
+  "title": "ICA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Istio Certified Associate (ICA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/kca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kca/",
+  "robots": "",
+  "title": "KCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Kyverno Certified Associate (KCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/kcna/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kcna/",
+  "robots": "",
+  "title": "KCNA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Kubernetes and Cloud Native Associate (KCNA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/kcsa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kcsa/",
+  "robots": "",
+  "title": "KCSA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Kubernetes and Cloud Native Security Associate (KCSA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/",
+  "robots": "",
+  "title": "Kubestronaut to Golden Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams): ~$1868 instead of $2669. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/kubestronaut/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/",
+  "robots": "",
+  "title": "Kubestronaut Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS): ~$1151 instead of $1645. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/lfca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/lfca/",
+  "robots": "",
+  "title": "LFCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Linux Foundation Certified IT Associate (LFCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/lfcs/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/lfcs/",
+  "robots": "",
+  "title": "LFCS Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Linux Foundation Certified System Administrator (LFCS) exam: ~$311 instead of $445. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/mcpa/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/mcpa/",
+  "robots": "",
+  "title": "MCPA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Model Context Protocol Associate (MCPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/otca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/otca/",
+  "robots": "",
+  "title": "OTCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the OpenTelemetry Certified Associate (OTCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/pca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/pca/",
+  "robots": "",
+  "title": "PCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the Prometheus Certified Associate (PCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/linux-foundation-coupon/ptca/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ptca/",
+  "robots": "",
+  "title": "PTCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "description": "Code RUSHABH30 gets 30% off the PyTorch Certified Associate (PTCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
+  "ldTypes": [
+   "Answer",
+   "BreadcrumbList",
+   "FAQPage",
+   "ListItem",
+   "Offer",
+   "Organization",
+   "Product",
+   "Question",
+   "WebPage",
+   "WebSite"
+  ]
+ },
+ "/privacy/": {
+  "canonical": "https://rushabhshah.dev/privacy/",
+  "robots": "noindex, follow",
+  "title": "Privacy Policy · Rushabh Shah",
+  "description": "Privacy policy for rushabhshah.dev: what data is collected (privacy-friendly analytics, contact form, affiliate links), how it's used, and your rights.",
+  "ldTypes": []
+ }
+}

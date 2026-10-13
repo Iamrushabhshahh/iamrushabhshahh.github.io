@@ -2,29 +2,7 @@
 
 Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Starts October 6, 9:30 AM IST · ends October 7
-
-Linux Foundation October Prime sale
-
-From October 6, 9:30 AM IST, **40% off** certifications and e-learning courses with this code. CKA, CKAD and CKS are **$267**, the associate exams **$150**.
-
-OCTPRIME26CC
-[Sale page (opens October 6, 9:30 AM IST) →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F)
-
-What the exams cost with the sale on:
-
-- CKA, CKAD, CKS or LFCS: $445 **$267** with `OCTPRIME26CC`
-- KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams: $250 **$150** with `OCTPRIME26CC`
-
-**3 more codes: 50% off bundles, 75% off Super Bundles, 20% off THRIVE-ONE Annual subscription**
-
-[50% off bundles](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26B` [75% off the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26SB` [20% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F) with `OCTPRIME26TO` OCTPRIME26B OCTPRIME26SB OCTPRIME26TO
-
-These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.
-
-Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
-A sale starts October 6, 9:30 AM IST (see above). This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -256,6 +234,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **October Prime sale, October 2026**: 40% off certifications with OCTPRIME26CC (CKA went to $267, associate exams to $150), 50% off bundles with OCTPRIME26B, 75% off the three Super Bundles with OCTPRIME26SB, 20% off THRIVE-ONE Annual with OCTPRIME26TO. Two days only, ended October 7.
 - **Back to School sale, September 2026**: 40% off bundles and instructor-led training with SEPT26BTS40, 35% off courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163, the Kubestronaut bundle to $987 and Golden Kubestronaut to $2538). Beat RUSHABH30 on everything in the catalog, ended September 22.
 - **Switch & Save sale, September 2026**: 40% off a certification and 20% off THRIVE-ONE Annual, bundle only, no code ($805 bundles went to $553, $610 to $423). Only cheaper than RUSHABH30 if you wanted the subscription, ended September 11.
 - **End-of-Season Flash Sale, August 2026**: up to 40% off (35% on courses and certifications with AUG26F35, 40% on bundles with AUG26F40), ended August 28.
@@ -303,10 +282,44 @@ No. You pay 30% less than list price; the Linux Foundation pays my commission ou
 
 Sometimes. Seasonal promos can beat 30%, so watch my socials for advance notice. Also consider KCNA or KCSA: they're roughly half the price of the professional certs and a genuinely good starting point.
 
-\# Affiliate disclosure
+Affiliate disclosure
 
 I'm an official Linux Foundation Education affiliate partner. If you buy through the links on this page or use code **RUSHABH30**, I may earn a commission, at no extra cost to you (you save 30% either way). I was recommending Linux Foundation certifications to my community long before this partnership existed, and I only promote things I'd recommend anyway.
 
-Know someone prepping for the CKA? Share this:
-[X / Twitter](https://twitter.com/intent/tweet?text=30%25%20off%20all%20Linux%20Foundation%20certifications%20with%20code%20RUSHABH30&url=https%3A%2F%2Frushabhshah.dev%2Flinux-foundation-coupon%2F)
-[LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frushabhshah.dev%2Flinux-foundation-coupon%2F)
+[Rushabh Shah](https://rushabhshah.dev/)
+
+Open source, explained in public. Docker Captain and Grafana Champion in Ahmedabad, India.
+
+[GitHub](https://github.com/iamrushabhshahh)[LinkedIn](https://www.linkedin.com/in/iamrushabhshahh/)[X](https://x.com/iamrushabhshahh)[YouTube](https://www.youtube.com/@iamrushabhshahh)[Instagram](https://www.instagram.com/iamrushabhshahh/)[Credly](https://www.credly.com/users/iamrushabhshahh)[Sessionize](https://sessionize.com/iamrushabhshahh/)[dev.to](https://dev.to/iamrushabhshahh)
+
+#### Read
+
+- [Blog](https://rushabhshah.dev/blog/)
+- [Today I learned](https://rushabhshah.dev/til/)
+- [Now](https://rushabhshah.dev/now/)
+- [Reading](https://rushabhshah.dev/reading/)
+- [RSS](https://rushabhshah.dev/blog/rss.xml)
+
+#### Save
+
+- [Linux Foundation](https://rushabhshah.dev/linux-foundation-coupon/)
+- [FinOps](https://rushabhshah.dev/finops-coupon/)
+- [All coupons](https://rushabhshah.dev/coupons/)
+- [Kubestronaut](https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/)
+
+#### Work
+
+- [Speaking](https://rushabhshah.dev/speaking/)
+- [Courses](https://rushabhshah.dev/#courses)
+- [Hire me](https://rushabhshah.dev/#work)
+- [Docker Captain](https://rushabhshah.dev/docker-captain/)
+
+#### Me
+
+- [About](https://rushabhshah.dev/#about)
+- [My certifications](https://rushabhshah.dev/certs/)
+- [Games](https://rushabhshah.dev/games/)
+- [Links](https://rushabhshah.dev/links/)
+
+RUSHABH SHAH
+© 2026 Rushabh Shah. Affiliate links pay me a commission at no cost to you. [Privacy](https://rushabhshah.dev/privacy/)[RSS](https://rushabhshah.dev/blog/rss.xml)[AI-readable bio](https://rushabhshah.dev/llms.txt)

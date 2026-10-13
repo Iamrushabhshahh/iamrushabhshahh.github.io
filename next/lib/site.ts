@@ -15,7 +15,7 @@ export const PERSON_ID = `${SITE_URL}/#person`;
 export const person = {
   name: 'Rushabh Shah',
   jobTitle: 'DevOps Engineer',
-  employer: 'Oro',
+  employer: 'Orocorp Technologies Private Limited',
   location: { city: 'Ahmedabad', region: 'Gujarat', country: 'IN' },
   email: 'hello@rushabhshah.dev',
   image: `${SITE_URL}/assets/rushabh-shah.webp`,
@@ -40,15 +40,15 @@ export const person = {
  * contract an organiser is relying on.
  */
 export const bios = {
-  50: `Rushabh Shah is a DevOps engineer at Oro in Ahmedabad, India, and a Docker Captain and Grafana Champion selected in 2026. He runs Kubernetes in production, builds observability on the Grafana LGTM stack and OpenTelemetry, and organizes Grafana & Friends Ahmedabad, a community meetup for engineers working on observability.`,
+  50: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India, and a Docker Captain and Grafana Champion selected in 2026. He runs Kubernetes in production, builds observability on the Grafana LGTM stack and OpenTelemetry, and organizes Grafana & Friends Ahmedabad, a community meetup for engineers working on observability.`,
 
-  100: `Rushabh Shah is a DevOps engineer at Oro in Ahmedabad, India. He is a Docker Captain and a Grafana Champion, both selected in 2026, placing him among roughly 220 and 110 people worldwide in those programs. His day job is Kubernetes in production: Helm and Argo CD for delivery, Terraform for infrastructure, and the Grafana LGTM stack with OpenTelemetry for observability. He has cut cloud spend by 59 percent and led a zero downtime cloud migration under a fixed deadline. He organizes Grafana & Friends Ahmedabad, and translates Kubernetes and eBPF documentation into Hindi so the material reaches engineers who do not read English first.`,
+  100: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India. He is a Docker Captain and a Grafana Champion, both selected in 2026, placing him among roughly 220 and 110 people worldwide in those programs. His day job is Kubernetes in production: Helm and Argo CD for delivery, Terraform for infrastructure, and the Grafana LGTM stack with OpenTelemetry for observability. He has cut cloud spend by 59 percent and led a zero downtime cloud migration under a fixed deadline. He organizes Grafana & Friends Ahmedabad, and translates Kubernetes and eBPF documentation into Hindi so the material reaches engineers who do not read English first.`,
 
-  250: `Rushabh Shah is a DevOps engineer at Oro in Ahmedabad, India, where he runs Kubernetes workloads for a lending business: Helm charts and GitOps delivery through Argo CD, infrastructure as code in Terraform, CI/CD on GitHub Actions, and observability built on Prometheus, Grafana, Loki, Tempo and OpenTelemetry.
+  250: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India, where he runs Kubernetes workloads for a lending business: Helm charts and GitOps delivery through Argo CD, infrastructure as code in Terraform, CI/CD on GitHub Actions, and observability built on Prometheus, Grafana, Loki, Tempo and OpenTelemetry.
 
 He is a Docker Captain and a Grafana Champion, both selected in 2026, two invitation only programs with roughly 220 and 110 members worldwide respectively. He organizes Grafana & Friends Ahmedabad, a community meetup focused on observability and the LGTM stack, and he represented KodeKloud at the inaugural KubeCon India in Delhi in 2024.
 
-Before Oro he drove a 59 percent reduction in AWS spend at Genuin, built delivery pipelines that brought release time to about ten minutes, and led a zero downtime migration from AWS to Oracle Cloud Infrastructure against a fixed deadline. Earlier he built hands on cloud labs at KodeKloud and delivered Azure certification training to enterprise teams at Koenig Solutions.
+Before Orocorp he drove a 59 percent reduction in AWS spend at Genuin, built delivery pipelines that brought release time to about ten minutes, and led a zero downtime migration from AWS to Oracle Cloud Infrastructure against a fixed deadline. Earlier he built hands on cloud labs at KodeKloud and delivered Azure certification training to enterprise teams at Koenig Solutions.
 
 A large part of his open source work is localization. He contributed the Hindi localization of ebpf.io, translated the Kusion README into Hindi, and has an ongoing series of Hindi localization pull requests against the Kubernetes documentation. The reasoning is simple: most cloud native documentation assumes fluent English, which quietly excludes a large share of the engineers who most need it.
 
@@ -123,12 +123,22 @@ export const credentials: Credential[] = [
     tint: 'var(--green-color)',
   },
   {
+    id: 'ckad',
+    label: 'CKAD',
+    issuer: 'The Linux Foundation',
+    year: 2026,
+    detail: 'Certified Kubernetes Application Developer',
+    proofUrl: 'https://www.credly.com/badges/403326fb-ec23-479e-a04b-d70dc73428a5',
+    internalUrl: '/certs/',
+    tint: 'var(--primary-color)',
+  },
+  {
     id: 'kcna',
     label: 'KCNA',
     issuer: 'The Linux Foundation',
-    year: 2025,
+    year: 2026,
     detail: 'Kubernetes and Cloud Native Associate',
-    proofUrl: 'https://www.credly.com/users/iamrushabhshahh',
+    proofUrl: 'https://www.credly.com/badges/fed261d0-7cd0-4ae7-89c1-a7437a4cc964',
     tint: 'var(--primary-color)',
   },
   {

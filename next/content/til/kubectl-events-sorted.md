@@ -2,7 +2,8 @@
 title: kubectl get events is useless until you sort it
 slug: kubectl-events-sorted
 date: 2026-09-16
-category: k8s
+area: tech
+tags: [kubernetes, kubectl]
 takeaways:
   - "`kubectl get events` returns in arbitrary order, so the line you need is rarely at the bottom."
   - "Sorting by `.lastTimestamp` is the difference between reading events and scrolling past them."
