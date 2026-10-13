@@ -6,7 +6,7 @@ Docker, Inc · Selected 2026
 
 · DevOps Engineer @ Orocorp Technologies Private Limited · Ahmedabad, India
 
-I'm a [Docker Captain](https://www.docker.com/contributors/rushabh-shah/), selected in 2026 as one of roughly 220 members worldwide in Docker's global program for community leaders and technical experts in the container ecosystem. I'm a DevOps Engineer based in Ahmedabad, India, currently building cloud-native infrastructure on Kubernetes at [Orocorp Technologies Private Limited](https://rushabhshah.dev/#experience).
+I'm a [Docker Captain](https://www.docker.com/contributors/rushabh-shah/), selected in 2026 into Docker's global program for community leaders and technical experts in the container ecosystem. I'm a DevOps Engineer based in Ahmedabad, India, currently building cloud-native infrastructure on Kubernetes at [Orocorp Technologies Private Limited](https://rushabhshah.dev/#experience).
 
 ## What is a Docker Captain?
 

@@ -42,11 +42,11 @@ export const person = {
 export const bios = {
   50: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India, and a Docker Captain and Grafana Champion selected in 2026. He runs Kubernetes in production, builds observability on the Grafana LGTM stack and OpenTelemetry, and organizes Grafana & Friends Ahmedabad, a community meetup for engineers working on observability.`,
 
-  100: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India. He is a Docker Captain and a Grafana Champion, both selected in 2026, placing him among roughly 220 and 110 people worldwide in those programs. His day job is Kubernetes in production: Helm and Argo CD for delivery, Terraform for infrastructure, and the Grafana LGTM stack with OpenTelemetry for observability. He has cut cloud spend by 59 percent and led a zero downtime cloud migration under a fixed deadline. He organizes Grafana & Friends Ahmedabad, and translates Kubernetes and eBPF documentation into Hindi so the material reaches engineers who do not read English first.`,
+  100: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India. He is a Docker Captain and a Grafana Champion, both selected in 2026, in the community programmes run by Docker and Grafana Labs. His day job is Kubernetes in production: Helm and Argo CD for delivery, Terraform for infrastructure, and the Grafana LGTM stack with OpenTelemetry for observability. He has cut cloud spend by 59 percent and led a zero downtime cloud migration under a fixed deadline. He organizes Grafana & Friends Ahmedabad, and translates Kubernetes and eBPF documentation into Hindi so the material reaches engineers who do not read English first.`,
 
   250: `Rushabh Shah is a DevOps engineer at Orocorp Technologies Private Limited in Ahmedabad, India, where he runs Kubernetes workloads for a lending business: Helm charts and GitOps delivery through Argo CD, infrastructure as code in Terraform, CI/CD on GitHub Actions, and observability built on Prometheus, Grafana, Loki, Tempo and OpenTelemetry.
 
-He is a Docker Captain and a Grafana Champion, both selected in 2026, two invitation only programs with roughly 220 and 110 members worldwide respectively. He organizes Grafana & Friends Ahmedabad, a community meetup focused on observability and the LGTM stack, and he represented KodeKloud at the inaugural KubeCon India in Delhi in 2024.
+He is a Docker Captain and a Grafana Champion, both selected in 2026, in the community programmes run by Docker and Grafana Labs. He organizes Grafana & Friends Ahmedabad, a community meetup focused on observability and the LGTM stack, and he represented KodeKloud at the inaugural KubeCon India in Delhi in 2024.
 
 Before Orocorp he drove a 59 percent reduction in AWS spend at Genuin, built delivery pipelines that brought release time to about ten minutes, and led a zero downtime migration from AWS to Oracle Cloud Infrastructure against a fixed deadline. Earlier he built hands on cloud labs at KodeKloud and delivered Azure certification training to enterprise teams at Koenig Solutions.
 
@@ -86,7 +86,7 @@ export const credentials: Credential[] = [
     label: 'Docker Captain',
     issuer: 'Docker, Inc.',
     year: 2026,
-    detail: 'One of roughly 220 worldwide',
+    detail: 'Community programme, selected 2026',
     proofUrl: 'https://www.docker.com/contributors/rushabh-shah/',
     internalUrl: '/docker-captain/',
     icon: '/assets/icons/color/docker-1d63ed.svg',
@@ -97,7 +97,7 @@ export const credentials: Credential[] = [
     label: 'Grafana Champion',
     issuer: 'Grafana Labs',
     year: 2026,
-    detail: 'One of roughly 110 worldwide',
+    detail: 'Community programme, selected 2026',
     proofUrl: 'https://grafana.com/community/champions-full-list/?pg=community-champions&plcmt=pill-banner#:~:text=Rushabh%20Shah,LinkedIn',
     icon: '/assets/icons/color/grafana-f47b20.svg',
     tint: 'var(--accent-orange)',

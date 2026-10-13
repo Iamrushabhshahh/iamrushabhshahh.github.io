@@ -1,4 +1,4 @@
-# Certification Discount Codes That Actually Work
+# Certification Discount Codes: RUSHABH30 and RUSHABH_20
 
 Updated October 2026 · Two official partner codes, one page
 
