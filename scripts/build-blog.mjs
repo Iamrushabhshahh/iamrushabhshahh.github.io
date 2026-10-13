@@ -2378,6 +2378,17 @@ const saleIntroHtml = () => saleLive
   : `<p class="font-fira text-xs text-gray-400 mb-3">No sale running right now. This is the everyday code, works year-round:</p>`;
 
 /* The homepage deals card. Same card, different pitch while a sale is on. */
+/* Three example prices on the home ticket, read from the same deals data the
+   coupon pages use so they never drift from the verified list prices. */
+const homeTicketPrices = () => {
+  const deals = JSON.parse(fs.readFileSync(path.join(ROOT, 'next', 'content', 'deals.json'), 'utf8'));
+  const pick = ['CKA', 'KCNA', 'CKS'].map(code => deals.find(d => d.examName.endsWith(`(${code})`) && d.promoCode === 'RUSHABH30')).filter(Boolean);
+  return `<ul class="rs-ticket__prices">${pick.map(d => {
+    const code = d.examName.match(/\(([A-Z]+)\)$/)[1];
+    const now = Math.floor(d.defaultPrice * (1 - d.discountPercent / 100)); // matches the ~$311 used on the coupon pages
+    return `<li><a href="${escapeHtml(d.affiliateUrl)}" rel="sponsored"><b>${code}</b><s>$${d.defaultPrice}</s><strong>~$${now}</strong></a></li>`;
+  }).join('')}</ul>`;
+};
 const saleHomeCardHtml = () => saleLive
   ? `
                 <span class="status-pill mb-1"><span class="dot"></span> ${saleStarted ? 'Sale live' : `Starts ${escapeHtml(SALE.startLabel)}`} &middot; ends ${escapeHtml(SALE.advertisedEnd)}</span>
@@ -2397,8 +2408,9 @@ const saleHomeCardHtml = () => saleLive
                 </p>`
   : `
                 <p class="text-sm text-gray-300 leading-relaxed">
-                    <span class="font-fira font-bold text-primary-color">RUSHABH30</span>: 30% off Linux Foundation certifications and courses on training.linuxfoundation.org. I am a Linux Foundation Education partner and earn a commission when you use it.
-                </p>`;
+                    My way of giving back to the community: one code for every Linux Foundation certification and course.
+                </p>
+                ${homeTicketPrices()}`;
 
 if (saleLive) {
   console.log(`🔥 sale live  ${SALE.name} (${SALE.codes.length ? SALE.codes.map(c => c.code).join(' / ') : 'no code'}) until ${SALE.end}`);

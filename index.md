@@ -132,12 +132,18 @@ Approving a container image by tag approves something that can change after you 
 
 **Cities this year** 🇮🇳 🇩🇪 🇺🇸 🇯🇵 Ahmedabad · Vadodara · Munich · Salt Lake City · Tokyo [Every talk and the speaker kit](https://rushabhshah.dev/speaking/)
 
-LINUX FOUNDATION EDUCATION PARTNER
-## RUSHABH30: 30% off Linux Foundation exams
+GIVING BACK · LINUX FOUNDATION PARTNER CODE
+## 30% off every Linux Foundation exam
 
-RUSHABH30: 30% off Linux Foundation certifications and courses on training.linuxfoundation.org. I am a Linux Foundation Education partner and earn a commission when you use it.
+My way of giving back to the community: one code for every Linux Foundation certification and course.
 
-RUSHABH30 [Prices per exam →](https://rushabhshah.dev/linux-foundation-coupon/)[Also: 20% off FinOps certifications](https://rushabhshah.dev/coupons/)
+- [CKA $445 ~$311](https://rushabhshah.dev/go/cka/)
+- [KCNA $250 ~$175](https://rushabhshah.dev/go/kcna/)
+- [CKS $445 ~$311](https://rushabhshah.dev/go/cks/)
+
+RUSHABH30
+No expiry · exams, courses and bundles
+[Prices per exam →](https://rushabhshah.dev/linux-foundation-coupon/)[Also: 20% off FinOps certifications](https://rushabhshah.dev/coupons/)
 
 Experience
 
