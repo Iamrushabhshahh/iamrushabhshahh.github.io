@@ -3942,19 +3942,7 @@ function swapMarker(html, marker, inner) {
 {
   const indexPath = path.join(ROOT, 'index.html');
   let homeHtml = fs.readFileSync(indexPath, 'utf8');
-/* Home hero "Next on stage" card: the next confirmed stage talk from
-     speaking.json, or the latest one given once nothing is booked. */
-  const renderHomeNextTalk = () => {
-    const today = now.toISOString().slice(0, 10);
-    const stage = SPEAKING.engagements.filter(e => STAGE.has(e.kind));
-    const next = stage.filter(e => lastDay(e) >= today).sort((a, b) => a.start.localeCompare(b.start))[0];
-    const last = stage.filter(e => lastDay(e) < today).sort((a, b) => b.start.localeCompare(a.start))[0];
-    const e = next ?? last;
-    if (!e) return '';
-    return `<a href="/speaking/#${e.slug}"><small>${next ? 'Next on stage' : 'Latest talk'}</small><b>${escapeHtml(e.event.split(',')[0].replace(/\s+20\d\d$/, ''))}</b><span>${fmtDay(e.start.slice(0, 10))} &middot; ${escapeHtml(e.city)}</span></a>`;
-  };
-  homeHtml = swapMarker(homeHtml, 'Talks injected here', renderHomeTalks());
-  homeHtml = swapMarker(homeHtml, 'Next talk injected here', renderHomeNextTalk());
+homeHtml = swapMarker(homeHtml, 'Talks injected here', renderHomeTalks());
   homeHtml = swapMarker(homeHtml, 'Posts injected here', renderHomePosts());
   homeHtml = swapMarker(homeHtml, 'Numbers injected here', renderHomeNumbers());
   homeHtml = swapMarker(homeHtml, 'Honors injected here', renderHomeHonors());

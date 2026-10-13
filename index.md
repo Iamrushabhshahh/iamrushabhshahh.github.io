@@ -1,3 +1,5 @@
+every star is a project I've contributed to. hover one.
+
 **●** Docker Captain · Grafana Champion · Ahmedabad
 
 # Rushabh Shah is **an open source contributor**
@@ -5,9 +7,6 @@
 I build, teach and speak about **open source infrastructure**. From the Hindi edition of ebpf.io to stages in Tokyo and Salt Lake City, I make the cloud native world easier to learn.
 
 [Learn with me](#courses)[Book a talk](https://rushabhshah.dev/speaking/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
-
-KubeCon India 2026 · Mumbai
-[Next on stage FluxCon North America 9 Nov 2026 · Salt Lake City](https://rushabhshah.dev/speaking/#fluxcon-na-2026)
 
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
