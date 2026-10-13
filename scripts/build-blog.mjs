@@ -1481,7 +1481,7 @@ const rsHeader = ({ active = null, dealsHref = '/linux-foundation-coupon/', prom
     <a href="#main" class="skip-link">Skip to content</a>
     <header class="rs-hdr${overlay ? ' rs-hdr--overlay' : ''}" id="rs-hdr">
         <div class="rs-wrap rs-hdr__in">
-            <a class="rs-logo" href="/"><i aria-hidden="true"></i>Rushabh Shah</a>
+            <a class="rs-logo" href="/" aria-label="Rushabh Shah, home">rushabhshah.dev</a>
             <nav class="rs-nav" aria-label="Main">${rsNav(active, dealsHref)}</nav>
             <div class="rs-hdr__r">
                 <div class="rs-hide-sm">${segControl(true)}</div>
@@ -1501,7 +1501,7 @@ const rsHeader = ({ active = null, dealsHref = '/linux-foundation-coupon/', prom
 const rsFooter = () => `
     <footer class="rs-footer"><div class="rs-wrap">
         <div class="rs-fgrid">
-            <div><a class="rs-logo" href="/"><i aria-hidden="true"></i>Rushabh Shah</a>
+            <div><a class="rs-logo" href="/" aria-label="Rushabh Shah, home">rushabhshah.dev</a>
                 <p>Open source, explained in public. Docker Captain and Grafana Champion in Ahmedabad, India.</p>
                 <div class="rs-socials-row">${SOCIALS.map(([n, u]) => `<a href="${u}" rel="me noopener" target="_blank">${n}</a>`).join('')}</div></div>
             <div><p class="rs-fh">Read</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/til/">Today I learned</a></li><li><a href="/now/">Now</a></li><li><a href="/reading/">Reading</a></li><li><a href="/blog/rss.xml">RSS</a></li></ul></div>
