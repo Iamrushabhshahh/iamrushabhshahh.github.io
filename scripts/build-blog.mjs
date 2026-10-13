@@ -1485,14 +1485,14 @@ const rsHeader = ({ active = null, dealsHref = '/linux-foundation-coupon/', prom
             <nav class="rs-nav" aria-label="Main">${rsNav(active, dealsHref)}</nav>
             <div class="rs-hdr__r">
                 <div class="rs-hide-sm">${segControl(true)}</div>
-                <a class="rs-tool rs-tool--hot rs-hide-sm" href="/#work">Work with me</a>
+                <a class="rs-tool rs-tool--hot rs-hide-sm" href="/#contact">Let&rsquo;s talk</a>
                 <button type="button" class="rs-tool rs-menu-btn" id="rs-menu" aria-controls="rs-sheet" aria-expanded="false">Menu</button>
             </div>
         </div>${promo ? `
         <a class="rs-promo" href="/linux-foundation-coupon/">Linux Foundation code <b>RUSHABH30</b>: 30% off certifications &rarr;</a>` : ''}
     </header>
     <nav class="rs-sheet" id="rs-sheet" aria-label="All pages" hidden>
-        <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#work">Work with me</a>
+        <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#contact">Let&rsquo;s talk</a>
         <h4>Learn</h4><a href="/til/">Today I learned</a><a href="/now/">Now</a><a href="/reading/">Reading</a><a href="/certs/">My certifications</a>
         <h4>Save</h4><a href="/linux-foundation-coupon/">Linux Foundation coupon</a><a href="/finops-coupon/">FinOps coupon</a><a href="/coupons/">All coupons</a>
         <h4>Me</h4><a href="/about/">About</a><a href="/games/">Games</a><a href="/links/">Links</a><a href="/#contact">Contact</a>
@@ -1506,7 +1506,7 @@ const rsFooter = () => `
                 <div class="rs-socials-row">${SOCIALS.map(([n, u]) => `<a href="${u}" rel="me noopener" target="_blank">${n}</a>`).join('')}</div></div>
             <div><p class="rs-fh">Read</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/til/">Today I learned</a></li><li><a href="/now/">Now</a></li><li><a href="/reading/">Reading</a></li><li><a href="/blog/rss.xml">RSS</a></li></ul></div>
             <div><p class="rs-fh">Save</p><ul><li><a href="/linux-foundation-coupon/">Linux Foundation</a></li><li><a href="/finops-coupon/">FinOps</a></li><li><a href="/coupons/">All coupons</a></li><li><a href="/linux-foundation-coupon/kubestronaut/">Kubestronaut</a></li></ul></div>
-            <div><p class="rs-fh">Work</p><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#work">Hire me</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
+            <div><p class="rs-fh">Connect</p><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/speaker-kit/">Speaker kit</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#contact">Let&rsquo;s talk</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
             <div><p class="rs-fh">Me</p><ul><li><a href="/about/">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
         </div>
         <div class="rs-wordbox"><div class="rs-word" aria-hidden="true">RUSHABH SHAH</div></div>

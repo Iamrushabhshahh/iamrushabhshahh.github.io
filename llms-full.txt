@@ -2509,9 +2509,27 @@ Five teams in three years: product startups, a learning platform, and enterprise
 ### Tools I reach for
 Containers & Orchestration Kubernetes Docker Helm Argo CD IaC & Automation Terraform Ansible GitHub Actions Cloud Platforms AWS Azure GCP OCI Observability Prometheus Grafana Loki / Tempo / Mimir OpenTelemetry Languages & Tooling Linux Bash Python Git CI/CD
 
-Courses and consulting
+Connect
 
-## What I can help with.
+## Where we can meet.
+
+### On a stage
+
+I talk about Kubernetes, observability and getting started in open source, at conferences, meetups and colleges. If you run an event, send me the date and the audience.
+
+[Invite me to speak](https://rushabhshah.dev/speaking/)[Speaker kit](https://rushabhshah.dev/speaker-kit/)
+
+### At a meetup in Ahmedabad
+
+I co-organize Docker Ahmedabad and Grafana & Friends Ahmedabad. Come to the next one. If you want to give your first talk, I will help you with the slides.
+
+[Upcoming meetups](https://rushabhshah.dev/speaking/#upcoming)
+
+### On a 20 minute call
+
+Preparing for the CKA, stuck on your first open source pull request, or thinking of starting a meetup in your city? Pick a time. No pitch, no fee.
+
+[Pick a time](https://calendar.app.google/fFL7eubAdig7KZJo9)
 
 ### Courses
 
@@ -2522,17 +2540,6 @@ I am recording video courses on Kubernetes and observability. Nothing is out yet
 - Observability with Grafana planned
 
 [Join the course waitlist](mailto:hello@rushabhshah.dev?subject=Course%20waitlist)
-
-### Hire me
-
-Talks, workshops and hands-on help for teams.
-
-- Talks and workshops conferences, companies, colleges
-- Kubernetes and GitOps setup or review
-- Observability Prometheus, Grafana, OTel
-- Cloud cost review AWS, Azure, GCP, OCI
-
-[Email me](#contact)
 
 Writing
 
@@ -2581,16 +2588,16 @@ I read every message myself and usually reply within 48 hours. I am in Ahmedabad
 
 People write to me about
 
-- **Talks and workshops** Conferences, meetups, college events, internal tech talks.
-- **Team training** Kubernetes, containers and observability, hands-on.
-- **Platform or cost review** GitOps setup, Grafana stack, a cloud bill that grew too fast.
-- **Courses and questions** The course waitlist, a post you read, an exam you are planning.
+- **A talk or a workshop** Conferences, meetups, college events, internal tech talks.
+- **Exam prep** Which certification to take first, and how I prepared for mine.
+- **Open source** Finding a first issue, Kubernetes docs, Hindi translations.
+- **Starting a meetup** Venue, speakers, getting the first ten people in the room.
 
 What happens next
 
-- I read it myself, no assistant or auto-reply.
-- I reply within 48 hours with questions or dates.
-- If it helps, we book a free 20 minute call.
+- I read it myself. No assistant, no auto-reply.
+- I reply within 48 hours.
+- If a call helps, we pick a time that suits us both. Or [pick one now](https://calendar.app.google/fFL7eubAdig7KZJo9).
 
 What is this about?
 
@@ -2605,6 +2612,7 @@ Open source educator · Docker Captain · Grafana Champion
 Ahmedabad, India · IST (UTC+5:30)
 
 [Invite me to speak Conferences, meetups, colleges, internal tech talks](https://rushabhshah.dev/speaking/)
+[Book a 20 minute chat Free, on Google Meet](https://calendar.app.google/fFL7eubAdig7KZJo9)
 [Speaker kit Bios, photos, AV needs](https://rushabhshah.dev/speaker-kit/)[Say hi I reply within 48 hours](https://rushabhshah.dev/#contact)
 
 ## Read and watch

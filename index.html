@@ -215,9 +215,9 @@
     .rs-tour b { font:400 12px var(--rs-mono); color:var(--rs-sig-2); letter-spacing:.14em; } .rs-tour .flags { font-size:34px; letter-spacing:10px; } .rs-tour span { color:var(--rs-text-2); font-size:14px; }
     .rs-ticket__l [class*="text-"], .rs-ticket__l strong, .rs-ticket__l span { color:#fff !important; }
     .rs-offers { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    .rs-offer { border-radius:24px; padding:clamp(28px, 3.6vw, 48px); background:var(--rs-bg-2); border:1px solid var(--rs-line); }
+    .rs-offer { display:flex; flex-direction:column; align-items:flex-start; border-radius:24px; padding:clamp(28px, 3.6vw, 48px); background:var(--rs-bg-2); border:1px solid var(--rs-line); }
     .rs-offer h3 { font:600 clamp(34px, 3.6vw, 52px)/1 var(--rs-display); color:var(--rs-text); margin:0 0 12px; letter-spacing:-.025em; } .rs-offer > p { color:var(--rs-text-2); margin:0 0 22px; }
-    .rs-offer ul { margin:0 0 26px; } .rs-offer li { display:flex; justify-content:space-between; gap:12px; padding:13px 0; border-top:1px solid var(--rs-line); color:var(--rs-text); } .rs-offer li span { color:var(--rs-text-3); font-size:14px; text-align:right; }
+    .rs-offer__cta { display:flex; flex-wrap:wrap; gap:10px; margin:auto 0 0; } .rs-offer > ul { align-self:stretch; } .rs-offer > .rs-btn:last-child { margin-top:auto; } .rs-offer ul { margin:0 0 26px; } .rs-offer li { display:flex; justify-content:space-between; gap:12px; padding:13px 0; border-top:1px solid var(--rs-line); color:var(--rs-text); } .rs-offer li span { color:var(--rs-text-3); font-size:14px; text-align:right; }
     .rs-wl { display:flex; gap:8px; flex-wrap:wrap; } .rs-wl input { flex:1 1 210px; font:16px var(--rs-font); padding:16px 20px; border-radius:999px; border:1px solid var(--rs-line-2); background:var(--rs-bg); color:var(--rs-text); }
     .rs-about { display:grid; grid-template-columns:auto 1fr; gap:48px; align-items:center; }
     .rs-about img { width:200px; height:200px; object-fit:cover; object-position:50% 50%; border-radius:50%; outline:2px solid var(--rs-sig); outline-offset:6px; background:var(--rs-bg-3); }
@@ -236,7 +236,7 @@
     .rs-topics { display:grid; gap:10px; }
     .rs-topics li { padding:12px 0; border-top:1px solid var(--rs-line); } .rs-topics b { display:block; color:var(--rs-text); font-weight:600; } .rs-topics span { color:var(--rs-text-2); font-size:15px; }
     .rs-next-steps { counter-reset:s; display:grid; gap:10px; padding:0; margin:0; list-style:none; }
-    .rs-next-steps li { counter-increment:s; display:flex; gap:12px; align-items:baseline; color:var(--rs-text-2); font-size:15px; }
+    .rs-next-steps a { color:var(--rs-text); text-decoration:underline; text-underline-offset:3px; } .rs-next-steps li { counter-increment:s; display:flex; gap:12px; align-items:baseline; color:var(--rs-text-2); font-size:15px; }
     .rs-next-steps li::before { content:counter(s); flex:none; width:24px; height:24px; border-radius:50%; display:grid; place-items:center; font:500 12px var(--rs-mono); color:var(--rs-on-sig); background:var(--rs-sig-fill); }
     .rs-contact__form { position:sticky; top:96px; padding:clamp(22px, 3vw, 32px); border:1px solid var(--rs-line); border-radius:24px; background:var(--rs-bg-2); box-shadow:0 40px 90px -40px var(--rs-glow); }
     .rs-contact__form .rs-contact__h { margin-top:0; }
@@ -275,13 +275,13 @@
                     <span class="seg-label sr-only">Dark</span>
                 </button>
             </div></div>
-                <a class="rs-tool rs-tool--hot rs-hide-sm" href="/#work">Work with me</a>
+                <a class="rs-tool rs-tool--hot rs-hide-sm" href="/#contact">Let&rsquo;s talk</a>
                 <button type="button" class="rs-tool rs-menu-btn" id="rs-menu" aria-controls="rs-sheet" aria-expanded="false">Menu</button>
             </div>
         </div>
     </header>
     <nav class="rs-sheet" id="rs-sheet" aria-label="All pages" hidden>
-        <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#work">Work with me</a>
+        <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#contact">Let&rsquo;s talk</a>
         <h4>Learn</h4><a href="/til/">Today I learned</a><a href="/now/">Now</a><a href="/reading/">Reading</a><a href="/certs/">My certifications</a>
         <h4>Save</h4><a href="/linux-foundation-coupon/">Linux Foundation coupon</a><a href="/finops-coupon/">FinOps coupon</a><a href="/coupons/">All coupons</a>
         <h4>Me</h4><a href="/about/">About</a><a href="/games/">Games</a><a href="/links/">Links</a><a href="/#contact">Contact</a>
@@ -390,16 +390,19 @@
         </div>
     </div></section>
 
-    <section class="rs-sec" id="work" style="padding-top:0"><div class="rs-wrap">
-        <span class="rs-kicker">Courses and consulting</span>
-        <h2 class="rs-h2 rs-split">What I can help with.</h2>
+    <section class="rs-sec" id="connect" style="padding-top:0"><div class="rs-wrap"><span id="work" class="rs-anchor"></span>
+        <span class="rs-kicker">Connect</span>
+        <h2 class="rs-h2 rs-split">Where we can meet.</h2>
         <div class="rs-offers rs-stagger">
+            <div class="rs-offer rs-reveal"><h3>On a stage</h3><p>I talk about Kubernetes, observability and getting started in open source, at conferences, meetups and colleges. If you run an event, send me the date and the audience.</p>
+                <p class="rs-offer__cta"><a class="rs-btn rs-btn--hot rs-magnet" href="/speaking/">Invite me to speak</a><a class="rs-btn rs-magnet" href="/speaker-kit/">Speaker kit</a></p></div>
+            <div class="rs-offer rs-reveal"><h3>At a meetup in Ahmedabad</h3><p>I co-organize Docker Ahmedabad and Grafana &amp; Friends Ahmedabad. Come to the next one. If you want to give your first talk, I will help you with the slides.</p>
+                <p class="rs-offer__cta"><a class="rs-btn rs-btn--hot rs-magnet" href="/speaking/#upcoming">Upcoming meetups</a></p></div>
+            <div class="rs-offer rs-reveal"><h3>On a 20 minute call</h3><p>Preparing for the CKA, stuck on your first open source pull request, or thinking of starting a meetup in your city? Pick a time. No pitch, no fee.</p>
+                <p class="rs-offer__cta"><a class="rs-btn rs-btn--hot rs-magnet" href="https://calendar.app.google/fFL7eubAdig7KZJo9" target="_blank" rel="noopener">Pick a time</a></p></div>
             <div class="rs-offer rs-reveal" id="courses"><h3>Courses</h3><p>I am recording video courses on Kubernetes and observability. Nothing is out yet. Email me and I will tell you when the first one is.</p>
                 <ul><li>CKAD <span>first</span></li><li>KCNA and KCSA <span>next</span></li><li>Observability with Grafana <span>planned</span></li></ul>
                 <a class="rs-btn rs-btn--hot rs-magnet" href="mailto:hello@rushabhshah.dev?subject=Course%20waitlist">Join the course waitlist</a></div>
-            <div class="rs-offer rs-reveal"><h3>Hire me</h3><p>Talks, workshops and hands-on help for teams.</p>
-                <ul><li>Talks and workshops <span>conferences, companies, colleges</span></li><li>Kubernetes and GitOps <span>setup or review</span></li><li>Observability <span>Prometheus, Grafana, OTel</span></li><li>Cloud cost review <span>AWS, Azure, GCP, OCI</span></li></ul>
-                <a class="rs-btn rs-btn--hot rs-magnet" href="#contact">Email me</a></div>
         </div>
     </div></section>
 
@@ -429,21 +432,21 @@
             <div class="rs-contact__more">
             <p class="rs-contact__h">People write to me about</p>
             <ul class="rs-topics">
-                <li><b>Talks and workshops</b><span>Conferences, meetups, college events, internal tech talks.</span></li>
-                <li><b>Team training</b><span>Kubernetes, containers and observability, hands-on.</span></li>
-                <li><b>Platform or cost review</b><span>GitOps setup, Grafana stack, a cloud bill that grew too fast.</span></li>
-                <li><b>Courses and questions</b><span>The course waitlist, a post you read, an exam you are planning.</span></li>
-            </ul>
+<li><b>A talk or a workshop</b><span>Conferences, meetups, college events, internal tech talks.</span></li>
+<li><b>Exam prep</b><span>Which certification to take first, and how I prepared for mine.</span></li>
+<li><b>Open source</b><span>Finding a first issue, Kubernetes docs, Hindi translations.</span></li>
+<li><b>Starting a meetup</b><span>Venue, speakers, getting the first ten people in the room.</span></li>
+</ul>
             <p class="rs-contact__h">What happens next</p>
-            <ol class="rs-next-steps"><li>I read it myself, no assistant or auto-reply.</li><li>I reply within 48 hours with questions or dates.</li><li>If it helps, we book a free 20 minute call.</li></ol>
+            <ol class="rs-next-steps"><li>I read it myself. No assistant, no auto-reply.</li><li>I reply within 48 hours.</li><li>If a call helps, we pick a time that suits us both. Or <a href="https://calendar.app.google/fFL7eubAdig7KZJo9" target="_blank" rel="noopener">pick one now</a>.</li></ol>
             </div>
             </div>
             <div class="rs-contact__form">
                 <p class="rs-contact__h" id="topic-label">What is this about?</p>
                 <div class="rs-topic-pick" role="group" aria-labelledby="topic-label">
                     <button type="button" data-start="Hi Rushabh, I would like to invite you to speak at ">A talk</button>
-                    <button type="button" data-start="Hi Rushabh, our team would like a workshop on ">Workshop</button>
-                    <button type="button" data-start="Hi Rushabh, I would like your help with ">Hire you</button>
+                    <button type="button" data-start="Hi Rushabh, I am preparing for the ">Exam prep</button>
+                    <button type="button" data-start="Hi Rushabh, I would like to contribute to ">Open source</button>
                     <button type="button" data-start="Hi Rushabh, ">Just saying hi</button>
                 </div>
                 <form id="contact-form" class="space-y-4" method="post" novalidate>
@@ -497,7 +500,7 @@
                 <div class="rs-socials-row"><a href="https://github.com/iamrushabhshahh" rel="me noopener" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/iamrushabhshahh/" rel="me noopener" target="_blank">LinkedIn</a><a href="https://x.com/iamrushabhshahh" rel="me noopener" target="_blank">X</a><a href="https://www.youtube.com/@iamrushabhshahh" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/iamrushabhshahh/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.credly.com/users/iamrushabhshahh" rel="me noopener" target="_blank">Credly</a><a href="https://sessionize.com/iamrushabhshahh/" rel="me noopener" target="_blank">Sessionize</a><a href="https://dev.to/iamrushabhshahh" rel="me noopener" target="_blank">dev.to</a></div></div>
             <div><p class="rs-fh">Read</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/til/">Today I learned</a></li><li><a href="/now/">Now</a></li><li><a href="/reading/">Reading</a></li><li><a href="/blog/rss.xml">RSS</a></li></ul></div>
             <div><p class="rs-fh">Save</p><ul><li><a href="/linux-foundation-coupon/">Linux Foundation</a></li><li><a href="/finops-coupon/">FinOps</a></li><li><a href="/coupons/">All coupons</a></li><li><a href="/linux-foundation-coupon/kubestronaut/">Kubestronaut</a></li></ul></div>
-            <div><p class="rs-fh">Work</p><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#work">Hire me</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
+            <div><p class="rs-fh">Connect</p><ul><li><a href="/speaking/">Speaking</a></li><li><a href="/speaker-kit/">Speaker kit</a></li><li><a href="/#courses">Courses</a></li><li><a href="/#contact">Let&rsquo;s talk</a></li><li><a href="/docker-captain/">Docker Captain</a></li></ul></div>
             <div><p class="rs-fh">Me</p><ul><li><a href="/about/">About</a></li><li><a href="/certs/">My certifications</a></li><li><a href="/games/">Games</a></li><li><a href="/links/">Links</a></li></ul></div>
         </div>
         <div class="rs-wordbox"><div class="rs-word" aria-hidden="true">RUSHABH SHAH</div></div>

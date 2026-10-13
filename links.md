@@ -5,6 +5,7 @@ Open source educator · Docker Captain · Grafana Champion
 Ahmedabad, India · IST (UTC+5:30)
 
 [Invite me to speak Conferences, meetups, colleges, internal tech talks](https://rushabhshah.dev/speaking/)
+[Book a 20 minute chat Free, on Google Meet](https://calendar.app.google/fFL7eubAdig7KZJo9)
 [Speaker kit Bios, photos, AV needs](https://rushabhshah.dev/speaker-kit/)[Say hi I reply within 48 hours](https://rushabhshah.dev/#contact)
 
 ## Read and watch
