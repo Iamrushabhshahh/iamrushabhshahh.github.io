@@ -176,9 +176,12 @@
     .rs-photo img { display:block; height:100%; width:auto; filter:drop-shadow(-18px 0 30px rgba(var(--purple-rgb), .25)) drop-shadow(18px 10px 40px rgba(var(--primary-rgb), .3)); }
     .rs-lit, .rs-sweep { position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen; -webkit-mask:url(/assets/photos/rushabh-kubecon-cut.webp) center / contain no-repeat; mask:url(/assets/photos/rushabh-kubecon-cut.webp) center / contain no-repeat; }
     .rs-lit { opacity:.9; background:radial-gradient(circle at var(--lx, 70%) var(--ly, 30%), rgba(150,200,255,.8), rgba(61,123,255,.22) 22%, transparent 40%); }
-    .rs-sweep { background:linear-gradient(100deg, transparent 35%, rgba(255,255,255,.55) 50%, transparent 65%) no-repeat; background-size:250% 100%; background-position:120% 0; }
-    .rs-js .rs-sweep { animation:rs-sweep 1.6s 1s var(--rs-ease) forwards; }
-    @keyframes rs-sweep { to { background-position:-120% 0; } }
+    /* The light band is a pseudo-element moved with transform, so the sweep
+       runs on the compositor; the mask stays on .rs-sweep itself. */
+    .rs-sweep { overflow:hidden; }
+    .rs-sweep::before { content:''; position:absolute; top:0; bottom:0; left:0; width:60%; background:linear-gradient(100deg, transparent, rgba(255,255,255,.55) 50%, transparent); transform:translateX(-110%); }
+    .rs-js .rs-sweep::before { animation:rs-sweep 1.6s 1s var(--rs-ease) forwards; }
+    @keyframes rs-sweep { to { transform:translateX(280%); } }
     .rs-tip { position:absolute; z-index:6; pointer-events:none; font:400 12px/1.45 var(--rs-mono); background:rgba(var(--panel-rgb), .95); color:var(--rs-text-2); border:1px solid var(--rs-line-2); border-radius:12px; padding:10px 12px; max-width:250px; opacity:0; transform:translateY(6px); transition:opacity .2s, transform .2s; }
     .rs-tip.on { opacity:1; transform:none; } .rs-tip b { color:var(--rs-sig-2); font-weight:500; font-size:13px; }
     .rs-hint { position:absolute; right:clamp(18px, 4vw, 44px); bottom:40px; font:400 11px var(--rs-mono); color:var(--rs-text-3); z-index:3; }
@@ -253,7 +256,7 @@
       .rs-talks, .rs-offers { grid-template-columns:1fr; } .rs-about { grid-template-columns:1fr; } .rs-strip img { height:150px; }
     }
     @media (max-width:560px) { .rs-os { grid-template-columns:1fr; } .rs-nums { grid-template-columns:1fr 1fr; } .rs-socials { grid-template-columns:1fr 1fr; } }
-    @media (prefers-reduced-motion: reduce) { .rs-js .rs-home-hero h1 .ln > span, .rs-js .rs-me, .rs-js .rs-fadeup { animation:none; opacity:1; transform:none; } .rs-js .rs-sweep { animation:none; } }
+    @media (prefers-reduced-motion: reduce) { .rs-js .rs-home-hero h1 .ln > span, .rs-js .rs-me, .rs-js .rs-fadeup { animation:none; opacity:1; transform:none; } .rs-js .rs-sweep::before { animation:none; } }
     </style>
 </head>
 <body class="rs-home">

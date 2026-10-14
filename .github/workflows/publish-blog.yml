@@ -99,4 +99,5 @@ jobs:
             echo "::warning::CLOUDFLARE_API_TOKEN is not set, so rushabhshah.dev was not updated."
             exit 0
           fi
+          node scripts/minify-assets.mjs
           npx -y wrangler@4.151.0 deploy
