@@ -10,7 +10,7 @@
     "export:verify": "node ../scripts/verify-url-parity.mjs"
   },
   "dependencies": {
-    "next": "15.5.4",
+    "next": "15.5.27",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "lucide-react": "^0.544.0",
@@ -27,8 +27,8 @@
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
-    "tailwindcss": "^3.4.17",
-    "postcss": "^8.5.6",
+    "tailwindcss": "^4.3.3",
+    "postcss": "^8.5.29",
     "autoprefixer": "^10.4.21",
     "velite": "^0.3.0",
     "zod": "^3.25.76"
