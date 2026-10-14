@@ -1,0 +1,16 @@
+// rushabhshah.dev on Cloudflare Workers static assets.
+// Assets only: there is no Worker script, so every request is a free asset
+// request and nothing here is billable. Deployed by .github/workflows/publish-blog.yml
+// after the build commits the generated pages. What not to upload is in .assetsignore.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rushabhshah-dev",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true,
+  "routes": [{ "pattern": "rushabhshah.dev", "custom_domain": true }]
+}

@@ -1,0 +1,21 @@
+# Repo files that are not part of the website (wrangler reads this).
+.git
+.github
+.gitignore
+.nojekyll
+.pages.yml
+.assetsignore
+.DS_Store
+_config.yml
+CNAME
+MAINTAINERS.md
+README.md
+content
+diagrams
+next
+node_modules
+scripts
+lychee.toml
+package.json
+package-lock.json
+wrangler*.jsonc

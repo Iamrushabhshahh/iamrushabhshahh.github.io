@@ -1,27 +1,16 @@
-# Builds the markdown blog and commits the generated HTML back to main,
-# which GitHub Pages then serves. The daily cron is what makes scheduled
+# Builds the markdown blog, commits the generated HTML back to main and
+# deploys the site to Cloudflare Workers (wrangler.jsonc), which serves
+# rushabhshah.dev. The daily cron is what makes scheduled
 # publishing work: posts with a future frontmatter `date` are skipped at
 # build time and picked up by the first run after that moment (up to 24h
 # later).
 name: Publish blog
 
 on:
+  # Every push to main deploys: the site is served from Cloudflare now, so a
+  # change anywhere (a photo, _headers) has to go through this workflow.
   push:
     branches: [main]
-    paths:
-      - "content/**"
-      - "scripts/**"
-      - "style.css"
-      - "index.html"
-      - "linux-foundation-coupon/**"
-      - "finops-coupon/**"
-      - "coupons/**"
-      - "go/**"
-      - "docker-captain/**"
-      - "privacy/**"
-      - "package.json"
-      - "next/**"
-      - ".github/workflows/publish-blog.yml"
   schedule:
     - cron: "40 18 * * *" # daily at 00:10 IST (18:40 UTC previous day)
     # One-offs for the October Prime sale, so the banner flips to "live" soon
@@ -97,3 +86,17 @@ jobs:
             git commit -m "chore(blog): publish generated pages"
             git push
           fi
+
+      # Deploy the assembled site. Assets only, no Worker script, so it runs
+      # on the free plan. Skipped (with a warning) until the API token secret
+      # exists, so the build never fails just because the secret is missing.
+      - name: Deploy to Cloudflare Workers
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ad704871f6c3014e56e61e62ce6e342f
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::warning::CLOUDFLARE_API_TOKEN is not set, so rushabhshah.dev was not updated."
+            exit 0
+          fi
+          npx -y wrangler@4.151.0 deploy
