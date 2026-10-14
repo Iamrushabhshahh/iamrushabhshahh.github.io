@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "marked": "^18.0.11"
+    "marked": "^18.1.0"
   },
   "devDependencies": {
-    "esbuild": "^0.25.10",
-    "sharp": "^0.34.4"
+    "esbuild": "^0.28.2",
+    "sharp": "^0.35.5"
   },
   "overrides": {
     "js-yaml": "^3.15.2"
