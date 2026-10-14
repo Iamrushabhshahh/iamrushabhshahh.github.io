@@ -37,6 +37,7 @@ const NEXT_OWNED = [
   '/contributions/',
   '/research/',
   '/about/',
+  '/speaker-kit/',
   '/discounts/',
 ];
 
