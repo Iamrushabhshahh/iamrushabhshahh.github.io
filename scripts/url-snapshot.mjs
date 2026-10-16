@@ -86,7 +86,11 @@ const fail = [], warn = [];
 for (const [url, b] of Object.entries(base)) {
   const n = snap[url];
   if (!n) { fail.push(`REMOVED   ${url}`); continue; }
-  for (const k of ['canonical', 'robots', 'go']) if ((b[k] ?? '') !== (n[k] ?? '')) fail.push(`${k.toUpperCase().padEnd(9)} ${url}\n            was: ${b[k] || '(none)'}\n            now: ${n[k] || '(none)'}`);
+  // /go/sale* links are re-pointed at every sale's landing page and parked on
+  // the catalog in between, so their target changing is the point. They still
+  // fail if they disappear.
+  const keys = url.startsWith('/go/sale') ? ['canonical', 'robots'] : ['canonical', 'robots', 'go'];
+  for (const k of keys) if ((b[k] ?? '') !== (n[k] ?? '')) fail.push(`${k.toUpperCase().padEnd(9)} ${url}\n            was: ${b[k] || '(none)'}\n            now: ${n[k] || '(none)'}`);
   const lost = b.ldTypes.filter(t => !n.ldTypes.includes(t));
   if (lost.length) fail.push(`JSON-LD   ${url} lost ${lost.join(', ')}`);
   if (n.ldTypes.includes('INVALID_JSON')) fail.push(`JSON-LD   ${url} has a block that does not parse`);
