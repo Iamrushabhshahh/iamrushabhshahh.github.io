@@ -2,6 +2,18 @@
 
 > Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-10-16. The curated index is at https://rushabhshah.dev/llms.txt.
 
+## Live offer
+
+A Linux Foundation sale (October cybersecurity sale) is running until 23:59 UTC on October 23, 2026. Codes:
+
+- `OCT26NONCYBERRUSHABH`: 35% off CKA, CKAD, KCNA and every other certification and course
+- `OCT26CYBERRUSHABH`: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses
+- `OCT26THRIVERUSHABH`: 30% off a new THRIVE-ONE Annual subscription
+
+Sale prices: CKS $445 to $267 with OCT26CYBERRUSHABH; KCSA $250 to $150 with OCT26CYBERRUSHABH; KCSA + CKS bundle $645 to $387 with OCT26CYBERRUSHABH.
+
+It does not apply to any FinOps course or certification. All codes and prices: https://rushabhshah.dev/linux-foundation-coupon/. After it ends, RUSHABH30 is again the best available discount at 30%.
+
 <!-- https://rushabhshah.dev/blog/cka-exam-day-setup/ -->
 
 # CKA exam day: PSI bridge, terminal, kubectl aliases
@@ -1613,6 +1625,8 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 Updated October 2026 · Two official partner codes, one page
 
+**Right now there's a Linux Foundation sale running** that beats RUSHABH30: 35% off CKA, CKAD, KCNA and every other certification and course with `OCT26NONCYBERRUSHABH`, plus 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses with `OCT26CYBERRUSHABH`, plus 30% off a new THRIVE-ONE Annual subscription with `OCT26THRIVERUSHABH`, ends October 23. It does not apply to any FinOps course or certification, so the FinOps code below is unaffected. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
+
 RUSHABH30
 
 RUSHABH_20
@@ -2484,11 +2498,9 @@ Approving a container image by tag approves something that can change after you 
 GIVING BACK · LINUX FOUNDATION PARTNER CODE
 ## 30% off every Linux Foundation exam
 
-My way of giving back to the community: one code for every Linux Foundation certification and course.
+Sale live · ends October 23
 
-- [CKA $445 ~$311](https://rushabhshah.dev/go/cka/)
-- [KCNA $250 ~$175](https://rushabhshah.dev/go/kcna/)
-- [CKS $445 ~$311](https://rushabhshah.dev/go/cks/)
+The Linux Foundation **October cybersecurity sale** is live: CKS $267, KCSA $150, every other exam 35% off. Ends October 23. [See the codes →](https://rushabhshah.dev/linux-foundation-coupon/#current-sale) My evergreen RUSHABH30 code takes over at 30% when it ends.
 
 RUSHABH30
 No expiry · exams, courses and bundles
@@ -2642,6 +2654,29 @@ Ahmedabad, India · IST (UTC+5:30)
 
 Updated October 2026 · Certified Argo Project Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get CAPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F)
@@ -2754,6 +2789,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Certified Backstage Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get CBA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F)
@@ -2865,6 +2923,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Cilium Certified Associate
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -2982,6 +3063,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Certified GitOps Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get CGOA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F)
@@ -3095,6 +3199,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get CKA to Kubestronaut for ~$864 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-to-kubestronaut-upgrade-bundle%2F)
@@ -3206,6 +3333,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CKA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Kubernetes Administrator
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3328,6 +3478,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS)
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get CKAD to Kubestronaut for ~$864 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F)
@@ -3439,6 +3612,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CKAD Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Kubernetes Application Developer
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3557,9 +3753,24 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Certified Kubernetes Security Specialist
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+CKS is **$267** with this code, down from $445. That beats the $311 you'd pay with RUSHABH30, so use this one until October 23.
+
+OCT26CYBERRUSHABH
+[Get CKS for $267 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+**2 more codes: 35% off CKA, CKAD, KCNA and every other certification and course, 30% off THRIVE-ONE Annual subscription**
+
+[35% off CKA, CKAD, KCNA and every other certification and course](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26NONCYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26NONCYBERRUSHABH OCT26THRIVERUSHABH
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
-[Get CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
+[After the sale: CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F) and the Certified Kubernetes Security Specialist (CKS) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -3674,6 +3885,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Certified Cloud Native Platform Engineering Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get CNPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F)
@@ -3787,6 +4021,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CNPE Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Cloud Native Platform Engineer
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3904,6 +4161,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # Golden Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Golden Kubestronaut bundle (16 CNCF certs)
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4033,6 +4313,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Istio Certified Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get ICA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F)
@@ -4143,7 +4446,30 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-No sale running right now. This is the everyday code, works year-round:
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
+A sale is running right now (see above). This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -4441,6 +4767,29 @@ Know someone preparing for a Linux Foundation exam? Send them this page.
 
 Updated October 2026 · Kyverno Certified Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get KCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkyverno-certified-associate-kca%2F)
@@ -4554,6 +4903,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # KCNA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kubernetes and Cloud Native Associate
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4672,9 +5044,24 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Kubernetes and Cloud Native Security Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+KCSA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 23.
+
+OCT26CYBERRUSHABH
+[Get KCSA for $150 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+**2 more codes: 35% off CKA, CKAD, KCNA and every other certification and course, 30% off THRIVE-ONE Annual subscription**
+
+[35% off CKA, CKAD, KCNA and every other certification and course](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26NONCYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26NONCYBERRUSHABH OCT26THRIVERUSHABH
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
-[Get KCSA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F)
+[After the sale: KCSA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F) and the Kubernetes and Cloud Native Security Associate (KCSA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
@@ -4788,6 +5175,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # Kubestronaut to Golden Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams)
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4908,6 +5318,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get Kubestronaut for ~$1151 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
@@ -5024,6 +5457,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # LFCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Linux Foundation Certified IT Associate
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5143,6 +5599,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Linux Foundation Certified System Administrator
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get LFCS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F)
@@ -5261,6 +5740,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # MCPA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Model Context Protocol Associate
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5383,6 +5885,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · OpenTelemetry Certified Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get OTCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
@@ -5498,6 +6023,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # PCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Prometheus Certified Associate
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5615,6 +6163,29 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # PTCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · PyTorch Certified Associate
+
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 

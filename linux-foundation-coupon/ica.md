@@ -4,6 +4,29 @@
 
 Updated October 2026 · Istio Certified Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
+
+OCT26NONCYBERRUSHABH
+[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+What the security exams cost with the sale on:
+
+- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
+- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
+- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
+
+**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
+
+[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
+
+These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
 [Get ICA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F)

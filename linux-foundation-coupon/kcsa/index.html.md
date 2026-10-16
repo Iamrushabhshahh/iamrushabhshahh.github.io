@@ -4,9 +4,24 @@
 
 Updated October 2026 · Kubernetes and Cloud Native Security Associate
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+KCSA is **$150** with this code, down from $250. That beats the $175 you'd pay with RUSHABH30, so use this one until October 23.
+
+OCT26CYBERRUSHABH
+[Get KCSA for $150 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+**2 more codes: 35% off CKA, CKAD, KCNA and every other certification and course, 30% off THRIVE-ONE Annual subscription**
+
+[35% off CKA, CKAD, KCNA and every other certification and course](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26NONCYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26NONCYBERRUSHABH OCT26THRIVERUSHABH
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
-[Get KCSA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F)
+[After the sale: KCSA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F) and the Kubernetes and Cloud Native Security Associate (KCSA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 

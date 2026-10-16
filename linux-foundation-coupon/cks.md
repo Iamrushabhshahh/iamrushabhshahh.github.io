@@ -4,9 +4,24 @@
 
 Updated October 2026 · Certified Kubernetes Security Specialist
 
+Sale live now · ends October 23
+
+Linux Foundation October cybersecurity sale
+
+CKS is **$267** with this code, down from $445. That beats the $311 you'd pay with RUSHABH30, so use this one until October 23.
+
+OCT26CYBERRUSHABH
+[Get CKS for $267 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
+
+**2 more codes: 35% off CKA, CKAD, KCNA and every other certification and course, 30% off THRIVE-ONE Annual subscription**
+
+[35% off CKA, CKAD, KCNA and every other certification and course](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26NONCYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26NONCYBERRUSHABH OCT26THRIVERUSHABH
+
+Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
+
 RUSHABH30
 
-[Get CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
+[After the sale: CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F) and the Certified Kubernetes Security Specialist (CKS) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 

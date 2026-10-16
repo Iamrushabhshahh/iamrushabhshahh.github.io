@@ -1195,64 +1195,59 @@ const now = new Date();
    so pointing people at the better sale code through the tracking link below
    costs nothing and is the honest recommendation. */
 const SALE = {
-  name: 'October Prime sale',
-  // Awin's brief: 10/6/26 12:00 AM ET to 10/7/26 11:59 PM ET. October is EDT
-  // (UTC-4), so it opens at 04:00 UTC on the 6th, which is 9:30 AM IST.
-  start: '2026-10-06T04:00:00Z',
-  // Rendered from here on with a "starts" pill instead of "live", so readers
-  // get the advance notice the affiliate brief gives us. Prices in the Offer
-  // JSON-LD still only switch at `start`, since nobody can buy at them before.
-  announce: '2026-10-05T12:00:00Z',
-  startLabel: 'October 6, 9:30 AM IST',
-  // 23:59 UTC on the 7th, per the Restrictions block in the brief. The email's
-  // own header says "11:59 PM ET", which is four hours later. The terms are what
-  // a buyer can hold them to and they are the earlier of the two, so they win.
-  end: '2026-10-07T23:59:00Z',
-  advertisedEnd: 'October 7',
-  dateNote: 'Two days only: October 6 at 9:30 AM IST until 23:59 UTC on October 7, which is 5:29 AM IST on the 8th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.',
-  // Rendered on /coupons/, which compares this catalog against the FinOps one.
+  name: 'October cybersecurity sale',
+  // Live from October 16. The Restrictions block on the promo page says
+  // "October 16, 2026, and October 23, 2026, 23:59 UTC", and both affiliate
+  // emails agree, so there is no Eastern-time offset to correct this time.
+  start: '2026-10-16T00:00:00Z',
+  startLabel: 'October 16',
+  end: '2026-10-23T23:59:00Z',
+  advertisedEnd: 'October 23',
+  dateNote: 'Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.',
   excludes: 'any FinOps course or certification',
-  // Certifications first: that is what this site's readers are buying.
+  // These are the personal codes LF issued for this sale, not the generic
+  // OCT26CYBER family Awin sent out, so a sale still credits here when the
+  // buyer types the code without clicking a tracked link. The 35% code goes
+  // first: CKA, CKAD and KCNA buyers are most of this site's readers, and
+  // codes[0] is what every page without its own tier leads with.
   codes: [
-    // `go` names the tracked link for that code: /go/<go>/ off-site, and the
-    // same string as Awin clickref (prefixed site-) on the banner row itself.
-    { code: 'OCTPRIME26CC', pct: 40, what: 'certifications and e-learning courses', go: 'sale-certs' },
-    { code: 'OCTPRIME26B', pct: 50, what: 'bundles', go: 'sale-bundles' },
-    { code: 'OCTPRIME26SB', pct: 75, what: 'the three Super Bundles (Cybersecurity, Cloud Native Developer, Cloud Native)', go: 'sale-superbundles' },
-    { code: 'OCTPRIME26TO', pct: 20, what: 'a new THRIVE-ONE Annual subscription', go: 'sale-thrive' },
+    { code: 'OCT26NONCYBERRUSHABH', pct: 35, what: 'CKA, CKAD, KCNA and every other certification and course', go: 'sale-certs' },
+    { code: 'OCT26CYBERRUSHABH', pct: 40, what: 'CKS, KCSA, the KCSA + CKS bundle and the security courses', go: 'sale-cyber' },
+    { code: 'OCT26THRIVERUSHABH', pct: 30, what: 'a new THRIVE-ONE Annual subscription', go: 'sale-thrive' },
   ],
   offers: [
-    { pct: 75, what: 'Super Bundles' },
-    { pct: 50, what: 'bundles' },
-    { pct: 40, what: 'certifications and courses' },
-    { pct: 20, what: 'THRIVE-ONE Annual' },
+    { pct: 40, what: 'security certifications and courses' },
+    { pct: 35, what: 'everything else' },
+    { pct: 30, what: 'THRIVE-ONE Annual' },
   ],
   condition: null,
-  tiersLead: 'What the exams cost with the sale on:',
-  // Only the single-exam tiers are priced. 40% of $445 and $250 is exactly
-  // $267 and $150, so there is no rounding to guess at. The promo grid at
-  // training.linuxfoundation.org/october-prime-2026/ is password-locked until
-  // the sale opens, so the Kubestronaut bundles are deliberately left unpriced:
-  // whether they sit under the 50% bundles code can only be read off that grid.
-  // Last time guessing a bundle price got it wrong by $164.
+  tiersLead: 'What the security exams cost with the sale on:',
+  // Only the prices the promo grid prints. It lists CKS, KCSA and the bundle
+  // and nothing else, so CKA and the Kubestronaut bundles stay unpriced even
+  // though the 35% code covers them: the rounding is LF's to show, not ours to
+  // guess. No `short` on these, or the 35% lead would quote 40% prices.
   tiers: [
-    { label: 'CKA, CKAD, CKS or LFCS', short: 'CKA, CKAD and CKS are', list: 445, sale: 267, code: 'OCTPRIME26CC', slugs: ['cka', 'ckad', 'cks', 'lfcs'] },
-    { label: 'KCNA, KCSA, PCA, OTCA, LFCA and the other associate exams', short: 'the associate exams', list: 250, sale: 150, code: 'OCTPRIME26CC', slugs: ['kcna', 'kcsa', 'pca', 'otca', 'lfca', 'mcpa'] },
+    { label: 'CKS', list: 445, sale: 267, code: 'OCT26CYBERRUSHABH', slugs: ['cks'] },
+    { label: 'KCSA', list: 250, sale: 150, code: 'OCT26CYBERRUSHABH', slugs: ['kcsa'] },
+    { label: 'KCSA + CKS bundle', list: 645, sale: 387, code: 'OCT26CYBERRUSHABH' },
   ],
-  // Code a bundle page leads with, since those buyers need this one, not the
-  // certification code.
-  bundleCode: 'OCTPRIME26B',
+  // Kubestronaut bundles fall under "all other certifications", so they take
+  // the 35% code like everything outside the security list.
+  bundleCode: 'OCT26NONCYBERRUSHABH',
   beatsEveryday: true,
-  compare: "These codes don't stack with RUSHABH30, and they beat it: CKA is $267 here against $311 with my code. RUSHABH30 is the best price again once the two days are up.",
-  // One-line record for the archive once the window closes.
-  summary: '40% off certifications with OCTPRIME26CC (CKA went to $267, associate exams to $150), 50% off bundles with OCTPRIME26B, 75% off the three Super Bundles with OCTPRIME26SB, 20% off THRIVE-ONE Annual with OCTPRIME26TO. Two days only',
+  compare: "These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.",
+  // One line for the bar under the nav and the homepage card. The full code
+  // list lives on the coupon page, which both of them link to.
+  short: 'CKS $267, KCSA $150, every other exam 35% off. Ends October 23.',
+  summary: '40% off CKS, KCSA and the security courses with OCT26CYBERRUSHABH (CKS went to $267, KCSA to $150, the KCSA + CKS bundle to $387), 35% off every other certification and course with OCT26NONCYBERRUSHABH, 30% off THRIVE-ONE Annual with OCT26THRIVERUSHABH. One week',
   banner: {
-    src: '/assets/linux-foundation-oct26-prime-up-to-75-percent-off.webp',
+    src: '/assets/linux-foundation-oct26-cyber-40-35-percent-off.webp',
     width: 1200, height: 628,
-    alt: 'Linux Foundation October Prime sale, October 6 to 7: up to 75% off training and certifications',
+    alt: 'Linux Foundation October cybersecurity sale, until October 23: up to 40% off, CKS shown',
   },
-  dest: 'https://training.linuxfoundation.org/october-prime-2026/',
+  dest: 'https://training.linuxfoundation.org/october-2026-promo/',
 };
+
 /* saleLive is the window the sale is *shown* (from `announce`, if set), and
    saleStarted is when the codes actually work. Everything that renders copy keys
    off saleLive and picks its wording from saleStarted; the structured-data
@@ -1477,6 +1472,21 @@ const SOCIALS = [
 ];
 const rsNav = (active, dealsHref) => NAV_ITEMS(dealsHref)
   .map(([h, l, k]) => `<a href="${h}"${k && k === active ? ' aria-current="page"' : ''}>${l}</a>`).join('');
+/* A thin bar under the nav on every page while a sale is live, so someone
+   landing on a blog post still hears about it. It replaces the RUSHABH30 strip
+   rather than stacking on it. Dismissing it is remembered per sale (keyed on
+   the end time), so closing this one doesn't hide the next. The inline script
+   sits right after the bar so a dismissed bar never paints. */
+const saleBarHtml = () => {
+  if (!saleLive || !SALE.short) return '';
+  const key = `salebar:${SALE.end}`;
+  return `
+        <div class="rs-salebar" id="rs-salebar">
+            <a href="/linux-foundation-coupon/#current-sale" data-goatcounter-click="salebar-open" data-goatcounter-title="Sale bar"><span class="rs-salebar__tag">${saleStarted ? 'Sale live' : `From ${escapeHtml(SALE.startLabel)}`}</span> Linux Foundation ${escapeHtml(SALE.name)}: ${escapeHtml(SALE.short)} <b>See the codes &rarr;</b></a>
+            <button type="button" class="rs-salebar__x" aria-label="Dismiss the sale notice" onclick="try{localStorage.setItem('salebar','${key}')}catch(e){}this.parentNode.remove()">&times;</button>
+        </div>
+        <script>try{if(localStorage.getItem('salebar')==='${key}')document.getElementById('rs-salebar').remove()}catch(e){}</script>`;
+};
 const rsHeader = ({ active = null, dealsHref = '/linux-foundation-coupon/', promo = true, overlay = false } = {}) => `
     <a href="#main" class="skip-link">Skip to content</a>
     <header class="rs-hdr${overlay ? ' rs-hdr--overlay' : ''}" id="rs-hdr">
@@ -1488,8 +1498,8 @@ const rsHeader = ({ active = null, dealsHref = '/linux-foundation-coupon/', prom
                 <a class="rs-tool rs-tool--hot rs-hide-sm" href="/#contact">Let&rsquo;s talk</a>
                 <button type="button" class="rs-tool rs-menu-btn" id="rs-menu" aria-controls="rs-sheet" aria-expanded="false">Menu</button>
             </div>
-        </div>${promo ? `
-        <a class="rs-promo" href="/linux-foundation-coupon/">Linux Foundation code <b>RUSHABH30</b>: 30% off certifications &rarr;</a>` : ''}
+        </div>${saleBarHtml() || (promo ? `
+        <a class="rs-promo" href="/linux-foundation-coupon/">Linux Foundation code <b>RUSHABH30</b>: 30% off certifications &rarr;</a>` : '')}
     </header>
     <nav class="rs-sheet" id="rs-sheet" aria-label="All pages" hidden>
         <h4>Start</h4><a href="/">Home</a><a href="/blog/">Blog</a><a href="/speaking/">Speaking</a><a href="/#contact">Let&rsquo;s talk</a>
@@ -2394,7 +2404,9 @@ const saleHomeCardHtml = () => saleLive
                 <span class="status-pill mb-1"><span class="dot"></span> ${saleStarted ? 'Sale live' : `Starts ${escapeHtml(SALE.startLabel)}`} &middot; ends ${escapeHtml(SALE.advertisedEnd)}</span>
                 <p class="text-sm text-gray-300 leading-relaxed">
                     The Linux Foundation <strong class="text-white">${escapeHtml(SALE.name)}</strong> ${saleStarted ? 'is live' : 'is coming'}:
-                    ${SALE.codes.length > 1 && SALE.codes.every(c => c.pct && c.what)
+                    ${SALE.short
+                      ? `${escapeHtml(SALE.short)} <a href="/linux-foundation-coupon/#current-sale" class="text-white underline">See the codes &rarr;</a>`
+                      : SALE.codes.length > 1 && SALE.codes.every(c => c.pct && c.what)
                       /* Each code names its own scope, so repeating the scopes in a
                          separate offers sentence just says everything twice. */
                       ? `${SALE.codes.map(c => `<strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)} with <span class="font-fira font-bold text-primary-color">${c.code}</span>`).join(', plus ')}.`
@@ -4175,7 +4187,7 @@ console.log(`\nDone: ${all.length} published, ${scheduled.length} scheduled, ${b
     .join('\n');
 
   const saleLine = saleLive
-    ? `\n## Live offer\n\nA Linux Foundation sale ${saleStarted ? 'is running' : `starts ${SALE.startLabel} and runs`} until ${SALE.advertisedEnd} ${new Date(SALE.end).getUTCFullYear()}: ${SALE.codes.map(c => `${c.pct}% off ${c.what} with code ${c.code}`).join(', ')}. It does not apply to ${SALE.excludes || 'excluded products, see the coupon page'}. After it ends, RUSHABH30 is again the best available discount at 30%.\n`
+    ? `\n## Live offer\n\nA Linux Foundation sale (${SALE.name}) ${saleStarted ? 'is running' : `starts ${SALE.startLabel} and runs`} until ${SALE.end.slice(11, 16)} UTC on ${SALE.advertisedEnd}, ${new Date(SALE.end).getUTCFullYear()}. Codes:\n\n${SALE.codes.map(c => `- \`${c.code}\`: ${c.pct}% off ${c.what}`).join('\n')}\n${SALE.tiers?.length ? `\nSale prices: ${SALE.tiers.map(t => `${t.label} $${t.list} to $${t.sale}${t.code ? ` with ${t.code}` : ''}`).join('; ')}.\n` : ''}\nIt does not apply to ${SALE.excludes || 'excluded products, see the coupon page'}. All codes and prices: ${SITE}/linux-foundation-coupon/. After it ends, RUSHABH30 is again the best available discount at 30%.\n`
     : `\n## Live offer\n\nNo Linux Foundation sale is running right now, so RUSHABH30 at 30% is the best available discount.\n`;
 
   const llms = `# Rushabh Shah
@@ -4250,7 +4262,7 @@ ${postLines}
     const rel = '/' + path.relative(ROOT, m).split(path.sep).join('/').replace(/index\.html\.md$/, '');
     return `<!-- ${SITE}${rel} -->\n\n${fs.readFileSync(m, 'utf8').trim()}\n`;
   });
-  const full = `# ${AUTHOR}: full site content\n\n> Every page of ${SITE} as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated ${new Date().toISOString().slice(0, 10)}. The curated index is at ${SITE}/llms.txt.\n\n${fullParts.join('\n---\n\n')}`;
+  const full = `# ${AUTHOR}: full site content\n\n> Every page of ${SITE} as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated ${new Date().toISOString().slice(0, 10)}. The curated index is at ${SITE}/llms.txt.\n${saleLine}\n${fullParts.join('\n---\n\n')}`;
   const fullPath = path.join(ROOT, 'llms-full.txt');
   if (!fs.existsSync(fullPath) || fs.readFileSync(fullPath, 'utf8') !== full) {
     fs.writeFileSync(fullPath, full);
