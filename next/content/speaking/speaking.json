@@ -58,7 +58,6 @@
       "slug": "promcon-eu-2026",
       "title": "From Buckets to Native Histograms: Lessons from a Production Migration",
       "kind": "talk",
-      "role": "Co-speaker, pre-recorded segment",
       "event": "PromCon EU 2026",
       "organizer": "Prometheus project",
       "start": "2026-10-08T14:15:00+02:00",
