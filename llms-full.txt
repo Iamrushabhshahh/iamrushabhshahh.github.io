@@ -2407,7 +2407,7 @@ ebpf.io/hi-in 59% cost cut fintech compliance
 2026
 ### Docker Captain, Grafana Champion, a global stage
 
-Selected as a Docker Captain and a Grafana Champion. My talks started getting accepted outside India: a co-presented, pre-recorded segment at PromCon EU, then FluxCon in Salt Lake City and two talks in Tokyo. Spoke in Vadodara, and started building courses.
+Selected as a Docker Captain and a Grafana Champion. My talks started getting accepted outside India: a talk at PromCon EU in Munich, then FluxCon in Salt Lake City and two talks in Tokyo. Spoke in Vadodara, and started building courses.
 Docker Captain Grafana Champion Tokyo &times; 2
 
 Open source
