@@ -2750,9 +2750,12 @@ function certPageHtml(c, siblings) {
         <article class="max-w-3xl mx-auto">
             <header class="mb-10">
                 <a href="/linux-foundation-coupon/" class="rs-back">&larr; All Linux Foundation codes</a>
-                <h1 class="text-4xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight mb-5">
-                    ${escapeHtml(c.name)} Discount Code: <span class="gradient-text">30% Off</span> with RUSHABH30
-                </h1>
+                <div class="flex items-center gap-5 mb-5">
+                    <img src="/assets/certs/${c.slug}.png" alt="${escapeHtml(c.fullName)} certification badge" width="84" height="84" loading="eager" style="border-radius:14px;flex-shrink:0;box-shadow:0 6px 18px -6px rgba(0,0,0,0.4);">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white leading-[1.05] tracking-tight">
+                        ${escapeHtml(c.name)} Discount Code: <span class="gradient-text">30% Off</span> with RUSHABH30
+                    </h1>
+                </div>
                 <p class="font-fira text-sm text-gray-400 mb-8">Updated ${MONTH_YEAR} &middot; ${escapeHtml(c.fullName)}</p>
 ${saleBannerHtml(c)}
                 <div class="flex flex-wrap items-center gap-5">
@@ -2760,14 +2763,14 @@ ${saleBannerHtml(c)}
                         RUSHABH30
                         <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                     </span>
-                    <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn ${saleCertPrice.has(c.slug) || (saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug))) ? 'btn-ghost' : 'btn-primary'}" data-goatcounter-click="cta-lf-${c.slug}-hero" data-goatcounter-title="LF ${c.name} hero CTA">${saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug)) ? `After the sale: ${escapeHtml(c.name)} for ~$${c.priceDiscounted}` : `Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted}`} &rarr;</a>
+                    <a href="${awinLink(c.dest, `site-${c.slug}-hero`)}" target="_blank" rel="noopener sponsored" class="btn ${saleCertPrice.has(c.slug) || (saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug))) ? 'btn-ghost' : 'btn-primary'}" data-goatcounter-click="cta-lf-${c.slug}-hero" data-goatcounter-title="LF ${c.name} hero CTA">${saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug)) ? `After the sale: ${escapeHtml(c.name)} for ~$${c.priceDiscounted}` : `Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted}`} &rarr;</a>
                 </div>
             </header>
 
             <div class="post-prose">
                 <p>
                     Put <code>RUSHABH30</code> in the coupon field at checkout on
-                    <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
+                    <a href="${awinLink(c.dest, `site-${c.slug}-intro`)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
                     and the ${escapeHtml(c.fullName)}${c.isBundle ? '' : ` (${escapeHtml(c.name)}) exam`} drops from $${c.priceList} to about $${c.priceDiscounted}, a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
                 </p>
 
@@ -2801,7 +2804,7 @@ ${saleBannerHtml(c)}
 
                 <h2 id="how-to-use">How to use the code</h2>
                 <ol>
-                    <li>Add the ${escapeHtml(c.name)}${c.isBundle ? ' bundle' : ' exam'} to your cart on <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
+                    <li>Add the ${escapeHtml(c.name)}${c.isBundle ? ' bundle' : ' exam'} to your cart on <a href="${awinLink(c.dest, `site-${c.slug}-steps`)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
                     <li>Enter <code>RUSHABH30</code> in the coupon field at checkout.</li>
                     <li>The total drops 30%. RUSHABH30 works on ${c.retakeNote}.</li>
                 </ol>
@@ -2812,7 +2815,7 @@ ${saleBannerHtml(c)}
                     RUSHABH30
                     <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                 </span>
-                <a href="${awinLink(c.dest)}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-lf-${c.slug}-footer" data-goatcounter-title="LF ${c.name} footer CTA">Apply it at checkout &rarr;</a>
+                <a href="${awinLink(c.dest, `site-${c.slug}-footer`)}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-lf-${c.slug}-footer" data-goatcounter-title="LF ${c.name} footer CTA">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">
@@ -3491,13 +3494,22 @@ ${signupHub()}
    Deliberately noindex + excluded from the sitemap: they're plumbing, not
    content, and letting Google index a pile of thin redirect pages on a domain
    whose whole argument is "real practitioner, not an affiliate farm" would be
-   the exact wrong signal. Attribution still runs through Awin's own click
-   reporting, so nothing here needs to count anything itself. */
+   the exact wrong signal.
+
+   Every one of these carries its own clickref (`go-<slug>`), same as the
+   sale/social links below. Commission crediting only needs awinmid/awinaffid
+   and works without one, but which never did: until 2026-10-22 these had no
+   clickref at all, so ~92% of clicks/commission (everything through the
+   evergreen cert links, as opposed to a sale or social campaign) was
+   invisible to the Click References report — there was no way to tell which
+   certification page actually converts. See
+   `02 SEO and Growth/awin-attribution-and-growth-update-2026-10-22.md` in the
+   RushLabs vault. */
 
 const GO_LINKS = () => {
   const map = {
-    catalog: awinLink('https://training.linuxfoundation.org/'),
-    sale: SALE ? awinLink(SALE.dest, 'sale') : awinLink('https://training.linuxfoundation.org/'),
+    catalog: awinLink('https://training.linuxfoundation.org/', 'go-catalog'),
+    sale: SALE ? awinLink(SALE.dest, 'sale') : awinLink('https://training.linuxfoundation.org/', 'go-sale'),
     finops: 'https://learn.finops.org/',
   };
   /* Tracked variants of the sale link, one per place it gets shared and one per
@@ -3510,7 +3522,7 @@ const GO_LINKS = () => {
   }
   // Every cert that has a page gets a matching short link, generated from the
   // same dest the page's own CTA uses so the two can never disagree.
-  for (const c of CERT_PAGES) map[c.slug] = awinLink(c.dest);
+  for (const c of CERT_PAGES) map[c.slug] = awinLink(c.dest, `go-${c.slug}`);
   // Certs that don't have a dedicated page here but do appear in the coupon
   // repo's pricing table, so every row there can carry a branded link.
   // Every cert that had a link here now has a real page, and CERT_PAGES above
@@ -3525,7 +3537,7 @@ const GO_LINKS = () => {
     'cka-cks': 'https://training.linuxfoundation.org/certification/cka-cks-exam-bundle/',
     'cka-ckad-cks': 'https://training.linuxfoundation.org/certification/cka-ckad-cks-exam-bundle/',
     'kcna-cka': 'https://training.linuxfoundation.org/certification/kcna-cka-exam-bundle/',
-  })) map[slug] = awinLink(dest);
+  })) map[slug] = awinLink(dest, `go-${slug}`);
   return map;
 };
 

@@ -29,9 +29,9 @@ Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individ
 
 RUSHABH30
 
-[Get MCPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F)
+[Get MCPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-mcpa-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F) and the Model Context Protocol Associate (MCPA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-mcpa-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F) and the Model Context Protocol Associate (MCPA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -68,13 +68,13 @@ MCP went from an Anthropic specification to the way most agent tooling talks to 
 
 ## How to use the code
 
-- Add the MCPA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F).
+- Add the MCPA exam to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-mcpa-steps&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F).
 - Enter `RUSHABH30` in the coupon field at checkout.
 - The total drops 30%. RUSHABH30 works on the exam with one free retake included, within a 12-month eligibility window.
 
 RUSHABH30
 
-[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F)
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-mcpa-footer&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F)
 
 ## Frequently asked questions
 

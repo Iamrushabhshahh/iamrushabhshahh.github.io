@@ -29,9 +29,9 @@ Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individ
 
 RUSHABH30
 
-[Get Kubestronaut for ~$1151 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
+[Get Kubestronaut for ~$1151 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F) and the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS) drops from $1645 to about $1151, a saving of roughly $494. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F) and the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS) drops from $1645 to about $1151, a saving of roughly $494. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -68,13 +68,13 @@ Kubestronaut is CNCF's recognition for engineers who hold all five Kubernetes ce
 
 ## How to use the code
 
-- Add the Kubestronaut bundle to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F).
+- Add the Kubestronaut bundle to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-steps&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F).
 - Enter `RUSHABH30` in the coupon field at checkout.
 - The total drops 30%. RUSHABH30 works on the full five-exam bundle; retakes on individual exams follow that exam's own eligibility window.
 
 RUSHABH30
 
-[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-footer&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
 
 ## Frequently asked questions
 

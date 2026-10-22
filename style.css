@@ -1314,7 +1314,7 @@ nav a { -webkit-tap-highlight-color: transparent; }
    would otherwise win on specificity and put list padding and image borders
    back. The padding one is not cosmetic — a track whose padding-left does not
    match its scroll-padding-left starts life snapped 19px into the first card. */
-.post-prose .rail { margin: 1.9em 0 2.3em; }
+.post-prose .rail { margin: 1.9em 0 2.3em; overflow-x: hidden; }
 .rail .rail-label {
     display: flex;
     align-items: center;
@@ -1425,6 +1425,14 @@ nav a { -webkit-tap-highlight-color: transparent; }
         scrollbar-width: none;
     }
     .rail .rail-track::-webkit-scrollbar { height: 0; }
+}
+/* Below 640px .container's own padding-inline narrows from 1.5rem to 1.1rem
+   (see the phone-tweaks block above), but the bleed above still assumes
+   1.5rem — so on the narrowest phones it overshoots the true edge by 6.4px
+   and forces page-wide horizontal scroll. This has to come after the
+   (max-width: 767px) block above to win the cascade at widths both match. */
+@media (max-width: 639px) {
+    .post-prose .rail { margin-left: -1.1rem; margin-right: -1.1rem; }
 }
 @media (min-width: 768px) {
     .rail .rail-nav.ready { display: flex; }
@@ -2224,12 +2232,23 @@ table.rs-tbl--kv td:first-child { width: 12.5em; white-space: nowrap; color: var
 table.rs-tbl--kv td:first-child strong { font-weight: 500; }
 table.rs-tbl--kv td:last-child { color: var(--fg-strong); }
 
-/* Phones: each row becomes a card. Name and "best for" span the width; the
-   price columns sit side by side with their column name above them. */
-@media (max-width: 640px) {
+/* Phones *and* tablets: each row becomes a card. Name and "best for" span the
+   width; the price columns sit side by side with their column name above
+   them. 820px, not 640px: the data table's own min-width columns (13em lead,
+   12em second column, plus the number columns) add up to ~755px of
+   min-content that a table never shrinks below regardless of its own
+   width:100% — at anything narrower than ~800px that forces the whole page
+   into 11px of horizontal scroll, which the 640px cutoff left unguarded for
+   the whole phone-to-tablet range in between. */
+@media (max-width: 820px) {
   .post-prose table.rs-tbl--data, table.rs-tbl--data { font-size: .92rem; }
   table.rs-tbl--data thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  table.rs-tbl--data, table.rs-tbl--data tbody { display: block; }
+  /* Needs the .post-prose-prefixed form too: the base rule it's overriding
+     is ".post-prose table.rs-tbl, table.rs-tbl { display: table; }" — two
+     classes beats this selector's one, so without the prefix this silently
+     lost the cascade and the "card" layout below never actually engaged on
+     any table sitting inside .post-prose (every coupon/data table does). */
+  .post-prose table.rs-tbl--data, table.rs-tbl--data, table.rs-tbl--data tbody { display: block; }
   table.rs-tbl--data tbody tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 12px; padding: 16px; border-bottom: 1px solid rgba(var(--neutral-rgb), .08); }
   table.rs-tbl--data tbody tr:last-child { border-bottom: 0; }
   .post-prose table.rs-tbl--data td, table.rs-tbl--data td { display: block; padding: 0; border: 0; min-width: 0; text-align: left; }

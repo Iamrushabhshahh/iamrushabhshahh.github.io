@@ -29,9 +29,9 @@ Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individ
 
 RUSHABH30
 
-[Get Kubestronaut to Golden for ~$1868 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F)
+[Get Kubestronaut to Golden for ~$1868 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-to-golden-kubestronaut-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F)
 
-Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F) and the Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams) drops from $2669 to about $1868, a saving of roughly $801. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-to-golden-kubestronaut-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F) and the Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams) drops from $2669 to about $1868, a saving of roughly $801. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
 ## Quick facts
 
@@ -74,13 +74,13 @@ Golden Kubestronaut needs all sixteen CNCF certifications. If you are already a 
 
 ## How to use the code
 
-- Add the Kubestronaut to Golden bundle to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F).
+- Add the Kubestronaut to Golden bundle to your cart on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-to-golden-kubestronaut-steps&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F).
 - Enter `RUSHABH30` in the coupon field at checkout.
 - The total drops 30%. RUSHABH30 works on the eleven-exam upgrade bundle; retakes on individual exams follow that exam's own eligibility window.
 
 RUSHABH30
 
-[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F)
+[Apply it at checkout →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-to-golden-kubestronaut-footer&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F)
 
 ## Frequently asked questions
 
