@@ -17,6 +17,7 @@ node_modules/
 *.log
 *.tmp
 .cache/
+.e2e-report/
 
 # python scratch from diagrams/
 __pycache__/
