@@ -3,13 +3,24 @@
   "canonical": "https://rushabhshah.dev/",
   "robots": "",
   "title": "Rushabh Shah | Docker Captain · Grafana Champion · DevOps Engineer",
-  "description": "Rushabh Shah: Docker Captain, Grafana Champion, and DevOps Engineer in India, building cloud infrastructure and writing about Kubernetes.",
+  "description": "Rushabh Shah: open source educator and speaker, Docker Captain and Grafana Champion. DevOps engineer in Ahmedabad, India. Talks at FluxCon and Open Source Summit Japan, writing on Kubernetes and observability.",
   "ldTypes": [
    "EducationalOccupationalCredential",
    "Organization",
    "Person",
    "PostalAddress",
    "WebSite"
+  ]
+ },
+ "/about/": {
+  "canonical": "https://rushabhshah.dev/about/",
+  "robots": "",
+  "title": "About Rushabh Shah · Rushabh Shah",
+  "description": "Rushabh Shah, DevOps engineer at Orocorp Technologies Private Limited, Docker Captain and Grafana Champion. Recognition, community roles, open source work and certifications, each linked so you can check it.",
+  "ldTypes": [
+   "BreadcrumbList",
+   "ItemPage",
+   "ListItem"
   ]
  },
  "/blog/": {
@@ -237,6 +248,13 @@
    "CollectionPage"
   ]
  },
+ "/certs/": {
+  "canonical": "https://rushabhshah.dev/certs/",
+  "robots": "",
+  "title": "Certifications · Rushabh Shah",
+  "description": "Certifications Rushabh Shah holds, each linked to the issuer for verification, plus the ones in progress and planned next.",
+  "ldTypes": []
+ },
  "/coupons/": {
   "canonical": "https://rushabhshah.dev/coupons/",
   "robots": "",
@@ -256,7 +274,7 @@
   "canonical": "https://rushabhshah.dev/docker-captain/",
   "robots": "",
   "title": "Rushabh Shah, Docker Captain",
-  "description": "Rushabh Shah, Docker Captain (2026), one of ~220 worldwide. DevOps Engineer in Ahmedabad, India, working in containers and Kubernetes.",
+  "description": "Rushabh Shah, Docker Captain (2026). DevOps Engineer in Ahmedabad, India, working in containers and Kubernetes.",
   "ldTypes": [
    "BreadcrumbList",
    "ListItem",
@@ -369,13 +387,20 @@
    "WebSite"
   ]
  },
+ "/games/": {
+  "canonical": "https://rushabhshah.dev/games/",
+  "robots": "noindex, follow",
+  "title": "Games · Rushabh Shah",
+  "description": "What Rushabh Shah is playing, has finished, and wants to play next.",
+  "ldTypes": []
+ },
  "/go/capa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
   "robots": "noindex,nofollow",
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-capa&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F"
  },
  "/go/catalog/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -383,7 +408,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-catalog&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F"
  },
  "/go/cba/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -391,7 +416,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cba&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F"
  },
  "/go/cca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -399,7 +424,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcilium-certified-associate-cca%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cca&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcilium-certified-associate-cca%2F"
  },
  "/go/cgoa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -407,7 +432,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cgoa&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F"
  },
  "/go/cka-ckad-cks/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -415,7 +440,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-ckad-cks-exam-bundle%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cka-ckad-cks&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-ckad-cks-exam-bundle%2F"
  },
  "/go/cka-cks/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -423,7 +448,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-cks-exam-bundle%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cka-cks&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-cks-exam-bundle%2F"
  },
  "/go/cka-to-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -431,7 +456,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-to-kubestronaut-upgrade-bundle%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cka-to-kubestronaut&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-to-kubestronaut-upgrade-bundle%2F"
  },
  "/go/cka/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -439,7 +464,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cka&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F"
  },
  "/go/ckad-to-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -447,7 +472,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-ckad-to-kubestronaut&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F"
  },
  "/go/ckad/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -455,7 +480,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-ckad&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F"
  },
  "/go/cks/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -463,7 +488,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cks&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F"
  },
  "/go/cnpa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -471,7 +496,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cnpa&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F"
  },
  "/go/cnpe/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -479,7 +504,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineer-cnpe%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-cnpe&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineer-cnpe%2F"
  },
  "/go/finops/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -495,7 +520,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fgolden-kubestronaut-bundle%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-golden-kubestronaut&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fgolden-kubestronaut-bundle%2F"
  },
  "/go/ica/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -503,7 +528,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-ica&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F"
  },
  "/go/kca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -511,7 +536,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkyverno-certified-associate-kca%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-kca&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkyverno-certified-associate-kca%2F"
  },
  "/go/kcna-cka/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -519,7 +544,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkcna-cka-exam-bundle%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-kcna-cka&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkcna-cka-exam-bundle%2F"
  },
  "/go/kcna/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -527,7 +552,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-kcna&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F"
  },
  "/go/kcsa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -535,7 +560,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-kcsa&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F"
  },
  "/go/kubestronaut-to-golden-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -543,7 +568,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-kubestronaut-to-golden-kubestronaut&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-to-golden-kubestronaut-upgrade-bundle%2F"
  },
  "/go/kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -551,7 +576,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-kubestronaut&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F"
  },
  "/go/lfca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -559,7 +584,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-lfca&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-it-associate%2F"
  },
  "/go/lfcs/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -567,7 +592,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-lfcs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F"
  },
  "/go/mcpa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -575,7 +600,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-mcpa&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fmodel-context-protocol-associate-mcpa%2F"
  },
  "/go/otca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -583,7 +608,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-otca&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F"
  },
  "/go/pca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -591,7 +616,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-pca&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F"
  },
  "/go/ptca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -599,7 +624,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fpytorch-certified-associate-ptca%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=go-ptca&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fpytorch-certified-associate-ptca%2F"
  },
  "/go/sale-bundles/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -607,7 +632,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=retired-sale-bundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F"
  },
  "/go/sale-certs/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -615,7 +640,15 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+ },
+ "/go/sale-cyber/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
  },
  "/go/sale-github/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -623,7 +656,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-github&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-github&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
  },
  "/go/sale-linkedin/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -631,7 +664,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-linkedin&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-linkedin&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
  },
  "/go/sale-superbundles/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -639,7 +672,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=retired-sale-superbundles&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F"
  },
  "/go/sale-telegram/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -647,7 +680,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-telegram&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-telegram&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
  },
  "/go/sale-thrive/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -655,7 +688,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
  },
  "/go/sale-whatsapp/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -663,7 +696,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-whatsapp&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-whatsapp&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
  },
  "/go/sale-x/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -671,7 +704,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-x&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-x&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
  },
  "/go/sale/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -679,13 +712,13 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-prime-2026%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
  },
  "/links/": {
   "canonical": "https://rushabhshah.dev/links/",
   "robots": "",
   "title": "Links · Rushabh Shah",
-  "description": "All of Rushabh Shah's links in one place: blog, GitHub, LinkedIn, résumé, and the 30% off Linux Foundation certification code.",
+  "description": "All of Rushabh Shah's links in one place: invite him to speak, the speaker kit, blog, newsletter, socials, community profiles and certification codes.",
   "ldTypes": []
  },
  "/linux-foundation-coupon/": {
@@ -1139,11 +1172,79 @@
    "WebSite"
   ]
  },
+ "/now/": {
+  "canonical": "https://rushabhshah.dev/now/",
+  "robots": "",
+  "title": "Now · Rushabh Shah",
+  "description": "What Rushabh Shah is working on, learning, reading and playing right now, and where he is speaking next.",
+  "ldTypes": [
+   "BreadcrumbList",
+   "ItemPage",
+   "ListItem"
+  ]
+ },
  "/privacy/": {
   "canonical": "https://rushabhshah.dev/privacy/",
   "robots": "noindex, follow",
   "title": "Privacy Policy · Rushabh Shah",
   "description": "Privacy policy for rushabhshah.dev: what data is collected (privacy-friendly analytics, contact form, affiliate links), how it's used, and your rights.",
   "ldTypes": []
+ },
+ "/reading/": {
+  "canonical": "https://rushabhshah.dev/reading/",
+  "robots": "noindex, follow",
+  "title": "Reading · Rushabh Shah",
+  "description": "Books Rushabh Shah is reading, has finished, and has queued up next, with short notes on each.",
+  "ldTypes": []
+ },
+ "/speaker-kit/": {
+  "canonical": "https://rushabhshah.dev/speaker-kit/",
+  "robots": "",
+  "title": "Speaker kit · Rushabh Shah",
+  "description": "Rushabh Shah speaker kit for organisers: pre-approved bios in three lengths, headshots and full-length photos, background-removed cut-outs, talk topics and stage requirements, all downloadable in one zip.",
+  "ldTypes": [
+   "BreadcrumbList",
+   "ItemPage",
+   "ListItem"
+  ]
+ },
+ "/speaking/": {
+  "canonical": "https://rushabhshah.dev/speaking/",
+  "robots": "",
+  "title": "Speaking · Rushabh Shah",
+  "description": "Talks, workshops, hackathon juries and community meetups by Rushabh Shah, Docker Captain and Grafana Champion. Upcoming sessions at FluxCon, Open Source Summit Japan and Open Compliance Summit, plus the full archive and a speaker kit for organizers.",
+  "ldTypes": [
+   "BreadcrumbList",
+   "Event",
+   "ItemPage",
+   "ListItem",
+   "Organization",
+   "Place",
+   "PostalAddress",
+   "ProfilePage"
+  ]
+ },
+ "/til/": {
+  "canonical": "https://rushabhshah.dev/til/",
+  "robots": "",
+  "title": "Today I learned · Rushabh Shah",
+  "description": "Small things Rushabh Shah learned today, one idea each. Mostly Kubernetes, observability and Linux, plus whatever else turned up.",
+  "ldTypes": [
+   "BreadcrumbList",
+   "ItemPage",
+   "ListItem"
+  ]
+ },
+ "/til/kubectl-events-sorted/": {
+  "canonical": "https://rushabhshah.dev/til/kubectl-events-sorted/",
+  "robots": "",
+  "title": "TIL: kubectl get events is useless until you sort it · Rushabh Shah",
+  "description": "kubectl get events returns in arbitrary order, so the line you need is rarely at the bottom.",
+  "ldTypes": [
+   "BreadcrumbList",
+   "ItemPage",
+   "ListItem",
+   "TechArticle"
+  ]
  }
 }
