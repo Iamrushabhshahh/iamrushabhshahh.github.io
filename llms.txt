@@ -18,15 +18,7 @@ Key facts:
 
 ## Live offer
 
-A Linux Foundation sale (October cybersecurity sale) is running until 23:59 UTC on October 23, 2026. Codes:
-
-- `OCT26NONCYBERRUSHABH`: 35% off CKA, CKAD, KCNA and every other certification and course
-- `OCT26CYBERRUSHABH`: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses
-- `OCT26THRIVERUSHABH`: 30% off a new THRIVE-ONE Annual subscription
-
-Sale prices: CKS $445 to $267 with OCT26CYBERRUSHABH; KCSA $250 to $150 with OCT26CYBERRUSHABH; KCSA + CKS bundle $645 to $387 with OCT26CYBERRUSHABH.
-
-It does not apply to any FinOps course or certification. All codes and prices: https://rushabhshah.dev/linux-foundation-coupon/. After it ends, RUSHABH30 is again the best available discount at 30%.
+No Linux Foundation sale is running right now, so RUSHABH30 at 30% is the best available discount.
 
 ## Key pages
 

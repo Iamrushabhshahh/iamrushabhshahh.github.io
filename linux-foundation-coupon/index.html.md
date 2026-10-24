@@ -2,30 +2,7 @@
 
 Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Sale live now · ends October 23
-
-Linux Foundation October cybersecurity sale
-
-**35% off** CKA, CKAD, KCNA and every other certification and course with this code.
-
-OCT26NONCYBERRUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F)
-
-What the security exams cost with the sale on:
-
-- CKS: $445 **$267** with `OCT26CYBERRUSHABH`
-- KCSA: $250 **$150** with `OCT26CYBERRUSHABH`
-- KCSA + CKS bundle: $645 **$387** with `OCT26CYBERRUSHABH`
-
-**2 more codes: 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses, 30% off THRIVE-ONE Annual subscription**
-
-[40% off CKS, KCSA, the KCSA + CKS bundle and the security courses](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26CYBERRUSHABH` [30% off a new THRIVE-ONE Annual subscription](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F) with `OCT26THRIVERUSHABH` OCT26CYBERRUSHABH OCT26THRIVERUSHABH
-
-These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.
-
-Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
-A sale is running right now (see above). This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -257,6 +234,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **October cybersecurity sale, October 2026**: 40% off CKS, KCSA and the security courses with OCT26CYBERRUSHABH (CKS went to $267, KCSA to $150, the KCSA + CKS bundle to $387), 35% off every other certification and course with OCT26NONCYBERRUSHABH, 30% off THRIVE-ONE Annual with OCT26THRIVERUSHABH. One week, ended October 23.
 - **October Prime sale, October 2026**: 40% off certifications with OCTPRIME26CC (CKA went to $267, associate exams to $150), 50% off bundles with OCTPRIME26B, 75% off the three Super Bundles with OCTPRIME26SB, 20% off THRIVE-ONE Annual with OCTPRIME26TO. Two days only, ended October 7.
 - **Back to School sale, September 2026**: 40% off bundles and instructor-led training with SEPT26BTS40, 35% off courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163, the Kubestronaut bundle to $987 and Golden Kubestronaut to $2538). Beat RUSHABH30 on everything in the catalog, ended September 22.
 - **Switch & Save sale, September 2026**: 40% off a certification and 20% off THRIVE-ONE Annual, bundle only, no code ($805 bundles went to $553, $610 to $423). Only cheaper than RUSHABH30 if you wanted the subscription, ended September 11.

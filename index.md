@@ -135,9 +135,11 @@ Approving a container image by tag approves something that can change after you 
 GIVING BACK · LINUX FOUNDATION PARTNER CODE
 ## 30% off every Linux Foundation exam
 
-Sale live · ends October 23
+My way of giving back to the community: one code for every Linux Foundation certification and course.
 
-The Linux Foundation **October cybersecurity sale** is live: CKS $267, KCSA $150, every other exam 35% off. Ends October 23. [See the codes →](https://rushabhshah.dev/linux-foundation-coupon/#current-sale) My evergreen RUSHABH30 code takes over at 30% when it ends.
+- [CKA $445 ~$311](https://rushabhshah.dev/go/cka/)
+- [KCNA $250 ~$175](https://rushabhshah.dev/go/kcna/)
+- [CKS $445 ~$311](https://rushabhshah.dev/go/cks/)
 
 RUSHABH30
 No expiry · exams, courses and bundles

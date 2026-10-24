@@ -2,8 +2,6 @@
 
 Updated October 2026 · Two official partner codes, one page
 
-**Right now there's a Linux Foundation sale running** that beats RUSHABH30: 35% off CKA, CKAD, KCNA and every other certification and course with `OCT26NONCYBERRUSHABH`, plus 40% off CKS, KCSA, the KCSA + CKS bundle and the security courses with `OCT26CYBERRUSHABH`, plus 30% off a new THRIVE-ONE Annual subscription with `OCT26THRIVERUSHABH`, ends October 23. It does not apply to any FinOps course or certification, so the FinOps code below is unaffected. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
-
 RUSHABH30
 
 RUSHABH_20
