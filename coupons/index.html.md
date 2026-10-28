@@ -2,6 +2,8 @@
 
 Updated October 2026 · Two official partner codes, one page
 
+**Right now there's a Linux Foundation sale running** that beats RUSHABH30: 35% off most certifications, instructor-led training and courses by technology, code `TREATS35RUSHABH`, ends October 29. It does not apply to any FinOps course or certification, so the FinOps code below is unaffected. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
+
 RUSHABH30
 
 RUSHABH_20

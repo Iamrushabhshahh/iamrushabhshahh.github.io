@@ -18,7 +18,11 @@ Key facts:
 
 ## Live offer
 
-No Linux Foundation sale is running right now, so RUSHABH30 at 30% is the best available discount.
+A Linux Foundation sale (October flash sale) is running until 23:59 UTC on October 29, 2026. Codes:
+
+- `TREATS35RUSHABH`: 35% off most certifications, instructor-led training and courses by technology
+
+It does not apply to any FinOps course or certification. All codes and prices: https://rushabhshah.dev/linux-foundation-coupon/. After it ends, RUSHABH30 is again the best available discount at 30%.
 
 ## Key pages
 

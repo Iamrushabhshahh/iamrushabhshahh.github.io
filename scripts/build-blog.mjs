@@ -1195,57 +1195,36 @@ const now = new Date();
    so pointing people at the better sale code through the tracking link below
    costs nothing and is the honest recommendation. */
 const SALE = {
-  name: 'October cybersecurity sale',
-  // Live from October 16. The Restrictions block on the promo page says
-  // "October 16, 2026, and October 23, 2026, 23:59 UTC", and both affiliate
-  // emails agree, so there is no Eastern-time offset to correct this time.
-  start: '2026-10-16T00:00:00Z',
-  startLabel: 'October 16',
-  end: '2026-10-23T23:59:00Z',
-  advertisedEnd: 'October 23',
-  dateNote: 'Until 23:59 UTC on October 23, which is 5:29 AM IST on the 24th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.',
+  name: 'October flash sale',
+  // Two-day flash promo. The official promo page
+  // (training.linuxfoundation.org/october-2026-flash/) gives October 28-29,
+  // 2026 with no start time and "23:59 UTC" on the 29th for the end, which
+  // matches both affiliate emails, so there's no Eastern-time offset to
+  // correct here.
+  start: '2026-10-28T00:00:00Z',
+  startLabel: 'October 28',
+  end: '2026-10-29T23:59:00Z',
+  advertisedEnd: 'October 29',
+  dateNote: 'October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.',
   excludes: 'any FinOps course or certification',
-  // These are the personal codes LF issued for this sale, not the generic
-  // OCT26CYBER family Awin sent out, so a sale still credits here when the
-  // buyer types the code without clicking a tracked link. The 35% code goes
-  // first: CKA, CKAD and KCNA buyers are most of this site's readers, and
-  // codes[0] is what every page without its own tier leads with.
+  // TREATS35RUSHABH is the personal code LF issued by direct email, not the
+  // generic TREATS35 Awin sent out, so a sale still credits here when the
+  // buyer types the code without clicking a tracked link. No price grid on
+  // the promo page this time, so there are no per-cert tiers to quote.
   codes: [
-    { code: 'OCT26NONCYBERRUSHABH', pct: 35, what: 'CKA, CKAD, KCNA and every other certification and course', go: 'sale-certs' },
-    { code: 'OCT26CYBERRUSHABH', pct: 40, what: 'CKS, KCSA, the KCSA + CKS bundle and the security courses', go: 'sale-cyber' },
-    { code: 'OCT26THRIVERUSHABH', pct: 30, what: 'a new THRIVE-ONE Annual subscription', go: 'sale-thrive' },
+    { code: 'TREATS35RUSHABH', pct: 35, what: 'most certifications, instructor-led training and courses by technology', go: 'sale-flash' },
   ],
   offers: [
-    { pct: 40, what: 'security certifications and courses' },
-    { pct: 35, what: 'everything else' },
-    { pct: 30, what: 'THRIVE-ONE Annual' },
+    { pct: 35, what: 'most certifications, instructor-led training and courses by technology' },
   ],
   condition: null,
-  tiersLead: 'What the security exams cost with the sale on:',
-  // Only the prices the promo grid prints. It lists CKS, KCSA and the bundle
-  // and nothing else, so CKA and the Kubestronaut bundles stay unpriced even
-  // though the 35% code covers them: the rounding is LF's to show, not ours to
-  // guess. No `short` on these, or the 35% lead would quote 40% prices.
-  tiers: [
-    { label: 'CKS', list: 445, sale: 267, code: 'OCT26CYBERRUSHABH', slugs: ['cks'] },
-    { label: 'KCSA', list: 250, sale: 150, code: 'OCT26CYBERRUSHABH', slugs: ['kcsa'] },
-    { label: 'KCSA + CKS bundle', list: 645, sale: 387, code: 'OCT26CYBERRUSHABH' },
-  ],
-  // Kubestronaut bundles fall under "all other certifications", so they take
-  // the 35% code like everything outside the security list.
-  bundleCode: 'OCT26NONCYBERRUSHABH',
   beatsEveryday: true,
-  compare: "These codes don't stack with RUSHABH30, and they beat it: CKS is $267 here against $311 with my code, and everything else is 35% off against my 30%. RUSHABH30 is the best price again after October 23.",
+  compare: "This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.",
   // One line for the bar under the nav and the homepage card. The full code
-  // list lives on the coupon page, which both of them link to.
-  short: 'CKS $267, KCSA $150, every other exam 35% off. Ends October 23.',
-  summary: '40% off CKS, KCSA and the security courses with OCT26CYBERRUSHABH (CKS went to $267, KCSA to $150, the KCSA + CKS bundle to $387), 35% off every other certification and course with OCT26NONCYBERRUSHABH, 30% off THRIVE-ONE Annual with OCT26THRIVERUSHABH. One week',
-  banner: {
-    src: '/assets/linux-foundation-oct26-cyber-40-35-percent-off.webp',
-    width: 1200, height: 628,
-    alt: 'Linux Foundation October cybersecurity sale, until October 23: up to 40% off, CKS shown',
-  },
-  dest: 'https://training.linuxfoundation.org/october-2026-promo/',
+  // lives on the coupon page, which both of them link to.
+  short: '35% off most certifications and courses. Two days only, ends October 29.',
+  summary: '35% off most certifications, instructor-led training and courses by technology with TREATS35RUSHABH. Two days only',
+  dest: 'https://training.linuxfoundation.org/october-2026-flash/',
 };
 
 /* saleLive is the window the sale is *shown* (from `announce`, if set), and
