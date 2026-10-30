@@ -2,20 +2,7 @@
 
 Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
-A sale is running right now (see above). This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -247,6 +234,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **October flash sale, October 2026**: 35% off most certifications, instructor-led training and courses by technology with TREATS35RUSHABH. Two days only, ended October 29.
 - **October cybersecurity sale, October 2026**: 40% off CKS, KCSA and the security courses with OCT26CYBERRUSHABH (CKS went to $267, KCSA to $150, the KCSA + CKS bundle to $387), 35% off every other certification and course with OCT26NONCYBERRUSHABH, 30% off THRIVE-ONE Annual with OCT26THRIVERUSHABH. One week, ended October 23.
 - **October Prime sale, October 2026**: 40% off certifications with OCTPRIME26CC (CKA went to $267, associate exams to $150), 50% off bundles with OCTPRIME26B, 75% off the three Super Bundles with OCTPRIME26SB, 20% off THRIVE-ONE Annual with OCTPRIME26TO. Two days only, ended October 7.
 - **Back to School sale, September 2026**: 40% off bundles and instructor-led training with SEPT26BTS40, 35% off courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163, the Kubestronaut bundle to $987 and Golden Kubestronaut to $2538). Beat RUSHABH30 on everything in the catalog, ended September 22.

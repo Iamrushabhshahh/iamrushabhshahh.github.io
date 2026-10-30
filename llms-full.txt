@@ -1,14 +1,10 @@
 # Rushabh Shah: full site content
 
-> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-10-29. The curated index is at https://rushabhshah.dev/llms.txt.
+> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-10-30. The curated index is at https://rushabhshah.dev/llms.txt.
 
 ## Live offer
 
-A Linux Foundation sale (October flash sale) is running until 23:59 UTC on October 29, 2026. Codes:
-
-- `TREATS35RUSHABH`: 35% off most certifications, instructor-led training and courses by technology
-
-It does not apply to any FinOps course or certification. All codes and prices: https://rushabhshah.dev/linux-foundation-coupon/. After it ends, RUSHABH30 is again the best available discount at 30%.
+No Linux Foundation sale is running right now, so RUSHABH30 at 30% is the best available discount.
 
 <!-- https://rushabhshah.dev/blog/cka-exam-day-setup/ -->
 
@@ -1621,8 +1617,6 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 Updated October 2026 · Two official partner codes, one page
 
-**Right now there's a Linux Foundation sale running** that beats RUSHABH30: 35% off most certifications, instructor-led training and courses by technology, code `TREATS35RUSHABH`, ends October 29. It does not apply to any FinOps course or certification, so the FinOps code below is unaffected. Details on the [Linux Foundation page](https://rushabhshah.dev/linux-foundation-coupon/).
-
 RUSHABH30
 
 RUSHABH_20
@@ -2494,9 +2488,11 @@ Approving a container image by tag approves something that can change after you 
 GIVING BACK · LINUX FOUNDATION PARTNER CODE
 ## 30% off every Linux Foundation exam
 
-Sale live · ends October 29
+My way of giving back to the community: one code for every Linux Foundation certification and course.
 
-The Linux Foundation **October flash sale** is live: 35% off most certifications and courses. Two days only, ends October 29. [See the codes →](https://rushabhshah.dev/linux-foundation-coupon/#current-sale) My evergreen RUSHABH30 code takes over at 30% when it ends.
+- [CKA $445 ~$311](https://rushabhshah.dev/go/cka/)
+- [KCNA $250 ~$175](https://rushabhshah.dev/go/kcna/)
+- [CKS $445 ~$311](https://rushabhshah.dev/go/cks/)
 
 RUSHABH30
 No expiry · exams, courses and bundles
@@ -2650,19 +2646,6 @@ Ahmedabad, India · IST (UTC+5:30)
 
 Updated October 2026 · Certified Argo Project Associate
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get CAPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-capa-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-argo-project-associate-capa%2F)
@@ -2775,19 +2758,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Certified Backstage Associate
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get CBA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-cba-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-backstage-associate-cba%2F)
@@ -2899,19 +2869,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Cilium Certified Associate
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3029,19 +2986,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Certified GitOps Associate
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get CGOA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-cgoa-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-gitops-associate-cgoa%2F)
@@ -3155,19 +3099,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get CKA to Kubestronaut for ~$864 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-cka-to-kubestronaut-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcka-to-kubestronaut-upgrade-bundle%2F)
@@ -3279,19 +3210,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CKA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Kubernetes Administrator
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3414,19 +3332,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS)
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get CKAD to Kubestronaut for ~$864 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-ckad-to-kubestronaut-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fckad-to-kubestronaut-upgrade-bundle%2F)
@@ -3538,19 +3443,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CKAD Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Kubernetes Application Developer
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -3669,19 +3561,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Certified Kubernetes Security Specialist
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-cks-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
@@ -3799,19 +3678,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Certified Cloud Native Platform Engineering Associate
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get CNPA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-cnpa-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-cloud-native-platform-engineering-associate-cnpa%2F)
@@ -3925,19 +3791,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # CNPE Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Certified Cloud Native Platform Engineer
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4055,19 +3908,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # Golden Kubestronaut Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Golden Kubestronaut bundle (16 CNCF certs)
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4197,19 +4037,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Istio Certified Associate
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get ICA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-ica-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fistio-certified-associate-ica%2F)
@@ -4320,20 +4147,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
-A sale is running right now (see above). This is the everyday code, works year-round:
+No sale running right now. This is the everyday code, works year-round:
 
 RUSHABH30
 
@@ -4565,6 +4379,7 @@ Also running a FinOps partner code at 20%. Both are compared side by side on the
 
 A few times a year the Linux Foundation runs official sales that go deeper than 30%. Those sale prices don't stack with coupon codes, so when one is live, take the sale. The rest of the year, `RUSHABH30` is the floor. Here is the recent pattern so you can time a purchase:
 
+- **October flash sale, October 2026**: 35% off most certifications, instructor-led training and courses by technology with TREATS35RUSHABH. Two days only, ended October 29.
 - **October cybersecurity sale, October 2026**: 40% off CKS, KCSA and the security courses with OCT26CYBERRUSHABH (CKS went to $267, KCSA to $150, the KCSA + CKS bundle to $387), 35% off every other certification and course with OCT26NONCYBERRUSHABH, 30% off THRIVE-ONE Annual with OCT26THRIVERUSHABH. One week, ended October 23.
 - **October Prime sale, October 2026**: 40% off certifications with OCTPRIME26CC (CKA went to $267, associate exams to $150), 50% off bundles with OCTPRIME26B, 75% off the three Super Bundles with OCTPRIME26SB, 20% off THRIVE-ONE Annual with OCTPRIME26TO. Two days only, ended October 7.
 - **Back to School sale, September 2026**: 40% off bundles and instructor-led training with SEPT26BTS40, 35% off courses and certifications with SEPT26BTS35 (CKA went to $289, associate exams to $163, the Kubestronaut bundle to $987 and Golden Kubestronaut to $2538). Beat RUSHABH30 on everything in the catalog, ended September 22.
@@ -4631,19 +4446,6 @@ Know someone preparing for a Linux Foundation exam? Send them this page.
 # KCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kyverno Certified Associate
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4758,19 +4560,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # KCNA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kubernetes and Cloud Native Associate
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -4889,19 +4678,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Kubernetes and Cloud Native Security Associate
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get KCSA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kcsa-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-and-cloud-native-security-associate-kcsa%2F)
@@ -5018,19 +4794,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # Kubestronaut to Golden Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams)
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5151,19 +4914,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get Kubestronaut for ~$1151 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
@@ -5280,19 +5030,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # LFCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Linux Foundation Certified IT Associate
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5412,19 +5149,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · Linux Foundation Certified System Administrator
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get LFCS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-lfcs-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Flinux-foundation-certified-sysadmin-lfcs%2F)
@@ -5543,19 +5267,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # MCPA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Model Context Protocol Associate
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5678,19 +5389,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 Updated October 2026 · OpenTelemetry Certified Associate
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get OTCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-otca-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F)
@@ -5806,19 +5504,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # PCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · Prometheus Certified Associate
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 
@@ -5936,19 +5621,6 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 # PTCA Discount Code: 30% Off with RUSHABH30
 
 Updated October 2026 · PyTorch Certified Associate
-
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
 
 RUSHABH30
 

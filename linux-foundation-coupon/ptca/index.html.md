@@ -4,19 +4,6 @@
 
 Updated October 2026 · PyTorch Certified Associate
 
-Sale live now · ends October 29
-
-Linux Foundation October flash sale
-
-**35% off** most certifications, instructor-led training and courses by technology with this code.
-
-TREATS35RUSHABH
-[Go to the sale →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-sale-banner&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F)
-
-This code doesn't stack with RUSHABH30, and it beats it: 35% off against my 30%. RUSHABH30 is the best price again after October 29.
-
-October 28 until 23:59 UTC on October 29, which is 5:29 AM IST on the 30th. New and individual purchases only. Does not apply to the Yocto LFD461-JP course or any FinOps course or certification.
-
 RUSHABH30
 
 [Get PTCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-ptca-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fpytorch-certified-associate-ptca%2F)
