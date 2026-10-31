@@ -2,7 +2,7 @@
 
 # CKS Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified Kubernetes Security Specialist
+Updated November 2026 · Certified Kubernetes Security Specialist
 
 RUSHABH30
 

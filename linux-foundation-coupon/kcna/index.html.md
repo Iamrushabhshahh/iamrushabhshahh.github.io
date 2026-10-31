@@ -2,7 +2,7 @@
 
 # KCNA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Kubernetes and Cloud Native Associate
+Updated November 2026 · Kubernetes and Cloud Native Associate
 
 RUSHABH30
 

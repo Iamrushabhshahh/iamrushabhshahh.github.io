@@ -1,6 +1,6 @@
 # Rushabh Shah: full site content
 
-> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-10-30. The curated index is at https://rushabhshah.dev/llms.txt.
+> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-10-31. The curated index is at https://rushabhshah.dev/llms.txt.
 
 ## Live offer
 
@@ -1615,7 +1615,7 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 # Certification Discount Codes: RUSHABH30 and RUSHABH_20
 
-Updated October 2026 · Two official partner codes, one page
+Updated November 2026 · Two official partner codes, one page
 
 RUSHABH30
 
@@ -1726,7 +1726,7 @@ I write about Kubernetes, Docker, and observability on [my blog](https://rushabh
 
 # FinOps Certified: AI Value Discount Code: 20% Off with RUSHABH_20
 
-Updated October 2026 · Self-Paced Course + Certification Exam
+Updated November 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
@@ -1745,7 +1745,7 @@ Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/pa
 | **Certification valid for** | 24 months |
 | **Prerequisite** | None formally, though FOCP or FOCE first is strongly recommended |
 
-*List price read from the FinOps Foundation's own catalog in October 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/certified-finops-for-ai) for the current number before you buy.*
+*List price read from the FinOps Foundation's own catalog in November 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/certified-finops-for-ai) for the current number before you buy.*
 
 ## Who this is for
 
@@ -1828,7 +1828,7 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 # FinOps Certified Engineer Discount Code: 20% Off with RUSHABH_20
 
-Updated October 2026 · Self-Paced Course + Certification Exam
+Updated November 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
@@ -1847,7 +1847,7 @@ Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/pa
 | **Certification valid for** | 24 months |
 | **Prerequisite** | None |
 
-*List price read from the FinOps Foundation's own catalog in October 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/finops-certified-engineer) for the current number before you buy.*
+*List price read from the FinOps Foundation's own catalog in November 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/finops-certified-engineer) for the current number before you buy.*
 
 ## Who this is for
 
@@ -1930,7 +1930,7 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 # FinOps Certified FOCUS Analyst Discount Code: 20% Off with RUSHABH_20
 
-Updated October 2026 · Self-Paced Course + Certification Exam
+Updated November 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
@@ -1949,7 +1949,7 @@ Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/fi
 | **Certification valid for** | 24 months |
 | **Prerequisite** | None |
 
-*List price read from the FinOps Foundation's own catalog in October 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/finops-certified-focus-analyst-certification) for the current number before you buy.*
+*List price read from the FinOps Foundation's own catalog in November 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/finops-certified-focus-analyst-certification) for the current number before you buy.*
 
 ## Who this is for
 
@@ -2030,13 +2030,13 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 # FinOps Certification Coupon: 20% Off with RUSHABH_20
 
-Updated October 2026 · Works on FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value & Technology Value
+Updated November 2026 · Works on FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value & Technology Value
 
 RUSHABH_20
 
 [Open the FinOps catalog →](https://learn.finops.org/)
 
-Last verified: October 2026
+Last verified: November 2026
 
 The short version: put `RUSHABH_20` in the promo code field at checkout on [learn.finops.org](https://learn.finops.org/) and the total drops 20%. It works on five self-paced FinOps Foundation certifications, listed below with the maths already done. The rest of this page is context: where the code comes from, what each certification is actually for, and which one I'd tell you to take first.
 
@@ -2058,7 +2058,7 @@ All five are the Self-Paced Course + Certification Exam offering, which bundles 
 | **[FinOps Certified: AI Value](https://rushabhshah.dev/finops-coupon/ai-value/)** | Teams whose AI spend has become material | $500 | ~$400 |
 | **[FinOps Certified: Technology Value](https://rushabhshah.dev/finops-coupon/technology-value/)** | Practices growing past public cloud into SaaS and data centres | $500 | ~$400 |
 
-**List prices read from the FinOps Foundation's own catalog in October 2026. They set the prices and revise them periodically, so check [learn.finops.org](https://learn.finops.org/) for current numbers.*
+**List prices read from the FinOps Foundation's own catalog in November 2026. They set the prices and revise them periodically, so check [learn.finops.org](https://learn.finops.org/) for current numbers.*
 
 ## What the code does not cover
 
@@ -2145,7 +2145,7 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 # FinOps Certified Practitioner Discount Code: 20% Off with RUSHABH_20
 
-Updated October 2026 · Self-Paced Course + Certification Exam
+Updated November 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
@@ -2164,7 +2164,7 @@ Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/pa
 | **Certification valid for** | 24 months |
 | **Prerequisite** | None |
 
-*List price read from the FinOps Foundation's own catalog in October 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/finops-certified-practitioner-self-paced) for the current number before you buy.*
+*List price read from the FinOps Foundation's own catalog in November 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/finops-certified-practitioner-self-paced) for the current number before you buy.*
 
 ## Who this is for
 
@@ -2252,7 +2252,7 @@ I'm a FinOps Foundation promotional partner. If you enrol using code **RUSHABH_2
 
 # FinOps Certified: Technology Value Discount Code: 20% Off with RUSHABH_20
 
-Updated October 2026 · Self-Paced Course + Certification Exam
+Updated November 2026 · Self-Paced Course + Certification Exam
 
 RUSHABH_20
 
@@ -2271,7 +2271,7 @@ Enter `RUSHABH_20` at checkout on [learn.finops.org](https://learn.finops.org/pa
 | **Certification valid for** | 24 months |
 | **Prerequisite** | None formally, though FOCP or FOCE first is strongly recommended |
 
-*List price read from the FinOps Foundation's own catalog in October 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/technology-value) for the current number before you buy.*
+*List price read from the FinOps Foundation's own catalog in November 2026. They set the prices and can revise them, so check [the product page](https://learn.finops.org/path/technology-value) for the current number before you buy.*
 
 ## Who this is for
 
@@ -2644,7 +2644,7 @@ Ahmedabad, India · IST (UTC+5:30)
 
 # CAPA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified Argo Project Associate
+Updated November 2026 · Certified Argo Project Associate
 
 RUSHABH30
 
@@ -2756,7 +2756,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CBA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified Backstage Associate
+Updated November 2026 · Certified Backstage Associate
 
 RUSHABH30
 
@@ -2868,7 +2868,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CCA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Cilium Certified Associate
+Updated November 2026 · Cilium Certified Associate
 
 RUSHABH30
 
@@ -2984,7 +2984,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CGOA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified GitOps Associate
+Updated November 2026 · Certified GitOps Associate
 
 RUSHABH30
 
@@ -3097,7 +3097,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CKA to Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
+Updated November 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
 
 RUSHABH30
 
@@ -3209,7 +3209,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CKA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified Kubernetes Administrator
+Updated November 2026 · Certified Kubernetes Administrator
 
 RUSHABH30
 
@@ -3330,7 +3330,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CKAD to Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS)
+Updated November 2026 · CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS)
 
 RUSHABH30
 
@@ -3442,7 +3442,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CKAD Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified Kubernetes Application Developer
+Updated November 2026 · Certified Kubernetes Application Developer
 
 RUSHABH30
 
@@ -3559,7 +3559,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CKS Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified Kubernetes Security Specialist
+Updated November 2026 · Certified Kubernetes Security Specialist
 
 RUSHABH30
 
@@ -3676,7 +3676,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CNPA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified Cloud Native Platform Engineering Associate
+Updated November 2026 · Certified Cloud Native Platform Engineering Associate
 
 RUSHABH30
 
@@ -3790,7 +3790,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # CNPE Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified Cloud Native Platform Engineer
+Updated November 2026 · Certified Cloud Native Platform Engineer
 
 RUSHABH30
 
@@ -3907,7 +3907,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # Golden Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Golden Kubestronaut bundle (16 CNCF certs)
+Updated November 2026 · Golden Kubestronaut bundle (16 CNCF certs)
 
 RUSHABH30
 
@@ -4035,7 +4035,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # ICA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Istio Certified Associate
+Updated November 2026 · Istio Certified Associate
 
 RUSHABH30
 
@@ -4145,7 +4145,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # Linux Foundation Coupon Code: 30% Off Everything, All Year
 
-Updated October 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
+Updated November 2026 · Works on CKA, CKAD, CKS, KCNA, LFCS, courses & bundles
 
 No sale running right now. This is the everyday code, works year-round:
 
@@ -4153,7 +4153,7 @@ RUSHABH30
 
 [Open the catalog →](https://rushabhshah.dev/go/catalog/)
 
-Last verified: October 2026
+Last verified: November 2026
 
 The short version: put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://rushabhshah.dev/go/catalog/) and the total drops by 30%. It works on the whole training catalog, every day of the year. The rest of this page is context: where the code comes from, what the popular certifications actually cost with it, and the advice I give people at meetups about which one is worth their money.
 
@@ -4248,7 +4248,7 @@ These are the certifications people ask me about most, with the math already don
 | **[PCA](#pca-discount)** Prometheus Certified Associate | Engineers focused on monitoring | $250 | ~$175 | **~$75** |
 | **[OTCA](#otca-discount)** OpenTelemetry Certified Associate | DevOps & platform engineers standardizing on OTel | $250 | ~$175 | **~$75** |
 
-**List prices when I last updated this page (October 2026), so check the [official catalog](https://rushabhshah.dev/go/catalog/) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
+**List prices when I last updated this page (November 2026), so check the [official catalog](https://rushabhshah.dev/go/catalog/) for current numbers.* One tip: the course + exam bundles are usually the best value, because they're already discounted before the coupon applies. On a CKA course + exam bundle the code saves you well over $200. It works on courses and bundles too, not just exams.
 
 ### Bundle savings, in dollars
 
@@ -4445,7 +4445,7 @@ Know someone preparing for a Linux Foundation exam? Send them this page.
 
 # KCA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Kyverno Certified Associate
+Updated November 2026 · Kyverno Certified Associate
 
 RUSHABH30
 
@@ -4559,7 +4559,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # KCNA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Kubernetes and Cloud Native Associate
+Updated November 2026 · Kubernetes and Cloud Native Associate
 
 RUSHABH30
 
@@ -4676,7 +4676,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # KCSA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Kubernetes and Cloud Native Security Associate
+Updated November 2026 · Kubernetes and Cloud Native Security Associate
 
 RUSHABH30
 
@@ -4793,7 +4793,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # Kubestronaut to Golden Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams)
+Updated November 2026 · Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams)
 
 RUSHABH30
 
@@ -4912,7 +4912,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
+Updated November 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
 
 RUSHABH30
 
@@ -5029,7 +5029,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # LFCA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Linux Foundation Certified IT Associate
+Updated November 2026 · Linux Foundation Certified IT Associate
 
 RUSHABH30
 
@@ -5147,7 +5147,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # LFCS Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Linux Foundation Certified System Administrator
+Updated November 2026 · Linux Foundation Certified System Administrator
 
 RUSHABH30
 
@@ -5266,7 +5266,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # MCPA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Model Context Protocol Associate
+Updated November 2026 · Model Context Protocol Associate
 
 RUSHABH30
 
@@ -5387,7 +5387,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # OTCA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · OpenTelemetry Certified Associate
+Updated November 2026 · OpenTelemetry Certified Associate
 
 RUSHABH30
 
@@ -5503,7 +5503,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # PCA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Prometheus Certified Associate
+Updated November 2026 · Prometheus Certified Associate
 
 RUSHABH30
 
@@ -5620,7 +5620,7 @@ I'm an official Linux Foundation Education affiliate partner. If you buy through
 
 # PTCA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · PyTorch Certified Associate
+Updated November 2026 · PyTorch Certified Associate
 
 RUSHABH30
 

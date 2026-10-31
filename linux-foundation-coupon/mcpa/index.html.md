@@ -2,7 +2,7 @@
 
 # MCPA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Model Context Protocol Associate
+Updated November 2026 · Model Context Protocol Associate
 
 RUSHABH30
 

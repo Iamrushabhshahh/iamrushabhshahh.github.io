@@ -2,7 +2,7 @@
 
 # PTCA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · PyTorch Certified Associate
+Updated November 2026 · PyTorch Certified Associate
 
 RUSHABH30
 

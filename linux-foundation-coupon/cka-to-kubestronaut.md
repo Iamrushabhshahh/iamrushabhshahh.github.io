@@ -2,7 +2,7 @@
 
 # CKA to Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
+Updated November 2026 · CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS)
 
 RUSHABH30
 

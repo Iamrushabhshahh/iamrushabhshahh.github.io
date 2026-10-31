@@ -2,7 +2,7 @@
 
 # ICA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Istio Certified Associate
+Updated November 2026 · Istio Certified Associate
 
 RUSHABH30
 

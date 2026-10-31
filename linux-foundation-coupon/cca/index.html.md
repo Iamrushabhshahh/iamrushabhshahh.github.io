@@ -2,7 +2,7 @@
 
 # CCA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Cilium Certified Associate
+Updated November 2026 · Cilium Certified Associate
 
 RUSHABH30
 

@@ -2,7 +2,7 @@
 
 # Kubestronaut Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
+Updated November 2026 · Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS)
 
 RUSHABH30
 

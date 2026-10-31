@@ -1,6 +1,6 @@
 # Certification Discount Codes: RUSHABH30 and RUSHABH_20
 
-Updated October 2026 · Two official partner codes, one page
+Updated November 2026 · Two official partner codes, one page
 
 RUSHABH30
 

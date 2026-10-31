@@ -2,7 +2,7 @@
 
 # CGOA Discount Code: 30% Off with RUSHABH30
 
-Updated October 2026 · Certified GitOps Associate
+Updated November 2026 · Certified GitOps Associate
 
 RUSHABH30
 
