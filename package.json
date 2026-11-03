@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "marked": "^18.1.1"
+    "marked": "^18.1.2"
   },
   "devDependencies": {
     "esbuild": "^0.28.2",
