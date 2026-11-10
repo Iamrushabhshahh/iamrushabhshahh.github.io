@@ -1,6 +1,6 @@
 # Rushabh Shah: full site content
 
-> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-11-08. The curated index is at https://rushabhshah.dev/llms.txt.
+> Every page of https://rushabhshah.dev as markdown, concatenated. Each section is preceded by an HTML comment naming the URL it came from, so cite that URL rather than this file. Generated 2026-11-10. The curated index is at https://rushabhshah.dev/llms.txt.
 
 ## Live offer
 
@@ -2462,13 +2462,6 @@ On stage
 
 ## Upcoming talks.
 
-9 Nov 2026 · FluxCon North America 2026
-### Your Git Repo Is Not a Backup: Kubernetes Disaster Recovery with Flux and Velero
-
-A cluster gets broken on purpose and brought back live with Flux and Velero.
-
-(https://rushabhshah.dev/speaking/#fluxcon-na-2026)
-
 8 Dec 2026 · Open Source Summit Japan 2026
 ### Closing the Ma (間): Filling the Gaps in Kubernetes Visibility with Headlamp
 
@@ -2482,6 +2475,13 @@ Headlamp plugins that put Flux reconciliation state and OpenCost spend in the sa
 Approving a container image by tag approves something that can change after you approved it.
 
 (https://rushabhshah.dev/speaking/#open-compliance-summit-2026)
+
+9 Nov 2026 · FluxCon North America 2026
+### Your Git Repo Is Not a Backup: Kubernetes Disaster Recovery with Flux and Velero
+
+A cluster gets broken on purpose and brought back live with Flux and Velero.
+
+(https://rushabhshah.dev/speaking/#fluxcon-na-2026)
 
 **Cities this year** 🇮🇳 🇩🇪 🇺🇸 🇯🇵 Ahmedabad · Vadodara · Munich · Salt Lake City · Tokyo [Every talk and the speaker kit](https://rushabhshah.dev/speaking/)
 
