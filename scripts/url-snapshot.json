@@ -258,7 +258,7 @@
  "/coupons/": {
   "canonical": "https://rushabhshah.dev/coupons/",
   "robots": "",
-  "title": "Certification Discount Codes (October 2026): 30% Off Linux Foundation, 20% Off FinOps · Rushabh Shah",
+  "title": "Certification Discount Codes (November 2026): 30% Off Linux Foundation, 20% Off FinOps · Rushabh Shah",
   "description": "Two official partner codes: RUSHABH30 for 30% off every Linux Foundation and CNCF certification, RUSHABH_20 for 20% off FinOps Foundation certifications. Which one you need, and what each covers.",
   "ldTypes": [
    "Answer",
@@ -285,7 +285,7 @@
  "/finops-coupon/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/",
   "robots": "",
-  "title": "FinOps Certification Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "title": "FinOps Certification Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
   "description": "Official FinOps Foundation partner code RUSHABH_20 takes 20% off FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value, and Technology Value. Prices, comparison, and which one to take first.",
   "ldTypes": [
    "Answer",
@@ -300,7 +300,7 @@
  "/finops-coupon/ai-value/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/ai-value/",
   "robots": "",
-  "title": "FinOps Certified: AI Value Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "title": "FinOps Certified: AI Value Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
   "description": "Code RUSHABH_20 takes 20% off the FinOps Certified: AI Value Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
   "ldTypes": [
    "Answer",
@@ -318,7 +318,7 @@
  "/finops-coupon/engineer/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/engineer/",
   "robots": "",
-  "title": "FinOps Certified Engineer Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "title": "FinOps Certified Engineer Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
   "description": "Code RUSHABH_20 takes 20% off the FinOps Certified Engineer Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
   "ldTypes": [
    "Answer",
@@ -336,7 +336,7 @@
  "/finops-coupon/focus-analyst/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/focus-analyst/",
   "robots": "",
-  "title": "FinOps Certified FOCUS Analyst Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "title": "FinOps Certified FOCUS Analyst Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
   "description": "Code RUSHABH_20 takes 20% off the FinOps Certified FOCUS Analyst Self-Paced Course + Certification Exam: about $320 instead of $400. Official FinOps Foundation partner code.",
   "ldTypes": [
    "Answer",
@@ -354,7 +354,7 @@
  "/finops-coupon/practitioner/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/practitioner/",
   "robots": "",
-  "title": "FinOps Certified Practitioner Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "title": "FinOps Certified Practitioner Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
   "description": "Code RUSHABH_20 takes 20% off the FinOps Certified Practitioner Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
   "ldTypes": [
    "Answer",
@@ -372,7 +372,7 @@
  "/finops-coupon/technology-value/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/technology-value/",
   "robots": "",
-  "title": "FinOps Certified: Technology Value Discount Code (October 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
+  "title": "FinOps Certified: Technology Value Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
   "description": "Code RUSHABH_20 takes 20% off the FinOps Certified: Technology Value Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
   "ldTypes": [
    "Answer",
@@ -389,7 +389,7 @@
  },
  "/games/": {
   "canonical": "https://rushabhshah.dev/games/",
-  "robots": "noindex, follow",
+  "robots": "",
   "title": "Games · Rushabh Shah",
   "description": "What Rushabh Shah is playing, has finished, and wants to play next.",
   "ldTypes": []
@@ -640,7 +640,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=retired-sale-certs&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F"
  },
  "/go/sale-cyber/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -648,7 +648,15 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=retired-sale-cyber&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F"
+ },
+ "/go/sale-flash/": {
+  "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
+  "robots": "noindex,nofollow",
+  "title": "Redirecting&hellip;",
+  "description": "",
+  "ldTypes": [],
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-flash&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F"
  },
  "/go/sale-github/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -656,7 +664,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-github&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-github&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F"
  },
  "/go/sale-linkedin/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -664,7 +672,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-linkedin&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-linkedin&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F"
  },
  "/go/sale-superbundles/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -680,7 +688,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-telegram&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-telegram&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F"
  },
  "/go/sale-thrive/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -688,7 +696,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=retired-sale-thrive&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2F"
  },
  "/go/sale-whatsapp/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -696,7 +704,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-whatsapp&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-whatsapp&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F"
  },
  "/go/sale-x/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -704,7 +712,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-x&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale-x&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F"
  },
  "/go/sale/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -712,7 +720,7 @@
   "title": "Redirecting&hellip;",
   "description": "",
   "ldTypes": [],
-  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-promo%2F"
+  "go": "https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=sale&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Foctober-2026-flash%2F"
  },
  "/links/": {
   "canonical": "https://rushabhshah.dev/links/",
@@ -724,7 +732,7 @@
  "/linux-foundation-coupon/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
   "robots": "",
-  "title": "Linux Foundation Coupon (October 2026): 30% Off CKA, CKAD, CKS · Rushabh Shah",
+  "title": "Linux Foundation Coupon (November 2026): 30% Off CKA, CKAD, CKS · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off every Linux Foundation & CNCF certification and course: CKA, CKAD, CKS, KCNA, LFCS. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -743,7 +751,7 @@
  "/linux-foundation-coupon/capa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/capa/",
   "robots": "",
-  "title": "CAPA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CAPA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Argo Project Associate (CAPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -761,7 +769,7 @@
  "/linux-foundation-coupon/cba/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cba/",
   "robots": "",
-  "title": "CBA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CBA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Backstage Associate (CBA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -779,7 +787,7 @@
  "/linux-foundation-coupon/cca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cca/",
   "robots": "",
-  "title": "CCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Cilium Certified Associate (CCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -797,7 +805,7 @@
  "/linux-foundation-coupon/cgoa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cgoa/",
   "robots": "",
-  "title": "CGOA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CGOA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified GitOps Associate (CGOA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -815,7 +823,7 @@
  "/linux-foundation-coupon/cka-to-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/",
   "robots": "",
-  "title": "CKA to Kubestronaut Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKA to Kubestronaut Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS): ~$864 instead of $1235. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -833,7 +841,7 @@
  "/linux-foundation-coupon/cka/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cka/",
   "robots": "",
-  "title": "CKA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Administrator (CKA) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -851,7 +859,7 @@
  "/linux-foundation-coupon/ckad-to-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/",
   "robots": "",
-  "title": "CKAD to Kubestronaut Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKAD to Kubestronaut Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS): ~$864 instead of $1235. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -869,7 +877,7 @@
  "/linux-foundation-coupon/ckad/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ckad/",
   "robots": "",
-  "title": "CKAD Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKAD Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Application Developer (CKAD) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -887,7 +895,7 @@
  "/linux-foundation-coupon/cks/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cks/",
   "robots": "",
-  "title": "CKS Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKS Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Security Specialist (CKS) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -905,7 +913,7 @@
  "/linux-foundation-coupon/cnpa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cnpa/",
   "robots": "",
-  "title": "CNPA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CNPA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Cloud Native Platform Engineering Associate (CNPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -923,7 +931,7 @@
  "/linux-foundation-coupon/cnpe/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cnpe/",
   "robots": "",
-  "title": "CNPE Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CNPE Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Cloud Native Platform Engineer (CNPE) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -941,7 +949,7 @@
  "/linux-foundation-coupon/golden-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/",
   "robots": "",
-  "title": "Golden Kubestronaut Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "Golden Kubestronaut Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Golden Kubestronaut bundle (16 CNCF certs): ~$2960 instead of $4229. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -959,7 +967,7 @@
  "/linux-foundation-coupon/ica/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ica/",
   "robots": "",
-  "title": "ICA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "ICA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Istio Certified Associate (ICA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -977,7 +985,7 @@
  "/linux-foundation-coupon/kca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kca/",
   "robots": "",
-  "title": "KCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "KCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kyverno Certified Associate (KCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -995,7 +1003,7 @@
  "/linux-foundation-coupon/kcna/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kcna/",
   "robots": "",
-  "title": "KCNA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "KCNA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kubernetes and Cloud Native Associate (KCNA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1013,7 +1021,7 @@
  "/linux-foundation-coupon/kcsa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kcsa/",
   "robots": "",
-  "title": "KCSA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "KCSA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kubernetes and Cloud Native Security Associate (KCSA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1031,7 +1039,7 @@
  "/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/",
   "robots": "",
-  "title": "Kubestronaut to Golden Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "Kubestronaut to Golden Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams): ~$1868 instead of $2669. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1049,7 +1057,7 @@
  "/linux-foundation-coupon/kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/",
   "robots": "",
-  "title": "Kubestronaut Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "Kubestronaut Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS): ~$1151 instead of $1645. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1067,7 +1075,7 @@
  "/linux-foundation-coupon/lfca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/lfca/",
   "robots": "",
-  "title": "LFCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "LFCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Linux Foundation Certified IT Associate (LFCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1085,7 +1093,7 @@
  "/linux-foundation-coupon/lfcs/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/lfcs/",
   "robots": "",
-  "title": "LFCS Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "LFCS Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Linux Foundation Certified System Administrator (LFCS) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1103,7 +1111,7 @@
  "/linux-foundation-coupon/mcpa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/mcpa/",
   "robots": "",
-  "title": "MCPA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "MCPA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Model Context Protocol Associate (MCPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1121,7 +1129,7 @@
  "/linux-foundation-coupon/otca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/otca/",
   "robots": "",
-  "title": "OTCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "OTCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the OpenTelemetry Certified Associate (OTCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1139,7 +1147,7 @@
  "/linux-foundation-coupon/pca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/pca/",
   "robots": "",
-  "title": "PCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "PCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Prometheus Certified Associate (PCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1157,7 +1165,7 @@
  "/linux-foundation-coupon/ptca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ptca/",
   "robots": "",
-  "title": "PTCA Discount Code (October 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "PTCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the PyTorch Certified Associate (PTCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1192,7 +1200,7 @@
  },
  "/reading/": {
   "canonical": "https://rushabhshah.dev/reading/",
-  "robots": "noindex, follow",
+  "robots": "",
   "title": "Reading · Rushabh Shah",
   "description": "Books Rushabh Shah is reading, has finished, and has queued up next, with short notes on each.",
   "ldTypes": []
