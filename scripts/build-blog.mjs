@@ -68,6 +68,12 @@ const POSTS_DIR = path.join(ROOT, 'content', 'posts');
 const OUT_DIR = path.join(ROOT, 'blog');
 const SITE = 'https://rushabhshah.dev';
 const AUTHOR = 'Rushabh Shah';
+/**
+ * Appends " · Rushabh Shah" only while the result still fits a search
+ * snippet (Google truncates well before 65 characters). A long page gets its
+ * bare title instead of a suffix that would just get cut off mid-word.
+ */
+const pageTitle = (t) => (t.length + 3 + AUTHOR.length <= 65 ? `${t} · ${AUTHOR}` : t);
 // AWIN deep link for The Linux Foundation (US) — advertiser 85919, publisher
 // 2950265 — generated via AWIN's Link Builder. Without this, RUSHABH30
 // clicks reach training.linuxfoundation.org untracked and earn no commission.
@@ -1297,6 +1303,10 @@ for (const file of fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'))) {
   all.push({
     slug,
     title: data.title || slug,
+    // Only overrides <title>/og:title/twitter:title when a headline is too
+    // long to show in a search snippet without truncating. The H1 and every
+    // listing still show the real title.
+    seoTitle: data.seoTitle || null,
     description: data.description || '',
     tags: Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : []),
     canonical: data.canonical || `${SITE}/blog/${slug}/`,
@@ -1342,7 +1352,7 @@ const imageSize = (siteRelPath) => {
   return { w: 1200, h: 630 };
 };
 
-const head = ({ title, description, url, ogType = 'website', published, updated, tags, image }) => {
+const head = ({ title, description, url, ogType = 'website', published, updated, tags, image, robots }) => {
   const ogImage = image ? (image.startsWith('http') ? image : `${SITE}${image}`) : `${SITE}/assets/og-image.jpg`;
   return `<!DOCTYPE html>
 <html lang="en">
@@ -1356,7 +1366,7 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}">
     <meta name="author" content="${AUTHOR}">
-    <link rel="canonical" href="${url}">
+    ${robots ? `<meta name="robots" content="${robots}">\n    ` : ''}<link rel="canonical" href="${url}">
     <!-- Every page has a plain-markdown twin at the same URL with index.html.md
          appended. This is the machine-readable pointer to it: llms.txt indexes the
          site, but nothing told a crawler sitting on THIS page that a clean markdown
@@ -1801,7 +1811,7 @@ for (const [postIndex, post] of all.entries()) {
     });
     </script>`;
 
-  const html = `${head({ title: `${post.title} · ${AUTHOR}`, description: post.description, url, ogType: 'article', published: post.date, updated: post.updated, tags: post.tags, image: post.cover })}
+  const html = `${head({ title: pageTitle(post.seoTitle ?? post.title), description: post.description, url, ogType: 'article', published: post.date, updated: post.updated, tags: post.tags, image: post.cover })}
 <body>
     <div id="reading-progress" aria-hidden="true"><div id="reading-progress-bar"></div></div>
 ${header}
@@ -2030,6 +2040,9 @@ for (const [tag] of sortedTags) {
   const tSlug = slugify(tag);
   const posts = all.filter(p => p.tags.includes(tag));
   const url = `${SITE}/blog/tags/${tSlug}/`;
+  // A tag this thin is barely a page: send readers in but keep it out of
+  // search results and the sitemap until a third post justifies indexing it.
+  const thin = posts.length < 3;
   const tagJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -2039,7 +2052,7 @@ for (const [tag] of sortedTags) {
     description: `All posts tagged ${tag}. ${BLOG_DESC}`,
     author: { '@id': `${SITE}/#person` },
   };
-  const tagHtml = `${head({ title: `Posts tagged “${tag}” · ${AUTHOR}`, description: `All posts tagged ${tag}. ${BLOG_DESC}`, url })}
+  const tagHtml = `${head({ title: `Posts tagged “${tag}” · ${AUTHOR}`, description: `All posts tagged ${tag}. ${BLOG_DESC}`, url, robots: thin ? 'noindex, follow' : undefined })}
 <body>
 ${header}
     <main id="main" class="rs-wrap rs-blog">
@@ -2146,7 +2159,10 @@ const sitemapUrls = [
   { loc: `${SITE}/privacy/`, priority: '0.2', changefreq: 'yearly', lastmod: gitLastMod('privacy/index.html') },
   ...NEXT_SITEMAP,
   ...all.map(p => ({ loc: `${SITE}/blog/${p.slug}/`, priority: '0.8', lastmod: isoDate(p.updated).slice(0, 10) })),
-  ...sortedTags.map(([t]) => {
+  // Tags under 3 posts are noindexed (see the tag-page loop above) and left
+  // out of the sitemap to match: no point submitting a URL to Google that
+  // tells it not to index the URL.
+  ...sortedTags.filter(([, n]) => n >= 3).map(([t]) => {
     const tagPosts = all.filter(p => p.tags.includes(t));
     const lastmod = tagPosts.length ? isoDate(new Date(Math.max(...tagPosts.map(p => +p.updated)))).slice(0, 10) : null;
     return { loc: `${SITE}/blog/tags/${slugify(t)}/`, priority: '0.3', changefreq: 'weekly', lastmod };
@@ -2175,6 +2191,8 @@ console.log('✅ built     /sitemap.xml');
    the page advertises this month's date forever with zero manual work. */
 
 const MONTH_YEAR = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
+/** Same month, abbreviated. Titles are character-constrained; body copy and descriptions keep the long form. */
+const MONTH_YEAR_SHORT = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' });
 /* ---------- live-sale rendering ----------
    swapRegion() rewrites everything between a matched pair of
    <!-- MARKER:START --> / <!-- MARKER:END --> comments, leaving the comments
@@ -2623,7 +2641,7 @@ const certFooter = `${rsFooter()}
 
 function certPageHtml(c, siblings) {
   const url = `${SITE}/linux-foundation-coupon/${c.slug}/`;
-  const title = `${c.name} Discount Code (${MONTH_YEAR}): 30% Off with RUSHABH30 · ${AUTHOR}`;
+  const title = pageTitle(`${c.name} Discount Code (${MONTH_YEAR_SHORT}): 30% Off`);
   const description = `Code RUSHABH30 gets 30% off the ${c.fullName}${c.isBundle ? '' : ` (${c.name}) exam`}: ~$${c.priceDiscounted} instead of $${c.priceList}. Verified partner code, no expiry.`;
   const savings = c.priceList - c.priceDiscounted;
   const cModPath = `linux-foundation-coupon/${c.slug}/index.html`;
@@ -2930,8 +2948,12 @@ function finopsPageHtml(f, siblings) {
   const url = `${SITE}/finops-coupon/${f.slug}/`;
   const price = finopsPrice(f.priceList);
   const savings = f.priceList - price;
-  const title = `${f.fullName} Discount Code (${MONTH_YEAR}): ${FINOPS_PCT}% Off with ${FINOPS_CODE} · ${AUTHOR}`;
-  const description = `Code ${FINOPS_CODE} takes ${FINOPS_PCT}% off the ${f.fullName} ${f.offering}: about $${price} instead of $${f.priceList}. Official FinOps Foundation partner code.`;
+  // "FinOps Certified: X" and "FinOps Certified X" both shorten to "FinOps X":
+  // the fullName on its own already overflows a title's character budget once
+  // "Discount Code (Mon YYYY): NN% Off" is added.
+  const titleName = f.fullName.replace(/^FinOps Certified:?\s*/, 'FinOps ');
+  const title = pageTitle(`${titleName} Discount Code (${MONTH_YEAR_SHORT}): ${FINOPS_PCT}% Off`);
+  const description = `Code ${FINOPS_CODE} takes ${FINOPS_PCT}% off the ${f.fullName} ${f.offering}: about $${price} instead of $${f.priceList}.`;
   const dateModified = gitLastMod(`finops-coupon/${f.slug}/index.html`) || now.toISOString().slice(0, 10);
   const priceValidUntil = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
 
@@ -3060,8 +3082,8 @@ ${finopsDisclosure()}
 
 function finopsIndexHtml(pages) {
   const url = `${SITE}/finops-coupon/`;
-  const title = `FinOps Certification Discount Code (${MONTH_YEAR}): ${FINOPS_PCT}% Off with ${FINOPS_CODE} · ${AUTHOR}`;
-  const description = `Official FinOps Foundation partner code ${FINOPS_CODE} takes ${FINOPS_PCT}% off FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value, and Technology Value. Prices, comparison, and which one to take first.`;
+  const title = pageTitle(`FinOps Certification Discount Code (${MONTH_YEAR_SHORT}): ${FINOPS_PCT}% Off`);
+  const description = `Official FinOps Foundation partner code ${FINOPS_CODE} takes ${FINOPS_PCT}% off all five FinOps certifications. Prices, comparison, and which to take first.`;
   const dateModified = gitLastMod('finops-coupon/index.html') || now.toISOString().slice(0, 10);
   const cheapest = pages.reduce((a, b) => (b.priceList < a.priceList ? b : a));
 
@@ -3284,8 +3306,8 @@ console.log(`✅ built     /finops-coupon/ + {${FINOPS_PAGES.map(f => f.slug).jo
 
 function couponsHubHtml() {
   const url = `${SITE}/coupons/`;
-  const title = `Certification Discount Codes (${MONTH_YEAR}): 30% Off Linux Foundation, ${FINOPS_PCT}% Off FinOps · ${AUTHOR}`;
-  const description = `Two official partner codes: RUSHABH30 for 30% off every Linux Foundation and CNCF certification, ${FINOPS_CODE} for ${FINOPS_PCT}% off FinOps Foundation certifications. Which one you need, and what each covers.`;
+  const title = pageTitle(`Certification Discount Codes (${MONTH_YEAR_SHORT}): LF & FinOps Deals`);
+  const description = `Two partner codes: RUSHABH30 for 30% off Linux Foundation and CNCF exams, ${FINOPS_CODE} for ${FINOPS_PCT}% off FinOps Foundation certifications.`;
   const dateModified = gitLastMod('coupons/index.html') || now.toISOString().slice(0, 10);
   const cheapestLF = CERT_PAGES.reduce((a, b) => (b.priceDiscounted < a.priceDiscounted ? b : a));
   const cheapestFin = FINOPS_PAGES.reduce((a, b) => (b.priceList < a.priceList ? b : a));

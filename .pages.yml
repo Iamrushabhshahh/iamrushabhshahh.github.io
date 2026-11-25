@@ -21,8 +21,11 @@ content:
         label: Title
         type: string
         required: true
+      - name: seoTitle
+        label: "SEO title override (only if Title + “ · Rushabh Shah” would run past ~65 characters in a search snippet; the H1 keeps the real Title either way)"
+        type: string
       - name: description
-        label: Description (shown in the post list, search results & RSS)
+        label: Description (shown in the post list, search results & RSS; keep to ~155 characters so Google doesn't cut it off)
         type: text
       - name: cover
         label: Cover image (thumbnail in lists + social share preview)

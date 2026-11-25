@@ -35,7 +35,7 @@
  "/blog/cka-exam-day-setup/": {
   "canonical": "https://rushabhshah.dev/blog/cka-exam-day-setup/",
   "robots": "",
-  "title": "CKA exam day: PSI bridge, terminal, kubectl aliases · Rushabh Shah",
+  "title": "CKA exam day: PSI bridge, terminal, kubectl aliases",
   "description": "The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.",
   "ldTypes": [
    "BlogPosting"
@@ -62,7 +62,7 @@
  "/blog/cncf-devstats-score/": {
   "canonical": "https://rushabhshah.dev/blog/cncf-devstats-score/",
   "robots": "",
-  "title": "My CNCF DevStats score is 178, and now I can't stop checking it · Rushabh Shah",
+  "title": "My CNCF DevStats score is 178, and now I can't stop checking it",
   "description": "A tiny tool turns your GitHub username into a CNCF contribution score. Mine came back 178. Here's what that number is actually made of, and how to check yours.",
   "ldTypes": [
    "BlogPosting"
@@ -71,8 +71,8 @@
  "/blog/dns-storm-eai-again/": {
   "canonical": "https://rushabhshah.dev/blog/dns-storm-eai-again/",
   "robots": "",
-  "title": "A hostname that never existed took Redis and Postgres down with it · Rushabh Shah",
-  "description": "A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.",
+  "title": "A hostname that never existed took down Redis and Postgres",
+  "description": "A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.",
   "ldTypes": [
    "BlogPosting"
   ]
@@ -80,7 +80,7 @@
  "/blog/hello-world/": {
   "canonical": "https://rushabhshah.dev/blog/hello-world/",
   "robots": "",
-  "title": "Hello, world: the blog now lives on rushabhshah.dev · Rushabh Shah",
+  "title": "Hello, world: the blog now lives on rushabhshah.dev",
   "description": "Why I moved my writing from Hashnode to my own domain, and how this markdown-powered blog with scheduled publishing works under the hood.",
   "ldTypes": [
    "BlogPosting"
@@ -107,8 +107,8 @@
  "/blog/kubernetes-v1-37-garhwal/": {
   "canonical": "https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/",
   "robots": "",
-  "title": "Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah",
-  "description": "A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.",
+  "title": "Kubernetes v1.37 (Garhwal): changelog and what breaks",
+  "description": "A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.",
   "ldTypes": [
    "BlogPosting"
   ]
@@ -133,7 +133,7 @@
  },
  "/blog/tags/aws/": {
   "canonical": "https://rushabhshah.dev/blog/tags/aws/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “aws” · Rushabh Shah",
   "description": "All posts tagged aws. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -142,7 +142,7 @@
  },
  "/blog/tags/blog/": {
   "canonical": "https://rushabhshah.dev/blog/tags/blog/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “blog” · Rushabh Shah",
   "description": "All posts tagged blog. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -160,7 +160,7 @@
  },
  "/blog/tags/cncf/": {
   "canonical": "https://rushabhshah.dev/blog/tags/cncf/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “cncf” · Rushabh Shah",
   "description": "All posts tagged cncf. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -169,7 +169,7 @@
  },
  "/blog/tags/community/": {
   "canonical": "https://rushabhshah.dev/blog/tags/community/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “community” · Rushabh Shah",
   "description": "All posts tagged community. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -178,7 +178,7 @@
  },
  "/blog/tags/dns/": {
   "canonical": "https://rushabhshah.dev/blog/tags/dns/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “dns” · Rushabh Shah",
   "description": "All posts tagged dns. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -187,7 +187,7 @@
  },
  "/blog/tags/incident/": {
   "canonical": "https://rushabhshah.dev/blog/tags/incident/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “incident” · Rushabh Shah",
   "description": "All posts tagged incident. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -196,7 +196,7 @@
  },
  "/blog/tags/kcd/": {
   "canonical": "https://rushabhshah.dev/blog/tags/kcd/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “kcd” · Rushabh Shah",
   "description": "All posts tagged kcd. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -214,7 +214,7 @@
  },
  "/blog/tags/meta/": {
   "canonical": "https://rushabhshah.dev/blog/tags/meta/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “meta” · Rushabh Shah",
   "description": "All posts tagged meta. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -223,7 +223,7 @@
  },
  "/blog/tags/observability/": {
   "canonical": "https://rushabhshah.dev/blog/tags/observability/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “observability” · Rushabh Shah",
   "description": "All posts tagged observability. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -232,7 +232,7 @@
  },
  "/blog/tags/open-source/": {
   "canonical": "https://rushabhshah.dev/blog/tags/open-source/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “open-source” · Rushabh Shah",
   "description": "All posts tagged open-source. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -241,7 +241,7 @@
  },
  "/blog/tags/releases/": {
   "canonical": "https://rushabhshah.dev/blog/tags/releases/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Posts tagged “releases” · Rushabh Shah",
   "description": "All posts tagged releases. Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.",
   "ldTypes": [
@@ -262,8 +262,8 @@
  "/coupons/": {
   "canonical": "https://rushabhshah.dev/coupons/",
   "robots": "",
-  "title": "Certification Discount Codes (November 2026): 30% Off Linux Foundation, 20% Off FinOps · Rushabh Shah",
-  "description": "Two official partner codes: RUSHABH30 for 30% off every Linux Foundation and CNCF certification, RUSHABH_20 for 20% off FinOps Foundation certifications. Which one you need, and what each covers.",
+  "title": "Certification Discount Codes (Nov 2026): LF & FinOps Deals",
+  "description": "Two partner codes: RUSHABH30 for 30% off Linux Foundation and CNCF exams, RUSHABH_20 for 20% off FinOps Foundation certifications.",
   "ldTypes": [
    "Answer",
    "BreadcrumbList",
@@ -277,7 +277,7 @@
  "/docker-captain/": {
   "canonical": "https://rushabhshah.dev/docker-captain/",
   "robots": "",
-  "title": "Rushabh Shah, Docker Captain",
+  "title": "Docker Captain Rushabh Shah: Talks, Posts & Community Work",
   "description": "Rushabh Shah, Docker Captain (2026). DevOps Engineer in Ahmedabad, India, working in containers and Kubernetes.",
   "ldTypes": [
    "BreadcrumbList",
@@ -289,8 +289,8 @@
  "/finops-coupon/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/",
   "robots": "",
-  "title": "FinOps Certification Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
-  "description": "Official FinOps Foundation partner code RUSHABH_20 takes 20% off FinOps Certified Practitioner, Engineer, FOCUS Analyst, AI Value, and Technology Value. Prices, comparison, and which one to take first.",
+  "title": "FinOps Certification Discount Code (Nov 2026): 20% Off",
+  "description": "Official FinOps Foundation partner code RUSHABH_20 takes 20% off all five FinOps certifications. Prices, comparison, and which to take first.",
   "ldTypes": [
    "Answer",
    "BreadcrumbList",
@@ -304,8 +304,8 @@
  "/finops-coupon/ai-value/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/ai-value/",
   "robots": "",
-  "title": "FinOps Certified: AI Value Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
-  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified: AI Value Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
+  "title": "FinOps AI Value Discount Code (Nov 2026): 20% Off · Rushabh Shah",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified: AI Value Self-Paced Course + Certification Exam: about $400 instead of $500.",
   "ldTypes": [
    "Answer",
    "BreadcrumbList",
@@ -322,8 +322,8 @@
  "/finops-coupon/engineer/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/engineer/",
   "robots": "",
-  "title": "FinOps Certified Engineer Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
-  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified Engineer Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
+  "title": "FinOps Engineer Discount Code (Nov 2026): 20% Off · Rushabh Shah",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified Engineer Self-Paced Course + Certification Exam: about $400 instead of $500.",
   "ldTypes": [
    "Answer",
    "BreadcrumbList",
@@ -340,8 +340,8 @@
  "/finops-coupon/focus-analyst/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/focus-analyst/",
   "robots": "",
-  "title": "FinOps Certified FOCUS Analyst Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
-  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified FOCUS Analyst Self-Paced Course + Certification Exam: about $320 instead of $400. Official FinOps Foundation partner code.",
+  "title": "FinOps FOCUS Analyst Discount Code (Nov 2026): 20% Off",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified FOCUS Analyst Self-Paced Course + Certification Exam: about $320 instead of $400.",
   "ldTypes": [
    "Answer",
    "BreadcrumbList",
@@ -358,8 +358,8 @@
  "/finops-coupon/practitioner/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/practitioner/",
   "robots": "",
-  "title": "FinOps Certified Practitioner Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
-  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified Practitioner Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
+  "title": "FinOps Practitioner Discount Code (Nov 2026): 20% Off",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified Practitioner Self-Paced Course + Certification Exam: about $400 instead of $500.",
   "ldTypes": [
    "Answer",
    "BreadcrumbList",
@@ -376,8 +376,8 @@
  "/finops-coupon/technology-value/": {
   "canonical": "https://rushabhshah.dev/finops-coupon/technology-value/",
   "robots": "",
-  "title": "FinOps Certified: Technology Value Discount Code (November 2026): 20% Off with RUSHABH_20 · Rushabh Shah",
-  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified: Technology Value Self-Paced Course + Certification Exam: about $400 instead of $500. Official FinOps Foundation partner code.",
+  "title": "FinOps Technology Value Discount Code (Nov 2026): 20% Off",
+  "description": "Code RUSHABH_20 takes 20% off the FinOps Certified: Technology Value Self-Paced Course + Certification Exam: about $400 instead of $500.",
   "ldTypes": [
    "Answer",
    "BreadcrumbList",
@@ -740,7 +740,7 @@
  "/linux-foundation-coupon/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
   "robots": "",
-  "title": "Linux Foundation Coupon (November 2026): 30% Off CKA, CKAD, CKS · Rushabh Shah",
+  "title": "Linux Foundation Coupon (November 2026): 30% Off CKA, CKAD, CKS",
   "description": "Code RUSHABH30 gets 30% off every Linux Foundation & CNCF certification and course: CKA, CKAD, CKS, KCNA, LFCS. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -759,7 +759,7 @@
  "/linux-foundation-coupon/capa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/capa/",
   "robots": "",
-  "title": "CAPA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CAPA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Argo Project Associate (CAPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -777,7 +777,7 @@
  "/linux-foundation-coupon/cba/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cba/",
   "robots": "",
-  "title": "CBA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CBA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Backstage Associate (CBA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -795,7 +795,7 @@
  "/linux-foundation-coupon/cca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cca/",
   "robots": "",
-  "title": "CCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CCA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Cilium Certified Associate (CCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -813,7 +813,7 @@
  "/linux-foundation-coupon/cgoa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cgoa/",
   "robots": "",
-  "title": "CGOA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CGOA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified GitOps Associate (CGOA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -831,7 +831,7 @@
  "/linux-foundation-coupon/cka-to-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cka-to-kubestronaut/",
   "robots": "",
-  "title": "CKA to Kubestronaut Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKA to Kubestronaut Discount Code (Nov 2026): 30% Off",
   "description": "Code RUSHABH30 gets 30% off the CKA to Kubestronaut upgrade bundle (KCNA + KCSA + CKAD + CKS): ~$864 instead of $1235. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -849,7 +849,7 @@
  "/linux-foundation-coupon/cka/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cka/",
   "robots": "",
-  "title": "CKA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Administrator (CKA) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -867,7 +867,7 @@
  "/linux-foundation-coupon/ckad-to-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ckad-to-kubestronaut/",
   "robots": "",
-  "title": "CKAD to Kubestronaut Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKAD to Kubestronaut Discount Code (Nov 2026): 30% Off",
   "description": "Code RUSHABH30 gets 30% off the CKAD to Kubestronaut upgrade bundle (KCNA + KCSA + CKA + CKS): ~$864 instead of $1235. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -885,7 +885,7 @@
  "/linux-foundation-coupon/ckad/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ckad/",
   "robots": "",
-  "title": "CKAD Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKAD Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Application Developer (CKAD) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -903,7 +903,7 @@
  "/linux-foundation-coupon/cks/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cks/",
   "robots": "",
-  "title": "CKS Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CKS Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Kubernetes Security Specialist (CKS) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -921,7 +921,7 @@
  "/linux-foundation-coupon/cnpa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cnpa/",
   "robots": "",
-  "title": "CNPA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CNPA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Cloud Native Platform Engineering Associate (CNPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -939,7 +939,7 @@
  "/linux-foundation-coupon/cnpe/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/cnpe/",
   "robots": "",
-  "title": "CNPE Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "CNPE Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Certified Cloud Native Platform Engineer (CNPE) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -957,7 +957,7 @@
  "/linux-foundation-coupon/golden-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/golden-kubestronaut/",
   "robots": "",
-  "title": "Golden Kubestronaut Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "Golden Kubestronaut Discount Code (Nov 2026): 30% Off",
   "description": "Code RUSHABH30 gets 30% off the Golden Kubestronaut bundle (16 CNCF certs): ~$2960 instead of $4229. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -975,7 +975,7 @@
  "/linux-foundation-coupon/ica/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ica/",
   "robots": "",
-  "title": "ICA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "ICA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Istio Certified Associate (ICA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -993,7 +993,7 @@
  "/linux-foundation-coupon/kca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kca/",
   "robots": "",
-  "title": "KCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "KCA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kyverno Certified Associate (KCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1011,7 +1011,7 @@
  "/linux-foundation-coupon/kcna/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kcna/",
   "robots": "",
-  "title": "KCNA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "KCNA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kubernetes and Cloud Native Associate (KCNA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1029,7 +1029,7 @@
  "/linux-foundation-coupon/kcsa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kcsa/",
   "robots": "",
-  "title": "KCSA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "KCSA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kubernetes and Cloud Native Security Associate (KCSA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1047,7 +1047,7 @@
  "/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kubestronaut-to-golden-kubestronaut/",
   "robots": "",
-  "title": "Kubestronaut to Golden Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "Kubestronaut to Golden Discount Code (Nov 2026): 30% Off",
   "description": "Code RUSHABH30 gets 30% off the Kubestronaut to Golden Kubestronaut upgrade bundle (11 exams): ~$1868 instead of $2669. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1065,7 +1065,7 @@
  "/linux-foundation-coupon/kubestronaut/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/kubestronaut/",
   "robots": "",
-  "title": "Kubestronaut Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "Kubestronaut Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS): ~$1151 instead of $1645. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1083,7 +1083,7 @@
  "/linux-foundation-coupon/lfca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/lfca/",
   "robots": "",
-  "title": "LFCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "LFCA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Linux Foundation Certified IT Associate (LFCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1101,7 +1101,7 @@
  "/linux-foundation-coupon/lfcs/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/lfcs/",
   "robots": "",
-  "title": "LFCS Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "LFCS Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Linux Foundation Certified System Administrator (LFCS) exam: ~$311 instead of $445. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1119,7 +1119,7 @@
  "/linux-foundation-coupon/mcpa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/mcpa/",
   "robots": "",
-  "title": "MCPA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "MCPA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Model Context Protocol Associate (MCPA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1137,7 +1137,7 @@
  "/linux-foundation-coupon/otca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/otca/",
   "robots": "",
-  "title": "OTCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "OTCA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the OpenTelemetry Certified Associate (OTCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1155,7 +1155,7 @@
  "/linux-foundation-coupon/pca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/pca/",
   "robots": "",
-  "title": "PCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "PCA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the Prometheus Certified Associate (PCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
@@ -1173,7 +1173,7 @@
  "/linux-foundation-coupon/ptca/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/ptca/",
   "robots": "",
-  "title": "PTCA Discount Code (November 2026): 30% Off with RUSHABH30 · Rushabh Shah",
+  "title": "PTCA Discount Code (Nov 2026): 30% Off · Rushabh Shah",
   "description": "Code RUSHABH30 gets 30% off the PyTorch Certified Associate (PTCA) exam: ~$175 instead of $250. Verified partner code, no expiry.",
   "ldTypes": [
    "Answer",
