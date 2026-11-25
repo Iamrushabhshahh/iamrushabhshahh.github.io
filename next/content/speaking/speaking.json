@@ -108,7 +108,8 @@
       ],
       "abstract": "A phased move from classic to native histograms on Prometheus 3.x: running both side by side, checking PromQL results against each other, what changes in the WAL and TSDB, and the Grafana dashboards and exporters that break along the way.",
       "links": {
-        "session": "https://promcon.io/2026-munich/talks/from-buckets-to-native-histograms-lessons-from-a-production-migration/"
+        "session": "https://promcon.io/2026-munich/talks/from-buckets-to-native-histograms-lessons-from-a-production-migration/",
+        "video": "https://www.youtube.com/watch?v=hQic5lvKCNg"
       }
     },
     {
