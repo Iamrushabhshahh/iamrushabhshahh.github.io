@@ -195,7 +195,7 @@ If you've filed even one issue against a CNCF project, [go check your own score]
 
 # A hostname that never existed took Redis and Postgres down with it
 
-> A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
+> A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.
 
 Published: 2026-09-29 · Updated: 2026-09-29 · Tags: incident, dns, aws, observability
 Canonical: https://rushabhshah.dev/blog/dns-storm-eai-again/
@@ -594,11 +594,11 @@ $ see you in the next post
 
 > Articles on DevOps, Kubernetes, Docker, and observability, by Rushabh Shah, Docker Captain and Grafana Champion.
 
-- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
+- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.
 - [India's first heritage city, Gujarat's first KCD](https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/) (2026-09-01): Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you about.
 - [Prometheus PCA and OpenTelemetry OTCA, reviewed](https://rushabhshah.dev/blog/pca-otca-review/) (2026-08-30): Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.
 - [CKA exam day: PSI bridge, terminal, kubectl aliases](https://rushabhshah.dev/blog/cka-exam-day-setup/) (2026-08-28): The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.
-- [Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks](https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/) (2026-08-26): A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.
+- [Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks](https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/) (2026-08-26): A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.
 - [What the CKA actually tests in 2026](https://rushabhshah.dev/blog/cka-exam-guide/) (2026-08-26): The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.
 - [Is KCNA worth $250 as a first certification](https://rushabhshah.dev/blog/kcna-worth-it/) (2026-08-24): KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.
 - [The Kubestronaut path and what it really costs](https://rushabhshah.dev/blog/kubestronaut-path-cost/) (2026-08-22): Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here's the real cost breakdown, a realistic study timeline, and who it's actually for.
@@ -852,7 +852,7 @@ $ get [KCNA for ~$175 with RUSHABH30 →](/linux-foundation-coupon/kcna/)
 
 # Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks
 
-> A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.
+> A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.
 
 Published: 2026-08-26 · Updated: 2026-08-26 · Tags: kubernetes, releases
 Canonical: https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/
@@ -1420,11 +1420,11 @@ Kubestronaut is CNCF's recognition for holding five certifications at the same t
 
 ## What's actually in the bundle
 
-- **KCNA:** Kubernetes and Cloud Native Associate. Multiple choice, no prerequisite, the vocabulary on-ramp.
+- **[KCNA](/blog/kcna-worth-it/):** Kubernetes and Cloud Native Associate. Multiple choice, no prerequisite, the vocabulary on-ramp.
 - **KCSA:** Kubernetes and Cloud Native Security Associate. Also multiple choice, no prerequisite, security concepts instead of general architecture.
-- **CKA:** Certified Kubernetes Administrator. Performance-based, live terminal, the cluster-operations cert.
-- **CKAD:** Certified Kubernetes Application Developer. Performance-based, the application-layer cert.
-- **CKS:** Certified Kubernetes Security Specialist. Performance-based, and the one exam here that requires an active CKA before you can even schedule it.
+- **[CKA](/blog/cka-exam-guide/):** Certified Kubernetes Administrator. Performance-based, live terminal, the cluster-operations cert.
+- **[CKAD](/blog/cka-vs-ckad-vs-cks/):** Certified Kubernetes Application Developer. Performance-based, the application-layer cert.
+- **[CKS](/blog/cka-vs-ckad-vs-cks/):** Certified Kubernetes Security Specialist. Performance-based, and the one exam here that requires an active CKA before you can even schedule it.
 
 Two multiple-choice exams to build vocabulary, three hands-on exams to prove you can actually do the job across administration, development, and security.
 
@@ -1498,7 +1498,7 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 # Posts tagged "aws"
 
-- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
+- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.
 
 ---
 
@@ -1543,7 +1543,7 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 # Posts tagged "dns"
 
-- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
+- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.
 
 ---
 
@@ -1551,7 +1551,7 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 # Posts tagged "incident"
 
-- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
+- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.
 
 ---
 
@@ -1570,7 +1570,7 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 - [India's first heritage city, Gujarat's first KCD](https://rushabhshah.dev/blog/kcd-gujarat-2026-ahmedabad-guide/) (2026-09-01): Gujarat's first KCD is in Ahmedabad on 19 September. The city from a local: where to eat, the 600-year-old pols, and what nobody warns you about.
 - [Prometheus PCA and OpenTelemetry OTCA, reviewed](https://rushabhshah.dev/blog/pca-otca-review/) (2026-08-30): Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.
 - [CKA exam day: PSI bridge, terminal, kubectl aliases](https://rushabhshah.dev/blog/cka-exam-day-setup/) (2026-08-28): The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.
-- [Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks](https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/) (2026-08-26): A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.
+- [Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks](https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/) (2026-08-26): A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.
 - [What the CKA actually tests in 2026](https://rushabhshah.dev/blog/cka-exam-guide/) (2026-08-26): The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.
 - [Is KCNA worth $250 as a first certification](https://rushabhshah.dev/blog/kcna-worth-it/) (2026-08-24): KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.
 - [The Kubestronaut path and what it really costs](https://rushabhshah.dev/blog/kubestronaut-path-cost/) (2026-08-22): Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here's the real cost breakdown, a realistic study timeline, and who it's actually for.
@@ -1591,7 +1591,7 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 # Posts tagged "observability"
 
-- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
+- [A hostname that never existed took Redis and Postgres down with it](https://rushabhshah.dev/blog/dns-storm-eai-again/) (2026-09-29): A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.
 
 ---
 
@@ -1607,7 +1607,7 @@ $ get [PCA for ~$175 →](/linux-foundation-coupon/pca/) or [OTCA for ~$175 →]
 
 # Posts tagged "releases"
 
-- [Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks](https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/) (2026-08-26): A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.
+- [Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks](https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/) (2026-08-26): A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.
 
 ---
 
@@ -1632,11 +1632,11 @@ I hold two training partnerships, and they cover completely different catalogs o
 
 They are not interchangeable. Each checkout rejects the other's code, which is the single most common thing people email me about.
 
-## Linux Foundation & CNCF: 30% off with RUSHABH30
+## Linux Foundation & CNCF
 
-This is the big catalog: every Kubernetes certification, the CNCF associate exams, LFCS and LFCA, the self-paced courses, and the Kubestronaut and Golden Kubestronaut bundles. The code is evergreen with no expiry, and it works on course + exam bundles as well as bare exams, which is usually the better buy. The cheapest way in is KCNA at about $175.
+RUSHABH30 covers the full training.linuxfoundation.org catalog: every Kubernetes certification, the CNCF associate exams, LFCS and LFCA, and the Kubestronaut and Golden Kubestronaut bundles. Evergreen, no expiry.
 
-[Full pricing across the catalog, per-exam guides and the sale archive →](https://rushabhshah.dev/linux-foundation-coupon/)
+[Linux Foundation coupon code: full pricing and per-exam guides →](https://rushabhshah.dev/linux-foundation-coupon/)
 
 ## FinOps Foundation: 20% off with RUSHABH_20
 
@@ -2552,7 +2552,7 @@ Writing
 **incident** Sep 30, 2026 16 min
 ### A hostname that never existed took Redis and Postgres down with it
 
-A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.
+A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.
 
 (https://rushabhshah.dev/blog/dns-storm-eai-again/)
 
@@ -3217,6 +3217,8 @@ RUSHABH30
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-cka-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-administrator-cka%2F) and the Certified Kubernetes Administrator (CKA) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
+[What the CKA actually tests in 2026 →](https://rushabhshah.dev/blog/cka-exam-guide/)
+
 ## Quick facts
 
 | **Format** | Performance-based (live terminal, real cluster) |
@@ -3450,6 +3452,8 @@ RUSHABH30
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-ckad-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F) and the Certified Kubernetes Application Developer (CKAD) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
+[CKA vs CKAD vs CKS: which to take first →](https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/)
+
 ## Quick facts
 
 | **Format** | Performance-based (live terminal, real cluster) |
@@ -3566,6 +3570,8 @@ RUSHABH30
 [Get CKS for ~$311 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-cks-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-cks-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-security-specialist%2F) and the Certified Kubernetes Security Specialist (CKS) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+[CKA vs CKAD vs CKS: which to take first →](https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/)
 
 ## Quick facts
 
@@ -4567,6 +4573,8 @@ RUSHABH30
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kcna-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubernetes-cloud-native-associate%2F) and the Kubernetes and Cloud Native Associate (KCNA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
+[Is KCNA worth $250 as a first certification →](https://rushabhshah.dev/blog/kcna-worth-it/)
+
 ## Quick facts
 
 | **Format** | Multiple choice |
@@ -4919,6 +4927,8 @@ RUSHABH30
 [Get Kubestronaut for ~$1151 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F) and the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS) drops from $1645 to about $1151, a saving of roughly $494. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+[The Kubestronaut path and what it really costs →](https://rushabhshah.dev/blog/kubestronaut-path-cost/)
 
 ## Quick facts
 
@@ -5395,6 +5405,8 @@ RUSHABH30
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-otca-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F) and the OpenTelemetry Certified Associate (OTCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
+[Prometheus PCA and OpenTelemetry OTCA, reviewed →](https://rushabhshah.dev/blog/pca-otca-review/)
+
 ## Quick facts
 
 | **Format** | Multiple choice |
@@ -5510,6 +5522,8 @@ RUSHABH30
 [Get PCA for ~$175 →](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-pca-hero&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F)
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-pca-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F) and the Prometheus Certified Associate (PCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
+
+[Prometheus PCA and OpenTelemetry OTCA, reviewed →](https://rushabhshah.dev/blog/pca-otca-review/)
 
 ## Quick facts
 

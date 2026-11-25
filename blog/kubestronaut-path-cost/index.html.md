@@ -9,11 +9,11 @@ Kubestronaut is CNCF's recognition for holding five certifications at the same t
 
 ## What's actually in the bundle
 
-- **KCNA:** Kubernetes and Cloud Native Associate. Multiple choice, no prerequisite, the vocabulary on-ramp.
+- **[KCNA](/blog/kcna-worth-it/):** Kubernetes and Cloud Native Associate. Multiple choice, no prerequisite, the vocabulary on-ramp.
 - **KCSA:** Kubernetes and Cloud Native Security Associate. Also multiple choice, no prerequisite, security concepts instead of general architecture.
-- **CKA:** Certified Kubernetes Administrator. Performance-based, live terminal, the cluster-operations cert.
-- **CKAD:** Certified Kubernetes Application Developer. Performance-based, the application-layer cert.
-- **CKS:** Certified Kubernetes Security Specialist. Performance-based, and the one exam here that requires an active CKA before you can even schedule it.
+- **[CKA](/blog/cka-exam-guide/):** Certified Kubernetes Administrator. Performance-based, live terminal, the cluster-operations cert.
+- **[CKAD](/blog/cka-vs-ckad-vs-cks/):** Certified Kubernetes Application Developer. Performance-based, the application-layer cert.
+- **[CKS](/blog/cka-vs-ckad-vs-cks/):** Certified Kubernetes Security Specialist. Performance-based, and the one exam here that requires an active CKA before you can even schedule it.
 
 Two multiple-choice exams to build vocabulary, three hands-on exams to prove you can actually do the job across administration, development, and security.
 

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#050a1c">
     <meta name="color-scheme" content="dark light">
-    <title>Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah</title>
-    <meta name="description" content="A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.">
+    <title>Kubernetes v1.37 (Garhwal): changelog and what breaks</title>
+    <meta name="description" content="A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.">
     <meta name="author" content="Rushabh Shah">
     <link rel="canonical" href="https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/">
     <!-- Every page has a plain-markdown twin at the same URL with index.html.md
@@ -21,17 +21,17 @@
     <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href="https://rushabhshah.dev/blog/rss.xml">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/">
-    <meta property="og:title" content="Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah">
-    <meta property="og:description" content="A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.">
+    <meta property="og:title" content="Kubernetes v1.37 (Garhwal): changelog and what breaks">
+    <meta property="og:description" content="A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.">
     <meta property="og:image" content="https://rushabhshah.dev/assets/blog/kubernetes-1-37-garhwal-og.jpg">
     <meta property="og:image:width" content="2000">
     <meta property="og:image:height" content="1050">
-    <meta property="og:image:alt" content="Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah">
+    <meta property="og:image:alt" content="Kubernetes v1.37 (Garhwal): changelog and what breaks">
     <meta property="og:site_name" content="Rushabh Shah">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@iamrushabhshahh">
-    <meta name="twitter:title" content="Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks · Rushabh Shah">
-    <meta name="twitter:description" content="A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.">
+    <meta name="twitter:title" content="Kubernetes v1.37 (Garhwal): changelog and what breaks">
+    <meta name="twitter:description" content="A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.">
     <meta name="twitter:image" content="https://rushabhshah.dev/assets/blog/kubernetes-1-37-garhwal-og.jpg">
     <meta property="article:published_time" content="2026-08-26T19:00:00.000Z">
     <meta property="article:modified_time" content="2026-08-26T19:00:00.000Z">
@@ -42,7 +42,7 @@
     <link rel="preload" href="/assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/clash-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/style.css?v=760c1c90">
-    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="/assets/count.js?v=185aa0b9"></script>
 </head>
 <body>
     <div id="reading-progress" aria-hidden="true"><div id="reading-progress-bar"></div></div>
@@ -816,7 +816,7 @@ kubectl get --raw /apis/scheduling.k8s.io/v1alpha2 2&gt;/dev/null
         <div class="rs-wordbox"><div class="rs-word" aria-hidden="true">RUSHABH SHAH</div></div>
         <div class="rs-fine"><span>&copy; 2026 Rushabh Shah. Affiliate links pay me a commission at no cost to you.</span><span><a href="/privacy/">Privacy</a><a href="/blog/rss.xml">RSS</a><a href="/llms.txt">AI-readable bio</a></span></div>
     </div></footer>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks","description":"A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.","datePublished":"2026-08-26T19:00:00.000Z","dateModified":"2026-08-26T19:00:00.000Z","url":"https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"kubernetes, releases","image":"https://rushabhshah.dev/assets/blog/kubernetes-1-37-garhwal-og.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks","description":"A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.","datePublished":"2026-08-26T19:00:00.000Z","dateModified":"2026-08-26T19:00:00.000Z","url":"https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/","author":{"@id":"https://rushabhshah.dev/#person"},"keywords":"kubernetes, releases","image":"https://rushabhshah.dev/assets/blog/kubernetes-1-37-garhwal-og.jpg"}</script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const v = document.getElementById('post-views');

@@ -12,7 +12,7 @@
       <link>https://rushabhshah.dev/blog/dns-storm-eai-again/</link>
       <guid isPermaLink="true">https://rushabhshah.dev/blog/dns-storm-eai-again/</guid>
       <pubDate>Tue, 29 Sep 2026 18:35:00 GMT</pubDate>
-      <description>A logging misconfiguration pointed two dozen services at a DNS name nobody ever created. They retried it 46 times a second, burnt 28% of the AWS per-ENI resolver budget, and starved DNS for two services that had never touched Elasticsearch. A postmortem of getaddrinfo EAI_AGAIN.</description>
+      <description>A logging misconfiguration pointed two dozen services at a DNS name that never existed, retried 46 times a second, and starved DNS for two other services.</description>
       <category>incident</category><category>dns</category><category>aws</category><category>observability</category>
     </item>
     <item>
@@ -44,7 +44,7 @@
       <link>https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/</link>
       <guid isPermaLink="true">https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/</guid>
       <pubDate>Wed, 26 Aug 2026 19:00:00 GMT</pubDate>
-      <description>A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you&#39;ll use, and the four changes that can stop your upgrade dead.</description>
+      <description>A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.</description>
       <category>kubernetes</category><category>releases</category>
     </item>
     <item>

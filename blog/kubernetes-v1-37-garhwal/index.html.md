@@ -1,6 +1,6 @@
 # Kubernetes v1.37 (Garhwal): 52 forts, 67 changes, and what actually breaks
 
-> A complete, plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features now on by default, working YAML for the ones you'll use, and the four changes that can stop your upgrade dead.
+> A plain-language guide to Kubernetes v1.37 Garhwal: every Stable graduation, the Beta features on by default, and the four changes that can stop your upgrade.
 
 Published: 2026-08-26 · Updated: 2026-08-26 · Tags: kubernetes, releases
 Canonical: https://rushabhshah.dev/blog/kubernetes-v1-37-garhwal/

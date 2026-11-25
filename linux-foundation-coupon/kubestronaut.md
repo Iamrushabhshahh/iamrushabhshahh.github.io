@@ -10,6 +10,8 @@ RUSHABH30
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-kubestronaut-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fkubestronaut-bundle%2F) and the Kubestronaut bundle (KCNA + KCSA + CKA + CKAD + CKS) drops from $1645 to about $1151, a saving of roughly $494. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
+[The Kubestronaut path and what it really costs →](https://rushabhshah.dev/blog/kubestronaut-path-cost/)
+
 ## Quick facts
 
 | **Format** | Bundle of 5 exams (2 multiple-choice, 3 performance-based) |

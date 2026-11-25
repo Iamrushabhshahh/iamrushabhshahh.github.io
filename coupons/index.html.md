@@ -17,11 +17,11 @@ I hold two training partnerships, and they cover completely different catalogs o
 
 They are not interchangeable. Each checkout rejects the other's code, which is the single most common thing people email me about.
 
-## Linux Foundation & CNCF: 30% off with RUSHABH30
+## Linux Foundation & CNCF
 
-This is the big catalog: every Kubernetes certification, the CNCF associate exams, LFCS and LFCA, the self-paced courses, and the Kubestronaut and Golden Kubestronaut bundles. The code is evergreen with no expiry, and it works on course + exam bundles as well as bare exams, which is usually the better buy. The cheapest way in is KCNA at about $175.
+RUSHABH30 covers the full training.linuxfoundation.org catalog: every Kubernetes certification, the CNCF associate exams, LFCS and LFCA, and the Kubestronaut and Golden Kubestronaut bundles. Evergreen, no expiry.
 
-[Full pricing across the catalog, per-exam guides and the sale archive →](https://rushabhshah.dev/linux-foundation-coupon/)
+[Linux Foundation coupon code: full pricing and per-exam guides →](https://rushabhshah.dev/linux-foundation-coupon/)
 
 ## FinOps Foundation: 20% off with RUSHABH_20
 

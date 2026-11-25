@@ -10,6 +10,8 @@ RUSHABH30
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-otca-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fopentelemetry-certified-associate-otca%2F) and the OpenTelemetry Certified Associate (OTCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
+[Prometheus PCA and OpenTelemetry OTCA, reviewed →](https://rushabhshah.dev/blog/pca-otca-review/)
+
 ## Quick facts
 
 | **Format** | Multiple choice |

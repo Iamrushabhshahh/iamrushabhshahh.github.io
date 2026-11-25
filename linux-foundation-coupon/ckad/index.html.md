@@ -10,6 +10,8 @@ RUSHABH30
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-ckad-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fcertified-kubernetes-application-developer-ckad%2F) and the Certified Kubernetes Application Developer (CKAD) exam drops from $445 to about $311, a saving of roughly $134. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
+[CKA vs CKAD vs CKS: which to take first →](https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/)
+
 ## Quick facts
 
 | **Format** | Performance-based (live terminal, real cluster) |

@@ -10,6 +10,8 @@ RUSHABH30
 
 Put `RUSHABH30` in the coupon field at checkout on [training.linuxfoundation.org](https://www.awin1.com/cread.php?awinmid=85919&awinaffid=2950265&clickref=site-pca-intro&ued=https%3A%2F%2Ftraining.linuxfoundation.org%2Fcertification%2Fprometheus-certified-associate%2F) and the Prometheus Certified Associate (PCA) exam drops from $250 to about $175, a saving of roughly $75. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
 
+[Prometheus PCA and OpenTelemetry OTCA, reviewed →](https://rushabhshah.dev/blog/pca-otca-review/)
+
 ## Quick facts
 
 | **Format** | Multiple choice |
