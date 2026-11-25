@@ -97,26 +97,38 @@ export function SpeakingSchema({ engagements, path }: { engagements: Engagement[
         about: { '@id': PERSON_ID },
         mainEntity: {
           '@id': PERSON_ID,
-          performerIn: engagements.filter(isStage).map((e) => ({
-            '@type': 'Event',
-            '@id': `${url}#${e.slug}`,
-            name: e.title,
-            startDate: e.start,
-            ...(e.endDate ? { endDate: e.endDate } : {}),
-            ...(e.abstract ? { description: e.abstract } : {}),
-            eventStatus: 'https://schema.org/EventScheduled',
-            eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-            location: {
+          performerIn: engagements.filter(isStage).map((e) => {
+            // Same venue for the talk and the conference hosting it: every
+            // stage appearance on file happened where its conference did, so
+            // the talk's own location doubles as the superEvent's.
+            const location = {
               '@type': 'Place',
               name: e.venue ?? e.event,
               address: { '@type': 'PostalAddress', addressLocality: e.city, addressCountry: e.country },
-            },
-            ...(e.organizer ? { organizer: { '@type': 'Organization', name: e.organizer } } : {}),
-            superEvent: { '@type': 'Event', name: e.event },
-            performer: { '@id': PERSON_ID },
-            ...(e.links.session || e.links.event ? { url: abs((e.links.session ?? e.links.event)!) } : {}),
-            ...(e.links.video ? { recordedIn: { '@type': 'VideoObject', contentUrl: e.links.video } } : {}),
-          })),
+            };
+            return {
+              '@type': 'Event',
+              '@id': `${url}#${e.slug}`,
+              name: e.title,
+              startDate: e.start,
+              ...(e.endDate ? { endDate: e.endDate } : {}),
+              ...(e.abstract ? { description: e.abstract } : {}),
+              eventStatus: 'https://schema.org/EventScheduled',
+              eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+              location,
+              ...(e.organizer ? { organizer: { '@type': 'Organization', name: e.organizer } } : {}),
+              superEvent: {
+                '@type': 'Event',
+                name: e.event,
+                startDate: e.start.slice(0, 10),
+                endDate: e.endDate ?? e.start.slice(0, 10),
+                location,
+              },
+              performer: { '@id': PERSON_ID },
+              ...(e.links.session || e.links.event ? { url: abs((e.links.session ?? e.links.event)!) } : {}),
+              ...(e.links.video ? { recordedIn: { '@type': 'VideoObject', contentUrl: e.links.video } } : {}),
+            };
+          }),
         },
       }}
     />
