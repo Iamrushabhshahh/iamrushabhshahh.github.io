@@ -9,7 +9,7 @@ I build, teach and speak about **open source infrastructure**. I translated ebpf
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
 Open Source Summit Japan FluxCon North America PromCon EU Open Compliance Summit KubeCon India KCD Gujarat Grafana & Friends Docker Ahmedabad Cloud Native Vadodara
 
-10
+12
 talks at conferences and meetups
 4
 countries I have spoken in
@@ -116,19 +116,19 @@ Headlamp plugins that put Flux reconciliation state and OpenCost spend in the sa
 
 (https://rushabhshah.dev/speaking/#oss-japan-2026)
 
-11 Dec 2026 · Open Compliance Summit 2026
-### A Tag Is a Lie
+10 Dec 2026 · SONiC Workshop at ONE Summit Japan 2026
+### Your Switch Config Deserves a Pull Request: Testing SONiC Changes with containerlab
 
-Approving a container image by tag approves something that can change after you approved it.
+Running on 10 and 11 December.
 
-(https://rushabhshah.dev/speaking/#open-compliance-summit-2026)
+(https://rushabhshah.dev/speaking/#one-summit-japan-2026-containerlab)
 
-9 Nov 2026 · FluxCon North America 2026
-### Your Git Repo Is Not a Backup: Kubernetes Disaster Recovery with Flux and Velero
+10 Dec 2026 · SONiC Workshop at ONE Summit Japan 2026
+### A Switch Is Just Containers: Debugging SONiC with the Tools You Already Know
 
-A cluster gets broken on purpose and brought back live with Flux and Velero.
+Running on 10 and 11 December.
 
-(https://rushabhshah.dev/speaking/#fluxcon-na-2026)
+(https://rushabhshah.dev/speaking/#one-summit-japan-2026-switch-containers)
 
 **Cities this year** 🇮🇳 🇩🇪 🇺🇸 🇯🇵 Ahmedabad · Vadodara · Munich · Salt Lake City · Tokyo [Every talk and the speaker kit](https://rushabhshah.dev/speaking/)
 
