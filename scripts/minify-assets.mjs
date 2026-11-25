@@ -8,6 +8,7 @@ import { transform } from 'esbuild';
 const FILES = [
   ['style.css', 'css'],
   ['assets/theme.js', 'js'],
+  ['assets/count.js', 'js'],
 ];
 
 for (const [file, loader] of FILES) {

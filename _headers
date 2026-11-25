@@ -29,3 +29,7 @@
 /assets/theme.js
   ! Cache-Control
   Cache-Control: public, max-age=31536000, immutable
+
+/assets/count.js
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable

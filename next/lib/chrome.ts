@@ -17,6 +17,7 @@ export type NavKey = 'none' | 'speaking' | 'til' | 'now' | 'about';
 interface Chrome {
   cssHref: string;
   jsSrc: string;
+  countJsSrc: string;
   headers: Record<NavKey, string>;
   footer: string;
 }

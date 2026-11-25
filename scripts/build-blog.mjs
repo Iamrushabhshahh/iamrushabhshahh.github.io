@@ -55,6 +55,20 @@ const JS_VERSION = crypto
   .slice(0, 8);
 const JS_SRC = `/assets/theme.js?v=${JS_VERSION}`;
 
+/* GoatCounter's own script, vendored and fingerprinted the same way, so
+   Semrush (or anything else) stops flagging it as an unminified third-party
+   file: scripts/minify-assets.mjs minifies the deployed copy in place, just
+   like it does for theme.js. The committed copy here stays the readable
+   upstream source, re-downloaded by hand from https://gc.zgo.at/count.js
+   when GoatCounter ships a change worth picking up; this is a vendored copy,
+   not a live mirror, so it will not pick up their updates on its own. */
+const COUNT_JS_VERSION = crypto
+  .createHash('sha1')
+  .update(fs.readFileSync(path.join(ROOT, 'assets', 'count.js')))
+  .digest('hex')
+  .slice(0, 8);
+const COUNT_JS_SRC = `/assets/count.js?v=${COUNT_JS_VERSION}`;
+
 /* Hand-authored pages hold their own <script> tag, so the fingerprint above
    only reaches generated output unless something rewrites them. Stamping it
    here rather than by hand is the whole point: the first version of this fix
@@ -63,7 +77,9 @@ const JS_SRC = `/assets/theme.js?v=${JS_VERSION}`;
    again. Anything derived from a file's contents has to be derived on every
    build, not pasted once. */
 const stampAssets = (html) =>
-  html.replace(/\/assets\/theme\.js(\?v=[a-f0-9]+)?/g, JS_SRC);
+  html
+    .replace(/\/assets\/theme\.js(\?v=[a-f0-9]+)?/g, JS_SRC)
+    .replace(/https:\/\/gc\.zgo\.at\/count\.js|\/assets\/count\.js(\?v=[a-f0-9]+)?/g, COUNT_JS_SRC);
 const POSTS_DIR = path.join(ROOT, 'content', 'posts');
 const OUT_DIR = path.join(ROOT, 'blog');
 const SITE = 'https://rushabhshah.dev';
@@ -112,6 +128,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/',
     format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
     priceList: 445, priceDiscounted: 311, prerequisite: null,
+    guidePost: { href: '/blog/cka-exam-guide/', label: 'What the CKA actually tests in 2026' },
     audience: 'Ops, platform engineering, and SRE roles who run Kubernetes clusters day to day.',
     topics: [
       'Cluster architecture, installation, and configuration',
@@ -141,6 +158,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/',
     format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
     priceList: 445, priceDiscounted: 311, prerequisite: null,
+    guidePost: { href: '/blog/cka-vs-ckad-vs-cks/', label: 'CKA vs CKAD vs CKS: which to take first' },
     audience: 'Developers who build and deploy applications to Kubernetes, without administering the underlying cluster.',
     topics: [
       'Application design and build',
@@ -169,6 +187,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/',
     format: 'Performance-based (live terminal, real cluster)', duration: '2 hours',
     priceList: 445, priceDiscounted: 311, prerequisite: 'an active CKA certification',
+    guidePost: { href: '/blog/cka-vs-ckad-vs-cks/', label: 'CKA vs CKAD vs CKS: which to take first' },
     audience: 'Security engineers and platform engineers who already hold the CKA and want the strongest Kubernetes security credential available.',
     topics: [
       'Cluster setup and hardening',
@@ -197,6 +216,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/',
     format: 'Multiple choice', duration: '90 minutes',
     priceList: 250, priceDiscounted: 175, prerequisite: null,
+    guidePost: { href: '/blog/kcna-worth-it/', label: 'Is KCNA worth $250 as a first certification' },
     audience: 'Students, career-changers, and anyone moving into cloud-native from another field who wants a beginner-friendly starting point.',
     topics: [
       'Kubernetes fundamentals',
@@ -283,6 +303,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/kubestronaut-bundle/',
     format: 'Bundle of 5 exams (2 multiple-choice, 3 performance-based)', duration: 'Varies per exam',
     priceList: 1645, priceDiscounted: 1151, prerequisite: 'CKS specifically requires an active CKA',
+    guidePost: { href: '/blog/kubestronaut-path-cost/', label: 'The Kubestronaut path and what it really costs' },
     isBundle: true,
     audience: 'Engineers pursuing official Kubestronaut recognition from CNCF, or anyone who\'s decided to complete the full Kubernetes certification track.',
     topics: [
@@ -744,6 +765,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/prometheus-certified-associate/',
     format: 'Multiple choice', duration: '90 minutes',
     priceList: 250, priceDiscounted: 175, prerequisite: null,
+    guidePost: { href: '/blog/pca-otca-review/', label: 'Prometheus PCA and OpenTelemetry OTCA, reviewed' },
     audience: 'Engineers and application developers with a specific interest in monitoring. Ideal candidates already hold a Kubernetes cert like KCNA, CKA, or CKAD, or have completed a cloud engineer bootcamp.',
     topics: [
       'Observability Concepts',
@@ -772,6 +794,7 @@ const CERT_PAGES = [
     dest: 'https://training.linuxfoundation.org/certification/opentelemetry-certified-associate-otca/',
     format: 'Multiple choice', duration: '90 minutes',
     priceList: 250, priceDiscounted: 175, prerequisite: null,
+    guidePost: { href: '/blog/pca-otca-review/', label: 'Prometheus PCA and OpenTelemetry OTCA, reviewed' },
     audience: 'Engineers working in DevOps or platform roles who want to prove observability expertise using OpenTelemetry, the vendor-neutral standard for traces, metrics, and logs.',
     topics: [
       'Fundamentals of Observability',
@@ -1531,6 +1554,7 @@ const footer = `${footerBody}
     fs.writeFileSync(chromePath, JSON.stringify({
       cssHref: CSS_HREF,
       jsSrc: JS_SRC,
+      countJsSrc: COUNT_JS_SRC,
       headers: Object.fromEntries(['', 'speaking', 'til', 'now', 'about'].map(k => [k || 'none', makeHeader(k)])),
       footer: footerBody,
     }));
@@ -2770,6 +2794,7 @@ ${saleBannerHtml(c)}
                     <a href="${awinLink(c.dest, `site-${c.slug}-intro`)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
                     and the ${escapeHtml(c.fullName)}${c.isBundle ? '' : ` (${escapeHtml(c.name)}) exam`} drops from $${c.priceList} to about $${c.priceDiscounted}, a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
                 </p>
+                ${c.guidePost ? `<p><a href="${c.guidePost.href}"><strong>${escapeHtml(c.guidePost.label)} &rarr;</strong></a></p>` : ''}
 
                 <h2 id="quick-facts">Quick facts</h2>
                 <table>
@@ -3309,7 +3334,6 @@ function couponsHubHtml() {
   const title = pageTitle(`Certification Discount Codes (${MONTH_YEAR_SHORT}): LF & FinOps Deals`);
   const description = `Two partner codes: RUSHABH30 for 30% off Linux Foundation and CNCF exams, ${FINOPS_CODE} for ${FINOPS_PCT}% off FinOps Foundation certifications.`;
   const dateModified = gitLastMod('coupons/index.html') || now.toISOString().slice(0, 10);
-  const cheapestLF = CERT_PAGES.reduce((a, b) => (b.priceDiscounted < a.priceDiscounted ? b : a));
   const cheapestFin = FINOPS_PAGES.reduce((a, b) => (b.priceList < a.priceList ? b : a));
 
   const jsonLd = [
@@ -3393,14 +3417,13 @@ function couponsHubHtml() {
                     common thing people email me about.
                 </p>
 
-                <h2 id="lf">Linux Foundation &amp; CNCF: 30% off with RUSHABH30</h2>
+                <h2 id="lf">Linux Foundation &amp; CNCF</h2>
                 <p>
-                    This is the big catalog: every Kubernetes certification, the CNCF associate exams, LFCS and LFCA,
-                    the self-paced courses, and the Kubestronaut and Golden Kubestronaut bundles. The code is evergreen
-                    with no expiry, and it works on course + exam bundles as well as bare exams, which is usually the
-                    better buy. The cheapest way in is ${escapeHtml(cheapestLF.name)} at about $${cheapestLF.priceDiscounted}.
+                    RUSHABH30 covers the full training.linuxfoundation.org catalog: every Kubernetes certification, the
+                    CNCF associate exams, LFCS and LFCA, and the Kubestronaut and Golden Kubestronaut bundles.
+                    Evergreen, no expiry.
                 </p>
-                <p><a href="/linux-foundation-coupon/"><strong>Full pricing across the catalog, per-exam guides and the sale archive &rarr;</strong></a></p>
+                <p><a href="/linux-foundation-coupon/"><strong>Linux Foundation coupon code: full pricing and per-exam guides &rarr;</strong></a></p>
 
                 <h2 id="finops">FinOps Foundation: ${FINOPS_PCT}% off with ${FINOPS_CODE}</h2>
                 <p>

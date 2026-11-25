@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href={chrome.cssHref} />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
         <link rel="alternate" type="application/rss+xml" title="Rushabh Shah · Blog" href={`${SITE_URL}/blog/rss.xml`} />
-        <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src="https://gc.zgo.at/count.js" />
+        <script data-goatcounter="https://rushabhshah.goatcounter.com/count" async src={chrome.countJsSrc} />
       </head>
       <body>{children}</body>
     </html>
