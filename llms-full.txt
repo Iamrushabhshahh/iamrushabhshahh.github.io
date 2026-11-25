@@ -2355,7 +2355,7 @@ every star is a project I've contributed to. hover one.
 
 # Rushabh Shah is **an open source educator**
 
-I build, teach and speak about **open source infrastructure**. I translated ebpf.io into Hindi, I co-organize meetups in Ahmedabad, and my next talks are at FluxCon in Salt Lake City and two events in Tokyo.
+I build, teach and speak about **open source infrastructure**. I translated ebpf.io into Hindi, I co-organize meetups in Ahmedabad, and I spoke at FluxCon in Salt Lake City in November, and my next talks are in Tokyo in December.
 
 [Invite me to speak](https://rushabhshah.dev/speaking/)[Read the blog](https://rushabhshah.dev/blog/)[R&eacute;sum&eacute;](https://rushabhshah.dev/assets/rushabh-shah-resume.pdf)
 
@@ -2397,7 +2397,7 @@ ebpf.io/hi-in 59% cost cut fintech compliance
 2026
 ### Docker Captain, Grafana Champion, a global stage
 
-Selected as a Docker Captain and a Grafana Champion. My talks started getting accepted outside India: a talk at PromCon EU in Munich, then FluxCon in Salt Lake City and two talks in Tokyo. Spoke in Vadodara, and started building courses.
+Selected as a Docker Captain and a Grafana Champion. My talks started getting accepted outside India: a talk at PromCon EU in Munich, FluxCon in Salt Lake City, then talks in Tokyo in December. Spoke in Vadodara, and started building courses.
 Docker Captain Grafana Champion Tokyo &times; 2
 
 Open source
