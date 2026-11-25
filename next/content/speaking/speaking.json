@@ -20,6 +20,44 @@
       }
     },
     {
+      "slug": "one-summit-japan-2026-containerlab",
+      "title": "Your Switch Config Deserves a Pull Request: Testing SONiC Changes with containerlab",
+      "kind": "workshop",
+      "event": "SONiC Workshop at ONE Summit Japan 2026",
+      "organizer": "LF Networking, SONiC Foundation",
+      "start": "2026-12-10T13:15:00+09:00",
+      "endDate": "2026-12-11",
+      "venue": "SONiC Booth",
+      "city": "Tokyo",
+      "country": "Japan",
+      "coSpeakers": [
+        "Manas Sharma"
+      ],
+      "abstract": "Running on 10 and 11 December. A hands-on look at testing SONiC switch configuration changes against containerlab before they ever touch real hardware.",
+      "links": {
+        "event": "https://sonicfoundation.dev/events/2026-12-10/"
+      }
+    },
+    {
+      "slug": "one-summit-japan-2026-switch-containers",
+      "title": "A Switch Is Just Containers: Debugging SONiC with the Tools You Already Know",
+      "kind": "workshop",
+      "event": "SONiC Workshop at ONE Summit Japan 2026",
+      "organizer": "LF Networking, SONiC Foundation",
+      "start": "2026-12-10T16:00:00+09:00",
+      "endDate": "2026-12-11",
+      "venue": "SONiC Booth",
+      "city": "Tokyo",
+      "country": "Japan",
+      "coSpeakers": [
+        "Manas Sharma"
+      ],
+      "abstract": "Running on 10 and 11 December. SONiC runs as containers under the hood, so the debugging tools engineers already know for any containerized app apply directly to a switch.",
+      "links": {
+        "event": "https://sonicfoundation.dev/events/2026-12-10/"
+      }
+    },
+    {
       "slug": "oss-japan-2026",
       "title": "Closing the Ma (間): Filling the Gaps in Kubernetes Visibility with Headlamp",
       "kind": "talk",
