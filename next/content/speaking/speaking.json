@@ -16,7 +16,8 @@
       ],
       "abstract": "A cluster gets broken on purpose and brought back live with Flux and Velero. Git gives you your manifests back. It does not give you your database volumes or your secrets, and that gap is where most recovery plans quietly fail.",
       "links": {
-        "session": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1269417"
+        "session": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1269417",
+        "video": "https://www.youtube.com/watch?v=2SkFXK_NLKY"
       }
     },
     {
