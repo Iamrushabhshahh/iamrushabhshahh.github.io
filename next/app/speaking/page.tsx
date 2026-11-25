@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Mail, Mic, Quote } from 'lucide-react';
-import { person, SITE_URL } from '@/lib/site';
+import { defaultOgImage, person, SITE_URL } from '@/lib/site';
 import { speaking, stats } from '@/lib/speaking';
 import { endsAt, ymd } from '@/lib/engagement';
 import { SiteShell } from '@/components/site/SiteShell';
@@ -16,8 +16,19 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}${PATH}` },
-  openGraph: { title: `${TITLE} · ${person.name}`, description: DESCRIPTION, url: `${SITE_URL}${PATH}`, type: 'profile' },
-  twitter: { card: 'summary', title: `${TITLE} · ${person.name}`, description: DESCRIPTION },
+  openGraph: {
+    title: `${TITLE} · ${person.name}`,
+    description: DESCRIPTION,
+    url: `${SITE_URL}${PATH}`,
+    type: 'profile',
+    images: [defaultOgImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${TITLE} · ${person.name}`,
+    description: DESCRIPTION,
+    images: [defaultOgImage.url],
+  },
 };
 
 /** Build time. The timeline re-checks against the reader's clock after load. */
@@ -49,6 +60,7 @@ export default function SpeakingPage() {
           path={PATH}
           name={`${TITLE} · ${person.name}`}
           description={DESCRIPTION}
+          image={defaultOgImage.url}
           breadcrumb={[
             { name: 'Home', path: '/' },
             { name: 'Speaking', path: PATH },

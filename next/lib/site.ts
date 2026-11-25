@@ -12,6 +12,18 @@
 export const SITE_URL = 'https://rushabhshah.dev';
 export const PERSON_ID = `${SITE_URL}/#person`;
 
+/**
+ * Shared social-preview image for the Next routes that have no page-specific
+ * one of their own. Same asset and alt text the generator falls back to for
+ * the homepage (../scripts/build-blog.mjs), so a share card is never blank.
+ */
+export const defaultOgImage = {
+  url: `${SITE_URL}/assets/og-image.jpg`,
+  width: 1200,
+  height: 630,
+  alt: 'Rushabh Shah — DevOps Engineer, Docker Captain, Grafana Champion',
+};
+
 export const person = {
   name: 'Rushabh Shah',
   jobTitle: 'DevOps Engineer',

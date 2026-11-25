@@ -9,17 +9,26 @@ import { speaking, stats } from '@/lib/speaking';
 import { AV_REQUIREMENTS, BOOKING_URL, PRESS_DIR, PRESS_PHOTOS, PRESS_ZIP } from '@/lib/speakerKit';
 import { SiteShell } from '@/components/site/SiteShell';
 import { CopyButton } from '@/components/speaker/CopyButton';
-import { ItemPageSchema } from '@/components/SEO/StructuredData';
+import { ItemPageSchema, PersonSchema } from '@/components/SEO/StructuredData';
 
 const TITLE = 'Speaker kit';
 const DESCRIPTION =
   'Rushabh Shah speaker kit for organisers: pre-approved bios in three lengths, headshots and full-length photos, background-removed cut-outs, talk topics and stage requirements, all downloadable in one zip.';
 
+/** The one landscape press photo, at the aspect ratio a share card actually wants. */
+const KIT_OG_IMAGE = {
+  url: `${SITE_URL}${PRESS_DIR}rushabh-shah-landscape.jpg`,
+  width: 900,
+  height: 600,
+  alt: 'Rushabh Shah, landscape press photo',
+};
+
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/speaker-kit/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/speaker-kit/` },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/speaker-kit/`, images: [KIT_OG_IMAGE] },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [KIT_OG_IMAGE.url] },
 };
 
 /** File sizes are read at build time, so the labels never go stale. */
@@ -105,10 +114,12 @@ export default function SpeakerKitPage() {
   return (
     <SiteShell active="speaking">
       <main id="main" className="container mx-auto px-6 pb-20 pt-8">
+        <PersonSchema />
         <ItemPageSchema
           path="/speaker-kit/"
           name={TITLE}
           description={DESCRIPTION}
+          image={KIT_OG_IMAGE.url}
           breadcrumb={[
             { name: 'Home', path: '/' },
             { name: 'Speaking', path: '/speaking/' },

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { SITE_URL } from '@/lib/site';
+import { defaultOgImage, SITE_URL } from '@/lib/site';
 import { fmtDay, gameList } from '@/lib/journal';
 import { SiteShell } from '@/components/site/SiteShell';
 import { EmptyShelf, ShelfHeader, ShelfItem, ShelfSection } from '@/components/journal/Shelf';
+import { ItemPageSchema } from '@/components/SEO/StructuredData';
 
 const TITLE = 'Games';
 const DESCRIPTION = 'What Rushabh Shah is playing, has finished, and wants to play next.';
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/games/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/games/` },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/games/`, images: [defaultOgImage] },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [defaultOgImage.url] },
   ...(gameList.length === 0 ? { robots: { index: false, follow: true } } : {}),
 };
 
@@ -27,6 +29,16 @@ export default function GamesPage() {
   return (
     <SiteShell active="now">
       <main id="main" className="container mx-auto px-6 py-16">
+        <ItemPageSchema
+          path="/games/"
+          name={TITLE}
+          description={DESCRIPTION}
+          image={defaultOgImage.url}
+          breadcrumb={[
+            { name: 'Home', path: '/' },
+            { name: 'Games', path: '/games/' },
+          ]}
+        />
         <ShelfHeader title={TITLE} intro="The off switch. What I am playing, what I finished, and the backlog that never shrinks." />
         {gameList.length === 0 && <EmptyShelf what="games" />}
         <ShelfSection id="playing" title="Playing now" empty={playing.length === 0}>

@@ -253,7 +253,11 @@
   "robots": "",
   "title": "Certifications · Rushabh Shah",
   "description": "Certifications Rushabh Shah holds, each linked to the issuer for verification, plus the ones in progress and planned next.",
-  "ldTypes": []
+  "ldTypes": [
+   "BreadcrumbList",
+   "ItemPage",
+   "ListItem"
+  ]
  },
  "/coupons/": {
   "canonical": "https://rushabhshah.dev/coupons/",
@@ -392,7 +396,11 @@
   "robots": "",
   "title": "Games · Rushabh Shah",
   "description": "What Rushabh Shah is playing, has finished, and wants to play next.",
-  "ldTypes": []
+  "ldTypes": [
+   "BreadcrumbList",
+   "ItemPage",
+   "ListItem"
+  ]
  },
  "/go/capa/": {
   "canonical": "https://rushabhshah.dev/linux-foundation-coupon/",
@@ -1203,7 +1211,11 @@
   "robots": "",
   "title": "Reading · Rushabh Shah",
   "description": "Books Rushabh Shah is reading, has finished, and has queued up next, with short notes on each.",
-  "ldTypes": []
+  "ldTypes": [
+   "BreadcrumbList",
+   "ItemPage",
+   "ListItem"
+  ]
  },
  "/speaker-kit/": {
   "canonical": "https://rushabhshah.dev/speaker-kit/",
@@ -1212,8 +1224,12 @@
   "description": "Rushabh Shah speaker kit for organisers: pre-approved bios in three lengths, headshots and full-length photos, background-removed cut-outs, talk topics and stage requirements, all downloadable in one zip.",
   "ldTypes": [
    "BreadcrumbList",
+   "EducationalOccupationalCredential",
    "ItemPage",
-   "ListItem"
+   "ListItem",
+   "Organization",
+   "Person",
+   "PostalAddress"
   ]
  },
  "/speaking/": {
@@ -1229,7 +1245,8 @@
    "Organization",
    "Place",
    "PostalAddress",
-   "ProfilePage"
+   "ProfilePage",
+   "VideoObject"
   ]
  },
  "/til/": {

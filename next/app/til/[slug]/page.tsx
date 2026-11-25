@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { PERSON_ID, SITE_URL } from '@/lib/site';
+import { defaultOgImage, PERSON_ID, SITE_URL } from '@/lib/site';
 import { fmtDay, tils } from '@/lib/journal';
 import { SiteShell } from '@/components/site/SiteShell';
 import { ItemPageSchema } from '@/components/SEO/StructuredData';
@@ -28,7 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `TIL: ${t.title}`,
     description,
     alternates: { canonical: url },
-    openGraph: { title: t.title, description, url, type: 'article', publishedTime: t.date },
+    openGraph: { title: t.title, description, url, type: 'article', publishedTime: t.date, images: [defaultOgImage] },
+    twitter: { card: 'summary_large_image', title: t.title, description, images: [defaultOgImage.url] },
   };
 }
 
@@ -46,6 +47,7 @@ export default async function TilEntry({ params }: Props) {
           path={t.permalink}
           name={t.title}
           description={(t.takeaways[0] ?? t.excerpt).replace(/`/g, '')}
+          image={defaultOgImage.url}
           breadcrumb={[
             { name: 'Home', path: '/' },
             { name: 'TIL', path: '/til/' },

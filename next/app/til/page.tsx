@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { SITE_URL } from '@/lib/site';
+import { defaultOgImage, SITE_URL } from '@/lib/site';
 import { tils } from '@/lib/journal';
 import { SiteShell } from '@/components/site/SiteShell';
 import { TilList } from '@/components/journal/TilList';
@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/til/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/til/` },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/til/`, images: [defaultOgImage] },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [defaultOgImage.url] },
 };
 
 export default function TilPage() {
@@ -24,6 +25,7 @@ export default function TilPage() {
           path="/til/"
           name={TITLE}
           description={DESCRIPTION}
+          image={defaultOgImage.url}
           breadcrumb={[
             { name: 'Home', path: '/' },
             { name: 'TIL', path: '/til/' },

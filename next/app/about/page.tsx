@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import upstream from '@/content/contributions/upstream.json';
 import k8sHindi from '@/content/contributions/kubernetes-hindi.json';
-import { SITE_URL, bios, credentials, person } from '@/lib/site';
+import { defaultOgImage, SITE_URL, bios, credentials, person } from '@/lib/site';
 import { certs } from '@/lib/certs';
 import { speaking, stats as speakingStats } from '@/lib/speaking';
 import { SiteShell } from '@/components/site/SiteShell';
@@ -15,7 +15,8 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/about/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/about/` },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/about/`, images: [defaultOgImage] },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [defaultOgImage.url] },
 };
 
 /**
@@ -117,6 +118,7 @@ export default function AboutPage() {
           path="/about/"
           name={TITLE}
           description={DESCRIPTION}
+          image={defaultOgImage.url}
           breadcrumb={[
             { name: 'Home', path: '/' },
             { name: 'About', path: '/about/' },

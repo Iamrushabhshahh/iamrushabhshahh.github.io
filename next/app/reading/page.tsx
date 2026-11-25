@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { SITE_URL } from '@/lib/site';
+import { defaultOgImage, SITE_URL } from '@/lib/site';
 import { bookList, fmtDay } from '@/lib/journal';
 import { SiteShell } from '@/components/site/SiteShell';
 import { EmptyShelf, ShelfHeader, ShelfItem, ShelfSection } from '@/components/journal/Shelf';
+import { ItemPageSchema } from '@/components/SEO/StructuredData';
 
 const TITLE = 'Reading';
 const DESCRIPTION = 'Books Rushabh Shah is reading, has finished, and has queued up next, with short notes on each.';
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/reading/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/reading/` },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/reading/`, images: [defaultOgImage] },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [defaultOgImage.url] },
   // An empty shelf is a thin page. Keep it out of the index until it has books.
   ...(bookList.length === 0 ? { robots: { index: false, follow: true } } : {}),
 };
@@ -26,6 +28,16 @@ export default function ReadingPage() {
   return (
     <SiteShell active="now">
       <main id="main" className="container mx-auto px-6 py-16">
+        <ItemPageSchema
+          path="/reading/"
+          name={TITLE}
+          description={DESCRIPTION}
+          image={defaultOgImage.url}
+          breadcrumb={[
+            { name: 'Home', path: '/' },
+            { name: 'Reading', path: '/reading/' },
+          ]}
+        />
         <ShelfHeader title={TITLE} intro="What I am reading, what I finished, and what is next. Short notes, honest ratings." />
         {bookList.length === 0 && <EmptyShelf what="books" />}
         <ShelfSection id="reading-now" title="Reading now" empty={reading.length === 0}>

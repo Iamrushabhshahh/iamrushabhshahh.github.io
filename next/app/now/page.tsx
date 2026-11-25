@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
-import { SITE_URL } from '@/lib/site';
+import { defaultOgImage, SITE_URL } from '@/lib/site';
 import { speaking } from '@/lib/speaking';
 import { endsAt, formatWhen, isStage, startsAt } from '@/lib/engagement';
 import { certs } from '@/lib/certs';
@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/now/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/now/` },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/now/`, images: [defaultOgImage] },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [defaultOgImage.url] },
 };
 
 const BUILT_AT = Date.now();
@@ -58,6 +59,7 @@ export default function NowPage() {
           path="/now/"
           name={TITLE}
           description={DESCRIPTION}
+          image={defaultOgImage.url}
           breadcrumb={[
             { name: 'Home', path: '/' },
             { name: 'Now', path: '/now/' },

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { BadgeCheck, CircleDashed, Hourglass } from 'lucide-react';
-import { SITE_URL } from '@/lib/site';
+import { defaultOgImage, SITE_URL } from '@/lib/site';
 import { certs } from '@/lib/certs';
 import { fmtDay } from '@/lib/journal';
 import { SiteShell } from '@/components/site/SiteShell';
+import { ItemPageSchema } from '@/components/SEO/StructuredData';
 
 const TITLE = 'Certifications';
 const DESCRIPTION =
@@ -13,7 +14,8 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/certs/` },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/certs/` },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/certs/`, images: [defaultOgImage] },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [defaultOgImage.url] },
 };
 
 const target = (t?: string) =>
@@ -36,6 +38,17 @@ export default function CertsPage() {
   return (
     <SiteShell active="now">
       <main id="main" className="container mx-auto px-6 py-16">
+        <ItemPageSchema
+          path="/certs/"
+          name={TITLE}
+          description={DESCRIPTION}
+          image={defaultOgImage.url}
+          breadcrumb={[
+            { name: 'Home', path: '/' },
+            { name: 'Now', path: '/now/' },
+            { name: 'Certifications', path: '/certs/' },
+          ]}
+        />
         <header className="mb-12 max-w-3xl">
           <p className="mb-3 font-fira text-sm">
             <a href="/now/" className="text-muted hover:text-primary">
