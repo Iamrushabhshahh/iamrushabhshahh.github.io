@@ -1,6 +1,7 @@
 ---
-updated: 2026-10-09
+updated: 2026-11-25
 focus:
-  - Building the live disaster recovery demo for FluxCon in Salt Lake City on 9 November.
-  - Preparing two talks for Tokyo in December, one with Japanese slides.
+  - Preparing my December talks in Tokyo, one with Japanese slides.
+  - Writing up the FluxCon disaster recovery demo as a blog post, with the recording.
+  - Posting on LinkedIn and X most days.
 ---
