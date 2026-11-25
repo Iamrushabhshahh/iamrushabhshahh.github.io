@@ -237,6 +237,9 @@ content:
               - { name: video, label: Recording (https), type: string }
               - { name: repo, label: Demo code (https), type: string }
               - { name: post, label: Write-up (/blog/... or https), type: string }
+          - { name: videoTitle, label: "Recording: exact video title on YouTube (required if Recording is set)", type: string }
+          - { name: videoUploadDate, label: "Recording: upload date (required if Recording is set)", type: date, options: { format: yyyy-MM-dd } }
+          - { name: videoThumbnail, label: "Recording: thumbnail URL, e.g. https://i.ytimg.com/vi/<id>/maxresdefault.jpg (required if Recording is set)", type: string }
           - { name: rsvps, label: Meetup RSVPs, type: number }
           - { name: attendees, label: Counted attendance, type: number }
       - name: roles

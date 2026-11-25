@@ -18,7 +18,10 @@
       "links": {
         "session": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1269417",
         "video": "https://www.youtube.com/watch?v=2SkFXK_NLKY"
-      }
+      },
+      "videoTitle": "Your Git Repo Is Not a Backup: Kubernetes Disaster Recovery with... Rushabh Shah & Shivani Rathod",
+      "videoUploadDate": "2026-11-19",
+      "videoThumbnail": "https://i.ytimg.com/vi/2SkFXK_NLKY/maxresdefault.jpg"
     },
     {
       "slug": "one-summit-japan-2026-containerlab",
@@ -110,7 +113,10 @@
       "links": {
         "session": "https://promcon.io/2026-munich/talks/from-buckets-to-native-histograms-lessons-from-a-production-migration/",
         "video": "https://www.youtube.com/watch?v=hQic5lvKCNg"
-      }
+      },
+      "videoTitle": "From Buckets to Native Histograms: Lessons from a Production Migrat... Shivani Rathod & Rushabh Shah",
+      "videoUploadDate": "2026-11-02",
+      "videoThumbnail": "https://i.ytimg.com/vi/hQic5lvKCNg/maxresdefault.jpg"
     },
     {
       "slug": "kcd-gujarat-2026",

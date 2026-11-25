@@ -162,6 +162,16 @@ export const engagementSchema = z.object({
       post: linkUrl.optional(),
     })
     .default({}),
+  /**
+   * schema.org VideoObject requires name, uploadDate and thumbnailUrl, so a
+   * recording link with none of these got a Google Search Console error
+   * (the exact incident this triples guards against). Filled in only when
+   * links.video is; the component omits the whole VideoObject rather than
+   * emit a second incomplete one if any of the three is ever missing.
+   */
+  videoTitle: prose(200).optional(),
+  videoUploadDate: isoDate.optional(),
+  videoThumbnail: httpsUrl.optional(),
   /** Meetup RSVPs. Shown as RSVPs, never as attendance. */
   rsvps: z.number().int().positive().optional(),
   /** Counted attendance, only when someone in the room counted. */

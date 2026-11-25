@@ -126,7 +126,22 @@ export function SpeakingSchema({ engagements, path }: { engagements: Engagement[
               },
               performer: { '@id': PERSON_ID },
               ...(e.links.session || e.links.event ? { url: abs((e.links.session ?? e.links.event)!) } : {}),
-              ...(e.links.video ? { recordedIn: { '@type': 'VideoObject', contentUrl: e.links.video } } : {}),
+              // Google requires name, uploadDate and thumbnailUrl on a VideoObject.
+              // Emitting one without them is what produced the "2 invalid video
+              // items" error, so the whole node is left out unless all three
+              // are on file, rather than repeat that half-filled-in mistake.
+              ...(e.links.video && e.videoTitle && e.videoUploadDate && e.videoThumbnail
+                ? {
+                    recordedIn: {
+                      '@type': 'VideoObject',
+                      name: e.videoTitle,
+                      description: e.abstract ?? e.videoTitle,
+                      contentUrl: e.links.video,
+                      uploadDate: e.videoUploadDate,
+                      thumbnailUrl: e.videoThumbnail,
+                    },
+                  }
+                : {}),
             };
           }),
         },
