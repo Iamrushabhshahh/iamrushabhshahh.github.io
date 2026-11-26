@@ -2159,8 +2159,11 @@ const NEXT_ROUTES = [
 const TIL_DIR = path.join(ROOT, 'next', 'content', 'til');
 const NEXT_SITEMAP = fs.existsSync(TIL_DIR) ? [
   ...NEXT_ROUTES
-    // A shelf with no entries renders noindex, so it stays out of the sitemap too.
-    .filter(([, , , src]) => !['reading', 'games'].some(d => src.endsWith(d)) || fs.readdirSync(path.join(ROOT, src)).some(f => f.endsWith('.md')))
+    // /games/ is always noindexed (a personal shelf, not search content) and
+    // never belongs in the sitemap. /reading/ with no entries renders
+    // noindex too, so it stays out while empty.
+    .filter(([p]) => p !== '/games/')
+    .filter(([, , , src]) => !src.endsWith('reading') || fs.readdirSync(path.join(ROOT, src)).some(f => f.endsWith('.md')))
     .map(([p, priority, changefreq, src]) => ({ loc: `${SITE}${p}`, priority, changefreq, lastmod: gitLastMod(src) })),
   ...fs.readdirSync(TIL_DIR).filter(f => f.endsWith('.md')).flatMap(f => {
     const fm = fs.readFileSync(path.join(TIL_DIR, f), 'utf8').match(/^---\n([\s\S]*?)\n---/);
@@ -2179,7 +2182,8 @@ const sitemapUrls = [
   { loc: `${SITE}/finops-coupon/`, priority: '0.9', changefreq: 'weekly', lastmod: gitLastMod('finops-coupon/index.html') },
   ...FINOPS_PAGES.map(f => ({ loc: `${SITE}/finops-coupon/${f.slug}/`, priority: '0.8', changefreq: 'weekly', lastmod: gitLastMod(`finops-coupon/${f.slug}/index.html`) })),
   { loc: `${SITE}/docker-captain/`, priority: '0.7', changefreq: 'monthly', lastmod: gitLastMod('docker-captain/index.html') },
-  { loc: `${SITE}/links/`, priority: '0.5', changefreq: 'monthly', lastmod: gitLastMod('links/index.html') },
+  // /links/ is noindexed (a link-in-bio page, not search content) and left
+  // out of the sitemap to match.
   { loc: `${SITE}/privacy/`, priority: '0.2', changefreq: 'yearly', lastmod: gitLastMod('privacy/index.html') },
   ...NEXT_SITEMAP,
   ...all.map(p => ({ loc: `${SITE}/blog/${p.slug}/`, priority: '0.8', lastmod: isoDate(p.updated).slice(0, 10) })),

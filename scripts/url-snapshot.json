@@ -393,7 +393,7 @@
  },
  "/games/": {
   "canonical": "https://rushabhshah.dev/games/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Games · Rushabh Shah",
   "description": "What Rushabh Shah is playing, has finished, and wants to play next.",
   "ldTypes": [
@@ -404,7 +404,7 @@
  },
  "/links/": {
   "canonical": "https://rushabhshah.dev/links/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "Links · Rushabh Shah",
   "description": "All of Rushabh Shah's links in one place: invite him to speak, the speaker kit, blog, newsletter, socials, community profiles and certification codes.",
   "ldTypes": []

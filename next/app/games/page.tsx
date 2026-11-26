@@ -14,7 +14,9 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/games/` },
   openGraph: { title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/games/`, images: [defaultOgImage] },
   twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: [defaultOgImage.url] },
-  ...(gameList.length === 0 ? { robots: { index: false, follow: true } } : {}),
+  // A personal shelf page, not something searched for: noindexed regardless
+  // of how many entries are on it, not just while it's empty.
+  robots: { index: false, follow: true },
 };
 
 export default function GamesPage() {
