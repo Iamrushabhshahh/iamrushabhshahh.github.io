@@ -1416,7 +1416,6 @@ const head = ({ title, description, url, ogType = 'website', published, updated,
     <meta property="article:modified_time" content="${isoDate(updated)}">
     <meta property="article:author" content="${AUTHOR}">
     ${(tags || []).map(t => `<meta property="article:tag" content="${escapeHtml(t)}">`).join('\n    ')}` : ''}
-    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/clash-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="${CSS_HREF}">
@@ -2760,7 +2759,6 @@ function certPageHtml(c, siblings) {
     <meta name="twitter:description" content="${escapeHtml(description)}">
     <meta name="twitter:image" content="${SITE}/assets/og-lf-coupon.jpg">
 
-    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/clash-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
     <style data-inline-css>${cssMin}</style>
@@ -2942,7 +2940,6 @@ const finopsHead = ({ title, description, url, ogImage = `${SITE}/assets/og-fino
     <meta name="twitter:description" content="${escapeHtml(description)}">
     <meta name="twitter:image" content="${ogImage}">
 
-    <link rel="preconnect" href="https://gc.zgo.at" crossorigin>
     <link rel="preload" href="/assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/clash-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
     <style data-inline-css>${cssMin}</style>
