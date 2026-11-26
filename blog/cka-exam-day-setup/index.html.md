@@ -1,6 +1,6 @@
 # CKA exam day: PSI bridge, terminal, kubectl aliases
 
-> The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.
+> The logistics nobody mentions until exam day: PSI Secure Browser setup, what the terminal gives you, kubectl aliases worth memorizing, and managing the clock.
 
 Published: 2026-08-28 · Updated: 2026-08-28 · Tags: kubernetes, certification
 Canonical: https://rushabhshah.dev/blog/cka-exam-day-setup/

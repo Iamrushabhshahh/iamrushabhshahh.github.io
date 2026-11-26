@@ -1,6 +1,6 @@
 # CKA vs CKAD vs CKS: which to take first
 
-> CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who each one is for and what order makes sense.
+> CKA, CKAD and CKS share the same live-terminal format and $445 price tag but certify very different jobs. Who each is for, and what order makes sense.
 
 Published: 2026-08-20 · Updated: 2026-08-20 · Tags: kubernetes, certification
 Canonical: https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/

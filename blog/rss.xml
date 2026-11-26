@@ -28,7 +28,7 @@
       <link>https://rushabhshah.dev/blog/pca-otca-review/</link>
       <guid isPermaLink="true">https://rushabhshah.dev/blog/pca-otca-review/</guid>
       <pubDate>Sun, 30 Aug 2026 03:30:00 GMT</pubDate>
-      <description>Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here&#39;s an honest read on both, and which to take first.</description>
+      <description>Two $250 CNCF associate exams for observability: PCA leans on PromQL, OTCA on the OpenTelemetry API. An honest read on both, and which to take first.</description>
       <category>kubernetes</category><category>certification</category>
     </item>
     <item>
@@ -36,7 +36,7 @@
       <link>https://rushabhshah.dev/blog/cka-exam-day-setup/</link>
       <guid isPermaLink="true">https://rushabhshah.dev/blog/cka-exam-day-setup/</guid>
       <pubDate>Fri, 28 Aug 2026 03:30:00 GMT</pubDate>
-      <description>The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.</description>
+      <description>The logistics nobody mentions until exam day: PSI Secure Browser setup, what the terminal gives you, kubectl aliases worth memorizing, and managing the clock.</description>
       <category>kubernetes</category><category>certification</category>
     </item>
     <item>
@@ -52,7 +52,7 @@
       <link>https://rushabhshah.dev/blog/cka-exam-guide/</link>
       <guid isPermaLink="true">https://rushabhshah.dev/blog/cka-exam-guide/</guid>
       <pubDate>Wed, 26 Aug 2026 03:30:00 GMT</pubDate>
-      <description>The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here&#39;s the format, what it actually covers, how to practice, and where people lose time.</description>
+      <description>The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. The format, what it covers, and how to practice.</description>
       <category>kubernetes</category><category>certification</category>
     </item>
     <item>
@@ -60,7 +60,7 @@
       <link>https://rushabhshah.dev/blog/kcna-worth-it/</link>
       <guid isPermaLink="true">https://rushabhshah.dev/blog/kcna-worth-it/</guid>
       <pubDate>Mon, 24 Aug 2026 03:30:00 GMT</pubDate>
-      <description>KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here&#39;s what it actually covers, and who should skip it entirely.</description>
+      <description>KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. What it covers, and who should skip it.</description>
       <category>kubernetes</category><category>certification</category>
     </item>
     <item>
@@ -68,7 +68,7 @@
       <link>https://rushabhshah.dev/blog/kubestronaut-path-cost/</link>
       <guid isPermaLink="true">https://rushabhshah.dev/blog/kubestronaut-path-cost/</guid>
       <pubDate>Sat, 22 Aug 2026 03:30:00 GMT</pubDate>
-      <description>Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here&#39;s the real cost breakdown, a realistic study timeline, and who it&#39;s actually for.</description>
+      <description>Kubestronaut means holding five CNCF certs at once: KCNA, KCSA, CKA, CKAD and CKS. The real cost breakdown, a realistic study timeline, and who it&#39;s for.</description>
       <category>kubernetes</category><category>certification</category>
     </item>
     <item>
@@ -84,7 +84,7 @@
       <link>https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/</link>
       <guid isPermaLink="true">https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/</guid>
       <pubDate>Thu, 20 Aug 2026 03:30:00 GMT</pubDate>
-      <description>CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here&#39;s who each one is for and what order makes sense.</description>
+      <description>CKA, CKAD and CKS share the same live-terminal format and $445 price tag but certify very different jobs. Who each is for, and what order makes sense.</description>
       <category>kubernetes</category><category>certification</category>
     </item>
     <item>

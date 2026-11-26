@@ -1,6 +1,6 @@
 # Prometheus PCA and OpenTelemetry OTCA, reviewed
 
-> Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.
+> Two $250 CNCF associate exams for observability: PCA leans on PromQL, OTCA on the OpenTelemetry API. An honest read on both, and which to take first.
 
 Published: 2026-08-30 · Updated: 2026-08-30 · Tags: kubernetes, certification
 Canonical: https://rushabhshah.dev/blog/pca-otca-review/

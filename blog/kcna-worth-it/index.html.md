@@ -1,6 +1,6 @@
 # Is KCNA worth $250 as a first certification
 
-> KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.
+> KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. What it covers, and who should skip it.
 
 Published: 2026-08-24 · Updated: 2026-08-24 · Tags: kubernetes, certification
 Canonical: https://rushabhshah.dev/blog/kcna-worth-it/
