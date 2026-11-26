@@ -11,7 +11,9 @@
  *   title        <title>
  *   description  <meta name="description">
  *   ldTypes      every JSON-LD @type on the page, sorted
- *   go           for /go/ short links, the meta-refresh target
+ *   go           for /go/ short links, the 302 target read from _redirects
+ *                (these are no longer pages — canonical/robots/title/
+ *                description/ldTypes don't apply and are left empty)
  *
  *   node scripts/url-snapshot.mjs --write [root]   record the baseline
  *   node scripts/url-snapshot.mjs [root]           compare against it
@@ -70,8 +72,17 @@ for (const { url, file } of pages.sort((a, b) => a.url.localeCompare(b.url))) {
     title: decode(pick(html, /<title[^>]*>([\s\S]*?)<\/title>/i)),
     description: decode(pick(html, /<meta[^>]+name="description"[^>]+content="([^"]*)"/i)),
     ldTypes: ldTypes(html),
-    ...(url.startsWith('/go/') ? { go: decode(pick(html, /http-equiv="refresh"[^>]+content="0;url=([^"]*)"/i)) } : {}),
   };
+}
+
+// /go/* no longer serve HTML pages; they 302 at the HTTP level via a
+// generated _redirects file. Read their destinations from there instead,
+// and drop/replace any stale /go/ entry the HTML walk above produced.
+const REDIRECTS_PATH = path.join(root, '_redirects');
+if (fs.existsSync(REDIRECTS_PATH)) {
+  for (const m of fs.readFileSync(REDIRECTS_PATH, 'utf8').matchAll(/^(\/go\/[^/\s]+\/)\s+(\S+)\s+\d+\s*$/gm)) {
+    snap[m[1]] = { canonical: '', robots: '', title: '', description: '', ldTypes: [], go: m[2] };
+  }
 }
 
 if (write) {
@@ -86,10 +97,11 @@ const fail = [], warn = [];
 for (const [url, b] of Object.entries(base)) {
   const n = snap[url];
   if (!n) { fail.push(`REMOVED   ${url}`); continue; }
-  // /go/sale* links are re-pointed at every sale's landing page and parked on
-  // the catalog in between, so their target changing is the point. They still
-  // fail if they disappear.
-  const keys = url.startsWith('/go/sale') ? ['canonical', 'robots'] : ['canonical', 'robots', 'go'];
+  // /go/* are redirects, not pages: canonical/robots no longer apply, only
+  // the destination matters. /go/sale* links are re-pointed at every sale's
+  // landing page and parked on the catalog in between, so their target
+  // changing is the point — they still fail if they disappear entirely.
+  const keys = url.startsWith('/go/sale') ? [] : url.startsWith('/go/') ? ['go'] : ['canonical', 'robots'];
   for (const k of keys) if ((b[k] ?? '') !== (n[k] ?? '')) fail.push(`${k.toUpperCase().padEnd(9)} ${url}\n            was: ${b[k] || '(none)'}\n            now: ${n[k] || '(none)'}`);
   const lost = b.ldTypes.filter(t => !n.ldTypes.includes(t));
   if (lost.length) fail.push(`JSON-LD   ${url} lost ${lost.join(', ')}`);

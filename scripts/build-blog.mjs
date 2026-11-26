@@ -2355,13 +2355,13 @@ const saleBannerHtml = (cert) => {
                         ${primary
                           ? `<span class="code-box">${primary.code}${copyBtn(primary.code)}</span>`
                           : `<span class="font-fira text-xs text-gray-400">No code for this one. The bundle price is already cut.</span>`}
-                        <a href="${saleLink}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">${ctaLabel}</a>
+                        <a href="${saleLink}" target="_blank" rel="noopener sponsored nofollow" class="btn btn-primary" data-goatcounter-click="cta-sale-banner" data-goatcounter-title="Live sale banner CTA">${ctaLabel}</a>
                     </div>`;
   const tierRows = !tier && primary === codes[0] && tiers?.length
     ? `<p class="text-gray-400 text-sm leading-relaxed mb-2">${escapeHtml(SALE.tiersLead || 'What the bundles cost:')}</p><ul class="text-gray-400 text-sm leading-relaxed mb-4 list-disc pl-5">${tiers.map(t => `<li>${escapeHtml(t.label)}: <s class="text-gray-500">$${t.list}</s> <strong class="text-white">$${t.sale}</strong>${t.code ? ` with <code>${escapeHtml(t.code)}</code>` : ''}</li>`).join('')}</ul>`
     : '';
   const codeLink = (c) => c.go
-    ? `<a href="${awinLink(SALE.dest, `site-${c.go}`)}" target="_blank" rel="noopener sponsored" data-goatcounter-click="cta-sale-${c.go}" data-goatcounter-title="Sale code row ${c.code}"><strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)}</a>`
+    ? `<a href="${awinLink(SALE.dest, `site-${c.go}`)}" target="_blank" rel="noopener sponsored nofollow" data-goatcounter-click="cta-sale-${c.go}" data-goatcounter-title="Sale code row ${c.code}"><strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)}</a>`
     : `<strong class="text-white">${c.pct}% off</strong> ${escapeHtml(c.what)}`;
   const moreCodes = others.length
     ? `
@@ -2375,7 +2375,7 @@ const saleBannerHtml = (cert) => {
     ? `These codes don't stack with RUSHABH30, and they beat it. RUSHABH30 goes back to being the best price the day the sale closes.`
     : `Honest take: good deal if you actually want THRIVE-ONE (every course and every SkillCred exam for a year). If you just want the exam, skip it. CKA with <code>RUSHABH30</code> is $311. You can't use the code on top of the sale.`;
   const img = banner
-    ? `<a href="${saleLink}" target="_blank" rel="noopener sponsored" class="block mt-4" data-goatcounter-click="cta-sale-banner-image" data-goatcounter-title="Live sale banner image"><img src="${banner.src}" width="${banner.width}" height="${banner.height}" alt="${escapeHtml(banner.alt)}" class="w-full h-auto rounded-md" loading="lazy" decoding="async"></a>`
+    ? `<a href="${saleLink}" target="_blank" rel="noopener sponsored nofollow" class="block mt-4" data-goatcounter-click="cta-sale-banner-image" data-goatcounter-title="Live sale banner image"><img src="${banner.src}" width="${banner.width}" height="${banner.height}" alt="${escapeHtml(banner.alt)}" class="w-full h-auto rounded-md" loading="lazy" decoding="async"></a>`
     : '';
   return `
                 <div id="current-sale" class="tech-card tech-card-sale p-5 rounded-md mb-8">
@@ -2417,7 +2417,7 @@ const homeTicketPrices = () => {
   return `<ul class="rs-ticket__prices">${pick.map(d => {
     const code = d.examName.match(/\(([A-Z]+)\)$/)[1];
     const now = Math.floor(d.defaultPrice * (1 - d.discountPercent / 100)); // matches the ~$311 used on the coupon pages
-    return `<li><a href="${escapeHtml(d.affiliateUrl)}" rel="sponsored"><b>${code}</b><s>$${d.defaultPrice}</s><strong>~$${now}</strong></a></li>`;
+    return `<li><a href="${escapeHtml(d.affiliateUrl)}" rel="sponsored nofollow"><b>${code}</b><s>$${d.defaultPrice}</s><strong>~$${now}</strong></a></li>`;
   }).join('')}</ul>`;
 };
 const saleHomeCardHtml = () => saleLive
@@ -2784,14 +2784,14 @@ ${saleBannerHtml(c)}
                         RUSHABH30
                         <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                     </span>
-                    <a href="${awinLink(c.dest, `site-${c.slug}-hero`)}" target="_blank" rel="noopener sponsored" class="btn ${saleCertPrice.has(c.slug) || (saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug))) ? 'btn-ghost' : 'btn-primary'}" data-goatcounter-click="cta-lf-${c.slug}-hero" data-goatcounter-title="LF ${c.name} hero CTA">${saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug)) ? `After the sale: ${escapeHtml(c.name)} for ~$${c.priceDiscounted}` : `Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted}`} &rarr;</a>
+                    <a href="${awinLink(c.dest, `site-${c.slug}-hero`)}" target="_blank" rel="noopener sponsored nofollow" class="btn ${saleCertPrice.has(c.slug) || (saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug))) ? 'btn-ghost' : 'btn-primary'}" data-goatcounter-click="cta-lf-${c.slug}-hero" data-goatcounter-title="LF ${c.name} hero CTA">${saleLive && (SALE.tiers || []).some(t => (t.slugs || []).includes(c.slug)) ? `After the sale: ${escapeHtml(c.name)} for ~$${c.priceDiscounted}` : `Get ${escapeHtml(c.name)} for ~$${c.priceDiscounted}`} &rarr;</a>
                 </div>
             </header>
 
             <div class="post-prose">
                 <p>
                     Put <code>RUSHABH30</code> in the coupon field at checkout on
-                    <a href="${awinLink(c.dest, `site-${c.slug}-intro`)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>
+                    <a href="${awinLink(c.dest, `site-${c.slug}-intro`)}" target="_blank" rel="noopener sponsored nofollow">training.linuxfoundation.org</a>
                     and the ${escapeHtml(c.fullName)}${c.isBundle ? '' : ` (${escapeHtml(c.name)}) exam`} drops from $${c.priceList} to about $${c.priceDiscounted}, a saving of roughly $${savings}. It's an evergreen partner code with no expiry, issued directly to me through the official Linux Foundation Education affiliate program.
                 </p>
                 ${c.guidePost ? `<p><a href="${c.guidePost.href}"><strong>${escapeHtml(c.guidePost.label)} &rarr;</strong></a></p>` : ''}
@@ -2826,7 +2826,7 @@ ${saleBannerHtml(c)}
 
                 <h2 id="how-to-use">How to use the code</h2>
                 <ol>
-                    <li>Add the ${escapeHtml(c.name)}${c.isBundle ? ' bundle' : ' exam'} to your cart on <a href="${awinLink(c.dest, `site-${c.slug}-steps`)}" target="_blank" rel="noopener sponsored">training.linuxfoundation.org</a>.</li>
+                    <li>Add the ${escapeHtml(c.name)}${c.isBundle ? ' bundle' : ' exam'} to your cart on <a href="${awinLink(c.dest, `site-${c.slug}-steps`)}" target="_blank" rel="noopener sponsored nofollow">training.linuxfoundation.org</a>.</li>
                     <li>Enter <code>RUSHABH30</code> in the coupon field at checkout.</li>
                     <li>The total drops 30%. RUSHABH30 works on ${c.retakeNote}.</li>
                 </ol>
@@ -2837,7 +2837,7 @@ ${saleBannerHtml(c)}
                     RUSHABH30
                     <button type="button" class="chip copy-code" data-code="RUSHABH30" aria-label="Copy coupon code RUSHABH30">Copy</button>
                 </span>
-                <a href="${awinLink(c.dest, `site-${c.slug}-footer`)}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-lf-${c.slug}-footer" data-goatcounter-title="LF ${c.name} footer CTA">Apply it at checkout &rarr;</a>
+                <a href="${awinLink(c.dest, `site-${c.slug}-footer`)}" target="_blank" rel="noopener sponsored nofollow" class="btn btn-primary" data-goatcounter-click="cta-lf-${c.slug}-footer" data-goatcounter-title="LF ${c.name} footer CTA">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">
@@ -3018,14 +3018,14 @@ function finopsPageHtml(f, siblings) {
                 <p class="font-fira text-sm text-gray-400 mb-8">Updated ${MONTH_YEAR} &middot; ${escapeHtml(f.offering)}</p>
                 <div class="flex flex-wrap items-center gap-5">
                     ${finopsCodeBox()}
-                    <a href="${f.dest}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-finops-${f.slug}-hero" data-goatcounter-title="FinOps ${f.name} hero CTA">Get it for ~$${price} &rarr;</a>
+                    <a href="${f.dest}" target="_blank" rel="noopener sponsored nofollow" class="btn btn-primary" data-goatcounter-click="cta-finops-${f.slug}-hero" data-goatcounter-title="FinOps ${f.name} hero CTA">Get it for ~$${price} &rarr;</a>
                 </div>
             </header>
 
             <div class="post-prose">
                 <p>
                     Enter <code>${FINOPS_CODE}</code> at checkout on
-                    <a href="${f.dest}" target="_blank" rel="noopener sponsored">learn.finops.org</a>
+                    <a href="${f.dest}" target="_blank" rel="noopener sponsored nofollow">learn.finops.org</a>
                     and the ${escapeHtml(f.fullName)} ${escapeHtml(f.offering)} drops from $${f.priceList} to about
                     $${price}, a saving of roughly $${savings}. It's a partner code issued to me directly by the FinOps
                     Foundation, and it applies to five specific self-paced offerings rather than the whole catalog.
@@ -3043,7 +3043,7 @@ function finopsPageHtml(f, siblings) {
                         <tr><td><strong>Prerequisite</strong></td><td>${f.prerequisite ? escapeHtml(f.prerequisite) : 'None'}</td></tr>
                     </tbody>
                 </table>
-                <p><em>List price read from the FinOps Foundation's own catalog in ${MONTH_YEAR}. They set the prices and can revise them, so check <a href="${f.dest}" target="_blank" rel="noopener sponsored">the product page</a> for the current number before you buy.</em></p>
+                <p><em>List price read from the FinOps Foundation's own catalog in ${MONTH_YEAR}. They set the prices and can revise them, so check <a href="${f.dest}" target="_blank" rel="noopener sponsored nofollow">the product page</a> for the current number before you buy.</em></p>
 
                 <h2 id="who-its-for">Who this is for</h2>
                 <p>${escapeHtml(f.audience)}</p>
@@ -3063,7 +3063,7 @@ function finopsPageHtml(f, siblings) {
 
                 <h2 id="how-to-use">How to use the code</h2>
                 <ol>
-                    <li>Open the <a href="${f.dest}" target="_blank" rel="noopener sponsored">${escapeHtml(f.fullName)} page</a> on learn.finops.org and choose the ${escapeHtml(f.offering)} option.</li>
+                    <li>Open the <a href="${f.dest}" target="_blank" rel="noopener sponsored nofollow">${escapeHtml(f.fullName)} page</a> on learn.finops.org and choose the ${escapeHtml(f.offering)} option.</li>
                     <li>Enter <code>${FINOPS_CODE}</code> in the promo code field and apply it before paying.</li>
                     <li>Check the total actually dropped by ${FINOPS_PCT}%. If it didn't, you've probably selected an exam-only, bundle, or subscription SKU, which this code doesn't cover.</li>
                 </ol>
@@ -3071,7 +3071,7 @@ function finopsPageHtml(f, siblings) {
 
             <div class="tech-card p-5 rounded-md mt-8 flex flex-wrap items-center justify-between gap-4">
                 ${finopsCodeBox()}
-                <a href="${f.dest}" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-finops-${f.slug}-footer" data-goatcounter-title="FinOps ${f.name} footer CTA">Apply it at checkout &rarr;</a>
+                <a href="${f.dest}" target="_blank" rel="noopener sponsored nofollow" class="btn btn-primary" data-goatcounter-click="cta-finops-${f.slug}-footer" data-goatcounter-title="FinOps ${f.name} footer CTA">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">
@@ -3147,7 +3147,7 @@ function finopsIndexHtml(pages) {
                 </p>
                 <div class="flex flex-wrap items-center gap-5">
                     ${finopsCodeBox()}
-                    <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored" class="btn btn-ghost">Open the FinOps catalog &rarr;</a>
+                    <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored nofollow" class="btn btn-ghost">Open the FinOps catalog &rarr;</a>
                 </div>
                 <p class="font-fira text-xs text-gray-400 mt-3">Last verified: ${MONTH_YEAR}</p>
             </header>
@@ -3155,7 +3155,7 @@ function finopsIndexHtml(pages) {
             <div class="post-prose">
                 <p>
                     The short version: put <code>${FINOPS_CODE}</code> in the promo code field at checkout on
-                    <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored">learn.finops.org</a>
+                    <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored nofollow">learn.finops.org</a>
                     and the total drops ${FINOPS_PCT}%. It works on five self-paced FinOps Foundation certifications,
                     listed below with the maths already done. The rest of this page is context: where the code comes
                     from, what each certification is actually for, and which one I'd tell you to take first.
@@ -3187,7 +3187,7 @@ function finopsIndexHtml(pages) {
                         ${pages.map(f => `<tr><td><strong><a href="/finops-coupon/${f.slug}/">${escapeHtml(f.fullName)}</a></strong></td><td>${escapeHtml(f.shortFor)}</td><td>$${f.priceList}</td><td>~$${finopsPrice(f.priceList)}</td></tr>`).join('\n                        ')}
                     </tbody>
                 </table>
-                <p><em>*List prices read from the FinOps Foundation's own catalog in ${MONTH_YEAR}. They set the prices and revise them periodically, so check <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored">learn.finops.org</a> for current numbers.</em></p>
+                <p><em>*List prices read from the FinOps Foundation's own catalog in ${MONTH_YEAR}. They set the prices and revise them periodically, so check <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored nofollow">learn.finops.org</a> for current numbers.</em></p>
 
                 <h2 id="not-covered">What the code does not cover</h2>
                 <p>
@@ -3235,7 +3235,7 @@ function finopsIndexHtml(pages) {
 
                 <h2 id="how-to-use">How to use the code</h2>
                 <ol>
-                    <li>Open the certification you want on <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored">learn.finops.org</a> and pick the Self-Paced Course + Certification Exam option.</li>
+                    <li>Open the certification you want on <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored nofollow">learn.finops.org</a> and pick the Self-Paced Course + Certification Exam option.</li>
                     <li>Enter <code>${FINOPS_CODE}</code> in the promo code field and apply it before paying.</li>
                     <li>Confirm the total dropped by ${FINOPS_PCT}%. If nothing happens, you've selected a SKU the code doesn't cover, most likely an exam-only, bundle, or subscription option.</li>
                 </ol>
@@ -3243,7 +3243,7 @@ function finopsIndexHtml(pages) {
 
             <div class="tech-card p-5 rounded-md mt-8 flex flex-wrap items-center justify-between gap-4">
                 ${finopsCodeBox()}
-                <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored" class="btn btn-primary" data-goatcounter-click="cta-finops-overview" data-goatcounter-title="FinOps overview CTA">Apply it at checkout &rarr;</a>
+                <a href="https://learn.finops.org/" target="_blank" rel="noopener sponsored nofollow" class="btn btn-primary" data-goatcounter-click="cta-finops-overview" data-goatcounter-title="FinOps overview CTA">Apply it at checkout &rarr;</a>
             </div>
 
             <div class="post-prose mt-8">
@@ -3572,36 +3572,36 @@ const GO_LINKS = () => {
      slides that outlive the sale they were made for, and a 404 there is a lost
      click forever. A link that drops out of GO_LINKS (an ended sale, a renamed
      code) is retired instead: it keeps resolving, to the catalog, through the
-     affiliate link, with its own clickref so the report shows the old traffic. */
-  if (fs.existsSync(goDir)) {
-    for (const e of fs.readdirSync(goDir, { withFileTypes: true })) {
-      if (e.isDirectory() && !(e.name in links)) {
-        links[e.name] = awinLink('https://training.linuxfoundation.org/', `retired-${e.name}`);
-        console.log(`↪  retired   /go/${e.name}/ -> catalog`);
+     affiliate link, with its own clickref so the report shows the old traffic.
+     The retired set is read from the committed _redirects file (there is no
+     go/ directory on disk to list any more), so renaming a slug twice in a
+     row still retires the first name correctly. */
+  const REDIRECTS_PATH = path.join(ROOT, '_redirects');
+  if (fs.existsSync(REDIRECTS_PATH)) {
+    for (const m of fs.readFileSync(REDIRECTS_PATH, 'utf8').matchAll(/^\/go\/([^/\s]+)\/\s/gm)) {
+      if (!(m[1] in links)) {
+        links[m[1]] = awinLink('https://training.linuxfoundation.org/', `retired-${m[1]}`);
+        console.log(`↪  retired   /go/${m[1]}/ -> catalog`);
       }
     }
   }
-  for (const [slug, dest] of Object.entries(links)) {
-    const dir = path.join(goDir, slug);
-    fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="robots" content="noindex,nofollow">
-<meta http-equiv="refresh" content="0;url=${escapeHtml(dest)}">
-<link rel="canonical" href="${SITE}/linux-foundation-coupon/">
-<link rel="alternate" type="text/markdown" href="${SITE}/linux-foundation-coupon.md">
-<title>Redirecting&hellip;</title>
-</head>
-<body>
-<p>Redirecting to the offer. <a href="${escapeHtml(dest)}" rel="noopener sponsored nofollow">Continue &rarr;</a></p>
-<p><small>Affiliate link: I may earn a commission at no extra cost to you.</small></p>
-</body>
-</html>
-`);
-  }
-  console.log(`✅ built     /go/{${Object.keys(links).join(',')}}/`);
+  if (fs.existsSync(goDir)) fs.rmSync(goDir, { recursive: true, force: true });
+  /* Real HTTP 302s via Cloudflare's _redirects, not noindexed meta-refresh
+     pages: crawlers and AI bots that don't execute a meta-refresh now still
+     follow the link, and it's one request instead of two for a human. Both
+     the bare and trailing-slash forms are listed explicitly — relying on
+     html_handling's auto-trailing-slash would mean the bare form 307s to the
+     slash form first, since there's no longer a static file for it to find. */
+  const redirectLines = Object.entries(links).flatMap(([slug, dest]) => [
+    `/go/${slug} ${dest} 302`,
+    `/go/${slug}/ ${dest} 302`,
+  ]);
+  fs.writeFileSync(
+    REDIRECTS_PATH,
+    `# Generated by scripts/build-blog.mjs — edit GO_LINKS there, not here.\n` +
+      `${redirectLines.join('\n')}\n`,
+  );
+  console.log(`✅ built     /go/{${Object.keys(links).join(',')}}  (302 via _redirects)`);
 }
 
 

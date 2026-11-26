@@ -19,7 +19,7 @@
  *
  *   node scripts/verify-url-parity.mjs
  */
-import { readdirSync, existsSync, statSync } from 'node:fs';
+import { readdirSync, existsSync, statSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -85,11 +85,17 @@ for (const url of emitted) {
 }
 
 // Also confirm the generator's own output is still present and was not clobbered.
+// /go/ is the one PROTECTED entry with no directory at all any more: its
+// routes are 302s in the repo-root _redirects file, not static pages, so its
+// presence is checked there instead of on disk under go/.
+const REDIRECTS_PATH = path.join(ROOT, '_redirects');
+const goRedirectsOk = existsSync(REDIRECTS_PATH) && /^\/go\//m.test(readFileSync(REDIRECTS_PATH, 'utf8'));
 const missingProtected = PROTECTED.filter((p) => {
+  if (p === '/go/') return !goRedirectsOk;
   const dir = p === '/' ? ROOT : path.join(ROOT, p);
   if (!existsSync(dir)) return true;
-  // Section roots such as /go/ hold only per-slug children, no index.html of
-  // their own. Presence of the directory is the correct check for those.
+  // Section roots hold only per-slug children, no index.html of their own.
+  // Presence of the directory is the correct check for those.
   return statSync(dir).isDirectory() && existsSync(path.join(dir, 'index.html'))
     ? false
     : !statSync(dir).isDirectory();
