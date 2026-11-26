@@ -10,7 +10,7 @@ import { ItemPageSchema, SpeakingSchema } from '@/components/SEO/StructuredData'
 const PATH = '/speaking/';
 const TITLE = 'Speaking';
 const DESCRIPTION =
-  'Talks, workshops, hackathon juries and community meetups by Rushabh Shah, Docker Captain and Grafana Champion. Upcoming sessions at FluxCon, Open Source Summit Japan and Open Compliance Summit, plus the full archive and a speaker kit for organizers.';
+  'Talks, workshops and meetups by Rushabh Shah, Docker Captain and Grafana Champion. Upcoming sessions, the full archive, and a speaker kit for organisers.';
 
 export const metadata: Metadata = {
   title: TITLE,

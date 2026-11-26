@@ -9,7 +9,7 @@ import { ProfilePageSchema } from '@/components/SEO/StructuredData';
 
 const TITLE = 'About Rushabh Shah';
 const DESCRIPTION =
-  'Rushabh Shah, DevOps engineer at Orocorp Technologies Private Limited, Docker Captain and Grafana Champion. Recognition, community roles, open source work and certifications, each linked so you can check it.';
+  'Rushabh Shah: DevOps engineer, Docker Captain and Grafana Champion. Recognition, community roles, open source work and certs, each linked so you can check it.';
 
 export const metadata: Metadata = {
   title: TITLE,

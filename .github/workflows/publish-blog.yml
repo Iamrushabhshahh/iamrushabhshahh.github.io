@@ -70,6 +70,10 @@ jobs:
       # /go/ target or JSON-LD type that was live has gone missing.
       - run: node scripts/url-snapshot.mjs
 
+      # Fails if any indexable page's <title> is over 65 chars; warns if a
+      # description falls outside 110-160.
+      - run: node scripts/check-meta-lengths.mjs
+
       - name: Commit generated pages
         run: |
           git config user.name "github-actions[bot]"

@@ -24,8 +24,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!t) return {};
   const description = (t.takeaways[0] ?? t.excerpt).replace(/`/g, '');
   const url = `${SITE_URL}${t.permalink}`;
+  // layout.tsx's title template appends " · Rushabh Shah"; drop it with an
+  // absolute title when that would push a long TIL entry's title past 65
+  // chars, the same way pageTitle() does for blog posts in build-blog.mjs.
+  const rawTitle = `TIL: ${t.title}`;
   return {
-    title: `TIL: ${t.title}`,
+    title: `${rawTitle} · Rushabh Shah`.length > 65 ? { absolute: rawTitle } : rawTitle,
     description,
     alternates: { canonical: url },
     openGraph: { title: t.title, description, url, type: 'article', publishedTime: t.date, images: [defaultOgImage] },

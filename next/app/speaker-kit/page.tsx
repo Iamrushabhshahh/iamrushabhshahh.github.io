@@ -13,7 +13,7 @@ import { ItemPageSchema, PersonSchema } from '@/components/SEO/StructuredData';
 
 const TITLE = 'Speaker kit';
 const DESCRIPTION =
-  'Rushabh Shah speaker kit for organisers: pre-approved bios in three lengths, headshots and full-length photos, background-removed cut-outs, talk topics and stage requirements, all downloadable in one zip.';
+  'Rushabh Shah speaker kit: pre-approved bios, headshots, cut-outs, talk topics and stage requirements for organisers, all downloadable in one zip.';
 
 /** The one landscape press photo, at the aspect ratio a share card actually wants. */
 const KIT_OG_IMAGE = {

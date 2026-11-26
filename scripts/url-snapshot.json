@@ -2,8 +2,8 @@
  "/": {
   "canonical": "https://rushabhshah.dev/",
   "robots": "",
-  "title": "Rushabh Shah | Docker Captain · Grafana Champion · DevOps Engineer",
-  "description": "Rushabh Shah: open source educator and speaker, Docker Captain and Grafana Champion. DevOps engineer in Ahmedabad, India. Talks at FluxCon and Open Source Summit Japan, writing on Kubernetes and observability.",
+  "title": "Rushabh Shah: Docker Captain & Grafana Champion, DevOps Engineer",
+  "description": "Rushabh Shah: DevOps engineer in Ahmedabad, India, Docker Captain and Grafana Champion, speaking and writing on Kubernetes and observability.",
   "ldTypes": [
    "EducationalOccupationalCredential",
    "Organization",
@@ -16,7 +16,7 @@
   "canonical": "https://rushabhshah.dev/about/",
   "robots": "",
   "title": "About Rushabh Shah · Rushabh Shah",
-  "description": "Rushabh Shah, DevOps engineer at Orocorp Technologies Private Limited, Docker Captain and Grafana Champion. Recognition, community roles, open source work and certifications, each linked so you can check it.",
+  "description": "Rushabh Shah: DevOps engineer, Docker Captain and Grafana Champion. Recognition, community roles, open source work and certs, each linked so you can check it.",
   "ldTypes": [
    "BreadcrumbList",
    "ListItem",
@@ -36,7 +36,7 @@
   "canonical": "https://rushabhshah.dev/blog/cka-exam-day-setup/",
   "robots": "",
   "title": "CKA exam day: PSI bridge, terminal, kubectl aliases",
-  "description": "The logistics nobody mentions until exam day: PSI Secure Browser setup, what the exam terminal actually gives you, kubectl aliases worth memorizing, and how to manage the clock.",
+  "description": "The logistics nobody mentions until exam day: PSI Secure Browser setup, what the terminal gives you, kubectl aliases worth memorizing, and managing the clock.",
   "ldTypes": [
    "BlogPosting"
   ]
@@ -45,7 +45,7 @@
   "canonical": "https://rushabhshah.dev/blog/cka-exam-guide/",
   "robots": "",
   "title": "What the CKA actually tests in 2026 · Rushabh Shah",
-  "description": "The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. Here's the format, what it actually covers, how to practice, and where people lose time.",
+  "description": "The CKA is a live-terminal, performance-based exam against real clusters, not multiple choice. The format, what it covers, and how to practice.",
   "ldTypes": [
    "BlogPosting"
   ]
@@ -54,7 +54,7 @@
   "canonical": "https://rushabhshah.dev/blog/cka-vs-ckad-vs-cks/",
   "robots": "",
   "title": "CKA vs CKAD vs CKS: which to take first · Rushabh Shah",
-  "description": "CKA, CKAD, and CKS all share the same live-terminal format and the same $445 price tag, but they certify very different jobs. Here's who each one is for and what order makes sense.",
+  "description": "CKA, CKAD and CKS share the same live-terminal format and $445 price tag but certify very different jobs. Who each is for, and what order makes sense.",
   "ldTypes": [
    "BlogPosting"
   ]
@@ -99,7 +99,7 @@
   "canonical": "https://rushabhshah.dev/blog/kcna-worth-it/",
   "robots": "",
   "title": "Is KCNA worth $250 as a first certification · Rushabh Shah",
-  "description": "KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. Here's what it actually covers, and who should skip it entirely.",
+  "description": "KCNA is multiple choice, has no prerequisite, and is the cheapest cert in the Linux Foundation catalog. What it covers, and who should skip it.",
   "ldTypes": [
    "BlogPosting"
   ]
@@ -117,7 +117,7 @@
   "canonical": "https://rushabhshah.dev/blog/kubestronaut-path-cost/",
   "robots": "",
   "title": "The Kubestronaut path and what it really costs · Rushabh Shah",
-  "description": "Kubestronaut means holding five CNCF certifications at once: KCNA, KCSA, CKA, CKAD, and CKS. Here's the real cost breakdown, a realistic study timeline, and who it's actually for.",
+  "description": "Kubestronaut means holding five CNCF certs at once: KCNA, KCSA, CKA, CKAD and CKS. The real cost breakdown, a realistic study timeline, and who it's for.",
   "ldTypes": [
    "BlogPosting"
   ]
@@ -126,7 +126,7 @@
   "canonical": "https://rushabhshah.dev/blog/pca-otca-review/",
   "robots": "",
   "title": "Prometheus PCA and OpenTelemetry OTCA, reviewed · Rushabh Shah",
-  "description": "Two multiple-choice, $250 CNCF associate exams for observability: Prometheus PCA leans on PromQL, OTCA leans on the OpenTelemetry API and SDK. Here's an honest read on both, and which to take first.",
+  "description": "Two $250 CNCF associate exams for observability: PCA leans on PromQL, OTCA on the OpenTelemetry API. An honest read on both, and which to take first.",
   "ldTypes": [
    "BlogPosting"
   ]
@@ -893,7 +893,7 @@
   "canonical": "https://rushabhshah.dev/speaker-kit/",
   "robots": "",
   "title": "Speaker kit · Rushabh Shah",
-  "description": "Rushabh Shah speaker kit for organisers: pre-approved bios in three lengths, headshots and full-length photos, background-removed cut-outs, talk topics and stage requirements, all downloadable in one zip.",
+  "description": "Rushabh Shah speaker kit: pre-approved bios, headshots, cut-outs, talk topics and stage requirements for organisers, all downloadable in one zip.",
   "ldTypes": [
    "BreadcrumbList",
    "EducationalOccupationalCredential",
@@ -908,7 +908,7 @@
   "canonical": "https://rushabhshah.dev/speaking/",
   "robots": "",
   "title": "Speaking · Rushabh Shah",
-  "description": "Talks, workshops, hackathon juries and community meetups by Rushabh Shah, Docker Captain and Grafana Champion. Upcoming sessions at FluxCon, Open Source Summit Japan and Open Compliance Summit, plus the full archive and a speaker kit for organizers.",
+  "description": "Talks, workshops and meetups by Rushabh Shah, Docker Captain and Grafana Champion. Upcoming sessions, the full archive, and a speaker kit for organisers.",
   "ldTypes": [
    "BreadcrumbList",
    "Event",
@@ -935,7 +935,7 @@
  "/til/kubectl-events-sorted/": {
   "canonical": "https://rushabhshah.dev/til/kubectl-events-sorted/",
   "robots": "",
-  "title": "TIL: kubectl get events is useless until you sort it · Rushabh Shah",
+  "title": "TIL: kubectl get events is useless until you sort it",
   "description": "kubectl get events returns in arbitrary order, so the line you need is rarely at the bottom.",
   "ldTypes": [
    "BreadcrumbList",
