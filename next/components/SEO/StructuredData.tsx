@@ -165,6 +165,62 @@ export function SpeakingSchema({ engagements, path }: { engagements: Engagement[
   );
 }
 
+/**
+ * /about/. A ProfilePage whose mainEntity is the canonical Person (by @id,
+ * never redefined — see the file header), not an ItemPage: the page's
+ * subject is the person himself, and ProfilePage is schema.org's node for
+ * exactly that.
+ */
+export function ProfilePageSchema({
+  path,
+  name,
+  description,
+  image,
+  breadcrumb,
+}: {
+  path: string;
+  name: string;
+  description: string;
+  image?: string;
+  breadcrumb?: { name: string; path: string }[];
+}) {
+  const url = `${SITE_URL}${path}`;
+  return (
+    <>
+      <JsonLd
+        id="ld-profilepage"
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'ProfilePage',
+          '@id': `${url}#profilepage`,
+          url,
+          name,
+          description,
+          inLanguage: 'en',
+          isPartOf: { '@id': `${SITE_URL}/#website` },
+          mainEntity: { '@id': PERSON_ID },
+          ...(image ? { primaryImageOfPage: image } : {}),
+        }}
+      />
+      {breadcrumb && breadcrumb.length > 0 && (
+        <JsonLd
+          id="ld-breadcrumb"
+          data={{
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: breadcrumb.map((b, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              name: b.name,
+              item: `${SITE_URL}${b.path}`,
+            })),
+          }}
+        />
+      )}
+    </>
+  );
+}
+
 /** Generic page node. `primaryImageOfPage` is omitted when there is no OG image. */
 export function ItemPageSchema({
   path,

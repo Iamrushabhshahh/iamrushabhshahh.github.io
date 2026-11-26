@@ -1847,6 +1847,7 @@ ${header}
                 <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-5">${escapeHtml(post.title)}</h1>
                 <div class="post-meta flex flex-wrap items-center gap-3 font-fira text-sm text-gray-400">
                     <time datetime="${isoDate(post.date)}">${fmtDate(post.date)}</time>
+                    ${isoDate(post.updated).slice(0, 10) !== isoDate(post.date).slice(0, 10) ? `<span aria-hidden="true">·</span><span>Updated <time datetime="${isoDate(post.updated)}">${fmtDate(post.updated)}</time></span>` : ''}
                     <span aria-hidden="true">·</span>
                     <span>${post.minutes} min read</span>
                     <span id="post-views"></span>

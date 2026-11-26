@@ -5,7 +5,7 @@ import { defaultOgImage, SITE_URL, bios, credentials, person } from '@/lib/site'
 import { certs } from '@/lib/certs';
 import { speaking, stats as speakingStats } from '@/lib/speaking';
 import { SiteShell } from '@/components/site/SiteShell';
-import { ItemPageSchema } from '@/components/SEO/StructuredData';
+import { ProfilePageSchema } from '@/components/SEO/StructuredData';
 
 const TITLE = 'About Rushabh Shah';
 const DESCRIPTION =
@@ -114,7 +114,7 @@ export default function AboutPage() {
   return (
     <SiteShell active="about">
       <main id="main" className="rs-wrap py-16 md:py-24">
-        <ItemPageSchema
+        <ProfilePageSchema
           path="/about/"
           name={TITLE}
           description={DESCRIPTION}

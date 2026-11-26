@@ -19,8 +19,8 @@
   "description": "Rushabh Shah, DevOps engineer at Orocorp Technologies Private Limited, Docker Captain and Grafana Champion. Recognition, community roles, open source work and certifications, each linked so you can check it.",
   "ldTypes": [
    "BreadcrumbList",
-   "ItemPage",
-   "ListItem"
+   "ListItem",
+   "ProfilePage"
   ]
  },
  "/blog/": {
