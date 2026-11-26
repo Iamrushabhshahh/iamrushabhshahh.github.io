@@ -117,12 +117,19 @@ export function SpeakingSchema({ engagements, path }: { engagements: Engagement[
               eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
               location,
               ...(e.organizer ? { organizer: { '@type': 'Organization', name: e.organizer } } : {}),
+              // The conference wrapping this talk gets the same completeness
+              // bar as the talk itself: a bare superEvent (name + dates only)
+              // is what Semrush's follow-up audit flagged as still thin.
               superEvent: {
                 '@type': 'Event',
                 name: e.event,
                 startDate: e.start.slice(0, 10),
                 endDate: e.endDate ?? e.start.slice(0, 10),
+                eventStatus: 'https://schema.org/EventScheduled',
+                eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
                 location,
+                ...(e.organizer ? { organizer: { '@type': 'Organization', name: e.organizer } } : {}),
+                performer: { '@id': PERSON_ID },
               },
               performer: { '@id': PERSON_ID },
               ...(e.links.session || e.links.event ? { url: abs((e.links.session ?? e.links.event)!) } : {}),
@@ -137,6 +144,14 @@ export function SpeakingSchema({ engagements, path }: { engagements: Engagement[
                       name: e.videoTitle,
                       description: e.abstract ?? e.videoTitle,
                       contentUrl: e.links.video,
+                      // YouTube's embeddable URL, derived from the watch URL
+                      // rather than stored a second time: the two can never
+                      // go out of sync, and embedUrl is required alongside
+                      // contentUrl for VideoObject rich-result eligibility.
+                      ...(() => {
+                        const id = e.links.video?.match(/[?&]v=([^&]+)/)?.[1];
+                        return id ? { embedUrl: `https://www.youtube.com/embed/${id}` } : {};
+                      })(),
                       uploadDate: e.videoUploadDate,
                       thumbnailUrl: e.videoThumbnail,
                     },
