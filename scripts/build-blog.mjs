@@ -2169,7 +2169,8 @@ const NEXT_SITEMAP = fs.existsSync(TIL_DIR) ? [
     const fm = fs.readFileSync(path.join(TIL_DIR, f), 'utf8').match(/^---\n([\s\S]*?)\n---/);
     const slug = fm?.[1].match(/^slug:\s*(\S+)/m)?.[1];
     const date = fm?.[1].match(/^date:\s*['"]?(\d{4}-\d{2}-\d{2})/m)?.[1];
-    return slug ? [{ loc: `${SITE}/til/${slug}/`, priority: '0.4', lastmod: date ?? null }] : [];
+    const noindex = /^noindex:\s*true/m.test(fm?.[1] ?? '');
+    return slug && !noindex ? [{ loc: `${SITE}/til/${slug}/`, priority: '0.4', lastmod: date ?? null }] : [];
   }),
 ] : [];
 

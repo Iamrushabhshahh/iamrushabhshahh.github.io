@@ -934,7 +934,7 @@
  },
  "/til/kubectl-events-sorted/": {
   "canonical": "https://rushabhshah.dev/til/kubectl-events-sorted/",
-  "robots": "",
+  "robots": "noindex, follow",
   "title": "TIL: kubectl get events is useless until you sort it",
   "description": "kubectl get events returns in arbitrary order, so the line you need is rarely at the bottom.",
   "ldTypes": [

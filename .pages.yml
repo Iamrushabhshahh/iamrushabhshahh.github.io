@@ -105,6 +105,10 @@ content:
         label: Draft (hidden while checked)
         type: boolean
         default: false
+      - name: noindex
+        label: Noindex (keep this one out of search results, e.g. if it's too short on its own)
+        type: boolean
+        default: false
       - name: body
         label: Notes
         type: rich-text

@@ -4,6 +4,7 @@ slug: kubectl-events-sorted
 date: 2026-09-16
 area: tech
 tags: [kubernetes, kubectl]
+noindex: true
 takeaways:
   - "`kubectl get events` returns in arbitrary order, so the line you need is rarely at the bottom."
   - "Sorting by `.lastTimestamp` is the difference between reading events and scrolling past them."

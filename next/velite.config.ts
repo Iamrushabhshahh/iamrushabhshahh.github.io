@@ -58,6 +58,9 @@ const til = defineCollection({
         })
         .optional(),
       draft: s.boolean().default(false),
+      // A TIL entry is a single tip by design, not a thin draft - most never
+      // need this. Set true only for one too short even by that standard.
+      noindex: s.boolean().default(false),
       body: s.markdown(),
       excerpt: s.excerpt({ length: 200 }),
     }))
